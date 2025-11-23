@@ -1,0 +1,1831 @@
+{
+    "language": "en-US",
+    "messages": [
+        {
+            "id": "Failed to open the gate: invalid missing characters",
+            "message": "Failed to open the gate: invalid missing characters",
+            "translation": "Failed to open the gate: invalid missing characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "This username is already in use",
+            "message": "This username is already in use",
+            "translation": "This username is already in use",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid PGP key",
+            "message": "Invalid PGP key",
+            "translation": "Invalid PGP key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Registered successfully",
+            "message": "Registered successfully",
+            "translation": "Registered successfully",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid credentials",
+            "message": "Invalid credentials",
+            "translation": "Invalid credentials",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your account is banned",
+            "message": "Your account is banned",
+            "translation": "Your account is banned",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Invalid 2FA token",
+            "message": "Invalid 2FA token",
+            "translation": "Invalid 2FA token",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Password changed",
+            "message": "Password changed",
+            "translation": "Password changed",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can't update to your current key",
+            "message": "You can't update to your current key",
+            "translation": "You can't update to your current key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "PGP key is set",
+            "message": "PGP key is set",
+            "translation": "PGP key is set",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "PGP Public key is updated",
+            "message": "PGP Public key is updated",
+            "translation": "PGP Public key is updated",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor info is updated",
+            "message": "Vendor info is updated",
+            "translation": "Vendor info is updated",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Listing created",
+            "message": "Listing created",
+            "translation": "Listing created",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Cart updated",
+            "message": "Cart updated",
+            "translation": "Cart updated",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "cart deleted",
+            "message": "cart deleted",
+            "translation": "cart deleted",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can't order with a vendor account",
+            "message": "You can't order with a vendor account",
+            "translation": "You can't order with a vendor account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You don't have enough balance for this order",
+            "message": "You don't have enough balance for this order",
+            "translation": "You don't have enough balance for this order",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translation": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Order created",
+            "message": "Order created",
+            "translation": "Order created",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Not enough balance to withdraw.",
+            "message": "Not enough balance to withdraw.",
+            "translation": "Not enough balance to withdraw.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can't withdraw to your own account",
+            "message": "You can't withdraw to your own account",
+            "translation": "You can't withdraw to your own account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translation": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "XMR2Decimalamount",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "currency.XMR2Decimal(amount)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Order cancelled",
+            "message": "Order cancelled",
+            "translation": "Order cancelled",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Review created",
+            "message": "Review created",
+            "translation": "Review created",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "5"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "12"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "AF timer already extended to maximum.",
+            "message": "AF timer already extended to maximum.",
+            "translation": "AF timer already extended to maximum.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "AF timer extended by {Duration} days",
+            "message": "AF timer extended by {Duration} days",
+            "translation": "AF timer extended by {Duration} days",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Order disputed",
+            "message": "Order disputed",
+            "translation": "Order disputed",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2FA needs to be enabled for vendors",
+            "message": "2FA needs to be enabled for vendors",
+            "translation": "2FA needs to be enabled for vendors",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor accounts can't have previous orders. Please create a new account.",
+            "message": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translation": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Proof of inventory is required from new vendors",
+            "message": "Proof of inventory is required from new vendors",
+            "translation": "Proof of inventory is required from new vendors",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Not enough balance",
+            "message": "Not enough balance",
+            "translation": "Not enough balance",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Application received",
+            "message": "Application received",
+            "translation": "Application received",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translation": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "72"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Order declined",
+            "message": "Order declined",
+            "translation": "Order declined",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order marked as dispatched",
+            "message": "Order marked as dispatched",
+            "translation": "Order marked as dispatched",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Product deleted",
+            "message": "Product deleted",
+            "translation": "Product deleted",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Product updated",
+            "message": "Product updated",
+            "translation": "Product updated",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Ticket is already closed",
+            "message": "Ticket is already closed",
+            "translation": "Ticket is already closed",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You need to be logged in to access that page",
+            "message": "You need to be logged in to access that page",
+            "translation": "You need to be logged in to access that page",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order received",
+            "message": "Order received",
+            "translation": "Order received",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translation": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "48"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Order accepted",
+            "message": "Order accepted",
+            "translation": "Order accepted",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translation": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order dispatched",
+            "message": "Order dispatched",
+            "translation": "Order dispatched",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your order has been dispatched!\nPlease remember to review it.",
+            "message": "Your order has been dispatched!\nPlease remember to review it.",
+            "translation": "Your order has been dispatched!\nPlease remember to review it.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I become a vendor?",
+            "message": "How do I become a vendor?",
+            "translation": "How do I become a vendor?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translation": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "How do I place an order?",
+            "message": "How do I place an order?",
+            "translation": "How do I place an order?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translation": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "How can I obtain Monero (XMR)?",
+            "message": "How can I obtain Monero (XMR)?",
+            "translation": "How can I obtain Monero (XMR)?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translation": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "What should I do if my order has not arrived or does not match the description?",
+            "message": "What should I do if my order has not arrived or does not match the description?",
+            "translation": "What should I do if my order has not arrived or does not match the description?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translation": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "What am I allowed to sell on this marketplace?",
+            "message": "What am I allowed to sell on this marketplace?",
+            "translation": "What am I allowed to sell on this marketplace?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translation": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Open",
+            "message": "Open",
+            "translation": "Open",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor application",
+            "message": "Vendor application",
+            "translation": "Vendor application",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your account does not have 2FA enabled!",
+            "message": "Your account does not have 2FA enabled!",
+            "translation": "Your account does not have 2FA enabled!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translation": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "For other users, application costs {Price} XMR and is non-refundable.",
+            "message": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translation": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Price",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "price"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "You're required to provide proof that you actually have products to sell here.",
+            "message": "You're required to provide proof that you actually have products to sell here.",
+            "translation": "You're required to provide proof that you actually have products to sell here.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor Logo",
+            "message": "Vendor Logo",
+            "translation": "Vendor Logo",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Use png image with close to 1:1 ratio for optimal look",
+            "message": "Use png image with close to 1:1 ratio for optimal look",
+            "translation": "Use png image with close to 1:1 ratio for optimal look",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Existing vendor",
+            "message": "Existing vendor",
+            "translation": "Existing vendor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translation": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Proof of inventory",
+            "message": "Proof of inventory",
+            "translation": "Proof of inventory",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Clear image of your inventory with your username and timestamp visible",
+            "message": "Clear image of your inventory with your username and timestamp visible",
+            "translation": "Clear image of your inventory with your username and timestamp visible",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Markets and Your Username",
+            "message": "Markets and Your Username",
+            "translation": "Markets and Your Username",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "List the markets where you are a vendor and include your username",
+            "message": "List the markets where you are a vendor and include your username",
+            "translation": "List the markets where you are a vendor and include your username",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Captcha",
+            "message": "Captcha",
+            "translation": "Captcha",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Click circle with a cut",
+            "message": "Click circle with a cut",
+            "translation": "Click circle with a cut",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Submit",
+            "message": "Submit",
+            "translation": "Submit",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Total",
+            "message": "Total",
+            "translation": "Total",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Checkout",
+            "message": "Checkout",
+            "translation": "Checkout",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "delivery method",
+            "message": "delivery method",
+            "translation": "delivery method",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Use wallet for payment",
+            "message": "Use wallet for payment",
+            "translation": "Use wallet for payment",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "details",
+            "message": "details",
+            "translation": "details",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Use your real address, with the same format as below.",
+            "message": "Use your real address, with the same format as below.",
+            "translation": "Use your real address, with the same format as below.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Unencrypted details are automatically encrypted using vendors key.",
+            "message": "Unencrypted details are automatically encrypted using vendors key.",
+            "translation": "Unencrypted details are automatically encrypted using vendors key.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Title",
+            "message": "Title",
+            "translation": "Title",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Description",
+            "message": "Description",
+            "translation": "Description",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Product image",
+            "message": "Product image",
+            "translation": "Product image",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Use image with close to 1:1 aspect ratio for optimal look",
+            "message": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translation": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Category",
+            "message": "Category",
+            "translation": "Category",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Ships from",
+            "message": "Ships from",
+            "translation": "Ships from",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Ships to",
+            "message": "Ships to",
+            "translation": "Ships to",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Inventory",
+            "message": "Inventory",
+            "translation": "Inventory",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Size of the current inventory for this product.",
+            "message": "Size of the current inventory for this product.",
+            "translation": "Size of the current inventory for this product.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Pricing",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Here you can set your pricing.",
+            "message": "Here you can set your pricing.",
+            "translation": "Here you can set your pricing.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We take 5% cut from these prices.",
+            "message": "We take 5% cut from these prices.",
+            "translation": "We take 5% cut from these prices.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Quantity",
+            "message": "Quantity",
+            "translation": "Quantity",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Price",
+            "message": "Price",
+            "translation": "Price",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create ticket",
+            "message": "Create ticket",
+            "translation": "Create ticket",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Subject",
+            "message": "Subject",
+            "translation": "Subject",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "account",
+            "message": "account",
+            "translation": "account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "order",
+            "message": "order",
+            "translation": "order",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "wallet",
+            "message": "wallet",
+            "translation": "wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "vendor",
+            "message": "vendor",
+            "translation": "vendor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "product",
+            "message": "product",
+            "translation": "product",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "suggestion",
+            "message": "suggestion",
+            "translation": "suggestion",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "bug",
+            "message": "bug",
+            "translation": "bug",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "other",
+            "message": "other",
+            "translation": "other",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Message",
+            "message": "Message",
+            "translation": "Message",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Staff PGP",
+            "message": "Staff PGP",
+            "translation": "Staff PGP",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Exchange rate",
+            "message": "Exchange rate",
+            "translation": "Exchange rate",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Time",
+            "message": "Time",
+            "translation": "Time",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendors:",
+            "message": "Vendors:",
+            "translation": "Vendors:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Users:",
+            "message": "Users:",
+            "translation": "Users:",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "submit",
+            "message": "submit",
+            "translation": "submit",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Response",
+            "message": "Response",
+            "translation": "Response",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "products",
+            "message": "products",
+            "translation": "products",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "orders",
+            "message": "orders",
+            "translation": "orders",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "sell",
+            "message": "sell",
+            "translation": "sell",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "support",
+            "message": "support",
+            "translation": "support",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Logout",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "log in",
+            "message": "log in",
+            "translation": "log in",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "register",
+            "message": "register",
+            "translation": "register",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Entry guard to {Name}",
+            "message": "Entry guard to {Name}",
+            "translation": "Entry guard to {Name}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "tc.Config.Name"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translation": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Missing characters",
+            "message": "Missing characters",
+            "translation": "Missing characters",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Log in",
+            "message": "Log in",
+            "translation": "Log in",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "username",
+            "message": "username",
+            "translation": "username",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "password",
+            "message": "password",
+            "translation": "password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Create new account",
+            "message": "Create new account",
+            "translation": "Create new account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Delete all",
+            "message": "Delete all",
+            "translation": "Delete all",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You have zero notifications",
+            "message": "You have zero notifications",
+            "translation": "You have zero notifications",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order",
+            "message": "Order",
+            "translation": "Order",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Chat",
+            "message": "Chat",
+            "translation": "Chat",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Status",
+            "message": "Status",
+            "translation": "Status",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor",
+            "message": "Vendor",
+            "translation": "Vendor",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Delivery method",
+            "message": "Delivery method",
+            "translation": "Delivery method",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Total cost",
+            "message": "Total cost",
+            "translation": "Total cost",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Date",
+            "message": "Date",
+            "translation": "Date",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dispatched at",
+            "message": "Dispatched at",
+            "translation": "Dispatched at",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Until auto-declined",
+            "message": "Until auto-declined",
+            "translation": "Until auto-declined",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Until auto-finalized",
+            "message": "Until auto-finalized",
+            "translation": "Until auto-finalized",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Details",
+            "message": "Details",
+            "translation": "Details",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor offered refund of {RefundFactor}%",
+            "message": "Vendor offered refund of {RefundFactor}%",
+            "translation": "Vendor offered refund of {RefundFactor}%",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "RefundFactor",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "100 * item.Offer.RefundFactor"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Accept",
+            "message": "Accept",
+            "translation": "Accept",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Decline",
+            "message": "Decline",
+            "translation": "Decline",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Customers PGP key",
+            "message": "Customers PGP key",
+            "translation": "Customers PGP key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Customer can still cancel this order!",
+            "message": "Customer can still cancel this order!",
+            "translation": "Customer can still cancel this order!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You must accept it in 2 days or it will be automatically declined.",
+            "message": "You must accept it in 2 days or it will be automatically declined.",
+            "translation": "You must accept it in 2 days or it will be automatically declined.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translation": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Please carefully review the order below before accepting it.",
+            "message": "Please carefully review the order below before accepting it.",
+            "translation": "Please carefully review the order below before accepting it.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Always decline orders that you'r unable to fulfill.",
+            "message": "Always decline orders that you'r unable to fulfill.",
+            "translation": "Always decline orders that you'r unable to fulfill.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translation": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Make sure that you have enough time to do the actual dispaching!",
+            "message": "Make sure that you have enough time to do the actual dispaching!",
+            "translation": "Make sure that you have enough time to do the actual dispaching!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dispatched",
+            "message": "Dispatched",
+            "translation": "Dispatched",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Transfer exact amount of Monero to the address below.",
+            "message": "Transfer exact amount of Monero to the address below.",
+            "translation": "Transfer exact amount of Monero to the address below.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "After 10 confirmations, your order will proceed to vendor.",
+            "message": "After 10 confirmations, your order will proceed to vendor.",
+            "translation": "After 10 confirmations, your order will proceed to vendor.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translation": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Time left to pay",
+            "message": "Time left to pay",
+            "translation": "Time left to pay",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Amount XMR",
+            "message": "Amount XMR",
+            "translation": "Amount XMR",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Address",
+            "message": "Address",
+            "translation": "Address",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orders can be cancelled until vendor has accepted it.",
+            "message": "Orders can be cancelled until vendor has accepted it.",
+            "translation": "Orders can be cancelled until vendor has accepted it.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Cancel",
+            "message": "Cancel",
+            "translation": "Cancel",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Your order will auto-finalize in",
+            "message": "Your order will auto-finalize in",
+            "translation": "Your order will auto-finalize in",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can extend the auto-finalize-time by 7-days.",
+            "message": "You can extend the auto-finalize-time by 7-days.",
+            "translation": "You can extend the auto-finalize-time by 7-days.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "review your order",
+            "message": "review your order",
+            "translation": "review your order",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Review",
+            "message": "Review",
+            "translation": "Review",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Extend AF-timer",
+            "message": "Extend AF-timer",
+            "translation": "Extend AF-timer",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Dispute",
+            "message": "Dispute",
+            "translation": "Dispute",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Refund offer",
+            "message": "Refund offer",
+            "translation": "Refund offer",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Customer has disputed this order.",
+            "message": "Customer has disputed this order.",
+            "translation": "Customer has disputed this order.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Use the chat below to discuss about this dispute.",
+            "message": "Use the chat below to discuss about this dispute.",
+            "translation": "Use the chat below to discuss about this dispute.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translation": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Refund percent",
+            "message": "Refund percent",
+            "translation": "Refund percent",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order date",
+            "message": "Order date",
+            "translation": "Order date",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Order ID",
+            "message": "Order ID",
+            "translation": "Order ID",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Proof key ownership",
+            "message": "Proof key ownership",
+            "translation": "Proof key ownership",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Decrypt to get the token",
+            "message": "Decrypt to get the token",
+            "translation": "Decrypt to get the token",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Token",
+            "message": "Token",
+            "translation": "Token",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Update product",
+            "message": "Update product",
+            "translation": "Update product",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Update",
+            "message": "Update",
+            "translation": "Update",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Add to cart",
+            "message": "Add to cart",
+            "translation": "Add to cart",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Reviews",
+            "message": "Reviews",
+            "translation": "Reviews",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "ago",
+            "message": "ago",
+            "translation": "ago",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "OUT OF STOCK",
+            "message": "OUT OF STOCK",
+            "translation": "OUT OF STOCK",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Register",
+            "message": "Register",
+            "translation": "Register",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "password check",
+            "message": "password check",
+            "translation": "password check",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Already have an account?",
+            "message": "Already have an account?",
+            "translation": "Already have an account?",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Review order",
+            "message": "Review order",
+            "translation": "Review order",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Grade",
+            "message": "Grade",
+            "translation": "Grade",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "guest",
+            "message": "guest",
+            "translation": "guest",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "customer",
+            "message": "customer",
+            "translation": "customer",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "admin",
+            "message": "admin",
+            "translation": "admin",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "unknown",
+            "message": "unknown",
+            "translation": "unknown",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "enabled",
+            "message": "enabled",
+            "translation": "enabled",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "disabled",
+            "message": "disabled",
+            "translation": "disabled",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Account",
+            "message": "Account",
+            "translation": "Account",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Username",
+            "message": "Username",
+            "translation": "Username",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Type",
+            "message": "Type",
+            "translation": "Type",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "2FA",
+            "message": "2FA",
+            "translation": "2FA",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Preferences",
+            "message": "Preferences",
+            "translation": "Preferences",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Language",
+            "message": "Language",
+            "translation": "Language",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Currency",
+            "message": "Currency",
+            "translation": "Currency",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Change password",
+            "message": "Change password",
+            "translation": "Change password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Current password",
+            "message": "Current password",
+            "translation": "Current password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "New password",
+            "message": "New password",
+            "translation": "New password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Confirm new password",
+            "message": "Confirm new password",
+            "translation": "Confirm new password",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Change PGP key",
+            "message": "Change PGP key",
+            "translation": "Change PGP key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enable 2FA",
+            "message": "Enable 2FA",
+            "translation": "Enable 2FA",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "PGP public key",
+            "message": "PGP public key",
+            "translation": "PGP public key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Required for vendors, suggested for everyone.",
+            "message": "Required for vendors, suggested for everyone.",
+            "translation": "Required for vendors, suggested for everyone.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Update vendor profile",
+            "message": "Update vendor profile",
+            "translation": "Update vendor profile",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Vendor info",
+            "message": "Vendor info",
+            "translation": "Vendor info",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Leave empty to not update.",
+            "message": "Leave empty to not update.",
+            "translation": "Leave empty to not update.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Update delivery methods",
+            "message": "Update delivery methods",
+            "translation": "Update delivery methods",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Delivery Method",
+            "message": "Delivery Method",
+            "translation": "Delivery Method",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "My tickets",
+            "message": "My tickets",
+            "translation": "My tickets",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "0 seconds",
+            "message": "0 seconds",
+            "translation": "0 seconds",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "{Second} seconds",
+            "message": "{Second} seconds",
+            "translation": "{Second} seconds",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Second",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Second"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Minute} minutes",
+            "message": "{Minute} minutes",
+            "translation": "{Minute} minutes",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Minute"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Hour} hours",
+            "message": "{Hour} hours",
+            "translation": "{Hour} hours",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Hour"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Hour} days",
+            "message": "{Hour} days",
+            "translation": "{Hour} days",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / (24 * time.Hour)"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Rating (AVG)",
+            "message": "Rating (AVG)",
+            "translation": "Rating (AVG)",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orders completed",
+            "message": "Orders completed",
+            "translation": "Orders completed",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Orders in escrow",
+            "message": "Orders in escrow",
+            "translation": "Orders in escrow",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Pending disputes",
+            "message": "Pending disputes",
+            "translation": "Pending disputes",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Previously seen",
+            "message": "Previously seen",
+            "translation": "Previously seen",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "PGP key",
+            "message": "PGP key",
+            "translation": "PGP key",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Wallet",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "This is your XMR wallet where you can deposit coins.",
+            "message": "This is your XMR wallet where you can deposit coins.",
+            "translation": "This is your XMR wallet where you can deposit coins.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Balance is updated after 10 confirmations.",
+            "message": "Balance is updated after 10 confirmations.",
+            "translation": "Balance is updated after 10 confirmations.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "See",
+            "message": "See",
+            "translation": "See",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "for more information.",
+            "message": "for more information.",
+            "translation": "for more information.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Balance",
+            "message": "Balance",
+            "translation": "Balance",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Withdraw",
+            "message": "Withdraw",
+            "translation": "Withdraw",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter a monero address where you want to withdraw your funds.",
+            "message": "Enter a monero address where you want to withdraw your funds.",
+            "translation": "Enter a monero address where you want to withdraw your funds.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translation": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "DO NOT withdraw funds to another wallet on this platform!",
+            "message": "DO NOT withdraw funds to another wallet on this platform!",
+            "translation": "DO NOT withdraw funds to another wallet on this platform!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Destination address",
+            "message": "Destination address",
+            "translation": "Destination address",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Amount",
+            "message": "Amount",
+            "translation": "Amount",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Enter amount in decimal format (e.g., 1.42069)",
+            "message": "Enter amount in decimal format (e.g., 1.42069)",
+            "translation": "Enter amount in decimal format (e.g., 1.42069)",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        }
+    ]
+}

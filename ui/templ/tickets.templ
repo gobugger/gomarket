@@ -1,0 +1,36 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/repo"
+
+templ Tickets(tc *TemplateContext, tickets []repo.Ticket) {
+	@Layout(tc) {
+		<div class="centered">
+			<table>
+				<thead>
+					<th>subject</th>
+					<th>message</th>
+					<th>status</th>
+					<th>date</th>
+				</thead>
+				<tbody>
+					for _, ticket := range tickets {
+						<tr>
+							<td>
+								<a href={ "/support/ticket?id=" + ticket.ID.String() }>
+									{ ticket.Subject }
+								</a>
+							</td>
+							<td>{ Head(ticket.Message, 30) }</td>
+							if ticket.IsOpen {
+								<td>open</td>
+							} else {
+								<td>closed</td>
+							}
+							<td>{ FmtDate(ticket.CreatedAt) }</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	}
+}

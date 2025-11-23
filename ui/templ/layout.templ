@@ -1,0 +1,49 @@
+package ui
+
+templ Layout(tc *TemplateContext, styleSheets ...string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>{ tc.Config.Name }</title>
+			<link rel="stylesheet" href="/ui/css/base.css"/>
+			<link rel="stylesheet" href="/ui/css/component.css"/>
+			<link rel="stylesheet" href="/ui/css/styles.css"/>
+			<link rel="icon" href="/static/favicon.png" type="image/png"/>
+			for _, ss := range styleSheets {
+				<link rel="stylesheet" href={ ss }/>
+			}
+		</head>
+		<body>
+			@header(tc)
+			@notes(tc)
+			<main class="centered gap">
+				{ children... }
+			</main>
+			@footer(tc)
+		</body>
+	</html>
+}
+
+templ notes(tc *TemplateContext) {
+	if len(tc.Notes) > 0 {
+		<div class="centered gap">
+			for _, note := range tc.Notes {
+				if note.IsError {
+					<input class="checkbox--hidden" type="checkbox" id="note-error-{{.Index}}"/>
+					<div class="note alert">
+						<label class="note-close" for="note-error-{{.Index}}">&times;</label>
+						<p class="note-text">{ note.Message }</p>
+					</div>
+				} else {
+					<input class="checkbox--hidden" type="checkbox" id="note-{{.Index}}"/>
+					<div class="note success">
+						<label class="note-close" for="note-{{.Index}}">&times;</label>
+						<p class="note-text">{ note.Message }</p>
+					</div>
+				}
+			}
+		</div>
+	}
+}

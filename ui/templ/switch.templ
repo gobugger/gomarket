@@ -1,0 +1,16 @@
+package ui
+
+templ Switch(id, name string, checked bool) {
+	<input
+		type="checkbox"
+		id={ id }
+		name={ name }
+		class="switch-input"
+		if checked {
+			checked
+		}
+	/>
+	<label class="switch" for={ id }>
+		<span class="switch-slider"></span>
+	</label>
+}

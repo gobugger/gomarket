@@ -1,0 +1,1355 @@
+{
+    "language": "et-EE",
+    "messages": [
+        {
+            "id": "Failed to open the gate: invalid missing characters",
+            "message": "Failed to open the gate: invalid missing characters",
+            "translation": "Värava avamine ebaõnnestus: kehtetud puuduvad tähemärgid"
+        },
+        {
+            "id": "This username is already in use",
+            "message": "This username is already in use",
+            "translation": "See kasutajanimi on juba kasutusel"
+        },
+        {
+            "id": "Invalid PGP key",
+            "message": "Invalid PGP key",
+            "translation": "Kehtetu PGP võti"
+        },
+        {
+            "id": "Registered successfully",
+            "message": "Registered successfully",
+            "translation": "Registreerimine õnnestus"
+        },
+        {
+            "id": "Invalid credentials",
+            "message": "Invalid credentials",
+            "translation": "Kehtetud mandaadid"
+        },
+        {
+            "id": "Your account is banned",
+            "message": "Your account is banned",
+            "translation": "Teie konto on keelatud"
+        },
+        {
+            "id": "Invalid 2FA token",
+            "message": "Invalid 2FA token",
+            "translation": "Kehtetu 2FA token"
+        },
+        {
+            "id": "Password changed",
+            "message": "Password changed",
+            "translation": "Parool on muudetud"
+        },
+        {
+            "id": "You can't update to your current key",
+            "message": "You can't update to your current key",
+            "translation": "Te ei saa oma praegust võtit uuendada"
+        },
+        {
+            "id": "PGP key is set",
+            "message": "PGP key is set",
+            "translation": "PGP võti on seadistatud"
+        },
+        {
+            "id": "PGP Public key is updated",
+            "message": "PGP Public key is updated",
+            "translation": "PGP avalik võti on uuendatud"
+        },
+        {
+            "id": "Vendor info is updated",
+            "message": "Vendor info is updated",
+            "translation": "Müüja teave on uuendatud"
+        },
+        {
+            "id": "Listing created",
+            "message": "Listing created",
+            "translation": "Loend on loodud"
+        },
+        {
+            "id": "Cart updated",
+            "message": "Cart updated",
+            "translation": "Ostukorv on uuendatud"
+        },
+        {
+            "id": "cart deleted",
+            "message": "cart deleted",
+            "translation": "ostukorv on kustutatud"
+        },
+        {
+            "id": "You can't order with a vendor account",
+            "message": "You can't order with a vendor account",
+            "translation": "Te ei saa tellida müüja kontoga"
+        },
+        {
+            "id": "You don't have enough balance for this order",
+            "message": "You don't have enough balance for this order",
+            "translation": "Teie saldo ei ole piisav selle tellimuse jaoks"
+        },
+        {
+            "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translation": "Palun tasuge allolev arve {Duration} tunni jooksul, et teie tellimus saaks jätkuda.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "Order created",
+            "message": "Order created",
+            "translation": "Tellimus on loodud"
+        },
+        {
+            "id": "Not enough balance to withdraw.",
+            "message": "Not enough balance to withdraw.",
+            "translation": "Väljavõtmiseks ei ole piisavalt saldo."
+        },
+        {
+            "id": "You can't withdraw to your own account",
+            "message": "You can't withdraw to your own account",
+            "translation": "Te ei saa oma kontole raha välja võtta"
+        },
+        {
+            "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translation": "Väljamakse {XMR2Decimalamount} XMR on algatatud",
+            "placeholders": [
+                {
+                    "id": "XMR2Decimalamount",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "currency.XMR2Decimal(amount)"
+                }
+            ]
+        },
+        {
+            "id": "Order cancelled",
+            "message": "Order cancelled",
+            "translation": "Tellimus on tühistatud"
+        },
+        {
+            "id": "Review created",
+            "message": "Review created",
+            "translation": "Arvustus on loodud"
+        },
+        {
+            "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Te ei saa AF taimerit pikendada enne, kui tellimus on saadetud {Duration} päeva jooksul.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "5"
+                }
+            ]
+        },
+        {
+            "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Te ei saa AF taimerit uuesti pikendada enne, kui tellimus on saadetud {Duration} päeva jooksul.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "12"
+                }
+            ]
+        },
+        {
+            "id": "AF timer already extended to maximum.",
+            "message": "AF timer already extended to maximum.",
+            "translation": "AF taimer on juba pikendatud maksimumini."
+        },
+        {
+            "id": "AF timer extended by {Duration} days",
+            "message": "AF timer extended by {Duration} days",
+            "translation": "AF taimer on pikendatud {Duration} päevaks",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "Order disputed",
+            "message": "Order disputed",
+            "translation": "Tellimus on vaidlustatud"
+        },
+        {
+            "id": "2FA needs to be enabled for vendors",
+            "message": "2FA needs to be enabled for vendors",
+            "translation": "Müüjatele tuleb lubada 2FA"
+        },
+        {
+            "id": "Vendor accounts can't have previous orders. Please create a new account.",
+            "message": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translation": "Müüja kontodel ei saa olla varasemaid tellimusi. Palun looge uus konto."
+        },
+        {
+            "id": "Proof of inventory is required from new vendors",
+            "message": "Proof of inventory is required from new vendors",
+            "translation": "Uutelt müüjatelt on vajalik tõend varude olemasolu kohta."
+        },
+        {
+            "id": "Not enough balance",
+            "message": "Not enough balance",
+            "translation": "Ei piisa saldost"
+        },
+        {
+            "id": "Application received",
+            "message": "Application received",
+            "translation": "Taotlus on saadud"
+        },
+        {
+            "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translation": "Tellimus on aktsepteeritud. Teil on {Duration} tundi, et see saadetuks märkida.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "72"
+                }
+            ]
+        },
+        {
+            "id": "Order declined",
+            "message": "Order declined",
+            "translation": "Tellimus on tagasi lükatud"
+        },
+        {
+            "id": "Order marked as dispatched",
+            "message": "Order marked as dispatched",
+            "translation": "Tellimus on märgitud saadetuks"
+        },
+        {
+            "id": "Product deleted",
+            "message": "Product deleted",
+            "translation": "Toode on kustutatud"
+        },
+        {
+            "id": "Product updated",
+            "message": "Product updated",
+            "translation": "Toode on uuendatud"
+        },
+        {
+            "id": "Ticket is already closed",
+            "message": "Ticket is already closed",
+            "translation": "Pilet on juba suletud"
+        },
+        {
+            "id": "You need to be logged in to access that page",
+            "message": "You need to be logged in to access that page",
+            "translation": "Sellele lehele pääsemiseks peate olema sisse logitud"
+        },
+        {
+            "id": "Order received",
+            "message": "Order received",
+            "translation": "Tellimus on saadud"
+        },
+        {
+            "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translation": "Olete saanud uue tellimuse!\nTeil on kokku {Duration} tundi, et see aktsepteerida, enne kui see automaatselt tagasi lükatakse.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "48"
+                }
+            ]
+        },
+        {
+            "id": "Order accepted",
+            "message": "Order accepted",
+            "translation": "Tellimus on aktsepteeritud"
+        },
+        {
+            "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translation": "Teie tellimus on aktsepteeritud!\nSaate selle staatust jälgida tellimuste lehelt"
+        },
+        {
+            "id": "Order dispatched",
+            "message": "Order dispatched",
+            "translation": "Tellimus on saadetud"
+        },
+        {
+            "id": "Your order has been dispatched!\nPlease remember to review it.",
+            "message": "Your order has been dispatched!\nPlease remember to review it.",
+            "translation": "Teie tellimus on saadetud!\nPalun pidage meeles, et seda üle vaadata."
+        },
+        {
+            "id": "How do I become a vendor?",
+            "message": "How do I become a vendor?",
+            "translation": "Kuidas ma saan müüjaks?"
+        },
+        {
+            "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translation": "Looge konto, millel on lubatud kahefaktoriline autentimine (2FA), seejärel esitage müüja taotlus."
+        },
+        {
+            "id": "How do I place an order?",
+            "message": "How do I place an order?",
+            "translation": "Kuidas ma saan tellimuse esitada?"
+        },
+        {
+            "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translation": "Lisage soovitud tooted oma ostukorvi. Liikuge aadressile /cart ja valige „Kassa”, valige oma eelistatud kohaletoimetamise meetod ja esitage vajalik teave.\nKui teil on piisavalt saldo, saate seda kassas kasutada. Vastasel juhul võite küsida arvet. Arved tuleb tasuda {Duration} tunni jooksul, et tellimus saaks jätkata töötlemist.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "How can I obtain Monero (XMR)?",
+            "message": "How can I obtain Monero (XMR)?",
+            "translation": "Kuidas ma saan Monero (XMR) omandada?"
+        },
+        {
+            "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translation": "Monero omandamiseks on mitmeid viise. Palun külastage getmonero.org ametlike juhiste ja ressursside jaoks."
+        },
+        {
+            "id": "What should I do if my order has not arrived or does not match the description?",
+            "message": "What should I do if my order has not arrived or does not match the description?",
+            "translation": "Mida ma peaksin tegema, kui mu tellimus ei ole saabunud või ei vasta kirjeldusele?"
+        },
+        {
+            "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translation": "Tellimused lõpetatakse automaatselt pärast {Duration} päeva.\nTe võite automaatse lõpetamise perioodi pikendada kaks korda.\nKui tellimus ei ole pärast neid pikendusi ikka veel saabunud, peaksite avama vaidluse.\nMeie meeskond vaatab juhtumi üle ja teeb otsuse saadaval oleva teabe põhjal.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "What am I allowed to sell on this marketplace?",
+            "message": "What am I allowed to sell on this marketplace?",
+            "translation": "Mida ma tohin sellel turul müüa?"
+        },
+        {
+            "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translation": "Lubatud on ainult seaduslikud esemed. Kui te pole kindel, kas teie toode kvalifitseerub, võtke meiega ühendust enne kuulutuse loomist."
+        },
+        {
+            "id": "Open",
+            "message": "Open",
+            "translation": "Ava"
+        },
+        {
+            "id": "Vendor application",
+            "message": "Vendor application",
+            "translation": "Müüja taotlus"
+        },
+        {
+            "id": "Your account does not have 2FA enabled!",
+            "message": "Your account does not have 2FA enabled!",
+            "translation": "Teie kontol ei ole 2FA lubatud!"
+        },
+        {
+            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translation": "Rakendus on tasuta kasutajatele, kes on juba müüjad mõnes teises turul, kasutades sama PGP-võtit."
+        },
+        {
+            "id": "For other users, application costs {Price} XMR and is non-refundable.",
+            "message": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translation": "Teistele kasutajatele maksab rakendus {Price} XMR ja seda ei saa tagastada.",
+            "placeholders": [
+                {
+                    "id": "Price",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "price"
+                }
+            ]
+        },
+        {
+            "id": "You're required to provide proof that you actually have products to sell here.",
+            "message": "You're required to provide proof that you actually have products to sell here.",
+            "translation": "Te peate esitama tõendi, et teil on siin müügiks tooteid."
+        },
+        {
+            "id": "Vendor Logo",
+            "message": "Vendor Logo",
+            "translation": "Müüja logo"
+        },
+        {
+            "id": "Use png image with close to 1:1 ratio for optimal look",
+            "message": "Use png image with close to 1:1 ratio for optimal look",
+            "translation": "Kasutage png pilti, mille suhe on lähedane 1:1, et saavutada parim välimus."
+        },
+        {
+            "id": "Existing vendor",
+            "message": "Existing vendor",
+            "translation": "Olemasolev müüja"
+        },
+        {
+            "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translation": "Valige see, kui olete juba müüja mõnes teises turul, näiteks xmrBazaar."
+        },
+        {
+            "id": "Proof of inventory",
+            "message": "Proof of inventory",
+            "translation": "Tõend laoseisust"
+        },
+        {
+            "id": "Clear image of your inventory with your username and timestamp visible",
+            "message": "Clear image of your inventory with your username and timestamp visible",
+            "translation": "Selge pilt teie laoseisust, kus on nähtav teie kasutajanimi ja ajatempli kuupäev."
+        },
+        {
+            "id": "Markets and Your Username",
+            "message": "Markets and Your Username",
+            "translation": "Turud ja teie kasutajanimi"
+        },
+        {
+            "id": "List the markets where you are a vendor and include your username",
+            "message": "List the markets where you are a vendor and include your username",
+            "translation": "Loetlege turud, kus olete müüja, ja lisage oma kasutajanimi."
+        },
+        {
+            "id": "Captcha",
+            "message": "Captcha",
+            "translation": "Captcha"
+        },
+        {
+            "id": "Click circle with a cut",
+            "message": "Click circle with a cut",
+            "translation": "Klõpsake lõikega ringi"
+        },
+        {
+            "id": "Submit",
+            "message": "Submit",
+            "translation": "Esita"
+        },
+        {
+            "id": "Total",
+            "message": "Total",
+            "translation": "Kokku"
+        },
+        {
+            "id": "Checkout",
+            "message": "Checkout",
+            "translation": "Väljamakse"
+        },
+        {
+            "id": "delivery method",
+            "message": "delivery method",
+            "translation": "tarneviis"
+        },
+        {
+            "id": "Use wallet for payment",
+            "message": "Use wallet for payment",
+            "translation": "Kasutage maksmiseks rahakotti"
+        },
+        {
+            "id": "details",
+            "message": "details",
+            "translation": "detailid"
+        },
+        {
+            "id": "Use your real address, with the same format as below.",
+            "message": "Use your real address, with the same format as below.",
+            "translation": "Kasutage oma tegelikku aadressi, samas formaadis nagu allpool."
+        },
+        {
+            "id": "Unencrypted details are automatically encrypted using vendors key.",
+            "message": "Unencrypted details are automatically encrypted using vendors key.",
+            "translation": "Krüpteerimata andmed krüpteeritakse automaatselt müüja võtme abil."
+        },
+        {
+            "id": "Title",
+            "message": "Title",
+            "translation": "Pealkiri"
+        },
+        {
+            "id": "Description",
+            "message": "Description",
+            "translation": "Kirjeldus"
+        },
+        {
+            "id": "Product image",
+            "message": "Product image",
+            "translation": "Toote pilt"
+        },
+        {
+            "id": "Use image with close to 1:1 aspect ratio for optimal look",
+            "message": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translation": "Kasutage pilti, mille kuvasuhe on lähedane 1:1, et saavutada parim välimus."
+        },
+        {
+            "id": "Category",
+            "message": "Category",
+            "translation": "Kategooria"
+        },
+        {
+            "id": "Ships from",
+            "message": "Ships from",
+            "translation": "Saadetakse"
+        },
+        {
+            "id": "Ships to",
+            "message": "Ships to",
+            "translation": "Saadetakse"
+        },
+        {
+            "id": "Inventory",
+            "message": "Inventory",
+            "translation": "Laoseis"
+        },
+        {
+            "id": "Size of the current inventory for this product.",
+            "message": "Size of the current inventory for this product.",
+            "translation": "Selle toote praeguse laoseisu suurus."
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Hinnakujundus"
+        },
+        {
+            "id": "Here you can set your pricing.",
+            "message": "Here you can set your pricing.",
+            "translation": "Siin saate määrata oma hinnad."
+        },
+        {
+            "id": "We take 5% cut from these prices.",
+            "message": "We take 5% cut from these prices.",
+            "translation": "Me võtame nende hindade pealt 5% tasu."
+        },
+        {
+            "id": "Quantity",
+            "message": "Quantity",
+            "translation": "Kogus"
+        },
+        {
+            "id": "Price",
+            "message": "Price",
+            "translation": "Hind"
+        },
+        {
+            "id": "Create ticket",
+            "message": "Create ticket",
+            "translation": "Loo pilet"
+        },
+        {
+            "id": "Subject",
+            "message": "Subject",
+            "translation": "Teema"
+        },
+        {
+            "id": "account",
+            "message": "account",
+            "translation": "konto"
+        },
+        {
+            "id": "order",
+            "message": "order",
+            "translation": "tellimus"
+        },
+        {
+            "id": "wallet",
+            "message": "wallet",
+            "translation": "rahakott"
+        },
+        {
+            "id": "vendor",
+            "message": "vendor",
+            "translation": "müüja"
+        },
+        {
+            "id": "product",
+            "message": "product",
+            "translation": "toode"
+        },
+        {
+            "id": "suggestion",
+            "message": "suggestion",
+            "translation": "ettepanek"
+        },
+        {
+            "id": "bug",
+            "message": "bug",
+            "translation": "viga"
+        },
+        {
+            "id": "other",
+            "message": "other",
+            "translation": "muu"
+        },
+        {
+            "id": "Message",
+            "message": "Message",
+            "translation": "Sõnum"
+        },
+        {
+            "id": "Staff PGP",
+            "message": "Staff PGP",
+            "translation": "Töötajate PGP"
+        },
+        {
+            "id": "Exchange rate",
+            "message": "Exchange rate",
+            "translation": "Vahetuskurss"
+        },
+        {
+            "id": "Time",
+            "message": "Time",
+            "translation": "Aeg"
+        },
+        {
+            "id": "Vendors:",
+            "message": "Vendors:",
+            "translation": "Müüjad:"
+        },
+        {
+            "id": "Users:",
+            "message": "Users:",
+            "translation": "Kasutajad:"
+        },
+        {
+            "id": "submit",
+            "message": "submit",
+            "translation": "esita"
+        },
+        {
+            "id": "Response",
+            "message": "Response",
+            "translation": "Vastus"
+        },
+        {
+            "id": "products",
+            "message": "products",
+            "translation": "tooted"
+        },
+        {
+            "id": "orders",
+            "message": "orders",
+            "translation": "tellimused"
+        },
+        {
+            "id": "sell",
+            "message": "sell",
+            "translation": "müü"
+        },
+        {
+            "id": "support",
+            "message": "support",
+            "translation": "tugi"
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Logi välja"
+        },
+        {
+            "id": "log in",
+            "message": "log in",
+            "translation": "logi sisse"
+        },
+        {
+            "id": "register",
+            "message": "register",
+            "translation": "registreeri"
+        },
+        {
+            "id": "Entry guard to {Name}",
+            "message": "Entry guard to {Name}",
+            "translation": "Sisenemise valvur {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "tc.Config.Name"
+                }
+            ]
+        },
+        {
+            "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translation": "Võrdle kasutatavat URL-i alloleva pildiga, et leida kõik puuduolevad tähemärgid, mis on märgitud '*'."
+        },
+        {
+            "id": "Missing characters",
+            "message": "Missing characters",
+            "translation": "Puuduolevad tähemärgid"
+        },
+        {
+            "id": "Log in",
+            "message": "Log in",
+            "translation": "Logi sisse"
+        },
+        {
+            "id": "username",
+            "message": "username",
+            "translation": "kasutajanimi"
+        },
+        {
+            "id": "password",
+            "message": "password",
+            "translation": "parool"
+        },
+        {
+            "id": "Create new account",
+            "message": "Create new account",
+            "translation": "Loo uus konto"
+        },
+        {
+            "id": "Delete all",
+            "message": "Delete all",
+            "translation": "Kustuta kõik"
+        },
+        {
+            "id": "You have zero notifications",
+            "message": "You have zero notifications",
+            "translation": "Sul ei ole ühtegi teavitust"
+        },
+        {
+            "id": "Order",
+            "message": "Order",
+            "translation": "Tellimus"
+        },
+        {
+            "id": "Chat",
+            "message": "Chat",
+            "translation": "Vestlus"
+        },
+        {
+            "id": "Status",
+            "message": "Status",
+            "translation": "Olek"
+        },
+        {
+            "id": "Vendor",
+            "message": "Vendor",
+            "translation": "Müüja"
+        },
+        {
+            "id": "Delivery method",
+            "message": "Delivery method",
+            "translation": "Kohaletoimetamise meetod"
+        },
+        {
+            "id": "Total cost",
+            "message": "Total cost",
+            "translation": "Kogukulu"
+        },
+        {
+            "id": "Date",
+            "message": "Date",
+            "translation": "Kuupäev"
+        },
+        {
+            "id": "Dispatched at",
+            "message": "Dispatched at",
+            "translation": "Saadetud"
+        },
+        {
+            "id": "Until auto-declined",
+            "message": "Until auto-declined",
+            "translation": "Kuni automaatselt tagasi lükatud"
+        },
+        {
+            "id": "Until auto-finalized",
+            "message": "Until auto-finalized",
+            "translation": "Kuni automaatselt lõpetatud"
+        },
+        {
+            "id": "Details",
+            "message": "Details",
+            "translation": "Üksikasjad"
+        },
+        {
+            "id": "Vendor offered refund of {RefundFactor}%",
+            "message": "Vendor offered refund of {RefundFactor}%",
+            "translation": "Müüja pakkus {RefundFactor}% hüvitist",
+            "placeholders": [
+                {
+                    "id": "RefundFactor",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "100 * item.Offer.RefundFactor"
+                }
+            ]
+        },
+        {
+            "id": "Accept",
+            "message": "Accept",
+            "translation": "Aktsepteeri"
+        },
+        {
+            "id": "Decline",
+            "message": "Decline",
+            "translation": "Keela"
+        },
+        {
+            "id": "Customers PGP key",
+            "message": "Customers PGP key",
+            "translation": "Kliendi PGP võti"
+        },
+        {
+            "id": "Customer can still cancel this order!",
+            "message": "Customer can still cancel this order!",
+            "translation": "Kliendil on endiselt võimalik see tellimus tühistada!"
+        },
+        {
+            "id": "You must accept it in 2 days or it will be automatically declined.",
+            "message": "You must accept it in 2 days or it will be automatically declined.",
+            "translation": "Sa pead selle 2 päeva jooksul aktsepteerima, vastasel juhul lükatakse see automaatselt tagasi."
+        },
+        {
+            "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translation": "Pärast aktsepteerimist ei saa klient enam tellimust tühistada, seega saad sa selle ohutult välja saata."
+        },
+        {
+            "id": "Please carefully review the order below before accepting it.",
+            "message": "Please carefully review the order below before accepting it.",
+            "translation": "Palun vaata allolev tellimus hoolikalt üle enne selle aktsepteerimist."
+        },
+        {
+            "id": "Always decline orders that you'r unable to fulfill.",
+            "message": "Always decline orders that you'r unable to fulfill.",
+            "translation": "Keela alati tellimused, mida sa ei saa täita."
+        },
+        {
+            "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translation": "Sa pead selle tellimuse 2 päeva jooksul saadetuks märkima, vastasel juhul lükatakse see automaatselt tagasi."
+        },
+        {
+            "id": "Make sure that you have enough time to do the actual dispaching!",
+            "message": "Make sure that you have enough time to do the actual dispaching!",
+            "translation": "Veenduge, et teil on piisavalt aega tegeliku saatmise tegemiseks!"
+        },
+        {
+            "id": "Dispatched",
+            "message": "Dispatched",
+            "translation": "Saadetud"
+        },
+        {
+            "id": "Transfer exact amount of Monero to the address below.",
+            "message": "Transfer exact amount of Monero to the address below.",
+            "translation": "Ülekandke täpselt määratud summa Monero't allolevale aadressile."
+        },
+        {
+            "id": "After 10 confirmations, your order will proceed to vendor.",
+            "message": "After 10 confirmations, your order will proceed to vendor.",
+            "translation": "Pärast 10 kinnitust läheb teie tellimus edasimüüjale."
+        },
+        {
+            "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translation": "Teil on kokku 3 tundi, et selle arve tasuda, vastasel juhul tühistatakse teie tellimus."
+        },
+        {
+            "id": "Time left to pay",
+            "message": "Time left to pay",
+            "translation": "Jäänud aeg maksmiseks"
+        },
+        {
+            "id": "Amount XMR",
+            "message": "Amount XMR",
+            "translation": "Summa XMR"
+        },
+        {
+            "id": "Address",
+            "message": "Address",
+            "translation": "Aadress"
+        },
+        {
+            "id": "Orders can be cancelled until vendor has accepted it.",
+            "message": "Orders can be cancelled until vendor has accepted it.",
+            "translation": "Tellimusi saab tühistada kuni edasimüüja on selle vastu võtnud."
+        },
+        {
+            "id": "Cancel",
+            "message": "Cancel",
+            "translation": "Tühista"
+        },
+        {
+            "id": "Your order will auto-finalize in",
+            "message": "Your order will auto-finalize in",
+            "translation": "Teie tellimus lõpetatakse automaatselt"
+        },
+        {
+            "id": "You can extend the auto-finalize-time by 7-days.",
+            "message": "You can extend the auto-finalize-time by 7-days.",
+            "translation": "Saate automaatse lõpetamise aega pikendada 7 päeva võrra."
+        },
+        {
+            "id": "review your order",
+            "message": "review your order",
+            "translation": "kontrollige oma tellimust"
+        },
+        {
+            "id": "Review",
+            "message": "Review",
+            "translation": "Tõlgenda"
+        },
+        {
+            "id": "Extend AF-timer",
+            "message": "Extend AF-timer",
+            "translation": "Pikenda AF-taimerit"
+        },
+        {
+            "id": "Dispute",
+            "message": "Dispute",
+            "translation": "Vaidlus"
+        },
+        {
+            "id": "Refund offer",
+            "message": "Refund offer",
+            "translation": "Tagasimakse pakkumine"
+        },
+        {
+            "id": "Customer has disputed this order.",
+            "message": "Customer has disputed this order.",
+            "translation": "Kliendil on see tellimus vaidlustatud."
+        },
+        {
+            "id": "Use the chat below to discuss about this dispute.",
+            "message": "Use the chat below to discuss about this dispute.",
+            "translation": "Kasutage allolevat vestlust, et arutada seda vaidlust."
+        },
+        {
+            "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translation": "Saate luua tagasimakse pakkumise ja lahendada selle vaidluse ilma administraatori sekkumiseta."
+        },
+        {
+            "id": "Refund percent",
+            "message": "Refund percent",
+            "translation": "Tagasimakse protsent"
+        },
+        {
+            "id": "Order date",
+            "message": "Order date",
+            "translation": "Tellimuse kuupäev"
+        },
+        {
+            "id": "Order ID",
+            "message": "Order ID",
+            "translation": "Tellimuse ID"
+        },
+        {
+            "id": "Proof key ownership",
+            "message": "Proof key ownership",
+            "translation": "Tõend võtme omandiõiguse kohta"
+        },
+        {
+            "id": "Decrypt to get the token",
+            "message": "Decrypt to get the token",
+            "translation": "Dekrüpteerige, et saada token"
+        },
+        {
+            "id": "Token",
+            "message": "Token",
+            "translation": "Token"
+        },
+        {
+            "id": "Update product",
+            "message": "Update product",
+            "translation": "Uuenda toodet"
+        },
+        {
+            "id": "Update",
+            "message": "Update",
+            "translation": "Uuenda"
+        },
+        {
+            "id": "Add to cart",
+            "message": "Add to cart",
+            "translation": "Lisa ostukorvi"
+        },
+        {
+            "id": "Reviews",
+            "message": "Reviews",
+            "translation": "Arvustused"
+        },
+        {
+            "id": "ago",
+            "message": "ago",
+            "translation": "tagasi"
+        },
+        {
+            "id": "OUT OF STOCK",
+            "message": "OUT OF STOCK",
+            "translation": "LADU TÜHI"
+        },
+        {
+            "id": "Register",
+            "message": "Register",
+            "translation": "Registreeri"
+        },
+        {
+            "id": "password check",
+            "message": "password check",
+            "translation": "parooli kontroll"
+        },
+        {
+            "id": "Already have an account?",
+            "message": "Already have an account?",
+            "translation": "Kas sul on juba konto?"
+        },
+        {
+            "id": "Review order",
+            "message": "Review order",
+            "translation": "Tõenda tellimust"
+        },
+        {
+            "id": "Grade",
+            "message": "Grade",
+            "translation": "Hinne"
+        },
+        {
+            "id": "guest",
+            "message": "guest",
+            "translation": "külaline"
+        },
+        {
+            "id": "customer",
+            "message": "customer",
+            "translation": "klient"
+        },
+        {
+            "id": "admin",
+            "message": "admin",
+            "translation": "administraator"
+        },
+        {
+            "id": "unknown",
+            "message": "unknown",
+            "translation": "tundmatu"
+        },
+        {
+            "id": "enabled",
+            "message": "enabled",
+            "translation": "lubatud"
+        },
+        {
+            "id": "disabled",
+            "message": "disabled",
+            "translation": "keelatud"
+        },
+        {
+            "id": "Account",
+            "message": "Account",
+            "translation": "Konto"
+        },
+        {
+            "id": "Username",
+            "message": "Username",
+            "translation": "Kasutajanimi"
+        },
+        {
+            "id": "Type",
+            "message": "Type",
+            "translation": "Tüüp"
+        },
+        {
+            "id": "2FA",
+            "message": "2FA",
+            "translation": "2FA"
+        },
+        {
+            "id": "Preferences",
+            "message": "Preferences",
+            "translation": "Eelistused"
+        },
+        {
+            "id": "Language",
+            "message": "Language",
+            "translation": "Keel"
+        },
+        {
+            "id": "Currency",
+            "message": "Currency",
+            "translation": "Valuuta"
+        },
+        {
+            "id": "Change password",
+            "message": "Change password",
+            "translation": "Muuda parooli"
+        },
+        {
+            "id": "Current password",
+            "message": "Current password",
+            "translation": "Praegune parool"
+        },
+        {
+            "id": "New password",
+            "message": "New password",
+            "translation": "Uus parool"
+        },
+        {
+            "id": "Confirm new password",
+            "message": "Confirm new password",
+            "translation": "Kinnita uus parool"
+        },
+        {
+            "id": "Change PGP key",
+            "message": "Change PGP key",
+            "translation": "Muuda PGP võtit"
+        },
+        {
+            "id": "Enable 2FA",
+            "message": "Enable 2FA",
+            "translation": "Luba 2FA"
+        },
+        {
+            "id": "PGP public key",
+            "message": "PGP public key",
+            "translation": "PGP avalik võti"
+        },
+        {
+            "id": "Required for vendors, suggested for everyone.",
+            "message": "Required for vendors, suggested for everyone.",
+            "translation": "Nõutav müüjatele, soovitatav kõigile."
+        },
+        {
+            "id": "Update vendor profile",
+            "message": "Update vendor profile",
+            "translation": "Uuenda müüja profiili"
+        },
+        {
+            "id": "Vendor info",
+            "message": "Vendor info",
+            "translation": "Müüja info"
+        },
+        {
+            "id": "Leave empty to not update.",
+            "message": "Leave empty to not update.",
+            "translation": "Jätke tühi, et mitte uuendada."
+        },
+        {
+            "id": "Update delivery methods",
+            "message": "Update delivery methods",
+            "translation": "Uuenda kohaletoimetamise meetodeid"
+        },
+        {
+            "id": "Delivery Method",
+            "message": "Delivery Method",
+            "translation": "Kohaletoimetamise meetod"
+        },
+        {
+            "id": "My tickets",
+            "message": "My tickets",
+            "translation": "Minu piletid"
+        },
+        {
+            "id": "0 seconds",
+            "message": "0 seconds",
+            "translation": "0 sekundit"
+        },
+        {
+            "id": "{Second} seconds",
+            "message": "{Second} seconds",
+            "translation": "{Second} sekundit",
+            "placeholders": [
+                {
+                    "id": "Second",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Second"
+                }
+            ]
+        },
+        {
+            "id": "{Minute} minutes",
+            "message": "{Minute} minutes",
+            "translation": "{Minute} minutit",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Minute"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} hours",
+            "message": "{Hour} hours",
+            "translation": "{Hour} tundi",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Hour"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} days",
+            "message": "{Hour} days",
+            "translation": "{Hour} päeva",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / (24 * time.Hour)"
+                }
+            ]
+        },
+        {
+            "id": "Rating (AVG)",
+            "message": "Rating (AVG)",
+            "translation": "Hinnang (KESKMINE)"
+        },
+        {
+            "id": "Orders completed",
+            "message": "Orders completed",
+            "translation": "Tellimused lõpetatud"
+        },
+        {
+            "id": "Orders in escrow",
+            "message": "Orders in escrow",
+            "translation": "Tellimused deposiidis"
+        },
+        {
+            "id": "Pending disputes",
+            "message": "Pending disputes",
+            "translation": "Ootel vaidlused"
+        },
+        {
+            "id": "Previously seen",
+            "message": "Previously seen",
+            "translation": "Varem nähtud"
+        },
+        {
+            "id": "PGP key",
+            "message": "PGP key",
+            "translation": "PGP võti"
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Rahakott"
+        },
+        {
+            "id": "This is your XMR wallet where you can deposit coins.",
+            "message": "This is your XMR wallet where you can deposit coins.",
+            "translation": "See on teie XMR rahakott, kuhu saate münte deponeerida."
+        },
+        {
+            "id": "Balance is updated after 10 confirmations.",
+            "message": "Balance is updated after 10 confirmations.",
+            "translation": "Saldo uuendatakse pärast 10 kinnitust."
+        },
+        {
+            "id": "See",
+            "message": "See",
+            "translation": "Vaata"
+        },
+        {
+            "id": "for more information.",
+            "message": "for more information.",
+            "translation": "lisainformatsiooni."
+        },
+        {
+            "id": "Balance",
+            "message": "Balance",
+            "translation": "Saldo"
+        },
+        {
+            "id": "Withdraw",
+            "message": "Withdraw",
+            "translation": "Võta välja"
+        },
+        {
+            "id": "Enter a monero address where you want to withdraw your funds.",
+            "message": "Enter a monero address where you want to withdraw your funds.",
+            "translation": "Sisestage Monero aadress, kuhu soovite oma vahendeid välja võtta."
+        },
+        {
+            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translation": "Kogume iga väljamakse eest 0,01 XMR tasu, et vältida rämpsposti."
+        },
+        {
+            "id": "DO NOT withdraw funds to another wallet on this platform!",
+            "message": "DO NOT withdraw funds to another wallet on this platform!",
+            "translation": "ÄRGE võtke vahendeid välja teise rahakotti sellel platvormil!"
+        },
+        {
+            "id": "Destination address",
+            "message": "Destination address",
+            "translation": "Sihtaadress"
+        },
+        {
+            "id": "Amount",
+            "message": "Amount",
+            "translation": "Summa"
+        },
+        {
+            "id": "Enter amount in decimal format (e.g., 1.42069)",
+            "message": "Enter amount in decimal format (e.g., 1.42069)",
+            "translation": "Sisestage summa kümnendvormingus (nt 1.42069)"
+        }
+    ]
+}

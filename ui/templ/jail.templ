@@ -1,0 +1,25 @@
+package ui
+
+templ Jail(tc *TemplateContext, imgSrc string) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/jail" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Entry guard to %s", tc.Config.Name) }</h2>
+			</div>
+			<div class="form__field">
+				<label for="addr" class="text-wrap">
+					{ tc.Translate("Compare the URL you're using with the one in the image below to find all missing characters marked with '*'") }.
+				</label>
+				<img id="addr" class="jail-problem" src={ imgSrc }/>
+			</div>
+			<div class="form__field">
+				<label for="answer">{ tc.Translate("Missing characters") }</label>
+				<input id="answer" class="form__input" type="text" name="answer" required/>
+			</div>
+			<div class="form__field--right">
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

@@ -1,0 +1,22 @@
+#inventory_image {
+	display: block;
+}
+
+#application_letter {
+	display: none;
+}
+
+#existing_vendor:checked~#inventory_image {
+	display: none;
+}
+
+#existing_vendor:checked~#application_letter {
+	display: block;
+}
+
+.toggle_field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-top: 1rem;
+}

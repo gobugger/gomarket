@@ -1,0 +1,35 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/repo"
+
+templ Notifications(tc *TemplateContext, notifications []repo.Notification) {
+	@Layout(tc) {
+		if len(notifications) > 0 {
+			<div class="form--basic mw-l">
+				<div class="form__field">
+					<div class="chat">
+						for _, notification := range notifications {
+							<div class="notification">
+								<h3>{ notification.Title }</h3>
+								<div class="col w100">
+									<pre class="display-text--simple">{ notification.Content }</pre>
+								</div>
+								<div class="row-end w100">
+									<p class="text--small">{ FmtDate(notification.CreatedAt) }</p>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+				<div class="form__field--right">
+					<form action="/notification/delete/all" method="post">
+						@templ.Raw(tc.CsrfField)
+						<button class="btn-tiny" type="submit">{ tc.Translate("Delete all") }</button>
+					</form>
+				</div>
+			</div>
+		} else {
+			<h2>{ tc.Translate("You have zero notifications") }</h2>
+		}
+	}
+}

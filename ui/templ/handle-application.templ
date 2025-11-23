@@ -1,0 +1,80 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/view"
+
+templ HandleApplication(tc *TemplateContext, application *view.VendorApplication) {
+	@Layout(tc) {
+		<div class="centered gap mw-l">
+			<section class="form--basic">
+				<div class="fields__container bg">
+					<div class="info_field">
+						<label>Applicant</label>
+						<p class="field">{ application.User.Username }</p>
+					</div>
+					<div class="info_field">
+						<label>Locale</label>
+						<p class="field">{ application.User.Locale }</p>
+					</div>
+					<div class="info_field">
+						<label>Existing vendor</label>
+						<p class="field">
+							if application.Application.ExistingVendor {
+								yes
+							} else {
+								no
+							}
+						</p>
+					</div>
+					<div class="info_field">
+						<label>Application created at</label>
+						<p class="field">{ FmtTime(application.Application.CreatedAt) }</p>
+					</div>
+					<div class="info_field">
+						<label>User registered at</label>
+						<p class="field">{ FmtTime(application.User.CreatedAt) }</p>
+					</div>
+				</div>
+				<div class="form__field">
+					<label>Logo</label>
+					<img class="vendor__logo" src={ "uploads/logo/" + application.User.ID.String() } alt="logo"/>
+				</div>
+				if application.Application.ExistingVendor {
+					<div class="form__field">
+						<label>Letter</label>
+						<pre class="display-text bg">{ application.Application.Letter }</pre>
+					</div>
+					<div class="form__field">
+						<label for="pgpkey">PGP key</label>
+						<pre class="pgpkey padding--m">{ application.User.PgpKey }</pre>
+					</div>
+				} else {
+					<div class="form__field">
+						<label>Inventory</label>
+						<img
+							class="mw-l"
+							src={ "uploads/inventory/" + application.Application.ID.String() }
+							alt="inventory"
+						/>
+					</div>
+				}
+			</section>
+			<form class="form--basic" action="/application" method="post">
+				@templ.Raw(tc.CsrfField)
+				<input type="hidden" name="application_id" value={ application.Application.ID.String() }/>
+				<div class="form__field">
+					<div>
+						<label>Accept</label>
+						<input type="checkbox" name="accept"/>
+					</div>
+				</div>
+				<div class="form__field">
+					<label>Explanation</label>
+					<textarea name="explanation" spellcheck="false"></textarea>
+				</div>
+				<div class="form__field--right">
+					<button type="submit" class="btn">{ tc.Translate("submit") }</button>
+				</div>
+			</form>
+		</div>
+	}
+}

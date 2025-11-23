@@ -1,0 +1,23 @@
+package ui
+
+templ PGPCheck(tc *TemplateContext, encryptedMessage string) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/settings/checkpgp" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Proof key ownership") }</h2>
+			</div>
+			<div class="form__field">
+				<label>{ tc.Translate("Decrypt to get the token") }</label>
+				<pre class="padding--m pgpkey">{ encryptedMessage }</pre>
+			</div>
+			<div class="form__field">
+				<label for="token">{ tc.Translate("Token") }</label>
+				<input id="token" class="form__input" type="text" name="token" required/>
+			</div>
+			<div class="form__field--right">
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

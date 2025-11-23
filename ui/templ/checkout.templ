@@ -1,0 +1,47 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/repo"
+
+templ Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/checkout/order" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Checkout") }</h2>
+			</div>
+			<div class="form__field">
+				<label for="delivery">{ tc.Translate("delivery method") }</label>
+				<select id="delivery" type="number" name="delivery_method_id" required>
+					for _, dm := range deliveryMethods {
+						<option value={ dm.ID.String() } title={ dm.Description }>{ Head(dm.Description, 60) + " " + tc.Fiat2(dm.PriceCent) }</option>
+					}
+				</select>
+			</div>
+			<div class="form__field">
+				<label for="use_wallet">{ tc.Translate("Use wallet for payment") }</label>
+				{{ useWallet := tc.BalancePico > 0 }}
+				@Switch("use_wallet", "use_wallet", useWallet)
+			</div>
+			<div class="form__field h100">
+				<div class="col">
+					<label class="m0" for="details">{ tc.Translate("details") }</label>
+					<p class="text--small mb0">{ tc.Translate("Use your real address, with the same format as below.") }</p>
+					<p class="text--small mb-s">{ tc.Translate("Unencrypted details are automatically encrypted using vendors key.") }</p>
+				</div>
+				<textarea
+					class="fill"
+					id="details"
+					name="details"
+					spellcheck="false"
+					placeholder="Mary Jane&#10;Surfers paradise 4 A 20&#10;4200 Brazil"
+					required
+				></textarea>
+			</div>
+			<div class="form__field--right">
+				<div class="col">
+					@Captcha(tc)
+				</div>
+			</div>
+		</form>
+	}
+}

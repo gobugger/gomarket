@@ -1,0 +1,60 @@
+package ui
+
+templ Application(tc *TemplateContext, price string) {
+	@Layout(tc, "/ui/css/application.css") {
+		<form class="form--basic mw-l" action="/license/application" method="post" enctype="multipart/form-data">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Vendor application") }</h2>
+			</div>
+			<div class="form__field">
+				<p class="highlight--important">
+					if !tc.Settings.TwofaEnabled {
+						{ tc.Translate("Your account does not have 2FA enabled!") }
+						<br/>
+					}
+					{ tc.Translate("Application is free for users who are already vendors on some other market.") }
+					<br/>
+					{ tc.Translate("For other users, application costs %s XMR.", price) }
+					<br/>
+				</p>
+			</div>
+			<div class="form__field">
+				<div class="col">
+					<label class="m0" for="logo">{ tc.Translate("Vendor Logo") }</label>
+					<p class="text--small mb-s">{ tc.Translate("Use png image with close to 1:1 ratio for optimal look") }</p>
+				</div>
+				<input id="logo" type="file" name="logo" accept="image/*" required/>
+			</div>
+			<div class="form__field--start">
+				<div class="col">
+					<label class="m0" for="existing">{ tc.Translate("Existing vendor") }</label>
+					<p class="text--small mb-s">{ tc.Translate("Select this if you'r already a vendor on some other market such as xmrBazaar") }</p>
+				</div>
+				@Switch("existing_vendor", "existing_vendor", false)
+				<div id="inventory_image" class="toggle_field">
+					<div class="col">
+						<label class="m0">{ tc.Translate("Proof of inventory") }</label>
+						<p class="text--small mb-s">
+							{ tc.Translate("Clear image of your inventory with your username and timestamp visible") }
+						</p>
+					</div>
+					<input type="file" name="inventory" accept="image/*"/>
+				</div>
+				<div id="application_letter" class="toggle_field">
+					<div class="col">
+						<label class="m0">{ tc.Translate("Markets and Your Username") }</label>
+						<p class="text--small mb-s text-wrap">
+							{ tc.Translate("List the markets where you are a vendor and include your username") }
+							<br/>
+						</p>
+					</div>
+					<textarea name="letter" spellcheck="false"></textarea>
+				</div>
+			</div>
+			<div class="form__field--right">
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

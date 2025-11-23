@@ -1,0 +1,1355 @@
+{
+    "language": "lv-LV",
+    "messages": [
+      {
+        "id": "Failed to open the gate: invalid missing characters",
+        "message": "Failed to open the gate: invalid missing characters",
+        "translation": "Neizdevās atvērt vārtus: nederīgi trūkstoši simboli"
+      },
+      {
+        "id": "This username is already in use",
+        "message": "This username is already in use",
+        "translation": "Šis lietotājvārds jau tiek izmantots"
+      },
+      {
+        "id": "Invalid PGP key",
+        "message": "Invalid PGP key",
+        "translation": "Nederīgs PGP atslēga"
+      },
+      {
+        "id": "Registered successfully",
+        "message": "Registered successfully",
+        "translation": "Veiksmīgi reģistrēts"
+      },
+      {
+        "id": "Invalid credentials",
+        "message": "Invalid credentials",
+        "translation": "Nederīgi akreditācijas dati"
+      },
+      {
+        "id": "Your account is banned",
+        "message": "Your account is banned",
+        "translation": "Jūsu konts ir bloķēts"
+      },
+      {
+        "id": "Invalid 2FA token",
+        "message": "Invalid 2FA token",
+        "translation": "Nederīgs 2FA tokens"
+      },
+      {
+        "id": "Password changed",
+        "message": "Password changed",
+        "translation": "Parole mainīta"
+      },
+      {
+        "id": "You can't update to your current key",
+        "message": "You can't update to your current key",
+        "translation": "Jūs nevarat atjaunināt uz savu pašreizējo atslēgu"
+      },
+      {
+        "id": "PGP key is set",
+        "message": "PGP key is set",
+        "translation": "PGP atslēga ir iestatīta"
+      },
+      {
+        "id": "PGP Public key is updated",
+        "message": "PGP Public key is updated",
+        "translation": "PGP publiskā atslēga ir atjaunināta"
+      },
+      {
+        "id": "Vendor info is updated",
+        "message": "Vendor info is updated",
+        "translation": "Pārdevēja informācija ir atjaunināta"
+      },
+      {
+        "id": "Listing created",
+        "message": "Listing created",
+        "translation": "Sludinājums izveidots"
+      },
+      {
+        "id": "Cart updated",
+        "message": "Cart updated",
+        "translation": "Groziņš atjaunināts"
+      },
+      {
+        "id": "cart deleted",
+        "message": "cart deleted",
+        "translation": "groziņš dzēsts"
+      },
+      {
+        "id": "You can't order with a vendor account",
+        "message": "You can't order with a vendor account",
+        "translation": "Jūs nevarat pasūtīt ar pārdevēja kontu"
+      },
+      {
+        "id": "You don't have enough balance for this order",
+        "message": "You don't have enough balance for this order",
+        "translation": "Jums nav pietiekami daudz līdzekļu šim pasūtījumam"
+      },
+      {
+        "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+        "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+        "translation": "Lūdzu, apmaksājiet zemāk esošo rēķinu {Duration} stundu laikā, lai jūsu pasūtījums varētu turpināties.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "6"
+          }
+        ]
+      },
+      {
+        "id": "Order created",
+        "message": "Order created",
+        "translation": "Pasūtījums izveidots"
+      },
+      {
+        "id": "Not enough balance to withdraw.",
+        "message": "Not enough balance to withdraw.",
+        "translation": "Nav pietiekami daudz līdzekļu izņemšanai."
+      },
+      {
+        "id": "You can't withdraw to your own account",
+        "message": "You can't withdraw to your own account",
+        "translation": "Jūs nevarat izņemt uz savu kontu"
+      },
+      {
+        "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+        "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+        "translation": "Izņemšana {XMR2Decimalamount} XMR uzsākta",
+        "placeholders": [
+          {
+            "id": "XMR2Decimalamount",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "currency.XMR2Decimal(amount)"
+          }
+        ]
+      },
+      {
+        "id": "Order cancelled",
+        "message": "Order cancelled",
+        "translation": "Pasūtījums atcelts"
+      },
+      {
+        "id": "Review created",
+        "message": "Review created",
+        "translation": "Atsauksme izveidota"
+      },
+      {
+        "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+        "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+        "translation": "Jūs nevarat pagarināt AF taimeri, pirms pasūtījums ir nosūtīts vismaz {Duration} dienas.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "5"
+          }
+        ]
+      },
+      {
+        "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+        "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+        "translation": "Jūs nevarat atkārtoti pagarināt AF taimeri, pirms pasūtījums ir nosūtīts vismaz {Duration} dienas.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "12"
+          }
+        ]
+      },
+      {
+        "id": "AF timer already extended to maximum.",
+        "message": "AF timer already extended to maximum.",
+        "translation": "AF taimeris jau ir pagarināts līdz maksimumam."
+      },
+      {
+        "id": "AF timer extended by {Duration} days",
+        "message": "AF timer extended by {Duration} days",
+        "translation": "AF taimeris pagarināts par {Duration} dienām",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "7"
+          }
+        ]
+      },
+      {
+        "id": "Order disputed",
+        "message": "Order disputed",
+        "translation": "Pasūtījums apstrīdēts"
+      },
+      {
+        "id": "2FA needs to be enabled for vendors",
+        "message": "2FA needs to be enabled for vendors",
+        "translation": "2FA ir jāieslēdz pārdevējiem"
+      },
+      {
+        "id": "Vendor accounts can't have previous orders. Please create a new account.",
+        "message": "Vendor accounts can't have previous orders. Please create a new account.",
+        "translation": "Pārdevēju kontiem nevar būt iepriekšēju pasūtījumu. Lūdzu, izveidojiet jaunu kontu."
+      },
+      {
+        "id": "Proof of inventory is required from new vendors",
+        "message": "Proof of inventory is required from new vendors",
+        "translation": "Jauniem pārdevējiem ir nepieciešams uzrādīt krājumu pierādījumu."
+      },
+      {
+        "id": "Not enough balance",
+        "message": "Not enough balance",
+        "translation": "Nepietiekams atlikums"
+      },
+      {
+        "id": "Application received",
+        "message": "Application received",
+        "translation": "Pieteikums saņemts"
+      },
+      {
+        "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+        "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+        "translation": "Pasūtījums pieņemts. Jums ir {Duration} stundas, lai to atzīmētu kā nosūtītu.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "72"
+          }
+        ]
+      },
+      {
+        "id": "Order declined",
+        "message": "Order declined",
+        "translation": "Pasūtījums noraidīts"
+      },
+      {
+        "id": "Order marked as dispatched",
+        "message": "Order marked as dispatched",
+        "translation": "Pasūtījums atzīmēts kā nosūtīts"
+      },
+      {
+        "id": "Product deleted",
+        "message": "Product deleted",
+        "translation": "Produkts izdzēsts"
+      },
+      {
+        "id": "Product updated",
+        "message": "Product updated",
+        "translation": "Produkts atjaunināts"
+      },
+      {
+        "id": "Ticket is already closed",
+        "message": "Ticket is already closed",
+        "translation": "Biļete jau ir slēgta"
+      },
+      {
+        "id": "You need to be logged in to access that page",
+        "message": "You need to be logged in to access that page",
+        "translation": "Lai piekļūtu šai lapai, jums jābūt pierakstītam"
+      },
+      {
+        "id": "Order received",
+        "message": "Order received",
+        "translation": "Pasūtījums saņemts"
+      },
+      {
+        "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+        "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+        "translation": "Jums ir saņemts jauns pasūtījums!\nJums ir kopā {Duration} stundas, lai to pieņemtu, pirms tas tiks automātiski noraidīts.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "48"
+          }
+        ]
+      },
+      {
+        "id": "Order accepted",
+        "message": "Order accepted",
+        "translation": "Pasūtījums pieņemts"
+      },
+      {
+        "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+        "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+        "translation": "Jūsu pasūtījums ir pieņemts!\nJūs varat uzraudzīt tā statusu no pasūtījumu lapas"
+      },
+      {
+        "id": "Order dispatched",
+        "message": "Order dispatched",
+        "translation": "Pasūtījums nosūtīts"
+      },
+      {
+        "id": "Your order has been dispatched!\nPlease remember to review it.",
+        "message": "Your order has been dispatched!\nPlease remember to review it.",
+        "translation": "Jūsu pasūtījums ir nosūtīts!\nLūdzu, neaizmirstiet to novērtēt."
+      },
+      {
+        "id": "How do I become a vendor?",
+        "message": "How do I become a vendor?",
+        "translation": "Kā es varu kļūt par pārdevēju?"
+      },
+      {
+        "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+        "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+        "translation": "Izveidojiet kontu ar iespējotu divu faktoru autentifikāciju (2FA), pēc tam iesniedziet pārdevēja pieteikumu."
+      },
+      {
+        "id": "How do I place an order?",
+        "message": "How do I place an order?",
+        "translation": "Kā es varu veikt pasūtījumu?"
+      },
+      {
+        "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+        "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+        "translation": "Pievienojiet vēlamās preces savam grozam. Dodieties uz /cart un izvēlieties “Apmaksāt”, izvēlieties vēlamo piegādes metodi un sniedziet nepieciešamo informāciju.\nJa jums ir pieejams atlikums, jūs varat to izmantot apmaksā. Pretējā gadījumā jūs varat pieprasīt rēķinu. Rēķiniem jābūt apmaksātiem iekš {Duration} stundām, lai pasūtījums turpinātu apstrādi.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "6"
+          }
+        ]
+      },
+      {
+        "id": "How can I obtain Monero (XMR)?",
+        "message": "How can I obtain Monero (XMR)?",
+        "translation": "Kā es varu iegūt Monero (XMR)?"
+      },
+      {
+        "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+        "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+        "translation": "Ir vairāki veidi, kā iegūt Monero. Lūdzu, apmeklējiet getmonero.org oficiālai informācijai un resursiem."
+      },
+      {
+        "id": "What should I do if my order has not arrived or does not match the description?",
+        "message": "What should I do if my order has not arrived or does not match the description?",
+        "translation": "Ko man darīt, ja mans pasūtījums nav ieradies vai neatbilst aprakstam?"
+      },
+      {
+        "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+        "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+        "translation": "Pasūtījumi automātiski tiek pabeigti pēc {Duration} dienām.\nJūs varat divas reizes pagarināt automātiskās pabeigšanas periodu.\nJa pasūtījums joprojām nav ieradies pēc šiem pagarinājumiem, jums jāatver strīds.\nMūsu komanda pārskatīs lietu un pieņems lēmumu, pamatojoties uz pieejamo informāciju.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "7"
+          }
+        ]
+      },
+      {
+        "id": "What am I allowed to sell on this marketplace?",
+        "message": "What am I allowed to sell on this marketplace?",
+        "translation": "Ko es drīkstu pārdot šajā tirgū?"
+      },
+      {
+        "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+        "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+        "translation": "Atļauti tikai likumīgi priekšmeti. Ja neesat pārliecināts, vai jūsu produkts atbilst prasībām, lūdzu, sazinieties ar mums pirms sludinājuma izveidošanas."
+      },
+      {
+        "id": "Open",
+        "message": "Open",
+        "translation": "Atvērts"
+      },
+      {
+        "id": "Vendor application",
+        "message": "Vendor application",
+        "translation": "Pārdevēja pieteikums"
+      },
+      {
+        "id": "Your account does not have 2FA enabled!",
+        "message": "Your account does not have 2FA enabled!",
+        "translation": "Jūsu kontā nav iespējota 2FA!"
+      },
+      {
+        "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+        "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+        "translation": "Lietotājiem, kuri jau ir pārdevēji citos tirgos, izmantojot to pašu PGP atslēgu, lietotne ir bezmaksas."
+      },
+      {
+        "id": "For other users, application costs {Price} XMR and is non-refundable.",
+        "message": "For other users, application costs {Price} XMR and is non-refundable.",
+        "translation": "Citiem lietotājiem lietotne maksā {Price} XMR un nav atmaksājama.",
+        "placeholders": [
+          {
+            "id": "Price",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "price"
+          }
+        ]
+      },
+      {
+        "id": "You're required to provide proof that you actually have products to sell here.",
+        "message": "You're required to provide proof that you actually have products to sell here.",
+        "translation": "Jums ir jāsniedz pierādījums, ka jums patiešām ir produkti, ko pārdot šeit."
+      },
+      {
+        "id": "Vendor Logo",
+        "message": "Vendor Logo",
+        "translation": "Pārdevēja logo"
+      },
+      {
+        "id": "Use png image with close to 1:1 ratio for optimal look",
+        "message": "Use png image with close to 1:1 ratio for optimal look",
+        "translation": "Izmantojiet png attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai."
+      },
+      {
+        "id": "Existing vendor",
+        "message": "Existing vendor",
+        "translation": "Esošais pārdevējs"
+      },
+      {
+        "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+        "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+        "translation": "Izvēlieties šo, ja jau esat pārdevējs citā tirgū, piemēram, xmrBazaar."
+      },
+      {
+        "id": "Proof of inventory",
+        "message": "Proof of inventory",
+        "translation": "Krājumu pierādījums"
+      },
+      {
+        "id": "Clear image of your inventory with your username and timestamp visible",
+        "message": "Clear image of your inventory with your username and timestamp visible",
+        "translation": "Skaidrs attēls ar jūsu krājumiem, kurā redzams jūsu lietotājvārds un laika zīmogs."
+      },
+      {
+        "id": "Markets and Your Username",
+        "message": "Markets and Your Username",
+        "translation": "Tirgi un jūsu lietotājvārds"
+      },
+      {
+        "id": "List the markets where you are a vendor and include your username",
+        "message": "List the markets where you are a vendor and include your username",
+        "translation": "Norādiet tirgus, kur esat pārdevējs, un iekļaujiet savu lietotājvārdu."
+      },
+      {
+        "id": "Captcha",
+        "message": "Captcha",
+        "translation": "Captcha"
+      },
+      {
+        "id": "Click circle with a cut",
+        "message": "Click circle with a cut",
+        "translation": "Noklikšķiniet uz apļa ar griezumu"
+      },
+      {
+        "id": "Submit",
+        "message": "Submit",
+        "translation": "Iesniegt"
+      },
+      {
+        "id": "Total",
+        "message": "Total",
+        "translation": "Kopā"
+      },
+      {
+        "id": "Checkout",
+        "message": "Checkout",
+        "translation": "Apmaksāt"
+      },
+      {
+        "id": "delivery method",
+        "message": "delivery method",
+        "translation": "piegādes metode"
+      },
+      {
+        "id": "Use wallet for payment",
+        "message": "Use wallet for payment",
+        "translation": "Izmantojiet maku maksāšanai"
+      },
+      {
+        "id": "details",
+        "message": "details",
+        "translation": "detaļas"
+      },
+      {
+        "id": "Use your real address, with the same format as below.",
+        "message": "Use your real address, with the same format as below.",
+        "translation": "Izmantojiet savu īsto adresi, ar tādu pašu formātu kā zemāk."
+      },
+      {
+        "id": "Unencrypted details are automatically encrypted using vendors key.",
+        "message": "Unencrypted details are automatically encrypted using vendors key.",
+        "translation": "Nešifrētie dati automātiski tiek šifrēti, izmantojot pārdevēja atslēgu."
+      },
+      {
+        "id": "Title",
+        "message": "Title",
+        "translation": "Nosaukums"
+      },
+      {
+        "id": "Description",
+        "message": "Description",
+        "translation": "Apraksts"
+      },
+      {
+        "id": "Product image",
+        "message": "Product image",
+        "translation": "Produkta attēls"
+      },
+      {
+        "id": "Use image with close to 1:1 aspect ratio for optimal look",
+        "message": "Use image with close to 1:1 aspect ratio for optimal look",
+        "translation": "Izmantojiet attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai."
+      },
+      {
+        "id": "Category",
+        "message": "Category",
+        "translation": "Kategorija"
+      },
+      {
+        "id": "Ships from",
+        "message": "Ships from",
+        "translation": "Nosūtīts no"
+      },
+      {
+        "id": "Ships to",
+        "message": "Ships to",
+        "translation": "Nosūtīts uz"
+      },
+      {
+        "id": "Inventory",
+        "message": "Inventory",
+        "translation": "Krājumi"
+      },
+      {
+        "id": "Size of the current inventory for this product.",
+        "message": "Size of the current inventory for this product.",
+        "translation": "Šī produkta pašreizējo krājumu lielums."
+      },
+      {
+        "id": "Pricing",
+        "message": "Pricing",
+        "translation": "Cenu noteikšana"
+      },
+      {
+        "id": "Here you can set your pricing.",
+        "message": "Here you can set your pricing.",
+        "translation": "Šeit jūs varat noteikt savas cenas."
+      },
+      {
+        "id": "We take 5% cut from these prices.",
+        "message": "We take 5% cut from these prices.",
+        "translation": "Mēs ņemam 5% komisiju no šīm cenām."
+      },
+      {
+        "id": "Quantity",
+        "message": "Quantity",
+        "translation": "Daudzums"
+      },
+      {
+        "id": "Price",
+        "message": "Price",
+        "translation": "Cena"
+      },
+      {
+        "id": "Create ticket",
+        "message": "Create ticket",
+        "translation": "Izveidot biļeti"
+      },
+      {
+        "id": "Subject",
+        "message": "Subject",
+        "translation": "Temats"
+      },
+      {
+        "id": "account",
+        "message": "account",
+        "translation": "konts"
+      },
+      {
+        "id": "order",
+        "message": "order",
+        "translation": "pasūtījums"
+      },
+      {
+        "id": "wallet",
+        "message": "wallet",
+        "translation": "maku"
+      },
+      {
+        "id": "vendor",
+        "message": "vendor",
+        "translation": "pārdevējs"
+      },
+      {
+        "id": "product",
+        "message": "product",
+        "translation": "produkts"
+      },
+      {
+        "id": "suggestion",
+        "message": "suggestion",
+        "translation": "ieteikums"
+      },
+      {
+        "id": "bug",
+        "message": "bug",
+        "translation": "kļūda"
+      },
+      {
+        "id": "other",
+        "message": "other",
+        "translation": "cits"
+      },
+      {
+        "id": "Message",
+        "message": "Message",
+        "translation": "Ziņa"
+      },
+      {
+        "id": "Staff PGP",
+        "message": "Staff PGP",
+        "translation": "Darbinieku PGP"
+      },
+      {
+        "id": "Exchange rate",
+        "message": "Exchange rate",
+        "translation": "Valūtas kurss"
+      },
+      {
+        "id": "Time",
+        "message": "Time",
+        "translation": "Laiks"
+      },
+      {
+        "id": "Vendors:",
+        "message": "Vendors:",
+        "translation": "Pārdevēji:"
+      },
+      {
+        "id": "Users:",
+        "message": "Users:",
+        "translation": "Lietotāji:"
+      },
+      {
+        "id": "submit",
+        "message": "submit",
+        "translation": "iesniegt"
+      },
+      {
+        "id": "Response",
+        "message": "Response",
+        "translation": "Atbilde"
+      },
+      {
+        "id": "products",
+        "message": "products",
+        "translation": "produkti"
+      },
+      {
+        "id": "orders",
+        "message": "orders",
+        "translation": "pasūtījumi"
+      },
+      {
+        "id": "sell",
+        "message": "sell",
+        "translation": "pārdot"
+      },
+      {
+        "id": "support",
+        "message": "support",
+        "translation": "atbalsts"
+      },
+      {
+        "id": "Logout",
+        "message": "Logout",
+        "translation": "Iziet"
+      },
+      {
+        "id": "log in",
+        "message": "log in",
+        "translation": "pierakstīties"
+      },
+      {
+        "id": "register",
+        "message": "register",
+        "translation": "reģistrēties"
+      },
+      {
+        "id": "Entry guard to {Name}",
+        "message": "Entry guard to {Name}",
+        "translation": "Ieejas sargs uz {Name}",
+        "placeholders": [
+          {
+            "id": "Name",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "tc.Config.Name"
+          }
+        ]
+      },
+      {
+        "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+        "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+        "translation": "Salīdziniet URL, ko izmantojat, ar attēlā zemāk redzamo, lai atrastu visus trūkstošos simbolus, kas atzīmēti ar '*'"
+      },
+      {
+        "id": "Missing characters",
+        "message": "Missing characters",
+        "translation": "Trūkstošie simboli"
+      },
+      {
+        "id": "Log in",
+        "message": "Log in",
+        "translation": "Pieteikties"
+      },
+      {
+        "id": "username",
+        "message": "username",
+        "translation": "lietotājvārds"
+      },
+      {
+        "id": "password",
+        "message": "password",
+        "translation": "parole"
+      },
+      {
+        "id": "Create new account",
+        "message": "Create new account",
+        "translation": "Izveidot jaunu kontu"
+      },
+      {
+        "id": "Delete all",
+        "message": "Delete all",
+        "translation": "Dzēst visu"
+      },
+      {
+        "id": "You have zero notifications",
+        "message": "You have zero notifications",
+        "translation": "Jums nav paziņojumu"
+      },
+      {
+        "id": "Order",
+        "message": "Order",
+        "translation": "Pasūtījums"
+      },
+      {
+        "id": "Chat",
+        "message": "Chat",
+        "translation": "Čats"
+      },
+      {
+        "id": "Status",
+        "message": "Status",
+        "translation": "Statuss"
+      },
+      {
+        "id": "Vendor",
+        "message": "Vendor",
+        "translation": "Pārdevējs"
+      },
+      {
+        "id": "Delivery method",
+        "message": "Delivery method",
+        "translation": "Piegādes metode"
+      },
+      {
+        "id": "Total cost",
+        "message": "Total cost",
+        "translation": "Kopējās izmaksas"
+      },
+      {
+        "id": "Date",
+        "message": "Date",
+        "translation": "Datums"
+      },
+      {
+        "id": "Dispatched at",
+        "message": "Dispatched at",
+        "translation": "Nosūtīts"
+      },
+      {
+        "id": "Until auto-declined",
+        "message": "Until auto-declined",
+        "translation": "Līdz automātiskai noraidīšanai"
+      },
+      {
+        "id": "Until auto-finalized",
+        "message": "Until auto-finalized",
+        "translation": "Līdz automātiskai pabeigšanai"
+      },
+      {
+        "id": "Details",
+        "message": "Details",
+        "translation": "Detaļas"
+      },
+      {
+        "id": "Vendor offered refund of {RefundFactor}%",
+        "message": "Vendor offered refund of {RefundFactor}%",
+        "translation": "Pārdevējs piedāvāja {RefundFactor}% atmaksu",
+        "placeholders": [
+          {
+            "id": "RefundFactor",
+            "string": "%.2[1]f",
+            "type": "float64",
+            "underlyingType": "float64",
+            "argNum": 1,
+            "expr": "100 * item.Offer.RefundFactor"
+          }
+        ]
+      },
+      {
+        "id": "Accept",
+        "message": "Accept",
+        "translation": "Pieņemt"
+      },
+      {
+        "id": "Decline",
+        "message": "Decline",
+        "translation": "Noraidīt"
+      },
+      {
+        "id": "Customers PGP key",
+        "message": "Customers PGP key",
+        "translation": "Klienta PGP atslēga"
+      },
+      {
+        "id": "Customer can still cancel this order!",
+        "message": "Customer can still cancel this order!",
+        "translation": "Klients joprojām var atcelt šo pasūtījumu!"
+      },
+      {
+        "id": "You must accept it in 2 days or it will be automatically declined.",
+        "message": "You must accept it in 2 days or it will be automatically declined.",
+        "translation": "Jums jāpieņem tas 2 dienu laikā, vai tas tiks automātiski noraidīts."
+      },
+      {
+        "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+        "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+        "translation": "Pēc pieņemšanas klients vairs nevar atcelt, tāpēc varat droši nosūtīt."
+      },
+      {
+        "id": "Please carefully review the order below before accepting it.",
+        "message": "Please carefully review the order below before accepting it.",
+        "translation": "Lūdzu, rūpīgi pārskatiet zemāk esošo pasūtījumu pirms tā pieņemšanas."
+      },
+      {
+        "id": "Always decline orders that you'r unable to fulfill.",
+        "message": "Always decline orders that you'r unable to fulfill.",
+        "translation": "Vienmēr noraidiet pasūtījumus, kurus nevarat izpildīt."
+      },
+      {
+        "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+        "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+        "translation": "Jums jāatzīmē šis pasūtījums kā nosūtīts 2 dienu laikā, vai tas tiks automātiski noraidīts."
+      },
+      {
+        "id": "Make sure that you have enough time to do the actual dispaching!",
+        "message": "Make sure that you have enough time to do the actual dispaching!",
+        "translation": "Pārliecinieties, ka jums ir pietiekami daudz laika, lai veiktu faktisko nosūtīšanu!"
+      },
+      {
+        "id": "Dispatched",
+        "message": "Dispatched",
+        "translation": "Nosūtīts"
+      },
+      {
+        "id": "Transfer exact amount of Monero to the address below.",
+        "message": "Transfer exact amount of Monero to the address below.",
+        "translation": "Pārskaitiet precīzu Monero summu uz zemāk norādīto adresi."
+      },
+      {
+        "id": "After 10 confirmations, your order will proceed to vendor.",
+        "message": "After 10 confirmations, your order will proceed to vendor.",
+        "translation": "Pēc 10 apstiprinājumiem jūsu pasūtījums tiks nosūtīts pārdevējam."
+      },
+      {
+        "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+        "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+        "translation": "Jums ir kopumā 3 stundas, lai samaksātu šo rēķinu, pretējā gadījumā jūsu pasūtījums tiks atcelts."
+      },
+      {
+        "id": "Time left to pay",
+        "message": "Time left to pay",
+        "translation": "Atlikušais laiks maksājuma veikšanai"
+      },
+      {
+        "id": "Amount XMR",
+        "message": "Amount XMR",
+        "translation": "Summa XMR"
+      },
+      {
+        "id": "Address",
+        "message": "Address",
+        "translation": "Adrese"
+      },
+      {
+        "id": "Orders can be cancelled until vendor has accepted it.",
+        "message": "Orders can be cancelled until vendor has accepted it.",
+        "translation": "Pasūtījumi var tikt atcelti līdz brīdim, kad tos ir pieņēmis pārdevējs."
+      },
+      {
+        "id": "Cancel",
+        "message": "Cancel",
+        "translation": "Atcelt"
+      },
+      {
+        "id": "Your order will auto-finalize in",
+        "message": "Your order will auto-finalize in",
+        "translation": "Jūsu pasūtījums automātiski tiks pabeigts pēc"
+      },
+      {
+        "id": "You can extend the auto-finalize-time by 7-days.",
+        "message": "You can extend the auto-finalize-time by 7-days.",
+        "translation": "Jūs varat pagarināt automātiskās pabeigšanas laiku par 7 dienām."
+      },
+      {
+        "id": "review your order",
+        "message": "review your order",
+        "translation": "pārskatiet savu pasūtījumu"
+      },
+      {
+        "id": "Review",
+        "message": "Review",
+        "translation": "Pārskats"
+      },
+      {
+        "id": "Extend AF-timer",
+        "message": "Extend AF-timer",
+        "translation": "Pagarināt AF taimeri"
+      },
+      {
+        "id": "Dispute",
+        "message": "Dispute",
+        "translation": "Strīds"
+      },
+      {
+        "id": "Refund offer",
+        "message": "Refund offer",
+        "translation": "Hyvitys piedāvājums"
+      },
+      {
+        "id": "Customer has disputed this order.",
+        "message": "Customer has disputed this order.",
+        "translation": "Klients ir apstrīdējis šo pasūtījumu."
+      },
+      {
+        "id": "Use the chat below to discuss about this dispute.",
+        "message": "Use the chat below to discuss about this dispute.",
+        "translation": "Izmantojiet zemāk esošo tērzēšanu, lai apspriestu šo strīdu."
+      },
+      {
+        "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+        "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+        "translation": "Jūs varat izveidot atmaksas piedāvājumu un atrisināt šo strīdu bez administratora iejaukšanās."
+      },
+      {
+        "id": "Refund percent",
+        "message": "Refund percent",
+        "translation": "Atmaksas procents"
+      },
+      {
+        "id": "Order date",
+        "message": "Order date",
+        "translation": "Pasūtījuma datums"
+      },
+      {
+        "id": "Order ID",
+        "message": "Order ID",
+        "translation": "Pasūtījuma ID"
+      },
+      {
+        "id": "Proof key ownership",
+        "message": "Proof key ownership",
+        "translation": "Atslēgas īpašumtiesību pierādījums"
+      },
+      {
+        "id": "Decrypt to get the token",
+        "message": "Decrypt to get the token",
+        "translation": "Atšifrējiet, lai iegūtu tokenu"
+      },
+      {
+        "id": "Token",
+        "message": "Token",
+        "translation": "Token"
+      },
+      {
+        "id": "Update product",
+        "message": "Update product",
+        "translation": "Atjaunināt produktu"
+      },
+      {
+        "id": "Update",
+        "message": "Update",
+        "translation": "Atjaunināt"
+      },
+      {
+        "id": "Add to cart",
+        "message": "Add to cart",
+        "translation": "Pievienot grozam"
+      },
+      {
+        "id": "Reviews",
+        "message": "Reviews",
+        "translation": "Atsauksmes"
+      },
+      {
+        "id": "ago",
+        "message": "ago",
+        "translation": "pirms"
+      },
+      {
+        "id": "OUT OF STOCK",
+        "message": "OUT OF STOCK",
+        "translation": "NAV PIEEJAMS"
+      },
+      {
+        "id": "Register",
+        "message": "Register",
+        "translation": "Reģistrēties"
+      },
+      {
+        "id": "password check",
+        "message": "password check",
+        "translation": "paroles pārbaude"
+      },
+      {
+        "id": "Already have an account?",
+        "message": "Already have an account?",
+        "translation": "Jau ir konts?"
+      },
+      {
+        "id": "Review order",
+        "message": "Review order",
+        "translation": "Pārskatīt pasūtījumu"
+      },
+      {
+        "id": "Grade",
+        "message": "Grade",
+        "translation": "Vērtējums"
+      },
+      {
+        "id": "guest",
+        "message": "guest",
+        "translation": "viesis"
+      },
+      {
+        "id": "customer",
+        "message": "customer",
+        "translation": "klients"
+      },
+      {
+        "id": "admin",
+        "message": "admin",
+        "translation": "administrators"
+      },
+      {
+        "id": "unknown",
+        "message": "unknown",
+        "translation": "nezināms"
+      },
+      {
+        "id": "enabled",
+        "message": "enabled",
+        "translation": "ieslēgts"
+      },
+      {
+        "id": "disabled",
+        "message": "disabled",
+        "translation": "izslēgts"
+      },
+      {
+        "id": "Account",
+        "message": "Account",
+        "translation": "Konta"
+      },
+      {
+        "id": "Username",
+        "message": "Username",
+        "translation": "Lietotājvārds"
+      },
+      {
+        "id": "Type",
+        "message": "Type",
+        "translation": "Tips"
+      },
+      {
+        "id": "2FA",
+        "message": "2FA",
+        "translation": "2FA"
+      },
+      {
+        "id": "Preferences",
+        "message": "Preferences",
+        "translation": "Iestatījumi"
+      },
+      {
+        "id": "Language",
+        "message": "Language",
+        "translation": "Valoda"
+      },
+      {
+        "id": "Currency",
+        "message": "Currency",
+        "translation": "Valūta"
+      },
+      {
+        "id": "Change password",
+        "message": "Change password",
+        "translation": "Mainīt paroli"
+      },
+      {
+        "id": "Current password",
+        "message": "Current password",
+        "translation": "Pašreizējā parole"
+      },
+      {
+        "id": "New password",
+        "message": "New password",
+        "translation": "Jaunā parole"
+      },
+      {
+        "id": "Confirm new password",
+        "message": "Confirm new password",
+        "translation": "Apstiprināt jauno paroli"
+      },
+      {
+        "id": "Change PGP key",
+        "message": "Change PGP key",
+        "translation": "Mainīt PGP atslēgu"
+      },
+      {
+        "id": "Enable 2FA",
+        "message": "Enable 2FA",
+        "translation": "Ieslēgt 2FA"
+      },
+      {
+        "id": "PGP public key",
+        "message": "PGP public key",
+        "translation": "PGP publiskā atslēga"
+      },
+      {
+        "id": "Required for vendors, suggested for everyone.",
+        "message": "Required for vendors, suggested for everyone.",
+        "translation": "Nepieciešams pārdevējiem, ieteicams visiem."
+      },
+      {
+        "id": "Update vendor profile",
+        "message": "Update vendor profile",
+        "translation": "Atjaunināt pārdevēja profilu"
+      },
+      {
+        "id": "Vendor info",
+        "message": "Vendor info",
+        "translation": "Pārdevēja informācija"
+      },
+      {
+        "id": "Leave empty to not update.",
+        "message": "Leave empty to not update.",
+        "translation": "Atstājiet tukšu, lai neaktualizētu."
+      },
+      {
+        "id": "Update delivery methods",
+        "message": "Update delivery methods",
+        "translation": "Atjaunināt piegādes metodes"
+      },
+      {
+        "id": "Delivery Method",
+        "message": "Delivery Method",
+        "translation": "Piegādes metode"
+      },
+      {
+        "id": "My tickets",
+        "message": "My tickets",
+        "translation": "Mani biļetes"
+      },
+      {
+        "id": "0 seconds",
+        "message": "0 seconds",
+        "translation": "0 sekundes"
+      },
+      {
+        "id": "{Second} seconds",
+        "message": "{Second} seconds",
+        "translation": "{Second} sekundes",
+        "placeholders": [
+          {
+            "id": "Second",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Second"
+          }
+        ]
+      },
+      {
+        "id": "{Minute} minutes",
+        "message": "{Minute} minutes",
+        "translation": "{Minute} minūtes",
+        "placeholders": [
+          {
+            "id": "Minute",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Minute"
+          }
+        ]
+      },
+      {
+        "id": "{Hour} hours",
+        "message": "{Hour} hours",
+        "translation": "{Hour} stundas",
+        "placeholders": [
+          {
+            "id": "Hour",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Hour"
+          }
+        ]
+      },
+      {
+        "id": "{Hour} days",
+        "message": "{Hour} days",
+        "translation": "{Hour} dienas",
+        "placeholders": [
+          {
+            "id": "Hour",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / (24 * time.Hour)"
+          }
+        ]
+      },
+      {
+        "id": "Rating (AVG)",
+        "message": "Rating (AVG)",
+        "translation": "Vērtējums (AVG)"
+      },
+      {
+        "id": "Orders completed",
+        "message": "Orders completed",
+        "translation": "Pasūtījumi pabeigti"
+      },
+      {
+        "id": "Orders in escrow",
+        "message": "Orders in escrow",
+        "translation": "Pasūtījumi uzturēšanā"
+      },
+      {
+        "id": "Pending disputes",
+        "message": "Pending disputes",
+        "translation": "Gaidāmie strīdi"
+      },
+      {
+        "id": "Previously seen",
+        "message": "Previously seen",
+        "translation": "Iepriekš redzēts"
+      },
+      {
+        "id": "PGP key",
+        "message": "PGP key",
+        "translation": "PGP atslēga"
+      },
+      {
+        "id": "Wallet",
+        "message": "Wallet",
+        "translation": "Maka"
+      },
+      {
+        "id": "This is your XMR wallet where you can deposit coins.",
+        "message": "This is your XMR wallet where you can deposit coins.",
+        "translation": "Šis ir jūsu XMR maks, kurā varat noguldīt monētas."
+      },
+      {
+        "id": "Balance is updated after 10 confirmations.",
+        "message": "Balance is updated after 10 confirmations.",
+        "translation": "Saldo atjaunina pēc 10 apstiprinājumiem."
+      },
+      {
+        "id": "See",
+        "message": "See",
+        "translation": "Skatīt"
+      },
+      {
+        "id": "for more information.",
+        "message": "for more information.",
+        "translation": "vairāk informācijas."
+      },
+      {
+        "id": "Balance",
+        "message": "Balance",
+        "translation": "Saldo"
+      },
+      {
+        "id": "Withdraw",
+        "message": "Withdraw",
+        "translation": "Izņemt"
+      },
+      {
+        "id": "Enter a monero address where you want to withdraw your funds.",
+        "message": "Enter a monero address where you want to withdraw your funds.",
+        "translation": "Ievadiet Monero adresi, uz kuru vēlaties izņemt savus līdzekļus."
+      },
+      {
+        "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+        "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+        "translation": "Mēs iekasējam 0.01 XMR maksu par katru izņemšanu, lai novērstu surogātpastu."
+      },
+      {
+        "id": "DO NOT withdraw funds to another wallet on this platform!",
+        "message": "DO NOT withdraw funds to another wallet on this platform!",
+        "translation": "NEIZŅEMIET līdzekļus uz citu maku šajā platformā!"
+      },
+      {
+        "id": "Destination address",
+        "message": "Destination address",
+        "translation": "Galamērķa adrese"
+      },
+      {
+        "id": "Amount",
+        "message": "Amount",
+        "translation": "Summa"
+      },
+      {
+        "id": "Enter amount in decimal format (e.g., 1.42069)",
+        "message": "Enter amount in decimal format (e.g., 1.42069)",
+        "translation": "Ievadiet summu decimāldaļas formātā (piemēram, 1.42069)"
+      }
+    ]
+  }

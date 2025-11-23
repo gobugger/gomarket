@@ -1,0 +1,19 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/config"
+
+templ Captcha(tc *TemplateContext) {
+	if config.CaptchaEnabled() {
+		<div class="col">
+			<label for="captcha">{ tc.Translate("Captcha") }</label>
+			<input id="captcha" class="captcha-image shadow" type="image" name="captcha_answer" src={ tc.CaptchaSrc } alt="captcha" width="280px" height="140px"/>
+			<p class="text--small mt5">{ tc.Translate("Click circle with a cut") }</p>
+		</div>
+	} else {
+		<div class="captcha-button">
+			<input type="hidden" name="capthca_answer.x" value="1"/>
+			<input type="hidden" name="capthca_answer.y" value="1"/>
+			<button class="btn-plain w100" type="submit">{ tc.Translate("Submit") }</button>
+		</div>
+	}
+}

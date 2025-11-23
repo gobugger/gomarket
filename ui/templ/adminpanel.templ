@@ -1,0 +1,126 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/gobugger/gomarket/internal/service/currency"
+	"time"
+)
+
+templ AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) {
+	@Layout(tc) {
+		<div class="centered gap">
+			<form class="form--basic minw-l" action="/delete" method="post">
+				@templ.Raw(tc.CsrfField)
+				<h2>Operations</h2>
+				<div class="form__field">
+					<label>operation</label>
+					<select type="text" name="operation" required>
+						<option value="banUser">Ban user</option>
+						<option value="deleteBan">Undo ban</option>
+						<option value="deleteListing">Delete listing</option>
+						<option value="deleteReview">Delete Review</option>
+					</select>
+				</div>
+				<div class="form__field">
+					<label>ID</label>
+					<input class="form__input" type="text" name="id" required/>
+				</div>
+				<div class="form__field--right">
+					<button type="submit" class="btn">submit</button>
+				</div>
+			</form>
+			<form class="form--basic minw-l" action="/settings" method="post">
+				@templ.Raw(tc.CsrfField)
+				<h2>Settings</h2>
+				<div class="form__field">
+					<label>{ fmt.Sprintf("Current Vendor Application price is %s XMR", currency.XMR2Decimal(vendorApplicationPrice)) }</label>
+					<label>Vendor Application Price (piconeros)</label>
+					<input class="form__input number" type="number" name="vendor_application_price" value={ vendorApplicationPrice } step="1"/>
+				</div>
+				<div class="form__field--right">
+					<button type="submit" class="btn">submit</button>
+				</div>
+			</form>
+			<form class="form--basic minw-l" action="/category/add" method="post">
+				@templ.Raw(tc.CsrfField)
+				<h2>Categories</h2>
+				<div class="form__field">
+					<label>Name</label>
+					<input class="form__input" type="text" name="name"/>
+				</div>
+				<div class="form__field">
+					<label for="add_parent">Set parent</label>
+					@Switch("add_parent", "add_parent", false)
+				</div>
+				<div class="form__field">
+					<label for="parent">{ "Parent" }</label>
+					<select class="fit--width" id="parent" name="parent_id">
+						for _, category := range categories {
+							<option value={ category.ID.String() }>{ category.Name }</option>
+						}
+					</select>
+				</div>
+				<div class="form__field--right">
+					<button type="submit" class="btn">submit</button>
+				</div>
+			</form>
+			<div class="form--basic">
+				<h2>Applications</h2>
+				<table>
+					<thead>
+						<th>ID</th>
+						<th>created at</th>
+					</thead>
+					<tbody>
+						for _, application := range applications {
+							<tr>
+								<td><a href={ "/application?id=" + application.ID.String() }>{ application.ID.String() }</a></td>
+								<td>{ FmtTime(application.CreatedAt) }</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="form--basic">
+				<h2>Disputes</h2>
+				<table>
+					<thead>
+						<th>Order ID</th>
+						<th>Total Price</th>
+						<th>Disputed since</th>
+					</thead>
+					<tbody>
+						for _, order := range disputedOrders {
+							<tr>
+								<td><a href={ "/dispute?id=" + order.ID.String() }>{ order.ID.String() }</a></td>
+								<td>{ tc.XMR2Fiat(order.TotalPricePico) }</td>
+								<td>{ FmtDuration(time.Since(order.DisputedAt)) }</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="form--basic">
+				<h2>Tickets</h2>
+				<table>
+					<thead>
+						<th></th>
+						<th>subject</th>
+						<th>previous response</th>
+						<th>created at</th>
+					</thead>
+					<tbody>
+						for _, ticket := range tickets {
+							<tr>
+								<td><a href={ "/ticket?id=" + ticket.ID.String() }>{ tc.Translate("Open") }</a></td>
+								<td>{ ticket.Subject }</td>
+								<td>{ FmtTime(ticket.CreatedAt) }</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	}
+}

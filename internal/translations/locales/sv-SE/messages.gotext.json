@@ -1,0 +1,1355 @@
+{
+    "language": "sv-SE",
+    "messages": [
+      {
+        "id": "Failed to open the gate: invalid missing characters",
+        "message": "Failed to open the gate: invalid missing characters",
+        "translation": "Misslyckades med att öppna porten: ogiltiga saknade tecken"
+      },
+      {
+        "id": "This username is already in use",
+        "message": "This username is already in use",
+        "translation": "Detta användarnamn används redan"
+      },
+      {
+        "id": "Invalid PGP key",
+        "message": "Invalid PGP key",
+        "translation": "Ogiltig PGP-nyckel"
+      },
+      {
+        "id": "Registered successfully",
+        "message": "Registered successfully",
+        "translation": "Registrerad framgångsrikt"
+      },
+      {
+        "id": "Invalid credentials",
+        "message": "Invalid credentials",
+        "translation": "Ogiltiga referenser"
+      },
+      {
+        "id": "Your account is banned",
+        "message": "Your account is banned",
+        "translation": "Ditt konto är avstängt"
+      },
+      {
+        "id": "Invalid 2FA token",
+        "message": "Invalid 2FA token",
+        "translation": "Ogiltig 2FA-token"
+      },
+      {
+        "id": "Password changed",
+        "message": "Password changed",
+        "translation": "Lösenordet har ändrats"
+      },
+      {
+        "id": "You can't update to your current key",
+        "message": "You can't update to your current key",
+        "translation": "Du kan inte uppdatera till din nuvarande nyckel"
+      },
+      {
+        "id": "PGP key is set",
+        "message": "PGP key is set",
+        "translation": "PGP-nyckel är inställd"
+      },
+      {
+        "id": "PGP Public key is updated",
+        "message": "PGP Public key is updated",
+        "translation": "PGP offentlig nyckel har uppdaterats"
+      },
+      {
+        "id": "Vendor info is updated",
+        "message": "Vendor info is updated",
+        "translation": "Leverantörsinformation har uppdaterats"
+      },
+      {
+        "id": "Listing created",
+        "message": "Listing created",
+        "translation": "Annons skapad"
+      },
+      {
+        "id": "Cart updated",
+        "message": "Cart updated",
+        "translation": "Varukorg uppdaterad"
+      },
+      {
+        "id": "cart deleted",
+        "message": "cart deleted",
+        "translation": "varukorg raderad"
+      },
+      {
+        "id": "You can't order with a vendor account",
+        "message": "You can't order with a vendor account",
+        "translation": "Du kan inte beställa med ett leverantörskonto"
+      },
+      {
+        "id": "You don't have enough balance for this order",
+        "message": "You don't have enough balance for this order",
+        "translation": "Du har inte tillräckligt med saldo för denna beställning"
+      },
+      {
+        "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+        "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+        "translation": "Vänligen betala fakturan nedan inom {Duration} timmar för att din beställning ska kunna fortsätta.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "6"
+          }
+        ]
+      },
+      {
+        "id": "Order created",
+        "message": "Order created",
+        "translation": "Beställning skapad"
+      },
+      {
+        "id": "Not enough balance to withdraw.",
+        "message": "Not enough balance to withdraw.",
+        "translation": "Inte tillräckligt med saldo för att ta ut."
+      },
+      {
+        "id": "You can't withdraw to your own account",
+        "message": "You can't withdraw to your own account",
+        "translation": "Du kan inte ta ut till ditt eget konto"
+      },
+      {
+        "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+        "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+        "translation": "Uttag av {XMR2Decimalamount} XMR initierat",
+        "placeholders": [
+          {
+            "id": "XMR2Decimalamount",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "currency.XMR2Decimal(amount)"
+          }
+        ]
+      },
+      {
+        "id": "Order cancelled",
+        "message": "Order cancelled",
+        "translation": "Beställning avbruten"
+      },
+      {
+        "id": "Review created",
+        "message": "Review created",
+        "translation": "Recension skapad"
+      },
+      {
+        "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+        "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+        "translation": "Du kan inte förlänga AF-timern innan beställningen har skickats i {Duration} dagar.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "5"
+          }
+        ]
+      },
+      {
+        "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+        "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+        "translation": "Du kan inte förlänga AF-timern igen innan beställningen har skickats i {Duration} dagar.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "12"
+          }
+        ]
+      },
+      {
+        "id": "AF timer already extended to maximum.",
+        "message": "AF timer already extended to maximum.",
+        "translation": "AF-timern har redan förlängts till max."
+      },
+      {
+        "id": "AF timer extended by {Duration} days",
+        "message": "AF timer extended by {Duration} days",
+        "translation": "AF-timern förlängd med {Duration} dagar",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "7"
+          }
+        ]
+      },
+      {
+        "id": "Order disputed",
+        "message": "Order disputed",
+        "translation": "Beställning omtvistad"
+      },
+      {
+        "id": "2FA needs to be enabled for vendors",
+        "message": "2FA needs to be enabled for vendors",
+        "translation": "2FA måste aktiveras för leverantörer"
+      },
+      {
+        "id": "Vendor accounts can't have previous orders. Please create a new account.",
+        "message": "Vendor accounts can't have previous orders. Please create a new account.",
+        "translation": "Leverantörskonton kan inte ha tidigare beställningar. Vänligen skapa ett nytt konto."
+      },
+      {
+        "id": "Proof of inventory is required from new vendors",
+        "message": "Proof of inventory is required from new vendors",
+        "translation": "Bevis på lager krävs från nya leverantörer"
+      },
+      {
+        "id": "Not enough balance",
+        "message": "Not enough balance",
+        "translation": "Inte tillräckligt med saldo"
+      },
+      {
+        "id": "Application received",
+        "message": "Application received",
+        "translation": "Ansökan mottagen"
+      },
+      {
+        "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+        "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+        "translation": "Beställning accepterad. Du har {Duration} timmar på dig att markera den som skickad.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "72"
+          }
+        ]
+      },
+      {
+        "id": "Order declined",
+        "message": "Order declined",
+        "translation": "Beställning avvisad"
+      },
+      {
+        "id": "Order marked as dispatched",
+        "message": "Order marked as dispatched",
+        "translation": "Beställning markerad som skickad"
+      },
+      {
+        "id": "Product deleted",
+        "message": "Product deleted",
+        "translation": "Produkt raderad"
+      },
+      {
+        "id": "Product updated",
+        "message": "Product updated",
+        "translation": "Produkt uppdaterad"
+      },
+      {
+        "id": "Ticket is already closed",
+        "message": "Ticket is already closed",
+        "translation": "Biljetten är redan stängd"
+      },
+      {
+        "id": "You need to be logged in to access that page",
+        "message": "You need to be logged in to access that page",
+        "translation": "Du måste vara inloggad för att få åtkomst till den sidan"
+      },
+      {
+        "id": "Order received",
+        "message": "Order received",
+        "translation": "Beställning mottagen"
+      },
+      {
+        "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+        "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+        "translation": "Du har mottagit en ny beställning!\nDu har totalt {Duration} timmar på dig att acceptera, innan den automatiskt avvisas.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "48"
+          }
+        ]
+      },
+      {
+        "id": "Order accepted",
+        "message": "Order accepted",
+        "translation": "Beställning accepterad"
+      },
+      {
+        "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+        "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+        "translation": "Din beställning har accepterats!\nDu kan övervaka dess status från beställningssidan"
+      },
+      {
+        "id": "Order dispatched",
+        "message": "Order dispatched",
+        "translation": "Beställning skickad"
+      },
+      {
+        "id": "Your order has been dispatched!\nPlease remember to review it.",
+        "message": "Your order has been dispatched!\nPlease remember to review it.",
+        "translation": "Din beställning har skickats!\nVänligen kom ihåg att recensera den."
+      },
+      {
+        "id": "How do I become a vendor?",
+        "message": "How do I become a vendor?",
+        "translation": "Hur blir jag leverantör?"
+      },
+      {
+        "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+        "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+        "translation": "Skapa ett konto med tvåfaktorsautentisering (2FA) aktiverad, och skicka sedan in en leverantörsansökan."
+      },
+      {
+        "id": "How do I place an order?",
+        "message": "How do I place an order?",
+        "translation": "Hur gör jag en beställning?"
+      },
+      {
+        "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+        "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+        "translation": "Lägg till de önskade produkterna i din kundvagn. Navigera till /cart och välj “Kassa”, välj din föredragna leveransmetod och ange den nödvändiga informationen.\nOm du har tillgängligt saldo kan du använda det vid kassan. Annars kan du begära en faktura. Fakturor måste betalas inom {Duration} timmar för att beställningen ska fortsätta behandlas.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "6"
+          }
+        ]
+      },
+      {
+        "id": "How can I obtain Monero (XMR)?",
+        "message": "How can I obtain Monero (XMR)?",
+        "translation": "Hur kan jag få Monero (XMR)?"
+      },
+      {
+        "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+        "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+        "translation": "Det finns flera sätt att skaffa Monero. Vänligen besök getmonero.org för officiell vägledning och resurser."
+      },
+      {
+        "id": "What should I do if my order has not arrived or does not match the description?",
+        "message": "What should I do if my order has not arrived or does not match the description?",
+        "translation": "Vad ska jag göra om min beställning inte har anlänt eller inte stämmer överens med beskrivningen?"
+      },
+      {
+        "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+        "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+        "translation": "Beställningar avslutas automatiskt efter {Duration} dagar.\nDu kan förlänga den automatiska avslutningsperioden två gånger.\nOm beställningen fortfarande inte har anlänt efter dessa förlängningar bör du öppna en tvist.\nVårt team kommer att granska ärendet och fatta ett beslut baserat på tillgänglig information.",
+        "placeholders": [
+          {
+            "id": "Duration",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "7"
+          }
+        ]
+      },
+      {
+        "id": "What am I allowed to sell on this marketplace?",
+        "message": "What am I allowed to sell on this marketplace?",
+        "translation": "Vad får jag sälja på denna marknadsplats?"
+      },
+      {
+        "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+        "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+        "translation": "Endast lagliga varor är tillåtna. Om du är osäker på om din produkt kvalificerar, vänligen kontakta oss innan du skapar en annons."
+      },
+      {
+        "id": "Open",
+        "message": "Open",
+        "translation": "Öppen"
+      },
+      {
+        "id": "Vendor application",
+        "message": "Vendor application",
+        "translation": "Leverantörsansökan"
+      },
+      {
+        "id": "Your account does not have 2FA enabled!",
+        "message": "Your account does not have 2FA enabled!",
+        "translation": "Ditt konto har inte 2FA aktiverat!"
+      },
+      {
+        "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+        "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+        "translation": "Applikationen är gratis för användare som redan är säljare på någon annan marknad som använder samma PGP-nyckel."
+      },
+      {
+        "id": "For other users, application costs {Price} XMR and is non-refundable.",
+        "message": "For other users, application costs {Price} XMR and is non-refundable.",
+        "translation": "För andra användare kostar applikationen {Price} XMR och är icke återbetalningsbar.",
+        "placeholders": [
+          {
+            "id": "Price",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "price"
+          }
+        ]
+      },
+      {
+        "id": "You're required to provide proof that you actually have products to sell here.",
+        "message": "You're required to provide proof that you actually have products to sell here.",
+        "translation": "Du måste tillhandahålla bevis på att du faktiskt har produkter att sälja här."
+      },
+      {
+        "id": "Vendor Logo",
+        "message": "Vendor Logo",
+        "translation": "Säljarens logotyp"
+      },
+      {
+        "id": "Use png image with close to 1:1 ratio for optimal look",
+        "message": "Use png image with close to 1:1 ratio for optimal look",
+        "translation": "Använd png-bild med nära 1:1 för optimal utseende"
+      },
+      {
+        "id": "Existing vendor",
+        "message": "Existing vendor",
+        "translation": "Befintlig säljare"
+      },
+      {
+        "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+        "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+        "translation": "Välj detta om du redan är säljare på någon annan marknad som xmrBazaar"
+      },
+      {
+        "id": "Proof of inventory",
+        "message": "Proof of inventory",
+        "translation": "Bevis på lager"
+      },
+      {
+        "id": "Clear image of your inventory with your username and timestamp visible",
+        "message": "Clear image of your inventory with your username and timestamp visible",
+        "translation": "Tydlig bild av ditt lager med ditt användarnamn och tidsstämpel synlig"
+      },
+      {
+        "id": "Markets and Your Username",
+        "message": "Markets and Your Username",
+        "translation": "Marknader och ditt användarnamn"
+      },
+      {
+        "id": "List the markets where you are a vendor and include your username",
+        "message": "List the markets where you are a vendor and include your username",
+        "translation": "Lista de marknader där du är säljare och inkludera ditt användarnamn"
+      },
+      {
+        "id": "Captcha",
+        "message": "Captcha",
+        "translation": "Captcha"
+      },
+      {
+        "id": "Click circle with a cut",
+        "message": "Click circle with a cut",
+        "translation": "Klicka på cirkeln med ett snitt"
+      },
+      {
+        "id": "Submit",
+        "message": "Submit",
+        "translation": "Skicka"
+      },
+      {
+        "id": "Total",
+        "message": "Total",
+        "translation": "Totalt"
+      },
+      {
+        "id": "Checkout",
+        "message": "Checkout",
+        "translation": "Kassa"
+      },
+      {
+        "id": "delivery method",
+        "message": "delivery method",
+        "translation": "leveransmetod"
+      },
+      {
+        "id": "Use wallet for payment",
+        "message": "Use wallet for payment",
+        "translation": "Använd plånbok för betalning"
+      },
+      {
+        "id": "details",
+        "message": "details",
+        "translation": "detaljer"
+      },
+      {
+        "id": "Use your real address, with the same format as below.",
+        "message": "Use your real address, with the same format as below.",
+        "translation": "Använd din verkliga adress, med samma format som nedan."
+      },
+      {
+        "id": "Unencrypted details are automatically encrypted using vendors key.",
+        "message": "Unencrypted details are automatically encrypted using vendors key.",
+        "translation": "Okrypterade detaljer krypteras automatiskt med säljarens nyckel."
+      },
+      {
+        "id": "Title",
+        "message": "Title",
+        "translation": "Titel"
+      },
+      {
+        "id": "Description",
+        "message": "Description",
+        "translation": "Beskrivning"
+      },
+      {
+        "id": "Product image",
+        "message": "Product image",
+        "translation": "Produktbild"
+      },
+      {
+        "id": "Use image with close to 1:1 aspect ratio for optimal look",
+        "message": "Use image with close to 1:1 aspect ratio for optimal look",
+        "translation": "Använd bild med nära 1:1 bildförhållande för optimal utseende"
+      },
+      {
+        "id": "Category",
+        "message": "Category",
+        "translation": "Kategori"
+      },
+      {
+        "id": "Ships from",
+        "message": "Ships from",
+        "translation": "Skickas från"
+      },
+      {
+        "id": "Ships to",
+        "message": "Ships to",
+        "translation": "Skickas till"
+      },
+      {
+        "id": "Inventory",
+        "message": "Inventory",
+        "translation": "Lager"
+      },
+      {
+        "id": "Size of the current inventory for this product.",
+        "message": "Size of the current inventory for this product.",
+        "translation": "Storlek på det aktuella lagret för denna produkt."
+      },
+      {
+        "id": "Pricing",
+        "message": "Pricing",
+        "translation": "Prissättning"
+      },
+      {
+        "id": "Here you can set your pricing.",
+        "message": "Here you can set your pricing.",
+        "translation": "Här kan du ställa in din prissättning."
+      },
+      {
+        "id": "We take 5% cut from these prices.",
+        "message": "We take 5% cut from these prices.",
+        "translation": "Vi tar 5% av dessa priser."
+      },
+      {
+        "id": "Quantity",
+        "message": "Quantity",
+        "translation": "Antal"
+      },
+      {
+        "id": "Price",
+        "message": "Price",
+        "translation": "Pris"
+      },
+      {
+        "id": "Create ticket",
+        "message": "Create ticket",
+        "translation": "Skapa biljett"
+      },
+      {
+        "id": "Subject",
+        "message": "Subject",
+        "translation": "Ämne"
+      },
+      {
+        "id": "account",
+        "message": "account",
+        "translation": "konto"
+      },
+      {
+        "id": "order",
+        "message": "order",
+        "translation": "beställning"
+      },
+      {
+        "id": "wallet",
+        "message": "wallet",
+        "translation": "plånbok"
+      },
+      {
+        "id": "vendor",
+        "message": "vendor",
+        "translation": "leverantör"
+      },
+      {
+        "id": "product",
+        "message": "product",
+        "translation": "produkt"
+      },
+      {
+        "id": "suggestion",
+        "message": "suggestion",
+        "translation": "förslag"
+      },
+      {
+        "id": "bug",
+        "message": "bug",
+        "translation": "fel"
+      },
+      {
+        "id": "other",
+        "message": "other",
+        "translation": "annat"
+      },
+      {
+        "id": "Message",
+        "message": "Message",
+        "translation": "Meddelande"
+      },
+      {
+        "id": "Staff PGP",
+        "message": "Staff PGP",
+        "translation": "Personal PGP"
+      },
+      {
+        "id": "Exchange rate",
+        "message": "Exchange rate",
+        "translation": "Växelkurs"
+      },
+      {
+        "id": "Time",
+        "message": "Time",
+        "translation": "Tid"
+      },
+      {
+        "id": "Vendors:",
+        "message": "Vendors:",
+        "translation": "Leverantörer:"
+      },
+      {
+        "id": "Users:",
+        "message": "Users:",
+        "translation": "Användare:"
+      },
+      {
+        "id": "submit",
+        "message": "submit",
+        "translation": "skicka"
+      },
+      {
+        "id": "Response",
+        "message": "Response",
+        "translation": "Svar"
+      },
+      {
+        "id": "products",
+        "message": "products",
+        "translation": "produkter"
+      },
+      {
+        "id": "orders",
+        "message": "orders",
+        "translation": "beställningar"
+      },
+      {
+        "id": "sell",
+        "message": "sell",
+        "translation": "sälja"
+      },
+      {
+        "id": "support",
+        "message": "support",
+        "translation": "support"
+      },
+      {
+        "id": "Logout",
+        "message": "Logout",
+        "translation": "Logga ut"
+      },
+      {
+        "id": "log in",
+        "message": "log in",
+        "translation": "logga in"
+      },
+      {
+        "id": "register",
+        "message": "register",
+        "translation": "registrera"
+      },
+      {
+        "id": "Entry guard to {Name}",
+        "message": "Entry guard to {Name}",
+        "translation": "Ingångsvakt till {Name}",
+        "placeholders": [
+          {
+            "id": "Name",
+            "string": "%[1]s",
+            "type": "string",
+            "underlyingType": "string",
+            "argNum": 1,
+            "expr": "tc.Config.Name"
+          }
+        ]
+      },
+      {
+        "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+        "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+        "translation": "Jämför URL:en du använder med den i bilden nedan för att hitta alla saknade tecken markerade med '*'"
+      },
+      {
+        "id": "Missing characters",
+        "message": "Missing characters",
+        "translation": "Saknade tecken"
+      },
+      {
+        "id": "Log in",
+        "message": "Log in",
+        "translation": "Logga in"
+      },
+      {
+        "id": "username",
+        "message": "username",
+        "translation": "användarnamn"
+      },
+      {
+        "id": "password",
+        "message": "password",
+        "translation": "lösenord"
+      },
+      {
+        "id": "Create new account",
+        "message": "Create new account",
+        "translation": "Skapa nytt konto"
+      },
+      {
+        "id": "Delete all",
+        "message": "Delete all",
+        "translation": "Ta bort allt"
+      },
+      {
+        "id": "You have zero notifications",
+        "message": "You have zero notifications",
+        "translation": "Du har inga meddelanden"
+      },
+      {
+        "id": "Order",
+        "message": "Order",
+        "translation": "Beställning"
+      },
+      {
+        "id": "Chat",
+        "message": "Chat",
+        "translation": "Chatt"
+      },
+      {
+        "id": "Status",
+        "message": "Status",
+        "translation": "Status"
+      },
+      {
+        "id": "Vendor",
+        "message": "Vendor",
+        "translation": "Leverantör"
+      },
+      {
+        "id": "Delivery method",
+        "message": "Delivery method",
+        "translation": "Leveransmetod"
+      },
+      {
+        "id": "Total cost",
+        "message": "Total cost",
+        "translation": "Totalkostnad"
+      },
+      {
+        "id": "Date",
+        "message": "Date",
+        "translation": "Datum"
+      },
+      {
+        "id": "Dispatched at",
+        "message": "Dispatched at",
+        "translation": "Skickad vid"
+      },
+      {
+        "id": "Until auto-declined",
+        "message": "Until auto-declined",
+        "translation": "Tills automatisk avböjning"
+      },
+      {
+        "id": "Until auto-finalized",
+        "message": "Until auto-finalized",
+        "translation": "Tills automatisk avslutning"
+      },
+      {
+        "id": "Details",
+        "message": "Details",
+        "translation": "Detaljer"
+      },
+      {
+        "id": "Vendor offered refund of {RefundFactor}%",
+        "message": "Vendor offered refund of {RefundFactor}%",
+        "translation": "Leverantör erbjöd en återbetalning på {RefundFactor}%",
+        "placeholders": [
+          {
+            "id": "RefundFactor",
+            "string": "%.2[1]f",
+            "type": "float64",
+            "underlyingType": "float64",
+            "argNum": 1,
+            "expr": "100 * item.Offer.RefundFactor"
+          }
+        ]
+      },
+      {
+        "id": "Accept",
+        "message": "Accept",
+        "translation": "Acceptera"
+      },
+      {
+        "id": "Decline",
+        "message": "Decline",
+        "translation": "Avböj"
+      },
+      {
+        "id": "Customers PGP key",
+        "message": "Customers PGP key",
+        "translation": "Kundens PGP-nyckel"
+      },
+      {
+        "id": "Customer can still cancel this order!",
+        "message": "Customer can still cancel this order!",
+        "translation": "Kunden kan fortfarande avbryta denna beställning!"
+      },
+      {
+        "id": "You must accept it in 2 days or it will be automatically declined.",
+        "message": "You must accept it in 2 days or it will be automatically declined.",
+        "translation": "Du måste acceptera det inom 2 dagar eller så kommer det att avböjas automatiskt."
+      },
+      {
+        "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+        "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+        "translation": "Efter att ha accepterat kan kunden inte längre avbryta, så du kan tryggt skicka."
+      },
+      {
+        "id": "Please carefully review the order below before accepting it.",
+        "message": "Please carefully review the order below before accepting it.",
+        "translation": "Vänligen granska beställningen nedan noggrant innan du accepterar den."
+      },
+      {
+        "id": "Always decline orders that you'r unable to fulfill.",
+        "message": "Always decline orders that you'r unable to fulfill.",
+        "translation": "Avböj alltid beställningar som du inte kan uppfylla."
+      },
+      {
+        "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+        "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+        "translation": "Du måste markera denna beställning som skickad inom 2 dagar eller så kommer den att avböjas automatiskt."
+      },
+      {
+        "id": "Make sure that you have enough time to do the actual dispaching!",
+        "message": "Make sure that you have enough time to do the actual dispaching!",
+        "translation": "Se till att du har tillräckligt med tid för att genomföra den faktiska leveransen!"
+      },
+      {
+        "id": "Dispatched",
+        "message": "Dispatched",
+        "translation": "Skickad"
+      },
+      {
+        "id": "Transfer exact amount of Monero to the address below.",
+        "message": "Transfer exact amount of Monero to the address below.",
+        "translation": "Överför exakt belopp av Monero till adressen nedan."
+      },
+      {
+        "id": "After 10 confirmations, your order will proceed to vendor.",
+        "message": "After 10 confirmations, your order will proceed to vendor.",
+        "translation": "Efter 10 bekräftelser kommer din beställning att gå vidare till leverantören."
+      },
+      {
+        "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+        "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+        "translation": "Du har totalt 3 timmar på dig att betala denna faktura, annars kommer din beställning att avbrytas."
+      },
+      {
+        "id": "Time left to pay",
+        "message": "Time left to pay",
+        "translation": "Tid kvar att betala"
+      },
+      {
+        "id": "Amount XMR",
+        "message": "Amount XMR",
+        "translation": "Belopp XMR"
+      },
+      {
+        "id": "Address",
+        "message": "Address",
+        "translation": "Adress"
+      },
+      {
+        "id": "Orders can be cancelled until vendor has accepted it.",
+        "message": "Orders can be cancelled until vendor has accepted it.",
+        "translation": "Beställningar kan avbrytas tills leverantören har accepterat den."
+      },
+      {
+        "id": "Cancel",
+        "message": "Cancel",
+        "translation": "Avbryt"
+      },
+      {
+        "id": "Your order will auto-finalize in",
+        "message": "Your order will auto-finalize in",
+        "translation": "Din beställning kommer att automatiskt slutföras om"
+      },
+      {
+        "id": "You can extend the auto-finalize-time by 7-days.",
+        "message": "You can extend the auto-finalize-time by 7-days.",
+        "translation": "Du kan förlänga auto-slutförandet med 7 dagar."
+      },
+      {
+        "id": "review your order",
+        "message": "review your order",
+        "translation": "granska din beställning"
+      },
+      {
+        "id": "Review",
+        "message": "Review",
+        "translation": "Granska"
+      },
+      {
+        "id": "Extend AF-timer",
+        "message": "Extend AF-timer",
+        "translation": "Förläng AF-timer"
+      },
+      {
+        "id": "Dispute",
+        "message": "Dispute",
+        "translation": "Tvist"
+      },
+      {
+        "id": "Refund offer",
+        "message": "Refund offer",
+        "translation": "Återbetalningserbjudande"
+      },
+      {
+        "id": "Customer has disputed this order.",
+        "message": "Customer has disputed this order.",
+        "translation": "Kunden har ifrågasatt denna beställning."
+      },
+      {
+        "id": "Use the chat below to discuss about this dispute.",
+        "message": "Use the chat below to discuss about this dispute.",
+        "translation": "Använd chatten nedan för att diskutera denna tvist."
+      },
+      {
+        "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+        "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+        "translation": "Du kan skapa ett återbetalningserbjudande och lösa denna tvist utan administrativ intervention."
+      },
+      {
+        "id": "Refund percent",
+        "message": "Refund percent",
+        "translation": "Återbetalningsprocent"
+      },
+      {
+        "id": "Order date",
+        "message": "Order date",
+        "translation": "Beställningsdatum"
+      },
+      {
+        "id": "Order ID",
+        "message": "Order ID",
+        "translation": "Beställnings-ID"
+      },
+      {
+        "id": "Proof key ownership",
+        "message": "Proof key ownership",
+        "translation": "Bevis på nyckelinnehav"
+      },
+      {
+        "id": "Decrypt to get the token",
+        "message": "Decrypt to get the token",
+        "translation": "Dekryptera för att få token"
+      },
+      {
+        "id": "Token",
+        "message": "Token",
+        "translation": "Token"
+      },
+      {
+        "id": "Update product",
+        "message": "Update product",
+        "translation": "Uppdatera produkt"
+      },
+      {
+        "id": "Update",
+        "message": "Update",
+        "translation": "Uppdatera"
+      },
+      {
+        "id": "Add to cart",
+        "message": "Add to cart",
+        "translation": "Lägg i varukorg"
+      },
+      {
+        "id": "Reviews",
+        "message": "Reviews",
+        "translation": "Recensioner"
+      },
+      {
+        "id": "ago",
+        "message": "ago",
+        "translation": "sedan"
+      },
+      {
+        "id": "OUT OF STOCK",
+        "message": "OUT OF STOCK",
+        "translation": "SLUT I LAGER"
+      },
+      {
+        "id": "Register",
+        "message": "Register",
+        "translation": "Registrera"
+      },
+      {
+        "id": "password check",
+        "message": "password check",
+        "translation": "lösenordskontroll"
+      },
+      {
+        "id": "Already have an account?",
+        "message": "Already have an account?",
+        "translation": "Har du redan ett konto?"
+      },
+      {
+        "id": "Review order",
+        "message": "Review order",
+        "translation": "Granska beställning"
+      },
+      {
+        "id": "Grade",
+        "message": "Grade",
+        "translation": "Betyg"
+      },
+      {
+        "id": "guest",
+        "message": "guest",
+        "translation": "gäst"
+      },
+      {
+        "id": "customer",
+        "message": "customer",
+        "translation": "kund"
+      },
+      {
+        "id": "admin",
+        "message": "admin",
+        "translation": "admin"
+      },
+      {
+        "id": "unknown",
+        "message": "unknown",
+        "translation": "okänd"
+      },
+      {
+        "id": "enabled",
+        "message": "enabled",
+        "translation": "aktiverad"
+      },
+      {
+        "id": "disabled",
+        "message": "disabled",
+        "translation": "inaktiverad"
+      },
+      {
+        "id": "Account",
+        "message": "Account",
+        "translation": "Konto"
+      },
+      {
+        "id": "Username",
+        "message": "Username",
+        "translation": "Användarnamn"
+      },
+      {
+        "id": "Type",
+        "message": "Type",
+        "translation": "Typ"
+      },
+      {
+        "id": "2FA",
+        "message": "2FA",
+        "translation": "2FA"
+      },
+      {
+        "id": "Preferences",
+        "message": "Preferences",
+        "translation": "Inställningar"
+      },
+      {
+        "id": "Language",
+        "message": "Language",
+        "translation": "Språk"
+      },
+      {
+        "id": "Currency",
+        "message": "Currency",
+        "translation": "Valuta"
+      },
+      {
+        "id": "Change password",
+        "message": "Change password",
+        "translation": "Ändra lösenord"
+      },
+      {
+        "id": "Current password",
+        "message": "Current password",
+        "translation": "Nuvarande lösenord"
+      },
+      {
+        "id": "New password",
+        "message": "New password",
+        "translation": "Nytt lösenord"
+      },
+      {
+        "id": "Confirm new password",
+        "message": "Confirm new password",
+        "translation": "Bekräfta nytt lösenord"
+      },
+      {
+        "id": "Change PGP key",
+        "message": "Change PGP key",
+        "translation": "Ändra PGP-nyckel"
+      },
+      {
+        "id": "Enable 2FA",
+        "message": "Enable 2FA",
+        "translation": "Aktivera 2FA"
+      },
+      {
+        "id": "PGP public key",
+        "message": "PGP public key",
+        "translation": "PGP offentlig nyckel"
+      },
+      {
+        "id": "Required for vendors, suggested for everyone.",
+        "message": "Required for vendors, suggested for everyone.",
+        "translation": "Krävs för säljare, rekommenderas för alla."
+      },
+      {
+        "id": "Update vendor profile",
+        "message": "Update vendor profile",
+        "translation": "Uppdatera säljprofil"
+      },
+      {
+        "id": "Vendor info",
+        "message": "Vendor info",
+        "translation": "Säljarinformation"
+      },
+      {
+        "id": "Leave empty to not update.",
+        "message": "Leave empty to not update.",
+        "translation": "Lämna tomt för att inte uppdatera."
+      },
+      {
+        "id": "Update delivery methods",
+        "message": "Update delivery methods",
+        "translation": "Uppdatera leveransmetoder"
+      },
+      {
+        "id": "Delivery Method",
+        "message": "Delivery Method",
+        "translation": "Leveransmetod"
+      },
+      {
+        "id": "My tickets",
+        "message": "My tickets",
+        "translation": "Mina biljetter"
+      },
+      {
+        "id": "0 seconds",
+        "message": "0 seconds",
+        "translation": "0 sekunder"
+      },
+      {
+        "id": "{Second} seconds",
+        "message": "{Second} seconds",
+        "translation": "{Second} sekunder",
+        "placeholders": [
+          {
+            "id": "Second",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Second"
+          }
+        ]
+      },
+      {
+        "id": "{Minute} minutes",
+        "message": "{Minute} minutes",
+        "translation": "{Minute} minuter",
+        "placeholders": [
+          {
+            "id": "Minute",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Minute"
+          }
+        ]
+      },
+      {
+        "id": "{Hour} hours",
+        "message": "{Hour} hours",
+        "translation": "{Hour} timmar",
+        "placeholders": [
+          {
+            "id": "Hour",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / time.Hour"
+          }
+        ]
+      },
+      {
+        "id": "{Hour} days",
+        "message": "{Hour} days",
+        "translation": "{Hour} dagar",
+        "placeholders": [
+          {
+            "id": "Hour",
+            "string": "%[1]d",
+            "type": "time.Duration",
+            "underlyingType": "int64",
+            "argNum": 1,
+            "expr": "since / (24 * time.Hour)"
+          }
+        ]
+      },
+      {
+        "id": "Rating (AVG)",
+        "message": "Rating (AVG)",
+        "translation": "Betyg (GENOMSNITT)"
+      },
+      {
+        "id": "Orders completed",
+        "message": "Orders completed",
+        "translation": "Avslutade beställningar"
+      },
+      {
+        "id": "Orders in escrow",
+        "message": "Orders in escrow",
+        "translation": "Beställningar i escrow"
+      },
+      {
+        "id": "Pending disputes",
+        "message": "Pending disputes",
+        "translation": "Utestående tvister"
+      },
+      {
+        "id": "Previously seen",
+        "message": "Previously seen",
+        "translation": "Tidigare sedda"
+      },
+      {
+        "id": "PGP key",
+        "message": "PGP key",
+        "translation": "PGP-nyckel"
+      },
+      {
+        "id": "Wallet",
+        "message": "Wallet",
+        "translation": "Plånbok"
+      },
+      {
+        "id": "This is your XMR wallet where you can deposit coins.",
+        "message": "This is your XMR wallet where you can deposit coins.",
+        "translation": "Detta är din XMR-plånbok där du kan sätta in mynt."
+      },
+      {
+        "id": "Balance is updated after 10 confirmations.",
+        "message": "Balance is updated after 10 confirmations.",
+        "translation": "Saldo uppdateras efter 10 bekräftelser."
+      },
+      {
+        "id": "See",
+        "message": "See",
+        "translation": "Se"
+      },
+      {
+        "id": "for more information.",
+        "message": "for more information.",
+        "translation": "för mer information."
+      },
+      {
+        "id": "Balance",
+        "message": "Balance",
+        "translation": "Saldo"
+      },
+      {
+        "id": "Withdraw",
+        "message": "Withdraw",
+        "translation": "Ta ut"
+      },
+      {
+        "id": "Enter a monero address where you want to withdraw your funds.",
+        "message": "Enter a monero address where you want to withdraw your funds.",
+        "translation": "Ange en Monero-adress dit du vill ta ut dina medel."
+      },
+      {
+        "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+        "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+        "translation": "Vi tar ut en avgift på 0,01 XMR för varje uttag för att förhindra skräppost."
+      },
+      {
+        "id": "DO NOT withdraw funds to another wallet on this platform!",
+        "message": "DO NOT withdraw funds to another wallet on this platform!",
+        "translation": "DRA INTE UT medel till en annan plånbok på denna plattform!"
+      },
+      {
+        "id": "Destination address",
+        "message": "Destination address",
+        "translation": "Måladress"
+      },
+      {
+        "id": "Amount",
+        "message": "Amount",
+        "translation": "Belopp"
+      },
+      {
+        "id": "Enter amount in decimal format (e.g., 1.42069)",
+        "message": "Enter amount in decimal format (e.g., 1.42069)",
+        "translation": "Ange belopp i decimalformat (t.ex. 1.42069)"
+      }
+    ]
+  }

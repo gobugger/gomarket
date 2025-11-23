@@ -1,0 +1,59 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/view"
+)
+
+templ Orders(tc *TemplateContext, orders []view.Order, vendor bool) {
+	@Layout(tc) {
+		<div class="orders">
+			for _, order := range orders {
+				<div class="order-item border">
+					<div class="order-item-header">
+						<p class="bold">{ order.Order.Status }</p>
+						<div class="col">
+							<p class="text--small">{ tc.Translate("Order date") }: { FmtDate(order.Order.CreatedAt) }</p>
+							<p class="text--small">{ tc.Translate("Order ID") }: { order.Order.ID.String() }</p>
+						</div>
+					</div>
+					<div class="mtb">
+						if vendor {
+							<p class="txt-s">{ "Customer: " + order.Customer.Username }</p>
+						} else {
+							<a class="txt-s" href={ "/vendor?id=" + order.Vendor.ID.String() }>{ "Vendor: " + order.Vendor.Username }</a>
+						}
+					</div>
+					<div class="order-item-body">
+						<div class="row flex1 gap--s wrap">
+							for _, item := range order.Items {
+								<a href={ "/product?id=" + item.Product.ID.String() } title={ Head(item.Product.Title, 25) + " " + fmt.Sprintf("%dpcs x %d", item.Quantity, item.Count) }>
+									<img class="order-item-img" src={ "/uploads/thumbnail/" + item.Product.ID.String() } alt={ item.Product.Title }/>
+								</a>
+							}
+							if len(order.Items) == 1 {
+								<div class="col gap--s">
+									{{ item := order.Items[0] }}
+									<p>{ Head(item.Product.Title, 25) }</p>
+									<p class="txt-s">{ tc.Fiat2(item.PriceCent) + " " +  fmt.Sprintf("%dpcs x %d", item.Quantity, item.Count) }</p>
+								</div>
+							}
+						</div>
+						<div class="col gap--s">
+							<p>{ tc.Translate("Total") }: { total(tc, order.Items) }</p>
+							<a class="btn-tiny" href={ "/order?id=" + order.Order.ID.String() }>View</a>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	}
+}
+
+func total(tc *TemplateContext, items []view.OrderItem) string {
+	var t int64
+	for _, item := range items {
+		t += item.PriceCent * int64(item.Count)
+	}
+	return tc.Fiat2(t)
+}

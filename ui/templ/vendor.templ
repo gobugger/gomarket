@@ -1,0 +1,90 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/view"
+)
+
+templ VendorSmall(tc *TemplateContext, vendor *view.Vendor) {
+	<div class="col-aligned">
+		<div class="logo__container">
+			<div class="image-wrapper pm">
+				<a href={ "/vendor?id=" + vendor.User.ID.String() }>
+					<img
+						src={ "uploads/logo/" + vendor.User.ID.String() }
+						alt="Vendor logo"
+						class="vendor__logo"
+					/>
+				</a>
+				if IsOnline(vendor.User.PrevLogin) {
+					<div class="vendor-lamp"></div>
+				}
+			</div>
+		</div>
+		<p class="text--small">{ vendor.User.Username }</p>
+	</div>
+}
+
+templ Vendor(tc *TemplateContext, vendor *view.Vendor) {
+	@Layout(tc, "/ui/css/vendor.css") {
+		<div class="form--basic mw-l">
+			<div class="form__field">
+				<div>
+					@VendorSmall(tc, vendor)
+					<div class="rating__col">
+						<div class="row-centered">
+							@rating(vendor.Rating.Whole, vendor.Rating.Half)
+						</div>
+						if vendor.NumReviews > 0 {
+							<p class="text--small">({ fmt.Sprintf("%.2f%%", vendor.Rating.Positive) } positive)</p>
+						}
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<div class="fields__container bg">
+					<div class="info_field">
+						<label>{ tc.Translate("Reviews") }</label>
+						<p class="field">{ vendor.NumReviews }</p>
+					</div>
+					<div class="info_field">
+						<label>{ tc.Translate("Rating (AVG)") }</label>
+						<p class="field">{ fmt.Sprintf("%.1f/5", vendor.Rating.Real) }</p>
+					</div>
+					<div class="info_field">
+						<label>{ tc.Translate("Orders completed") }</label>
+						<p class="field">{ vendor.NumOrdersCompleted }</p>
+					</div>
+					<div class="info_field">
+						<label>{ tc.Translate("Orders in escrow") }</label>
+						<p class="field">{ vendor.NumOrdersInEscrow }</p>
+					</div>
+					<div class="info_field">
+						<label>{ tc.Translate("Pending disputes") }</label>
+						<p class="field">{ vendor.NumPendingDisputes }</p>
+					</div>
+					<div class="info_field">
+						<label>{ tc.Translate("Previously seen") }</label>
+						<p class="field">{ FmtDate(vendor.User.PrevLogin) }</p>
+					</div>
+				</div>
+			</div>
+			<div class="form__field">
+				<div class="details-wrapper">
+					<details class="key-details highlight">
+						<summary>{ tc.Translate("PGP key") }</summary>
+						<div class="mt-s">
+							<pre class="pgpkey important">{ vendor.User.PgpKey }</pre>
+						</div>
+					</details>
+				</div>
+			</div>
+			if vendor.License.VendorInfo != "" {
+				<div class="form__field">
+					<label>{ tc.Translate("Vendor info") }</label>
+					<pre class="display-text bg">{ vendor.License.VendorInfo }</pre>
+				</div>
+			}
+		</div>
+	}
+}

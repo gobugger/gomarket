@@ -1,0 +1,377 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/gobugger/gomarket/internal/service/currency"
+	"github.com/gobugger/gomarket/internal/view"
+)
+
+templ Order(tc *TemplateContext, order *view.Order, isAdmin bool) {
+	@Layout(tc, "ui/css/order.css") {
+		<div class="row-centered wrap w100 gap">
+			<div class="form--basic mw-l fit-h">
+				<div class="header">
+					<h2>{ tc.Translate("Order") }</h2>
+				</div>
+				@orderStatus(tc, order)
+				@orderInfo(tc, order)
+				<hr/>
+				<div class="form__field">
+					<div class="row flex1 gap--s wrap">
+						for _, item := range order.Items {
+							<a href={ "/product?id=" + item.Product.ID.String() } title={ Head(item.Product.Title, 25) + " " + fmt.Sprintf("%dg x %d", item.Quantity, item.Count) }>
+								<img class="order-item-img" src={ "/uploads/thumbnail/" + item.Product.ID.String() } alt={ item.Product.Title }/>
+							</a>
+						}
+					</div>
+				</div>
+				<hr/>
+				if tc.UID == order.Order.VendorID {
+					switch order.Order.Status {
+						case repo.OrderStatusPaid:
+							@orderActionProcess(tc, order)
+						case repo.OrderStatusAccepted:
+							@orderActionDispatch(tc, order)
+						case repo.OrderStatusDisputed:
+							@orderActionDisputeOffer(tc, order)
+					}
+				} else {
+					switch order.Order.Status {
+						case repo.OrderStatusPending:
+							@orderInvoice(tc, order)
+							@orderActionCancel(tc, order)
+						case repo.OrderStatusDispatched:
+							@orderActionFinalize(tc, order)
+					}
+				}
+			</div>
+			<div class="form--basic mw-l">
+				<div class="header">
+					<h2>{ tc.Translate("Chat") }</h2>
+				</div>
+				<div class="form__field gap">
+					@orderChat(tc, order)
+				</div>
+			</div>
+		</div>
+	}
+}
+
+templ orderInfo(tc *TemplateContext, order *view.Order) {
+	<div class="fields__container bg">
+		<div class="info_field">
+			<label>{ tc.Translate("Status") }</label>
+			<p class="field">{ order.Order.Status }</p>
+		</div>
+		<div class="info_field">
+			<label>{ tc.Translate("Vendor") }</label>
+			<a class="field" href={ fmt.Sprintf("/vendor?id=%s", order.Vendor.ID) }>{ order.Vendor.Username }</a>
+		</div>
+		<div class="info_field">
+			<label>{ tc.Translate("Delivery method") }</label>
+			<p class="field">{ order.DeliveryMethod.Description }</p>
+		</div>
+		<div class="info_field">
+			<label>{ tc.Translate("Total cost") }</label>
+			<p class="field">{ currency.XMR2Decimal(order.Order.TotalPricePico) + " XMR" }</p>
+		</div>
+		<div class="info_field">
+			<label>{ tc.Translate("Date") }</label>
+			<p class="field">{ FmtTime(order.Order.CreatedAt) }</p>
+		</div>
+		if order.Order.DispatchedAt.After(order.Order.CreatedAt) {
+			<div class="info_field">
+				<label>{ tc.Translate("Dispatched at") }</label>
+				<p class="field">{ FmtTime(order.Order.DispatchedAt) }</p>
+			</div>
+		}
+		switch order.Order.Status {
+			case repo.OrderStatusPaid, repo.OrderStatusAccepted:
+				<div class="info_field">
+					<label>{ tc.Translate("Until auto-declined") }</label>
+					<p class="field">{ FmtDuration(order.TimeUntilDecline) }</p>
+				</div>
+			case repo.OrderStatusDispatched:
+				<div class="info_field">
+					<label>{ tc.Translate("Until auto-finalized") }</label>
+					<p class="field">{ FmtDuration(order.TimeUntilFinalize) }</p>
+				</div>
+		}
+	</div>
+	<div class="details-container">
+		<div class="details-wrapper">
+			<details class="key-details highlight">
+				<summary>{ tc.Translate("Details") }</summary>
+				<div class="mt-s">
+					<pre class="pgpkey important">{ order.Order.Details }</pre>
+				</div>
+			</details>
+		</div>
+	</div>
+}
+
+var normalStatuses = []repo.OrderStatus{
+	repo.OrderStatusPending,
+	repo.OrderStatusPaid,
+	repo.OrderStatusAccepted,
+	repo.OrderStatusDispatched,
+	repo.OrderStatusFinalized,
+}
+
+var disputeStatuses = []repo.OrderStatus{
+	repo.OrderStatusPending,
+	repo.OrderStatusPaid,
+	repo.OrderStatusAccepted,
+	repo.OrderStatusDispatched,
+	repo.OrderStatusDisputed,
+	repo.OrderStatusSettled,
+}
+
+templ orderStatus(tc *TemplateContext, order *view.Order) {
+	<div class="status-view">
+		{{ statuses := normalStatuses }}
+		if order.Order.Status == repo.OrderStatusDisputed || order.Order.Status == repo.OrderStatusSettled {
+			{{ statuses = disputeStatuses }}
+		}
+		for i, status := range statuses {
+			if status == order.Order.Status {
+				<div class="status-node active">
+					if i == len(statuses) - 1 {
+						<label class="status-label active final">{ string(status) }</label>
+					} else {
+						<label class="status-label active">{ string(status) }</label>
+					}
+				</div>
+			} else {
+				<div class="status-node">
+					if i == len(statuses) - 1 {
+						<label class="status-label final">{ string(status) }</label>
+					} else {
+						<label class="status-label">{ string(status) }</label>
+					}
+				</div>
+			}
+			if i < len(statuses) - 1 {
+				<div class="status-link"></div>
+			}
+		}
+	</div>
+}
+
+templ orderChat(tc *TemplateContext, order *view.Order) {
+	<div class="chat border">
+		for _, item := range order.ChatItems {
+			if item.Message != nil {
+				<div class={ "message-container", templ.KV("me", tc.Username == item.AuthorName) }>
+					<pre class="chat-message">{ item.Message.Message }</pre>
+					<div class="row-end w100">
+						<p class="text--small">{ fmt.Sprintf("%s %s", item.AuthorName, FmtTime(item.Message.CreatedAt)) }</p>
+					</div>
+				</div>
+			} else if item.Offer != nil {
+				<form class={ "message-container", templ.KV("me", tc.Username == item.AuthorName), offerClass(item.Offer.Status) } action="/order/dispute/offer/response" method="post">
+					@templ.Raw(tc.CsrfField)
+					<input type="hidden" name="offer_id" value={ item.Offer.ID.String() }/>
+					<pre class="chat-message">
+						{ tc.Translate("Vendor offered refund of %.2f%%", 100 * item.Offer.RefundFactor) }
+					</pre>
+					if tc.UID == order.Order.CustomerID && item.Offer.Status == "pending" {
+						<div class="form__field--right">
+							<div class="row gap--s">
+								<button class="btn-tiny" type="submit" name="accept" value="true">{ tc.Translate("Accept") }</button>
+								<button class="btn-tiny" type="submit">{ tc.Translate("Decline") }</button>
+							</div>
+						</div>
+					}
+					<div class="row-end w100">
+						<p class="text--small">{ fmt.Sprintf("%s %s", item.AuthorName, FmtTime(item.Offer.CreatedAt)) }</p>
+					</div>
+				</form>
+			}
+		}
+	</div>
+	<form class="col gap" action="/order/chat" method="post">
+		@templ.Raw(tc.CsrfField)
+		<input type="hidden" name="order_id" value={ order.Order.ID.String() }/>
+		<div class="col w100">
+			<label>{ tc.Translate("Message") }</label>
+			<textarea name="message" spellcheck="false"></textarea>
+		</div>
+		if tc.UID == order.Order.VendorID && order.Customer.PgpKey != "" {
+			<div class="details-wrapper">
+				<details class="key-details highlight">
+					<summary>{ tc.Translate("Customers PGP key") }</summary>
+					<div class="mt-s">
+						<pre class="pgpkey important">{ order.Customer.PgpKey }</pre>
+					</div>
+				</details>
+			</div>
+		}
+		<div class="row-end w100">
+			@Captcha(tc)
+		</div>
+	</form>
+}
+
+func offerClass(offerStatus repo.DisputeOfferStatus) string {
+	switch offerStatus {
+	case "accepted", "declined":
+		return string(offerStatus)
+	default:
+		return "pending"
+	}
+}
+
+templ orderActionProcess(tc *TemplateContext, order *view.Order) {
+	<form class="form--basic" action="/orders/process" method="post">
+		@templ.Raw(tc.CsrfField)
+		<input type="hidden" name="id" value={ order.Order.ID.String() }/>
+		<div class="form__field">
+			<p class="highlight--important mw-l">
+				{ tc.Translate("Customer can still cancel this order!") }
+				<br/>
+				{ tc.Translate("You must accept it in 2 days or it will be automatically declined.") }
+				<br/>
+				{ tc.Translate("After accepting, customer can no longer cancel so you can safely dispatch.") }
+				<br/>
+				{ tc.Translate("Please carefully review the order below before accepting it.") }
+				{ tc.Translate("Always decline orders that you'r unable to fulfill.") }
+				<br/>
+			</p>
+		</div>
+		<div class="form__field--right">
+			<div class="col gap w100">
+				<button class="btn-tiny w100" type="submit" name="accept" value="true">{ tc.Translate("Accept") }</button>
+				<button class="btn-tiny w100" type="submit">{ tc.Translate("Decline") }</button>
+			</div>
+		</div>
+	</form>
+}
+
+templ orderActionDispatch(tc *TemplateContext, order *view.Order) {
+	<form class="form--basic" action="/orders/deliver" method="post">
+		@templ.Raw(tc.CsrfField)
+		<input type="hidden" name="order_id" value={ order.Order.ID.String() }/>
+		<div class="form__field">
+			<p class="highlight--important mw-l">
+				{ tc.Translate("You must mark this order dispatched in 2 days or it will be automatically declined.") }
+				{ tc.Translate("Make sure that you have enough time to do the actual dispaching!") }
+			</p>
+		</div>
+		<div class="form__field--right">
+			<button type="submit" class="btn-tiny w100">{ tc.Translate("Dispatched") }</button>
+		</div>
+	</form>
+}
+
+templ orderInvoice(tc *TemplateContext, order *view.Order) {
+	<div class="form__field">
+		<p class="highlight--important">
+			{ tc.Translate("Transfer exact amount of Monero to the address below.") }
+			<br/>
+			{ tc.Translate("After 10 confirmations, your order will proceed to vendor.") }
+			<br/>
+			{ tc.Translate("You have a total of 3 hours to pay this invoice, or your order will be cancelled.") }
+			<br/>
+		</p>
+	</div>
+	<div class="form__field">
+		<label for="timeleft">{ tc.Translate("Time left to pay") }</label>
+		<p class="field">{ FmtDuration(order.Invoice.TimeLeft) }</p>
+	</div>
+	{{ amountXMR := currency.XMR2Decimal(order.Invoice.AmountPico) }}
+	<div class="form__field">
+		<label for="amount">{ tc.Translate("Amount XMR") }</label>
+		<div class="row gap">
+			<p id="amount" class="field important ezcpy">{ amountXMR }</p>
+		</div>
+	</div>
+	<div class="form__field">
+		<label for="adress">{ tc.Translate("Address") }</label>
+		<pre id="address" class="pgpkey important">{ order.Invoice.Address }</pre>
+	</div>
+	<div class="form__field">
+		<img class="qr-code" src={ QrCodeSrc(fmt.Sprintf("monero:%s?tx_amount=%s", order.Invoice.Address, amountXMR)) }/>
+	</div>
+}
+
+templ orderActionCancel(tc *TemplateContext, order *view.Order) {
+	<form class="form--basic" action="/orders/cancel" method="post">
+		@templ.Raw(tc.CsrfField)
+		<input type="hidden" name="id" value={ order.Order.ID.String() }/>
+		<div class="form__field">
+			<p class="highlight--important mw-l">
+				{ tc.Translate("Orders can be cancelled until vendor has accepted it.") }
+			</p>
+		</div>
+		<div class="form__field">
+			<button type="submit" class="btn-tiny w100">{ tc.Translate("Cancel") }</button>
+		</div>
+	</form>
+}
+
+templ orderActionFinalize(tc *TemplateContext, order *view.Order) {
+	<div class="form--basic gap">
+		<div class="form__field">
+			<p class="highlight--important mw-l">
+				{ tc.Translate("Your order will auto-finalize in ") + FmtDuration(order.TimeUntilFinalize) }.
+				<br/>
+				{ tc.Translate("You can extend the auto-finalize-time by 7-days.") }
+			</p>
+		</div>
+		<div class="form__field">
+			<a class="btn-tiny w100" href={ fmt.Sprintf("/orders/review?id=%s", order.Order.ID.String()) } title={ tc.Translate("review your order") }>{ tc.Translate("Review") }</a>
+			if order.CanExtend {
+				<form class="w100" action="/orders/extend" method="post">
+					@templ.Raw(tc.CsrfField)
+					<input type="hidden" name="id" value={ order.Order.ID.String() }/>
+					<button type="submit" class="btn-tiny w100">{ tc.Translate("Extend AF-timer") }</button>
+				</form>
+			}
+			<form class="w100" action="/orders/dispute" method="post">
+				@templ.Raw(tc.CsrfField)
+				<input type="hidden" name="id" value={ order.Order.ID.String() }/>
+				<button type="submit" class="btn-tiny w100">{ tc.Translate("Dispute") }</button>
+			</form>
+		</div>
+	</div>
+}
+
+templ orderActionDisputeOffer(tc *TemplateContext, order *view.Order) {
+	<form class="form--basic" action="/orders/dispute/offer" method="post">
+		@templ.Raw(tc.CsrfField)
+		<div class="header">
+			<h2>{ tc.Translate("Refund offer") }</h2>
+		</div>
+		<input type="hidden" name="order_id" value={ order.Order.ID.String() }/>
+		<div class="form__field">
+			<p class="highlight--important mw-l">
+				{ tc.Translate("Customer has disputed this order.") }
+				<br/>
+				{ tc.Translate("Use the chat below to discuss about this dispute.") }
+				<br/>
+				{ tc.Translate("You can create an refund offer and resolve this dispute without admin intervention.") }
+				<br/>
+			</p>
+		</div>
+		<div class="form__field">
+			<label>{ tc.Translate("Refund percent") }</label>
+			<select type="number" name="refund_factor" required>
+				<option value="0.1">10%</option>
+				<option value="0.2">20%</option>
+				<option value="0.3">30%</option>
+				<option value="0.4">40%</option>
+				<option value="0.5">50%</option>
+				<option value="0.6">60%</option>
+				<option value="0.7">70%</option>
+				<option value="0.8">80%</option>
+				<option value="0.9">90%</option>
+				<option value="1">100%</option>
+			</select>
+		</div>
+		<div class="form__field">
+			<button class="btn-tiny w100" type="submit">{ tc.Translate("Submit") }</button>
+		</div>
+	</form>
+}

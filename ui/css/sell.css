@@ -1,0 +1,36 @@
+.pricing-table {
+	max-width: 15em;
+	table-layout: fixed;
+}
+
+.price-head {
+	width: 7em;
+}
+
+.pricing-table th,
+.pricing-table td {
+	width: 50%;
+}
+
+.listing__table {
+	width: 100%;
+	background-color: var(--bg);
+	padding: 10px;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	border: var(--border-card);
+	border-top: solid 1px var(--highlight);
+}
+
+.table__input {
+	width: 100%;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 5px;
+	background-color: var(--bg-light);
+	color: var(--text);
+}
+
+.table__input::placeholder {
+	color: var(--text-muted);
+}

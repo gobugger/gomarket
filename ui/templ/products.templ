@@ -1,0 +1,94 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/gobugger/gomarket/internal/view"
+	"slices"
+)
+
+templ Products(tc *TemplateContext, products []view.Product, page int, numPages int) {
+	@Layout(tc, "/ui/css/product.css") {
+		<div class="product__grid">
+			for _, product := range products {
+				<div class="product__card">
+					<div class="row-centered">
+						if product.Inventory <= 0 {
+							<div class="outOfStock">
+								<p>{ tc.Translate("OUT OF STOCK") }</p>
+							</div>
+						}
+						<a href={ "/product?id=" + product.ID.String() }>
+							if !tc.Settings.IncognitoEnabled {
+								<img src={ "uploads/product/" + product.ID.String() } alt={ product.Title } class="product__image"/>
+							} else {
+								<div class="product__image"><p>placeholder</p></div>
+							}
+						</a>
+					</div>
+					<div class="row-centered">
+						<h3 class="product__title">
+							<a href={ "/product?id=" + product.ID.String() }>{ product.Title }</a>
+						</h3>
+					</div>
+					<div class="rating__row">
+						<div class="row-centered">
+							@rating(product.Rating.Whole, product.Rating.Half)
+						</div>
+						<p class="text--small">({ product.NumReviews })</p>
+					</div>
+					<div class="row-centered">
+						<p class="product__desc--s">{ Head(product.Description, 40) }</p>
+					</div>
+					<div class="pricing-container">
+						<details class="product__details highlight">
+							<summary>{ "price " + tc.Fiat2(startingAt(&product)) }</summary>
+							<div class="col gap--s mt-s">
+								for i, pt := range product.PriceTiers {
+									if product.Inventory >= pt.Quantity {
+										<a class="text--small" href={ fmt.Sprintf("/product?id=%s&pt=%d", product.ID, i) }>
+											{ fmt.Sprintf("%dg %s %s/pcs", pt.Quantity, tc.Fiat2(pt.PriceCent), tc.PricePerUnit(pt.PriceCent, pt.Quantity)) }
+										</a>
+									}
+								}
+							</div>
+						</details>
+					</div>
+					<div class="row-end pr mb">
+						@VendorSmall(tc, &product.Vendor)
+					</div>
+				</div>
+			}
+		</div>
+		<div class="row">
+			for i := 1; i <= numPages; i++ {
+				if i == page {
+					<a class="page-btn mp5" href={ fmt.Sprintf("/products?page=%d", i) }>{ i }</a>
+				} else {
+					<a class="field mp5" href={ fmt.Sprintf("/products?page=%d", i) }>{ i }</a>
+				}
+			}
+		</div>
+	}
+}
+
+templ rating(whole int, half bool) {
+	for range whole {
+		<i class="icon star"></i>
+	}
+	{{ nDims := 5 - whole }}
+	if half {
+		<i class="icon star-half"></i>
+		{{ nDims-- }}
+	}
+	for range nDims {
+		<i class="icon star-dark"></i>
+	}
+}
+
+func startingAt(product *view.Product) int64 {
+	m := slices.MinFunc(product.PriceTiers, func(a, b repo.PriceTier) int {
+		return int(a.PriceCent - b.PriceCent)
+	})
+	return m.PriceCent
+}

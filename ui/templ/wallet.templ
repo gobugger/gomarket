@@ -1,0 +1,74 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/service/currency"
+)
+
+templ Wallet(tc *TemplateContext, depositAddress string) {
+	@Layout(tc) {
+		<div class="row-centered wrap w100 gap">
+			<div class="form--basic mw-l">
+				<div class="header">
+					<h2>{ tc.Translate("Wallet") }</h2>
+				</div>
+				<div class="form__field">
+					<p class="highlight--important">
+						{ tc.Translate("This is your XMR wallet where you can deposit coins.") }
+						<br/>
+						{ tc.Translate("Balance is updated after 10 confirmations.") }
+						<br/>
+						{ tc.Translate("See") } <a href="/support">{ tc.Translate("support") }</a>
+						{ tc.Translate("for more information.") }
+					</p>
+				</div>
+				<div class="col">
+					<div class="form__field">
+						<label for="balance">{ tc.Translate("Balance") }</label>
+						<div class="row gap">
+							<p id="balance" class="field">{ currency.XMR2Decimal(tc.BalancePico) } XMR</p>
+							<p id="balance" class="field">{ tc.XMR2Fiat2(tc.BalancePico) } </p>
+						</div>
+					</div>
+					<div class="form__field">
+						<label for="address">{ tc.Translate("Address") }</label>
+						<pre id="address" class="pgpkey">{ depositAddress }</pre>
+					</div>
+					<div class="form__field">
+						<img class="qr-code" src={ QrCodeSrc(fmt.Sprintf("monero:%s", depositAddress)) }/>
+					</div>
+				</div>
+			</div>
+			<form class="form--basic mw-l" action="/wallet/withdraw" method="post">
+				@templ.Raw(tc.CsrfField)
+				<div class="header">
+					<h2>{ tc.Translate("Withdraw") }</h2>
+				</div>
+				<div class="form__field">
+					<p class="highlight--important">
+						{ tc.Translate("Enter a monero address where you want to withdraw your funds.") }
+						<br/>
+						{ tc.Translate("We collect an 0.01 XMR fee from each withdrawal to prevent spam.") }
+						<br/>
+						{ tc.Translate("DO NOT withdraw funds to another wallet on this platform!") }
+						<br/>
+					</p>
+				</div>
+				<div class="form__field">
+					<label>{ tc.Translate("Destination address") }</label>
+					<input class="form__input" type="text" name="address" minlength="95" maxlength="95"/>
+				</div>
+				<div class="form__field">
+					<div class="col">
+						<label class="m0">{ tc.Translate("Amount") } XMR</label>
+						<p class="text--small mb-s">{ tc.Translate("Enter amount in decimal format (e.g., 1.42069)") }</p>
+					</div>
+					<input class="form__input number" type="number" step="0.000000000001" name="amount_xmr"/>
+				</div>
+				<div class="form__field--right">
+					@Captcha(tc)
+				</div>
+			</form>
+		</div>
+	}
+}

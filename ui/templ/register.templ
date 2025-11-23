@@ -1,0 +1,51 @@
+package ui
+
+templ Register(tc *TemplateContext, form Form) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/register" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Register") }</h2>
+			</div>
+			<div class="form__field">
+				<label for="username">{ tc.Translate("username") }</label>
+				<input
+					id="username"
+					class="form__input"
+					type="text"
+					name="username"
+					value={ DefaultValue(form, "username") }
+					required
+				/>
+			</div>
+			<div class="form__field">
+				<label for="password">{ tc.Translate("password") }</label>
+				<input
+					id="password"
+					class="form__input"
+					type="password"
+					name="password"
+					value={ DefaultValue(form, "password") }
+					required
+				/>
+			</div>
+			<div class="form__field">
+				<label for="passwordCheck">{ tc.Translate("password check") }</label>
+				<input
+					id="passwordCheck"
+					class="form__input"
+					type="password"
+					name="password_check"
+					value={ DefaultValue(form, "password_check") }
+					required
+				/>
+			</div>
+			<div class="row-separated w100 pad5">
+				<div class="col-end">
+					<a class="text--small" href="/login">{ tc.Translate("Already have an account?") }</a>
+				</div>
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

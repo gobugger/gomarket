@@ -1,0 +1,110 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/view"
+)
+
+templ Product(tc *TemplateContext, product *view.Product, priceTier int, isVendor bool) {
+	@Layout(tc, "/ui/css/product.css") {
+		<div class="product__container">
+			if isVendor {
+				<form class="form--basic border_pop" action="/product/update" method="post">
+					@templ.Raw(tc.CsrfField)
+					<div class="header">
+						<h2>{ tc.Translate("Update product") }</h2>
+					</div>
+					<input type="hidden" name="id" value={ product.ID.String() }/>
+					<div class="form__field">
+						<label class="m0">{ tc.Translate("Inventory") } (pcs)</label>
+						<p class="text--small mb-s text-wrap">{ tc.Translate("Size of the current inventory for this product.") }</p>
+						<input class="form__input number" type="number" name="inventory" value="{{.Inventory}}" step="1"/>
+					</div>
+					<div class="form__field">
+						<label for="delete_switch">Delete listing</label>
+						@Switch("delete_switch", "delete", false)
+					</div>
+					<div class="form__field--right">
+						<button type="submit" class="btn">{ tc.Translate("Update") }</button>
+					</div>
+				</form>
+			}
+			<div class="product-image row-centered">
+				if !tc.Settings.IncognitoEnabled {
+					<img
+						src={ "uploads/product/" + product.ID.String() }
+						alt={ product.Title }
+						class="product__image--large"
+					/>
+				} else {
+					<div class="product__image--large"><p>placeholder</p></div>
+				}
+			</div>
+			<div class="product-info">
+				<div class="col">
+					<div class="header">
+						<h2>{ Head(product.Title, 24) }</h2>
+					</div>
+					<div class="form__field">
+						<pre class="display-text--nobg">{ product.Description }</pre>
+					</div>
+					<div class="form__field--right">
+						<div class="push-bottom">
+							@VendorSmall(tc, &product.Vendor)
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order__container">
+				<form class="form--basic col fill" action="/product/action" method="post">
+					@templ.Raw(tc.CsrfField)
+					<input type="hidden" name="product_id" value={ product.ID.String() }/>
+					<div class="header">
+						<h2>{ tc.Translate("Order") }</h2>
+					</div>
+					<div class="form__field">
+						<label for="price">{ tc.Translate("Quantity") }</label>
+						<select id="price" type="number" name="price_id" required>
+							for i, pt := range product.PriceTiers {
+								if product.Inventory >= pt.Quantity {
+									<option value={ pt.ID.String() } selected?={ i == priceTier }>{ fmt.Sprintf("%dpcs %s %s/pcs", pt.Quantity, tc.Fiat2(pt.PriceCent), tc.PricePerUnit(pt.PriceCent, pt.Quantity)) }</option>
+								}
+							}
+						</select>
+					</div>
+					<div class="col-end h100">
+						<div class="form__field gap">
+							<button type="submit" class="btn-plain funnel w100" name="action" value="add_to_cart">{ tc.Translate("Add to cart") }</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="review__container">
+				<div class="header">
+					<h2>{ tc.Translate("Reviews") }</h2>
+				</div>
+				<div class="row review-overflow">
+					<table>
+						<tbody>
+							for _, review := range product.Reviews {
+								<tr>
+									<td>
+										<div class="col">
+											<div class="row">
+												for range review.Review.Grade {
+													<i class="icon star"></i>
+												}
+											</div>
+											<p class="text--small">{ review.TotalQuantity }pcs { tc.Fiat2(review.TotalPriceCents) }{ tc.Settings.Currency }</p>
+										</div>
+									</td>
+									<td><b>{ tc.FmtSince(review.CreatedAt) } { tc.Translate("ago") } { review.AuthorName }:</b> { review.Review.Comment }</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	}
+}

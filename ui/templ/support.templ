@@ -1,0 +1,13 @@
+package ui
+
+templ Support(tc *TemplateContext) {
+	@Layout(tc) {
+		<div class="col gap w100 mw-l">
+			<a class="btn-plain w100" href="/support/faq">FAQ</a>
+			if tc.IsAuthenticated() {
+				<a class="btn-plain w100" href="/support/tickets">{ tc.Translate("My tickets") }</a>
+				<a class="btn-plain w100" href="/support/ticket/create">{ tc.Translate("Create ticket") }</a>
+			}
+		</div>
+	}
+}

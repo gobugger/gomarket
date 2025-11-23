@@ -1,0 +1,38 @@
+package ui
+
+templ CreateTicket(tc *TemplateContext, marketPGP string) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/support/ticket/create" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Create ticket") }</h2>
+			</div>
+			<div class="form__field">
+				<label>{ tc.Translate("Subject") }</label>
+				<select type="text" name="subject" required>
+					<option value="account">{ tc.Translate("account") }</option>
+					<option value="order">{ tc.Translate("order") }</option>
+					<option value="wallet">{ tc.Translate("wallet") }</option>
+					<option value="vendor">{ tc.Translate("vendor") }</option>
+					<option value="product">{ tc.Translate("product") }</option>
+					<option value="suggestion">{ tc.Translate("suggestion") }</option>
+					<option value="bug">{ tc.Translate("bug") }</option>
+					<option value="other">{ tc.Translate("other") }</option>
+				</select>
+			</div>
+			<div class="form__field">
+				<label>{ tc.Translate("Message") }</label>
+				<textarea name="message" spellcheck="false"></textarea>
+			</div>
+			<details class="key-details highlight">
+				<summary>{ tc.Translate("Staff PGP") }</summary>
+				<div class="mt-s">
+					<pre class="pgpkey important">{ marketPGP }</pre>
+				</div>
+			</details>
+			<div class="form__field--right">
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

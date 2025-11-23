@@ -1,0 +1,182 @@
+package ui
+
+import (
+	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/gobugger/gomarket/internal/service/currency"
+	"github.com/gobugger/gomarket/internal/translations"
+	"strconv"
+)
+
+func userType(tc *TemplateContext) string {
+	switch tc.AuthLevel {
+	case AuthLevelDefault:
+		return tc.Translate("guest")
+	case AuthLevelCustomer:
+		return tc.Translate("customer")
+	case AuthLevelVendor:
+		return tc.Translate("vendor")
+	case AuthLevelAdmin:
+		return tc.Translate("admin")
+	default:
+		return tc.Translate("unknown")
+	}
+}
+
+func twofaStatus(tc *TemplateContext) string {
+	if tc.Settings.TwofaEnabled {
+		return tc.Translate("enabled")
+	} else {
+		return tc.Translate("disabled")
+	}
+}
+
+templ Settings(tc *TemplateContext,
+	currencies []currency.Currency,
+	deliveryMethods []repo.DeliveryMethod) {
+	@Layout(tc, "ui/css/sell.css") {
+		<div class="row-centered w100 wrap gap mw-xl">
+			<div class="form--basic mw-m">
+				<div class="header">
+					<h2>{ tc.Translate("Account") }</h2>
+				</div>
+				<div class="form__field">
+					<p>{ tc.Translate("Username") }: { tc.Username }</p>
+					<p>{ tc.Translate("Type") }: { userType(tc) }</p>
+					<p>{ tc.Translate("2FA") }: { twofaStatus(tc) }</p>
+				</div>
+			</div>
+			<form class="form--basic mw-m" action="/settings/update" method="post">
+				@templ.Raw(tc.CsrfField)
+				<div class="header">
+					<h2>{ tc.Translate("Preferences") }</h2>
+				</div>
+				<div class="form__field">
+					<div class="col gap">
+						<div class="col">
+							<label for="locale">{ tc.Translate("Language") }</label>
+							<select id="locale" type="text" name="locale" required>
+								for _, lang := range translations.Locales() {
+									<option value={ lang } selected?={ tc.Settings.Lang == lang }>{ lang }</option>
+								}
+							</select>
+						</div>
+						<div class="col">
+							<label for="currency">{ tc.Translate("Currency") }</label>
+							<select id="currency" type="text" name="currency" required>
+								for _, currency := range currencies {
+									<option value={ currency } selected?={ tc.Settings.Currency == string(currency) }>{ currency }</option>
+								}
+							</select>
+						</div>
+						if tc.PgpKey != "" {
+							<div class="col">
+								<label>Enable 2FA</label>
+								@Switch("enable_2fa", "enable_2fa", tc.Settings.TwofaEnabled)
+							</div>
+						}
+					</div>
+				</div>
+				<div class="form__field--right">
+					@Captcha(tc)
+				</div>
+			</form>
+			<form class="form--basic mw-m" action="/settings/change-password" method="post">
+				@templ.Raw(tc.CsrfField)
+				<div class="header">
+					<h2>{ tc.Translate("Change password") }</h2>
+				</div>
+				<div class=" form__field">
+					<label for="currentPassword">{ tc.Translate("Current password") }</label>
+					<input id="currentPassword" class="form__input" type="password" name="password" required/>
+				</div>
+				<div class="form__field">
+					<label for="newPassword">{ tc.Translate("New password") }</label>
+					<input id="newPassword" class="form__input" type="password" name="new_password" required/>
+				</div>
+				<div class="form__field">
+					<label for="newPasswordCheck">{ tc.Translate("Confirm new password") }</label>
+					<input id="newPasswordCheck" class="form__input" type="password" name="new_password_check" required/>
+				</div>
+				<div class="form__field--right">
+					@Captcha(tc)
+				</div>
+			</form>
+			<form class="form--basic col mw-m" action="/settings/updatepgp" method="post">
+				@templ.Raw(tc.CsrfField)
+				<div class="header">
+					if tc.PgpKey != "" {
+						<h2>{ tc.Translate("Change PGP key") }</h2>
+					} else {
+						<h2>{ tc.Translate("Enable 2FA") }</h2>
+					}
+				</div>
+				<div class="form__field flex1">
+					<div class="col">
+						<label class="m0" for="pgpKey">{ tc.Translate("PGP public key") }</label>
+						<p class="text--small mb-s">{ tc.Translate("Required for vendors, suggested for everyone.") }</p>
+					</div>
+					<textarea class="h100" id="pgpKey" name="pgp_key" spellcheck="false"></textarea>
+				</div>
+				<div class="form__field--right">
+					@Captcha(tc)
+				</div>
+			</form>
+			if tc.AuthLevel == AuthLevelVendor {
+				<form class="form--basic col mw-m" action="settings/profile" method="post">
+					@templ.Raw(tc.CsrfField)
+					<div class="header">
+						<h2>{ tc.Translate("Update vendor profile") }</h2>
+					</div>
+					<div class="form__field flex1">
+						<div class="col">
+							<label class="m0">{ tc.Translate("Vendor info") }</label>
+							<p class="text--small mb-s">{ tc.Translate("Leave empty to not update.") }</p>
+						</div>
+						<textarea class="h100" name="info" spellcheck="false" placeholder="Hi, I'm ..."></textarea>
+					</div>
+					<div class="form__field--right">
+						@Captcha(tc)
+					</div>
+				</form>
+				<form class="form--basic col mw-m" action="settings/delivery_methods" method="post">
+					@templ.Raw(tc.CsrfField)
+					<div class="header">
+						<h2>{ tc.Translate("Update delivery methods") }</h2>
+					</div>
+					<div class="form__field">
+						<table class="listing__table">
+							<thead>
+								<th>{ tc.Translate("Delivery Method") }</th>
+								<th class="price-head">{ tc.Translate("Price") } { tc.Settings.Currency }</th>
+							</thead>
+							<tbody>
+								for i := range 5 {
+									{{ idx := strconv.Itoa(i) }}
+									{{ nameA := "delivery_methods." + idx + ".description" }}
+									{{ nameB := "delivery_methods." + idx + ".price" }}
+									{{ valueA := "" }}
+									{{ valueB := "" }}
+									if len(deliveryMethods) > i {
+										{{ valueA = deliveryMethods[i].Description }}
+										{{ valueB = tc.Fiat(deliveryMethods[i].PriceCent) }}
+									}
+									<tr>
+										<td>
+											<input class="table__input" type="text" name={ nameA } value={ valueA }/>
+										</td>
+										<td>
+											<input class="table__input" type="number" name={ nameB } value={ valueB } step="0.01"/>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+					<div class="form__field--right">
+						@Captcha(tc)
+					</div>
+				</form>
+			}
+		</div>
+	}
+}

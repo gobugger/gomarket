@@ -1,0 +1,93 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/repo"
+)
+
+templ CreateListing(tc *TemplateContext, locations []string, categories []repo.Category) {
+	@Layout(tc, "/ui/css/sell.css") {
+		<form class="form--basic mw-l" action="/create-listing" method="post" enctype="multipart/form-data">
+			@templ.Raw(tc.CsrfField)
+			<div class="form__field">
+				<label>{ tc.Translate("Title") }</label>
+				<input class="form__input" type="text" name="title" required/>
+			</div>
+			<div class="form__field">
+				<label>{ tc.Translate("Description") }</label>
+				<textarea name="description" spellcheck="false" required></textarea>
+			</div>
+			<div class="form__field">
+				<div class="col">
+					<label class="m0">{ tc.Translate("Product image") }</label>
+					<p class="text--small mb-s text-wrap">{ tc.Translate("Use image with close to 1:1 aspect ratio for optimal look") }</p>
+				</div>
+				<input type="file" name="image" accept="image/*" required/>
+			</div>
+			<div class="form__field">
+				<label for="category">{ tc.Translate("Category") }</label>
+				<select class="fit--width" id="category" name="category_id" required>
+					for _, category := range categories {
+						<option value={ category.ID.String() }>{ tc.Translate(category.Name) }</option>
+					}
+				</select>
+			</div>
+			<div class="form__field">
+				<label for="ships_from">{ tc.Translate("Ships from") }</label>
+				<select class="fit--width" id="ships_from" type="text" name="ships_from" required>
+					for _, location := range locations {
+						<option value={ location }>{ location }</option>
+					}
+				</select>
+			</div>
+			<div class="form__field">
+				<label for="ships_to">{ tc.Translate("Ships to") }</label>
+				<select class="fit--width" id="ships_to" type="text" name="ships_to" required>
+					for _, location := range locations {
+						<option value={ location }>{ location }</option>
+					}
+				</select>
+			</div>
+			<div class="form__field">
+				<div class="col">
+					<label class="m0">{ tc.Translate("Inventory") } (g)</label>
+					<p class="text--small mb-s text-wrap">{ tc.Translate("Size of the current inventory for this product.") }</p>
+				</div>
+				<input class="form__input number" type="number" name="inventory" value="0" step="1"/>
+			</div>
+			<div class="form__field">
+				<label for="pricing-table m0">{ tc.Translate("Pricing") }</label>
+				<p class="text--small mb-s text-wrap">
+					{ tc.Translate("Here you can set your pricing.") }
+					<br/>
+					{ tc.Translate("We take 5%% cut from these prices.") }
+					<br/>
+				</p>
+				<table id="pricing-table" class="pricing-table listing__table">
+					<thead>
+						<th>{ tc.Translate("Quantity") }</th>
+						<th>{ tc.Translate("Price") } ({ tc.Settings.Currency })</th>
+					</thead>
+					<tbody>
+						for i := range 8 {
+							{{ nameA := fmt.Sprintf("price_tiers.%d.quantity", i) }}
+							{{ nameB := fmt.Sprintf("price_tiers.%d.price", i) }}
+							<tr>
+								if i == 0 {
+									<td><input class="table__input" type="number" name={ nameA } required/></td>
+									<td><input class="table__input" type="number" name={ nameB } required/></td>
+								} else {
+									<td><input class="table__input" type="number" name={ nameA }/></td>
+									<td><input class="table__input" type="number" name={ nameB }/></td>
+								}
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="form__field--right">
+				@Captcha(tc)
+			</div>
+		</form>
+	}
+}

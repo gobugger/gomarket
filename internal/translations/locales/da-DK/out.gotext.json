@@ -1,0 +1,1355 @@
+{
+    "language": "da-DK",
+    "messages": [
+        {
+            "id": "Failed to open the gate: invalid missing characters",
+            "message": "Failed to open the gate: invalid missing characters",
+            "translation": "Kunne ikke åbne porten: ugyldige manglende tegn"
+        },
+        {
+            "id": "This username is already in use",
+            "message": "This username is already in use",
+            "translation": "Dette brugernavn er allerede i brug"
+        },
+        {
+            "id": "Invalid PGP key",
+            "message": "Invalid PGP key",
+            "translation": "Ugyldig PGP-nøgle"
+        },
+        {
+            "id": "Registered successfully",
+            "message": "Registered successfully",
+            "translation": "Registreret med succes"
+        },
+        {
+            "id": "Invalid credentials",
+            "message": "Invalid credentials",
+            "translation": "Ugyldige legitimationsoplysninger"
+        },
+        {
+            "id": "Your account is banned",
+            "message": "Your account is banned",
+            "translation": "Din konto er blevet udelukket"
+        },
+        {
+            "id": "Invalid 2FA token",
+            "message": "Invalid 2FA token",
+            "translation": "Ugyldig 2FA-token"
+        },
+        {
+            "id": "Password changed",
+            "message": "Password changed",
+            "translation": "Adgangskode ændret"
+        },
+        {
+            "id": "You can't update to your current key",
+            "message": "You can't update to your current key",
+            "translation": "Du kan ikke opdatere til din nuværende nøgle"
+        },
+        {
+            "id": "PGP key is set",
+            "message": "PGP key is set",
+            "translation": "PGP-nøgle er indstillet"
+        },
+        {
+            "id": "PGP Public key is updated",
+            "message": "PGP Public key is updated",
+            "translation": "PGP-offentlig nøgle er opdateret"
+        },
+        {
+            "id": "Vendor info is updated",
+            "message": "Vendor info is updated",
+            "translation": "Leverandørinformation er opdateret"
+        },
+        {
+            "id": "Listing created",
+            "message": "Listing created",
+            "translation": "Oprettet liste"
+        },
+        {
+            "id": "Cart updated",
+            "message": "Cart updated",
+            "translation": "Indkøbskurv opdateret"
+        },
+        {
+            "id": "cart deleted",
+            "message": "cart deleted",
+            "translation": "indkøbskurv slettet"
+        },
+        {
+            "id": "You can't order with a vendor account",
+            "message": "You can't order with a vendor account",
+            "translation": "Du kan ikke bestille med en leverandørkonto"
+        },
+        {
+            "id": "You don't have enough balance for this order",
+            "message": "You don't have enough balance for this order",
+            "translation": "Du har ikke nok saldo til denne ordre"
+        },
+        {
+            "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translation": "Betal venligst fakturaen nedenfor inden for {Duration} timer for at din ordre kan fortsætte.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "Order created",
+            "message": "Order created",
+            "translation": "Ordre oprettet"
+        },
+        {
+            "id": "Not enough balance to withdraw.",
+            "message": "Not enough balance to withdraw.",
+            "translation": "Ikke nok saldo til at hæve."
+        },
+        {
+            "id": "You can't withdraw to your own account",
+            "message": "You can't withdraw to your own account",
+            "translation": "Du kan ikke hæve til din egen konto"
+        },
+        {
+            "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translation": "Udbetaling af {XMR2Decimalamount} XMR initieret",
+            "placeholders": [
+                {
+                    "id": "XMR2Decimalamount",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "currency.XMR2Decimal(amount)"
+                }
+            ]
+        },
+        {
+            "id": "Order cancelled",
+            "message": "Order cancelled",
+            "translation": "Ordre annulleret"
+        },
+        {
+            "id": "Review created",
+            "message": "Review created",
+            "translation": "Anmeldelse oprettet"
+        },
+        {
+            "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Du kan ikke forlænge AF-timerne, før ordren er blevet sendt i {Duration} dage.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "5"
+                }
+            ]
+        },
+        {
+            "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Du kan ikke forlænge AF-timerne igen, før ordren er blevet sendt i {Duration} dage.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "12"
+                }
+            ]
+        },
+        {
+            "id": "AF timer already extended to maximum.",
+            "message": "AF timer already extended to maximum.",
+            "translation": "AF-timerne er allerede forlænget til maksimum."
+        },
+        {
+            "id": "AF timer extended by {Duration} days",
+            "message": "AF timer extended by {Duration} days",
+            "translation": "AF-timerne forlænget med {Duration} dage",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "Order disputed",
+            "message": "Order disputed",
+            "translation": "Ordre omstridt"
+        },
+        {
+            "id": "2FA needs to be enabled for vendors",
+            "message": "2FA needs to be enabled for vendors",
+            "translation": "2FA skal aktiveres for leverandører"
+        },
+        {
+            "id": "Vendor accounts can't have previous orders. Please create a new account.",
+            "message": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translation": "Leverandørkonti kan ikke have tidligere ordrer. Opret venligst en ny konto."
+        },
+        {
+            "id": "Proof of inventory is required from new vendors",
+            "message": "Proof of inventory is required from new vendors",
+            "translation": "Dokumentation for lagerbeholdning kræves fra nye leverandører"
+        },
+        {
+            "id": "Not enough balance",
+            "message": "Not enough balance",
+            "translation": "Ikke nok saldo"
+        },
+        {
+            "id": "Application received",
+            "message": "Application received",
+            "translation": "Ansøgning modtaget"
+        },
+        {
+            "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translation": "Ordren er accepteret. Du har {Duration} timer til at markere den som afsendt.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "72"
+                }
+            ]
+        },
+        {
+            "id": "Order declined",
+            "message": "Order declined",
+            "translation": "Ordren er afvist"
+        },
+        {
+            "id": "Order marked as dispatched",
+            "message": "Order marked as dispatched",
+            "translation": "Ordren er markeret som afsendt"
+        },
+        {
+            "id": "Product deleted",
+            "message": "Product deleted",
+            "translation": "Produkt slettet"
+        },
+        {
+            "id": "Product updated",
+            "message": "Product updated",
+            "translation": "Produkt opdateret"
+        },
+        {
+            "id": "Ticket is already closed",
+            "message": "Ticket is already closed",
+            "translation": "Billet er allerede lukket"
+        },
+        {
+            "id": "You need to be logged in to access that page",
+            "message": "You need to be logged in to access that page",
+            "translation": "Du skal være logget ind for at få adgang til den side"
+        },
+        {
+            "id": "Order received",
+            "message": "Order received",
+            "translation": "Ordren er modtaget"
+        },
+        {
+            "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translation": "Du har modtaget en ny ordre!\nDu har i alt {Duration} timer til at acceptere, før den automatisk afvises.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "48"
+                }
+            ]
+        },
+        {
+            "id": "Order accepted",
+            "message": "Order accepted",
+            "translation": "Ordren er accepteret"
+        },
+        {
+            "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translation": "Din ordre er blevet accepteret!\nDu kan overvåge dens status fra ordresiden"
+        },
+        {
+            "id": "Order dispatched",
+            "message": "Order dispatched",
+            "translation": "Ordren er afsendt"
+        },
+        {
+            "id": "Your order has been dispatched!\nPlease remember to review it.",
+            "message": "Your order has been dispatched!\nPlease remember to review it.",
+            "translation": "Din ordre er blevet afsendt!\nHusk venligst at anmelde den."
+        },
+        {
+            "id": "How do I become a vendor?",
+            "message": "How do I become a vendor?",
+            "translation": "Hvordan bliver jeg leverandør?"
+        },
+        {
+            "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translation": "Opret en konto med to-faktor autentificering (2FA) aktiveret, og indsend derefter en leverandøransøgning."
+        },
+        {
+            "id": "How do I place an order?",
+            "message": "How do I place an order?",
+            "translation": "Hvordan afgiver jeg en ordre?"
+        },
+        {
+            "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translation": "Tilføj de ønskede produkter til din indkøbskurv. Naviger til /cart og vælg “Checkout,” vælg din foretrukne leveringsmetode, og angiv de krævede oplysninger.\nHvis du har tilgængelig saldo, kan du bruge den ved kassen. Ellers kan du anmode om en faktura. Fakturaer skal betales inden for {Duration} timer for at ordren kan fortsætte med at blive behandlet.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "How can I obtain Monero (XMR)?",
+            "message": "How can I obtain Monero (XMR)?",
+            "translation": "Hvordan kan jeg få Monero (XMR)?"
+        },
+        {
+            "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translation": "Der er flere måder at erhverve Monero på. Besøg venligst getmonero.org for officiel vejledning og ressourcer."
+        },
+        {
+            "id": "What should I do if my order has not arrived or does not match the description?",
+            "message": "What should I do if my order has not arrived or does not match the description?",
+            "translation": "Hvad skal jeg gøre, hvis min ordre ikke er ankommet eller ikke stemmer overens med beskrivelsen?"
+        },
+        {
+            "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translation": "Ordrer afsluttes automatisk efter {Duration} dage.\nDu kan forlænge auto-afslutningsperioden to gange.\nHvis ordren stadig ikke er ankommet efter disse forlængelser, bør du åbne en tvist.\nVores team vil gennemgå sagen og træffe en beslutning baseret på de tilgængelige oplysninger.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "What am I allowed to sell on this marketplace?",
+            "message": "What am I allowed to sell on this marketplace?",
+            "translation": "Hvad må jeg sælge på dette marked?"
+        },
+        {
+            "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translation": "Kun lovlige varer er tilladt. Hvis du er usikker på, om dit produkt kvalificerer sig, bedes du kontakte os, før du opretter en annonce."
+        },
+        {
+            "id": "Open",
+            "message": "Open",
+            "translation": "Åben"
+        },
+        {
+            "id": "Vendor application",
+            "message": "Vendor application",
+            "translation": "Leverandøransøgning"
+        },
+        {
+            "id": "Your account does not have 2FA enabled!",
+            "message": "Your account does not have 2FA enabled!",
+            "translation": "Din konto har ikke 2FA aktiveret!"
+        },
+        {
+            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translation": "Applikationen er gratis for brugere, der allerede er sælgere på et andet marked, der bruger den samme PGP-nøgle."
+        },
+        {
+            "id": "For other users, application costs {Price} XMR and is non-refundable.",
+            "message": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translation": "For andre brugere koster applikationen {Price} XMR og er ikke-refunderbar.",
+            "placeholders": [
+                {
+                    "id": "Price",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "price"
+                }
+            ]
+        },
+        {
+            "id": "You're required to provide proof that you actually have products to sell here.",
+            "message": "You're required to provide proof that you actually have products to sell here.",
+            "translation": "Du skal give bevis for, at du faktisk har produkter at sælge her."
+        },
+        {
+            "id": "Vendor Logo",
+            "message": "Vendor Logo",
+            "translation": "Sælgerlogo"
+        },
+        {
+            "id": "Use png image with close to 1:1 ratio for optimal look",
+            "message": "Use png image with close to 1:1 ratio for optimal look",
+            "translation": "Brug png-billede med tæt på 1:1-forhold for optimal udseende"
+        },
+        {
+            "id": "Existing vendor",
+            "message": "Existing vendor",
+            "translation": "Eksisterende sælger"
+        },
+        {
+            "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translation": "Vælg dette, hvis du allerede er sælger på et andet marked som xmrBazaar"
+        },
+        {
+            "id": "Proof of inventory",
+            "message": "Proof of inventory",
+            "translation": "Bevis for lager"
+        },
+        {
+            "id": "Clear image of your inventory with your username and timestamp visible",
+            "message": "Clear image of your inventory with your username and timestamp visible",
+            "translation": "Klar billede af dit lager med dit brugernavn og tidsstempel synligt"
+        },
+        {
+            "id": "Markets and Your Username",
+            "message": "Markets and Your Username",
+            "translation": "Markeder og dit brugernavn"
+        },
+        {
+            "id": "List the markets where you are a vendor and include your username",
+            "message": "List the markets where you are a vendor and include your username",
+            "translation": "List de markeder, hvor du er sælger, og inkluder dit brugernavn"
+        },
+        {
+            "id": "Captcha",
+            "message": "Captcha",
+            "translation": "Captcha"
+        },
+        {
+            "id": "Click circle with a cut",
+            "message": "Click circle with a cut",
+            "translation": "Klik på cirklen med et snit"
+        },
+        {
+            "id": "Submit",
+            "message": "Submit",
+            "translation": "Indsend"
+        },
+        {
+            "id": "Total",
+            "message": "Total",
+            "translation": "Total"
+        },
+        {
+            "id": "Checkout",
+            "message": "Checkout",
+            "translation": "Gå til kassen"
+        },
+        {
+            "id": "delivery method",
+            "message": "delivery method",
+            "translation": "leveringsmetode"
+        },
+        {
+            "id": "Use wallet for payment",
+            "message": "Use wallet for payment",
+            "translation": "Brug wallet til betaling"
+        },
+        {
+            "id": "details",
+            "message": "details",
+            "translation": "detaljer"
+        },
+        {
+            "id": "Use your real address, with the same format as below.",
+            "message": "Use your real address, with the same format as below.",
+            "translation": "Brug din rigtige adresse med samme format som nedenfor."
+        },
+        {
+            "id": "Unencrypted details are automatically encrypted using vendors key.",
+            "message": "Unencrypted details are automatically encrypted using vendors key.",
+            "translation": "Uenkrypterede detaljer bliver automatisk krypteret ved hjælp af sælgers nøgle."
+        },
+        {
+            "id": "Title",
+            "message": "Title",
+            "translation": "Titel"
+        },
+        {
+            "id": "Description",
+            "message": "Description",
+            "translation": "Beskrivelse"
+        },
+        {
+            "id": "Product image",
+            "message": "Product image",
+            "translation": "Produktbillede"
+        },
+        {
+            "id": "Use image with close to 1:1 aspect ratio for optimal look",
+            "message": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translation": "Brug billede med tæt på 1:1 billedforhold for optimal udseende"
+        },
+        {
+            "id": "Category",
+            "message": "Category",
+            "translation": "Kategori"
+        },
+        {
+            "id": "Ships from",
+            "message": "Ships from",
+            "translation": "Afsendes fra"
+        },
+        {
+            "id": "Ships to",
+            "message": "Ships to",
+            "translation": "Afsendes til"
+        },
+        {
+            "id": "Inventory",
+            "message": "Inventory",
+            "translation": "Lager"
+        },
+        {
+            "id": "Size of the current inventory for this product.",
+            "message": "Size of the current inventory for this product.",
+            "translation": "Størrelse af det nuværende lager for dette produkt."
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Prissætning"
+        },
+        {
+            "id": "Here you can set your pricing.",
+            "message": "Here you can set your pricing.",
+            "translation": "Her kan du angive dine priser."
+        },
+        {
+            "id": "We take 5% cut from these prices.",
+            "message": "We take 5% cut from these prices.",
+            "translation": "Vi tager 5% i gebyr fra disse priser."
+        },
+        {
+            "id": "Quantity",
+            "message": "Quantity",
+            "translation": "Mængde"
+        },
+        {
+            "id": "Price",
+            "message": "Price",
+            "translation": "Pris"
+        },
+        {
+            "id": "Create ticket",
+            "message": "Create ticket",
+            "translation": "Opret billet"
+        },
+        {
+            "id": "Subject",
+            "message": "Subject",
+            "translation": "Emne"
+        },
+        {
+            "id": "account",
+            "message": "account",
+            "translation": "konto"
+        },
+        {
+            "id": "order",
+            "message": "order",
+            "translation": "ordre"
+        },
+        {
+            "id": "wallet",
+            "message": "wallet",
+            "translation": "wallet"
+        },
+        {
+            "id": "vendor",
+            "message": "vendor",
+            "translation": "leverandør"
+        },
+        {
+            "id": "product",
+            "message": "product",
+            "translation": "produkt"
+        },
+        {
+            "id": "suggestion",
+            "message": "suggestion",
+            "translation": "forslag"
+        },
+        {
+            "id": "bug",
+            "message": "bug",
+            "translation": "fejl"
+        },
+        {
+            "id": "other",
+            "message": "other",
+            "translation": "andet"
+        },
+        {
+            "id": "Message",
+            "message": "Message",
+            "translation": "Besked"
+        },
+        {
+            "id": "Staff PGP",
+            "message": "Staff PGP",
+            "translation": "Personalets PGP"
+        },
+        {
+            "id": "Exchange rate",
+            "message": "Exchange rate",
+            "translation": "Valutakurs"
+        },
+        {
+            "id": "Time",
+            "message": "Time",
+            "translation": "Tid"
+        },
+        {
+            "id": "Vendors:",
+            "message": "Vendors:",
+            "translation": "Leverandører:"
+        },
+        {
+            "id": "Users:",
+            "message": "Users:",
+            "translation": "Brugere:"
+        },
+        {
+            "id": "submit",
+            "message": "submit",
+            "translation": "indsend"
+        },
+        {
+            "id": "Response",
+            "message": "Response",
+            "translation": "Svar"
+        },
+        {
+            "id": "products",
+            "message": "products",
+            "translation": "produkter"
+        },
+        {
+            "id": "orders",
+            "message": "orders",
+            "translation": "ordrer"
+        },
+        {
+            "id": "sell",
+            "message": "sell",
+            "translation": "sælg"
+        },
+        {
+            "id": "support",
+            "message": "support",
+            "translation": "support"
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Log ud"
+        },
+        {
+            "id": "log in",
+            "message": "log in",
+            "translation": "log ind"
+        },
+        {
+            "id": "register",
+            "message": "register",
+            "translation": "registrer"
+        },
+        {
+            "id": "Entry guard to {Name}",
+            "message": "Entry guard to {Name}",
+            "translation": "Adgangsvagt til {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "tc.Config.Name"
+                }
+            ]
+        },
+        {
+            "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translation": "Sammenlign den URL, du bruger, med den i billedet nedenfor for at finde alle manglende tegn markeret med '*'"
+        },
+        {
+            "id": "Missing characters",
+            "message": "Missing characters",
+            "translation": "Manglende tegn"
+        },
+        {
+            "id": "Log in",
+            "message": "Log in",
+            "translation": "Log ind"
+        },
+        {
+            "id": "username",
+            "message": "username",
+            "translation": "brugernavn"
+        },
+        {
+            "id": "password",
+            "message": "password",
+            "translation": "adgangskode"
+        },
+        {
+            "id": "Create new account",
+            "message": "Create new account",
+            "translation": "Opret ny konto"
+        },
+        {
+            "id": "Delete all",
+            "message": "Delete all",
+            "translation": "Slet alt"
+        },
+        {
+            "id": "You have zero notifications",
+            "message": "You have zero notifications",
+            "translation": "Du har ingen meddelelser"
+        },
+        {
+            "id": "Order",
+            "message": "Order",
+            "translation": "Ordre"
+        },
+        {
+            "id": "Chat",
+            "message": "Chat",
+            "translation": "Chat"
+        },
+        {
+            "id": "Status",
+            "message": "Status",
+            "translation": "Status"
+        },
+        {
+            "id": "Vendor",
+            "message": "Vendor",
+            "translation": "Leverandør"
+        },
+        {
+            "id": "Delivery method",
+            "message": "Delivery method",
+            "translation": "Leveringsmetode"
+        },
+        {
+            "id": "Total cost",
+            "message": "Total cost",
+            "translation": "Samlet omkostning"
+        },
+        {
+            "id": "Date",
+            "message": "Date",
+            "translation": "Dato"
+        },
+        {
+            "id": "Dispatched at",
+            "message": "Dispatched at",
+            "translation": "Afsendt kl."
+        },
+        {
+            "id": "Until auto-declined",
+            "message": "Until auto-declined",
+            "translation": "Indtil automatisk afvist"
+        },
+        {
+            "id": "Until auto-finalized",
+            "message": "Until auto-finalized",
+            "translation": "Indtil automatisk afsluttet"
+        },
+        {
+            "id": "Details",
+            "message": "Details",
+            "translation": "Detaljer"
+        },
+        {
+            "id": "Vendor offered refund of {RefundFactor}%",
+            "message": "Vendor offered refund of {RefundFactor}%",
+            "translation": "Leverandør tilbød refundering på {RefundFactor}%",
+            "placeholders": [
+                {
+                    "id": "RefundFactor",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "100 * item.Offer.RefundFactor"
+                }
+            ]
+        },
+        {
+            "id": "Accept",
+            "message": "Accept",
+            "translation": "Accepter"
+        },
+        {
+            "id": "Decline",
+            "message": "Decline",
+            "translation": "Afvis"
+        },
+        {
+            "id": "Customers PGP key",
+            "message": "Customers PGP key",
+            "translation": "Kundens PGP-nøgle"
+        },
+        {
+            "id": "Customer can still cancel this order!",
+            "message": "Customer can still cancel this order!",
+            "translation": "Kunden kan stadig annullere denne ordre!"
+        },
+        {
+            "id": "You must accept it in 2 days or it will be automatically declined.",
+            "message": "You must accept it in 2 days or it will be automatically declined.",
+            "translation": "Du skal acceptere det inden for 2 dage, ellers vil det blive automatisk afvist."
+        },
+        {
+            "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translation": "Efter accept kan kunden ikke længere annullere, så du kan trygt afsende."
+        },
+        {
+            "id": "Please carefully review the order below before accepting it.",
+            "message": "Please carefully review the order below before accepting it.",
+            "translation": "Gennemgå venligst ordren nedenfor omhyggeligt, før du accepterer den."
+        },
+        {
+            "id": "Always decline orders that you'r unable to fulfill.",
+            "message": "Always decline orders that you'r unable to fulfill.",
+            "translation": "Afvis altid ordrer, som du ikke kan opfylde."
+        },
+        {
+            "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translation": "Du skal markere denne ordre som afsendt inden for 2 dage, ellers vil den blive automatisk afvist."
+        },
+        {
+            "id": "Make sure that you have enough time to do the actual dispaching!",
+            "message": "Make sure that you have enough time to do the actual dispaching!",
+            "translation": "Sørg for, at du har nok tid til at udføre den faktiske forsendelse!"
+        },
+        {
+            "id": "Dispatched",
+            "message": "Dispatched",
+            "translation": "Forsendt"
+        },
+        {
+            "id": "Transfer exact amount of Monero to the address below.",
+            "message": "Transfer exact amount of Monero to the address below.",
+            "translation": "Overfør det nøjagtige beløb af Monero til adressen nedenfor."
+        },
+        {
+            "id": "After 10 confirmations, your order will proceed to vendor.",
+            "message": "After 10 confirmations, your order will proceed to vendor.",
+            "translation": "Efter 10 bekræftelser vil din ordre blive sendt til sælgeren."
+        },
+        {
+            "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translation": "Du har i alt 3 timer til at betale denne faktura, ellers vil din ordre blive annulleret."
+        },
+        {
+            "id": "Time left to pay",
+            "message": "Time left to pay",
+            "translation": "Tid tilbage til betaling"
+        },
+        {
+            "id": "Amount XMR",
+            "message": "Amount XMR",
+            "translation": "Beløb XMR"
+        },
+        {
+            "id": "Address",
+            "message": "Address",
+            "translation": "Adresse"
+        },
+        {
+            "id": "Orders can be cancelled until vendor has accepted it.",
+            "message": "Orders can be cancelled until vendor has accepted it.",
+            "translation": "Ordrer kan annulleres, indtil sælgeren har accepteret dem."
+        },
+        {
+            "id": "Cancel",
+            "message": "Cancel",
+            "translation": "Annuller"
+        },
+        {
+            "id": "Your order will auto-finalize in",
+            "message": "Your order will auto-finalize in",
+            "translation": "Din ordre vil automatisk blive afsluttet om"
+        },
+        {
+            "id": "You can extend the auto-finalize-time by 7-days.",
+            "message": "You can extend the auto-finalize-time by 7-days.",
+            "translation": "Du kan forlænge auto-afslutningstiden med 7 dage."
+        },
+        {
+            "id": "review your order",
+            "message": "review your order",
+            "translation": "gennemgå din ordre"
+        },
+        {
+            "id": "Review",
+            "message": "Review",
+            "translation": "Gennemgå"
+        },
+        {
+            "id": "Extend AF-timer",
+            "message": "Extend AF-timer",
+            "translation": "Forlæng AF-timer"
+        },
+        {
+            "id": "Dispute",
+            "message": "Dispute",
+            "translation": "Tvist"
+        },
+        {
+            "id": "Refund offer",
+            "message": "Refund offer",
+            "translation": "Refusions tilbud"
+        },
+        {
+            "id": "Customer has disputed this order.",
+            "message": "Customer has disputed this order.",
+            "translation": "Kunden har bestridt denne ordre."
+        },
+        {
+            "id": "Use the chat below to discuss about this dispute.",
+            "message": "Use the chat below to discuss about this dispute.",
+            "translation": "Brug chatten nedenfor til at diskutere denne tvist."
+        },
+        {
+            "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translation": "Du kan oprette et refusions tilbud og løse denne tvist uden adminindblanding."
+        },
+        {
+            "id": "Refund percent",
+            "message": "Refund percent",
+            "translation": "Refusionsprocent"
+        },
+        {
+            "id": "Order date",
+            "message": "Order date",
+            "translation": "Ordredato"
+        },
+        {
+            "id": "Order ID",
+            "message": "Order ID",
+            "translation": "Ordre ID"
+        },
+        {
+            "id": "Proof key ownership",
+            "message": "Proof key ownership",
+            "translation": "Bevis på nøgleejerskab"
+        },
+        {
+            "id": "Decrypt to get the token",
+            "message": "Decrypt to get the token",
+            "translation": "Dekrypter for at få tokenet"
+        },
+        {
+            "id": "Token",
+            "message": "Token",
+            "translation": "Token"
+        },
+        {
+            "id": "Update product",
+            "message": "Update product",
+            "translation": "Opdater produkt"
+        },
+        {
+            "id": "Update",
+            "message": "Update",
+            "translation": "Opdater"
+        },
+        {
+            "id": "Add to cart",
+            "message": "Add to cart",
+            "translation": "Tilføj til kurv"
+        },
+        {
+            "id": "Reviews",
+            "message": "Reviews",
+            "translation": "Anmeldelser"
+        },
+        {
+            "id": "ago",
+            "message": "ago",
+            "translation": "siden"
+        },
+        {
+            "id": "OUT OF STOCK",
+            "message": "OUT OF STOCK",
+            "translation": "UDSOLGT"
+        },
+        {
+            "id": "Register",
+            "message": "Register",
+            "translation": "Registrer"
+        },
+        {
+            "id": "password check",
+            "message": "password check",
+            "translation": "adgangskodekontrol"
+        },
+        {
+            "id": "Already have an account?",
+            "message": "Already have an account?",
+            "translation": "Har du allerede en konto?"
+        },
+        {
+            "id": "Review order",
+            "message": "Review order",
+            "translation": "Gennemgå ordre"
+        },
+        {
+            "id": "Grade",
+            "message": "Grade",
+            "translation": "Karakter"
+        },
+        {
+            "id": "guest",
+            "message": "guest",
+            "translation": "gæst"
+        },
+        {
+            "id": "customer",
+            "message": "customer",
+            "translation": "kunde"
+        },
+        {
+            "id": "admin",
+            "message": "admin",
+            "translation": "administrator"
+        },
+        {
+            "id": "unknown",
+            "message": "unknown",
+            "translation": "ukendt"
+        },
+        {
+            "id": "enabled",
+            "message": "enabled",
+            "translation": "aktiveret"
+        },
+        {
+            "id": "disabled",
+            "message": "disabled",
+            "translation": "deaktiveret"
+        },
+        {
+            "id": "Account",
+            "message": "Account",
+            "translation": "Konto"
+        },
+        {
+            "id": "Username",
+            "message": "Username",
+            "translation": "Brugernavn"
+        },
+        {
+            "id": "Type",
+            "message": "Type",
+            "translation": "Type"
+        },
+        {
+            "id": "2FA",
+            "message": "2FA",
+            "translation": "2FA"
+        },
+        {
+            "id": "Preferences",
+            "message": "Preferences",
+            "translation": "Præferencer"
+        },
+        {
+            "id": "Language",
+            "message": "Language",
+            "translation": "Sprog"
+        },
+        {
+            "id": "Currency",
+            "message": "Currency",
+            "translation": "Valuta"
+        },
+        {
+            "id": "Change password",
+            "message": "Change password",
+            "translation": "Skift adgangskode"
+        },
+        {
+            "id": "Current password",
+            "message": "Current password",
+            "translation": "Nuværende adgangskode"
+        },
+        {
+            "id": "New password",
+            "message": "New password",
+            "translation": "Ny adgangskode"
+        },
+        {
+            "id": "Confirm new password",
+            "message": "Confirm new password",
+            "translation": "Bekræft ny adgangskode"
+        },
+        {
+            "id": "Change PGP key",
+            "message": "Change PGP key",
+            "translation": "Skift PGP-nøgle"
+        },
+        {
+            "id": "Enable 2FA",
+            "message": "Enable 2FA",
+            "translation": "Aktiver 2FA"
+        },
+        {
+            "id": "PGP public key",
+            "message": "PGP public key",
+            "translation": "PGP offentlig nøgle"
+        },
+        {
+            "id": "Required for vendors, suggested for everyone.",
+            "message": "Required for vendors, suggested for everyone.",
+            "translation": "Påkrævet for sælgere, anbefales til alle."
+        },
+        {
+            "id": "Update vendor profile",
+            "message": "Update vendor profile",
+            "translation": "Opdater sælgerprofil"
+        },
+        {
+            "id": "Vendor info",
+            "message": "Vendor info",
+            "translation": "Sælgerinformation"
+        },
+        {
+            "id": "Leave empty to not update.",
+            "message": "Leave empty to not update.",
+            "translation": "Lad være med at udfylde for ikke at opdatere."
+        },
+        {
+            "id": "Update delivery methods",
+            "message": "Update delivery methods",
+            "translation": "Opdater leveringsmetoder"
+        },
+        {
+            "id": "Delivery Method",
+            "message": "Delivery Method",
+            "translation": "Leveringsmetode"
+        },
+        {
+            "id": "My tickets",
+            "message": "My tickets",
+            "translation": "Mine billetter"
+        },
+        {
+            "id": "0 seconds",
+            "message": "0 seconds",
+            "translation": "0 sekunder"
+        },
+        {
+            "id": "{Second} seconds",
+            "message": "{Second} seconds",
+            "translation": "{Second} sekunder",
+            "placeholders": [
+                {
+                    "id": "Second",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Second"
+                }
+            ]
+        },
+        {
+            "id": "{Minute} minutes",
+            "message": "{Minute} minutes",
+            "translation": "{Minute} minutter",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Minute"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} hours",
+            "message": "{Hour} hours",
+            "translation": "{Hour} timer",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Hour"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} days",
+            "message": "{Hour} days",
+            "translation": "{Hour} dage",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / (24 * time.Hour)"
+                }
+            ]
+        },
+        {
+            "id": "Rating (AVG)",
+            "message": "Rating (AVG)",
+            "translation": "Bedømmelse (GNS)"
+        },
+        {
+            "id": "Orders completed",
+            "message": "Orders completed",
+            "translation": "Fuldførte ordrer"
+        },
+        {
+            "id": "Orders in escrow",
+            "message": "Orders in escrow",
+            "translation": "Ordrer i escrow"
+        },
+        {
+            "id": "Pending disputes",
+            "message": "Pending disputes",
+            "translation": "Afventende tvister"
+        },
+        {
+            "id": "Previously seen",
+            "message": "Previously seen",
+            "translation": "Tidligere set"
+        },
+        {
+            "id": "PGP key",
+            "message": "PGP key",
+            "translation": "PGP-nøgle"
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Wallet"
+        },
+        {
+            "id": "This is your XMR wallet where you can deposit coins.",
+            "message": "This is your XMR wallet where you can deposit coins.",
+            "translation": "Dette er din XMR wallet, hvor du kan indsætte mønter."
+        },
+        {
+            "id": "Balance is updated after 10 confirmations.",
+            "message": "Balance is updated after 10 confirmations.",
+            "translation": "Saldoen opdateres efter 10 bekræftelser."
+        },
+        {
+            "id": "See",
+            "message": "See",
+            "translation": "Se"
+        },
+        {
+            "id": "for more information.",
+            "message": "for more information.",
+            "translation": "for mere information."
+        },
+        {
+            "id": "Balance",
+            "message": "Balance",
+            "translation": "Saldo"
+        },
+        {
+            "id": "Withdraw",
+            "message": "Withdraw",
+            "translation": "Hæv"
+        },
+        {
+            "id": "Enter a monero address where you want to withdraw your funds.",
+            "message": "Enter a monero address where you want to withdraw your funds.",
+            "translation": "Indtast en Monero-adresse, hvor du ønsker at hæve dine midler."
+        },
+        {
+            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translation": "Vi opkræver et gebyr på 0,01 XMR for hver hævning for at forhindre spam."
+        },
+        {
+            "id": "DO NOT withdraw funds to another wallet on this platform!",
+            "message": "DO NOT withdraw funds to another wallet on this platform!",
+            "translation": "MÅ IKKE hæve midler til en anden wallet på denne platform!"
+        },
+        {
+            "id": "Destination address",
+            "message": "Destination address",
+            "translation": "Destination adresse"
+        },
+        {
+            "id": "Amount",
+            "message": "Amount",
+            "translation": "Beløb"
+        },
+        {
+            "id": "Enter amount in decimal format (e.g., 1.42069)",
+            "message": "Enter amount in decimal format (e.g., 1.42069)",
+            "translation": "Indtast beløb i decimalformat (f.eks. 1.42069)"
+        }
+    ]
+}

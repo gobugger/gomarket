@@ -1,0 +1,70 @@
+package ui
+
+import (
+	"fmt"
+	"github.com/gobugger/gomarket/internal/repo"
+)
+
+templ Cart(tc *TemplateContext, groups [][]repo.GetViewCartForCustomerRow) {
+	@Layout(tc) {
+		<div class="orders">
+			for _, group := range groups {
+				<div class="order-item border">
+					{{ vendor := group[0].User }}
+					<div class="order-item-header">
+						<a href={ "/vendor?id=" + vendor.ID.String() }>{ vendor.Username }</a>
+					</div>
+					<div class="order-item-body mt gap">
+						<div class="row flex1 gap--s wrap">
+							for _, item := range group {
+								<div class="col">
+									<a href={ "/product?id=" + item.Product.ID.String() } title={ Head(item.Product.Title, 25) + " " + fmt.Sprintf("%dpcs x%d", item.Quantity, item.Count) }>
+										<img class="order-item-img" src={ "/uploads/thumbnail/" + item.Product.ID.String() } alt={ item.Product.Title }/>
+									</a>
+									if len(group) > 1 {
+										<div class="centered mb-s">
+											<p class="text--small">{ tc.Fiat2(item.PriceCent) }</p>
+											<p class="text--small">{ fmt.Sprintf("%dpcs x%d", item.Quantity, item.Count) }</p>
+										</div>
+									}
+									<form action="/cart/update" method="post">
+										@templ.Raw(tc.CsrfField)
+										<input type="hidden" name="price_tier_id" value={ item.PriceTierID.String() }/>
+										<div class="row-centered">
+											<button class="btn-tiny" name="action" value="remove" type="submit">-</button>
+											<button class="btn-tiny" name="action" value="add" type="submit">+</button>
+										</div>
+									</form>
+								</div>
+							}
+							if len(group) == 1 {
+								<div class="col gap--s">
+									{{ item := group[0] }}
+									<p>{ Head(item.Product.Title, 25) }</p>
+									<p class="txt-s">{ tc.Fiat2(item.PriceCent) + " " +  fmt.Sprintf("%dpcs x%d", item.Quantity, item.Count) }</p>
+								</div>
+							}
+						</div>
+						<div class="col gap--s">
+							<p>{ tc.Translate("Total") }: { tc.Fiat2(cartTotal(group)) }</p>
+							<a class="btn-tiny funnel w100" href={ "/checkout?id=" + vendor.ID.String() }>Checkout</a>
+							<form action="/cart/delete" method="post">
+								@templ.Raw(tc.CsrfField)
+								<input type="hidden" name="id" value={ vendor.ID.String() }/>
+								<button class="btn-tiny w100" type="submit">Delete</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	}
+}
+
+func cartTotal(items []repo.GetViewCartForCustomerRow) int64 {
+	var total int64
+	for _, item := range items {
+		total += item.Count * item.PriceCent
+	}
+	return total
+}

@@ -1,0 +1,31 @@
+FROM golang:1.24.4 AS builder
+
+RUN apt-get update && apt-get install -y \
+	gcc \
+	libc-dev \
+	make \
+	&& rm -rf /var/lib/apt/lists/*
+
+WORKDIR /build
+
+COPY go.mod go.sum ./ 
+
+RUN go mod tidy
+RUN go mod download && go mod verify
+
+COPY . .
+
+# CGO is required to build chai2010/webp package
+ENV CGO_ENABLED=1 GOOS=linux
+
+RUN go build -tags timetzdata -ldflags="-w -s" -o market ./cmd/market
+
+FROM gcr.io/distroless/base-debian13:nonroot
+WORKDIR /app
+
+COPY --chown=nonroot:nonroot static/ static/
+COPY --chown=nonroot:nonroot ui/ ui/ 
+COPY --from=builder --chown=nonroot:nonroot /build/market .
+
+EXPOSE 4000
+ENTRYPOINT ["./market"]

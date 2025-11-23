@@ -1,0 +1,55 @@
+package ui
+
+import "github.com/gobugger/gomarket/internal/view"
+
+templ HandleTicket(tc *TemplateContext, ticket *view.Ticket) {
+	@Layout(tc) {
+		<div class="col gap padding--m mw-l w100">
+			if !ticket.Ticket.IsOpen {
+				<h1>This ticket is closed</h1>
+			}
+			<div class="col w100">
+				<label>{ tc.Translate("Subject") }: { ticket.Ticket.Subject }</label>
+				<div class="chat">
+					<div class="message-container">
+						<pre class="chat-message">{ ticket.Ticket.Message }</pre>
+						<div class="row-end w100">
+							<div class="col-end">
+								<p class="text--small">{ FmtTime(ticket.Ticket.CreatedAt) }</p>
+								<p class="text--small">{ ticket.AuthorName }</p>
+							</div>
+						</div>
+					</div>
+					for _, response := range ticket.Responses {
+						<div class="message-container">
+							<pre class="chat-message">{ response.Message }</pre>
+							<div class="row-end w100">
+								<div class="col-end">
+									<p class="text--small">{ FmtTime(response.CreatedAt) }</p>
+									<p class="text--small">{ response.AuthorName }</p>
+								</div>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+			if ticket.Ticket.IsOpen {
+				<form class="col gap" action="/ticket" method="post">
+					@templ.Raw(tc.CsrfField)
+					<input type="hidden" name="ticket_id" value="{{.Ticket.ID}}"/>
+					<div class="col w100">
+						<label>{ tc.Translate("Response") }</label>
+						<textarea name="message" spellcheck="false"></textarea>
+					</div>
+					<div>
+						<label>Close this ticket?</label>
+						<input type="checkbox" name="close_ticket" value="true"/>
+					</div>
+					<div class="row-end w100">
+						<button type="submit" class="btn">{ tc.Translate("Submit") }</button>
+					</div>
+				</form>
+			}
+		</div>
+	}
+}

@@ -1,0 +1,53 @@
+package ui
+
+templ Login(tc *TemplateContext, form Form) {
+	@Layout(tc) {
+		<form class="form--basic mw-m" action="/login" method="post">
+			@templ.Raw(tc.CsrfField)
+			<div class="header">
+				<h2>{ tc.Translate("Log in") }</h2>
+			</div>
+			<div class="form__field">
+				<label for="username">{ tc.Translate("username") }</label>
+				<input
+					id="username"
+					class="form__input"
+					type="text"
+					name="username"
+					value={ DefaultValue(form, "username") }
+					required
+				/>
+				@ffError(form, "username")
+			</div>
+			<div class="form__field">
+				<label for="password">{ tc.Translate("password") }</label>
+				<input
+					id="password"
+					class="form__input"
+					type="password"
+					name="password"
+					value={ DefaultValue(form, "password") }
+					required
+				/>
+				@ffError(form, "password")
+			</div>
+			<div class="row-separated w100 pad5">
+				<div class="col-end">
+					<a class="text--small" href="/login">{ tc.Translate("Create new account") }</a>
+				</div>
+				@Captcha(tc)
+				@ffError(form, "captcha_answer")
+			</div>
+		</form>
+	}
+}
+
+templ ffError(form Form, field string) {
+	if fe, ok := form.FieldErrors[field]; ok {
+		<div>
+			<div class="alert fit mt5">
+				<p>{ fe }</p>
+			</div>
+		</div>
+	}
+}

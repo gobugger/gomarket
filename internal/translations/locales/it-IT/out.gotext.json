@@ -1,0 +1,1355 @@
+{
+    "language": "it-IT",
+    "messages": [
+        {
+            "id": "Failed to open the gate: invalid missing characters",
+            "message": "Failed to open the gate: invalid missing characters",
+            "translation": "Impossibile aprire il cancello: caratteri mancanti non validi"
+        },
+        {
+            "id": "This username is already in use",
+            "message": "This username is already in use",
+            "translation": "Questo nome utente è già in uso"
+        },
+        {
+            "id": "Invalid PGP key",
+            "message": "Invalid PGP key",
+            "translation": "Chiave PGP non valida"
+        },
+        {
+            "id": "Registered successfully",
+            "message": "Registered successfully",
+            "translation": "Registrazione avvenuta con successo"
+        },
+        {
+            "id": "Invalid credentials",
+            "message": "Invalid credentials",
+            "translation": "Credenziali non valide"
+        },
+        {
+            "id": "Your account is banned",
+            "message": "Your account is banned",
+            "translation": "Il tuo account è stato bannato"
+        },
+        {
+            "id": "Invalid 2FA token",
+            "message": "Invalid 2FA token",
+            "translation": "Token 2FA non valido"
+        },
+        {
+            "id": "Password changed",
+            "message": "Password changed",
+            "translation": "Password cambiata"
+        },
+        {
+            "id": "You can't update to your current key",
+            "message": "You can't update to your current key",
+            "translation": "Non puoi aggiornare alla tua chiave attuale"
+        },
+        {
+            "id": "PGP key is set",
+            "message": "PGP key is set",
+            "translation": "Chiave PGP impostata"
+        },
+        {
+            "id": "PGP Public key is updated",
+            "message": "PGP Public key is updated",
+            "translation": "Chiave pubblica PGP aggiornata"
+        },
+        {
+            "id": "Vendor info is updated",
+            "message": "Vendor info is updated",
+            "translation": "Informazioni sul venditore aggiornate"
+        },
+        {
+            "id": "Listing created",
+            "message": "Listing created",
+            "translation": "Annuncio creato"
+        },
+        {
+            "id": "Cart updated",
+            "message": "Cart updated",
+            "translation": "Carrello aggiornato"
+        },
+        {
+            "id": "cart deleted",
+            "message": "cart deleted",
+            "translation": "carrello eliminato"
+        },
+        {
+            "id": "You can't order with a vendor account",
+            "message": "You can't order with a vendor account",
+            "translation": "Non puoi ordinare con un account venditore"
+        },
+        {
+            "id": "You don't have enough balance for this order",
+            "message": "You don't have enough balance for this order",
+            "translation": "Non hai abbastanza saldo per questo ordine"
+        },
+        {
+            "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translation": "Si prega di pagare la fattura qui sotto entro {Duration} ore affinché il tuo ordine proceda.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "Order created",
+            "message": "Order created",
+            "translation": "Ordine creato"
+        },
+        {
+            "id": "Not enough balance to withdraw.",
+            "message": "Not enough balance to withdraw.",
+            "translation": "Saldo insufficiente per prelevare."
+        },
+        {
+            "id": "You can't withdraw to your own account",
+            "message": "You can't withdraw to your own account",
+            "translation": "Non puoi prelevare sul tuo stesso account"
+        },
+        {
+            "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translation": "Prelievo di {XMR2Decimalamount} XMR avviato",
+            "placeholders": [
+                {
+                    "id": "XMR2Decimalamount",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "currency.XMR2Decimal(amount)"
+                }
+            ]
+        },
+        {
+            "id": "Order cancelled",
+            "message": "Order cancelled",
+            "translation": "Ordine annullato"
+        },
+        {
+            "id": "Review created",
+            "message": "Review created",
+            "translation": "Recensione creata"
+        },
+        {
+            "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Non puoi estendere il timer AF prima che l'ordine sia stato spedito per {Duration} giorni.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "5"
+                }
+            ]
+        },
+        {
+            "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Non puoi ri-estendere il timer AF prima che l'ordine sia stato spedito per {Duration} giorni.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "12"
+                }
+            ]
+        },
+        {
+            "id": "AF timer already extended to maximum.",
+            "message": "AF timer already extended to maximum.",
+            "translation": "Il timer AF è già stato esteso al massimo."
+        },
+        {
+            "id": "AF timer extended by {Duration} days",
+            "message": "AF timer extended by {Duration} days",
+            "translation": "Timer AF esteso di {Duration} giorni",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "Order disputed",
+            "message": "Order disputed",
+            "translation": "Ordine contestato"
+        },
+        {
+            "id": "2FA needs to be enabled for vendors",
+            "message": "2FA needs to be enabled for vendors",
+            "translation": "La 2FA deve essere abilitata per i venditori"
+        },
+        {
+            "id": "Vendor accounts can't have previous orders. Please create a new account.",
+            "message": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translation": "Gli account venditore non possono avere ordini precedenti. Si prega di creare un nuovo account."
+        },
+        {
+            "id": "Proof of inventory is required from new vendors",
+            "message": "Proof of inventory is required from new vendors",
+            "translation": "È richiesta la prova di inventario dai nuovi venditori"
+        },
+        {
+            "id": "Not enough balance",
+            "message": "Not enough balance",
+            "translation": "Saldo insufficiente"
+        },
+        {
+            "id": "Application received",
+            "message": "Application received",
+            "translation": "Domanda ricevuta"
+        },
+        {
+            "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translation": "Ordine accettato. Hai {Duration} ore per contrassegnarlo come spedito.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "72"
+                }
+            ]
+        },
+        {
+            "id": "Order declined",
+            "message": "Order declined",
+            "translation": "Ordine rifiutato"
+        },
+        {
+            "id": "Order marked as dispatched",
+            "message": "Order marked as dispatched",
+            "translation": "Ordine contrassegnato come spedito"
+        },
+        {
+            "id": "Product deleted",
+            "message": "Product deleted",
+            "translation": "Prodotto eliminato"
+        },
+        {
+            "id": "Product updated",
+            "message": "Product updated",
+            "translation": "Prodotto aggiornato"
+        },
+        {
+            "id": "Ticket is already closed",
+            "message": "Ticket is already closed",
+            "translation": "Il ticket è già chiuso"
+        },
+        {
+            "id": "You need to be logged in to access that page",
+            "message": "You need to be logged in to access that page",
+            "translation": "Devi essere connesso per accedere a quella pagina"
+        },
+        {
+            "id": "Order received",
+            "message": "Order received",
+            "translation": "Ordine ricevuto"
+        },
+        {
+            "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translation": "Hai ricevuto un nuovo ordine!\nHai un totale di {Duration} ore per accettarlo, prima che venga rifiutato automaticamente.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "48"
+                }
+            ]
+        },
+        {
+            "id": "Order accepted",
+            "message": "Order accepted",
+            "translation": "Ordine accettato"
+        },
+        {
+            "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translation": "Il tuo ordine è stato accettato!\nPuoi monitorarne lo stato dalla pagina degli ordini"
+        },
+        {
+            "id": "Order dispatched",
+            "message": "Order dispatched",
+            "translation": "Ordine spedito"
+        },
+        {
+            "id": "Your order has been dispatched!\nPlease remember to review it.",
+            "message": "Your order has been dispatched!\nPlease remember to review it.",
+            "translation": "Il tuo ordine è stato spedito!\nRicorda di recensirlo."
+        },
+        {
+            "id": "How do I become a vendor?",
+            "message": "How do I become a vendor?",
+            "translation": "Come posso diventare un venditore?"
+        },
+        {
+            "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translation": "Crea un account con l'autenticazione a due fattori (2FA) abilitata, quindi invia una domanda da venditore."
+        },
+        {
+            "id": "How do I place an order?",
+            "message": "How do I place an order?",
+            "translation": "Come posso effettuare un ordine?"
+        },
+        {
+            "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translation": "Aggiungi i prodotti desiderati al tuo carrello. Naviga su /cart e seleziona “Checkout”, scegli il tuo metodo di consegna preferito e fornisci le informazioni richieste.\nSe hai un saldo disponibile, puoi usarlo al momento del pagamento. In caso contrario, puoi richiedere una fattura. Le fatture devono essere pagate entro {Duration} ore affinché l'ordine continui a essere elaborato.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "How can I obtain Monero (XMR)?",
+            "message": "How can I obtain Monero (XMR)?",
+            "translation": "Come posso ottenere Monero (XMR)?"
+        },
+        {
+            "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translation": "Ci sono diversi modi per acquisire Monero. Si prega di visitare getmonero.org per indicazioni e risorse ufficiali."
+        },
+        {
+            "id": "What should I do if my order has not arrived or does not match the description?",
+            "message": "What should I do if my order has not arrived or does not match the description?",
+            "translation": "Cosa devo fare se il mio ordine non è arrivato o non corrisponde alla descrizione?"
+        },
+        {
+            "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translation": "Gli ordini vengono automaticamente finalizzati dopo {Duration} giorni.\nPuoi estendere il periodo di auto-finalizzazione due volte.\nSe l'ordine non è ancora arrivato dopo queste estensioni, dovresti aprire una controversia.\nIl nostro team esaminerà il caso e prenderà una decisione basata sulle informazioni disponibili.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "What am I allowed to sell on this marketplace?",
+            "message": "What am I allowed to sell on this marketplace?",
+            "translation": "Cosa posso vendere su questo marketplace?"
+        },
+        {
+            "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translation": "Sono consentiti solo articoli legali. Se non sei sicuro che il tuo prodotto sia idoneo, contattaci prima di creare un'inserzione."
+        },
+        {
+            "id": "Open",
+            "message": "Open",
+            "translation": "Aperto"
+        },
+        {
+            "id": "Vendor application",
+            "message": "Vendor application",
+            "translation": "Domanda da venditore"
+        },
+        {
+            "id": "Your account does not have 2FA enabled!",
+            "message": "Your account does not have 2FA enabled!",
+            "translation": "Il tuo account non ha 2FA abilitato!"
+        },
+        {
+            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translation": "L'applicazione è gratuita per gli utenti che sono già venditori su un altro mercato utilizzando la stessa chiave PGP."
+        },
+        {
+            "id": "For other users, application costs {Price} XMR and is non-refundable.",
+            "message": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translation": "Per gli altri utenti, l'applicazione costa {Price} XMR ed è non rimborsabile.",
+            "placeholders": [
+                {
+                    "id": "Price",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "price"
+                }
+            ]
+        },
+        {
+            "id": "You're required to provide proof that you actually have products to sell here.",
+            "message": "You're required to provide proof that you actually have products to sell here.",
+            "translation": "È necessario fornire la prova che hai effettivamente prodotti da vendere qui."
+        },
+        {
+            "id": "Vendor Logo",
+            "message": "Vendor Logo",
+            "translation": "Logo del Venditore"
+        },
+        {
+            "id": "Use png image with close to 1:1 ratio for optimal look",
+            "message": "Use png image with close to 1:1 ratio for optimal look",
+            "translation": "Utilizza un'immagine png con un rapporto vicino a 1:1 per un aspetto ottimale."
+        },
+        {
+            "id": "Existing vendor",
+            "message": "Existing vendor",
+            "translation": "Venditore Esistente"
+        },
+        {
+            "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translation": "Seleziona questo se sei già un venditore su un altro mercato come xmrBazaar."
+        },
+        {
+            "id": "Proof of inventory",
+            "message": "Proof of inventory",
+            "translation": "Prova di Inventario"
+        },
+        {
+            "id": "Clear image of your inventory with your username and timestamp visible",
+            "message": "Clear image of your inventory with your username and timestamp visible",
+            "translation": "Immagine chiara del tuo inventario con il tuo nome utente e il timestamp visibili."
+        },
+        {
+            "id": "Markets and Your Username",
+            "message": "Markets and Your Username",
+            "translation": "Mercati e Il Tuo Nome Utente"
+        },
+        {
+            "id": "List the markets where you are a vendor and include your username",
+            "message": "List the markets where you are a vendor and include your username",
+            "translation": "Elenca i mercati in cui sei un venditore e includi il tuo nome utente."
+        },
+        {
+            "id": "Captcha",
+            "message": "Captcha",
+            "translation": "Captcha"
+        },
+        {
+            "id": "Click circle with a cut",
+            "message": "Click circle with a cut",
+            "translation": "Clicca sul cerchio con un taglio."
+        },
+        {
+            "id": "Submit",
+            "message": "Submit",
+            "translation": "Invia"
+        },
+        {
+            "id": "Total",
+            "message": "Total",
+            "translation": "Totale"
+        },
+        {
+            "id": "Checkout",
+            "message": "Checkout",
+            "translation": "Procedi al Pagamento"
+        },
+        {
+            "id": "delivery method",
+            "message": "delivery method",
+            "translation": "metodo di consegna"
+        },
+        {
+            "id": "Use wallet for payment",
+            "message": "Use wallet for payment",
+            "translation": "Utilizza il wallet per il pagamento."
+        },
+        {
+            "id": "details",
+            "message": "details",
+            "translation": "dettagli"
+        },
+        {
+            "id": "Use your real address, with the same format as below.",
+            "message": "Use your real address, with the same format as below.",
+            "translation": "Utilizza il tuo indirizzo reale, con lo stesso formato di seguito."
+        },
+        {
+            "id": "Unencrypted details are automatically encrypted using vendors key.",
+            "message": "Unencrypted details are automatically encrypted using vendors key.",
+            "translation": "I dettagli non crittografati vengono automaticamente crittografati utilizzando la chiave del venditore."
+        },
+        {
+            "id": "Title",
+            "message": "Title",
+            "translation": "Titolo"
+        },
+        {
+            "id": "Description",
+            "message": "Description",
+            "translation": "Descrizione"
+        },
+        {
+            "id": "Product image",
+            "message": "Product image",
+            "translation": "Immagine del Prodotto"
+        },
+        {
+            "id": "Use image with close to 1:1 aspect ratio for optimal look",
+            "message": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translation": "Utilizza un'immagine con un rapporto di aspetto vicino a 1:1 per un aspetto ottimale."
+        },
+        {
+            "id": "Category",
+            "message": "Category",
+            "translation": "Categoria"
+        },
+        {
+            "id": "Ships from",
+            "message": "Ships from",
+            "translation": "Spedito da"
+        },
+        {
+            "id": "Ships to",
+            "message": "Ships to",
+            "translation": "Spedito a"
+        },
+        {
+            "id": "Inventory",
+            "message": "Inventory",
+            "translation": "Inventario"
+        },
+        {
+            "id": "Size of the current inventory for this product.",
+            "message": "Size of the current inventory for this product.",
+            "translation": "Dimensione dell'inventario attuale per questo prodotto."
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Prezzi"
+        },
+        {
+            "id": "Here you can set your pricing.",
+            "message": "Here you can set your pricing.",
+            "translation": "Qui puoi impostare i tuoi prezzi."
+        },
+        {
+            "id": "We take 5% cut from these prices.",
+            "message": "We take 5% cut from these prices.",
+            "translation": "Prendiamo una commissione del 5% su questi prezzi."
+        },
+        {
+            "id": "Quantity",
+            "message": "Quantity",
+            "translation": "Quantità"
+        },
+        {
+            "id": "Price",
+            "message": "Price",
+            "translation": "Prezzo"
+        },
+        {
+            "id": "Create ticket",
+            "message": "Create ticket",
+            "translation": "Crea ticket"
+        },
+        {
+            "id": "Subject",
+            "message": "Subject",
+            "translation": "Oggetto"
+        },
+        {
+            "id": "account",
+            "message": "account",
+            "translation": "account"
+        },
+        {
+            "id": "order",
+            "message": "order",
+            "translation": "ordine"
+        },
+        {
+            "id": "wallet",
+            "message": "wallet",
+            "translation": "wallet"
+        },
+        {
+            "id": "vendor",
+            "message": "vendor",
+            "translation": "fornitore"
+        },
+        {
+            "id": "product",
+            "message": "product",
+            "translation": "prodotto"
+        },
+        {
+            "id": "suggestion",
+            "message": "suggestion",
+            "translation": "suggerimento"
+        },
+        {
+            "id": "bug",
+            "message": "bug",
+            "translation": "bug"
+        },
+        {
+            "id": "other",
+            "message": "other",
+            "translation": "altro"
+        },
+        {
+            "id": "Message",
+            "message": "Message",
+            "translation": "Messaggio"
+        },
+        {
+            "id": "Staff PGP",
+            "message": "Staff PGP",
+            "translation": "PGP dello staff"
+        },
+        {
+            "id": "Exchange rate",
+            "message": "Exchange rate",
+            "translation": "Tasso di cambio"
+        },
+        {
+            "id": "Time",
+            "message": "Time",
+            "translation": "Tempo"
+        },
+        {
+            "id": "Vendors:",
+            "message": "Vendors:",
+            "translation": "Fornitori:"
+        },
+        {
+            "id": "Users:",
+            "message": "Users:",
+            "translation": "Utenti:"
+        },
+        {
+            "id": "submit",
+            "message": "submit",
+            "translation": "invia"
+        },
+        {
+            "id": "Response",
+            "message": "Response",
+            "translation": "Risposta"
+        },
+        {
+            "id": "products",
+            "message": "products",
+            "translation": "prodotti"
+        },
+        {
+            "id": "orders",
+            "message": "orders",
+            "translation": "ordini"
+        },
+        {
+            "id": "sell",
+            "message": "sell",
+            "translation": "vendere"
+        },
+        {
+            "id": "support",
+            "message": "support",
+            "translation": "supporto"
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Disconnetti"
+        },
+        {
+            "id": "log in",
+            "message": "log in",
+            "translation": "accedi"
+        },
+        {
+            "id": "register",
+            "message": "register",
+            "translation": "registrati"
+        },
+        {
+            "id": "Entry guard to {Name}",
+            "message": "Entry guard to {Name}",
+            "translation": "Guardia d'ingresso per {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "tc.Config.Name"
+                }
+            ]
+        },
+        {
+            "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translation": "Confronta l'URL che stai utilizzando con quello nell'immagine qui sotto per trovare tutti i caratteri mancanti contrassegnati con '*'"
+        },
+        {
+            "id": "Missing characters",
+            "message": "Missing characters",
+            "translation": "Caratteri mancanti"
+        },
+        {
+            "id": "Log in",
+            "message": "Log in",
+            "translation": "Accedi"
+        },
+        {
+            "id": "username",
+            "message": "username",
+            "translation": "nome utente"
+        },
+        {
+            "id": "password",
+            "message": "password",
+            "translation": "password"
+        },
+        {
+            "id": "Create new account",
+            "message": "Create new account",
+            "translation": "Crea un nuovo account"
+        },
+        {
+            "id": "Delete all",
+            "message": "Delete all",
+            "translation": "Elimina tutto"
+        },
+        {
+            "id": "You have zero notifications",
+            "message": "You have zero notifications",
+            "translation": "Non hai notifiche"
+        },
+        {
+            "id": "Order",
+            "message": "Order",
+            "translation": "Ordine"
+        },
+        {
+            "id": "Chat",
+            "message": "Chat",
+            "translation": "Chat"
+        },
+        {
+            "id": "Status",
+            "message": "Status",
+            "translation": "Stato"
+        },
+        {
+            "id": "Vendor",
+            "message": "Vendor",
+            "translation": "Venditore"
+        },
+        {
+            "id": "Delivery method",
+            "message": "Delivery method",
+            "translation": "Metodo di consegna"
+        },
+        {
+            "id": "Total cost",
+            "message": "Total cost",
+            "translation": "Costo totale"
+        },
+        {
+            "id": "Date",
+            "message": "Date",
+            "translation": "Data"
+        },
+        {
+            "id": "Dispatched at",
+            "message": "Dispatched at",
+            "translation": "Spedito il"
+        },
+        {
+            "id": "Until auto-declined",
+            "message": "Until auto-declined",
+            "translation": "Fino a rifiuto automatico"
+        },
+        {
+            "id": "Until auto-finalized",
+            "message": "Until auto-finalized",
+            "translation": "Fino a finalizzazione automatica"
+        },
+        {
+            "id": "Details",
+            "message": "Details",
+            "translation": "Dettagli"
+        },
+        {
+            "id": "Vendor offered refund of {RefundFactor}%",
+            "message": "Vendor offered refund of {RefundFactor}%",
+            "translation": "Il venditore ha offerto un rimborso del {RefundFactor}%",
+            "placeholders": [
+                {
+                    "id": "RefundFactor",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "100 * item.Offer.RefundFactor"
+                }
+            ]
+        },
+        {
+            "id": "Accept",
+            "message": "Accept",
+            "translation": "Accetta"
+        },
+        {
+            "id": "Decline",
+            "message": "Decline",
+            "translation": "Rifiuta"
+        },
+        {
+            "id": "Customers PGP key",
+            "message": "Customers PGP key",
+            "translation": "Chiave PGP dei clienti"
+        },
+        {
+            "id": "Customer can still cancel this order!",
+            "message": "Customer can still cancel this order!",
+            "translation": "Il cliente può ancora annullare questo ordine!"
+        },
+        {
+            "id": "You must accept it in 2 days or it will be automatically declined.",
+            "message": "You must accept it in 2 days or it will be automatically declined.",
+            "translation": "Devi accettarlo entro 2 giorni o verrà rifiutato automaticamente."
+        },
+        {
+            "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translation": "Dopo aver accettato, il cliente non può più annullare, quindi puoi spedire in sicurezza."
+        },
+        {
+            "id": "Please carefully review the order below before accepting it.",
+            "message": "Please carefully review the order below before accepting it.",
+            "translation": "Si prega di esaminare attentamente l'ordine qui sotto prima di accettarlo."
+        },
+        {
+            "id": "Always decline orders that you'r unable to fulfill.",
+            "message": "Always decline orders that you'r unable to fulfill.",
+            "translation": "Rifiuta sempre gli ordini che non sei in grado di evadere."
+        },
+        {
+            "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translation": "Devi contrassegnare questo ordine come spedito entro 2 giorni o verrà rifiutato automaticamente."
+        },
+        {
+            "id": "Make sure that you have enough time to do the actual dispaching!",
+            "message": "Make sure that you have enough time to do the actual dispaching!",
+            "translation": "Assicurati di avere abbastanza tempo per effettuare la spedizione effettiva!"
+        },
+        {
+            "id": "Dispatched",
+            "message": "Dispatched",
+            "translation": "Spedito"
+        },
+        {
+            "id": "Transfer exact amount of Monero to the address below.",
+            "message": "Transfer exact amount of Monero to the address below.",
+            "translation": "Trasferisci l'importo esatto di Monero all'indirizzo sottostante."
+        },
+        {
+            "id": "After 10 confirmations, your order will proceed to vendor.",
+            "message": "After 10 confirmations, your order will proceed to vendor.",
+            "translation": "Dopo 10 conferme, il tuo ordine procederà al venditore."
+        },
+        {
+            "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translation": "Hai un totale di 3 ore per pagare questa fattura, altrimenti il tuo ordine sarà annullato."
+        },
+        {
+            "id": "Time left to pay",
+            "message": "Time left to pay",
+            "translation": "Tempo rimasto per pagare"
+        },
+        {
+            "id": "Amount XMR",
+            "message": "Amount XMR",
+            "translation": "Importo XMR"
+        },
+        {
+            "id": "Address",
+            "message": "Address",
+            "translation": "Indirizzo"
+        },
+        {
+            "id": "Orders can be cancelled until vendor has accepted it.",
+            "message": "Orders can be cancelled until vendor has accepted it.",
+            "translation": "Gli ordini possono essere annullati fino a quando il venditore non li ha accettati."
+        },
+        {
+            "id": "Cancel",
+            "message": "Cancel",
+            "translation": "Annulla"
+        },
+        {
+            "id": "Your order will auto-finalize in",
+            "message": "Your order will auto-finalize in",
+            "translation": "Il tuo ordine si finalizzerà automaticamente in"
+        },
+        {
+            "id": "You can extend the auto-finalize-time by 7-days.",
+            "message": "You can extend the auto-finalize-time by 7-days.",
+            "translation": "Puoi estendere il tempo di auto-finalizzazione di 7 giorni."
+        },
+        {
+            "id": "review your order",
+            "message": "review your order",
+            "translation": "controlla il tuo ordine"
+        },
+        {
+            "id": "Review",
+            "message": "Review",
+            "translation": "Controlla"
+        },
+        {
+            "id": "Extend AF-timer",
+            "message": "Extend AF-timer",
+            "translation": "Estendi il timer AF"
+        },
+        {
+            "id": "Dispute",
+            "message": "Dispute",
+            "translation": "Controversia"
+        },
+        {
+            "id": "Refund offer",
+            "message": "Refund offer",
+            "translation": "Offerta di rimborso"
+        },
+        {
+            "id": "Customer has disputed this order.",
+            "message": "Customer has disputed this order.",
+            "translation": "Il cliente ha contestato questo ordine."
+        },
+        {
+            "id": "Use the chat below to discuss about this dispute.",
+            "message": "Use the chat below to discuss about this dispute.",
+            "translation": "Usa la chat qui sotto per discutere di questa controversia."
+        },
+        {
+            "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translation": "Puoi creare un'offerta di rimborso e risolvere questa controversia senza l'intervento dell'amministratore."
+        },
+        {
+            "id": "Refund percent",
+            "message": "Refund percent",
+            "translation": "Percentuale di rimborso"
+        },
+        {
+            "id": "Order date",
+            "message": "Order date",
+            "translation": "Data dell'ordine"
+        },
+        {
+            "id": "Order ID",
+            "message": "Order ID",
+            "translation": "ID ordine"
+        },
+        {
+            "id": "Proof key ownership",
+            "message": "Proof key ownership",
+            "translation": "Prova di possesso della chiave"
+        },
+        {
+            "id": "Decrypt to get the token",
+            "message": "Decrypt to get the token",
+            "translation": "Decripta per ottenere il token"
+        },
+        {
+            "id": "Token",
+            "message": "Token",
+            "translation": "Token"
+        },
+        {
+            "id": "Update product",
+            "message": "Update product",
+            "translation": "Aggiorna prodotto"
+        },
+        {
+            "id": "Update",
+            "message": "Update",
+            "translation": "Aggiorna"
+        },
+        {
+            "id": "Add to cart",
+            "message": "Add to cart",
+            "translation": "Aggiungi al carrello"
+        },
+        {
+            "id": "Reviews",
+            "message": "Reviews",
+            "translation": "Recensioni"
+        },
+        {
+            "id": "ago",
+            "message": "ago",
+            "translation": "fa"
+        },
+        {
+            "id": "OUT OF STOCK",
+            "message": "OUT OF STOCK",
+            "translation": "ESaurito"
+        },
+        {
+            "id": "Register",
+            "message": "Register",
+            "translation": "Registrati"
+        },
+        {
+            "id": "password check",
+            "message": "password check",
+            "translation": "verifica password"
+        },
+        {
+            "id": "Already have an account?",
+            "message": "Already have an account?",
+            "translation": "Hai già un account?"
+        },
+        {
+            "id": "Review order",
+            "message": "Review order",
+            "translation": "Rivedi ordine"
+        },
+        {
+            "id": "Grade",
+            "message": "Grade",
+            "translation": "Valutazione"
+        },
+        {
+            "id": "guest",
+            "message": "guest",
+            "translation": "ospite"
+        },
+        {
+            "id": "customer",
+            "message": "customer",
+            "translation": "cliente"
+        },
+        {
+            "id": "admin",
+            "message": "admin",
+            "translation": "amministratore"
+        },
+        {
+            "id": "unknown",
+            "message": "unknown",
+            "translation": "sconosciuto"
+        },
+        {
+            "id": "enabled",
+            "message": "enabled",
+            "translation": "abilitato"
+        },
+        {
+            "id": "disabled",
+            "message": "disabled",
+            "translation": "disabilitato"
+        },
+        {
+            "id": "Account",
+            "message": "Account",
+            "translation": "Account"
+        },
+        {
+            "id": "Username",
+            "message": "Username",
+            "translation": "Nome utente"
+        },
+        {
+            "id": "Type",
+            "message": "Type",
+            "translation": "Tipo"
+        },
+        {
+            "id": "2FA",
+            "message": "2FA",
+            "translation": "2FA"
+        },
+        {
+            "id": "Preferences",
+            "message": "Preferences",
+            "translation": "Preferenze"
+        },
+        {
+            "id": "Language",
+            "message": "Language",
+            "translation": "Lingua"
+        },
+        {
+            "id": "Currency",
+            "message": "Currency",
+            "translation": "Valuta"
+        },
+        {
+            "id": "Change password",
+            "message": "Change password",
+            "translation": "Cambia password"
+        },
+        {
+            "id": "Current password",
+            "message": "Current password",
+            "translation": "Password attuale"
+        },
+        {
+            "id": "New password",
+            "message": "New password",
+            "translation": "Nuova password"
+        },
+        {
+            "id": "Confirm new password",
+            "message": "Confirm new password",
+            "translation": "Conferma nuova password"
+        },
+        {
+            "id": "Change PGP key",
+            "message": "Change PGP key",
+            "translation": "Cambia chiave PGP"
+        },
+        {
+            "id": "Enable 2FA",
+            "message": "Enable 2FA",
+            "translation": "Abilita 2FA"
+        },
+        {
+            "id": "PGP public key",
+            "message": "PGP public key",
+            "translation": "Chiave pubblica PGP"
+        },
+        {
+            "id": "Required for vendors, suggested for everyone.",
+            "message": "Required for vendors, suggested for everyone.",
+            "translation": "Richiesto per i venditori, consigliato per tutti."
+        },
+        {
+            "id": "Update vendor profile",
+            "message": "Update vendor profile",
+            "translation": "Aggiorna profilo venditore"
+        },
+        {
+            "id": "Vendor info",
+            "message": "Vendor info",
+            "translation": "Informazioni venditore"
+        },
+        {
+            "id": "Leave empty to not update.",
+            "message": "Leave empty to not update.",
+            "translation": "Lascia vuoto per non aggiornare."
+        },
+        {
+            "id": "Update delivery methods",
+            "message": "Update delivery methods",
+            "translation": "Aggiorna i metodi di consegna"
+        },
+        {
+            "id": "Delivery Method",
+            "message": "Delivery Method",
+            "translation": "Metodo di consegna"
+        },
+        {
+            "id": "My tickets",
+            "message": "My tickets",
+            "translation": "I miei biglietti"
+        },
+        {
+            "id": "0 seconds",
+            "message": "0 seconds",
+            "translation": "0 secondi"
+        },
+        {
+            "id": "{Second} seconds",
+            "message": "{Second} seconds",
+            "translation": "{Second} secondi",
+            "placeholders": [
+                {
+                    "id": "Second",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Second"
+                }
+            ]
+        },
+        {
+            "id": "{Minute} minutes",
+            "message": "{Minute} minutes",
+            "translation": "{Minute} minuti",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Minute"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} hours",
+            "message": "{Hour} hours",
+            "translation": "{Hour} ore",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Hour"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} days",
+            "message": "{Hour} days",
+            "translation": "{Hour} giorni",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / (24 * time.Hour)"
+                }
+            ]
+        },
+        {
+            "id": "Rating (AVG)",
+            "message": "Rating (AVG)",
+            "translation": "Valutazione (MEDIA)"
+        },
+        {
+            "id": "Orders completed",
+            "message": "Orders completed",
+            "translation": "Ordini completati"
+        },
+        {
+            "id": "Orders in escrow",
+            "message": "Orders in escrow",
+            "translation": "Ordini in escrow"
+        },
+        {
+            "id": "Pending disputes",
+            "message": "Pending disputes",
+            "translation": "Dispute in sospeso"
+        },
+        {
+            "id": "Previously seen",
+            "message": "Previously seen",
+            "translation": "Visti in precedenza"
+        },
+        {
+            "id": "PGP key",
+            "message": "PGP key",
+            "translation": "Chiave PGP"
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Portafoglio"
+        },
+        {
+            "id": "This is your XMR wallet where you can deposit coins.",
+            "message": "This is your XMR wallet where you can deposit coins.",
+            "translation": "Questo è il tuo portafoglio XMR dove puoi depositare monete."
+        },
+        {
+            "id": "Balance is updated after 10 confirmations.",
+            "message": "Balance is updated after 10 confirmations.",
+            "translation": "Il saldo viene aggiornato dopo 10 conferme."
+        },
+        {
+            "id": "See",
+            "message": "See",
+            "translation": "Vedi"
+        },
+        {
+            "id": "for more information.",
+            "message": "for more information.",
+            "translation": "per ulteriori informazioni."
+        },
+        {
+            "id": "Balance",
+            "message": "Balance",
+            "translation": "Saldo"
+        },
+        {
+            "id": "Withdraw",
+            "message": "Withdraw",
+            "translation": "Preleva"
+        },
+        {
+            "id": "Enter a monero address where you want to withdraw your funds.",
+            "message": "Enter a monero address where you want to withdraw your funds.",
+            "translation": "Inserisci un indirizzo Monero dove desideri prelevare i tuoi fondi."
+        },
+        {
+            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translation": "Addebitiamo una commissione di 0,01 XMR per ogni prelievo per prevenire lo spam."
+        },
+        {
+            "id": "DO NOT withdraw funds to another wallet on this platform!",
+            "message": "DO NOT withdraw funds to another wallet on this platform!",
+            "translation": "NON prelevare fondi su un altro portafoglio su questa piattaforma!"
+        },
+        {
+            "id": "Destination address",
+            "message": "Destination address",
+            "translation": "Indirizzo di destinazione"
+        },
+        {
+            "id": "Amount",
+            "message": "Amount",
+            "translation": "Importo"
+        },
+        {
+            "id": "Enter amount in decimal format (e.g., 1.42069)",
+            "message": "Enter amount in decimal format (e.g., 1.42069)",
+            "translation": "Inserisci l'importo in formato decimale (ad es., 1.42069)"
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+services:
+  change-vol-ownership:
+    image: alpine
+    volumes:
+      - ./data/wallet:/mnt/wallet
+    command: "chown -R 1000: /mnt/wallet"
+
+  monero-wallet-rpc:
+    image: ghcr.io/sethforprivacy/simple-monero-wallet-rpc
+    command: --wallet-dir wallet --disable-rpc-login --rpc-bind-port=28081 --stagenet --daemon-host=${MONERO_DAEMON_RPC_HOSTNAME} --daemon-port=${MONERO_DAEMON_RPC_PORT}
+    volumes:
+      - ./data/wallet:/home/monero/wallet
+    depends_on:
+      change-vol-ownership:
+        condition: service_completed_successfully
+    healthcheck:
+      test: curl --fail localhost:28081/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"get_version"}'
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  mp_db:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - ./data/moneropay_postgresql:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=${MP_DB_USER} 
+      - POSTGRES_PASSWORD=${MP_DB_PASS}
+      - POSTGRES_DB=${MP_DB_NAME}
+
+    healthcheck:
+      test: pg_isready -U ${MP_DB_USER}
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=${DB_USER} 
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: pg_isready -U ${DB_USER}
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migrate:
+    image: migrate/migrate
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./migrations:/migrations
+    command: ["-path", "/migrations", "-database",  "postgresql://${DB_USER}:${DB_PASS}@db:5432/${DB_NAME}?sslmode=disable", "up"]
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_AK_ID:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SA_KEY:-minioadmin}
+    volumes:
+      - ./data/minio:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  moneropay:
+    image: registry.gitlab.com/moneropay/moneropay:v2
+    environment:
+      - RPC_ADDRESS=http://monero-wallet-rpc:28081/json_rpc
+      - POSTGRESQL=postgresql://${MP_DB_USER}:${MP_DB_PASS}@mp_db:5432/${MP_DB_NAME}?sslmode=disable
+    ports:
+      - "127.0.0.1:5000:5000"
+    depends_on:
+      monero-wallet-rpc:
+        condition: service_healthy
+      mp_db:
+        condition: service_healthy
+    restart: unless-stopped

@@ -1,0 +1,1355 @@
+{
+    "language": "lt-LT",
+    "messages": [
+        {
+            "id": "Failed to open the gate: invalid missing characters",
+            "message": "Failed to open the gate: invalid missing characters",
+            "translation": "Nepavyko atidaryti vartų: neteisingi trūkstami simboliai"
+        },
+        {
+            "id": "This username is already in use",
+            "message": "This username is already in use",
+            "translation": "Šis vartotojo vardas jau naudojamas"
+        },
+        {
+            "id": "Invalid PGP key",
+            "message": "Invalid PGP key",
+            "translation": "Neteisingas PGP raktas"
+        },
+        {
+            "id": "Registered successfully",
+            "message": "Registered successfully",
+            "translation": "Sėkmingai užsiregistruota"
+        },
+        {
+            "id": "Invalid credentials",
+            "message": "Invalid credentials",
+            "translation": "Neteisingi prisijungimo duomenys"
+        },
+        {
+            "id": "Your account is banned",
+            "message": "Your account is banned",
+            "translation": "Jūsų paskyra yra užblokuota"
+        },
+        {
+            "id": "Invalid 2FA token",
+            "message": "Invalid 2FA token",
+            "translation": "Neteisingas 2FA žetonas"
+        },
+        {
+            "id": "Password changed",
+            "message": "Password changed",
+            "translation": "Slaptažodis pakeistas"
+        },
+        {
+            "id": "You can't update to your current key",
+            "message": "You can't update to your current key",
+            "translation": "Negalite atnaujinti į savo dabartinį raktą"
+        },
+        {
+            "id": "PGP key is set",
+            "message": "PGP key is set",
+            "translation": "PGP raktas nustatytas"
+        },
+        {
+            "id": "PGP Public key is updated",
+            "message": "PGP Public key is updated",
+            "translation": "PGP viešasis raktas atnaujintas"
+        },
+        {
+            "id": "Vendor info is updated",
+            "message": "Vendor info is updated",
+            "translation": "Pardavėjo informacija atnaujinta"
+        },
+        {
+            "id": "Listing created",
+            "message": "Listing created",
+            "translation": "Skelbimas sukurtas"
+        },
+        {
+            "id": "Cart updated",
+            "message": "Cart updated",
+            "translation": "Krepšelis atnaujintas"
+        },
+        {
+            "id": "cart deleted",
+            "message": "cart deleted",
+            "translation": "krepšelis ištrintas"
+        },
+        {
+            "id": "You can't order with a vendor account",
+            "message": "You can't order with a vendor account",
+            "translation": "Negalite užsakyti su pardavėjo paskyra"
+        },
+        {
+            "id": "You don't have enough balance for this order",
+            "message": "You don't have enough balance for this order",
+            "translation": "Neturite pakankamai lėšų šiam užsakymui"
+        },
+        {
+            "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "message": "Please pay the invoice below in {Duration} hours for your order to proceed.",
+            "translation": "Prašome sumokėti žemiau pateiktą sąskaitą per {Duration} valandų, kad jūsų užsakymas būtų vykdomas.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "Order created",
+            "message": "Order created",
+            "translation": "Užsakymas sukurtas"
+        },
+        {
+            "id": "Not enough balance to withdraw.",
+            "message": "Not enough balance to withdraw.",
+            "translation": "Nepakanka lėšų išsiimti."
+        },
+        {
+            "id": "You can't withdraw to your own account",
+            "message": "You can't withdraw to your own account",
+            "translation": "Negalite išsiimti į savo paskyrą"
+        },
+        {
+            "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "message": "Withdrawal of {XMR2Decimalamount} XMR initiated",
+            "translation": "Išėmimas {XMR2Decimalamount} XMR inicijuotas",
+            "placeholders": [
+                {
+                    "id": "XMR2Decimalamount",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "currency.XMR2Decimal(amount)"
+                }
+            ]
+        },
+        {
+            "id": "Order cancelled",
+            "message": "Order cancelled",
+            "translation": "Užsakymas atšauktas"
+        },
+        {
+            "id": "Review created",
+            "message": "Review created",
+            "translation": "Atsiliepimas sukurtas"
+        },
+        {
+            "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Negalite pratęsti AF laikmačio, kol užsakymas nebuvo išsiųstas {Duration} dienas.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "5"
+                }
+            ]
+        },
+        {
+            "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "message": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
+            "translation": "Negalite vėl pratęsti AF laikmačio, kol užsakymas nebuvo išsiųstas {Duration} dienas.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "12"
+                }
+            ]
+        },
+        {
+            "id": "AF timer already extended to maximum.",
+            "message": "AF timer already extended to maximum.",
+            "translation": "AF laikmatis jau pratęstas iki maksimumo."
+        },
+        {
+            "id": "AF timer extended by {Duration} days",
+            "message": "AF timer extended by {Duration} days",
+            "translation": "AF laikmatis pratęstas {Duration} dienomis",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "Order disputed",
+            "message": "Order disputed",
+            "translation": "Užsakymas ginčijamas"
+        },
+        {
+            "id": "2FA needs to be enabled for vendors",
+            "message": "2FA needs to be enabled for vendors",
+            "translation": "2FA turi būti įjungta pardavėjams"
+        },
+        {
+            "id": "Vendor accounts can't have previous orders. Please create a new account.",
+            "message": "Vendor accounts can't have previous orders. Please create a new account.",
+            "translation": "Pardavėjų paskyros negali turėti ankstesnių užsakymų. Prašome sukurti naują paskyrą."
+        },
+        {
+            "id": "Proof of inventory is required from new vendors",
+            "message": "Proof of inventory is required from new vendors",
+            "translation": "Naujiems pardavėjams reikalingas inventoriaus įrodymas."
+        },
+        {
+            "id": "Not enough balance",
+            "message": "Not enough balance",
+            "translation": "Nepakankamas balansas."
+        },
+        {
+            "id": "Application received",
+            "message": "Application received",
+            "translation": "Prašymas gautas."
+        },
+        {
+            "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "message": "Order accepted. You have {Duration} hours to mark it dispatched.",
+            "translation": "Užsakymas priimtas. Jūs turite {Duration} valandų, kad pažymėtumėte jį kaip išsiųstą.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "72"
+                }
+            ]
+        },
+        {
+            "id": "Order declined",
+            "message": "Order declined",
+            "translation": "Užsakymas atmestas."
+        },
+        {
+            "id": "Order marked as dispatched",
+            "message": "Order marked as dispatched",
+            "translation": "Užsakymas pažymėtas kaip išsiųstas."
+        },
+        {
+            "id": "Product deleted",
+            "message": "Product deleted",
+            "translation": "Produktas ištrintas."
+        },
+        {
+            "id": "Product updated",
+            "message": "Product updated",
+            "translation": "Produktas atnaujintas."
+        },
+        {
+            "id": "Ticket is already closed",
+            "message": "Ticket is already closed",
+            "translation": "Bilietas jau uždarytas."
+        },
+        {
+            "id": "You need to be logged in to access that page",
+            "message": "You need to be logged in to access that page",
+            "translation": "Norėdami pasiekti šią puslapį, turite būti prisijungę."
+        },
+        {
+            "id": "Order received",
+            "message": "Order received",
+            "translation": "Užsakymas gautas."
+        },
+        {
+            "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "message": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
+            "translation": "Gavote naują užsakymą!\nTurite {Duration} valandų, kad priimtumėte, prieš tai, kai jis bus automatiškai atmestas.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "48"
+                }
+            ]
+        },
+        {
+            "id": "Order accepted",
+            "message": "Order accepted",
+            "translation": "Užsakymas priimtas."
+        },
+        {
+            "id": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "message": "Your order has been accepted!\nYou can monitor its status from orders page",
+            "translation": "Jūsų užsakymas buvo priimtas!\nGalite stebėti jo būseną užsakymų puslapyje."
+        },
+        {
+            "id": "Order dispatched",
+            "message": "Order dispatched",
+            "translation": "Užsakymas išsiųstas."
+        },
+        {
+            "id": "Your order has been dispatched!\nPlease remember to review it.",
+            "message": "Your order has been dispatched!\nPlease remember to review it.",
+            "translation": "Jūsų užsakymas buvo išsiųstas!\nPrašome nepamiršti jo įvertinti."
+        },
+        {
+            "id": "How do I become a vendor?",
+            "message": "How do I become a vendor?",
+            "translation": "Kaip tapti pardavėju?"
+        },
+        {
+            "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
+            "translation": "Sukurkite paskyrą su įjungta dviejų faktorių autentifikacija (2FA), tada pateikite pardavėjo prašymą."
+        },
+        {
+            "id": "How do I place an order?",
+            "message": "How do I place an order?",
+            "translation": "Kaip pateikti užsakymą?"
+        },
+        {
+            "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "message": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
+            "translation": "Pridėkite norimus produktus į savo krepšelį. Eikite į /cart ir pasirinkite „Apmokėjimas“, pasirinkite pageidaujamą pristatymo metodą ir pateikite reikiamą informaciją.\nJei turite pakankamai balanso, galite jį naudoti apmokėjimo metu. Priešingu atveju, galite paprašyti sąskaitos faktūros. Sąskaitos faktūros turi būti apmokėtos per {Duration} valandų, kad užsakymas būtų toliau apdorojamas.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "6"
+                }
+            ]
+        },
+        {
+            "id": "How can I obtain Monero (XMR)?",
+            "message": "How can I obtain Monero (XMR)?",
+            "translation": "Kaip galiu gauti Monero (XMR)?"
+        },
+        {
+            "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
+            "translation": "Yra keletas būdų, kaip įsigyti Monero. Prašome apsilankyti getmonero.org oficialioms gairėms ir ištekliams."
+        },
+        {
+            "id": "What should I do if my order has not arrived or does not match the description?",
+            "message": "What should I do if my order has not arrived or does not match the description?",
+            "translation": "Ką turėčiau daryti, jei mano užsakymas neatvyko arba neatitinka aprašymo?"
+        },
+        {
+            "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "message": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
+            "translation": "Užsakymai automatiškai užbaigiami po {Duration} dienų.\nGalite pratęsti automatinio užbaigimo laikotarpį du kartus.\nJei užsakymas vis dar neatvyko po šių pratęsimų, turėtumėte atidaryti ginčą.\nMūsų komanda peržiūrės atvejį ir priims sprendimą remdamasi turima informacija.",
+            "placeholders": [
+                {
+                    "id": "Duration",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "7"
+                }
+            ]
+        },
+        {
+            "id": "What am I allowed to sell on this marketplace?",
+            "message": "What am I allowed to sell on this marketplace?",
+            "translation": "Ką galiu parduoti šioje rinkoje?"
+        },
+        {
+            "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
+            "translation": "Leidžiami tik teisėti daiktai. Jei nesate tikri, ar jūsų produktas atitinka reikalavimus, prašome susisiekti su mumis prieš kuriant skelbimą."
+        },
+        {
+            "id": "Open",
+            "message": "Open",
+            "translation": "Atidaryti"
+        },
+        {
+            "id": "Vendor application",
+            "message": "Vendor application",
+            "translation": "Pardavėjo prašymas"
+        },
+        {
+            "id": "Your account does not have 2FA enabled!",
+            "message": "Your account does not have 2FA enabled!",
+            "translation": "Jūsų paskyroje nėra įjungta 2FA!"
+        },
+        {
+            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
+            "translation": "Programėlė yra nemokama vartotojams, kurie jau yra pardavėjai kitose rinkose, naudodami tą pačią PGP raktą."
+        },
+        {
+            "id": "For other users, application costs {Price} XMR and is non-refundable.",
+            "message": "For other users, application costs {Price} XMR and is non-refundable.",
+            "translation": "Kitiems vartotojams programėlė kainuoja {Price} XMR ir nėra grąžinama.",
+            "placeholders": [
+                {
+                    "id": "Price",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "price"
+                }
+            ]
+        },
+        {
+            "id": "You're required to provide proof that you actually have products to sell here.",
+            "message": "You're required to provide proof that you actually have products to sell here.",
+            "translation": "Privalote pateikti įrodymą, kad iš tikrųjų turite produktų, kuriuos galite čia parduoti."
+        },
+        {
+            "id": "Vendor Logo",
+            "message": "Vendor Logo",
+            "translation": "Pardavėjo logotipas"
+        },
+        {
+            "id": "Use png image with close to 1:1 ratio for optimal look",
+            "message": "Use png image with close to 1:1 ratio for optimal look",
+            "translation": "Naudokite png vaizdą, kurio santykis artimas 1:1, kad atrodytų optimaliai."
+        },
+        {
+            "id": "Existing vendor",
+            "message": "Existing vendor",
+            "translation": "Esamas pardavėjas"
+        },
+        {
+            "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
+            "translation": "Pasirinkite tai, jei jau esate pardavėjas kitose rinkose, tokiose kaip xmrBazaar."
+        },
+        {
+            "id": "Proof of inventory",
+            "message": "Proof of inventory",
+            "translation": "Inventoriaus įrodymas"
+        },
+        {
+            "id": "Clear image of your inventory with your username and timestamp visible",
+            "message": "Clear image of your inventory with your username and timestamp visible",
+            "translation": "Aiškus jūsų inventoriaus vaizdas su jūsų vartotojo vardu ir laiko žyma."
+        },
+        {
+            "id": "Markets and Your Username",
+            "message": "Markets and Your Username",
+            "translation": "Rinkos ir jūsų vartotojo vardas"
+        },
+        {
+            "id": "List the markets where you are a vendor and include your username",
+            "message": "List the markets where you are a vendor and include your username",
+            "translation": "Išvardinkite rinkas, kuriose esate pardavėjas, ir įtraukite savo vartotojo vardą."
+        },
+        {
+            "id": "Captcha",
+            "message": "Captcha",
+            "translation": "Captcha"
+        },
+        {
+            "id": "Click circle with a cut",
+            "message": "Click circle with a cut",
+            "translation": "Paspauskite ratą su išpjova"
+        },
+        {
+            "id": "Submit",
+            "message": "Submit",
+            "translation": "Pateikti"
+        },
+        {
+            "id": "Total",
+            "message": "Total",
+            "translation": "Iš viso"
+        },
+        {
+            "id": "Checkout",
+            "message": "Checkout",
+            "translation": "Atsiskaitymas"
+        },
+        {
+            "id": "delivery method",
+            "message": "delivery method",
+            "translation": "pristatymo būdas"
+        },
+        {
+            "id": "Use wallet for payment",
+            "message": "Use wallet for payment",
+            "translation": "Naudokite piniginę mokėjimams"
+        },
+        {
+            "id": "details",
+            "message": "details",
+            "translation": "detalės"
+        },
+        {
+            "id": "Use your real address, with the same format as below.",
+            "message": "Use your real address, with the same format as below.",
+            "translation": "Naudokite savo tikrą adresą, su tokiu pačiu formatu kaip žemiau."
+        },
+        {
+            "id": "Unencrypted details are automatically encrypted using vendors key.",
+            "message": "Unencrypted details are automatically encrypted using vendors key.",
+            "translation": "Nešifruoti duomenys automatiškai šifruojami naudojant pardavėjo raktą."
+        },
+        {
+            "id": "Title",
+            "message": "Title",
+            "translation": "Pavadinimas"
+        },
+        {
+            "id": "Description",
+            "message": "Description",
+            "translation": "Aprašymas"
+        },
+        {
+            "id": "Product image",
+            "message": "Product image",
+            "translation": "Produkto vaizdas"
+        },
+        {
+            "id": "Use image with close to 1:1 aspect ratio for optimal look",
+            "message": "Use image with close to 1:1 aspect ratio for optimal look",
+            "translation": "Naudokite vaizdą, kurio santykis artimas 1:1, kad atrodytų optimaliai."
+        },
+        {
+            "id": "Category",
+            "message": "Category",
+            "translation": "Kategorija"
+        },
+        {
+            "id": "Ships from",
+            "message": "Ships from",
+            "translation": "Išsiunčiama iš"
+        },
+        {
+            "id": "Ships to",
+            "message": "Ships to",
+            "translation": "Išsiunčiama į"
+        },
+        {
+            "id": "Inventory",
+            "message": "Inventory",
+            "translation": "Inventorius"
+        },
+        {
+            "id": "Size of the current inventory for this product.",
+            "message": "Size of the current inventory for this product.",
+            "translation": "Šio produkto dabartinio inventoriaus dydis."
+        },
+        {
+            "id": "Pricing",
+            "message": "Pricing",
+            "translation": "Kainos"
+        },
+        {
+            "id": "Here you can set your pricing.",
+            "message": "Here you can set your pricing.",
+            "translation": "Čia galite nustatyti savo kainas."
+        },
+        {
+            "id": "We take 5% cut from these prices.",
+            "message": "We take 5% cut from these prices.",
+            "translation": "Mes imame 5% nuo šių kainų."
+        },
+        {
+            "id": "Quantity",
+            "message": "Quantity",
+            "translation": "Kiekis"
+        },
+        {
+            "id": "Price",
+            "message": "Price",
+            "translation": "Kaina"
+        },
+        {
+            "id": "Create ticket",
+            "message": "Create ticket",
+            "translation": "Sukurti bilietą"
+        },
+        {
+            "id": "Subject",
+            "message": "Subject",
+            "translation": "Tema"
+        },
+        {
+            "id": "account",
+            "message": "account",
+            "translation": "paskyra"
+        },
+        {
+            "id": "order",
+            "message": "order",
+            "translation": "užsakymas"
+        },
+        {
+            "id": "wallet",
+            "message": "wallet",
+            "translation": "piniginė"
+        },
+        {
+            "id": "vendor",
+            "message": "vendor",
+            "translation": "pardavėjas"
+        },
+        {
+            "id": "product",
+            "message": "product",
+            "translation": "produktas"
+        },
+        {
+            "id": "suggestion",
+            "message": "suggestion",
+            "translation": "pasiūlymas"
+        },
+        {
+            "id": "bug",
+            "message": "bug",
+            "translation": "klaida"
+        },
+        {
+            "id": "other",
+            "message": "other",
+            "translation": "kitas"
+        },
+        {
+            "id": "Message",
+            "message": "Message",
+            "translation": "Žinutė"
+        },
+        {
+            "id": "Staff PGP",
+            "message": "Staff PGP",
+            "translation": "Darbuotojų PGP"
+        },
+        {
+            "id": "Exchange rate",
+            "message": "Exchange rate",
+            "translation": "Keitimo kursas"
+        },
+        {
+            "id": "Time",
+            "message": "Time",
+            "translation": "Laikas"
+        },
+        {
+            "id": "Vendors:",
+            "message": "Vendors:",
+            "translation": "Pardavėjai:"
+        },
+        {
+            "id": "Users:",
+            "message": "Users:",
+            "translation": "Vartotojai:"
+        },
+        {
+            "id": "submit",
+            "message": "submit",
+            "translation": "pateikti"
+        },
+        {
+            "id": "Response",
+            "message": "Response",
+            "translation": "Atsakymas"
+        },
+        {
+            "id": "products",
+            "message": "products",
+            "translation": "produktai"
+        },
+        {
+            "id": "orders",
+            "message": "orders",
+            "translation": "užsakymai"
+        },
+        {
+            "id": "sell",
+            "message": "sell",
+            "translation": "parduoti"
+        },
+        {
+            "id": "support",
+            "message": "support",
+            "translation": "pagalba"
+        },
+        {
+            "id": "Logout",
+            "message": "Logout",
+            "translation": "Atsijungti"
+        },
+        {
+            "id": "log in",
+            "message": "log in",
+            "translation": "prisijungti"
+        },
+        {
+            "id": "register",
+            "message": "register",
+            "translation": "užsiregistruoti"
+        },
+        {
+            "id": "Entry guard to {Name}",
+            "message": "Entry guard to {Name}",
+            "translation": "Įėjimo sargas į {Name}",
+            "placeholders": [
+                {
+                    "id": "Name",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "tc.Config.Name"
+                }
+            ]
+        },
+        {
+            "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
+            "translation": "Palyginkite URL, kurį naudojate, su žemiau esančiu, kad rastumėte visus trūkstamus simbolius, pažymėtus '*'"
+        },
+        {
+            "id": "Missing characters",
+            "message": "Missing characters",
+            "translation": "Trūkstami simboliai"
+        },
+        {
+            "id": "Log in",
+            "message": "Log in",
+            "translation": "Prisijungti"
+        },
+        {
+            "id": "username",
+            "message": "username",
+            "translation": "vartotojo vardas"
+        },
+        {
+            "id": "password",
+            "message": "password",
+            "translation": "slaptažodis"
+        },
+        {
+            "id": "Create new account",
+            "message": "Create new account",
+            "translation": "Sukurti naują paskyrą"
+        },
+        {
+            "id": "Delete all",
+            "message": "Delete all",
+            "translation": "Ištrinti viską"
+        },
+        {
+            "id": "You have zero notifications",
+            "message": "You have zero notifications",
+            "translation": "Jūs turite nulis pranešimų"
+        },
+        {
+            "id": "Order",
+            "message": "Order",
+            "translation": "Užsakymas"
+        },
+        {
+            "id": "Chat",
+            "message": "Chat",
+            "translation": "Pokalbis"
+        },
+        {
+            "id": "Status",
+            "message": "Status",
+            "translation": "Būsena"
+        },
+        {
+            "id": "Vendor",
+            "message": "Vendor",
+            "translation": "Pardavėjas"
+        },
+        {
+            "id": "Delivery method",
+            "message": "Delivery method",
+            "translation": "Pristatymo metodas"
+        },
+        {
+            "id": "Total cost",
+            "message": "Total cost",
+            "translation": "Bendra kaina"
+        },
+        {
+            "id": "Date",
+            "message": "Date",
+            "translation": "Data"
+        },
+        {
+            "id": "Dispatched at",
+            "message": "Dispatched at",
+            "translation": "Išsiųsta"
+        },
+        {
+            "id": "Until auto-declined",
+            "message": "Until auto-declined",
+            "translation": "Iki automatinio atmetimo"
+        },
+        {
+            "id": "Until auto-finalized",
+            "message": "Until auto-finalized",
+            "translation": "Iki automatinio užbaigimo"
+        },
+        {
+            "id": "Details",
+            "message": "Details",
+            "translation": "Išsami informacija"
+        },
+        {
+            "id": "Vendor offered refund of {RefundFactor}%",
+            "message": "Vendor offered refund of {RefundFactor}%",
+            "translation": "Pardavėjas pasiūlė {RefundFactor}% grąžinimą",
+            "placeholders": [
+                {
+                    "id": "RefundFactor",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "100 * item.Offer.RefundFactor"
+                }
+            ]
+        },
+        {
+            "id": "Accept",
+            "message": "Accept",
+            "translation": "Priimti"
+        },
+        {
+            "id": "Decline",
+            "message": "Decline",
+            "translation": "Atmesti"
+        },
+        {
+            "id": "Customers PGP key",
+            "message": "Customers PGP key",
+            "translation": "Klientų PGP raktas"
+        },
+        {
+            "id": "Customer can still cancel this order!",
+            "message": "Customer can still cancel this order!",
+            "translation": "Klientas vis dar gali atšaukti šį užsakymą!"
+        },
+        {
+            "id": "You must accept it in 2 days or it will be automatically declined.",
+            "message": "You must accept it in 2 days or it will be automatically declined.",
+            "translation": "Turite tai priimti per 2 dienas, kitaip bus automatiškai atmesta."
+        },
+        {
+            "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
+            "translation": "Priėmus, klientas nebegali atšaukti, todėl galite saugiai išsiųsti."
+        },
+        {
+            "id": "Please carefully review the order below before accepting it.",
+            "message": "Please carefully review the order below before accepting it.",
+            "translation": "Prašome atidžiai peržiūrėti žemiau esantį užsakymą prieš jį priimdami."
+        },
+        {
+            "id": "Always decline orders that you'r unable to fulfill.",
+            "message": "Always decline orders that you'r unable to fulfill.",
+            "translation": "Visada atmesti užsakymus, kurių negalite įvykdyti."
+        },
+        {
+            "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
+            "translation": "Turite pažymėti šį užsakymą kaip išsiųstą per 2 dienas, kitaip jis bus automatiškai atmestas."
+        },
+        {
+            "id": "Make sure that you have enough time to do the actual dispaching!",
+            "message": "Make sure that you have enough time to do the actual dispaching!",
+            "translation": "Įsitikinkite, kad turite pakankamai laiko atlikti faktinį siuntimą!"
+        },
+        {
+            "id": "Dispatched",
+            "message": "Dispatched",
+            "translation": "Išsiųsta"
+        },
+        {
+            "id": "Transfer exact amount of Monero to the address below.",
+            "message": "Transfer exact amount of Monero to the address below.",
+            "translation": "Perkelkite tikslią Monero sumą į žemiau pateiktą adresą."
+        },
+        {
+            "id": "After 10 confirmations, your order will proceed to vendor.",
+            "message": "After 10 confirmations, your order will proceed to vendor.",
+            "translation": "Po 10 patvirtinimų jūsų užsakymas bus perduotas tiekėjui."
+        },
+        {
+            "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
+            "translation": "Turite 3 valandas, kad sumokėtumėte šią sąskaitą, kitaip jūsų užsakymas bus atšauktas."
+        },
+        {
+            "id": "Time left to pay",
+            "message": "Time left to pay",
+            "translation": "Liko laiko sumokėti"
+        },
+        {
+            "id": "Amount XMR",
+            "message": "Amount XMR",
+            "translation": "Suma XMR"
+        },
+        {
+            "id": "Address",
+            "message": "Address",
+            "translation": "Adresas"
+        },
+        {
+            "id": "Orders can be cancelled until vendor has accepted it.",
+            "message": "Orders can be cancelled until vendor has accepted it.",
+            "translation": "Užsakymai gali būti atšaukti, kol tiekėjas jų nepriėmė."
+        },
+        {
+            "id": "Cancel",
+            "message": "Cancel",
+            "translation": "Atšaukti"
+        },
+        {
+            "id": "Your order will auto-finalize in",
+            "message": "Your order will auto-finalize in",
+            "translation": "Jūsų užsakymas automatiškai bus užbaigtas per"
+        },
+        {
+            "id": "You can extend the auto-finalize-time by 7-days.",
+            "message": "You can extend the auto-finalize-time by 7-days.",
+            "translation": "Galite pratęsti automatinio užbaigimo laiką 7 dienomis."
+        },
+        {
+            "id": "review your order",
+            "message": "review your order",
+            "translation": "peržiūrėti savo užsakymą"
+        },
+        {
+            "id": "Review",
+            "message": "Review",
+            "translation": "Peržiūrėti"
+        },
+        {
+            "id": "Extend AF-timer",
+            "message": "Extend AF-timer",
+            "translation": "Pratęsti AF laikmatį"
+        },
+        {
+            "id": "Dispute",
+            "message": "Dispute",
+            "translation": "Ginčas"
+        },
+        {
+            "id": "Refund offer",
+            "message": "Refund offer",
+            "translation": "Grąžinimo pasiūlymas"
+        },
+        {
+            "id": "Customer has disputed this order.",
+            "message": "Customer has disputed this order.",
+            "translation": "Klientas ginčijo šį užsakymą."
+        },
+        {
+            "id": "Use the chat below to discuss about this dispute.",
+            "message": "Use the chat below to discuss about this dispute.",
+            "translation": "Naudokite žemiau esantį pokalbį, kad aptartumėte šį ginčą."
+        },
+        {
+            "id": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "message": "You can create an refund offer and resolve this dispute without admin intervention.",
+            "translation": "Galite sukurti grąžinimo pasiūlymą ir išspręsti šį ginčą be administratoriaus įsikišimo."
+        },
+        {
+            "id": "Refund percent",
+            "message": "Refund percent",
+            "translation": "Grąžinimo procentas"
+        },
+        {
+            "id": "Order date",
+            "message": "Order date",
+            "translation": "Užsakymo data"
+        },
+        {
+            "id": "Order ID",
+            "message": "Order ID",
+            "translation": "Užsakymo ID"
+        },
+        {
+            "id": "Proof key ownership",
+            "message": "Proof key ownership",
+            "translation": "Įrodymas apie raktų nuosavybę"
+        },
+        {
+            "id": "Decrypt to get the token",
+            "message": "Decrypt to get the token",
+            "translation": "Iššifruokite, kad gautumėte tokeną"
+        },
+        {
+            "id": "Token",
+            "message": "Token",
+            "translation": "Tokenas"
+        },
+        {
+            "id": "Update product",
+            "message": "Update product",
+            "translation": "Atnaujinti produktą"
+        },
+        {
+            "id": "Update",
+            "message": "Update",
+            "translation": "Atnaujinti"
+        },
+        {
+            "id": "Add to cart",
+            "message": "Add to cart",
+            "translation": "Pridėti į krepšelį"
+        },
+        {
+            "id": "Reviews",
+            "message": "Reviews",
+            "translation": "Atsiliepimai"
+        },
+        {
+            "id": "ago",
+            "message": "ago",
+            "translation": "prieš"
+        },
+        {
+            "id": "OUT OF STOCK",
+            "message": "OUT OF STOCK",
+            "translation": "Nėra sandėlyje"
+        },
+        {
+            "id": "Register",
+            "message": "Register",
+            "translation": "Registruotis"
+        },
+        {
+            "id": "password check",
+            "message": "password check",
+            "translation": "slaptažodžio patikra"
+        },
+        {
+            "id": "Already have an account?",
+            "message": "Already have an account?",
+            "translation": "Jau turite paskyrą?"
+        },
+        {
+            "id": "Review order",
+            "message": "Review order",
+            "translation": "Peržiūrėti užsakymą"
+        },
+        {
+            "id": "Grade",
+            "message": "Grade",
+            "translation": "Įvertinimas"
+        },
+        {
+            "id": "guest",
+            "message": "guest",
+            "translation": "svečias"
+        },
+        {
+            "id": "customer",
+            "message": "customer",
+            "translation": "klientas"
+        },
+        {
+            "id": "admin",
+            "message": "admin",
+            "translation": "administratorius"
+        },
+        {
+            "id": "unknown",
+            "message": "unknown",
+            "translation": "nežinomas"
+        },
+        {
+            "id": "enabled",
+            "message": "enabled",
+            "translation": "įjungta"
+        },
+        {
+            "id": "disabled",
+            "message": "disabled",
+            "translation": "išjungta"
+        },
+        {
+            "id": "Account",
+            "message": "Account",
+            "translation": "Paskyra"
+        },
+        {
+            "id": "Username",
+            "message": "Username",
+            "translation": "Vartotojo vardas"
+        },
+        {
+            "id": "Type",
+            "message": "Type",
+            "translation": "Tipas"
+        },
+        {
+            "id": "2FA",
+            "message": "2FA",
+            "translation": "2FA"
+        },
+        {
+            "id": "Preferences",
+            "message": "Preferences",
+            "translation": "Nustatymai"
+        },
+        {
+            "id": "Language",
+            "message": "Language",
+            "translation": "Kalba"
+        },
+        {
+            "id": "Currency",
+            "message": "Currency",
+            "translation": "Valiuta"
+        },
+        {
+            "id": "Change password",
+            "message": "Change password",
+            "translation": "Keisti slaptažodį"
+        },
+        {
+            "id": "Current password",
+            "message": "Current password",
+            "translation": "Dabartinis slaptažodis"
+        },
+        {
+            "id": "New password",
+            "message": "New password",
+            "translation": "Naujas slaptažodis"
+        },
+        {
+            "id": "Confirm new password",
+            "message": "Confirm new password",
+            "translation": "Patvirtinkite naują slaptažodį"
+        },
+        {
+            "id": "Change PGP key",
+            "message": "Change PGP key",
+            "translation": "Keisti PGP raktą"
+        },
+        {
+            "id": "Enable 2FA",
+            "message": "Enable 2FA",
+            "translation": "Įjungti 2FA"
+        },
+        {
+            "id": "PGP public key",
+            "message": "PGP public key",
+            "translation": "PGP viešasis raktas"
+        },
+        {
+            "id": "Required for vendors, suggested for everyone.",
+            "message": "Required for vendors, suggested for everyone.",
+            "translation": "Reikalinga pardavėjams, rekomenduojama visiems."
+        },
+        {
+            "id": "Update vendor profile",
+            "message": "Update vendor profile",
+            "translation": "Atnaujinti pardavėjo profilį"
+        },
+        {
+            "id": "Vendor info",
+            "message": "Vendor info",
+            "translation": "Pardavėjo informacija"
+        },
+        {
+            "id": "Leave empty to not update.",
+            "message": "Leave empty to not update.",
+            "translation": "Palikite tuščią, jei nenorite atnaujinti."
+        },
+        {
+            "id": "Update delivery methods",
+            "message": "Update delivery methods",
+            "translation": "Atnaujinti pristatymo metodus"
+        },
+        {
+            "id": "Delivery Method",
+            "message": "Delivery Method",
+            "translation": "Pristatymo metodas"
+        },
+        {
+            "id": "My tickets",
+            "message": "My tickets",
+            "translation": "Mano bilietai"
+        },
+        {
+            "id": "0 seconds",
+            "message": "0 seconds",
+            "translation": "0 sekundžių"
+        },
+        {
+            "id": "{Second} seconds",
+            "message": "{Second} seconds",
+            "translation": "{Second} sekundžių",
+            "placeholders": [
+                {
+                    "id": "Second",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Second"
+                }
+            ]
+        },
+        {
+            "id": "{Minute} minutes",
+            "message": "{Minute} minutes",
+            "translation": "{Minute} minučių",
+            "placeholders": [
+                {
+                    "id": "Minute",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Minute"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} hours",
+            "message": "{Hour} hours",
+            "translation": "{Hour} valandų",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / time.Hour"
+                }
+            ]
+        },
+        {
+            "id": "{Hour} days",
+            "message": "{Hour} days",
+            "translation": "{Hour} dienų",
+            "placeholders": [
+                {
+                    "id": "Hour",
+                    "string": "%[1]d",
+                    "type": "time.Duration",
+                    "underlyingType": "int64",
+                    "argNum": 1,
+                    "expr": "since / (24 * time.Hour)"
+                }
+            ]
+        },
+        {
+            "id": "Rating (AVG)",
+            "message": "Rating (AVG)",
+            "translation": "Įvertinimas (VID.)"
+        },
+        {
+            "id": "Orders completed",
+            "message": "Orders completed",
+            "translation": "Užsakymai įvykdyti"
+        },
+        {
+            "id": "Orders in escrow",
+            "message": "Orders in escrow",
+            "translation": "Užsakymai depozite"
+        },
+        {
+            "id": "Pending disputes",
+            "message": "Pending disputes",
+            "translation": "Laukiantys ginčai"
+        },
+        {
+            "id": "Previously seen",
+            "message": "Previously seen",
+            "translation": "Anksčiau matyti"
+        },
+        {
+            "id": "PGP key",
+            "message": "PGP key",
+            "translation": "PGP raktas"
+        },
+        {
+            "id": "Wallet",
+            "message": "Wallet",
+            "translation": "Piniginė"
+        },
+        {
+            "id": "This is your XMR wallet where you can deposit coins.",
+            "message": "This is your XMR wallet where you can deposit coins.",
+            "translation": "Tai jūsų XMR piniginė, kurioje galite deponuoti monetas."
+        },
+        {
+            "id": "Balance is updated after 10 confirmations.",
+            "message": "Balance is updated after 10 confirmations.",
+            "translation": "Balansas atnaujinamas po 10 patvirtinimų."
+        },
+        {
+            "id": "See",
+            "message": "See",
+            "translation": "Žiūrėti"
+        },
+        {
+            "id": "for more information.",
+            "message": "for more information.",
+            "translation": "daugiau informacijos."
+        },
+        {
+            "id": "Balance",
+            "message": "Balance",
+            "translation": "Balansas"
+        },
+        {
+            "id": "Withdraw",
+            "message": "Withdraw",
+            "translation": "Išimti"
+        },
+        {
+            "id": "Enter a monero address where you want to withdraw your funds.",
+            "message": "Enter a monero address where you want to withdraw your funds.",
+            "translation": "Įveskite monero adresą, į kurį norite išimti savo lėšas."
+        },
+        {
+            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
+            "translation": "Mes imame 0.01 XMR mokestį už kiekvieną išėmimą, kad išvengtume šlamšto."
+        },
+        {
+            "id": "DO NOT withdraw funds to another wallet on this platform!",
+            "message": "DO NOT withdraw funds to another wallet on this platform!",
+            "translation": "NEIŠIMKITE lėšų į kitą piniginę šioje platformoje!"
+        },
+        {
+            "id": "Destination address",
+            "message": "Destination address",
+            "translation": "Paskirties adresas"
+        },
+        {
+            "id": "Amount",
+            "message": "Amount",
+            "translation": "Suma"
+        },
+        {
+            "id": "Enter amount in decimal format (e.g., 1.42069)",
+            "message": "Enter amount in decimal format (e.g., 1.42069)",
+            "translation": "Įveskite sumą dešimtainiu formatu (pvz., 1.42069)"
+        }
+    ]
+}

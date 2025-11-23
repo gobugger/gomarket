@@ -1,0 +1,28 @@
+package ui
+
+import "time"
+
+templ footer(tc *TemplateContext) {
+	<footer class="footer">
+		<div id="logo" class="centered">
+			<h1 id="footer-logo">{ tc.Config.Name }</h1>
+		</div>
+		<div id="links" class="centered">
+			<div class="col gap--xs">
+				<a href="/support">Support</a>
+				<a href="/canary.txt">Canary</a>
+				<a href="/support/ticket/create">Ticket</a>
+				<a href="/pgp.txt">PGP</a>
+				<a href="https://github.com/gobugger/gomarket">Github</a>
+			</div>
+		</div>
+		<div id="stats" class="centered">
+			<div class="col gap--xs">
+				<p class="text--small">{ tc.Translate("Exchange rate") }: 1 XMR = { tc.XMR2Fiat2(1e12) }</p>
+				<p class="text--small">{ tc.Translate("Time") }: { FmtTime(time.Now()) }</p>
+				<p class="text--small">{ tc.Translate("Vendors: ") }{ tc.Stats.NumVendors }</p>
+				<p class="text--small">{ tc.Translate("Users: ") }{ tc.Stats.NumUsers }</p>
+			</div>
+		</div>
+	</footer>
+}

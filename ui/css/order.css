@@ -1,0 +1,42 @@
+.status-view {
+	display: flex;
+	align-items: center;
+	margin: 1rem 0.5rem 2rem;
+}
+
+.status-node {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	background-color: var(--text-muted);
+}
+
+.status-node.active {
+	background-color: var(--text);
+	font-weight: bold;
+}
+
+.status-label {
+	position: relative;
+	top: 20px;
+	font-size: var(--font-size-secondary);
+	color: var(--text-muted);
+}
+
+.status-label.active {
+	color: var(--text);
+}
+
+.status-link {
+	width: 100%;
+	height: 2px;
+	background-color: var(--text-muted);
+}
+
+.status-label.final {
+	left: -50px;
+}
+
+.message-container.me {
+	margin: 0 2% 0 8%;
+}
