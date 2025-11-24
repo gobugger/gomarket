@@ -90,8 +90,7 @@ CREATE TABLE terms_of_services (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	content VARCHAR(4096) DEFAULT '' NOT NULL,
 	vendor_id UUID REFERENCES users(id) NOT NULL,
-	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-	UNIQUE(vendor_id)
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
 CREATE TYPE order_status AS ENUM (

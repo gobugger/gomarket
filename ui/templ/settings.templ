@@ -122,15 +122,15 @@ templ Settings(tc *TemplateContext,
 				</div>
 			</form>
 			if tc.AuthLevel == AuthLevelVendor {
-				<form class="form--basic col mw-m" action="settings/profile" method="post">
+				<form class="form--basic col mw-m" action="settings/tos" method="post">
 					@templ.Raw(tc.CsrfField)
 					<div class="header">
-						<h2>{ tc.Translate("Update vendor profile") }</h2>
+						<h2>{ tc.Translate("Update terms of service") }</h2>
 					</div>
 					<div class="form__field flex1">
 						<div class="col">
 							<label class="m0">{ tc.Translate("Terms of service") }</label>
-							<p class="text--small mb-s">{ tc.Translate("Your terms of service") }</p>
+							<p class="text--small mb-s">{ tc.Translate("Terms of service is used to resolve disputes") }</p>
 						</div>
 						<textarea class="h100" name="tos" spellcheck="false" placeholder=""></textarea>
 					</div>

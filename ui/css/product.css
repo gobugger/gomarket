@@ -8,6 +8,7 @@
 
 .product__card {
 	flex: 0 1;
+	width: 260px;
 	border-radius: 10px;
 	background-color: var(--bg-light);
 	box-shadow: var(--shadow);
@@ -25,6 +26,9 @@
 
 .product__title {
 	margin: 0.5rem 1rem 0.25rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .product__desc--s {
