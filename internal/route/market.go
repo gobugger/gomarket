@@ -129,7 +129,7 @@ func RouteMarket(app *application.Application) http.Handler {
 			r.Post("/orders/process", app.HandleProcessOrder)
 			r.Post("/orders/deliver", app.HandleDeliver)
 			r.Post("/product/update", app.HandleUpdateProduct)
-			r.Post("/settings/profile", app.HandleUpdateVendorProfile)
+			r.Post("/settings/tos", app.HandleUpdateTermsOfService)
 			r.Post("/settings/delivery_methods", app.HandleUpdateDeliveryMethods)
 		})
 	})

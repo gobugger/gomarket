@@ -11,12 +11,37 @@ import (
 	"github.com/google/uuid"
 )
 
+const createTermsOfService = `-- name: CreateTermsOfService :one
+INSERT INTO terms_of_services (
+	content, vendor_id
+) VALUES (
+	$1, $2
+) RETURNING id, content, vendor_id, created_at
+`
+
+type CreateTermsOfServiceParams struct {
+	Content  string
+	VendorID uuid.UUID
+}
+
+func (q *Queries) CreateTermsOfService(ctx context.Context, arg CreateTermsOfServiceParams) (TermsOfService, error) {
+	row := q.db.QueryRow(ctx, createTermsOfService, arg.Content, arg.VendorID)
+	var i TermsOfService
+	err := row.Scan(
+		&i.ID,
+		&i.Content,
+		&i.VendorID,
+		&i.CreatedAt,
+	)
+	return i, err
+}
+
 const createVendorLicense = `-- name: CreateVendorLicense :one
 INSERT INTO vendor_licenses (
 	price_paid_pico, user_id
 ) VALUES (
 	$1, $2
-) RETURNING id, price_paid_pico, vendor_info, user_id, created_at
+) RETURNING id, price_paid_pico, user_id, created_at
 `
 
 type CreateVendorLicenseParams struct {
@@ -30,7 +55,6 @@ func (q *Queries) CreateVendorLicense(ctx context.Context, arg CreateVendorLicen
 	err := row.Scan(
 		&i.ID,
 		&i.PricePaidPico,
-		&i.VendorInfo,
 		&i.UserID,
 		&i.CreatedAt,
 	)
@@ -48,8 +72,28 @@ func (q *Queries) GetNumberOfVendorLicenses(ctx context.Context) (int64, error) 
 	return count, err
 }
 
+const getTermsOfServiceForVendor = `-- name: GetTermsOfServiceForVendor :one
+SELECT id, content, vendor_id, created_at 
+FROM terms_of_services 
+WHERE vendor_id = $1
+ORDER BY created_at ASC
+LIMIT 1
+`
+
+func (q *Queries) GetTermsOfServiceForVendor(ctx context.Context, vendorID uuid.UUID) (TermsOfService, error) {
+	row := q.db.QueryRow(ctx, getTermsOfServiceForVendor, vendorID)
+	var i TermsOfService
+	err := row.Scan(
+		&i.ID,
+		&i.Content,
+		&i.VendorID,
+		&i.CreatedAt,
+	)
+	return i, err
+}
+
 const getVendorLicenseForUser = `-- name: GetVendorLicenseForUser :one
-SELECT id, price_paid_pico, vendor_info, user_id, created_at FROM vendor_licenses
+SELECT id, price_paid_pico, user_id, created_at FROM vendor_licenses
 WHERE user_id = $1
 `
 
@@ -59,7 +103,6 @@ func (q *Queries) GetVendorLicenseForUser(ctx context.Context, userID uuid.UUID)
 	err := row.Scan(
 		&i.ID,
 		&i.PricePaidPico,
-		&i.VendorInfo,
 		&i.UserID,
 		&i.CreatedAt,
 	)
@@ -77,29 +120,4 @@ func (q *Queries) HasVendorLicense(ctx context.Context, userID uuid.UUID) (int32
 	var column_1 int32
 	err := row.Scan(&column_1)
 	return column_1, err
-}
-
-const updateVendorInfo = `-- name: UpdateVendorInfo :one
-UPDATE vendor_licenses
-SET vendor_info = $2
-WHERE id = $1
-RETURNING id, price_paid_pico, vendor_info, user_id, created_at
-`
-
-type UpdateVendorInfoParams struct {
-	ID         uuid.UUID
-	VendorInfo string
-}
-
-func (q *Queries) UpdateVendorInfo(ctx context.Context, arg UpdateVendorInfoParams) (VendorLicense, error) {
-	row := q.db.QueryRow(ctx, updateVendorInfo, arg.ID, arg.VendorInfo)
-	var i VendorLicense
-	err := row.Scan(
-		&i.ID,
-		&i.PricePaidPico,
-		&i.VendorInfo,
-		&i.UserID,
-		&i.CreatedAt,
-	)
-	return i, err
 }

@@ -153,7 +153,7 @@ func (q *Queries) GetViewCartForCustomerByVendor(ctx context.Context, arg GetVie
 }
 
 const getViewOrder = `-- name: GetViewOrder :one
-SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
+SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.terms_of_service_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
 	dm.id, dm.vendor_id, dm.description, dm.price_cent, dm.deleted_at, 
 	customer.id, customer.username, customer.password_hash, customer.pgp_key, customer.prev_login, customer.locale, customer.currency, customer.twofa_enabled, customer.incognito_enabled, customer.created_at,
 	vendor.id, vendor.username, vendor.password_hash, vendor.pgp_key, vendor.prev_login, vendor.locale, vendor.currency, vendor.twofa_enabled, vendor.incognito_enabled, vendor.created_at
@@ -181,6 +181,7 @@ func (q *Queries) GetViewOrder(ctx context.Context, id uuid.UUID) (GetViewOrderR
 		&i.Order.TotalPricePico,
 		&i.Order.DeliveryMethodID,
 		&i.Order.VendorID,
+		&i.Order.TermsOfServiceID,
 		&i.Order.CustomerID,
 		&i.Order.NumExtends,
 		&i.Order.CreatedAt,
@@ -219,7 +220,7 @@ func (q *Queries) GetViewOrder(ctx context.Context, id uuid.UUID) (GetViewOrderR
 }
 
 const getViewOrdersForCustomer = `-- name: GetViewOrdersForCustomer :many
-SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
+SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.terms_of_service_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
 	dm.id, dm.vendor_id, dm.description, dm.price_cent, dm.deleted_at,
 	customer.id, customer.username, customer.password_hash, customer.pgp_key, customer.prev_login, customer.locale, customer.currency, customer.twofa_enabled, customer.incognito_enabled, customer.created_at,
 	vendor.id, vendor.username, vendor.password_hash, vendor.pgp_key, vendor.prev_login, vendor.locale, vendor.currency, vendor.twofa_enabled, vendor.incognito_enabled, vendor.created_at
@@ -253,6 +254,7 @@ func (q *Queries) GetViewOrdersForCustomer(ctx context.Context, customerID uuid.
 			&i.Order.TotalPricePico,
 			&i.Order.DeliveryMethodID,
 			&i.Order.VendorID,
+			&i.Order.TermsOfServiceID,
 			&i.Order.CustomerID,
 			&i.Order.NumExtends,
 			&i.Order.CreatedAt,
@@ -298,7 +300,7 @@ func (q *Queries) GetViewOrdersForCustomer(ctx context.Context, customerID uuid.
 }
 
 const getViewOrdersForVendor = `-- name: GetViewOrdersForVendor :many
-SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
+SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.terms_of_service_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at, 
 	dm.id, dm.vendor_id, dm.description, dm.price_cent, dm.deleted_at,
 	customer.id, customer.username, customer.password_hash, customer.pgp_key, customer.prev_login, customer.locale, customer.currency, customer.twofa_enabled, customer.incognito_enabled, customer.created_at,
 	vendor.id, vendor.username, vendor.password_hash, vendor.pgp_key, vendor.prev_login, vendor.locale, vendor.currency, vendor.twofa_enabled, vendor.incognito_enabled, vendor.created_at
@@ -332,6 +334,7 @@ func (q *Queries) GetViewOrdersForVendor(ctx context.Context, vendorID uuid.UUID
 			&i.Order.TotalPricePico,
 			&i.Order.DeliveryMethodID,
 			&i.Order.VendorID,
+			&i.Order.TermsOfServiceID,
 			&i.Order.CustomerID,
 			&i.Order.NumExtends,
 			&i.Order.CreatedAt,

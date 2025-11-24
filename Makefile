@@ -3,6 +3,10 @@
 translate:
 	go generate ./internal/translations
 
+generate:
+	go tool sqlc generate
+	go tool templ generate
+
 setup:
 	go tool sqlc generate
 	go tool templ generate

@@ -511,9 +511,9 @@ func Settings(tc *TemplateContext,
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var26 string
-				templ_7745c5c3_Var26, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Vendor info"))
+				templ_7745c5c3_Var26, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Terms of service"))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 132, Col: 54}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 132, Col: 59}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var26))
 				if templ_7745c5c3_Err != nil {
@@ -524,15 +524,15 @@ func Settings(tc *TemplateContext,
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var27 string
-				templ_7745c5c3_Var27, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Leave empty to not update."))
+				templ_7745c5c3_Var27, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Your terms of service"))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 133, Col: 79}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 133, Col: 74}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var27))
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 48, "</p></div><textarea class=\"h100\" name=\"info\" spellcheck=\"false\" placeholder=\"Hi, I'm ...\"></textarea></div><div class=\"form__field--right\">")
+				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 48, "</p></div><textarea class=\"h100\" name=\"tos\" spellcheck=\"false\" placeholder=\"\"></textarea></div><div class=\"form__field--right\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

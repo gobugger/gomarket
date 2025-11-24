@@ -129,10 +129,10 @@ templ Settings(tc *TemplateContext,
 					</div>
 					<div class="form__field flex1">
 						<div class="col">
-							<label class="m0">{ tc.Translate("Vendor info") }</label>
-							<p class="text--small mb-s">{ tc.Translate("Leave empty to not update.") }</p>
+							<label class="m0">{ tc.Translate("Terms of service") }</label>
+							<p class="text--small mb-s">{ tc.Translate("Your terms of service") }</p>
 						</div>
-						<textarea class="h100" name="info" spellcheck="false" placeholder="Hi, I'm ..."></textarea>
+						<textarea class="h100" name="tos" spellcheck="false" placeholder=""></textarea>
 					</div>
 					<div class="form__field--right">
 						@Captcha(tc)

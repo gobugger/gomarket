@@ -2,13 +2,13 @@ package vendor
 
 import (
 	"context"
-	"github.com/google/uuid"
-	"github.com/jackc/pgerrcode"
-	"github.com/minio/minio-go/v7"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/settings"
 	"github.com/gobugger/gomarket/internal/util"
 	"github.com/gobugger/gomarket/internal/util/db"
+	"github.com/google/uuid"
+	"github.com/jackc/pgerrcode"
+	"github.com/minio/minio-go/v7"
 	"io"
 )
 
@@ -102,6 +102,11 @@ func AcceptApplication(ctx context.Context, qtx *repo.Queries, applicationID uui
 	if err := qtx.DeleteVendorApplication(ctx, applicationID); err != nil {
 		return license, err
 	}
+
+	_, err = qtx.CreateTermsOfService(ctx, repo.CreateTermsOfServiceParams{
+		Content:  "",
+		VendorID: application.UserID,
+	})
 
 	return license, err
 }

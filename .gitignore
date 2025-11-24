@@ -3,3 +3,4 @@ test/
 data/
 cmd/seed
 docker-compose.demo.yml
+.idea

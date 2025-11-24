@@ -86,6 +86,14 @@ CREATE TABLE cart_items (
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
+CREATE TABLE terms_of_services (
+	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+	content VARCHAR(4096) DEFAULT '' NOT NULL,
+	vendor_id UUID REFERENCES users(id) NOT NULL,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+	UNIQUE(vendor_id)
+);
+
 CREATE TYPE order_status AS ENUM (
 	'pending', 
 	'paid',
@@ -105,6 +113,7 @@ CREATE TABLE orders (
 	total_price_pico BIGINT NOT NULL CHECK (total_price_pico > 0), -- Total price of order in piconero
 	delivery_method_id UUID REFERENCES delivery_methods(id) NOT NULL,
 	vendor_id UUID REFERENCES users(id) NOT NULL,
+	terms_of_service_id UUID REFERENCES terms_of_services(id) NOT NULL,
 	customer_id UUID REFERENCES users(id) NOT NULL,
 	num_extends INT NOT NULL DEFAULT 0 CHECK (num_extends >= 0), -- How many times AF timer has been extended
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(), -- Timestamps of order events
@@ -207,7 +216,6 @@ CREATE TABLE vendor_applications (
 CREATE TABLE vendor_licenses (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	price_paid_pico BIGINT NOT NULL CHECK(price_paid_pico >= 0),
-	vendor_info TEXT DEFAULT '' NOT NULL,
 	user_id UUID REFERENCES users(id) NOT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 	UNIQUE(user_id)

@@ -437,8 +437,8 @@ func (app *Application) HandleCheckPGP(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (app *Application) HandleUpdateVendorProfile(w http.ResponseWriter, r *http.Request) {
-	fd, err := processForm[form.UpdateVendorProfileForm](r, app.SessionManager, nil)
+func (app *Application) HandleUpdateTermsOfService(w http.ResponseWriter, r *http.Request) {
+	fd, err := processForm[form.UpdateTermsOfService](r, app.SessionManager, nil)
 	if err != nil {
 		app.clientError(w, http.StatusBadRequest)
 		return
@@ -455,15 +455,19 @@ func (app *Application) HandleUpdateVendorProfile(w http.ResponseWriter, r *http
 
 	user := app.loggedInUser(ctx)
 
-	if fd.Data.VendorInfo != "" {
+	if fd.Data.TermsOfService != "" {
 		err := app.Do(ctx, func(ctx context.Context, qtx *repo.Queries) error {
-			return vendor.UpdateInfo(ctx, qtx, vendor.UpdateInfoParams{ID: user.ID, VendorInfo: fd.Data.VendorInfo})
+			_, err := app.Repo().CreateTermsOfService(ctx, repo.CreateTermsOfServiceParams{
+				Content:  fd.Data.TermsOfService,
+				VendorID: user.ID,
+			})
+			return err
 		})
 		if err != nil {
 			app.serverError(w, r, err)
 			return
 		}
-		app.notifyUser(ctx, false, l.Translate("Vendor info is updated"))
+		app.notifyUser(ctx, false, l.Translate("Terms of service updated"))
 	}
 
 	http.Redirect(w, r, "/settings", http.StatusSeeOther)

@@ -79,12 +79,10 @@ templ Vendor(tc *TemplateContext, vendor *view.Vendor) {
 					</details>
 				</div>
 			</div>
-			if vendor.License.VendorInfo != "" {
-				<div class="form__field">
-					<label>{ tc.Translate("Vendor info") }</label>
-					<pre class="display-text bg">{ vendor.License.VendorInfo }</pre>
-				</div>
-			}
+			<div class="form__field">
+				<label>{ tc.Translate("Terms of service") }</label>
+				<pre class="display-text bg">{ vendor.TermsOfService.Content }</pre>
+			</div>
 		</div>
 	}
 }

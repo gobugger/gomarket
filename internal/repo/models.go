@@ -261,6 +261,7 @@ type Order struct {
 	TotalPricePico   int64
 	DeliveryMethodID uuid.UUID
 	VendorID         uuid.UUID
+	TermsOfServiceID uuid.UUID
 	CustomerID       uuid.UUID
 	NumExtends       int32
 	CreatedAt        time.Time
@@ -339,6 +340,13 @@ type Setting struct {
 	UpdatedAt time.Time
 }
 
+type TermsOfService struct {
+	ID        uuid.UUID
+	Content   string
+	VendorID  uuid.UUID
+	CreatedAt time.Time
+}
+
 type Ticket struct {
 	ID        uuid.UUID
 	Subject   string
@@ -387,7 +395,6 @@ type VendorApplication struct {
 type VendorLicense struct {
 	ID            uuid.UUID
 	PricePaidPico int64
-	VendorInfo    string
 	UserID        uuid.UUID
 	CreatedAt     time.Time
 }

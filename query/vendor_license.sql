@@ -9,12 +9,6 @@ INSERT INTO vendor_licenses (
 SELECT * FROM vendor_licenses
 WHERE user_id = $1;
 
--- name: UpdateVendorInfo :one
-UPDATE vendor_licenses
-SET vendor_info = $2
-WHERE id = $1
-RETURNING *;
-
 -- name: GetNumberOfVendorLicenses :one
 SELECT COUNT(*) FROM vendor_licenses;
 
@@ -22,3 +16,17 @@ SELECT COUNT(*) FROM vendor_licenses;
 SELECT 1
 FROM vendor_licenses
 WHERE user_id = $1;
+
+-- name: CreateTermsOfService :one
+INSERT INTO terms_of_services (
+	content, vendor_id
+) VALUES (
+	$1, $2
+) RETURNING *;
+
+-- name: GetTermsOfServiceForVendor :one
+SELECT * 
+FROM terms_of_services 
+WHERE vendor_id = $1
+ORDER BY created_at ASC
+LIMIT 1;

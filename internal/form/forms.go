@@ -166,8 +166,8 @@ type OrderChatForm struct {
 	Captcha
 }
 
-type UpdateVendorProfileForm struct {
-	VendorInfo string `schema:"info"`
+type UpdateTermsOfService struct {
+	TermsOfService string `schema:"tos"`
 	Captcha
 }
 
@@ -193,5 +193,5 @@ func init() {
 	gob.Register(SettingsForm{})
 	gob.Register(UpdateProductForm{})
 	gob.Register(OrderChatForm{})
-	gob.Register(UpdateVendorProfileForm{})
+	gob.Register(UpdateTermsOfService{})
 }

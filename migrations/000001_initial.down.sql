@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS reviews;
 DROP TABLE IF EXISTS order_invoices;
 DROP TABLE IF EXISTS order_items;
 DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS terms_of_services;
 DROP TABLE IF EXISTS cart_items;
 DROP TABLE IF EXISTS delivery_methods;
 DROP TABLE IF EXISTS price_tiers;

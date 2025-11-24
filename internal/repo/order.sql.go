@@ -19,7 +19,7 @@ SELECT
 	$1, $2, $3, $4, dm.vendor_id
 FROM delivery_methods AS dm
 WHERE dm.id = $4
-RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
+RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
 `
 
 type CreateOrderParams struct {
@@ -44,6 +44,7 @@ func (q *Queries) CreateOrder(ctx context.Context, arg CreateOrderParams) (Order
 		&i.TotalPricePico,
 		&i.DeliveryMethodID,
 		&i.VendorID,
+		&i.TermsOfServiceID,
 		&i.CustomerID,
 		&i.NumExtends,
 		&i.CreatedAt,
@@ -133,7 +134,7 @@ func (q *Queries) GetCustomerForOrder(ctx context.Context, id uuid.UUID) (User, 
 }
 
 const getOrder = `-- name: GetOrder :one
-SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
+SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
 WHERE id = $1
 `
 
@@ -147,6 +148,7 @@ func (q *Queries) GetOrder(ctx context.Context, id uuid.UUID) (Order, error) {
 		&i.TotalPricePico,
 		&i.DeliveryMethodID,
 		&i.VendorID,
+		&i.TermsOfServiceID,
 		&i.CustomerID,
 		&i.NumExtends,
 		&i.CreatedAt,
@@ -205,7 +207,7 @@ func (q *Queries) GetOrderItems(ctx context.Context, orderID uuid.UUID) ([]GetOr
 }
 
 const getOrdersByStatusXInvoiceStatus = `-- name: GetOrdersByStatusXInvoiceStatus :many
-SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at
+SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.terms_of_service_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at
 FROM order_invoices
 JOIN orders ON orders.id = order_invoices.order_id AND orders.status = $1::order_status
 JOIN invoices ON invoices.id = order_invoices.invoice_id AND invoices.status = $2::invoice_status
@@ -232,6 +234,7 @@ func (q *Queries) GetOrdersByStatusXInvoiceStatus(ctx context.Context, arg GetOr
 			&i.TotalPricePico,
 			&i.DeliveryMethodID,
 			&i.VendorID,
+			&i.TermsOfServiceID,
 			&i.CustomerID,
 			&i.NumExtends,
 			&i.CreatedAt,
@@ -252,7 +255,7 @@ func (q *Queries) GetOrdersByStatusXInvoiceStatus(ctx context.Context, arg GetOr
 }
 
 const getOrdersForCustomer = `-- name: GetOrdersForCustomer :many
-SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
+SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
 WHERE customer_id = $1
 `
 
@@ -272,6 +275,7 @@ func (q *Queries) GetOrdersForCustomer(ctx context.Context, customerID uuid.UUID
 			&i.TotalPricePico,
 			&i.DeliveryMethodID,
 			&i.VendorID,
+			&i.TermsOfServiceID,
 			&i.CustomerID,
 			&i.NumExtends,
 			&i.CreatedAt,
@@ -292,7 +296,7 @@ func (q *Queries) GetOrdersForCustomer(ctx context.Context, customerID uuid.UUID
 }
 
 const getOrdersForVendor = `-- name: GetOrdersForVendor :many
-SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at FROM orders
+SELECT orders.id, orders.status, orders.details, orders.total_price_pico, orders.delivery_method_id, orders.vendor_id, orders.terms_of_service_id, orders.customer_id, orders.num_extends, orders.created_at, orders.paid_at, orders.accepted_at, orders.dispatched_at, orders.finalized_at, orders.disputed_at FROM orders
 WHERE orders.vendor_id = $1
 `
 
@@ -312,6 +316,7 @@ func (q *Queries) GetOrdersForVendor(ctx context.Context, vendorID uuid.UUID) ([
 			&i.TotalPricePico,
 			&i.DeliveryMethodID,
 			&i.VendorID,
+			&i.TermsOfServiceID,
 			&i.CustomerID,
 			&i.NumExtends,
 			&i.CreatedAt,
@@ -332,7 +337,7 @@ func (q *Queries) GetOrdersForVendor(ctx context.Context, vendorID uuid.UUID) ([
 }
 
 const getOrdersWithStatus = `-- name: GetOrdersWithStatus :many
-SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
+SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at FROM orders
 WHERE status = $1
 `
 
@@ -352,6 +357,7 @@ func (q *Queries) GetOrdersWithStatus(ctx context.Context, status OrderStatus) (
 			&i.TotalPricePico,
 			&i.DeliveryMethodID,
 			&i.VendorID,
+			&i.TermsOfServiceID,
 			&i.CustomerID,
 			&i.NumExtends,
 			&i.CreatedAt,
@@ -372,7 +378,7 @@ func (q *Queries) GetOrdersWithStatus(ctx context.Context, status OrderStatus) (
 }
 
 const getOrdersWithStatuses = `-- name: GetOrdersWithStatuses :many
-SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
+SELECT id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
 FROM orders
 WHERE status = ANY($1::order_status[])
 `
@@ -393,6 +399,7 @@ func (q *Queries) GetOrdersWithStatuses(ctx context.Context, statuses []OrderSta
 			&i.TotalPricePico,
 			&i.DeliveryMethodID,
 			&i.VendorID,
+			&i.TermsOfServiceID,
 			&i.CustomerID,
 			&i.NumExtends,
 			&i.CreatedAt,
@@ -441,7 +448,7 @@ const updateOrderStatus = `-- name: UpdateOrderStatus :one
 UPDATE orders
 SET status = $2
 WHERE id = $1 AND status = ANY($3::order_status[])
-RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
+RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
 `
 
 type UpdateOrderStatusParams struct {
@@ -460,6 +467,7 @@ func (q *Queries) UpdateOrderStatus(ctx context.Context, arg UpdateOrderStatusPa
 		&i.TotalPricePico,
 		&i.DeliveryMethodID,
 		&i.VendorID,
+		&i.TermsOfServiceID,
 		&i.CustomerID,
 		&i.NumExtends,
 		&i.CreatedAt,

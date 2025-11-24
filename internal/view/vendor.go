@@ -2,13 +2,14 @@ package view
 
 import (
 	"context"
-	"github.com/google/uuid"
 	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/google/uuid"
 )
 
 type Vendor struct {
 	User               repo.User
 	License            repo.VendorLicense
+	TermsOfService     repo.TermsOfService
 	Rating             Rating
 	NumReviews         int
 	NumPendingDisputes int
@@ -25,6 +26,11 @@ func (pv VendorView) Get(ctx context.Context, q *repo.Queries, vendorID uuid.UUI
 	}
 
 	license, err := q.GetVendorLicenseForUser(ctx, vendorID)
+	if err != nil {
+		return Vendor{}, err
+	}
+
+	tos, err := q.GetTermsOfServiceForVendor(ctx, vendorID)
 	if err != nil {
 		return Vendor{}, err
 	}
@@ -56,6 +62,7 @@ func (pv VendorView) Get(ctx context.Context, q *repo.Queries, vendorID uuid.UUI
 	return Vendor{
 		User:               user,
 		License:            license,
+		TermsOfService:     tos,
 		Rating:             calculateRating2(reviews),
 		NumReviews:         len(reviews),
 		NumPendingDisputes: numPendingDisputes,

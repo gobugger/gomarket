@@ -2,22 +2,10 @@ package vendor
 
 import (
 	"context"
-	"github.com/google/uuid"
 	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/google/uuid"
 	"slices"
 )
-
-type UpdateInfoParams repo.UpdateVendorInfoParams
-
-func UpdateInfo(ctx context.Context, qtx *repo.Queries, p UpdateInfoParams) error {
-	l, err := qtx.GetVendorLicenseForUser(ctx, p.ID)
-	if err != nil {
-		return err
-	}
-
-	_, err = qtx.UpdateVendorInfo(ctx, repo.UpdateVendorInfoParams{ID: l.ID, VendorInfo: p.VendorInfo})
-	return err
-}
 
 type DeliveryMethod struct {
 	Description string
