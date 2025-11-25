@@ -76,7 +76,7 @@ const getTermsOfServiceForVendor = `-- name: GetTermsOfServiceForVendor :one
 SELECT id, content, vendor_id, created_at 
 FROM terms_of_services 
 WHERE vendor_id = $1
-ORDER BY created_at ASC
+ORDER BY created_at DESC
 LIMIT 1
 `
 

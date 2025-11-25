@@ -28,5 +28,5 @@ INSERT INTO terms_of_services (
 SELECT * 
 FROM terms_of_services 
 WHERE vendor_id = $1
-ORDER BY created_at ASC
+ORDER BY created_at DESC
 LIMIT 1;
