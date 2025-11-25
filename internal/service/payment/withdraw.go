@@ -17,7 +17,7 @@ var (
 	ErrWithdrawalAmountTooSmall   = errors.New("withdrawal amount is too small")
 )
 
-const WithdrawalFee float64 = 0.01
+const WithdrawalFee float64 = 0.001
 
 // Withdraws amount to destination address from users wallet
 // Retuns amount actually transferred after withdrawal fee or error

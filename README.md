@@ -1,15 +1,19 @@
 # GoMarket
 
-A private multi-vendor marketplace written in Go.
+A privacy-first multi-vendor marketplace platform built with Go and PostgreSQL.
+
+<p align="center">
+  <img src="static/gomarket.png" title="home screen">
+</p>
 
 **🔗 Demo:** [go-market.dev](https://go-market.dev) (connected to Monero stagenet)
 
 ## Project Overview
 
-GoMarket is a privacy-focused multi-vendor marketplace written in Go. It includes wallets and invoices, escrow, dispute resolution, vendor licenses and much more. Works with strict browser security settings.
+GoMarket is a privacy-first multi-vendor marketplace platform built with Go and PostgreSQL.
 
 ⚠️ **Under construction**
-This software is in alpha stage and is missing necessary features and requires more review and testing.
+This software is in pre-alpha stage, so features are incomplete and bugs are expected.
 
 **Key Highlights:**
 - **Monero-native payments** - Privacy-focused transactions via Moneropay integration
@@ -48,11 +52,11 @@ This software is in alpha stage and is missing necessary features and requires m
 
 ## Architecture
 
-GoMarket follows clean architecture principles:
+Architecture has evolved from the book "Let's Go" by Alex Edwards.
 
 **Layered Structure:**
 ```
-Repository Layer (sqlc) → Service Layer → Application Layer
+Repository Layer (sqlc) -> Service Layer -> Application Layer <- Views Layer
 ```
 
 **Technology Stack:**

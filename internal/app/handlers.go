@@ -997,7 +997,11 @@ func (app *Application) HandleWithdrawal(w http.ResponseWriter, r *http.Request)
 		return err
 	})
 
-	if errors.Is(err, payment.ErrNotEnoughBalanceToWithdraw) {
+	if errors.Is(err, payment.ErrWithdrawalAmountTooSmall) {
+		app.notifyUser(ctx, true, l.Translate("Withdrawal amount is too small"))
+		http.Redirect(w, r, "/wallet", http.StatusSeeOther)
+		return
+	} else if errors.Is(err, payment.ErrNotEnoughBalanceToWithdraw) {
 		app.notifyUser(ctx, true, l.Translate("Not enough balance to withdraw."))
 		http.Redirect(w, r, "/wallet", http.StatusSeeOther)
 		return

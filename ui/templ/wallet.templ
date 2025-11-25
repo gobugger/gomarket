@@ -3,6 +3,7 @@ package ui
 import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/service/currency"
+	"github.com/gobugger/gomarket/internal/service/payment"
 )
 
 templ Wallet(tc *TemplateContext, depositAddress string) {
@@ -48,7 +49,7 @@ templ Wallet(tc *TemplateContext, depositAddress string) {
 					<p class="highlight--important">
 						{ tc.Translate("Enter a monero address where you want to withdraw your funds.") }
 						<br/>
-						{ tc.Translate("We collect an 0.01 XMR fee from each withdrawal to prevent spam.") }
+						{ tc.Translate("We collect an %f XMR fee from each withdrawal to prevent spam.", payment.WithdrawalFee) }
 						<br/>
 						{ tc.Translate("DO NOT withdraw funds to another wallet on this platform!") }
 						<br/>
