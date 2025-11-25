@@ -178,7 +178,7 @@ templ orderChat(tc *TemplateContext, order *view.Order) {
 					</pre>
 					if tc.UID == order.Order.CustomerID && item.Offer.Status == "pending" {
 						<div class="form__field--right">
-							<div class="row gap--s">
+							<div class="row gap">
 								<button class="btn-tiny" type="submit" name="accept" value="true">{ tc.Translate("Accept") }</button>
 								<button class="btn-tiny" type="submit">{ tc.Translate("Decline") }</button>
 							</div>
@@ -320,7 +320,7 @@ templ orderActionFinalize(tc *TemplateContext, order *view.Order) {
 				{ tc.Translate("You can extend the auto-finalize-time by 7-days.") }
 			</p>
 		</div>
-		<div class="form__field">
+		<div class="form__field gap">
 			<a class="btn-tiny w100" href={ fmt.Sprintf("/orders/review?id=%s", order.Order.ID.String()) } title={ tc.Translate("review your order") }>{ tc.Translate("Review") }</a>
 			if order.CanExtend {
 				<form class="w100" action="/orders/extend" method="post">

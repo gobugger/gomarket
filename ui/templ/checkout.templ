@@ -25,7 +25,6 @@ templ Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) {
 			<div class="form__field h100">
 				<div class="col">
 					<label class="m0" for="details">{ tc.Translate("details") }</label>
-					<p class="text--small mb0">{ tc.Translate("Use your real address, with the same format as below.") }</p>
 					<p class="text--small mb-s">{ tc.Translate("Unencrypted details are automatically encrypted using vendors key.") }</p>
 				</div>
 				<textarea
@@ -33,7 +32,7 @@ templ Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) {
 					id="details"
 					name="details"
 					spellcheck="false"
-					placeholder="Mary Jane&#10;Surfers paradise 4 A 20&#10;4200 Brazil"
+					placeholder="Firstname Lastname&#10;Address&#10;Postal code Country"
 					required
 				></textarea>
 			</div>
