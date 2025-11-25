@@ -485,7 +485,7 @@ func Settings(tc *TemplateContext,
 				return templ_7745c5c3_Err
 			}
 			if tc.AuthLevel == AuthLevelVendor {
-				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 44, "<form class=\"form--basic col mw-m\" action=\"settings/profile\" method=\"post\">")
+				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 44, "<form class=\"form--basic col mw-m\" action=\"settings/tos\" method=\"post\">")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -498,9 +498,9 @@ func Settings(tc *TemplateContext,
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var25 string
-				templ_7745c5c3_Var25, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Update vendor profile"))
+				templ_7745c5c3_Var25, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Update terms of service"))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 128, Col: 49}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 128, Col: 51}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var25))
 				if templ_7745c5c3_Err != nil {
@@ -524,9 +524,9 @@ func Settings(tc *TemplateContext,
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var27 string
-				templ_7745c5c3_Var27, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Your terms of service"))
+				templ_7745c5c3_Var27, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Terms of service is used to resolve disputes"))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 133, Col: 74}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/settings.templ`, Line: 133, Col: 97}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var27))
 				if templ_7745c5c3_Err != nil {

@@ -1,9 +1,9 @@
 -- name: CreateOrder :one
 INSERT INTO orders (
-	details, total_price_pico, customer_id, delivery_method_id, vendor_id
+	details, total_price_pico, customer_id, delivery_method_id, vendor_id, terms_of_service_id
 )
 SELECT
-	$1, $2, $3, $4, dm.vendor_id
+	$1, $2, $3, $4, dm.vendor_id, $5
 FROM delivery_methods AS dm
 WHERE dm.id = $4
 RETURNING *;

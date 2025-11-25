@@ -67,6 +67,11 @@ func Create(ctx context.Context, qtx *repo.Queries, p CreateParams) (repo.Order,
 
 	totalXMR := currency.Fiat2XMR(currency.DefaultCurrency, total)
 
+	tos, err := qtx.GetTermsOfServiceForVendor(ctx, dm.VendorID)
+	if err != nil {
+		return repo.Order{}, err
+	}
+
 	order, err := qtx.CreateOrder(
 		ctx,
 		repo.CreateOrderParams{
@@ -74,6 +79,7 @@ func Create(ctx context.Context, qtx *repo.Queries, p CreateParams) (repo.Order,
 			CustomerID:       p.CustomerID,
 			TotalPricePico:   totalXMR,
 			Details:          p.Details,
+			TermsOfServiceID: tos.ID,
 		})
 	if err != nil {
 		return repo.Order{}, fmt.Errorf("failed to create order: %w\n", err)

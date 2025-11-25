@@ -6,16 +6,18 @@ A private multi-vendor marketplace written in Go.
 
 ## Project Overview
 
-GoMarket is a privacy-first multi-vendor marketplace written in Go on top of PostgreSQL. Designed for privacy and security, it includes wallets and invoices, escrow, dispute resolution,vendor licenses and much more. Works with strict browser security settings.
+GoMarket is a privacy-focused multi-vendor marketplace written in Go. It includes wallets and invoices, escrow, dispute resolution, vendor licenses and much more. Works with strict browser security settings.
 
 ⚠️ **Under construction**
-This software is in alpha stage and many components are not properly implemented yet.
+This software is in alpha stage and is missing necessary features and requires more review and testing.
 
 **Key Highlights:**
 - **Monero-native payments** - Privacy-focused transactions via Moneropay integration
 - **Multi-vendor support** - Complete marketplace infrastructure with vendor applications
 - **Wallets and invoices** - Both wallets and "walletless" payments supported
 - **Zero JavaScript architecture** - Enhanced security, works with JS disabled
+- **Localized** - Supports multiple languages and currencies
+- **Mobile friendly UI**
 - **Built with Go** - Leveraging Go's performance, safety, and simplicity
 
 ## Key Features
@@ -29,7 +31,6 @@ This software is in alpha stage and many components are not properly implemented
 - Monero payments via Moneropay integration
 - Both wallet and walletless payments.
 - Built-in escrow system with order flow: pending → paid → accepted → dispatched → finalized/disputed → settled
-- Multiple languages and currencies supported.
 
 **Security & Privacy:**
 - Zero JavaScript
@@ -57,7 +58,7 @@ Repository Layer (sqlc) → Service Layer → Application Layer
 **Technology Stack:**
 - **Backend:** Go with Chi router
 - **Database:** PostgreSQL with sqlc for type-safe queries
-- **Templating:** templ for compile-time HTML generation
+- **Templating:** templ for compile-time HTML generation to Go code
 - **Migrations:** go-migrate for database version control
 - **Storage:** S3-compatible object storage
 - **Payments:** Moneropay payment processor
@@ -124,10 +125,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Contributions are welcome!
 
 **Ways to contribute**
-- Report bugs and security issues (responsibly)
 - Test and provide feedback
-- Submit pull requests
+- Report bugs and security issues (responsibly)
 - Write documentation
+- Submit pull requests
 
 **Support development**
 - XMR: `82gQdEdeftLC4hDUPfMkFs4XyY3Qax5NCMbSy5UjnSpgHLfaxqBT6voBvhTaBhksvtVQj5zpzxh5X4p3W2VrsTgM9EkRJ96`
@@ -136,6 +137,10 @@ Contributions are welcome!
 </div>
 
 ## Contact & Links
+
+**Contacts:**
+- Session: `059572d20e3da1c8c6f19655c93cf515a50cf6d62e324c6bff089a3d0f8bdc5a27`
+- Email: gobugger (at) proton.me
 
 **Resources:**
 - 🌐 **Demo:** [go-market.dev](https://go-market.dev) (stagenet)

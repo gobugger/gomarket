@@ -22,3 +22,8 @@ run_market:
 run_admin:
 	$(MAKE) setup
 	go run ./cmd/admin --addr=0.0.0.0:4002 --dsn=postgresql://$(DB_USER):$(DB_PASS)@localhost:5432/$(DB_NAME)?sslmode=disable --minio-endpoint=localhost:9000 --dev=true
+
+run_seed:
+	$(MAKE) setup
+	go run ./cmd/seed --addr=0.0.0.0:4000 --dsn=postgresql://$(DB_USER):$(DB_PASS)@localhost:5432/$(DB_NAME)?sslmode=disable --minio-endpoint=localhost:9000 --dev=true --entry-guard=false
+

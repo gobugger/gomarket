@@ -11,6 +11,7 @@ import (
 	"github.com/gobugger/gomarket/internal/route"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/payment"
+	"github.com/gobugger/gomarket/internal/util"
 	"github.com/gobugger/gomarket/internal/util/db"
 	"github.com/gobugger/gomarket/internal/util/uow"
 	"github.com/gobugger/gomarket/internal/worker"
@@ -20,7 +21,6 @@ import (
 	"github.com/minio/minio-go/v7/pkg/credentials"
 	"github.com/riverqueue/river"
 	"github.com/riverqueue/river/riverdriver/riverpgxv5"
-	"github.com/riverqueue/river/rivermigrate"
 	"log/slog"
 	"net/http"
 	"os"
@@ -125,14 +125,7 @@ func main() {
 		paymentProcessor = processor.NewMoneropayClient(config.MoneropayURL)
 	}
 
-	migrator, err := rivermigrate.New(riverpgxv5.New(db), nil)
-	if err != nil {
-		slog.Error("failed to migrate river", slog.Any("error", err))
-		os.Exit(1)
-	}
-
-	_, err = migrator.Migrate(ctx, rivermigrate.DirectionUp, nil)
-	if err != nil {
+	if err := util.RiverMigrate(ctx, db); err != nil {
 		slog.Error("failed to migrate river", slog.Any("error", err))
 		os.Exit(1)
 	}

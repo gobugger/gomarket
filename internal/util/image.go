@@ -46,7 +46,7 @@ func TransformImage(img image.Image, width, height int) image.Image {
 func SaveImage(ctx context.Context, client *minio.Client, bucketName, objectName string, img image.Image) error {
 	buf := bytes.Buffer{}
 
-	if err := webp.Encode(&buf, img, nil); err != nil {
+	if err := webp.Encode(&buf, img, &webp.Options{Lossless: true, Quality: webp.DefaulQuality, Exact: true}); err != nil {
 		return err
 	}
 

@@ -13,10 +13,10 @@ import (
 
 const createOrder = `-- name: CreateOrder :one
 INSERT INTO orders (
-	details, total_price_pico, customer_id, delivery_method_id, vendor_id
+	details, total_price_pico, customer_id, delivery_method_id, vendor_id, terms_of_service_id
 )
 SELECT
-	$1, $2, $3, $4, dm.vendor_id
+	$1, $2, $3, $4, dm.vendor_id, $5
 FROM delivery_methods AS dm
 WHERE dm.id = $4
 RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, terms_of_service_id, customer_id, num_extends, created_at, paid_at, accepted_at, dispatched_at, finalized_at, disputed_at
@@ -27,6 +27,7 @@ type CreateOrderParams struct {
 	TotalPricePico   int64
 	CustomerID       uuid.UUID
 	DeliveryMethodID uuid.UUID
+	TermsOfServiceID uuid.UUID
 }
 
 func (q *Queries) CreateOrder(ctx context.Context, arg CreateOrderParams) (Order, error) {
@@ -35,6 +36,7 @@ func (q *Queries) CreateOrder(ctx context.Context, arg CreateOrderParams) (Order
 		arg.TotalPricePico,
 		arg.CustomerID,
 		arg.DeliveryMethodID,
+		arg.TermsOfServiceID,
 	)
 	var i Order
 	err := row.Scan(
