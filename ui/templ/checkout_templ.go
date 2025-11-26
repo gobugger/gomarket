@@ -161,33 +161,20 @@ func Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) templ.
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "</label><p class=\"text--small mb0\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "</label><p class=\"text--small mb-s\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var10 string
-			templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Use your real address, with the same format as below."))
+			templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Unencrypted details are automatically encrypted using vendors key."))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/checkout.templ`, Line: 28, Col: 103}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/checkout.templ`, Line: 28, Col: 117}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "</p><p class=\"text--small mb-s\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			var templ_7745c5c3_Var11 string
-			templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Unencrypted details are automatically encrypted using vendors key."))
-			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/checkout.templ`, Line: 29, Col: 117}
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "</p></div><textarea class=\"fill\" id=\"details\" name=\"details\" spellcheck=\"false\" placeholder=\"Mary Jane&#10;Surfers paradise 4 A 20&#10;4200 Brazil\" required></textarea></div><div class=\"form__field--right\"><div class=\"col\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "</p></div><textarea class=\"fill\" id=\"details\" name=\"details\" spellcheck=\"false\" placeholder=\"Firstname Lastname&#10;Address&#10;Postal code Country\" required></textarea></div><div class=\"form__field--right\"><div class=\"col\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -195,7 +182,7 @@ func Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) templ.
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "</div></div></form>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "</div></div></form>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

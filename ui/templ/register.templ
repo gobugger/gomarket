@@ -1,6 +1,6 @@
 package ui
 
-templ Register(tc *TemplateContext, form Form) {
+templ Register(tc *TemplateContext) {
 	@Layout(tc) {
 		<form class="form--basic mw-m" action="/register" method="post">
 			@templ.Raw(tc.CsrfField)
@@ -14,9 +14,10 @@ templ Register(tc *TemplateContext, form Form) {
 					class="form__input"
 					type="text"
 					name="username"
-					value={ DefaultValue(form, "username") }
+					value={ DefaultValue(tc.Form, "username") }
 					required
 				/>
+				@ffError(tc.Form, "username")
 			</div>
 			<div class="form__field">
 				<label for="password">{ tc.Translate("password") }</label>
@@ -25,9 +26,10 @@ templ Register(tc *TemplateContext, form Form) {
 					class="form__input"
 					type="password"
 					name="password"
-					value={ DefaultValue(form, "password") }
+					value={ DefaultValue(tc.Form, "password") }
 					required
 				/>
+				@ffError(tc.Form, "password")
 			</div>
 			<div class="form__field">
 				<label for="passwordCheck">{ tc.Translate("password check") }</label>
@@ -36,15 +38,17 @@ templ Register(tc *TemplateContext, form Form) {
 					class="form__input"
 					type="password"
 					name="password_check"
-					value={ DefaultValue(form, "password_check") }
+					value={ DefaultValue(tc.Form, "password_check") }
 					required
 				/>
+				@ffError(tc.Form, "password_check")
 			</div>
 			<div class="row-separated w100 pad5">
 				<div class="col-end">
 					<a class="text--small" href="/login">{ tc.Translate("Already have an account?") }</a>
 				</div>
 				@Captcha(tc)
+				@ffError(tc.Form, "captcha_answer")
 			</div>
 		</form>
 	}

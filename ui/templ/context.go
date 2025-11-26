@@ -2,8 +2,8 @@ package ui
 
 import (
 	"encoding/gob"
-	"github.com/google/uuid"
 	"github.com/gobugger/gomarket/internal/form"
+	"github.com/google/uuid"
 )
 
 type Form struct {
@@ -57,6 +57,7 @@ type TemplateContext struct {
 	Stats                  SiteStats
 	CsrfField              string
 	CaptchaSrc             string
+	Form                   Form
 }
 
 func (tc *TemplateContext) IsAuthenticated() bool {

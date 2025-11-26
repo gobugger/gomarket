@@ -86,6 +86,7 @@ func (app *Application) newTemplateContext(req *http.Request) (*ui.TemplateConte
 	tc.Config.Onion = config.OnionAddr
 	tc.CsrfField = string(csrf.TemplateField(req))
 	tc.CaptchaSrc = captcha.TemplFieldSrc(ctx, app.SessionManager)
+	tc.Form = popForm(ctx, app.SessionManager)
 
 	return tc, nil
 }

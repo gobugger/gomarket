@@ -4,13 +4,13 @@ import (
 	"context"
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/google/uuid"
 	"github.com/gobugger/gomarket/internal/captcha"
 	"github.com/gobugger/gomarket/internal/form"
 	"github.com/gobugger/gomarket/internal/localizer"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/ui/templ"
+	"github.com/google/uuid"
 	"log/slog"
 	"net/http"
 	"net/url"
@@ -142,8 +142,14 @@ func putForm[T any](ctx context.Context, sessionManager *scs.SessionManager, fd 
 }
 
 func popForm(ctx context.Context, sessionManager *scs.SessionManager) ui.Form {
-	form, _ := sessionManager.Pop(ctx, "uiForm").(ui.Form)
-	return form
+	f, ok := sessionManager.Pop(ctx, "uiForm").(ui.Form)
+	if !ok {
+		return ui.Form{
+			Values:      make(map[string]string),
+			FieldErrors: make(form.FieldErrors),
+		}
+	}
+	return f
 }
 
 func getLoggerFromRequest(req *http.Request) *slog.Logger {

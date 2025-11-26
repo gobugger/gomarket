@@ -1,6 +1,6 @@
 package ui
 
-templ Login(tc *TemplateContext, form Form) {
+templ Login(tc *TemplateContext) {
 	@Layout(tc) {
 		<form class="form--basic mw-m" action="/login" method="post">
 			@templ.Raw(tc.CsrfField)
@@ -14,10 +14,10 @@ templ Login(tc *TemplateContext, form Form) {
 					class="form__input"
 					type="text"
 					name="username"
-					value={ DefaultValue(form, "username") }
+					value={ DefaultValue(tc.Form, "username") }
 					required
 				/>
-				@ffError(form, "username")
+				@ffError(tc.Form, "username")
 			</div>
 			<div class="form__field">
 				<label for="password">{ tc.Translate("password") }</label>
@@ -26,17 +26,17 @@ templ Login(tc *TemplateContext, form Form) {
 					class="form__input"
 					type="password"
 					name="password"
-					value={ DefaultValue(form, "password") }
+					value={ DefaultValue(tc.Form, "password") }
 					required
 				/>
-				@ffError(form, "password")
+				@ffError(tc.Form, "password")
 			</div>
 			<div class="row-separated w100 pad5">
 				<div class="col-end">
 					<a class="text--small" href="/login">{ tc.Translate("Create new account") }</a>
 				</div>
 				@Captcha(tc)
-				@ffError(form, "captcha_answer")
+				@ffError(tc.Form, "captcha_answer")
 			</div>
 		</form>
 	}

@@ -82,7 +82,7 @@ func (app *Application) HandleJail(w http.ResponseWriter, r *http.Request) {
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/jail", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -129,9 +129,7 @@ func (app *Application) Register(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	form := popForm(r.Context(), app.SessionManager)
-
-	ui.Register(tc, form).Render(r.Context(), w)
+	ui.Register(tc).Render(r.Context(), w)
 }
 
 func (app *Application) HandleRegister(w http.ResponseWriter, r *http.Request) {
@@ -147,7 +145,7 @@ func (app *Application) HandleRegister(w http.ResponseWriter, r *http.Request) {
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/register", http.StatusSeeOther)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -185,8 +183,7 @@ func (app *Application) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	f := popForm(r.Context(), app.SessionManager)
-	ui.Login(tc, f).Render(r.Context(), w)
+	ui.Login(tc).Render(r.Context(), w)
 }
 
 func (app *Application) HandleLogin(w http.ResponseWriter, r *http.Request) {
@@ -195,10 +192,11 @@ func (app *Application) HandleLogin(w http.ResponseWriter, r *http.Request) {
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/login", http.StatusSeeOther)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -257,10 +255,11 @@ func (app *Application) Handle2FA(w http.ResponseWriter, r *http.Request) {
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/login", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -303,10 +302,11 @@ func (app *Application) HandleChangePassword(w http.ResponseWriter, r *http.Requ
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/settings", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -342,10 +342,11 @@ func (app *Application) HandleUpdatePGP(w http.ResponseWriter, r *http.Request) 
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/settings", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -374,10 +375,11 @@ func (app *Application) HandleCheckPGP(w http.ResponseWriter, r *http.Request) {
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/settings", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -443,10 +445,11 @@ func (app *Application) HandleUpdateTermsOfService(w http.ResponseWriter, r *htt
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}
+	defer fd.Close()
 
 	if fd.HasErrors() {
 		putForm(r.Context(), app.SessionManager, fd)
-		http.Redirect(w, r, "/settings", http.StatusBadRequest)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -474,7 +477,6 @@ func (app *Application) HandleUpdateTermsOfService(w http.ResponseWriter, r *htt
 }
 
 func (app *Application) ViewCreateListing(w http.ResponseWriter, r *http.Request) {
-	//	fd := popForm(r.Context(), app.SessionManager)
 	categories, err := app.Repo().GetCategories(r.Context())
 	if err != nil {
 		app.serverError(w, r, err)
@@ -502,7 +504,7 @@ func (app *Application) HandleCreateListing(w http.ResponseWriter, r *http.Reque
 
 	if fd.HasErrors() {
 		putForm(ctx, app.SessionManager, fd)
-		http.Redirect(w, r, "/create-listing", http.StatusSeeOther)
+		app.redirectBack(w, r)
 		return
 	}
 
@@ -674,6 +676,7 @@ func (app *Application) HandleUpdateCart(w http.ResponseWriter, r *http.Request)
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -717,6 +720,7 @@ func (app *Application) HandleDeleteCart(w http.ResponseWriter, r *http.Request)
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -749,6 +753,7 @@ func (app *Application) HandleProductAction(w http.ResponseWriter, r *http.Reque
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -790,6 +795,7 @@ func (app *Application) HandleOrder(w http.ResponseWriter, r *http.Request) {
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -856,6 +862,7 @@ func (app *Application) HandleOrderChat(w http.ResponseWriter, r *http.Request) 
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -983,6 +990,7 @@ func (app *Application) HandleWithdrawal(w http.ResponseWriter, r *http.Request)
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1027,6 +1035,7 @@ func (app *Application) HandleCancelOrder(w http.ResponseWriter, r *http.Request
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1092,6 +1101,7 @@ func (app *Application) HandleReview(w http.ResponseWriter, r *http.Request) {
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1148,6 +1158,7 @@ func (app *Application) HandleExtend(w http.ResponseWriter, r *http.Request) {
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1188,6 +1199,7 @@ func (app *Application) HandleDispute(w http.ResponseWriter, r *http.Request) {
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1224,6 +1236,7 @@ func (app *Application) HandleDisputeOffer(w http.ResponseWriter, r *http.Reques
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1262,6 +1275,7 @@ func (app *Application) HandleDisputeOfferResponse(w http.ResponseWriter, r *htt
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1328,6 +1342,7 @@ func (app *Application) HandleVendorApplication(w http.ResponseWriter, r *http.R
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1405,6 +1420,7 @@ func (app *Application) HandleProcessOrder(w http.ResponseWriter, r *http.Reques
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1454,6 +1470,7 @@ func (app *Application) HandleDeliver(w http.ResponseWriter, r *http.Request) {
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1495,6 +1512,7 @@ func (app *Application) HandleUpdateProduct(w http.ResponseWriter, r *http.Reque
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1561,6 +1579,7 @@ func (app *Application) HandleCreateTicket(w http.ResponseWriter, r *http.Reques
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1643,6 +1662,7 @@ func (app *Application) HandleTicketResponse(w http.ResponseWriter, r *http.Requ
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1715,6 +1735,7 @@ func (app *Application) HandleUpdateSettings(w http.ResponseWriter, r *http.Requ
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1751,6 +1772,7 @@ func (app *Application) HandleUpdateDeliveryMethods(w http.ResponseWriter, r *ht
 	defer fd.Close()
 
 	if fd.HasErrors() {
+		putForm(r.Context(), app.SessionManager, fd)
 		app.redirectBack(w, r)
 		return
 	}
@@ -1838,8 +1860,8 @@ func (app *Application) HandleDeleteNotification(w http.ResponseWriter, r *http.
 	defer fd.Close()
 
 	if fd.HasErrors() {
-		app.SessionManager.Put(r.Context(), "formData", fd)
-		http.Redirect(w, r, "/notifications", http.StatusSeeOther)
+		putForm(r.Context(), app.SessionManager, fd)
+		app.redirectBack(w, r)
 		return
 	}
 

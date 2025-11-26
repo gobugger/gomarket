@@ -804,7 +804,7 @@ func orderChat(tc *TemplateContext, order *view.Order) templ.Component {
 					return templ_7745c5c3_Err
 				}
 				if tc.UID == order.Order.CustomerID && item.Offer.Status == "pending" {
-					templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 64, "<div class=\"form__field--right\"><div class=\"row gap--s\"><button class=\"btn-tiny\" type=\"submit\" name=\"accept\" value=\"true\">")
+					templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 64, "<div class=\"form__field--right\"><div class=\"row gap\"><button class=\"btn-tiny\" type=\"submit\" name=\"accept\" value=\"true\">")
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -1466,7 +1466,7 @@ func orderActionFinalize(tc *TemplateContext, order *view.Order) templ.Component
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 113, "</p></div><div class=\"form__field\"><a class=\"btn-tiny w100\" href=\"")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 113, "</p></div><div class=\"form__field gap\"><a class=\"btn-tiny w100\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
