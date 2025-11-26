@@ -270,4 +270,7 @@ func init() {
 
 	_validator = validator.New()
 	_validator.RegisterValidation("location", location)
+	_validator.RegisterValidation("xmr_address", xmrAddress)
+	_validator.RegisterValidation("locale", locale)
+	_validator.RegisterValidation("currency", currency)
 }
