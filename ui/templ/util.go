@@ -2,7 +2,7 @@ package ui
 
 import (
 	"fmt"
-	"github.com/gobugger/gomarket/internal/localizer"
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/qrcode"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
@@ -27,7 +27,7 @@ func (tc *TemplateContext) Translate(data any, args ...any) string {
 		return "TRANSLATION ERROR"
 	}
 
-	l, _ := localizer.Get(tc.Settings.Lang)
+	l, _ := globalize.Get(tc.Settings.Lang)
 	return l.Translate(message, args...)
 }
 
@@ -88,7 +88,7 @@ func FmtDuration(t time.Duration) string {
 }
 
 func (td *TemplateContext) FmtSince(t time.Time) string {
-	l, _ := localizer.Get(td.Settings.Lang)
+	l, _ := globalize.Get(td.Settings.Lang)
 
 	since := time.Since(t)
 	if since < 0 {

@@ -9,9 +9,9 @@ import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
 import (
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
-	"github.com/gobugger/gomarket/internal/translations"
 	"strconv"
 )
 
@@ -202,7 +202,7 @@ func Settings(tc *TemplateContext,
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			for _, lang := range translations.Locales() {
+			for _, lang := range globalize.Locales() {
 				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "<option value=\"")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err

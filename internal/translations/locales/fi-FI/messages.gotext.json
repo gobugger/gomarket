@@ -4,87 +4,104 @@
       {
         "id": "Failed to open the gate: invalid missing characters",
         "message": "Failed to open the gate: invalid missing characters",
-        "translation": "Porttia ei voitu avata: virheellisiä puuttuvia merkkejä"
+        "translation": "Porttia ei voitu avata: virheellisiä puuttuvia merkkejä",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:102:41"
       },
       {
         "id": "This username is already in use",
         "message": "This username is already in use",
-        "translation": "Tämä käyttäjänimi on jo käytössä"
+        "translation": "Tämä käyttäjänimi on jo käytössä",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:162:41"
       },
       {
         "id": "Invalid PGP key",
         "message": "Invalid PGP key",
-        "translation": "Virheellinen PGP-avain"
+        "translation": "Virheellinen PGP-avain",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:421:42"
       },
       {
         "id": "Registered successfully",
         "message": "Registered successfully",
-        "translation": "Rekisteröinti onnistui"
+        "translation": "Rekisteröinti onnistui",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:175:40"
       },
       {
         "id": "Invalid credentials",
         "message": "Invalid credentials",
-        "translation": "Virheelliset tunnistetiedot"
+        "translation": "Virheelliset tunnistetiedot",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:327:41"
       },
       {
         "id": "Your account is banned",
         "message": "Your account is banned",
-        "translation": "Tilisi on estetty"
+        "translation": "Tilisi on estetty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:219:41"
       },
       {
         "id": "Invalid 2FA token",
         "message": "Invalid 2FA token",
-        "translation": "Virheellinen 2FA-tunnus"
+        "translation": "Virheellinen 2FA-tunnus",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:437:48"
       },
       {
         "id": "Password changed",
         "message": "Password changed",
-        "translation": "Salasana vaihdettu"
+        "translation": "Salasana vaihdettu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:335:40"
       },
       {
         "id": "You can't update to your current key",
         "message": "You can't update to your current key",
-        "translation": "Et voi päivittää nykyiseen avaimeseesi"
+        "translation": "Et voi päivittää nykyiseen avaimeseesi",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:407:49"
       },
       {
         "id": "PGP key is set",
         "message": "PGP key is set",
-        "translation": "PGP-avain on asetettu"
+        "translation": "PGP-avain on asetettu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:430:42"
       },
       {
         "id": "PGP Public key is updated",
         "message": "PGP Public key is updated",
-        "translation": "PGP-julkinen avain on päivitetty"
+        "translation": "PGP-julkinen avain on päivitetty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:432:42"
       },
       {
-        "id": "Vendor info is updated",
-        "message": "Vendor info is updated",
-        "translation": "Myyjän tiedot on päivitetty"
+        "id": "Terms of service updated",
+        "message": "Terms of service updated",
+        "translation": "Käyttöehdot päivitetty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:473:41"
       },
       {
         "id": "Listing created",
         "message": "Listing created",
-        "translation": "Ilmoitus luotu"
+        "translation": "Ilmoitus luotu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:541:40"
       },
       {
         "id": "Cart updated",
         "message": "Cart updated",
-        "translation": "Ostoskori päivitetty"
+        "translation": "Ostoskori päivitetty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:710:40"
       },
       {
         "id": "cart deleted",
         "message": "cart deleted",
-        "translation": "ostoskori poistettu"
+        "translation": "ostoskori poistettu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:743:40"
       },
       {
         "id": "You can't order with a vendor account",
         "message": "You can't order with a vendor account",
-        "translation": "Et voi tilata myyjätililtä"
+        "translation": "Et voi tilata myyjätililtä",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:808:48"
       },
       {
         "id": "You don't have enough balance for this order",
         "message": "You don't have enough balance for this order",
-        "translation": "Sinulla ei ole tarpeeksi saldoa tätä tilausta varten"
+        "translation": "Sinulla ei ole tarpeeksi saldoa tätä tilausta varten",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:835:49"
       },
       {
         "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
@@ -99,22 +116,32 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:848:49"
       },
       {
         "id": "Order created",
         "message": "Order created",
-        "translation": "Tilaus luotu"
+        "translation": "Tilaus luotu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:850:49"
+      },
+      {
+        "id": "Withdrawal amount is too small",
+        "message": "Withdrawal amount is too small",
+        "translation": "Nostomäärä on liian pieni",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1009:40"
       },
       {
         "id": "Not enough balance to withdraw.",
         "message": "Not enough balance to withdraw.",
-        "translation": "Ei tarpeeksi saldoa nostettavaksi."
+        "translation": "Ei tarpeeksi saldoa nostettavaksi.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1013:40"
       },
       {
         "id": "You can't withdraw to your own account",
         "message": "You can't withdraw to your own account",
-        "translation": "Et voi nostaa omalle tilillesi"
+        "translation": "Et voi nostaa omalle tilillesi",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1017:40"
       },
       {
         "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
@@ -129,17 +156,20 @@
             "argNum": 1,
             "expr": "currency.XMR2Decimal(amount)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1025:40"
       },
       {
         "id": "Order cancelled",
         "message": "Order cancelled",
-        "translation": "Tilaus peruttu"
+        "translation": "Tilaus peruttu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1066:40"
       },
       {
         "id": "Review created",
         "message": "Review created",
-        "translation": "Arvostelu luotu"
+        "translation": "Arvostelu luotu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1148:48"
       },
       {
         "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
@@ -154,7 +184,8 @@
             "argNum": 1,
             "expr": "5"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1179:48"
       },
       {
         "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
@@ -169,12 +200,14 @@
             "argNum": 1,
             "expr": "12"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1181:48"
       },
       {
         "id": "AF timer already extended to maximum.",
         "message": "AF timer already extended to maximum.",
-        "translation": "AF-ajastinta on jo pidennetty maksimiin."
+        "translation": "AF-ajastinta on jo pidennetty maksimiin.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1183:48"
       },
       {
         "id": "AF timer extended by {Duration} days",
@@ -189,37 +222,44 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1189:48"
       },
       {
         "id": "Order disputed",
         "message": "Order disputed",
-        "translation": "Tilausta kiistetään"
+        "translation": "Tilausta kiistetään",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1226:40"
       },
       {
         "id": "2FA needs to be enabled for vendors",
         "message": "2FA needs to be enabled for vendors",
-        "translation": "2FA on otettava käyttöön myyjille"
+        "translation": "2FA on otettava käyttöön myyjille",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1356:40"
       },
       {
         "id": "Vendor accounts can't have previous orders. Please create a new account.",
         "message": "Vendor accounts can't have previous orders. Please create a new account.",
-        "translation": "Myyjätilillä ei voi olla aiempia tilauksia. Ole hyvä ja luo uusi tili."
+        "translation": "Myyjätilillä ei voi olla aiempia tilauksia. Ole hyvä ja luo uusi tili.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1370:40"
       },
       {
         "id": "Proof of inventory is required from new vendors",
         "message": "Proof of inventory is required from new vendors",
-        "translation": "Uusilta myyjiltä vaaditaan todiste varastosta."
+        "translation": "Uusilta myyjiltä vaaditaan todiste varastosta.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1377:41"
       },
       {
         "id": "Not enough balance",
         "message": "Not enough balance",
-        "translation": "Ei riittävästi saldoa."
+        "translation": "Ei riittävästi saldoa.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1402:40"
       },
       {
         "id": "Application received",
         "message": "Application received",
-        "translation": "Hakemus vastaanotettu."
+        "translation": "Hakemus vastaanotettu.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1410:48"
       },
       {
         "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
@@ -234,42 +274,50 @@
             "argNum": 1,
             "expr": "72"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1455:41"
       },
       {
         "id": "Order declined",
         "message": "Order declined",
-        "translation": "Tilauksen hylkäys."
+        "translation": "Tilauksen hylkäys.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1458:41"
       },
       {
         "id": "Order marked as dispatched",
         "message": "Order marked as dispatched",
-        "translation": "Tilauksen tila merkitty lähetetyksi."
+        "translation": "Tilauksen tila merkitty lähetetyksi.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1502:40"
       },
       {
         "id": "Product deleted",
         "message": "Product deleted",
-        "translation": "Tuote poistettu."
+        "translation": "Tuote poistettu.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1546:41"
       },
       {
         "id": "Product updated",
         "message": "Product updated",
-        "translation": "Tuote päivitetty."
+        "translation": "Tuote päivitetty.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1558:41"
       },
       {
         "id": "Ticket is already closed",
         "message": "Ticket is already closed",
-        "translation": "Lippu on jo suljettu."
+        "translation": "Lippu on jo suljettu.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1684:48"
       },
       {
         "id": "You need to be logged in to access that page",
         "message": "You need to be logged in to access that page",
-        "translation": "Sinun on kirjauduttava sisään päästäksesi tälle sivulle."
+        "translation": "Sinun on kirjauduttava sisään päästäksesi tälle sivulle.",
+        "position": "github.com/gobugger/gomarket/internal/app/middleware.go:59:49"
       },
       {
         "id": "Order received",
         "message": "Order received",
-        "translation": "Tilauksen vastaanotto."
+        "translation": "Tilauksen vastaanotto.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:24:22"
       },
       {
         "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
@@ -284,42 +332,50 @@
             "argNum": 1,
             "expr": "48"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:25:24"
       },
       {
         "id": "Order accepted",
         "message": "Order accepted",
-        "translation": "Tilauksen hyväksyntä."
+        "translation": "Tilauksen hyväksyntä.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:45:24"
       },
       {
         "id": "Your order has been accepted!\nYou can monitor its status from orders page",
         "message": "Your order has been accepted!\nYou can monitor its status from orders page",
-        "translation": "Tilauksesi on hyväksytty!\nVoit seurata sen tilaa tilaussivulta."
+        "translation": "Tilauksesi on hyväksytty!\nVoit seurata sen tilaa tilaussivulta.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:46:24"
       },
       {
         "id": "Order dispatched",
         "message": "Order dispatched",
-        "translation": "Tilauksen lähetys."
+        "translation": "Tilauksen lähetys.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:65:24"
       },
       {
         "id": "Your order has been dispatched!\nPlease remember to review it.",
         "message": "Your order has been dispatched!\nPlease remember to review it.",
-        "translation": "Tilauksesi on lähetetty!\nMuista arvioida se."
+        "translation": "Tilauksesi on lähetetty!\nMuista arvioida se.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:66:24"
       },
       {
         "id": "How do I become a vendor?",
         "message": "How do I become a vendor?",
-        "translation": "Miten voin tulla myyjäksi?"
+        "translation": "Miten voin tulla myyjäksi?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:17:25"
       },
       {
         "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
         "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
-        "translation": "Luo tili, jossa on kaksivaiheinen todennus (2FA) käytössä, ja lähetä sitten myyjähakemus."
+        "translation": "Luo tili, jossa on kaksivaiheinen todennus (2FA) käytössä, ja lähetä sitten myyjähakemus.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:18:25"
       },
       {
         "id": "How do I place an order?",
         "message": "How do I place an order?",
-        "translation": "Miten teen tilauksen?"
+        "translation": "Miten teen tilauksen?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:21:25"
       },
       {
         "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
@@ -334,22 +390,26 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:22:23"
       },
       {
         "id": "How can I obtain Monero (XMR)?",
         "message": "How can I obtain Monero (XMR)?",
-        "translation": "Miten voin hankkia Moneroa (XMR)?"
+        "translation": "Miten voin hankkia Moneroa (XMR)?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:26:25"
       },
       {
         "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
         "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
-        "translation": "Moneron hankkimiseen on useita tapoja. Vieraile getmonero.org-sivustolla virallisia ohjeita ja resursseja varten."
+        "translation": "Moneron hankkimiseen on useita tapoja. Vieraile getmonero.org-sivustolla virallisia ohjeita ja resursseja varten.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:27:25"
       },
       {
         "id": "What should I do if my order has not arrived or does not match the description?",
         "message": "What should I do if my order has not arrived or does not match the description?",
-        "translation": "Mitä minun pitäisi tehdä, jos tilaukseni ei ole saapunut tai se ei vastaa kuvausta?"
+        "translation": "Mitä minun pitäisi tehdä, jos tilaukseni ei ole saapunut tai se ei vastaa kuvausta?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:30:25"
       },
       {
         "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
@@ -364,42 +424,49 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:31:23"
       },
       {
         "id": "What am I allowed to sell on this marketplace?",
         "message": "What am I allowed to sell on this marketplace?",
-        "translation": "Mitä saan myydä tässä markkinapaikassa?"
+        "translation": "Mitä saan myydä tässä markkinapaikassa?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:37:25"
       },
       {
         "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
         "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
-        "translation": "Vain lailliset tuotteet ovat sallittuja. Jos et ole varma, kelpaako tuotteesi, ota meihin yhteyttä ennen ilmoituksen luomista."
+        "translation": "Vain lailliset tuotteet ovat sallittuja. Jos et ole varma, kelpaako tuotteesi, ota meihin yhteyttä ennen ilmoituksen luomista.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:38:25"
       },
       {
         "id": "Open",
         "message": "Open",
-        "translation": "Avoin"
+        "translation": "Avoin",
+        "position": "github.com/gobugger/gomarket/ui/templ/adminpanel_templ.go:292:81"
       },
       {
         "id": "Vendor application",
         "message": "Vendor application",
-        "translation": "Myyjähakemus"
+        "translation": "Myyjähakemus",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:110:79"
       },
       {
         "id": "Your account does not have 2FA enabled!",
         "message": "Your account does not have 2FA enabled!",
-        "translation": "Tililläsi ei ole 2FA-ominaisuutta käytössä!"
+        "translation": "Tililläsi ei ole 2FA-ominaisuutta käytössä!",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:71:80"
       },
       {
-        "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "translation": "Sovellus on ilmainen käyttäjille, jotka ovat jo myyjiä jollakin muulla markkinapaikalla, joka käyttää samaa PGP-avainta."
+        "id": "Application is free for users who are already vendors on some other market.",
+        "message": "Application is free for users who are already vendors on some other market.",
+        "translation": "Sovellus on ilmainen käyttäjille, jotka ovat jo myyjiä jollakin muulla markkinapaikalla.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:85:79"
       },
       {
-        "id": "For other users, application costs {Price} XMR and is non-refundable.",
-        "message": "For other users, application costs {Price} XMR and is non-refundable.",
-        "translation": "Muille käyttäjille sovelluksen hinta on {Price} XMR, eikä se ole palautettavissa.",
+        "id": "For other users, application costs {Price} XMR.",
+        "message": "For other users, application costs {Price} XMR.",
+        "translation": "Muille käyttäjille sovelluksen hinta on {Price} XMR.",
         "placeholders": [
           {
             "id": "Price",
@@ -409,297 +476,344 @@
             "argNum": 1,
             "expr": "price"
           }
-        ]
-      },
-      {
-        "id": "You're required to provide proof that you actually have products to sell here.",
-        "message": "You're required to provide proof that you actually have products to sell here.",
-        "translation": "Sinun on esitettävä todiste siitä, että sinulla on oikeasti tuotteita myytävänä täällä."
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:98:79"
       },
       {
         "id": "Vendor Logo",
         "message": "Vendor Logo",
-        "translation": "Myyjän logo"
+        "translation": "Myyjän logo",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:111:79"
       },
       {
         "id": "Use png image with close to 1:1 ratio for optimal look",
         "message": "Use png image with close to 1:1 ratio for optimal look",
-        "translation": "Käytä png-kuvaa, jonka suhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi."
+        "translation": "Käytä png-kuvaa, jonka suhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:124:79"
       },
       {
         "id": "Existing vendor",
         "message": "Existing vendor",
-        "translation": "Olemassa oleva myyjä"
+        "translation": "Olemassa oleva myyjä",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:137:79"
       },
       {
         "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
         "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
-        "translation": "Valitse tämä, jos olet jo myyjä jollakin muulla markkinapaikalla, kuten xmrBazaar."
+        "translation": "Valitse tämä, jos olet jo myyjä jollakin muulla markkinapaikalla, kuten xmrBazaar.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:150:80"
       },
       {
         "id": "Proof of inventory",
         "message": "Proof of inventory",
-        "translation": "Todistus varastosta"
+        "translation": "Todistus varastosta",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:171:80"
       },
       {
         "id": "Clear image of your inventory with your username and timestamp visible",
         "message": "Clear image of your inventory with your username and timestamp visible",
-        "translation": "Selkeä kuva varastostasi, jossa näkyvät käyttäjänimesi ja aikaleima."
+        "translation": "Selkeä kuva varastostasi, jossa näkyvät käyttäjänimesi ja aikaleima.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:184:80"
       },
       {
         "id": "Markets and Your Username",
         "message": "Markets and Your Username",
-        "translation": "Markkinat ja käyttäjänimesi"
+        "translation": "Markkinat ja käyttäjänimesi",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:197:80"
       },
       {
         "id": "List the markets where you are a vendor and include your username",
         "message": "List the markets where you are a vendor and include your username",
-        "translation": "Luettele markkinat, joissa olet myyjä, ja liitä mukaan käyttäjänimesi."
+        "translation": "Luettele markkinat, joissa olet myyjä, ja liitä mukaan käyttäjänimesi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:210:80"
       },
       {
         "id": "Captcha",
         "message": "Captcha",
-        "translation": "Captcha"
+        "translation": "Captcha",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:40:79"
       },
       {
         "id": "Click circle with a cut",
         "message": "Click circle with a cut",
-        "translation": "Napsauta ympyrää, jossa on leikkaus."
+        "translation": "Napsauta ympyrää, jossa on leikkaus.",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:66:79"
       },
       {
         "id": "Submit",
         "message": "Submit",
-        "translation": "Lähetä"
+        "translation": "Lähetä",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:111:79"
       },
       {
         "id": "Total",
         "message": "Total",
-        "translation": "Yhteensä"
+        "translation": "Yhteensä",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:277:81"
       },
       {
         "id": "Checkout",
         "message": "Checkout",
-        "translation": "Maksaminen"
+        "translation": "Maksaminen",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:59:79"
       },
       {
         "id": "delivery method",
         "message": "delivery method",
-        "translation": "toimitustapa"
+        "translation": "toimitustapa",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:72:79"
       },
       {
         "id": "Use wallet for payment",
         "message": "Use wallet for payment",
-        "translation": "Käytä lompakkoa maksamiseen"
+        "translation": "Käytä lompakkoa maksamiseen",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:134:79"
       },
       {
         "id": "details",
         "message": "details",
-        "translation": "yksityiskohdat"
-      },
-      {
-        "id": "Use your real address, with the same format as below.",
-        "message": "Use your real address, with the same format as below.",
-        "translation": "Käytä oikeaa osoitettasi, samalla formaatilla kuin alla."
+        "translation": "yksityiskohdat",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:156:79"
       },
       {
         "id": "Unencrypted details are automatically encrypted using vendors key.",
         "message": "Unencrypted details are automatically encrypted using vendors key.",
-        "translation": "Salaamattomat tiedot salataan automaattisesti käyttäjän avaimella."
+        "translation": "Salaamattomat tiedot salataan automaattisesti käyttäjän avaimella.",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:169:80"
       },
       {
         "id": "Title",
         "message": "Title",
-        "translation": "Otsikko"
+        "translation": "Otsikko",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:62:79"
       },
       {
         "id": "Description",
         "message": "Description",
-        "translation": "Kuvaus"
+        "translation": "Kuvaus",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:75:79"
       },
       {
         "id": "Product image",
         "message": "Product image",
-        "translation": "Tuotekuva"
+        "translation": "Tuotekuva",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:88:79"
       },
       {
         "id": "Use image with close to 1:1 aspect ratio for optimal look",
         "message": "Use image with close to 1:1 aspect ratio for optimal look",
-        "translation": "Käytä kuvaa, jonka kuvasuhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi."
+        "translation": "Käytä kuvaa, jonka kuvasuhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:101:79"
       },
       {
         "id": "Category",
         "message": "Category",
-        "translation": "Kategoria"
+        "translation": "Kategoria",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:114:79"
       },
       {
         "id": "Ships from",
         "message": "Ships from",
-        "translation": "Lähetetään"
+        "translation": "Lähetetään",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:163:80"
       },
       {
         "id": "Ships to",
         "message": "Ships to",
-        "translation": "Toimitetaan"
+        "translation": "Toimitetaan",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:212:80"
       },
       {
         "id": "Inventory",
         "message": "Inventory",
-        "translation": "Varasto"
+        "translation": "Varasto",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:93:80"
       },
       {
         "id": "Size of the current inventory for this product.",
         "message": "Size of the current inventory for this product.",
-        "translation": "Tämän tuotteen nykyisen varaston koko."
+        "translation": "Tämän tuotteen nykyisen varaston koko.",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:106:80"
       },
       {
         "id": "Pricing",
         "message": "Pricing",
-        "translation": "Hinnoittelu"
+        "translation": "Hinnoittelu",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:287:80"
       },
       {
         "id": "Here you can set your pricing.",
         "message": "Here you can set your pricing.",
-        "translation": "Täällä voit määrittää hinnoittelusi."
+        "translation": "Täällä voit määrittää hinnoittelusi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:300:80"
       },
       {
         "id": "We take 5% cut from these prices.",
         "message": "We take 5% cut from these prices.",
-        "translation": "Otamme 5 % komission näistä hinnoista."
+        "translation": "Otamme 5 % komission näistä hinnoista.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:313:80"
       },
       {
         "id": "Quantity",
         "message": "Quantity",
-        "translation": "Määrä"
+        "translation": "Määrä",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:254:80"
       },
       {
         "id": "Price",
         "message": "Price",
-        "translation": "Hinta"
+        "translation": "Hinta",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:582:81"
       },
       {
         "id": "Create ticket",
         "message": "Create ticket",
-        "translation": "Luo lippu"
+        "translation": "Luo lippu",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:67:80"
       },
       {
         "id": "Subject",
         "message": "Subject",
-        "translation": "Aihe"
+        "translation": "Aihe",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:61:79"
       },
       {
         "id": "account",
         "message": "account",
-        "translation": "tili"
+        "translation": "tili",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:83:79"
       },
       {
         "id": "order",
         "message": "order",
-        "translation": "tilaus"
+        "translation": "tilaus",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:96:79"
       },
       {
         "id": "wallet",
         "message": "wallet",
-        "translation": "lompakko"
+        "translation": "lompakko",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:109:79"
       },
       {
         "id": "vendor",
         "message": "vendor",
-        "translation": "myyjä"
+        "translation": "myyjä",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:25:22"
       },
       {
         "id": "product",
         "message": "product",
-        "translation": "tuote"
+        "translation": "tuote",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:135:79"
       },
       {
         "id": "suggestion",
         "message": "suggestion",
-        "translation": "ehdotus"
+        "translation": "ehdotus",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:148:80"
       },
       {
         "id": "bug",
         "message": "bug",
-        "translation": "vika"
+        "translation": "vika",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:161:80"
       },
       {
         "id": "other",
         "message": "other",
-        "translation": "muu"
+        "translation": "muu",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:174:80"
       },
       {
         "id": "Message",
         "message": "Message",
-        "translation": "Viesti"
+        "translation": "Viesti",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:98:79"
       },
       {
         "id": "Staff PGP",
         "message": "Staff PGP",
-        "translation": "Henkilöstön PGP"
+        "translation": "Henkilöstön PGP",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:200:80"
       },
       {
         "id": "Exchange rate",
         "message": "Exchange rate",
-        "translation": "Vaihtokurssi"
+        "translation": "Vaihtokurssi",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:52:78"
       },
       {
         "id": "Time",
         "message": "Time",
-        "translation": "Aika"
+        "translation": "Aika",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:78:78"
       },
       {
         "id": "Vendors:",
         "message": "Vendors:",
-        "translation": "Myyjät:"
+        "translation": "Myyjät:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:104:78"
       },
       {
         "id": "Users:",
         "message": "Users:",
-        "translation": "Käyttäjät:"
+        "translation": "Käyttäjät:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:126:78"
       },
       {
         "id": "submit",
         "message": "submit",
-        "translation": "lähetä"
+        "translation": "lähetä",
+        "position": "github.com/gobugger/gomarket/ui/templ/handle-application_templ.go:206:80"
       },
       {
         "id": "Response",
         "message": "Response",
-        "translation": "Vastaus"
+        "translation": "Vastaus",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:193:81"
       },
       {
         "id": "products",
         "message": "products",
-        "translation": "tuotteet"
+        "translation": "tuotteet",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:37:78"
       },
       {
         "id": "orders",
         "message": "orders",
-        "translation": "tilaukset"
+        "translation": "tilaukset",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:55:79"
       },
       {
         "id": "sell",
         "message": "sell",
-        "translation": "myy"
+        "translation": "myy",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:74:79"
       },
       {
         "id": "support",
         "message": "support",
-        "translation": "tuki"
+        "translation": "tuki",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:107:79"
       },
       {
         "id": "Logout",
         "message": "Logout",
-        "translation": "Kirjaudu ulos"
+        "translation": "Kirjaudu ulos",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:185:79"
       },
       {
         "id": "log in",
         "message": "log in",
-        "translation": "kirjaudu sisään"
+        "translation": "kirjaudu sisään",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:203:79"
       },
       {
         "id": "register",
         "message": "register",
-        "translation": "rekisteröidy"
+        "translation": "rekisteröidy",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:216:80"
       },
       {
         "id": "Entry guard to {Name}",
@@ -714,102 +828,122 @@
             "argNum": 1,
             "expr": "tc.Config.Name"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:57:79"
       },
       {
         "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
         "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
-        "translation": "Vertaile käyttämääsi URL-osoitetta alla olevan kuvan URL-osoitteen kanssa löytääksesi kaikki puuttuvat merkit, jotka on merkitty '*'"
+        "translation": "Vertaile käyttämääsi URL-osoitetta alla olevan kuvan URL-osoitteen kanssa löytääksesi kaikki puuttuvat merkit, jotka on merkitty '*'",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:70:79"
       },
       {
         "id": "Missing characters",
         "message": "Missing characters",
-        "translation": "Puuttuvat merkit"
+        "translation": "Puuttuvat merkit",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:96:79"
       },
       {
         "id": "Log in",
         "message": "Log in",
-        "translation": "Kirjaudu sisään"
+        "translation": "Kirjaudu sisään",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:57:79"
       },
       {
         "id": "username",
         "message": "username",
-        "translation": "käyttäjänimi"
+        "translation": "käyttäjänimi",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:70:79"
       },
       {
         "id": "password",
         "message": "password",
-        "translation": "salasana"
+        "translation": "salasana",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:104:79"
       },
       {
         "id": "Create new account",
         "message": "Create new account",
-        "translation": "Luo uusi tili"
+        "translation": "Luo uusi tili",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:138:79"
       },
       {
         "id": "Delete all",
         "message": "Delete all",
-        "translation": "Poista kaikki"
+        "translation": "Poista kaikki",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:109:80"
       },
       {
         "id": "You have zero notifications",
         "message": "You have zero notifications",
-        "translation": "Sinulla ei ole ilmoituksia"
+        "translation": "Sinulla ei ole ilmoituksia",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:127:80"
       },
       {
         "id": "Order",
         "message": "Order",
-        "translation": "Tilaa"
+        "translation": "Tilaa",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:241:80"
       },
       {
         "id": "Chat",
         "message": "Chat",
-        "translation": "Keskustelu"
+        "translation": "Keskustelu",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:187:79"
       },
       {
         "id": "Status",
         "message": "Status",
-        "translation": "Tila"
+        "translation": "Tila",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:243:79"
       },
       {
         "id": "Vendor",
         "message": "Vendor",
-        "translation": "Myyjä"
+        "translation": "Myyjä",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:269:79"
       },
       {
         "id": "Delivery method",
         "message": "Delivery method",
-        "translation": "Toimitustapa"
+        "translation": "Toimitustapa",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:308:79"
       },
       {
         "id": "Total cost",
         "message": "Total cost",
-        "translation": "Kokonaiskustannus"
+        "translation": "Kokonaiskustannus",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:334:79"
       },
       {
         "id": "Date",
         "message": "Date",
-        "translation": "Päivämäärä"
+        "translation": "Päivämäärä",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:360:79"
       },
       {
         "id": "Dispatched at",
         "message": "Dispatched at",
-        "translation": "Lähetetty"
+        "translation": "Lähetetty",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:391:80"
       },
       {
         "id": "Until auto-declined",
         "message": "Until auto-declined",
-        "translation": "Kunnes automaattisesti hylätty"
+        "translation": "Kunnes automaattisesti hylätty",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:424:80"
       },
       {
         "id": "Until auto-finalized",
         "message": "Until auto-finalized",
-        "translation": "Kunnes automaattisesti vahvistettu"
+        "translation": "Kunnes automaattisesti vahvistettu",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:455:80"
       },
       {
         "id": "Details",
         "message": "Details",
-        "translation": "Yksityiskohdat"
+        "translation": "Yksityiskohdat",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:486:79"
       },
       {
         "id": "Vendor offered refund of {RefundFactor}%",
@@ -824,377 +958,452 @@
             "argNum": 1,
             "expr": "100 * item.Offer.RefundFactor"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:794:81"
       },
       {
         "id": "Accept",
         "message": "Accept",
-        "translation": "Hyväksy"
+        "translation": "Hyväksy",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1064:79"
       },
       {
         "id": "Decline",
         "message": "Decline",
-        "translation": "Hylkää"
+        "translation": "Hylkää",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1077:79"
       },
       {
         "id": "Customers PGP key",
         "message": "Customers PGP key",
-        "translation": "Asiakkaan PGP-avain"
+        "translation": "Asiakkaan PGP-avain",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:901:80"
       },
       {
         "id": "Customer can still cancel this order!",
         "message": "Customer can still cancel this order!",
-        "translation": "Asiakas voi edelleen peruuttaa tämän tilauksen!"
+        "translation": "Asiakas voi edelleen peruuttaa tämän tilauksen!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:999:79"
       },
       {
         "id": "You must accept it in 2 days or it will be automatically declined.",
         "message": "You must accept it in 2 days or it will be automatically declined.",
-        "translation": "Sinun on hyväksyttävä se kahden päivän kuluessa, tai se hylätään automaattisesti."
+        "translation": "Sinun on hyväksyttävä se kahden päivän kuluessa, tai se hylätään automaattisesti.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1012:79"
       },
       {
         "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
         "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
-        "translation": "Hyväksymisen jälkeen asiakas ei voi enää peruuttaa, joten voit turvallisesti lähettää."
+        "translation": "Hyväksymisen jälkeen asiakas ei voi enää peruuttaa, joten voit turvallisesti lähettää.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1025:79"
       },
       {
         "id": "Please carefully review the order below before accepting it.",
         "message": "Please carefully review the order below before accepting it.",
-        "translation": "Ole hyvä ja tarkista alla oleva tilaus huolellisesti ennen sen hyväksymistä."
+        "translation": "Ole hyvä ja tarkista alla oleva tilaus huolellisesti ennen sen hyväksymistä.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1038:79"
       },
       {
         "id": "Always decline orders that you'r unable to fulfill.",
         "message": "Always decline orders that you'r unable to fulfill.",
-        "translation": "Hylkää aina tilaukset, joita et voi täyttää."
+        "translation": "Hylkää aina tilaukset, joita et voi täyttää.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1051:79"
       },
       {
         "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
         "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
-        "translation": "Sinun on merkittävä tämä tilaus lähetetyksi kahden päivän kuluessa, tai se hylätään automaattisesti."
+        "translation": "Sinun on merkittävä tämä tilaus lähetetyksi kahden päivän kuluessa, tai se hylätään automaattisesti.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1140:79"
       },
       {
         "id": "Make sure that you have enough time to do the actual dispaching!",
         "message": "Make sure that you have enough time to do the actual dispaching!",
-        "translation": "Varmista, että sinulla on tarpeeksi aikaa tehdä todellinen lähetys!"
+        "translation": "Varmista, että sinulla on tarpeeksi aikaa tehdä todellinen lähetys!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1153:79"
       },
       {
         "id": "Dispatched",
         "message": "Dispatched",
-        "translation": "Lähetetty"
+        "translation": "Lähetetty",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1166:79"
       },
       {
         "id": "Transfer exact amount of Monero to the address below.",
         "message": "Transfer exact amount of Monero to the address below.",
-        "translation": "Siirrä tarkka määrä Moneroa alla olevaan osoitteeseen."
+        "translation": "Siirrä tarkka määrä Moneroa alla olevaan osoitteeseen.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1208:79"
       },
       {
         "id": "After 10 confirmations, your order will proceed to vendor.",
         "message": "After 10 confirmations, your order will proceed to vendor.",
-        "translation": "10 vahvistuksen jälkeen tilauksesi siirtyy myyjälle."
+        "translation": "10 vahvistuksen jälkeen tilauksesi siirtyy myyjälle.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1221:79"
       },
       {
         "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
         "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
-        "translation": "Sinulla on yhteensä 3 tuntia aikaa maksaa tämä lasku, tai tilauksesi peruutetaan."
+        "translation": "Sinulla on yhteensä 3 tuntia aikaa maksaa tämä lasku, tai tilauksesi peruutetaan.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1234:79"
       },
       {
         "id": "Time left to pay",
         "message": "Time left to pay",
-        "translation": "Aika jäljellä maksamiseen"
+        "translation": "Aika jäljellä maksamiseen",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1247:79"
       },
       {
         "id": "Amount XMR",
         "message": "Amount XMR",
-        "translation": "Määrä XMR"
+        "translation": "Määrä XMR",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1278:79"
       },
       {
         "id": "Address",
         "message": "Address",
-        "translation": "Osoite"
+        "translation": "Osoite",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:172:80"
       },
       {
         "id": "Orders can be cancelled until vendor has accepted it.",
         "message": "Orders can be cancelled until vendor has accepted it.",
-        "translation": "Tilaukset voidaan peruuttaa, kunnes myyjä on hyväksynyt sen."
+        "translation": "Tilaukset voidaan peruuttaa, kunnes myyjä on hyväksynyt sen.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1393:79"
       },
       {
         "id": "Cancel",
         "message": "Cancel",
-        "translation": "Peruuta"
+        "translation": "Peruuta",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1406:79"
       },
       {
         "id": "Your order will auto-finalize in",
         "message": "Your order will auto-finalize in",
-        "translation": "Tilauksesi viimeistellään automaattisesti"
+        "translation": "Tilauksesi viimeistellään automaattisesti",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1448:79"
       },
       {
         "id": "You can extend the auto-finalize-time by 7-days.",
         "message": "You can extend the auto-finalize-time by 7-days.",
-        "translation": "Voit pidentää automaattista viimeistelyaikaa 7 päivällä."
+        "translation": "Voit pidentää automaattista viimeistelyaikaa 7 päivällä.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1461:79"
       },
       {
         "id": "review your order",
         "message": "review your order",
-        "translation": "tarkista tilauksesi"
+        "translation": "tarkista tilauksesi",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1487:79"
       },
       {
         "id": "Review",
         "message": "Review",
-        "translation": "Tarkista"
+        "translation": "Tarkista",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1500:79"
       },
       {
         "id": "Extend AF-timer",
         "message": "Extend AF-timer",
-        "translation": "Pidentää AF-ajastinta"
+        "translation": "Pidentää AF-ajastinta",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1539:80"
       },
       {
         "id": "Dispute",
         "message": "Dispute",
-        "translation": "Riita"
+        "translation": "Riita",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1578:79"
       },
       {
         "id": "Refund offer",
         "message": "Refund offer",
-        "translation": "Hyvitystarjous"
+        "translation": "Hyvitystarjous",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1628:79"
       },
       {
         "id": "Customer has disputed this order.",
         "message": "Customer has disputed this order.",
-        "translation": "Asiakas on riitauttanut tämän tilauksen."
+        "translation": "Asiakas on riitauttanut tämän tilauksen.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1654:79"
       },
       {
         "id": "Use the chat below to discuss about this dispute.",
         "message": "Use the chat below to discuss about this dispute.",
-        "translation": "Käytä alla olevaa chattia keskustellaksesi tästä riidasta."
+        "translation": "Käytä alla olevaa chattia keskustellaksesi tästä riidasta.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1667:79"
       },
       {
         "id": "You can create an refund offer and resolve this dispute without admin intervention.",
         "message": "You can create an refund offer and resolve this dispute without admin intervention.",
-        "translation": "Voit luoda hyvitystarjouksen ja ratkaista tämän riidan ilman ylläpitäjän väliintuloa."
+        "translation": "Voit luoda hyvitystarjouksen ja ratkaista tämän riidan ilman ylläpitäjän väliintuloa.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1680:79"
       },
       {
         "id": "Refund percent",
         "message": "Refund percent",
-        "translation": "Hyvitysprosentti"
+        "translation": "Hyvitysprosentti",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1693:79"
       },
       {
         "id": "Order date",
         "message": "Order date",
-        "translation": "Tilauspäivämäärä"
+        "translation": "Tilauspäivämäärä",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:72:80"
       },
       {
         "id": "Order ID",
         "message": "Order ID",
-        "translation": "Tilaus ID"
+        "translation": "Tilaus ID",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:98:80"
       },
       {
         "id": "Proof key ownership",
         "message": "Proof key ownership",
-        "translation": "Todistus avaimen omistuksesta"
+        "translation": "Todistus avaimen omistuksesta",
+        "position": "github.com/gobugger/gomarket/ui/templ/pgp_check_templ.go:57:79"
       },
       {
         "id": "Decrypt to get the token",
         "message": "Decrypt to get the token",
-        "translation": "Purkaa saadaksesi tokenin"
+        "translation": "Purkaa saadaksesi tokenin",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:70:79"
       },
       {
         "id": "Token",
         "message": "Token",
-        "translation": "Token"
+        "translation": "Token",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:96:79"
       },
       {
         "id": "Update product",
         "message": "Update product",
-        "translation": "Päivitä tuote"
+        "translation": "Päivitä tuote",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:67:80"
       },
       {
         "id": "Update",
         "message": "Update",
-        "translation": "Päivitä"
+        "translation": "Päivitä",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:127:80"
       },
       {
         "id": "Add to cart",
         "message": "Add to cart",
-        "translation": "Lisää ostoskoriin"
+        "translation": "Lisää ostoskoriin",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:315:80"
       },
       {
         "id": "Reviews",
         "message": "Reviews",
-        "translation": "Arvostelut"
+        "translation": "Arvostelut",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:171:79"
       },
       {
         "id": "ago",
         "message": "ago",
-        "translation": "sitten"
+        "translation": "sitten",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:404:81"
       },
       {
         "id": "OUT OF STOCK",
         "message": "OUT OF STOCK",
-        "translation": "Loppu varastosta"
+        "translation": "Loppu varastosta",
+        "position": "github.com/gobugger/gomarket/ui/templ/products_templ.go:66:81"
       },
       {
         "id": "Register",
         "message": "Register",
-        "translation": "Rekisteröidy"
+        "translation": "Rekisteröidy",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:57:79"
       },
       {
         "id": "password check",
         "message": "password check",
-        "translation": "salasanan tarkistus"
+        "translation": "salasanan tarkistus",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:138:79"
       },
       {
         "id": "Already have an account?",
         "message": "Already have an account?",
-        "translation": "Onko sinulla jo tili?"
+        "translation": "Onko sinulla jo tili?",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:172:80"
       },
       {
         "id": "Review order",
         "message": "Review order",
-        "translation": "Tarkista tilaus"
+        "translation": "Tarkista tilaus",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:59:79"
       },
       {
         "id": "Grade",
         "message": "Grade",
-        "translation": "Arvosana"
+        "translation": "Arvosana",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:85:79"
       },
       {
         "id": "guest",
         "message": "guest",
-        "translation": "vieras"
+        "translation": "vieras",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:21:22"
       },
       {
         "id": "customer",
         "message": "customer",
-        "translation": "asiakas"
+        "translation": "asiakas",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:23:22"
       },
       {
         "id": "admin",
         "message": "admin",
-        "translation": "ylläpitäjä"
+        "translation": "ylläpitäjä",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:27:22"
       },
       {
         "id": "unknown",
         "message": "unknown",
-        "translation": "tuntematon"
+        "translation": "tuntematon",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:29:22"
       },
       {
         "id": "enabled",
         "message": "enabled",
-        "translation": "käytössä"
+        "translation": "käytössä",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:35:22"
       },
       {
         "id": "disabled",
         "message": "disabled",
-        "translation": "pois käytöstä"
+        "translation": "pois käytöstä",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:37:22"
       },
       {
         "id": "Account",
         "message": "Account",
-        "translation": "Tili"
+        "translation": "Tili",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:81:79"
       },
       {
         "id": "Username",
         "message": "Username",
-        "translation": "Käyttäjänimi"
+        "translation": "Käyttäjänimi",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:94:79"
       },
       {
         "id": "Type",
         "message": "Type",
-        "translation": "Tyyppi"
+        "translation": "Tyyppi",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:120:79"
       },
       {
         "id": "2FA",
         "message": "2FA",
-        "translation": "2FA"
+        "translation": "2FA",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:57:79"
       },
       {
         "id": "Preferences",
         "message": "Preferences",
-        "translation": "Asetukset"
+        "translation": "Asetukset",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:180:80"
       },
       {
         "id": "Language",
         "message": "Language",
-        "translation": "Kieli"
+        "translation": "Kieli",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:193:80"
       },
       {
         "id": "Currency",
         "message": "Currency",
-        "translation": "Valuutta"
+        "translation": "Valuutta",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:252:80"
       },
       {
         "id": "Change password",
         "message": "Change password",
-        "translation": "Vaihda salasana"
+        "translation": "Vaihda salasana",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:345:80"
       },
       {
         "id": "Current password",
         "message": "Current password",
-        "translation": "Nykyinen salasana"
+        "translation": "Nykyinen salasana",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:358:80"
       },
       {
         "id": "New password",
         "message": "New password",
-        "translation": "Uusi salasana"
+        "translation": "Uusi salasana",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:371:80"
       },
       {
         "id": "Confirm new password",
         "message": "Confirm new password",
-        "translation": "Vahvista uusi salasana"
+        "translation": "Vahvista uusi salasana",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:384:80"
       },
       {
         "id": "Change PGP key",
         "message": "Change PGP key",
-        "translation": "Vaihda PGP-avain"
+        "translation": "Vaihda PGP-avain",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:418:81"
       },
       {
         "id": "Enable 2FA",
         "message": "Enable 2FA",
-        "translation": "Ota 2FA käyttöön"
+        "translation": "Ota 2FA käyttöön",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:436:81"
       },
       {
         "id": "PGP public key",
         "message": "PGP public key",
-        "translation": "PGP-julkinen avain"
+        "translation": "PGP-julkinen avain",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:454:80"
       },
       {
         "id": "Required for vendors, suggested for everyone.",
         "message": "Required for vendors, suggested for everyone.",
-        "translation": "Vaaditaan myyjiltä, suositellaan kaikille."
+        "translation": "Vaaditaan myyjiltä, suositellaan kaikille.",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:467:80"
       },
       {
-        "id": "Update vendor profile",
-        "message": "Update vendor profile",
-        "translation": "Päivitä myyjäprofiili"
+        "id": "Update terms of service",
+        "message": "Update terms of service",
+        "translation": "Päivitä käyttöehdot",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:501:81"
       },
       {
-        "id": "Vendor info",
-        "message": "Vendor info",
-        "translation": "Myyjäinfo"
+        "id": "Terms of service",
+        "message": "Terms of service",
+        "translation": "Käyttöehdot",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:353:80"
       },
       {
-        "id": "Leave empty to not update.",
-        "message": "Leave empty to not update.",
-        "translation": "Jätä tyhjäksi, jotta et päivitä."
+        "id": "Terms of service is used to resolve disputes",
+        "message": "Terms of service is used to resolve disputes",
+        "translation": "Käyttöehtoja käytetään riitojen ratkaisemiseen",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:527:81"
       },
       {
         "id": "Update delivery methods",
         "message": "Update delivery methods",
-        "translation": "Päivitä toimitustavat"
+        "translation": "Päivitä toimitustavat",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:556:81"
       },
       {
         "id": "Delivery Method",
         "message": "Delivery Method",
-        "translation": "Toimitustapa"
+        "translation": "Toimitustapa",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:569:81"
       },
       {
         "id": "My tickets",
         "message": "My tickets",
-        "translation": "Omat liput"
+        "translation": "Omat liput",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:54:80"
       },
       {
         "id": "0 seconds",
         "message": "0 seconds",
-        "translation": "0 sekuntia"
+        "translation": "0 sekuntia",
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:95:21"
       },
       {
         "id": "{Second} seconds",
@@ -1209,7 +1418,8 @@
             "argNum": 1,
             "expr": "since / time.Second"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:97:21"
       },
       {
         "id": "{Minute} minutes",
@@ -1224,7 +1434,8 @@
             "argNum": 1,
             "expr": "since / time.Minute"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:99:21"
       },
       {
         "id": "{Hour} hours",
@@ -1239,7 +1450,8 @@
             "argNum": 1,
             "expr": "since / time.Hour"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:101:21"
       },
       {
         "id": "{Hour} days",
@@ -1254,102 +1466,132 @@
             "argNum": 1,
             "expr": "since / (24 * time.Hour)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:103:21"
       },
       {
         "id": "Rating (AVG)",
         "message": "Rating (AVG)",
-        "translation": "Arvosana (Keskimäärin)"
+        "translation": "Arvosana (Keskimäärin)",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:197:80"
       },
       {
         "id": "Orders completed",
         "message": "Orders completed",
-        "translation": "Tilaukset suoritettu"
+        "translation": "Tilaukset suoritettu",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:223:80"
       },
       {
         "id": "Orders in escrow",
         "message": "Orders in escrow",
-        "translation": "Tilaukset talletuksessa"
+        "translation": "Tilaukset talletuksessa",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:249:80"
       },
       {
         "id": "Pending disputes",
         "message": "Pending disputes",
-        "translation": "Odotettavat riidat"
+        "translation": "Odotettavat riidat",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:275:80"
       },
       {
         "id": "Previously seen",
         "message": "Previously seen",
-        "translation": "Aiemmin nähty"
+        "translation": "Aiemmin nähty",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:301:80"
       },
       {
         "id": "PGP key",
         "message": "PGP key",
-        "translation": "PGP-avain"
+        "translation": "PGP-avain",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:327:80"
       },
       {
         "id": "Wallet",
         "message": "Wallet",
-        "translation": "Lompakko"
+        "translation": "Lompakko",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:55:79"
       },
       {
         "id": "This is your XMR wallet where you can deposit coins.",
         "message": "This is your XMR wallet where you can deposit coins.",
-        "translation": "Tämä on sinun XMR-lompakkosi, johon voit tallettaa kolikoita."
+        "translation": "Tämä on sinun XMR-lompakkosi, johon voit tallettaa kolikoita.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:68:79"
       },
       {
         "id": "Balance is updated after 10 confirmations.",
         "message": "Balance is updated after 10 confirmations.",
-        "translation": "Saldo päivittyy 10 vahvistuksen jälkeen."
+        "translation": "Saldo päivittyy 10 vahvistuksen jälkeen.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:81:79"
       },
       {
         "id": "See",
         "message": "See",
-        "translation": "Näe"
+        "translation": "Näe",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:94:79"
       },
       {
         "id": "for more information.",
         "message": "for more information.",
-        "translation": "lisätietoja varten."
+        "translation": "lisätietoja varten.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:120:79"
       },
       {
         "id": "Balance",
         "message": "Balance",
-        "translation": "Saldo"
+        "translation": "Saldo",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:133:79"
       },
       {
         "id": "Withdraw",
         "message": "Withdraw",
-        "translation": "Nosta"
+        "translation": "Nosta",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:219:80"
       },
       {
         "id": "Enter a monero address where you want to withdraw your funds.",
         "message": "Enter a monero address where you want to withdraw your funds.",
-        "translation": "Syötä Monero-osoite, johon haluat nostaa varasi."
+        "translation": "Syötä Monero-osoite, johon haluat nostaa varasi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:232:80"
       },
       {
-        "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "translation": "Keräämme 0.01 XMR maksun jokaisesta nostosta roskapostin estämiseksi."
+        "id": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "message": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "translation": "Keräämme {WithdrawalFee} XMR maksun jokaisesta nostosta roskapostin estämiseksi.",
+        "placeholders": [
+          {
+            "id": "WithdrawalFee",
+            "string": "%[1]f",
+            "type": "float64",
+            "underlyingType": "float64",
+            "argNum": 1,
+            "expr": "payment.WithdrawalFee"
+          }
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:245:80"
       },
       {
         "id": "DO NOT withdraw funds to another wallet on this platform!",
         "message": "DO NOT withdraw funds to another wallet on this platform!",
-        "translation": "ÄLÄ nosta varoja toiseen lompakkoon tällä alustalla!"
+        "translation": "ÄLÄ nosta varoja toiseen lompakkoon tällä alustalla!",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:258:80"
       },
       {
         "id": "Destination address",
         "message": "Destination address",
-        "translation": "Kohdeosoite"
+        "translation": "Kohdeosoite",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:271:80"
       },
       {
         "id": "Amount",
         "message": "Amount",
-        "translation": "Määrä"
+        "translation": "Määrä",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:284:80"
       },
       {
         "id": "Enter amount in decimal format (e.g., 1.42069)",
         "message": "Enter amount in decimal format (e.g., 1.42069)",
-        "translation": "Syötä määrä desimaalimuodossa (esim. 1.42069)"
+        "translation": "Syötä määrä desimaalimuodossa (esim. 1.42069)",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:297:80"
       }
     ]
   }

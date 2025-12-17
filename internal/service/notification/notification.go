@@ -2,8 +2,8 @@ package notification
 
 import (
 	"context"
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/config"
-	"github.com/gobugger/gomarket/internal/localizer"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/google/uuid"
 	"log/slog"
@@ -17,7 +17,7 @@ func NewOrder(ctx context.Context, q *repo.Queries, orderID uuid.UUID) {
 		return
 	}
 
-	l, _ := localizer.Get(vendor.Locale)
+	l, _ := globalize.Get(vendor.Locale)
 
 	_, err = q.CreateNotification(ctx,
 		repo.CreateNotificationParams{
@@ -38,7 +38,7 @@ func OrderAccepted(ctx context.Context, q *repo.Queries, orderID uuid.UUID) {
 		return
 	}
 
-	l, _ := localizer.Get(customer.Locale)
+	l, _ := globalize.Get(customer.Locale)
 
 	_, err = q.CreateNotification(ctx,
 		repo.CreateNotificationParams{
@@ -58,7 +58,7 @@ func OrderDispatched(ctx context.Context, q *repo.Queries, orderID uuid.UUID) {
 		return
 	}
 
-	l, _ := localizer.Get(customer.Locale)
+	l, _ := globalize.Get(customer.Locale)
 
 	_, err = q.CreateNotification(ctx,
 		repo.CreateNotificationParams{

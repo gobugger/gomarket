@@ -2,6 +2,8 @@
 
 translate:
 	go generate ./internal/translations
+	go tool translate -locales-dir=./internal/translations/locales
+	go generate ./internal/translations
 
 generate:
 	go tool sqlc generate

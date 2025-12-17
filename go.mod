@@ -1,6 +1,6 @@
 module github.com/gobugger/gomarket
 
-go 1.24.4
+go 1.25.4
 
 require (
 	github.com/ProtonMail/gopenpgp/v3 v3.1.0
@@ -13,6 +13,7 @@ require (
 	github.com/go-chi/httprate v0.15.0
 	github.com/go-co-op/gocron/v2 v2.18.0
 	github.com/go-playground/validator/v10 v10.28.0
+	github.com/gobugger/globalize v0.0.0-20251126124716-7729a0f0b2a8
 	github.com/golang-migrate/migrate/v4 v4.18.3
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/csrf v1.7.3
@@ -172,6 +173,8 @@ require (
 
 tool (
 	github.com/a-h/templ/cmd/templ
+	github.com/gobugger/globalize/cmd/globalize
+	github.com/gobugger/globalize/cmd/translate
 	github.com/sqlc-dev/sqlc/cmd/sqlc
 	golang.org/x/text/cmd/gotext
 )

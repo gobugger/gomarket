@@ -4,87 +4,104 @@
       {
         "id": "Failed to open the gate: invalid missing characters",
         "message": "Failed to open the gate: invalid missing characters",
-        "translation": "Neizdevās atvērt vārtus: nederīgi trūkstoši simboli"
+        "translation": "Neizdevās atvērt vārtus: nederīgi trūkstoši simboli",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:102:41"
       },
       {
         "id": "This username is already in use",
         "message": "This username is already in use",
-        "translation": "Šis lietotājvārds jau tiek izmantots"
+        "translation": "Šis lietotājvārds jau tiek izmantots",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:162:41"
       },
       {
         "id": "Invalid PGP key",
         "message": "Invalid PGP key",
-        "translation": "Nederīgs PGP atslēga"
+        "translation": "Nederīgs PGP atslēga",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:421:42"
       },
       {
         "id": "Registered successfully",
         "message": "Registered successfully",
-        "translation": "Veiksmīgi reģistrēts"
+        "translation": "Veiksmīgi reģistrēts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:175:40"
       },
       {
         "id": "Invalid credentials",
         "message": "Invalid credentials",
-        "translation": "Nederīgi akreditācijas dati"
+        "translation": "Nederīgi akreditācijas dati",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:327:41"
       },
       {
         "id": "Your account is banned",
         "message": "Your account is banned",
-        "translation": "Jūsu konts ir bloķēts"
+        "translation": "Jūsu konts ir bloķēts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:219:41"
       },
       {
         "id": "Invalid 2FA token",
         "message": "Invalid 2FA token",
-        "translation": "Nederīgs 2FA tokens"
+        "translation": "Nederīgs 2FA tokens",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:437:48"
       },
       {
         "id": "Password changed",
         "message": "Password changed",
-        "translation": "Parole mainīta"
+        "translation": "Parole mainīta",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:335:40"
       },
       {
         "id": "You can't update to your current key",
         "message": "You can't update to your current key",
-        "translation": "Jūs nevarat atjaunināt uz savu pašreizējo atslēgu"
+        "translation": "Jūs nevarat atjaunināt uz savu pašreizējo atslēgu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:407:49"
       },
       {
         "id": "PGP key is set",
         "message": "PGP key is set",
-        "translation": "PGP atslēga ir iestatīta"
+        "translation": "PGP atslēga ir iestatīta",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:430:42"
       },
       {
         "id": "PGP Public key is updated",
         "message": "PGP Public key is updated",
-        "translation": "PGP publiskā atslēga ir atjaunināta"
+        "translation": "PGP publiskā atslēga ir atjaunināta",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:432:42"
       },
       {
-        "id": "Vendor info is updated",
-        "message": "Vendor info is updated",
-        "translation": "Pārdevēja informācija ir atjaunināta"
+        "id": "Terms of service updated",
+        "message": "Terms of service updated",
+        "translation": "Lietošanas noteikumi atjaunināti",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:473:41"
       },
       {
         "id": "Listing created",
         "message": "Listing created",
-        "translation": "Sludinājums izveidots"
+        "translation": "Sludinājums izveidots",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:541:40"
       },
       {
         "id": "Cart updated",
         "message": "Cart updated",
-        "translation": "Groziņš atjaunināts"
+        "translation": "Groziņš atjaunināts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:710:40"
       },
       {
         "id": "cart deleted",
         "message": "cart deleted",
-        "translation": "groziņš dzēsts"
+        "translation": "groziņš dzēsts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:743:40"
       },
       {
         "id": "You can't order with a vendor account",
         "message": "You can't order with a vendor account",
-        "translation": "Jūs nevarat pasūtīt ar pārdevēja kontu"
+        "translation": "Jūs nevarat pasūtīt ar pārdevēja kontu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:808:48"
       },
       {
         "id": "You don't have enough balance for this order",
         "message": "You don't have enough balance for this order",
-        "translation": "Jums nav pietiekami daudz līdzekļu šim pasūtījumam"
+        "translation": "Jums nav pietiekami daudz līdzekļu šim pasūtījumam",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:835:49"
       },
       {
         "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
@@ -99,22 +116,32 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:848:49"
       },
       {
         "id": "Order created",
         "message": "Order created",
-        "translation": "Pasūtījums izveidots"
+        "translation": "Pasūtījums izveidots",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:850:49"
+      },
+      {
+        "id": "Withdrawal amount is too small",
+        "message": "Withdrawal amount is too small",
+        "translation": "Izņemšanas summa ir pārāk maza",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1009:40"
       },
       {
         "id": "Not enough balance to withdraw.",
         "message": "Not enough balance to withdraw.",
-        "translation": "Nav pietiekami daudz līdzekļu izņemšanai."
+        "translation": "Nav pietiekami daudz līdzekļu izņemšanai.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1013:40"
       },
       {
         "id": "You can't withdraw to your own account",
         "message": "You can't withdraw to your own account",
-        "translation": "Jūs nevarat izņemt uz savu kontu"
+        "translation": "Jūs nevarat izņemt uz savu kontu",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1017:40"
       },
       {
         "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
@@ -129,17 +156,20 @@
             "argNum": 1,
             "expr": "currency.XMR2Decimal(amount)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1025:40"
       },
       {
         "id": "Order cancelled",
         "message": "Order cancelled",
-        "translation": "Pasūtījums atcelts"
+        "translation": "Pasūtījums atcelts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1066:40"
       },
       {
         "id": "Review created",
         "message": "Review created",
-        "translation": "Atsauksme izveidota"
+        "translation": "Atsauksme izveidota",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1148:48"
       },
       {
         "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
@@ -154,7 +184,8 @@
             "argNum": 1,
             "expr": "5"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1179:48"
       },
       {
         "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
@@ -169,12 +200,14 @@
             "argNum": 1,
             "expr": "12"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1181:48"
       },
       {
         "id": "AF timer already extended to maximum.",
         "message": "AF timer already extended to maximum.",
-        "translation": "AF taimeris jau ir pagarināts līdz maksimumam."
+        "translation": "AF taimeris jau ir pagarināts līdz maksimumam.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1183:48"
       },
       {
         "id": "AF timer extended by {Duration} days",
@@ -189,37 +222,44 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1189:48"
       },
       {
         "id": "Order disputed",
         "message": "Order disputed",
-        "translation": "Pasūtījums apstrīdēts"
+        "translation": "Pasūtījums apstrīdēts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1226:40"
       },
       {
         "id": "2FA needs to be enabled for vendors",
         "message": "2FA needs to be enabled for vendors",
-        "translation": "2FA ir jāieslēdz pārdevējiem"
+        "translation": "2FA ir jāieslēdz pārdevējiem",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1356:40"
       },
       {
         "id": "Vendor accounts can't have previous orders. Please create a new account.",
         "message": "Vendor accounts can't have previous orders. Please create a new account.",
-        "translation": "Pārdevēju kontiem nevar būt iepriekšēju pasūtījumu. Lūdzu, izveidojiet jaunu kontu."
+        "translation": "Pārdevēju kontiem nevar būt iepriekšēju pasūtījumu. Lūdzu, izveidojiet jaunu kontu.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1370:40"
       },
       {
         "id": "Proof of inventory is required from new vendors",
         "message": "Proof of inventory is required from new vendors",
-        "translation": "Jauniem pārdevējiem ir nepieciešams uzrādīt krājumu pierādījumu."
+        "translation": "Jauniem pārdevējiem ir nepieciešams uzrādīt krājumu pierādījumu.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1377:41"
       },
       {
         "id": "Not enough balance",
         "message": "Not enough balance",
-        "translation": "Nepietiekams atlikums"
+        "translation": "Nepietiekams atlikums",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1402:40"
       },
       {
         "id": "Application received",
         "message": "Application received",
-        "translation": "Pieteikums saņemts"
+        "translation": "Pieteikums saņemts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1410:48"
       },
       {
         "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
@@ -234,42 +274,50 @@
             "argNum": 1,
             "expr": "72"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1455:41"
       },
       {
         "id": "Order declined",
         "message": "Order declined",
-        "translation": "Pasūtījums noraidīts"
+        "translation": "Pasūtījums noraidīts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1458:41"
       },
       {
         "id": "Order marked as dispatched",
         "message": "Order marked as dispatched",
-        "translation": "Pasūtījums atzīmēts kā nosūtīts"
+        "translation": "Pasūtījums atzīmēts kā nosūtīts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1502:40"
       },
       {
         "id": "Product deleted",
         "message": "Product deleted",
-        "translation": "Produkts izdzēsts"
+        "translation": "Produkts izdzēsts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1546:41"
       },
       {
         "id": "Product updated",
         "message": "Product updated",
-        "translation": "Produkts atjaunināts"
+        "translation": "Produkts atjaunināts",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1558:41"
       },
       {
         "id": "Ticket is already closed",
         "message": "Ticket is already closed",
-        "translation": "Biļete jau ir slēgta"
+        "translation": "Biļete jau ir slēgta",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1684:48"
       },
       {
         "id": "You need to be logged in to access that page",
         "message": "You need to be logged in to access that page",
-        "translation": "Lai piekļūtu šai lapai, jums jābūt pierakstītam"
+        "translation": "Lai piekļūtu šai lapai, jums jābūt pierakstītam",
+        "position": "github.com/gobugger/gomarket/internal/app/middleware.go:59:49"
       },
       {
         "id": "Order received",
         "message": "Order received",
-        "translation": "Pasūtījums saņemts"
+        "translation": "Pasūtījums saņemts",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:24:22"
       },
       {
         "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
@@ -284,42 +332,50 @@
             "argNum": 1,
             "expr": "48"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:25:24"
       },
       {
         "id": "Order accepted",
         "message": "Order accepted",
-        "translation": "Pasūtījums pieņemts"
+        "translation": "Pasūtījums pieņemts",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:45:24"
       },
       {
         "id": "Your order has been accepted!\nYou can monitor its status from orders page",
         "message": "Your order has been accepted!\nYou can monitor its status from orders page",
-        "translation": "Jūsu pasūtījums ir pieņemts!\nJūs varat uzraudzīt tā statusu no pasūtījumu lapas"
+        "translation": "Jūsu pasūtījums ir pieņemts!\nJūs varat uzraudzīt tā statusu no pasūtījumu lapas",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:46:24"
       },
       {
         "id": "Order dispatched",
         "message": "Order dispatched",
-        "translation": "Pasūtījums nosūtīts"
+        "translation": "Pasūtījums nosūtīts",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:65:24"
       },
       {
         "id": "Your order has been dispatched!\nPlease remember to review it.",
         "message": "Your order has been dispatched!\nPlease remember to review it.",
-        "translation": "Jūsu pasūtījums ir nosūtīts!\nLūdzu, neaizmirstiet to novērtēt."
+        "translation": "Jūsu pasūtījums ir nosūtīts!\nLūdzu, neaizmirstiet to novērtēt.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:66:24"
       },
       {
         "id": "How do I become a vendor?",
         "message": "How do I become a vendor?",
-        "translation": "Kā es varu kļūt par pārdevēju?"
+        "translation": "Kā es varu kļūt par pārdevēju?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:17:25"
       },
       {
         "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
         "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
-        "translation": "Izveidojiet kontu ar iespējotu divu faktoru autentifikāciju (2FA), pēc tam iesniedziet pārdevēja pieteikumu."
+        "translation": "Izveidojiet kontu ar iespējotu divu faktoru autentifikāciju (2FA), pēc tam iesniedziet pārdevēja pieteikumu.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:18:25"
       },
       {
         "id": "How do I place an order?",
         "message": "How do I place an order?",
-        "translation": "Kā es varu veikt pasūtījumu?"
+        "translation": "Kā es varu veikt pasūtījumu?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:21:25"
       },
       {
         "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
@@ -334,22 +390,26 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:22:23"
       },
       {
         "id": "How can I obtain Monero (XMR)?",
         "message": "How can I obtain Monero (XMR)?",
-        "translation": "Kā es varu iegūt Monero (XMR)?"
+        "translation": "Kā es varu iegūt Monero (XMR)?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:26:25"
       },
       {
         "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
         "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
-        "translation": "Ir vairāki veidi, kā iegūt Monero. Lūdzu, apmeklējiet getmonero.org oficiālai informācijai un resursiem."
+        "translation": "Ir vairāki veidi, kā iegūt Monero. Lūdzu, apmeklējiet getmonero.org oficiālai informācijai un resursiem.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:27:25"
       },
       {
         "id": "What should I do if my order has not arrived or does not match the description?",
         "message": "What should I do if my order has not arrived or does not match the description?",
-        "translation": "Ko man darīt, ja mans pasūtījums nav ieradies vai neatbilst aprakstam?"
+        "translation": "Ko man darīt, ja mans pasūtījums nav ieradies vai neatbilst aprakstam?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:30:25"
       },
       {
         "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
@@ -364,42 +424,49 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:31:23"
       },
       {
         "id": "What am I allowed to sell on this marketplace?",
         "message": "What am I allowed to sell on this marketplace?",
-        "translation": "Ko es drīkstu pārdot šajā tirgū?"
+        "translation": "Ko es drīkstu pārdot šajā tirgū?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:37:25"
       },
       {
         "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
         "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
-        "translation": "Atļauti tikai likumīgi priekšmeti. Ja neesat pārliecināts, vai jūsu produkts atbilst prasībām, lūdzu, sazinieties ar mums pirms sludinājuma izveidošanas."
+        "translation": "Atļauti tikai likumīgi priekšmeti. Ja neesat pārliecināts, vai jūsu produkts atbilst prasībām, lūdzu, sazinieties ar mums pirms sludinājuma izveidošanas.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:38:25"
       },
       {
         "id": "Open",
         "message": "Open",
-        "translation": "Atvērts"
+        "translation": "Atvērts",
+        "position": "github.com/gobugger/gomarket/ui/templ/adminpanel_templ.go:292:81"
       },
       {
         "id": "Vendor application",
         "message": "Vendor application",
-        "translation": "Pārdevēja pieteikums"
+        "translation": "Pārdevēja pieteikums",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:110:79"
       },
       {
         "id": "Your account does not have 2FA enabled!",
         "message": "Your account does not have 2FA enabled!",
-        "translation": "Jūsu kontā nav iespējota 2FA!"
+        "translation": "Jūsu kontā nav iespējota 2FA!",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:71:80"
       },
       {
-        "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "translation": "Lietotājiem, kuri jau ir pārdevēji citos tirgos, izmantojot to pašu PGP atslēgu, lietotne ir bezmaksas."
+        "id": "Application is free for users who are already vendors on some other market.",
+        "message": "Application is free for users who are already vendors on some other market.",
+        "translation": "Lietotne ir bezmaksas lietotājiem, kuri jau ir pārdevēji citā tirgū.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:85:79"
       },
       {
-        "id": "For other users, application costs {Price} XMR and is non-refundable.",
-        "message": "For other users, application costs {Price} XMR and is non-refundable.",
-        "translation": "Citiem lietotājiem lietotne maksā {Price} XMR un nav atmaksājama.",
+        "id": "For other users, application costs {Price} XMR.",
+        "message": "For other users, application costs {Price} XMR.",
+        "translation": "Citiem lietotājiem lietotne maksā {Price} XMR.",
         "placeholders": [
           {
             "id": "Price",
@@ -409,297 +476,344 @@
             "argNum": 1,
             "expr": "price"
           }
-        ]
-      },
-      {
-        "id": "You're required to provide proof that you actually have products to sell here.",
-        "message": "You're required to provide proof that you actually have products to sell here.",
-        "translation": "Jums ir jāsniedz pierādījums, ka jums patiešām ir produkti, ko pārdot šeit."
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:98:79"
       },
       {
         "id": "Vendor Logo",
         "message": "Vendor Logo",
-        "translation": "Pārdevēja logo"
+        "translation": "Pārdevēja logo",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:111:79"
       },
       {
         "id": "Use png image with close to 1:1 ratio for optimal look",
         "message": "Use png image with close to 1:1 ratio for optimal look",
-        "translation": "Izmantojiet png attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai."
+        "translation": "Izmantojiet png attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:124:79"
       },
       {
         "id": "Existing vendor",
         "message": "Existing vendor",
-        "translation": "Esošais pārdevējs"
+        "translation": "Esošais pārdevējs",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:137:79"
       },
       {
         "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
         "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
-        "translation": "Izvēlieties šo, ja jau esat pārdevējs citā tirgū, piemēram, xmrBazaar."
+        "translation": "Izvēlieties šo, ja jau esat pārdevējs citā tirgū, piemēram, xmrBazaar.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:150:80"
       },
       {
         "id": "Proof of inventory",
         "message": "Proof of inventory",
-        "translation": "Krājumu pierādījums"
+        "translation": "Krājumu pierādījums",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:171:80"
       },
       {
         "id": "Clear image of your inventory with your username and timestamp visible",
         "message": "Clear image of your inventory with your username and timestamp visible",
-        "translation": "Skaidrs attēls ar jūsu krājumiem, kurā redzams jūsu lietotājvārds un laika zīmogs."
+        "translation": "Skaidrs attēls ar jūsu krājumiem, kurā redzams jūsu lietotājvārds un laika zīmogs.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:184:80"
       },
       {
         "id": "Markets and Your Username",
         "message": "Markets and Your Username",
-        "translation": "Tirgi un jūsu lietotājvārds"
+        "translation": "Tirgi un jūsu lietotājvārds",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:197:80"
       },
       {
         "id": "List the markets where you are a vendor and include your username",
         "message": "List the markets where you are a vendor and include your username",
-        "translation": "Norādiet tirgus, kur esat pārdevējs, un iekļaujiet savu lietotājvārdu."
+        "translation": "Norādiet tirgus, kur esat pārdevējs, un iekļaujiet savu lietotājvārdu.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:210:80"
       },
       {
         "id": "Captcha",
         "message": "Captcha",
-        "translation": "Captcha"
+        "translation": "Captcha",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:40:79"
       },
       {
         "id": "Click circle with a cut",
         "message": "Click circle with a cut",
-        "translation": "Noklikšķiniet uz apļa ar griezumu"
+        "translation": "Noklikšķiniet uz apļa ar griezumu",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:66:79"
       },
       {
         "id": "Submit",
         "message": "Submit",
-        "translation": "Iesniegt"
+        "translation": "Iesniegt",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:111:79"
       },
       {
         "id": "Total",
         "message": "Total",
-        "translation": "Kopā"
+        "translation": "Kopā",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:277:81"
       },
       {
         "id": "Checkout",
         "message": "Checkout",
-        "translation": "Apmaksāt"
+        "translation": "Apmaksāt",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:59:79"
       },
       {
         "id": "delivery method",
         "message": "delivery method",
-        "translation": "piegādes metode"
+        "translation": "piegādes metode",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:72:79"
       },
       {
         "id": "Use wallet for payment",
         "message": "Use wallet for payment",
-        "translation": "Izmantojiet maku maksāšanai"
+        "translation": "Izmantojiet maku maksāšanai",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:134:79"
       },
       {
         "id": "details",
         "message": "details",
-        "translation": "detaļas"
-      },
-      {
-        "id": "Use your real address, with the same format as below.",
-        "message": "Use your real address, with the same format as below.",
-        "translation": "Izmantojiet savu īsto adresi, ar tādu pašu formātu kā zemāk."
+        "translation": "detaļas",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:156:79"
       },
       {
         "id": "Unencrypted details are automatically encrypted using vendors key.",
         "message": "Unencrypted details are automatically encrypted using vendors key.",
-        "translation": "Nešifrētie dati automātiski tiek šifrēti, izmantojot pārdevēja atslēgu."
+        "translation": "Nešifrētie dati automātiski tiek šifrēti, izmantojot pārdevēja atslēgu.",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:169:80"
       },
       {
         "id": "Title",
         "message": "Title",
-        "translation": "Nosaukums"
+        "translation": "Nosaukums",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:62:79"
       },
       {
         "id": "Description",
         "message": "Description",
-        "translation": "Apraksts"
+        "translation": "Apraksts",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:75:79"
       },
       {
         "id": "Product image",
         "message": "Product image",
-        "translation": "Produkta attēls"
+        "translation": "Produkta attēls",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:88:79"
       },
       {
         "id": "Use image with close to 1:1 aspect ratio for optimal look",
         "message": "Use image with close to 1:1 aspect ratio for optimal look",
-        "translation": "Izmantojiet attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai."
+        "translation": "Izmantojiet attēlu ar tuvu 1:1 attiecību optimālai izskatīšanai.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:101:79"
       },
       {
         "id": "Category",
         "message": "Category",
-        "translation": "Kategorija"
+        "translation": "Kategorija",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:114:79"
       },
       {
         "id": "Ships from",
         "message": "Ships from",
-        "translation": "Nosūtīts no"
+        "translation": "Nosūtīts no",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:163:80"
       },
       {
         "id": "Ships to",
         "message": "Ships to",
-        "translation": "Nosūtīts uz"
+        "translation": "Nosūtīts uz",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:212:80"
       },
       {
         "id": "Inventory",
         "message": "Inventory",
-        "translation": "Krājumi"
+        "translation": "Krājumi",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:93:80"
       },
       {
         "id": "Size of the current inventory for this product.",
         "message": "Size of the current inventory for this product.",
-        "translation": "Šī produkta pašreizējo krājumu lielums."
+        "translation": "Šī produkta pašreizējo krājumu lielums.",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:106:80"
       },
       {
         "id": "Pricing",
         "message": "Pricing",
-        "translation": "Cenu noteikšana"
+        "translation": "Cenu noteikšana",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:287:80"
       },
       {
         "id": "Here you can set your pricing.",
         "message": "Here you can set your pricing.",
-        "translation": "Šeit jūs varat noteikt savas cenas."
+        "translation": "Šeit jūs varat noteikt savas cenas.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:300:80"
       },
       {
         "id": "We take 5% cut from these prices.",
         "message": "We take 5% cut from these prices.",
-        "translation": "Mēs ņemam 5% komisiju no šīm cenām."
+        "translation": "Mēs ņemam 5% komisiju no šīm cenām.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:313:80"
       },
       {
         "id": "Quantity",
         "message": "Quantity",
-        "translation": "Daudzums"
+        "translation": "Daudzums",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:254:80"
       },
       {
         "id": "Price",
         "message": "Price",
-        "translation": "Cena"
+        "translation": "Cena",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:582:81"
       },
       {
         "id": "Create ticket",
         "message": "Create ticket",
-        "translation": "Izveidot biļeti"
+        "translation": "Izveidot biļeti",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:67:80"
       },
       {
         "id": "Subject",
         "message": "Subject",
-        "translation": "Temats"
+        "translation": "Temats",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:61:79"
       },
       {
         "id": "account",
         "message": "account",
-        "translation": "konts"
+        "translation": "konts",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:83:79"
       },
       {
         "id": "order",
         "message": "order",
-        "translation": "pasūtījums"
+        "translation": "pasūtījums",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:96:79"
       },
       {
         "id": "wallet",
         "message": "wallet",
-        "translation": "maku"
+        "translation": "maku",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:109:79"
       },
       {
         "id": "vendor",
         "message": "vendor",
-        "translation": "pārdevējs"
+        "translation": "pārdevējs",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:25:22"
       },
       {
         "id": "product",
         "message": "product",
-        "translation": "produkts"
+        "translation": "produkts",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:135:79"
       },
       {
         "id": "suggestion",
         "message": "suggestion",
-        "translation": "ieteikums"
+        "translation": "ieteikums",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:148:80"
       },
       {
         "id": "bug",
         "message": "bug",
-        "translation": "kļūda"
+        "translation": "kļūda",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:161:80"
       },
       {
         "id": "other",
         "message": "other",
-        "translation": "cits"
+        "translation": "cits",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:174:80"
       },
       {
         "id": "Message",
         "message": "Message",
-        "translation": "Ziņa"
+        "translation": "Ziņa",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:98:79"
       },
       {
         "id": "Staff PGP",
         "message": "Staff PGP",
-        "translation": "Darbinieku PGP"
+        "translation": "Darbinieku PGP",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:200:80"
       },
       {
         "id": "Exchange rate",
         "message": "Exchange rate",
-        "translation": "Valūtas kurss"
+        "translation": "Valūtas kurss",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:52:78"
       },
       {
         "id": "Time",
         "message": "Time",
-        "translation": "Laiks"
+        "translation": "Laiks",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:78:78"
       },
       {
         "id": "Vendors:",
         "message": "Vendors:",
-        "translation": "Pārdevēji:"
+        "translation": "Pārdevēji:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:104:78"
       },
       {
         "id": "Users:",
         "message": "Users:",
-        "translation": "Lietotāji:"
+        "translation": "Lietotāji:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:126:78"
       },
       {
         "id": "submit",
         "message": "submit",
-        "translation": "iesniegt"
+        "translation": "iesniegt",
+        "position": "github.com/gobugger/gomarket/ui/templ/handle-application_templ.go:206:80"
       },
       {
         "id": "Response",
         "message": "Response",
-        "translation": "Atbilde"
+        "translation": "Atbilde",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:193:81"
       },
       {
         "id": "products",
         "message": "products",
-        "translation": "produkti"
+        "translation": "produkti",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:37:78"
       },
       {
         "id": "orders",
         "message": "orders",
-        "translation": "pasūtījumi"
+        "translation": "pasūtījumi",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:55:79"
       },
       {
         "id": "sell",
         "message": "sell",
-        "translation": "pārdot"
+        "translation": "pārdot",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:74:79"
       },
       {
         "id": "support",
         "message": "support",
-        "translation": "atbalsts"
+        "translation": "atbalsts",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:107:79"
       },
       {
         "id": "Logout",
         "message": "Logout",
-        "translation": "Iziet"
+        "translation": "Iziet",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:185:79"
       },
       {
         "id": "log in",
         "message": "log in",
-        "translation": "pierakstīties"
+        "translation": "pierakstīties",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:203:79"
       },
       {
         "id": "register",
         "message": "register",
-        "translation": "reģistrēties"
+        "translation": "reģistrēties",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:216:80"
       },
       {
         "id": "Entry guard to {Name}",
@@ -714,102 +828,122 @@
             "argNum": 1,
             "expr": "tc.Config.Name"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:57:79"
       },
       {
         "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
         "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
-        "translation": "Salīdziniet URL, ko izmantojat, ar attēlā zemāk redzamo, lai atrastu visus trūkstošos simbolus, kas atzīmēti ar '*'"
+        "translation": "Salīdziniet URL, ko izmantojat, ar attēlā zemāk redzamo, lai atrastu visus trūkstošos simbolus, kas atzīmēti ar '*'",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:70:79"
       },
       {
         "id": "Missing characters",
         "message": "Missing characters",
-        "translation": "Trūkstošie simboli"
+        "translation": "Trūkstošie simboli",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:96:79"
       },
       {
         "id": "Log in",
         "message": "Log in",
-        "translation": "Pieteikties"
+        "translation": "Pieteikties",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:57:79"
       },
       {
         "id": "username",
         "message": "username",
-        "translation": "lietotājvārds"
+        "translation": "lietotājvārds",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:70:79"
       },
       {
         "id": "password",
         "message": "password",
-        "translation": "parole"
+        "translation": "parole",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:104:79"
       },
       {
         "id": "Create new account",
         "message": "Create new account",
-        "translation": "Izveidot jaunu kontu"
+        "translation": "Izveidot jaunu kontu",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:138:79"
       },
       {
         "id": "Delete all",
         "message": "Delete all",
-        "translation": "Dzēst visu"
+        "translation": "Dzēst visu",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:109:80"
       },
       {
         "id": "You have zero notifications",
         "message": "You have zero notifications",
-        "translation": "Jums nav paziņojumu"
+        "translation": "Jums nav paziņojumu",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:127:80"
       },
       {
         "id": "Order",
         "message": "Order",
-        "translation": "Pasūtījums"
+        "translation": "Pasūtījums",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:241:80"
       },
       {
         "id": "Chat",
         "message": "Chat",
-        "translation": "Čats"
+        "translation": "Čats",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:187:79"
       },
       {
         "id": "Status",
         "message": "Status",
-        "translation": "Statuss"
+        "translation": "Statuss",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:243:79"
       },
       {
         "id": "Vendor",
         "message": "Vendor",
-        "translation": "Pārdevējs"
+        "translation": "Pārdevējs",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:269:79"
       },
       {
         "id": "Delivery method",
         "message": "Delivery method",
-        "translation": "Piegādes metode"
+        "translation": "Piegādes metode",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:308:79"
       },
       {
         "id": "Total cost",
         "message": "Total cost",
-        "translation": "Kopējās izmaksas"
+        "translation": "Kopējās izmaksas",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:334:79"
       },
       {
         "id": "Date",
         "message": "Date",
-        "translation": "Datums"
+        "translation": "Datums",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:360:79"
       },
       {
         "id": "Dispatched at",
         "message": "Dispatched at",
-        "translation": "Nosūtīts"
+        "translation": "Nosūtīts",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:391:80"
       },
       {
         "id": "Until auto-declined",
         "message": "Until auto-declined",
-        "translation": "Līdz automātiskai noraidīšanai"
+        "translation": "Līdz automātiskai noraidīšanai",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:424:80"
       },
       {
         "id": "Until auto-finalized",
         "message": "Until auto-finalized",
-        "translation": "Līdz automātiskai pabeigšanai"
+        "translation": "Līdz automātiskai pabeigšanai",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:455:80"
       },
       {
         "id": "Details",
         "message": "Details",
-        "translation": "Detaļas"
+        "translation": "Detaļas",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:486:79"
       },
       {
         "id": "Vendor offered refund of {RefundFactor}%",
@@ -824,377 +958,452 @@
             "argNum": 1,
             "expr": "100 * item.Offer.RefundFactor"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:794:81"
       },
       {
         "id": "Accept",
         "message": "Accept",
-        "translation": "Pieņemt"
+        "translation": "Pieņemt",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1064:79"
       },
       {
         "id": "Decline",
         "message": "Decline",
-        "translation": "Noraidīt"
+        "translation": "Noraidīt",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1077:79"
       },
       {
         "id": "Customers PGP key",
         "message": "Customers PGP key",
-        "translation": "Klienta PGP atslēga"
+        "translation": "Klienta PGP atslēga",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:901:80"
       },
       {
         "id": "Customer can still cancel this order!",
         "message": "Customer can still cancel this order!",
-        "translation": "Klients joprojām var atcelt šo pasūtījumu!"
+        "translation": "Klients joprojām var atcelt šo pasūtījumu!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:999:79"
       },
       {
         "id": "You must accept it in 2 days or it will be automatically declined.",
         "message": "You must accept it in 2 days or it will be automatically declined.",
-        "translation": "Jums jāpieņem tas 2 dienu laikā, vai tas tiks automātiski noraidīts."
+        "translation": "Jums jāpieņem tas 2 dienu laikā, vai tas tiks automātiski noraidīts.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1012:79"
       },
       {
         "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
         "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
-        "translation": "Pēc pieņemšanas klients vairs nevar atcelt, tāpēc varat droši nosūtīt."
+        "translation": "Pēc pieņemšanas klients vairs nevar atcelt, tāpēc varat droši nosūtīt.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1025:79"
       },
       {
         "id": "Please carefully review the order below before accepting it.",
         "message": "Please carefully review the order below before accepting it.",
-        "translation": "Lūdzu, rūpīgi pārskatiet zemāk esošo pasūtījumu pirms tā pieņemšanas."
+        "translation": "Lūdzu, rūpīgi pārskatiet zemāk esošo pasūtījumu pirms tā pieņemšanas.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1038:79"
       },
       {
         "id": "Always decline orders that you'r unable to fulfill.",
         "message": "Always decline orders that you'r unable to fulfill.",
-        "translation": "Vienmēr noraidiet pasūtījumus, kurus nevarat izpildīt."
+        "translation": "Vienmēr noraidiet pasūtījumus, kurus nevarat izpildīt.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1051:79"
       },
       {
         "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
         "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
-        "translation": "Jums jāatzīmē šis pasūtījums kā nosūtīts 2 dienu laikā, vai tas tiks automātiski noraidīts."
+        "translation": "Jums jāatzīmē šis pasūtījums kā nosūtīts 2 dienu laikā, vai tas tiks automātiski noraidīts.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1140:79"
       },
       {
         "id": "Make sure that you have enough time to do the actual dispaching!",
         "message": "Make sure that you have enough time to do the actual dispaching!",
-        "translation": "Pārliecinieties, ka jums ir pietiekami daudz laika, lai veiktu faktisko nosūtīšanu!"
+        "translation": "Pārliecinieties, ka jums ir pietiekami daudz laika, lai veiktu faktisko nosūtīšanu!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1153:79"
       },
       {
         "id": "Dispatched",
         "message": "Dispatched",
-        "translation": "Nosūtīts"
+        "translation": "Nosūtīts",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1166:79"
       },
       {
         "id": "Transfer exact amount of Monero to the address below.",
         "message": "Transfer exact amount of Monero to the address below.",
-        "translation": "Pārskaitiet precīzu Monero summu uz zemāk norādīto adresi."
+        "translation": "Pārskaitiet precīzu Monero summu uz zemāk norādīto adresi.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1208:79"
       },
       {
         "id": "After 10 confirmations, your order will proceed to vendor.",
         "message": "After 10 confirmations, your order will proceed to vendor.",
-        "translation": "Pēc 10 apstiprinājumiem jūsu pasūtījums tiks nosūtīts pārdevējam."
+        "translation": "Pēc 10 apstiprinājumiem jūsu pasūtījums tiks nosūtīts pārdevējam.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1221:79"
       },
       {
         "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
         "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
-        "translation": "Jums ir kopumā 3 stundas, lai samaksātu šo rēķinu, pretējā gadījumā jūsu pasūtījums tiks atcelts."
+        "translation": "Jums ir kopumā 3 stundas, lai samaksātu šo rēķinu, pretējā gadījumā jūsu pasūtījums tiks atcelts.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1234:79"
       },
       {
         "id": "Time left to pay",
         "message": "Time left to pay",
-        "translation": "Atlikušais laiks maksājuma veikšanai"
+        "translation": "Atlikušais laiks maksājuma veikšanai",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1247:79"
       },
       {
         "id": "Amount XMR",
         "message": "Amount XMR",
-        "translation": "Summa XMR"
+        "translation": "Summa XMR",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1278:79"
       },
       {
         "id": "Address",
         "message": "Address",
-        "translation": "Adrese"
+        "translation": "Adrese",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:172:80"
       },
       {
         "id": "Orders can be cancelled until vendor has accepted it.",
         "message": "Orders can be cancelled until vendor has accepted it.",
-        "translation": "Pasūtījumi var tikt atcelti līdz brīdim, kad tos ir pieņēmis pārdevējs."
+        "translation": "Pasūtījumi var tikt atcelti līdz brīdim, kad tos ir pieņēmis pārdevējs.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1393:79"
       },
       {
         "id": "Cancel",
         "message": "Cancel",
-        "translation": "Atcelt"
+        "translation": "Atcelt",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1406:79"
       },
       {
         "id": "Your order will auto-finalize in",
         "message": "Your order will auto-finalize in",
-        "translation": "Jūsu pasūtījums automātiski tiks pabeigts pēc"
+        "translation": "Jūsu pasūtījums automātiski tiks pabeigts pēc",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1448:79"
       },
       {
         "id": "You can extend the auto-finalize-time by 7-days.",
         "message": "You can extend the auto-finalize-time by 7-days.",
-        "translation": "Jūs varat pagarināt automātiskās pabeigšanas laiku par 7 dienām."
+        "translation": "Jūs varat pagarināt automātiskās pabeigšanas laiku par 7 dienām.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1461:79"
       },
       {
         "id": "review your order",
         "message": "review your order",
-        "translation": "pārskatiet savu pasūtījumu"
+        "translation": "pārskatiet savu pasūtījumu",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1487:79"
       },
       {
         "id": "Review",
         "message": "Review",
-        "translation": "Pārskats"
+        "translation": "Pārskats",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1500:79"
       },
       {
         "id": "Extend AF-timer",
         "message": "Extend AF-timer",
-        "translation": "Pagarināt AF taimeri"
+        "translation": "Pagarināt AF taimeri",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1539:80"
       },
       {
         "id": "Dispute",
         "message": "Dispute",
-        "translation": "Strīds"
+        "translation": "Strīds",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1578:79"
       },
       {
         "id": "Refund offer",
         "message": "Refund offer",
-        "translation": "Hyvitys piedāvājums"
+        "translation": "Hyvitys piedāvājums",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1628:79"
       },
       {
         "id": "Customer has disputed this order.",
         "message": "Customer has disputed this order.",
-        "translation": "Klients ir apstrīdējis šo pasūtījumu."
+        "translation": "Klients ir apstrīdējis šo pasūtījumu.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1654:79"
       },
       {
         "id": "Use the chat below to discuss about this dispute.",
         "message": "Use the chat below to discuss about this dispute.",
-        "translation": "Izmantojiet zemāk esošo tērzēšanu, lai apspriestu šo strīdu."
+        "translation": "Izmantojiet zemāk esošo tērzēšanu, lai apspriestu šo strīdu.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1667:79"
       },
       {
         "id": "You can create an refund offer and resolve this dispute without admin intervention.",
         "message": "You can create an refund offer and resolve this dispute without admin intervention.",
-        "translation": "Jūs varat izveidot atmaksas piedāvājumu un atrisināt šo strīdu bez administratora iejaukšanās."
+        "translation": "Jūs varat izveidot atmaksas piedāvājumu un atrisināt šo strīdu bez administratora iejaukšanās.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1680:79"
       },
       {
         "id": "Refund percent",
         "message": "Refund percent",
-        "translation": "Atmaksas procents"
+        "translation": "Atmaksas procents",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1693:79"
       },
       {
         "id": "Order date",
         "message": "Order date",
-        "translation": "Pasūtījuma datums"
+        "translation": "Pasūtījuma datums",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:72:80"
       },
       {
         "id": "Order ID",
         "message": "Order ID",
-        "translation": "Pasūtījuma ID"
+        "translation": "Pasūtījuma ID",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:98:80"
       },
       {
         "id": "Proof key ownership",
         "message": "Proof key ownership",
-        "translation": "Atslēgas īpašumtiesību pierādījums"
+        "translation": "Atslēgas īpašumtiesību pierādījums",
+        "position": "github.com/gobugger/gomarket/ui/templ/pgp_check_templ.go:57:79"
       },
       {
         "id": "Decrypt to get the token",
         "message": "Decrypt to get the token",
-        "translation": "Atšifrējiet, lai iegūtu tokenu"
+        "translation": "Atšifrējiet, lai iegūtu tokenu",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:70:79"
       },
       {
         "id": "Token",
         "message": "Token",
-        "translation": "Token"
+        "translation": "Token",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:96:79"
       },
       {
         "id": "Update product",
         "message": "Update product",
-        "translation": "Atjaunināt produktu"
+        "translation": "Atjaunināt produktu",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:67:80"
       },
       {
         "id": "Update",
         "message": "Update",
-        "translation": "Atjaunināt"
+        "translation": "Atjaunināt",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:127:80"
       },
       {
         "id": "Add to cart",
         "message": "Add to cart",
-        "translation": "Pievienot grozam"
+        "translation": "Pievienot grozam",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:315:80"
       },
       {
         "id": "Reviews",
         "message": "Reviews",
-        "translation": "Atsauksmes"
+        "translation": "Atsauksmes",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:171:79"
       },
       {
         "id": "ago",
         "message": "ago",
-        "translation": "pirms"
+        "translation": "pirms",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:404:81"
       },
       {
         "id": "OUT OF STOCK",
         "message": "OUT OF STOCK",
-        "translation": "NAV PIEEJAMS"
+        "translation": "NAV PIEEJAMS",
+        "position": "github.com/gobugger/gomarket/ui/templ/products_templ.go:66:81"
       },
       {
         "id": "Register",
         "message": "Register",
-        "translation": "Reģistrēties"
+        "translation": "Reģistrēties",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:57:79"
       },
       {
         "id": "password check",
         "message": "password check",
-        "translation": "paroles pārbaude"
+        "translation": "paroles pārbaude",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:138:79"
       },
       {
         "id": "Already have an account?",
         "message": "Already have an account?",
-        "translation": "Jau ir konts?"
+        "translation": "Jau ir konts?",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:172:80"
       },
       {
         "id": "Review order",
         "message": "Review order",
-        "translation": "Pārskatīt pasūtījumu"
+        "translation": "Pārskatīt pasūtījumu",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:59:79"
       },
       {
         "id": "Grade",
         "message": "Grade",
-        "translation": "Vērtējums"
+        "translation": "Vērtējums",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:85:79"
       },
       {
         "id": "guest",
         "message": "guest",
-        "translation": "viesis"
+        "translation": "viesis",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:21:22"
       },
       {
         "id": "customer",
         "message": "customer",
-        "translation": "klients"
+        "translation": "klients",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:23:22"
       },
       {
         "id": "admin",
         "message": "admin",
-        "translation": "administrators"
+        "translation": "administrators",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:27:22"
       },
       {
         "id": "unknown",
         "message": "unknown",
-        "translation": "nezināms"
+        "translation": "nezināms",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:29:22"
       },
       {
         "id": "enabled",
         "message": "enabled",
-        "translation": "ieslēgts"
+        "translation": "ieslēgts",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:35:22"
       },
       {
         "id": "disabled",
         "message": "disabled",
-        "translation": "izslēgts"
+        "translation": "izslēgts",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:37:22"
       },
       {
         "id": "Account",
         "message": "Account",
-        "translation": "Konta"
+        "translation": "Konta",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:81:79"
       },
       {
         "id": "Username",
         "message": "Username",
-        "translation": "Lietotājvārds"
+        "translation": "Lietotājvārds",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:94:79"
       },
       {
         "id": "Type",
         "message": "Type",
-        "translation": "Tips"
+        "translation": "Tips",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:120:79"
       },
       {
         "id": "2FA",
         "message": "2FA",
-        "translation": "2FA"
+        "translation": "2FA",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:57:79"
       },
       {
         "id": "Preferences",
         "message": "Preferences",
-        "translation": "Iestatījumi"
+        "translation": "Iestatījumi",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:180:80"
       },
       {
         "id": "Language",
         "message": "Language",
-        "translation": "Valoda"
+        "translation": "Valoda",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:193:80"
       },
       {
         "id": "Currency",
         "message": "Currency",
-        "translation": "Valūta"
+        "translation": "Valūta",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:252:80"
       },
       {
         "id": "Change password",
         "message": "Change password",
-        "translation": "Mainīt paroli"
+        "translation": "Mainīt paroli",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:345:80"
       },
       {
         "id": "Current password",
         "message": "Current password",
-        "translation": "Pašreizējā parole"
+        "translation": "Pašreizējā parole",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:358:80"
       },
       {
         "id": "New password",
         "message": "New password",
-        "translation": "Jaunā parole"
+        "translation": "Jaunā parole",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:371:80"
       },
       {
         "id": "Confirm new password",
         "message": "Confirm new password",
-        "translation": "Apstiprināt jauno paroli"
+        "translation": "Apstiprināt jauno paroli",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:384:80"
       },
       {
         "id": "Change PGP key",
         "message": "Change PGP key",
-        "translation": "Mainīt PGP atslēgu"
+        "translation": "Mainīt PGP atslēgu",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:418:81"
       },
       {
         "id": "Enable 2FA",
         "message": "Enable 2FA",
-        "translation": "Ieslēgt 2FA"
+        "translation": "Ieslēgt 2FA",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:436:81"
       },
       {
         "id": "PGP public key",
         "message": "PGP public key",
-        "translation": "PGP publiskā atslēga"
+        "translation": "PGP publiskā atslēga",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:454:80"
       },
       {
         "id": "Required for vendors, suggested for everyone.",
         "message": "Required for vendors, suggested for everyone.",
-        "translation": "Nepieciešams pārdevējiem, ieteicams visiem."
+        "translation": "Nepieciešams pārdevējiem, ieteicams visiem.",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:467:80"
       },
       {
-        "id": "Update vendor profile",
-        "message": "Update vendor profile",
-        "translation": "Atjaunināt pārdevēja profilu"
+        "id": "Update terms of service",
+        "message": "Update terms of service",
+        "translation": "Atjaunināt lietošanas noteikumus",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:501:81"
       },
       {
-        "id": "Vendor info",
-        "message": "Vendor info",
-        "translation": "Pārdevēja informācija"
+        "id": "Terms of service",
+        "message": "Terms of service",
+        "translation": "Lietošanas noteikumi",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:353:80"
       },
       {
-        "id": "Leave empty to not update.",
-        "message": "Leave empty to not update.",
-        "translation": "Atstājiet tukšu, lai neaktualizētu."
+        "id": "Terms of service is used to resolve disputes",
+        "message": "Terms of service is used to resolve disputes",
+        "translation": "Lietošanas noteikumi tiek izmantoti strīdu risināšanai",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:527:81"
       },
       {
         "id": "Update delivery methods",
         "message": "Update delivery methods",
-        "translation": "Atjaunināt piegādes metodes"
+        "translation": "Atjaunināt piegādes metodes",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:556:81"
       },
       {
         "id": "Delivery Method",
         "message": "Delivery Method",
-        "translation": "Piegādes metode"
+        "translation": "Piegādes metode",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:569:81"
       },
       {
         "id": "My tickets",
         "message": "My tickets",
-        "translation": "Mani biļetes"
+        "translation": "Mani biļetes",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:54:80"
       },
       {
         "id": "0 seconds",
         "message": "0 seconds",
-        "translation": "0 sekundes"
+        "translation": "0 sekundes",
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:95:21"
       },
       {
         "id": "{Second} seconds",
@@ -1209,7 +1418,8 @@
             "argNum": 1,
             "expr": "since / time.Second"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:97:21"
       },
       {
         "id": "{Minute} minutes",
@@ -1224,7 +1434,8 @@
             "argNum": 1,
             "expr": "since / time.Minute"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:99:21"
       },
       {
         "id": "{Hour} hours",
@@ -1239,7 +1450,8 @@
             "argNum": 1,
             "expr": "since / time.Hour"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:101:21"
       },
       {
         "id": "{Hour} days",
@@ -1254,102 +1466,132 @@
             "argNum": 1,
             "expr": "since / (24 * time.Hour)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:103:21"
       },
       {
         "id": "Rating (AVG)",
         "message": "Rating (AVG)",
-        "translation": "Vērtējums (AVG)"
+        "translation": "Vērtējums (AVG)",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:197:80"
       },
       {
         "id": "Orders completed",
         "message": "Orders completed",
-        "translation": "Pasūtījumi pabeigti"
+        "translation": "Pasūtījumi pabeigti",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:223:80"
       },
       {
         "id": "Orders in escrow",
         "message": "Orders in escrow",
-        "translation": "Pasūtījumi uzturēšanā"
+        "translation": "Pasūtījumi uzturēšanā",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:249:80"
       },
       {
         "id": "Pending disputes",
         "message": "Pending disputes",
-        "translation": "Gaidāmie strīdi"
+        "translation": "Gaidāmie strīdi",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:275:80"
       },
       {
         "id": "Previously seen",
         "message": "Previously seen",
-        "translation": "Iepriekš redzēts"
+        "translation": "Iepriekš redzēts",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:301:80"
       },
       {
         "id": "PGP key",
         "message": "PGP key",
-        "translation": "PGP atslēga"
+        "translation": "PGP atslēga",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:327:80"
       },
       {
         "id": "Wallet",
         "message": "Wallet",
-        "translation": "Maka"
+        "translation": "Maka",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:55:79"
       },
       {
         "id": "This is your XMR wallet where you can deposit coins.",
         "message": "This is your XMR wallet where you can deposit coins.",
-        "translation": "Šis ir jūsu XMR maks, kurā varat noguldīt monētas."
+        "translation": "Šis ir jūsu XMR maks, kurā varat noguldīt monētas.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:68:79"
       },
       {
         "id": "Balance is updated after 10 confirmations.",
         "message": "Balance is updated after 10 confirmations.",
-        "translation": "Saldo atjaunina pēc 10 apstiprinājumiem."
+        "translation": "Saldo atjaunina pēc 10 apstiprinājumiem.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:81:79"
       },
       {
         "id": "See",
         "message": "See",
-        "translation": "Skatīt"
+        "translation": "Skatīt",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:94:79"
       },
       {
         "id": "for more information.",
         "message": "for more information.",
-        "translation": "vairāk informācijas."
+        "translation": "vairāk informācijas.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:120:79"
       },
       {
         "id": "Balance",
         "message": "Balance",
-        "translation": "Saldo"
+        "translation": "Saldo",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:133:79"
       },
       {
         "id": "Withdraw",
         "message": "Withdraw",
-        "translation": "Izņemt"
+        "translation": "Izņemt",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:219:80"
       },
       {
         "id": "Enter a monero address where you want to withdraw your funds.",
         "message": "Enter a monero address where you want to withdraw your funds.",
-        "translation": "Ievadiet Monero adresi, uz kuru vēlaties izņemt savus līdzekļus."
+        "translation": "Ievadiet Monero adresi, uz kuru vēlaties izņemt savus līdzekļus.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:232:80"
       },
       {
-        "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "translation": "Mēs iekasējam 0.01 XMR maksu par katru izņemšanu, lai novērstu surogātpastu."
+        "id": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "message": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "translation": "Mēs iekasējam {WithdrawalFee} XMR maksu par katru izņemšanu, lai novērstu surogātpastu.",
+        "placeholders": [
+          {
+            "id": "WithdrawalFee",
+            "string": "%[1]f",
+            "type": "float64",
+            "underlyingType": "float64",
+            "argNum": 1,
+            "expr": "payment.WithdrawalFee"
+          }
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:245:80"
       },
       {
         "id": "DO NOT withdraw funds to another wallet on this platform!",
         "message": "DO NOT withdraw funds to another wallet on this platform!",
-        "translation": "NEIZŅEMIET līdzekļus uz citu maku šajā platformā!"
+        "translation": "NEIZŅEMIET līdzekļus uz citu maku šajā platformā!",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:258:80"
       },
       {
         "id": "Destination address",
         "message": "Destination address",
-        "translation": "Galamērķa adrese"
+        "translation": "Galamērķa adrese",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:271:80"
       },
       {
         "id": "Amount",
         "message": "Amount",
-        "translation": "Summa"
+        "translation": "Summa",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:284:80"
       },
       {
         "id": "Enter amount in decimal format (e.g., 1.42069)",
         "message": "Enter amount in decimal format (e.g., 1.42069)",
-        "translation": "Ievadiet summu decimāldaļas formātā (piemēram, 1.42069)"
+        "translation": "Ievadiet summu decimāldaļas formātā (piemēram, 1.42069)",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:297:80"
       }
     ]
   }

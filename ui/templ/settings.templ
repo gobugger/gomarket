@@ -1,9 +1,9 @@
 package ui
 
 import (
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
-	"github.com/gobugger/gomarket/internal/translations"
 	"strconv"
 )
 
@@ -55,7 +55,7 @@ templ Settings(tc *TemplateContext,
 						<div class="col">
 							<label for="locale">{ tc.Translate("Language") }</label>
 							<select id="locale" type="text" name="locale" required>
-								for _, lang := range translations.Locales() {
+								for _, lang := range globalize.Locales() {
 									<option value={ lang } selected?={ tc.Settings.Lang == lang }>{ lang }</option>
 								}
 							</select>

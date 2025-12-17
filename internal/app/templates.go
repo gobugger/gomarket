@@ -1,12 +1,12 @@
 package app
 
 import (
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/captcha"
 	"github.com/gobugger/gomarket/internal/config"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/vendor"
-	"github.com/gobugger/gomarket/internal/translations"
 	ui "github.com/gobugger/gomarket/ui/templ"
 	"github.com/gorilla/csrf"
 	"log/slog"
@@ -56,7 +56,7 @@ func (app *Application) newTemplateContext(req *http.Request) (*ui.TemplateConte
 			if user != nil {
 				locale = user.Locale
 			} else {
-				locale = translations.DefaultLocale
+				locale = globalize.DefaultLocale
 			}
 			app.SessionManager.Put(ctx, localeKey, locale)
 			return locale

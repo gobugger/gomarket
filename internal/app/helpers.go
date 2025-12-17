@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"github.com/alexedwards/scs/v2"
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/captcha"
 	"github.com/gobugger/gomarket/internal/form"
-	"github.com/gobugger/gomarket/internal/localizer"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/ui/templ"
@@ -59,8 +59,8 @@ func parseID(r *http.Request) (uuid.UUID, error) {
 	return uuid, err
 }
 
-func (app *Application) getLocalizer(ctx context.Context) localizer.Localizer {
-	l, _ := localizer.Get(app.SessionManager.GetString(ctx, localeKey))
+func (app *Application) getLocalizer(ctx context.Context) globalize.Localizer {
+	l, _ := globalize.Get(app.SessionManager.GetString(ctx, localeKey))
 	return l
 }
 

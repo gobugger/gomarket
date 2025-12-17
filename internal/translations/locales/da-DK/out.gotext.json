@@ -4,87 +4,104 @@
         {
             "id": "Failed to open the gate: invalid missing characters",
             "message": "Failed to open the gate: invalid missing characters",
-            "translation": "Kunne ikke åbne porten: ugyldige manglende tegn"
+            "translation": "Kunne ikke åbne porten: ugyldige manglende tegn",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:102:41"
         },
         {
             "id": "This username is already in use",
             "message": "This username is already in use",
-            "translation": "Dette brugernavn er allerede i brug"
+            "translation": "Dette brugernavn er allerede i brug",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:162:41"
         },
         {
             "id": "Invalid PGP key",
             "message": "Invalid PGP key",
-            "translation": "Ugyldig PGP-nøgle"
+            "translation": "Ugyldig PGP-nøgle",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:421:42"
         },
         {
             "id": "Registered successfully",
             "message": "Registered successfully",
-            "translation": "Registreret med succes"
+            "translation": "Registreret med succes",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:175:40"
         },
         {
             "id": "Invalid credentials",
             "message": "Invalid credentials",
-            "translation": "Ugyldige legitimationsoplysninger"
+            "translation": "Ugyldige legitimationsoplysninger",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:327:41"
         },
         {
             "id": "Your account is banned",
             "message": "Your account is banned",
-            "translation": "Din konto er blevet udelukket"
+            "translation": "Din konto er blevet udelukket",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:219:41"
         },
         {
             "id": "Invalid 2FA token",
             "message": "Invalid 2FA token",
-            "translation": "Ugyldig 2FA-token"
+            "translation": "Ugyldig 2FA-token",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:437:48"
         },
         {
             "id": "Password changed",
             "message": "Password changed",
-            "translation": "Adgangskode ændret"
+            "translation": "Adgangskode ændret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:335:40"
         },
         {
             "id": "You can't update to your current key",
             "message": "You can't update to your current key",
-            "translation": "Du kan ikke opdatere til din nuværende nøgle"
+            "translation": "Du kan ikke opdatere til din nuværende nøgle",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:407:49"
         },
         {
             "id": "PGP key is set",
             "message": "PGP key is set",
-            "translation": "PGP-nøgle er indstillet"
+            "translation": "PGP-nøgle er indstillet",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:430:42"
         },
         {
             "id": "PGP Public key is updated",
             "message": "PGP Public key is updated",
-            "translation": "PGP-offentlig nøgle er opdateret"
+            "translation": "PGP-offentlig nøgle er opdateret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:432:42"
         },
         {
-            "id": "Vendor info is updated",
-            "message": "Vendor info is updated",
-            "translation": "Leverandørinformation er opdateret"
+            "id": "Terms of service updated",
+            "message": "Terms of service updated",
+            "translation": "Vilkår for service opdateret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:473:41"
         },
         {
             "id": "Listing created",
             "message": "Listing created",
-            "translation": "Oprettet liste"
+            "translation": "Oprettet liste",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:541:40"
         },
         {
             "id": "Cart updated",
             "message": "Cart updated",
-            "translation": "Indkøbskurv opdateret"
+            "translation": "Indkøbskurv opdateret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:710:40"
         },
         {
             "id": "cart deleted",
             "message": "cart deleted",
-            "translation": "indkøbskurv slettet"
+            "translation": "indkøbskurv slettet",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:743:40"
         },
         {
             "id": "You can't order with a vendor account",
             "message": "You can't order with a vendor account",
-            "translation": "Du kan ikke bestille med en leverandørkonto"
+            "translation": "Du kan ikke bestille med en leverandørkonto",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:808:48"
         },
         {
             "id": "You don't have enough balance for this order",
             "message": "You don't have enough balance for this order",
-            "translation": "Du har ikke nok saldo til denne ordre"
+            "translation": "Du har ikke nok saldo til denne ordre",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:835:49"
         },
         {
             "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
@@ -99,22 +116,32 @@
                     "argNum": 1,
                     "expr": "6"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:848:49"
         },
         {
             "id": "Order created",
             "message": "Order created",
-            "translation": "Ordre oprettet"
+            "translation": "Ordre oprettet",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:850:49"
+        },
+        {
+            "id": "Withdrawal amount is too small",
+            "message": "Withdrawal amount is too small",
+            "translation": "Udbetalingsbeløbet er for lille",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1009:40"
         },
         {
             "id": "Not enough balance to withdraw.",
             "message": "Not enough balance to withdraw.",
-            "translation": "Ikke nok saldo til at hæve."
+            "translation": "Ikke nok saldo til at hæve.",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1013:40"
         },
         {
             "id": "You can't withdraw to your own account",
             "message": "You can't withdraw to your own account",
-            "translation": "Du kan ikke hæve til din egen konto"
+            "translation": "Du kan ikke hæve til din egen konto",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1017:40"
         },
         {
             "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
@@ -129,17 +156,20 @@
                     "argNum": 1,
                     "expr": "currency.XMR2Decimal(amount)"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1025:40"
         },
         {
             "id": "Order cancelled",
             "message": "Order cancelled",
-            "translation": "Ordre annulleret"
+            "translation": "Ordre annulleret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1066:40"
         },
         {
             "id": "Review created",
             "message": "Review created",
-            "translation": "Anmeldelse oprettet"
+            "translation": "Anmeldelse oprettet",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1148:48"
         },
         {
             "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
@@ -154,7 +184,8 @@
                     "argNum": 1,
                     "expr": "5"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1179:48"
         },
         {
             "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
@@ -169,12 +200,14 @@
                     "argNum": 1,
                     "expr": "12"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1181:48"
         },
         {
             "id": "AF timer already extended to maximum.",
             "message": "AF timer already extended to maximum.",
-            "translation": "AF-timerne er allerede forlænget til maksimum."
+            "translation": "AF-timerne er allerede forlænget til maksimum.",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1183:48"
         },
         {
             "id": "AF timer extended by {Duration} days",
@@ -189,37 +222,44 @@
                     "argNum": 1,
                     "expr": "7"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1189:48"
         },
         {
             "id": "Order disputed",
             "message": "Order disputed",
-            "translation": "Ordre omstridt"
+            "translation": "Ordre omstridt",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1226:40"
         },
         {
             "id": "2FA needs to be enabled for vendors",
             "message": "2FA needs to be enabled for vendors",
-            "translation": "2FA skal aktiveres for leverandører"
+            "translation": "2FA skal aktiveres for leverandører",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1356:40"
         },
         {
             "id": "Vendor accounts can't have previous orders. Please create a new account.",
             "message": "Vendor accounts can't have previous orders. Please create a new account.",
-            "translation": "Leverandørkonti kan ikke have tidligere ordrer. Opret venligst en ny konto."
+            "translation": "Leverandørkonti kan ikke have tidligere ordrer. Opret venligst en ny konto.",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1370:40"
         },
         {
             "id": "Proof of inventory is required from new vendors",
             "message": "Proof of inventory is required from new vendors",
-            "translation": "Dokumentation for lagerbeholdning kræves fra nye leverandører"
+            "translation": "Dokumentation for lagerbeholdning kræves fra nye leverandører",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1377:41"
         },
         {
             "id": "Not enough balance",
             "message": "Not enough balance",
-            "translation": "Ikke nok saldo"
+            "translation": "Ikke nok saldo",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1402:40"
         },
         {
             "id": "Application received",
             "message": "Application received",
-            "translation": "Ansøgning modtaget"
+            "translation": "Ansøgning modtaget",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1410:48"
         },
         {
             "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
@@ -234,42 +274,50 @@
                     "argNum": 1,
                     "expr": "72"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1455:41"
         },
         {
             "id": "Order declined",
             "message": "Order declined",
-            "translation": "Ordren er afvist"
+            "translation": "Ordren er afvist",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1458:41"
         },
         {
             "id": "Order marked as dispatched",
             "message": "Order marked as dispatched",
-            "translation": "Ordren er markeret som afsendt"
+            "translation": "Ordren er markeret som afsendt",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1502:40"
         },
         {
             "id": "Product deleted",
             "message": "Product deleted",
-            "translation": "Produkt slettet"
+            "translation": "Produkt slettet",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1546:41"
         },
         {
             "id": "Product updated",
             "message": "Product updated",
-            "translation": "Produkt opdateret"
+            "translation": "Produkt opdateret",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1558:41"
         },
         {
             "id": "Ticket is already closed",
             "message": "Ticket is already closed",
-            "translation": "Billet er allerede lukket"
+            "translation": "Billet er allerede lukket",
+            "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1684:48"
         },
         {
             "id": "You need to be logged in to access that page",
             "message": "You need to be logged in to access that page",
-            "translation": "Du skal være logget ind for at få adgang til den side"
+            "translation": "Du skal være logget ind for at få adgang til den side",
+            "position": "github.com/gobugger/gomarket/internal/app/middleware.go:59:49"
         },
         {
             "id": "Order received",
             "message": "Order received",
-            "translation": "Ordren er modtaget"
+            "translation": "Ordren er modtaget",
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:24:22"
         },
         {
             "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
@@ -284,42 +332,50 @@
                     "argNum": 1,
                     "expr": "48"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:25:24"
         },
         {
             "id": "Order accepted",
             "message": "Order accepted",
-            "translation": "Ordren er accepteret"
+            "translation": "Ordren er accepteret",
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:45:24"
         },
         {
             "id": "Your order has been accepted!\nYou can monitor its status from orders page",
             "message": "Your order has been accepted!\nYou can monitor its status from orders page",
-            "translation": "Din ordre er blevet accepteret!\nDu kan overvåge dens status fra ordresiden"
+            "translation": "Din ordre er blevet accepteret!\nDu kan overvåge dens status fra ordresiden",
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:46:24"
         },
         {
             "id": "Order dispatched",
             "message": "Order dispatched",
-            "translation": "Ordren er afsendt"
+            "translation": "Ordren er afsendt",
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:65:24"
         },
         {
             "id": "Your order has been dispatched!\nPlease remember to review it.",
             "message": "Your order has been dispatched!\nPlease remember to review it.",
-            "translation": "Din ordre er blevet afsendt!\nHusk venligst at anmelde den."
+            "translation": "Din ordre er blevet afsendt!\nHusk venligst at anmelde den.",
+            "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:66:24"
         },
         {
             "id": "How do I become a vendor?",
             "message": "How do I become a vendor?",
-            "translation": "Hvordan bliver jeg leverandør?"
+            "translation": "Hvordan bliver jeg leverandør?",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:17:25"
         },
         {
             "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
             "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
-            "translation": "Opret en konto med to-faktor autentificering (2FA) aktiveret, og indsend derefter en leverandøransøgning."
+            "translation": "Opret en konto med to-faktor autentificering (2FA) aktiveret, og indsend derefter en leverandøransøgning.",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:18:25"
         },
         {
             "id": "How do I place an order?",
             "message": "How do I place an order?",
-            "translation": "Hvordan afgiver jeg en ordre?"
+            "translation": "Hvordan afgiver jeg en ordre?",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:21:25"
         },
         {
             "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
@@ -334,22 +390,26 @@
                     "argNum": 1,
                     "expr": "6"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:22:23"
         },
         {
             "id": "How can I obtain Monero (XMR)?",
             "message": "How can I obtain Monero (XMR)?",
-            "translation": "Hvordan kan jeg få Monero (XMR)?"
+            "translation": "Hvordan kan jeg få Monero (XMR)?",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:26:25"
         },
         {
             "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
             "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
-            "translation": "Der er flere måder at erhverve Monero på. Besøg venligst getmonero.org for officiel vejledning og ressourcer."
+            "translation": "Der er flere måder at erhverve Monero på. Besøg venligst getmonero.org for officiel vejledning og ressourcer.",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:27:25"
         },
         {
             "id": "What should I do if my order has not arrived or does not match the description?",
             "message": "What should I do if my order has not arrived or does not match the description?",
-            "translation": "Hvad skal jeg gøre, hvis min ordre ikke er ankommet eller ikke stemmer overens med beskrivelsen?"
+            "translation": "Hvad skal jeg gøre, hvis min ordre ikke er ankommet eller ikke stemmer overens med beskrivelsen?",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:30:25"
         },
         {
             "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
@@ -364,42 +424,49 @@
                     "argNum": 1,
                     "expr": "7"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:31:23"
         },
         {
             "id": "What am I allowed to sell on this marketplace?",
             "message": "What am I allowed to sell on this marketplace?",
-            "translation": "Hvad må jeg sælge på dette marked?"
+            "translation": "Hvad må jeg sælge på dette marked?",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:37:25"
         },
         {
             "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
             "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
-            "translation": "Kun lovlige varer er tilladt. Hvis du er usikker på, om dit produkt kvalificerer sig, bedes du kontakte os, før du opretter en annonce."
+            "translation": "Kun lovlige varer er tilladt. Hvis du er usikker på, om dit produkt kvalificerer sig, bedes du kontakte os, før du opretter en annonce.",
+            "position": "github.com/gobugger/gomarket/internal/support/faq.go:38:25"
         },
         {
             "id": "Open",
             "message": "Open",
-            "translation": "Åben"
+            "translation": "Åben",
+            "position": "github.com/gobugger/gomarket/ui/templ/adminpanel_templ.go:292:81"
         },
         {
             "id": "Vendor application",
             "message": "Vendor application",
-            "translation": "Leverandøransøgning"
+            "translation": "Leverandøransøgning",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:110:79"
         },
         {
             "id": "Your account does not have 2FA enabled!",
             "message": "Your account does not have 2FA enabled!",
-            "translation": "Din konto har ikke 2FA aktiveret!"
+            "translation": "Din konto har ikke 2FA aktiveret!",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:71:80"
         },
         {
-            "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
-            "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
-            "translation": "Applikationen er gratis for brugere, der allerede er sælgere på et andet marked, der bruger den samme PGP-nøgle."
+            "id": "Application is free for users who are already vendors on some other market.",
+            "message": "Application is free for users who are already vendors on some other market.",
+            "translation": "Applikationen er gratis for brugere, der allerede er sælgere på et andet marked.",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:85:79"
         },
         {
-            "id": "For other users, application costs {Price} XMR and is non-refundable.",
-            "message": "For other users, application costs {Price} XMR and is non-refundable.",
-            "translation": "For andre brugere koster applikationen {Price} XMR og er ikke-refunderbar.",
+            "id": "For other users, application costs {Price} XMR.",
+            "message": "For other users, application costs {Price} XMR.",
+            "translation": "For andre brugere koster applikationen {Price} XMR.",
             "placeholders": [
                 {
                     "id": "Price",
@@ -409,297 +476,344 @@
                     "argNum": 1,
                     "expr": "price"
                 }
-            ]
-        },
-        {
-            "id": "You're required to provide proof that you actually have products to sell here.",
-            "message": "You're required to provide proof that you actually have products to sell here.",
-            "translation": "Du skal give bevis for, at du faktisk har produkter at sælge her."
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:98:79"
         },
         {
             "id": "Vendor Logo",
             "message": "Vendor Logo",
-            "translation": "Sælgerlogo"
+            "translation": "Sælgerlogo",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:111:79"
         },
         {
             "id": "Use png image with close to 1:1 ratio for optimal look",
             "message": "Use png image with close to 1:1 ratio for optimal look",
-            "translation": "Brug png-billede med tæt på 1:1-forhold for optimal udseende"
+            "translation": "Brug png-billede med tæt på 1:1-forhold for optimal udseende",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:124:79"
         },
         {
             "id": "Existing vendor",
             "message": "Existing vendor",
-            "translation": "Eksisterende sælger"
+            "translation": "Eksisterende sælger",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:137:79"
         },
         {
             "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
             "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
-            "translation": "Vælg dette, hvis du allerede er sælger på et andet marked som xmrBazaar"
+            "translation": "Vælg dette, hvis du allerede er sælger på et andet marked som xmrBazaar",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:150:80"
         },
         {
             "id": "Proof of inventory",
             "message": "Proof of inventory",
-            "translation": "Bevis for lager"
+            "translation": "Bevis for lager",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:171:80"
         },
         {
             "id": "Clear image of your inventory with your username and timestamp visible",
             "message": "Clear image of your inventory with your username and timestamp visible",
-            "translation": "Klar billede af dit lager med dit brugernavn og tidsstempel synligt"
+            "translation": "Klar billede af dit lager med dit brugernavn og tidsstempel synligt",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:184:80"
         },
         {
             "id": "Markets and Your Username",
             "message": "Markets and Your Username",
-            "translation": "Markeder og dit brugernavn"
+            "translation": "Markeder og dit brugernavn",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:197:80"
         },
         {
             "id": "List the markets where you are a vendor and include your username",
             "message": "List the markets where you are a vendor and include your username",
-            "translation": "List de markeder, hvor du er sælger, og inkluder dit brugernavn"
+            "translation": "List de markeder, hvor du er sælger, og inkluder dit brugernavn",
+            "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:210:80"
         },
         {
             "id": "Captcha",
             "message": "Captcha",
-            "translation": "Captcha"
+            "translation": "Captcha",
+            "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:40:79"
         },
         {
             "id": "Click circle with a cut",
             "message": "Click circle with a cut",
-            "translation": "Klik på cirklen med et snit"
+            "translation": "Klik på cirklen med et snit",
+            "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:66:79"
         },
         {
             "id": "Submit",
             "message": "Submit",
-            "translation": "Indsend"
+            "translation": "Indsend",
+            "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:111:79"
         },
         {
             "id": "Total",
             "message": "Total",
-            "translation": "Total"
+            "translation": "Total",
+            "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:277:81"
         },
         {
             "id": "Checkout",
             "message": "Checkout",
-            "translation": "Gå til kassen"
+            "translation": "Gå til kassen",
+            "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:59:79"
         },
         {
             "id": "delivery method",
             "message": "delivery method",
-            "translation": "leveringsmetode"
+            "translation": "leveringsmetode",
+            "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:72:79"
         },
         {
             "id": "Use wallet for payment",
             "message": "Use wallet for payment",
-            "translation": "Brug wallet til betaling"
+            "translation": "Brug wallet til betaling",
+            "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:134:79"
         },
         {
             "id": "details",
             "message": "details",
-            "translation": "detaljer"
-        },
-        {
-            "id": "Use your real address, with the same format as below.",
-            "message": "Use your real address, with the same format as below.",
-            "translation": "Brug din rigtige adresse med samme format som nedenfor."
+            "translation": "detaljer",
+            "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:156:79"
         },
         {
             "id": "Unencrypted details are automatically encrypted using vendors key.",
             "message": "Unencrypted details are automatically encrypted using vendors key.",
-            "translation": "Uenkrypterede detaljer bliver automatisk krypteret ved hjælp af sælgers nøgle."
+            "translation": "Uenkrypterede detaljer bliver automatisk krypteret ved hjælp af sælgers nøgle.",
+            "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:169:80"
         },
         {
             "id": "Title",
             "message": "Title",
-            "translation": "Titel"
+            "translation": "Titel",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:62:79"
         },
         {
             "id": "Description",
             "message": "Description",
-            "translation": "Beskrivelse"
+            "translation": "Beskrivelse",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:75:79"
         },
         {
             "id": "Product image",
             "message": "Product image",
-            "translation": "Produktbillede"
+            "translation": "Produktbillede",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:88:79"
         },
         {
             "id": "Use image with close to 1:1 aspect ratio for optimal look",
             "message": "Use image with close to 1:1 aspect ratio for optimal look",
-            "translation": "Brug billede med tæt på 1:1 billedforhold for optimal udseende"
+            "translation": "Brug billede med tæt på 1:1 billedforhold for optimal udseende",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:101:79"
         },
         {
             "id": "Category",
             "message": "Category",
-            "translation": "Kategori"
+            "translation": "Kategori",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:114:79"
         },
         {
             "id": "Ships from",
             "message": "Ships from",
-            "translation": "Afsendes fra"
+            "translation": "Afsendes fra",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:163:80"
         },
         {
             "id": "Ships to",
             "message": "Ships to",
-            "translation": "Afsendes til"
+            "translation": "Afsendes til",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:212:80"
         },
         {
             "id": "Inventory",
             "message": "Inventory",
-            "translation": "Lager"
+            "translation": "Lager",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:93:80"
         },
         {
             "id": "Size of the current inventory for this product.",
             "message": "Size of the current inventory for this product.",
-            "translation": "Størrelse af det nuværende lager for dette produkt."
+            "translation": "Størrelse af det nuværende lager for dette produkt.",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:106:80"
         },
         {
             "id": "Pricing",
             "message": "Pricing",
-            "translation": "Prissætning"
+            "translation": "Prissætning",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:287:80"
         },
         {
             "id": "Here you can set your pricing.",
             "message": "Here you can set your pricing.",
-            "translation": "Her kan du angive dine priser."
+            "translation": "Her kan du angive dine priser.",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:300:80"
         },
         {
             "id": "We take 5% cut from these prices.",
             "message": "We take 5% cut from these prices.",
-            "translation": "Vi tager 5% i gebyr fra disse priser."
+            "translation": "Vi tager 5% i gebyr fra disse priser.",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:313:80"
         },
         {
             "id": "Quantity",
             "message": "Quantity",
-            "translation": "Mængde"
+            "translation": "Mængde",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:254:80"
         },
         {
             "id": "Price",
             "message": "Price",
-            "translation": "Pris"
+            "translation": "Pris",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:582:81"
         },
         {
             "id": "Create ticket",
             "message": "Create ticket",
-            "translation": "Opret billet"
+            "translation": "Opret billet",
+            "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:67:80"
         },
         {
             "id": "Subject",
             "message": "Subject",
-            "translation": "Emne"
+            "translation": "Emne",
+            "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:61:79"
         },
         {
             "id": "account",
             "message": "account",
-            "translation": "konto"
+            "translation": "konto",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:83:79"
         },
         {
             "id": "order",
             "message": "order",
-            "translation": "ordre"
+            "translation": "ordre",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:96:79"
         },
         {
             "id": "wallet",
             "message": "wallet",
-            "translation": "wallet"
+            "translation": "wallet",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:109:79"
         },
         {
             "id": "vendor",
             "message": "vendor",
-            "translation": "leverandør"
+            "translation": "leverandør",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:25:22"
         },
         {
             "id": "product",
             "message": "product",
-            "translation": "produkt"
+            "translation": "produkt",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:135:79"
         },
         {
             "id": "suggestion",
             "message": "suggestion",
-            "translation": "forslag"
+            "translation": "forslag",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:148:80"
         },
         {
             "id": "bug",
             "message": "bug",
-            "translation": "fejl"
+            "translation": "fejl",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:161:80"
         },
         {
             "id": "other",
             "message": "other",
-            "translation": "andet"
+            "translation": "andet",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:174:80"
         },
         {
             "id": "Message",
             "message": "Message",
-            "translation": "Besked"
+            "translation": "Besked",
+            "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:98:79"
         },
         {
             "id": "Staff PGP",
             "message": "Staff PGP",
-            "translation": "Personalets PGP"
+            "translation": "Personalets PGP",
+            "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:200:80"
         },
         {
             "id": "Exchange rate",
             "message": "Exchange rate",
-            "translation": "Valutakurs"
+            "translation": "Valutakurs",
+            "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:52:78"
         },
         {
             "id": "Time",
             "message": "Time",
-            "translation": "Tid"
+            "translation": "Tid",
+            "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:78:78"
         },
         {
             "id": "Vendors:",
             "message": "Vendors:",
-            "translation": "Leverandører:"
+            "translation": "Leverandører:",
+            "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:104:78"
         },
         {
             "id": "Users:",
             "message": "Users:",
-            "translation": "Brugere:"
+            "translation": "Brugere:",
+            "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:126:78"
         },
         {
             "id": "submit",
             "message": "submit",
-            "translation": "indsend"
+            "translation": "indsend",
+            "position": "github.com/gobugger/gomarket/ui/templ/handle-application_templ.go:206:80"
         },
         {
             "id": "Response",
             "message": "Response",
-            "translation": "Svar"
+            "translation": "Svar",
+            "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:193:81"
         },
         {
             "id": "products",
             "message": "products",
-            "translation": "produkter"
+            "translation": "produkter",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:37:78"
         },
         {
             "id": "orders",
             "message": "orders",
-            "translation": "ordrer"
+            "translation": "ordrer",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:55:79"
         },
         {
             "id": "sell",
             "message": "sell",
-            "translation": "sælg"
+            "translation": "sælg",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:74:79"
         },
         {
             "id": "support",
             "message": "support",
-            "translation": "support"
+            "translation": "support",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:107:79"
         },
         {
             "id": "Logout",
             "message": "Logout",
-            "translation": "Log ud"
+            "translation": "Log ud",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:185:79"
         },
         {
             "id": "log in",
             "message": "log in",
-            "translation": "log ind"
+            "translation": "log ind",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:203:79"
         },
         {
             "id": "register",
             "message": "register",
-            "translation": "registrer"
+            "translation": "registrer",
+            "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:216:80"
         },
         {
             "id": "Entry guard to {Name}",
@@ -714,102 +828,122 @@
                     "argNum": 1,
                     "expr": "tc.Config.Name"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:57:79"
         },
         {
             "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
             "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
-            "translation": "Sammenlign den URL, du bruger, med den i billedet nedenfor for at finde alle manglende tegn markeret med '*'"
+            "translation": "Sammenlign den URL, du bruger, med den i billedet nedenfor for at finde alle manglende tegn markeret med '*'",
+            "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:70:79"
         },
         {
             "id": "Missing characters",
             "message": "Missing characters",
-            "translation": "Manglende tegn"
+            "translation": "Manglende tegn",
+            "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:96:79"
         },
         {
             "id": "Log in",
             "message": "Log in",
-            "translation": "Log ind"
+            "translation": "Log ind",
+            "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:57:79"
         },
         {
             "id": "username",
             "message": "username",
-            "translation": "brugernavn"
+            "translation": "brugernavn",
+            "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:70:79"
         },
         {
             "id": "password",
             "message": "password",
-            "translation": "adgangskode"
+            "translation": "adgangskode",
+            "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:104:79"
         },
         {
             "id": "Create new account",
             "message": "Create new account",
-            "translation": "Opret ny konto"
+            "translation": "Opret ny konto",
+            "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:138:79"
         },
         {
             "id": "Delete all",
             "message": "Delete all",
-            "translation": "Slet alt"
+            "translation": "Slet alt",
+            "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:109:80"
         },
         {
             "id": "You have zero notifications",
             "message": "You have zero notifications",
-            "translation": "Du har ingen meddelelser"
+            "translation": "Du har ingen meddelelser",
+            "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:127:80"
         },
         {
             "id": "Order",
             "message": "Order",
-            "translation": "Ordre"
+            "translation": "Ordre",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:241:80"
         },
         {
             "id": "Chat",
             "message": "Chat",
-            "translation": "Chat"
+            "translation": "Chat",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:187:79"
         },
         {
             "id": "Status",
             "message": "Status",
-            "translation": "Status"
+            "translation": "Status",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:243:79"
         },
         {
             "id": "Vendor",
             "message": "Vendor",
-            "translation": "Leverandør"
+            "translation": "Leverandør",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:269:79"
         },
         {
             "id": "Delivery method",
             "message": "Delivery method",
-            "translation": "Leveringsmetode"
+            "translation": "Leveringsmetode",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:308:79"
         },
         {
             "id": "Total cost",
             "message": "Total cost",
-            "translation": "Samlet omkostning"
+            "translation": "Samlet omkostning",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:334:79"
         },
         {
             "id": "Date",
             "message": "Date",
-            "translation": "Dato"
+            "translation": "Dato",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:360:79"
         },
         {
             "id": "Dispatched at",
             "message": "Dispatched at",
-            "translation": "Afsendt kl."
+            "translation": "Afsendt kl.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:391:80"
         },
         {
             "id": "Until auto-declined",
             "message": "Until auto-declined",
-            "translation": "Indtil automatisk afvist"
+            "translation": "Indtil automatisk afvist",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:424:80"
         },
         {
             "id": "Until auto-finalized",
             "message": "Until auto-finalized",
-            "translation": "Indtil automatisk afsluttet"
+            "translation": "Indtil automatisk afsluttet",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:455:80"
         },
         {
             "id": "Details",
             "message": "Details",
-            "translation": "Detaljer"
+            "translation": "Detaljer",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:486:79"
         },
         {
             "id": "Vendor offered refund of {RefundFactor}%",
@@ -824,377 +958,452 @@
                     "argNum": 1,
                     "expr": "100 * item.Offer.RefundFactor"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:794:81"
         },
         {
             "id": "Accept",
             "message": "Accept",
-            "translation": "Accepter"
+            "translation": "Accepter",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1064:79"
         },
         {
             "id": "Decline",
             "message": "Decline",
-            "translation": "Afvis"
+            "translation": "Afvis",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1077:79"
         },
         {
             "id": "Customers PGP key",
             "message": "Customers PGP key",
-            "translation": "Kundens PGP-nøgle"
+            "translation": "Kundens PGP-nøgle",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:901:80"
         },
         {
             "id": "Customer can still cancel this order!",
             "message": "Customer can still cancel this order!",
-            "translation": "Kunden kan stadig annullere denne ordre!"
+            "translation": "Kunden kan stadig annullere denne ordre!",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:999:79"
         },
         {
             "id": "You must accept it in 2 days or it will be automatically declined.",
             "message": "You must accept it in 2 days or it will be automatically declined.",
-            "translation": "Du skal acceptere det inden for 2 dage, ellers vil det blive automatisk afvist."
+            "translation": "Du skal acceptere det inden for 2 dage, ellers vil det blive automatisk afvist.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1012:79"
         },
         {
             "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
             "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
-            "translation": "Efter accept kan kunden ikke længere annullere, så du kan trygt afsende."
+            "translation": "Efter accept kan kunden ikke længere annullere, så du kan trygt afsende.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1025:79"
         },
         {
             "id": "Please carefully review the order below before accepting it.",
             "message": "Please carefully review the order below before accepting it.",
-            "translation": "Gennemgå venligst ordren nedenfor omhyggeligt, før du accepterer den."
+            "translation": "Gennemgå venligst ordren nedenfor omhyggeligt, før du accepterer den.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1038:79"
         },
         {
             "id": "Always decline orders that you'r unable to fulfill.",
             "message": "Always decline orders that you'r unable to fulfill.",
-            "translation": "Afvis altid ordrer, som du ikke kan opfylde."
+            "translation": "Afvis altid ordrer, som du ikke kan opfylde.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1051:79"
         },
         {
             "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
             "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
-            "translation": "Du skal markere denne ordre som afsendt inden for 2 dage, ellers vil den blive automatisk afvist."
+            "translation": "Du skal markere denne ordre som afsendt inden for 2 dage, ellers vil den blive automatisk afvist.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1140:79"
         },
         {
             "id": "Make sure that you have enough time to do the actual dispaching!",
             "message": "Make sure that you have enough time to do the actual dispaching!",
-            "translation": "Sørg for, at du har nok tid til at udføre den faktiske forsendelse!"
+            "translation": "Sørg for, at du har nok tid til at udføre den faktiske forsendelse!",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1153:79"
         },
         {
             "id": "Dispatched",
             "message": "Dispatched",
-            "translation": "Forsendt"
+            "translation": "Forsendt",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1166:79"
         },
         {
             "id": "Transfer exact amount of Monero to the address below.",
             "message": "Transfer exact amount of Monero to the address below.",
-            "translation": "Overfør det nøjagtige beløb af Monero til adressen nedenfor."
+            "translation": "Overfør det nøjagtige beløb af Monero til adressen nedenfor.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1208:79"
         },
         {
             "id": "After 10 confirmations, your order will proceed to vendor.",
             "message": "After 10 confirmations, your order will proceed to vendor.",
-            "translation": "Efter 10 bekræftelser vil din ordre blive sendt til sælgeren."
+            "translation": "Efter 10 bekræftelser vil din ordre blive sendt til sælgeren.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1221:79"
         },
         {
             "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
             "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
-            "translation": "Du har i alt 3 timer til at betale denne faktura, ellers vil din ordre blive annulleret."
+            "translation": "Du har i alt 3 timer til at betale denne faktura, ellers vil din ordre blive annulleret.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1234:79"
         },
         {
             "id": "Time left to pay",
             "message": "Time left to pay",
-            "translation": "Tid tilbage til betaling"
+            "translation": "Tid tilbage til betaling",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1247:79"
         },
         {
             "id": "Amount XMR",
             "message": "Amount XMR",
-            "translation": "Beløb XMR"
+            "translation": "Beløb XMR",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1278:79"
         },
         {
             "id": "Address",
             "message": "Address",
-            "translation": "Adresse"
+            "translation": "Adresse",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:172:80"
         },
         {
             "id": "Orders can be cancelled until vendor has accepted it.",
             "message": "Orders can be cancelled until vendor has accepted it.",
-            "translation": "Ordrer kan annulleres, indtil sælgeren har accepteret dem."
+            "translation": "Ordrer kan annulleres, indtil sælgeren har accepteret dem.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1393:79"
         },
         {
             "id": "Cancel",
             "message": "Cancel",
-            "translation": "Annuller"
+            "translation": "Annuller",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1406:79"
         },
         {
             "id": "Your order will auto-finalize in",
             "message": "Your order will auto-finalize in",
-            "translation": "Din ordre vil automatisk blive afsluttet om"
+            "translation": "Din ordre vil automatisk blive afsluttet om",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1448:79"
         },
         {
             "id": "You can extend the auto-finalize-time by 7-days.",
             "message": "You can extend the auto-finalize-time by 7-days.",
-            "translation": "Du kan forlænge auto-afslutningstiden med 7 dage."
+            "translation": "Du kan forlænge auto-afslutningstiden med 7 dage.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1461:79"
         },
         {
             "id": "review your order",
             "message": "review your order",
-            "translation": "gennemgå din ordre"
+            "translation": "gennemgå din ordre",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1487:79"
         },
         {
             "id": "Review",
             "message": "Review",
-            "translation": "Gennemgå"
+            "translation": "Gennemgå",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1500:79"
         },
         {
             "id": "Extend AF-timer",
             "message": "Extend AF-timer",
-            "translation": "Forlæng AF-timer"
+            "translation": "Forlæng AF-timer",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1539:80"
         },
         {
             "id": "Dispute",
             "message": "Dispute",
-            "translation": "Tvist"
+            "translation": "Tvist",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1578:79"
         },
         {
             "id": "Refund offer",
             "message": "Refund offer",
-            "translation": "Refusions tilbud"
+            "translation": "Refusions tilbud",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1628:79"
         },
         {
             "id": "Customer has disputed this order.",
             "message": "Customer has disputed this order.",
-            "translation": "Kunden har bestridt denne ordre."
+            "translation": "Kunden har bestridt denne ordre.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1654:79"
         },
         {
             "id": "Use the chat below to discuss about this dispute.",
             "message": "Use the chat below to discuss about this dispute.",
-            "translation": "Brug chatten nedenfor til at diskutere denne tvist."
+            "translation": "Brug chatten nedenfor til at diskutere denne tvist.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1667:79"
         },
         {
             "id": "You can create an refund offer and resolve this dispute without admin intervention.",
             "message": "You can create an refund offer and resolve this dispute without admin intervention.",
-            "translation": "Du kan oprette et refusions tilbud og løse denne tvist uden adminindblanding."
+            "translation": "Du kan oprette et refusions tilbud og løse denne tvist uden adminindblanding.",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1680:79"
         },
         {
             "id": "Refund percent",
             "message": "Refund percent",
-            "translation": "Refusionsprocent"
+            "translation": "Refusionsprocent",
+            "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1693:79"
         },
         {
             "id": "Order date",
             "message": "Order date",
-            "translation": "Ordredato"
+            "translation": "Ordredato",
+            "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:72:80"
         },
         {
             "id": "Order ID",
             "message": "Order ID",
-            "translation": "Ordre ID"
+            "translation": "Ordre ID",
+            "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:98:80"
         },
         {
             "id": "Proof key ownership",
             "message": "Proof key ownership",
-            "translation": "Bevis på nøgleejerskab"
+            "translation": "Bevis på nøgleejerskab",
+            "position": "github.com/gobugger/gomarket/ui/templ/pgp_check_templ.go:57:79"
         },
         {
             "id": "Decrypt to get the token",
             "message": "Decrypt to get the token",
-            "translation": "Dekrypter for at få tokenet"
+            "translation": "Dekrypter for at få tokenet",
+            "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:70:79"
         },
         {
             "id": "Token",
             "message": "Token",
-            "translation": "Token"
+            "translation": "Token",
+            "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:96:79"
         },
         {
             "id": "Update product",
             "message": "Update product",
-            "translation": "Opdater produkt"
+            "translation": "Opdater produkt",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:67:80"
         },
         {
             "id": "Update",
             "message": "Update",
-            "translation": "Opdater"
+            "translation": "Opdater",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:127:80"
         },
         {
             "id": "Add to cart",
             "message": "Add to cart",
-            "translation": "Tilføj til kurv"
+            "translation": "Tilføj til kurv",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:315:80"
         },
         {
             "id": "Reviews",
             "message": "Reviews",
-            "translation": "Anmeldelser"
+            "translation": "Anmeldelser",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:171:79"
         },
         {
             "id": "ago",
             "message": "ago",
-            "translation": "siden"
+            "translation": "siden",
+            "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:404:81"
         },
         {
             "id": "OUT OF STOCK",
             "message": "OUT OF STOCK",
-            "translation": "UDSOLGT"
+            "translation": "UDSOLGT",
+            "position": "github.com/gobugger/gomarket/ui/templ/products_templ.go:66:81"
         },
         {
             "id": "Register",
             "message": "Register",
-            "translation": "Registrer"
+            "translation": "Registrer",
+            "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:57:79"
         },
         {
             "id": "password check",
             "message": "password check",
-            "translation": "adgangskodekontrol"
+            "translation": "adgangskodekontrol",
+            "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:138:79"
         },
         {
             "id": "Already have an account?",
             "message": "Already have an account?",
-            "translation": "Har du allerede en konto?"
+            "translation": "Har du allerede en konto?",
+            "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:172:80"
         },
         {
             "id": "Review order",
             "message": "Review order",
-            "translation": "Gennemgå ordre"
+            "translation": "Gennemgå ordre",
+            "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:59:79"
         },
         {
             "id": "Grade",
             "message": "Grade",
-            "translation": "Karakter"
+            "translation": "Karakter",
+            "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:85:79"
         },
         {
             "id": "guest",
             "message": "guest",
-            "translation": "gæst"
+            "translation": "gæst",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:21:22"
         },
         {
             "id": "customer",
             "message": "customer",
-            "translation": "kunde"
+            "translation": "kunde",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:23:22"
         },
         {
             "id": "admin",
             "message": "admin",
-            "translation": "administrator"
+            "translation": "administrator",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:27:22"
         },
         {
             "id": "unknown",
             "message": "unknown",
-            "translation": "ukendt"
+            "translation": "ukendt",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:29:22"
         },
         {
             "id": "enabled",
             "message": "enabled",
-            "translation": "aktiveret"
+            "translation": "aktiveret",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:35:22"
         },
         {
             "id": "disabled",
             "message": "disabled",
-            "translation": "deaktiveret"
+            "translation": "deaktiveret",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:37:22"
         },
         {
             "id": "Account",
             "message": "Account",
-            "translation": "Konto"
+            "translation": "Konto",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:81:79"
         },
         {
             "id": "Username",
             "message": "Username",
-            "translation": "Brugernavn"
+            "translation": "Brugernavn",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:94:79"
         },
         {
             "id": "Type",
             "message": "Type",
-            "translation": "Type"
+            "translation": "Type",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:120:79"
         },
         {
             "id": "2FA",
             "message": "2FA",
-            "translation": "2FA"
+            "translation": "2FA",
+            "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:57:79"
         },
         {
             "id": "Preferences",
             "message": "Preferences",
-            "translation": "Præferencer"
+            "translation": "Præferencer",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:180:80"
         },
         {
             "id": "Language",
             "message": "Language",
-            "translation": "Sprog"
+            "translation": "Sprog",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:193:80"
         },
         {
             "id": "Currency",
             "message": "Currency",
-            "translation": "Valuta"
+            "translation": "Valuta",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:252:80"
         },
         {
             "id": "Change password",
             "message": "Change password",
-            "translation": "Skift adgangskode"
+            "translation": "Skift adgangskode",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:345:80"
         },
         {
             "id": "Current password",
             "message": "Current password",
-            "translation": "Nuværende adgangskode"
+            "translation": "Nuværende adgangskode",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:358:80"
         },
         {
             "id": "New password",
             "message": "New password",
-            "translation": "Ny adgangskode"
+            "translation": "Ny adgangskode",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:371:80"
         },
         {
             "id": "Confirm new password",
             "message": "Confirm new password",
-            "translation": "Bekræft ny adgangskode"
+            "translation": "Bekræft ny adgangskode",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:384:80"
         },
         {
             "id": "Change PGP key",
             "message": "Change PGP key",
-            "translation": "Skift PGP-nøgle"
+            "translation": "Skift PGP-nøgle",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:418:81"
         },
         {
             "id": "Enable 2FA",
             "message": "Enable 2FA",
-            "translation": "Aktiver 2FA"
+            "translation": "Aktiver 2FA",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:436:81"
         },
         {
             "id": "PGP public key",
             "message": "PGP public key",
-            "translation": "PGP offentlig nøgle"
+            "translation": "PGP offentlig nøgle",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:454:80"
         },
         {
             "id": "Required for vendors, suggested for everyone.",
             "message": "Required for vendors, suggested for everyone.",
-            "translation": "Påkrævet for sælgere, anbefales til alle."
+            "translation": "Påkrævet for sælgere, anbefales til alle.",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:467:80"
         },
         {
-            "id": "Update vendor profile",
-            "message": "Update vendor profile",
-            "translation": "Opdater sælgerprofil"
+            "id": "Update terms of service",
+            "message": "Update terms of service",
+            "translation": "Opdater vilkår for service",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:501:81"
         },
         {
-            "id": "Vendor info",
-            "message": "Vendor info",
-            "translation": "Sælgerinformation"
+            "id": "Terms of service",
+            "message": "Terms of service",
+            "translation": "Vilkår for service",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:353:80"
         },
         {
-            "id": "Leave empty to not update.",
-            "message": "Leave empty to not update.",
-            "translation": "Lad være med at udfylde for ikke at opdatere."
+            "id": "Terms of service is used to resolve disputes",
+            "message": "Terms of service is used to resolve disputes",
+            "translation": "Vilkår for service bruges til at løse tvister",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:527:81"
         },
         {
             "id": "Update delivery methods",
             "message": "Update delivery methods",
-            "translation": "Opdater leveringsmetoder"
+            "translation": "Opdater leveringsmetoder",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:556:81"
         },
         {
             "id": "Delivery Method",
             "message": "Delivery Method",
-            "translation": "Leveringsmetode"
+            "translation": "Leveringsmetode",
+            "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:569:81"
         },
         {
             "id": "My tickets",
             "message": "My tickets",
-            "translation": "Mine billetter"
+            "translation": "Mine billetter",
+            "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:54:80"
         },
         {
             "id": "0 seconds",
             "message": "0 seconds",
-            "translation": "0 sekunder"
+            "translation": "0 sekunder",
+            "position": "github.com/gobugger/gomarket/ui/templ/util.go:95:21"
         },
         {
             "id": "{Second} seconds",
@@ -1209,7 +1418,8 @@
                     "argNum": 1,
                     "expr": "since / time.Second"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/util.go:97:21"
         },
         {
             "id": "{Minute} minutes",
@@ -1224,7 +1434,8 @@
                     "argNum": 1,
                     "expr": "since / time.Minute"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/util.go:99:21"
         },
         {
             "id": "{Hour} hours",
@@ -1239,7 +1450,8 @@
                     "argNum": 1,
                     "expr": "since / time.Hour"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/util.go:101:21"
         },
         {
             "id": "{Hour} days",
@@ -1254,102 +1466,132 @@
                     "argNum": 1,
                     "expr": "since / (24 * time.Hour)"
                 }
-            ]
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/util.go:103:21"
         },
         {
             "id": "Rating (AVG)",
             "message": "Rating (AVG)",
-            "translation": "Bedømmelse (GNS)"
+            "translation": "Bedømmelse (GNS)",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:197:80"
         },
         {
             "id": "Orders completed",
             "message": "Orders completed",
-            "translation": "Fuldførte ordrer"
+            "translation": "Fuldførte ordrer",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:223:80"
         },
         {
             "id": "Orders in escrow",
             "message": "Orders in escrow",
-            "translation": "Ordrer i escrow"
+            "translation": "Ordrer i escrow",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:249:80"
         },
         {
             "id": "Pending disputes",
             "message": "Pending disputes",
-            "translation": "Afventende tvister"
+            "translation": "Afventende tvister",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:275:80"
         },
         {
             "id": "Previously seen",
             "message": "Previously seen",
-            "translation": "Tidligere set"
+            "translation": "Tidligere set",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:301:80"
         },
         {
             "id": "PGP key",
             "message": "PGP key",
-            "translation": "PGP-nøgle"
+            "translation": "PGP-nøgle",
+            "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:327:80"
         },
         {
             "id": "Wallet",
             "message": "Wallet",
-            "translation": "Wallet"
+            "translation": "Wallet",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:55:79"
         },
         {
             "id": "This is your XMR wallet where you can deposit coins.",
             "message": "This is your XMR wallet where you can deposit coins.",
-            "translation": "Dette er din XMR wallet, hvor du kan indsætte mønter."
+            "translation": "Dette er din XMR wallet, hvor du kan indsætte mønter.",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:68:79"
         },
         {
             "id": "Balance is updated after 10 confirmations.",
             "message": "Balance is updated after 10 confirmations.",
-            "translation": "Saldoen opdateres efter 10 bekræftelser."
+            "translation": "Saldoen opdateres efter 10 bekræftelser.",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:81:79"
         },
         {
             "id": "See",
             "message": "See",
-            "translation": "Se"
+            "translation": "Se",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:94:79"
         },
         {
             "id": "for more information.",
             "message": "for more information.",
-            "translation": "for mere information."
+            "translation": "for mere information.",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:120:79"
         },
         {
             "id": "Balance",
             "message": "Balance",
-            "translation": "Saldo"
+            "translation": "Saldo",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:133:79"
         },
         {
             "id": "Withdraw",
             "message": "Withdraw",
-            "translation": "Hæv"
+            "translation": "Hæv",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:219:80"
         },
         {
             "id": "Enter a monero address where you want to withdraw your funds.",
             "message": "Enter a monero address where you want to withdraw your funds.",
-            "translation": "Indtast en Monero-adresse, hvor du ønsker at hæve dine midler."
+            "translation": "Indtast en Monero-adresse, hvor du ønsker at hæve dine midler.",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:232:80"
         },
         {
-            "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-            "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-            "translation": "Vi opkræver et gebyr på 0,01 XMR for hver hævning for at forhindre spam."
+            "id": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+            "message": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+            "translation": "Vi opkræver et gebyr på {WithdrawalFee} XMR for hver udbetaling for at forhindre spam.",
+            "placeholders": [
+                {
+                    "id": "WithdrawalFee",
+                    "string": "%[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "payment.WithdrawalFee"
+                }
+            ],
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:245:80"
         },
         {
             "id": "DO NOT withdraw funds to another wallet on this platform!",
             "message": "DO NOT withdraw funds to another wallet on this platform!",
-            "translation": "MÅ IKKE hæve midler til en anden wallet på denne platform!"
+            "translation": "MÅ IKKE hæve midler til en anden wallet på denne platform!",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:258:80"
         },
         {
             "id": "Destination address",
             "message": "Destination address",
-            "translation": "Destination adresse"
+            "translation": "Destination adresse",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:271:80"
         },
         {
             "id": "Amount",
             "message": "Amount",
-            "translation": "Beløb"
+            "translation": "Beløb",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:284:80"
         },
         {
             "id": "Enter amount in decimal format (e.g., 1.42069)",
             "message": "Enter amount in decimal format (e.g., 1.42069)",
-            "translation": "Indtast beløb i decimalformat (f.eks. 1.42069)"
+            "translation": "Indtast beløb i decimalformat (f.eks. 1.42069)",
+            "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:297:80"
         }
     ]
 }

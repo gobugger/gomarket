@@ -11,6 +11,7 @@ import (
 	"github.com/gobugger/gomarket/internal/route"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/payment"
+	_ "github.com/gobugger/gomarket/internal/translations"
 	"github.com/gobugger/gomarket/internal/util"
 	"github.com/gobugger/gomarket/internal/util/db"
 	"github.com/gobugger/gomarket/internal/util/uow"

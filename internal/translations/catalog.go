@@ -51,765 +51,757 @@ func init() {
 }
 
 var messageKeyToIndex = map[string]int{
-	"%d days":                               218,
-	"%d hours":                              217,
-	"%d minutes":                            216,
-	"%d seconds":                            215,
-	"0 seconds":                             214,
-	"2FA":                                   196,
-	"2FA needs to be enabled for vendors":   29,
-	"AF timer already extended to maximum.": 26,
-	"AF timer extended by %d days":          27,
-	"Accept":                                141,
-	"Account":                               193,
-	"Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within %d hours for the order to continue processing.": 50,
-	"Add to cart": 178,
-	"Address":     157,
-	"After 10 confirmations, your order will proceed to vendor.":                 153,
-	"After accepting, customer can no longer cancel so you can safely dispatch.": 146,
-	"Already have an account?":                            184,
-	"Always decline orders that you'r unable to fulfill.": 148,
-	"Amount":               236,
-	"Amount XMR":           156,
-	"Application received": 33,
-	"Balance":              230,
-	"Balance is updated after 10 confirmations.": 227,
-	"Cancel":          159,
+	"%d days":                               217,
+	"%d hours":                              216,
+	"%d minutes":                            215,
+	"%d seconds":                            214,
+	"0 seconds":                             213,
+	"2FA":                                   195,
+	"2FA needs to be enabled for vendors":   30,
+	"AF timer already extended to maximum.": 27,
+	"AF timer extended by %d days":          28,
+	"Accept":                                140,
+	"Account":                               192,
+	"Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within %d hours for the order to continue processing.": 51,
+	"Add to cart": 177,
+	"Address":     156,
+	"After 10 confirmations, your order will proceed to vendor.":                 152,
+	"After accepting, customer can no longer cancel so you can safely dispatch.": 145,
+	"Already have an account?":                            183,
+	"Always decline orders that you'r unable to fulfill.": 147,
+	"Amount":     235,
+	"Amount XMR": 155,
+	"Application is free for users who are already vendors on some other market.": 61,
+	"Application received": 34,
+	"Balance":              229,
+	"Balance is updated after 10 confirmations.": 226,
+	"Cancel":          158,
 	"Captcha":         71,
 	"Cart updated":    13,
-	"Category":        85,
-	"Change PGP key":  204,
-	"Change password": 200,
-	"Chat":            130,
+	"Category":        84,
+	"Change PGP key":  203,
+	"Change password": 199,
+	"Chat":            129,
 	"Checkout":        75,
 	"Clear image of your inventory with your username and timestamp visible": 68,
 	"Click circle with a cut": 72,
-	"Compare the URL you're using with the one in the image below to find all missing characters marked with '*'": 121,
-	"Confirm new password": 203,
-	"Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.": 48,
-	"Create new account":                    126,
-	"Create ticket":                         95,
-	"Currency":                              199,
-	"Current password":                      201,
-	"Customer can still cancel this order!": 144,
-	"Customer has disputed this order.":     167,
-	"Customers PGP key":                     143,
-	"DO NOT withdraw funds to another wallet on this platform!": 234,
-	"Date":                     135,
-	"Decline":                  142,
-	"Decrypt to get the token": 174,
-	"Delete all":               127,
-	"Delivery Method":          212,
-	"Delivery method":          133,
-	"Description":              82,
-	"Destination address":      235,
-	"Details":                  139,
-	"Dispatched":               151,
-	"Dispatched at":            136,
-	"Dispute":                  165,
-	"Enable 2FA":               205,
-	"Enter a monero address where you want to withdraw your funds.": 232,
-	"Enter amount in decimal format (e.g., 1.42069)":                237,
-	"Entry guard to %s": 120,
-	"Exchange rate":     107,
+	"Compare the URL you're using with the one in the image below to find all missing characters marked with '*'": 120,
+	"Confirm new password": 202,
+	"Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.": 49,
+	"Create new account":                    125,
+	"Create ticket":                         94,
+	"Currency":                              198,
+	"Current password":                      200,
+	"Customer can still cancel this order!": 143,
+	"Customer has disputed this order.":     166,
+	"Customers PGP key":                     142,
+	"DO NOT withdraw funds to another wallet on this platform!": 233,
+	"Date":                     134,
+	"Decline":                  141,
+	"Decrypt to get the token": 173,
+	"Delete all":               126,
+	"Delivery Method":          211,
+	"Delivery method":          132,
+	"Description":              81,
+	"Destination address":      234,
+	"Details":                  138,
+	"Dispatched":               150,
+	"Dispatched at":            135,
+	"Dispute":                  164,
+	"Enable 2FA":               204,
+	"Enter a monero address where you want to withdraw your funds.": 231,
+	"Enter amount in decimal format (e.g., 1.42069)":                236,
+	"Entry guard to %s": 119,
+	"Exchange rate":     106,
 	"Existing vendor":   65,
-	"Extend AF-timer":   164,
-	"Failed to open the gate: invalid missing characters":              0,
-	"For other users, application costs %s XMR and is non-refundable.": 61,
-	"Grade":                          186,
-	"Here you can set your pricing.": 91,
-	"How can I obtain Monero (XMR)?": 51,
-	"How do I become a vendor?":      47,
-	"How do I place an order?":       49,
+	"Extend AF-timer":   163,
+	"Failed to open the gate: invalid missing characters": 0,
+	"For other users, application costs %s XMR.":          62,
+	"Grade":                          185,
+	"Here you can set your pricing.": 90,
+	"How can I obtain Monero (XMR)?": 52,
+	"How do I become a vendor?":      48,
+	"How do I place an order?":       50,
 	"Invalid 2FA token":              6,
 	"Invalid PGP key":                2,
 	"Invalid credentials":            4,
-	"Inventory":                      88,
-	"Language":                       198,
-	"Leave empty to not update.":     210,
+	"Inventory":                      87,
+	"Language":                       197,
 	"List the markets where you are a vendor and include your username": 70,
 	"Listing created": 12,
-	"Log in":          123,
-	"Logout":          117,
-	"Make sure that you have enough time to do the actual dispaching!": 150,
+	"Log in":          122,
+	"Logout":          116,
+	"Make sure that you have enough time to do the actual dispaching!": 149,
 	"Markets and Your Username":                                        69,
-	"Message":                                                          105,
-	"Missing characters":                                               122,
-	"My tickets":                                                       213,
-	"New password":                                                     202,
-	"Not enough balance":                                               32,
-	"Not enough balance to withdraw.":                                  19,
-	"OUT OF STOCK":                                                     181,
-	"Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.": 56,
-	"Open":           57,
-	"Order":          129,
-	"Order ID":       172,
-	"Order accepted": 43,
-	"Order accepted. You have %d hours to mark it dispatched.": 34,
-	"Order cancelled":            22,
+	"Message":                                                          104,
+	"Missing characters":                                               121,
+	"My tickets":                                                       212,
+	"New password":                                                     201,
+	"Not enough balance":                                               33,
+	"Not enough balance to withdraw.":                                  20,
+	"OUT OF STOCK":                                                     180,
+	"Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.": 57,
+	"Open":           58,
+	"Order":          128,
+	"Order ID":       171,
+	"Order accepted": 44,
+	"Order accepted. You have %d hours to mark it dispatched.": 35,
+	"Order cancelled":            23,
 	"Order created":              18,
-	"Order date":                 171,
-	"Order declined":             35,
-	"Order dispatched":           45,
-	"Order disputed":             28,
-	"Order marked as dispatched": 36,
-	"Order received":             41,
-	"Orders are automatically finalized after %d days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.": 54,
-	"Orders can be cancelled until vendor has accepted it.": 158,
-	"Orders completed":          220,
-	"Orders in escrow":          221,
+	"Order date":                 170,
+	"Order declined":             36,
+	"Order dispatched":           46,
+	"Order disputed":             29,
+	"Order marked as dispatched": 37,
+	"Order received":             42,
+	"Orders are automatically finalized after %d days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.": 55,
+	"Orders can be cancelled until vendor has accepted it.": 157,
+	"Orders completed":          219,
+	"Orders in escrow":          220,
 	"PGP Public key is updated": 10,
-	"PGP key":                   224,
+	"PGP key":                   223,
 	"PGP key is set":            9,
-	"PGP public key":            206,
+	"PGP public key":            205,
 	"Password changed":          7,
-	"Pending disputes":          222,
-	"Please carefully review the order below before accepting it.":        147,
+	"Pending disputes":          221,
+	"Please carefully review the order below before accepting it.":        146,
 	"Please pay the invoice below in %d hours for your order to proceed.": 17,
-	"Preferences":         197,
-	"Previously seen":     223,
-	"Price":               94,
-	"Pricing":             90,
-	"Product deleted":     37,
-	"Product image":       83,
-	"Product updated":     38,
-	"Proof key ownership": 173,
+	"Preferences":         196,
+	"Previously seen":     222,
+	"Price":               93,
+	"Pricing":             89,
+	"Product deleted":     38,
+	"Product image":       82,
+	"Product updated":     39,
+	"Proof key ownership": 172,
 	"Proof of inventory":  67,
-	"Proof of inventory is required from new vendors": 31,
-	"Quantity":                93,
-	"Rating (AVG)":            219,
-	"Refund offer":            166,
-	"Refund percent":          170,
-	"Register":                182,
+	"Proof of inventory is required from new vendors": 32,
+	"Quantity":                92,
+	"Rating (AVG)":            218,
+	"Refund offer":            165,
+	"Refund percent":          169,
+	"Register":                181,
 	"Registered successfully": 3,
-	"Required for vendors, suggested for everyone.": 207,
-	"Response":       112,
-	"Review":         163,
-	"Review created": 23,
-	"Review order":   185,
-	"Reviews":        179,
-	"See":            228,
+	"Required for vendors, suggested for everyone.": 206,
+	"Response":       111,
+	"Review":         162,
+	"Review created": 24,
+	"Review order":   184,
+	"Reviews":        178,
+	"See":            227,
 	"Select this if you'r already a vendor on some other market such as xmrBazaar": 66,
-	"Ships from": 86,
-	"Ships to":   87,
-	"Size of the current inventory for this product.": 89,
-	"Staff PGP": 106,
-	"Status":    131,
-	"Subject":   96,
-	"Submit":    73,
-	"The application is free for users who are already vendors on some other market using the same PGP key.":    60,
-	"There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.": 52,
-	"This is your XMR wallet where you can deposit coins.":                                                      226,
-	"This username is already in use": 1,
-	"Ticket is already closed":        39,
-	"Time":                            108,
-	"Time left to pay":                155,
-	"Title":                           81,
-	"Token":                           175,
-	"Total":                           74,
-	"Total cost":                      134,
-	"Transfer exact amount of Monero to the address below.": 152,
-	"Type": 195,
-	"Unencrypted details are automatically encrypted using vendors key.": 80,
-	"Until auto-declined":     137,
-	"Until auto-finalized":    138,
-	"Update":                  177,
-	"Update delivery methods": 211,
-	"Update product":          176,
-	"Update vendor profile":   208,
-	"Use image with close to 1:1 aspect ratio for optimal look": 84,
+	"Ships from": 85,
+	"Ships to":   86,
+	"Size of the current inventory for this product.": 88,
+	"Staff PGP":        105,
+	"Status":           130,
+	"Subject":          95,
+	"Submit":           73,
+	"Terms of service": 208,
+	"Terms of service is used to resolve disputes": 209,
+	"Terms of service updated":                     11,
+	"There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.": 53,
+	"This is your XMR wallet where you can deposit coins.":                                                      225,
+	"This username is already in use":                                                                           1,
+	"Ticket is already closed":                                                                                  40,
+	"Time":                                                                                                      107,
+	"Time left to pay":                                                                                          154,
+	"Title":                                                                                                     80,
+	"Token":                                                                                                     174,
+	"Total":                                                                                                     74,
+	"Total cost":                                                                                                133,
+	"Transfer exact amount of Monero to the address below.": 151,
+	"Type": 194,
+	"Unencrypted details are automatically encrypted using vendors key.": 79,
+	"Until auto-declined":     136,
+	"Until auto-finalized":    137,
+	"Update":                  176,
+	"Update delivery methods": 210,
+	"Update product":          175,
+	"Update terms of service": 207,
+	"Use image with close to 1:1 aspect ratio for optimal look": 83,
 	"Use png image with close to 1:1 ratio for optimal look":    64,
-	"Use the chat below to discuss about this dispute.":         168,
+	"Use the chat below to discuss about this dispute.":         167,
 	"Use wallet for payment":                                    77,
-	"Use your real address, with the same format as below.":     79,
-	"Username":    194,
-	"Users: ":     110,
-	"Vendor":      132,
-	"Vendor Logo": 63,
-	"Vendor accounts can't have previous orders. Please create a new account.": 30,
-	"Vendor application":              58,
-	"Vendor info":                     209,
-	"Vendor info is updated":          11,
-	"Vendor offered refund of %.2f%%": 140,
-	"Vendors: ":                       109,
-	"Wallet":                          225,
-	"We collect an 0.01 XMR fee from each withdrawal to prevent spam.":                233,
-	"We take 5%% cut from these prices.":                                              92,
-	"What am I allowed to sell on this marketplace?":                                  55,
-	"What should I do if my order has not arrived or does not match the description?": 53,
-	"Withdraw":                       231,
-	"Withdrawal of %s XMR initiated": 21,
-	"You can create an refund offer and resolve this dispute without admin intervention.":                169,
-	"You can extend the auto-finalize-time by 7-days.":                                                   161,
-	"You can't extend AF timer before order has been dispatched for %d days.":                            24,
+	"Username":                                                  193,
+	"Users: ":                                                   109,
+	"Vendor":                                                    131,
+	"Vendor Logo":                                               63,
+	"Vendor accounts can't have previous orders. Please create a new account.": 31,
+	"Vendor application":              59,
+	"Vendor offered refund of %.2f%%": 139,
+	"Vendors: ":                       108,
+	"Wallet":                          224,
+	"We collect an %f XMR fee from each withdrawal to prevent spam.":                  232,
+	"We take 5%% cut from these prices.":                                              91,
+	"What am I allowed to sell on this marketplace?":                                  56,
+	"What should I do if my order has not arrived or does not match the description?": 54,
+	"Withdraw":                       230,
+	"Withdrawal amount is too small": 19,
+	"Withdrawal of %s XMR initiated": 22,
+	"You can create an refund offer and resolve this dispute without admin intervention.":                168,
+	"You can extend the auto-finalize-time by 7-days.":                                                   160,
+	"You can't extend AF timer before order has been dispatched for %d days.":                            25,
 	"You can't order with a vendor account":                                                              15,
-	"You can't re-extend AF timer before order has been dispatched for %d days.":                         25,
+	"You can't re-extend AF timer before order has been dispatched for %d days.":                         26,
 	"You can't update to your current key":                                                               8,
-	"You can't withdraw to your own account":                                                             20,
+	"You can't withdraw to your own account":                                                             21,
 	"You don't have enough balance for this order":                                                       16,
-	"You have a total of 3 hours to pay this invoice, or your order will be cancelled.":                  154,
-	"You have received a new order!\nYou have a total of %d hours to accept, before it's auto-declined.": 42,
-	"You have zero notifications":                                                                        128,
-	"You must accept it in 2 days or it will be automatically declined.":                                 145,
-	"You must mark this order dispatched in 2 days or it will be automatically declined.":                149,
-	"You need to be logged in to access that page":                                                       40,
-	"You're required to provide proof that you actually have products to sell here.":                     62,
-	"Your account does not have 2FA enabled!":                                                            59,
+	"You have a total of 3 hours to pay this invoice, or your order will be cancelled.":                  153,
+	"You have received a new order!\nYou have a total of %d hours to accept, before it's auto-declined.": 43,
+	"You have zero notifications":                                                                        127,
+	"You must accept it in 2 days or it will be automatically declined.":                                 144,
+	"You must mark this order dispatched in 2 days or it will be automatically declined.":                148,
+	"You need to be logged in to access that page":                                                       41,
+	"Your account does not have 2FA enabled!":                                                            60,
 	"Your account is banned":                                                                             5,
-	"Your order has been accepted!\nYou can monitor its status from orders page":                         44,
-	"Your order has been dispatched!\nPlease remember to review it.":                                     46,
-	"Your order will auto-finalize in ":                                                                  160,
-	"account":                                                                                            97,
-	"admin":                                                                                              189,
-	"ago":                                                                                                180,
-	"bug":                                                                                                103,
+	"Your order has been accepted!\nYou can monitor its status from orders page":                         45,
+	"Your order has been dispatched!\nPlease remember to review it.":                                     47,
+	"Your order will auto-finalize in ":                                                                  159,
+	"account":                                                                                            96,
+	"admin":                                                                                              188,
+	"ago":                                                                                                179,
+	"bug":                                                                                                102,
 	"cart deleted":                                                                                       14,
-	"customer":                                                                                           188,
+	"customer":                                                                                           187,
 	"delivery method":                                                                                    76,
 	"details":                                                                                            78,
-	"disabled":                                                                                           192,
-	"enabled":                                                                                            191,
-	"for more information.":                                                                              229,
-	"guest":                                                                                              187,
-	"log in":                                                                                             118,
-	"order":                                                                                              98,
-	"orders":                                                                                             114,
-	"other":                                                                                              104,
-	"password":                                                                                           125,
-	"password check":                                                                                     183,
-	"product":                                                                                            101,
-	"products":                                                                                           113,
-	"register":                                                                                           119,
-	"review your order":                                                                                  162,
-	"sell":                                                                                               115,
-	"submit":                                                                                             111,
-	"suggestion":                                                                                         102,
-	"support":                                                                                            116,
-	"unknown":                                                                                            190,
-	"username":                                                                                           124,
-	"vendor":                                                                                             100,
-	"wallet":                                                                                             99,
+	"disabled":                                                                                           191,
+	"enabled":                                                                                            190,
+	"for more information.":                                                                              228,
+	"guest":                                                                                              186,
+	"log in":                                                                                             117,
+	"order":                                                                                              97,
+	"orders":                                                                                             113,
+	"other":                                                                                              103,
+	"password":                                                                                           124,
+	"password check":                                                                                     182,
+	"product":                                                                                            100,
+	"products":                                                                                           112,
+	"register":                                                                                           118,
+	"review your order":                                                                                  161,
+	"sell":                                                                                               114,
+	"submit":                                                                                             110,
+	"suggestion":                                                                                         101,
+	"support":                                                                                            115,
+	"unknown":                                                                                            189,
+	"username":                                                                                           123,
+	"vendor":                                                                                             99,
+	"wallet":                                                                                             98,
 }
 
-var da_DKIndex = []uint32{ // 239 elements
+var da_DKIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000031, 0x00000055, 0x00000068,
 	0x0000007f, 0x000000a1, 0x000000bf, 0x000000d1,
 	0x000000e5, 0x00000114, 0x0000012d, 0x0000014f,
-	0x00000173, 0x00000182, 0x00000199, 0x000001ae,
-	0x000001db, 0x00000201, 0x0000025a, 0x00000269,
-	0x00000286, 0x000002ab, 0x000002cd, 0x000002de,
-	0x000002f2, 0x0000033e, 0x0000038f, 0x000003bf,
-	0x000003e4, 0x000003f3, 0x00000418, 0x00000465,
+	0x0000016d, 0x0000017c, 0x00000193, 0x000001a8,
+	0x000001d5, 0x000001fb, 0x00000254, 0x00000263,
+	0x00000284, 0x000002a1, 0x000002c6, 0x000002e8,
+	0x000002f9, 0x0000030d, 0x00000359, 0x000003aa,
+	0x000003da, 0x000003ff, 0x0000040e, 0x00000433,
 	// Entry 20 - 3F
-	0x000004a5, 0x000004b4, 0x000004c8, 0x00000511,
-	0x00000522, 0x00000541, 0x00000551, 0x00000563,
-	0x0000057d, 0x000005b5, 0x000005c8, 0x0000062d,
-	0x00000642, 0x0000068e, 0x000006a0, 0x000006db,
-	0x000006fb, 0x00000767, 0x00000785, 0x000008ef,
-	0x00000911, 0x00000982, 0x000009e4, 0x00000aff,
-	0x00000b25, 0x00000baf, 0x00000bb5, 0x00000bcb,
-	0x00000bed, 0x00000c61, 0x00000caa, 0x00000ced,
+	0x00000480, 0x000004c0, 0x000004cf, 0x000004e3,
+	0x0000052c, 0x0000053d, 0x0000055c, 0x0000056c,
+	0x0000057e, 0x00000598, 0x000005d0, 0x000005e3,
+	0x00000648, 0x0000065d, 0x000006a9, 0x000006bb,
+	0x000006f6, 0x00000716, 0x00000782, 0x000007a0,
+	0x0000090a, 0x0000092c, 0x0000099d, 0x000009ff,
+	0x00000b1a, 0x00000b40, 0x00000bca, 0x00000bd0,
+	0x00000be6, 0x00000c08, 0x00000c5b, 0x00000c8d,
 	// Entry 40 - 5F
-	0x00000cf9, 0x00000d38, 0x00000d4d, 0x00000d98,
-	0x00000da8, 0x00000dec, 0x00000e07, 0x00000e48,
-	0x00000e50, 0x00000e6d, 0x00000e75, 0x00000e7b,
-	0x00000e8a, 0x00000e9a, 0x00000eb3, 0x00000ebc,
-	0x00000ef4, 0x00000f46, 0x00000f4c, 0x00000f58,
-	0x00000f67, 0x00000fa8, 0x00000fb1, 0x00000fbe,
-	0x00000fcb, 0x00000fd1, 0x00001007, 0x00001014,
-	0x00001033, 0x00001059, 0x00001061, 0x00001066,
+	0x00000c99, 0x00000cd8, 0x00000ced, 0x00000d38,
+	0x00000d48, 0x00000d8c, 0x00000da7, 0x00000de8,
+	0x00000df0, 0x00000e0d, 0x00000e15, 0x00000e1b,
+	0x00000e2a, 0x00000e3a, 0x00000e53, 0x00000e5c,
+	0x00000eae, 0x00000eb4, 0x00000ec0, 0x00000ecf,
+	0x00000f10, 0x00000f19, 0x00000f26, 0x00000f33,
+	0x00000f39, 0x00000f6f, 0x00000f7c, 0x00000f9b,
+	0x00000fc1, 0x00000fc9, 0x00000fce, 0x00000fdb,
 	// Entry 60 - 7F
-	0x00001073, 0x00001078, 0x0000107e, 0x00001084,
-	0x0000108b, 0x00001097, 0x0000109f, 0x000010a7,
-	0x000010ac, 0x000010b2, 0x000010b9, 0x000010c9,
-	0x000010d4, 0x000010d8, 0x000010ec, 0x000010fa,
-	0x00001102, 0x00001107, 0x00001111, 0x00001118,
-	0x0000111e, 0x00001126, 0x0000112d, 0x00001135,
-	0x0000113f, 0x00001155, 0x000011c2, 0x000011d1,
-	0x000011d9, 0x000011e4, 0x000011f0, 0x000011ff,
+	0x00000fe0, 0x00000fe6, 0x00000fec, 0x00000ff3,
+	0x00000fff, 0x00001007, 0x0000100f, 0x00001014,
+	0x0000101a, 0x00001021, 0x00001031, 0x0000103c,
+	0x00001040, 0x00001054, 0x00001062, 0x0000106a,
+	0x0000106f, 0x00001079, 0x00001080, 0x00001086,
+	0x0000108e, 0x00001095, 0x0000109d, 0x000010a7,
+	0x000010bd, 0x0000112a, 0x00001139, 0x00001141,
+	0x0000114c, 0x00001158, 0x00001167, 0x00001170,
 	// Entry 80 - 9F
-	0x00001208, 0x00001221, 0x00001227, 0x0000122c,
-	0x00001233, 0x0000123f, 0x0000124f, 0x00001261,
-	0x00001266, 0x00001272, 0x0000128b, 0x000012a7,
-	0x000012b0, 0x000012dd, 0x000012e6, 0x000012ec,
-	0x000012ff, 0x00001328, 0x00001378, 0x000013c3,
-	0x0000140b, 0x00001438, 0x0000149a, 0x000014e0,
-	0x000014e9, 0x00001529, 0x00001569, 0x000015c2,
-	0x000015db, 0x000015e6, 0x000015ee, 0x0000162a,
+	0x00001189, 0x0000118f, 0x00001194, 0x0000119b,
+	0x000011a7, 0x000011b7, 0x000011c9, 0x000011ce,
+	0x000011da, 0x000011f3, 0x0000120f, 0x00001218,
+	0x00001245, 0x0000124e, 0x00001254, 0x00001267,
+	0x00001290, 0x000012e0, 0x0000132b, 0x00001373,
+	0x000013a0, 0x00001402, 0x00001448, 0x00001451,
+	0x00001491, 0x000014d1, 0x0000152a, 0x00001543,
+	0x0000154e, 0x00001556, 0x00001592, 0x0000159b,
 	// Entry A0 - BF
-	0x00001633, 0x00001664, 0x00001697, 0x000016ab,
-	0x000016b5, 0x000016c7, 0x000016cd, 0x000016de,
-	0x000016ff, 0x00001733, 0x00001782, 0x00001793,
-	0x0000179d, 0x000017a6, 0x000017bf, 0x000017dc,
-	0x000017e2, 0x000017f2, 0x000017fa, 0x0000180b,
-	0x00001817, 0x0000181d, 0x00001825, 0x0000182f,
-	0x00001842, 0x0000185c, 0x0000186c, 0x00001875,
-	0x0000187b, 0x00001881, 0x0000188f, 0x00001896,
+	0x000015cc, 0x000015ff, 0x00001613, 0x0000161d,
+	0x0000162f, 0x00001635, 0x00001646, 0x00001667,
+	0x0000169b, 0x000016ea, 0x000016fb, 0x00001705,
+	0x0000170e, 0x00001727, 0x00001744, 0x0000174a,
+	0x0000175a, 0x00001762, 0x00001773, 0x0000177f,
+	0x00001785, 0x0000178d, 0x00001797, 0x000017aa,
+	0x000017c4, 0x000017d4, 0x000017dd, 0x000017e3,
+	0x000017e9, 0x000017f7, 0x000017fe, 0x00001808,
 	// Entry C0 - DF
-	0x000018a0, 0x000018ac, 0x000018b2, 0x000018bd,
-	0x000018c2, 0x000018c6, 0x000018d3, 0x000018d9,
-	0x000018e0, 0x000018f2, 0x00001909, 0x00001918,
-	0x00001930, 0x00001941, 0x0000194d, 0x00001962,
-	0x0000198f, 0x000019a5, 0x000019b8, 0x000019e7,
-	0x00001a00, 0x00001a10, 0x00001a1f, 0x00001a2a,
-	0x00001a39, 0x00001a48, 0x00001a54, 0x00001a5f,
-	0x00001a71, 0x00001a83, 0x00001a93, 0x00001aa6,
+	0x00001814, 0x0000181a, 0x00001825, 0x0000182a,
+	0x0000182e, 0x0000183b, 0x00001841, 0x00001848,
+	0x0000185a, 0x00001871, 0x00001880, 0x00001898,
+	0x000018a9, 0x000018b5, 0x000018ca, 0x000018f7,
+	0x00001913, 0x00001927, 0x00001957, 0x00001970,
+	0x00001980, 0x0000198f, 0x0000199a, 0x000019a9,
+	0x000019b8, 0x000019c4, 0x000019cf, 0x000019e1,
+	0x000019f3, 0x00001a03, 0x00001a16, 0x00001a24,
 	// Entry E0 - FF
-	0x00001ab4, 0x00001abf, 0x00001ac6, 0x00001afe,
-	0x00001b28, 0x00001b2b, 0x00001b41, 0x00001b47,
-	0x00001b4c, 0x00001b8d, 0x00001bd9, 0x00001c17,
-	0x00001c2b, 0x00001c32, 0x00001c62,
-} // Size: 980 bytes
+	0x00001a2f, 0x00001a36, 0x00001a6e, 0x00001a98,
+	0x00001a9b, 0x00001ab1, 0x00001ab7, 0x00001abc,
+	0x00001afd, 0x00001b4c, 0x00001b8a, 0x00001b9e,
+	0x00001ba5, 0x00001bd5,
+} // Size: 976 bytes
 
-const da_DKData string = "" + // Size: 7266 bytes
+const da_DKData string = "" + // Size: 7125 bytes
 	"\x02Kunne ikke åbne porten: ugyldige manglende tegn\x02Dette brugernavn " +
 	"er allerede i brug\x02Ugyldig PGP-nøgle\x02Registreret med succes\x02Ugy" +
 	"ldige legitimationsoplysninger\x02Din konto er blevet udelukket\x02Ugyld" +
 	"ig 2FA-token\x02Adgangskode ændret\x02Du kan ikke opdatere til din nuvær" +
 	"ende nøgle\x02PGP-nøgle er indstillet\x02PGP-offentlig nøgle er opdatere" +
-	"t\x02Leverandørinformation er opdateret\x02Oprettet liste\x02Indkøbskurv" +
-	" opdateret\x02indkøbskurv slettet\x02Du kan ikke bestille med en leveran" +
-	"dørkonto\x02Du har ikke nok saldo til denne ordre\x02Betal venligst fakt" +
-	"uraen nedenfor inden for %[1]d timer for at din ordre kan fortsætte.\x02" +
-	"Ordre oprettet\x02Ikke nok saldo til at hæve.\x02Du kan ikke hæve til di" +
-	"n egen konto\x02Udbetaling af %[1]s XMR initieret\x02Ordre annulleret" +
-	"\x02Anmeldelse oprettet\x02Du kan ikke forlænge AF-timerne, før ordren e" +
-	"r blevet sendt i %[1]d dage.\x02Du kan ikke forlænge AF-timerne igen, fø" +
-	"r ordren er blevet sendt i %[1]d dage.\x02AF-timerne er allerede forlæng" +
-	"et til maksimum.\x02AF-timerne forlænget med %[1]d dage\x02Ordre omstrid" +
-	"t\x022FA skal aktiveres for leverandører\x02Leverandørkonti kan ikke hav" +
-	"e tidligere ordrer. Opret venligst en ny konto.\x02Dokumentation for lag" +
-	"erbeholdning kræves fra nye leverandører\x02Ikke nok saldo\x02Ansøgning " +
-	"modtaget\x02Ordren er accepteret. Du har %[1]d timer til at markere den " +
-	"som afsendt.\x02Ordren er afvist\x02Ordren er markeret som afsendt\x02Pr" +
-	"odukt slettet\x02Produkt opdateret\x02Billet er allerede lukket\x02Du sk" +
-	"al være logget ind for at få adgang til den side\x02Ordren er modtaget" +
-	"\x02Du har modtaget en ny ordre!\x0aDu har i alt %[1]d timer til at acce" +
-	"ptere, før den automatisk afvises.\x02Ordren er accepteret\x02Din ordre " +
-	"er blevet accepteret!\x0aDu kan overvåge dens status fra ordresiden\x02O" +
-	"rdren er afsendt\x02Din ordre er blevet afsendt!\x0aHusk venligst at anm" +
-	"elde den.\x02Hvordan bliver jeg leverandør?\x02Opret en konto med to-fak" +
-	"tor autentificering (2FA) aktiveret, og indsend derefter en leverandøran" +
-	"søgning.\x02Hvordan afgiver jeg en ordre?\x02Tilføj de ønskede produkter" +
-	" til din indkøbskurv. Naviger til /cart og vælg “Checkout,” vælg din for" +
-	"etrukne leveringsmetode, og angiv de krævede oplysninger.\x0aHvis du har" +
-	" tilgængelig saldo, kan du bruge den ved kassen. Ellers kan du anmode om" +
-	" en faktura. Fakturaer skal betales inden for %[1]d timer for at ordren " +
-	"kan fortsætte med at blive behandlet.\x02Hvordan kan jeg få Monero (XMR)" +
-	"?\x02Der er flere måder at erhverve Monero på. Besøg venligst getmonero." +
-	"org for officiel vejledning og ressourcer.\x02Hvad skal jeg gøre, hvis m" +
-	"in ordre ikke er ankommet eller ikke stemmer overens med beskrivelsen?" +
-	"\x02Ordrer afsluttes automatisk efter %[1]d dage.\x0aDu kan forlænge aut" +
-	"o-afslutningsperioden to gange.\x0aHvis ordren stadig ikke er ankommet e" +
-	"fter disse forlængelser, bør du åbne en tvist.\x0aVores team vil gennemg" +
-	"å sagen og træffe en beslutning baseret på de tilgængelige oplysninger." +
-	"\x02Hvad må jeg sælge på dette marked?\x02Kun lovlige varer er tilladt. " +
-	"Hvis du er usikker på, om dit produkt kvalificerer sig, bedes du kontakt" +
-	"e os, før du opretter en annonce.\x02Åben\x02Leverandøransøgning\x02Din " +
-	"konto har ikke 2FA aktiveret!\x02Applikationen er gratis for brugere, de" +
-	"r allerede er sælgere på et andet marked, der bruger den samme PGP-nøgle" +
-	".\x02For andre brugere koster applikationen %[1]s XMR og er ikke-refunde" +
-	"rbar.\x02Du skal give bevis for, at du faktisk har produkter at sælge he" +
-	"r.\x02Sælgerlogo\x02Brug png-billede med tæt på 1:1-forhold for optimal " +
-	"udseende\x02Eksisterende sælger\x02Vælg dette, hvis du allerede er sælge" +
-	"r på et andet marked som xmrBazaar\x02Bevis for lager\x02Klar billede af" +
-	" dit lager med dit brugernavn og tidsstempel synligt\x02Markeder og dit " +
-	"brugernavn\x02List de markeder, hvor du er sælger, og inkluder dit bruge" +
-	"rnavn\x02Captcha\x02Klik på cirklen med et snit\x02Indsend\x02Total\x02G" +
-	"å til kassen\x02leveringsmetode\x02Brug wallet til betaling\x02detaljer" +
-	"\x02Brug din rigtige adresse med samme format som nedenfor.\x02Uenkrypte" +
-	"rede detaljer bliver automatisk krypteret ved hjælp af sælgers nøgle." +
-	"\x02Titel\x02Beskrivelse\x02Produktbillede\x02Brug billede med tæt på 1:" +
-	"1 billedforhold for optimal udseende\x02Kategori\x02Afsendes fra\x02Afse" +
-	"ndes til\x02Lager\x02Størrelse af det nuværende lager for dette produkt." +
-	"\x02Prissætning\x02Her kan du angive dine priser.\x02Vi tager 5% i gebyr" +
-	" fra disse priser.\x02Mængde\x02Pris\x02Opret billet\x02Emne\x02konto" +
-	"\x02ordre\x02wallet\x02leverandør\x02produkt\x02forslag\x02fejl\x02andet" +
-	"\x02Besked\x02Personalets PGP\x02Valutakurs\x02Tid\x04\x00\x01 \x0f\x02L" +
-	"everandører:\x04\x00\x01 \x09\x02Brugere:\x02indsend\x02Svar\x02produkte" +
-	"r\x02ordrer\x02sælg\x02support\x02Log ud\x02log ind\x02registrer\x02Adga" +
-	"ngsvagt til %[1]s\x02Sammenlign den URL, du bruger, med den i billedet n" +
-	"edenfor for at finde alle manglende tegn markeret med '*'\x02Manglende t" +
-	"egn\x02Log ind\x02brugernavn\x02adgangskode\x02Opret ny konto\x02Slet al" +
-	"t\x02Du har ingen meddelelser\x02Ordre\x02Chat\x02Status\x02Leverandør" +
-	"\x02Leveringsmetode\x02Samlet omkostning\x02Dato\x02Afsendt kl.\x02Indti" +
-	"l automatisk afvist\x02Indtil automatisk afsluttet\x02Detaljer\x02Levera" +
-	"ndør tilbød refundering på %.2[1]f%\x02Accepter\x02Afvis\x02Kundens PGP-" +
-	"nøgle\x02Kunden kan stadig annullere denne ordre!\x02Du skal acceptere d" +
-	"et inden for 2 dage, ellers vil det blive automatisk afvist.\x02Efter ac" +
-	"cept kan kunden ikke længere annullere, så du kan trygt afsende.\x02Genn" +
-	"emgå venligst ordren nedenfor omhyggeligt, før du accepterer den.\x02Afv" +
-	"is altid ordrer, som du ikke kan opfylde.\x02Du skal markere denne ordre" +
-	" som afsendt inden for 2 dage, ellers vil den blive automatisk afvist." +
-	"\x02Sørg for, at du har nok tid til at udføre den faktiske forsendelse!" +
-	"\x02Forsendt\x02Overfør det nøjagtige beløb af Monero til adressen neden" +
-	"for.\x02Efter 10 bekræftelser vil din ordre blive sendt til sælgeren." +
-	"\x02Du har i alt 3 timer til at betale denne faktura, ellers vil din ord" +
-	"re blive annulleret.\x02Tid tilbage til betaling\x02Beløb XMR\x02Adresse" +
-	"\x02Ordrer kan annulleres, indtil sælgeren har accepteret dem.\x02Annull" +
-	"er\x04\x00\x01 ,\x02Din ordre vil automatisk blive afsluttet om\x02Du ka" +
-	"n forlænge auto-afslutningstiden med 7 dage.\x02gennemgå din ordre\x02Ge" +
-	"nnemgå\x02Forlæng AF-timer\x02Tvist\x02Refusions tilbud\x02Kunden har be" +
-	"stridt denne ordre.\x02Brug chatten nedenfor til at diskutere denne tvis" +
-	"t.\x02Du kan oprette et refusions tilbud og løse denne tvist uden admini" +
-	"ndblanding.\x02Refusionsprocent\x02Ordredato\x02Ordre ID\x02Bevis på nøg" +
-	"leejerskab\x02Dekrypter for at få tokenet\x02Token\x02Opdater produkt" +
-	"\x02Opdater\x02Tilføj til kurv\x02Anmeldelser\x02siden\x02UDSOLGT\x02Reg" +
-	"istrer\x02adgangskodekontrol\x02Har du allerede en konto?\x02Gennemgå or" +
-	"dre\x02Karakter\x02gæst\x02kunde\x02administrator\x02ukendt\x02aktiveret" +
-	"\x02deaktiveret\x02Konto\x02Brugernavn\x02Type\x022FA\x02Præferencer\x02" +
-	"Sprog\x02Valuta\x02Skift adgangskode\x02Nuværende adgangskode\x02Ny adga" +
-	"ngskode\x02Bekræft ny adgangskode\x02Skift PGP-nøgle\x02Aktiver 2FA\x02P" +
-	"GP offentlig nøgle\x02Påkrævet for sælgere, anbefales til alle.\x02Opdat" +
-	"er sælgerprofil\x02Sælgerinformation\x02Lad være med at udfylde for ikke" +
-	" at opdatere.\x02Opdater leveringsmetoder\x02Leveringsmetode\x02Mine bil" +
-	"letter\x020 sekunder\x02%[1]d sekunder\x02%[1]d minutter\x02%[1]d timer" +
-	"\x02%[1]d dage\x02Bedømmelse (GNS)\x02Fuldførte ordrer\x02Ordrer i escro" +
-	"w\x02Afventende tvister\x02Tidligere set\x02PGP-nøgle\x02Wallet\x02Dette" +
-	" er din XMR wallet, hvor du kan indsætte mønter.\x02Saldoen opdateres ef" +
-	"ter 10 bekræftelser.\x02Se\x02for mere information.\x02Saldo\x02Hæv\x02I" +
-	"ndtast en Monero-adresse, hvor du ønsker at hæve dine midler.\x02Vi opkr" +
-	"æver et gebyr på 0,01 XMR for hver hævning for at forhindre spam.\x02MÅ" +
-	" IKKE hæve midler til en anden wallet på denne platform!\x02Destination " +
-	"adresse\x02Beløb\x02Indtast beløb i decimalformat (f.eks. 1.42069)"
+	"t\x02Vilkår for service opdateret\x02Oprettet liste\x02Indkøbskurv opdat" +
+	"eret\x02indkøbskurv slettet\x02Du kan ikke bestille med en leverandørkon" +
+	"to\x02Du har ikke nok saldo til denne ordre\x02Betal venligst fakturaen " +
+	"nedenfor inden for %[1]d timer for at din ordre kan fortsætte.\x02Ordre " +
+	"oprettet\x02Udbetalingsbeløbet er for lille\x02Ikke nok saldo til at hæv" +
+	"e.\x02Du kan ikke hæve til din egen konto\x02Udbetaling af %[1]s XMR ini" +
+	"tieret\x02Ordre annulleret\x02Anmeldelse oprettet\x02Du kan ikke forlæng" +
+	"e AF-timerne, før ordren er blevet sendt i %[1]d dage.\x02Du kan ikke fo" +
+	"rlænge AF-timerne igen, før ordren er blevet sendt i %[1]d dage.\x02AF-t" +
+	"imerne er allerede forlænget til maksimum.\x02AF-timerne forlænget med %" +
+	"[1]d dage\x02Ordre omstridt\x022FA skal aktiveres for leverandører\x02Le" +
+	"verandørkonti kan ikke have tidligere ordrer. Opret venligst en ny konto" +
+	".\x02Dokumentation for lagerbeholdning kræves fra nye leverandører\x02Ik" +
+	"ke nok saldo\x02Ansøgning modtaget\x02Ordren er accepteret. Du har %[1]d" +
+	" timer til at markere den som afsendt.\x02Ordren er afvist\x02Ordren er " +
+	"markeret som afsendt\x02Produkt slettet\x02Produkt opdateret\x02Billet e" +
+	"r allerede lukket\x02Du skal være logget ind for at få adgang til den si" +
+	"de\x02Ordren er modtaget\x02Du har modtaget en ny ordre!\x0aDu har i alt" +
+	" %[1]d timer til at acceptere, før den automatisk afvises.\x02Ordren er " +
+	"accepteret\x02Din ordre er blevet accepteret!\x0aDu kan overvåge dens st" +
+	"atus fra ordresiden\x02Ordren er afsendt\x02Din ordre er blevet afsendt!" +
+	"\x0aHusk venligst at anmelde den.\x02Hvordan bliver jeg leverandør?\x02O" +
+	"pret en konto med to-faktor autentificering (2FA) aktiveret, og indsend " +
+	"derefter en leverandøransøgning.\x02Hvordan afgiver jeg en ordre?\x02Til" +
+	"føj de ønskede produkter til din indkøbskurv. Naviger til /cart og vælg " +
+	"“Checkout,” vælg din foretrukne leveringsmetode, og angiv de krævede o" +
+	"plysninger.\x0aHvis du har tilgængelig saldo, kan du bruge den ved kasse" +
+	"n. Ellers kan du anmode om en faktura. Fakturaer skal betales inden for " +
+	"%[1]d timer for at ordren kan fortsætte med at blive behandlet.\x02Hvord" +
+	"an kan jeg få Monero (XMR)?\x02Der er flere måder at erhverve Monero på." +
+	" Besøg venligst getmonero.org for officiel vejledning og ressourcer.\x02" +
+	"Hvad skal jeg gøre, hvis min ordre ikke er ankommet eller ikke stemmer o" +
+	"verens med beskrivelsen?\x02Ordrer afsluttes automatisk efter %[1]d dage" +
+	".\x0aDu kan forlænge auto-afslutningsperioden to gange.\x0aHvis ordren s" +
+	"tadig ikke er ankommet efter disse forlængelser, bør du åbne en tvist." +
+	"\x0aVores team vil gennemgå sagen og træffe en beslutning baseret på de " +
+	"tilgængelige oplysninger.\x02Hvad må jeg sælge på dette marked?\x02Kun l" +
+	"ovlige varer er tilladt. Hvis du er usikker på, om dit produkt kvalifice" +
+	"rer sig, bedes du kontakte os, før du opretter en annonce.\x02Åben\x02Le" +
+	"verandøransøgning\x02Din konto har ikke 2FA aktiveret!\x02Applikationen " +
+	"er gratis for brugere, der allerede er sælgere på et andet marked.\x02Fo" +
+	"r andre brugere koster applikationen %[1]s XMR.\x02Sælgerlogo\x02Brug pn" +
+	"g-billede med tæt på 1:1-forhold for optimal udseende\x02Eksisterende sæ" +
+	"lger\x02Vælg dette, hvis du allerede er sælger på et andet marked som xm" +
+	"rBazaar\x02Bevis for lager\x02Klar billede af dit lager med dit brugerna" +
+	"vn og tidsstempel synligt\x02Markeder og dit brugernavn\x02List de marke" +
+	"der, hvor du er sælger, og inkluder dit brugernavn\x02Captcha\x02Klik på" +
+	" cirklen med et snit\x02Indsend\x02Total\x02Gå til kassen\x02leveringsme" +
+	"tode\x02Brug wallet til betaling\x02detaljer\x02Uenkrypterede detaljer b" +
+	"liver automatisk krypteret ved hjælp af sælgers nøgle.\x02Titel\x02Beskr" +
+	"ivelse\x02Produktbillede\x02Brug billede med tæt på 1:1 billedforhold fo" +
+	"r optimal udseende\x02Kategori\x02Afsendes fra\x02Afsendes til\x02Lager" +
+	"\x02Størrelse af det nuværende lager for dette produkt.\x02Prissætning" +
+	"\x02Her kan du angive dine priser.\x02Vi tager 5% i gebyr fra disse pris" +
+	"er.\x02Mængde\x02Pris\x02Opret billet\x02Emne\x02konto\x02ordre\x02walle" +
+	"t\x02leverandør\x02produkt\x02forslag\x02fejl\x02andet\x02Besked\x02Pers" +
+	"onalets PGP\x02Valutakurs\x02Tid\x04\x00\x01 \x0f\x02Leverandører:\x04" +
+	"\x00\x01 \x09\x02Brugere:\x02indsend\x02Svar\x02produkter\x02ordrer\x02s" +
+	"ælg\x02support\x02Log ud\x02log ind\x02registrer\x02Adgangsvagt til %[1" +
+	"]s\x02Sammenlign den URL, du bruger, med den i billedet nedenfor for at " +
+	"finde alle manglende tegn markeret med '*'\x02Manglende tegn\x02Log ind" +
+	"\x02brugernavn\x02adgangskode\x02Opret ny konto\x02Slet alt\x02Du har in" +
+	"gen meddelelser\x02Ordre\x02Chat\x02Status\x02Leverandør\x02Leveringsmet" +
+	"ode\x02Samlet omkostning\x02Dato\x02Afsendt kl.\x02Indtil automatisk afv" +
+	"ist\x02Indtil automatisk afsluttet\x02Detaljer\x02Leverandør tilbød refu" +
+	"ndering på %.2[1]f%\x02Accepter\x02Afvis\x02Kundens PGP-nøgle\x02Kunden " +
+	"kan stadig annullere denne ordre!\x02Du skal acceptere det inden for 2 d" +
+	"age, ellers vil det blive automatisk afvist.\x02Efter accept kan kunden " +
+	"ikke længere annullere, så du kan trygt afsende.\x02Gennemgå venligst or" +
+	"dren nedenfor omhyggeligt, før du accepterer den.\x02Afvis altid ordrer," +
+	" som du ikke kan opfylde.\x02Du skal markere denne ordre som afsendt ind" +
+	"en for 2 dage, ellers vil den blive automatisk afvist.\x02Sørg for, at d" +
+	"u har nok tid til at udføre den faktiske forsendelse!\x02Forsendt\x02Ove" +
+	"rfør det nøjagtige beløb af Monero til adressen nedenfor.\x02Efter 10 be" +
+	"kræftelser vil din ordre blive sendt til sælgeren.\x02Du har i alt 3 tim" +
+	"er til at betale denne faktura, ellers vil din ordre blive annulleret." +
+	"\x02Tid tilbage til betaling\x02Beløb XMR\x02Adresse\x02Ordrer kan annul" +
+	"leres, indtil sælgeren har accepteret dem.\x02Annuller\x04\x00\x01 ,\x02" +
+	"Din ordre vil automatisk blive afsluttet om\x02Du kan forlænge auto-afsl" +
+	"utningstiden med 7 dage.\x02gennemgå din ordre\x02Gennemgå\x02Forlæng AF" +
+	"-timer\x02Tvist\x02Refusions tilbud\x02Kunden har bestridt denne ordre." +
+	"\x02Brug chatten nedenfor til at diskutere denne tvist.\x02Du kan oprett" +
+	"e et refusions tilbud og løse denne tvist uden adminindblanding.\x02Refu" +
+	"sionsprocent\x02Ordredato\x02Ordre ID\x02Bevis på nøgleejerskab\x02Dekry" +
+	"pter for at få tokenet\x02Token\x02Opdater produkt\x02Opdater\x02Tilføj " +
+	"til kurv\x02Anmeldelser\x02siden\x02UDSOLGT\x02Registrer\x02adgangskodek" +
+	"ontrol\x02Har du allerede en konto?\x02Gennemgå ordre\x02Karakter\x02gæs" +
+	"t\x02kunde\x02administrator\x02ukendt\x02aktiveret\x02deaktiveret\x02Kon" +
+	"to\x02Brugernavn\x02Type\x022FA\x02Præferencer\x02Sprog\x02Valuta\x02Ski" +
+	"ft adgangskode\x02Nuværende adgangskode\x02Ny adgangskode\x02Bekræft ny " +
+	"adgangskode\x02Skift PGP-nøgle\x02Aktiver 2FA\x02PGP offentlig nøgle\x02" +
+	"Påkrævet for sælgere, anbefales til alle.\x02Opdater vilkår for service" +
+	"\x02Vilkår for service\x02Vilkår for service bruges til at løse tvister" +
+	"\x02Opdater leveringsmetoder\x02Leveringsmetode\x02Mine billetter\x020 s" +
+	"ekunder\x02%[1]d sekunder\x02%[1]d minutter\x02%[1]d timer\x02%[1]d dage" +
+	"\x02Bedømmelse (GNS)\x02Fuldførte ordrer\x02Ordrer i escrow\x02Afventend" +
+	"e tvister\x02Tidligere set\x02PGP-nøgle\x02Wallet\x02Dette er din XMR wa" +
+	"llet, hvor du kan indsætte mønter.\x02Saldoen opdateres efter 10 bekræft" +
+	"elser.\x02Se\x02for mere information.\x02Saldo\x02Hæv\x02Indtast en Mone" +
+	"ro-adresse, hvor du ønsker at hæve dine midler.\x02Vi opkræver et gebyr " +
+	"på %[1]f XMR for hver udbetaling for at forhindre spam.\x02MÅ IKKE hæve " +
+	"midler til en anden wallet på denne platform!\x02Destination adresse\x02" +
+	"Beløb\x02Indtast beløb i decimalformat (f.eks. 1.42069)"
 
-var de_DEIndex = []uint32{ // 239 elements
+var de_DEIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000043, 0x0000006c, 0x00000087,
 	0x0000009f, 0x000000b7, 0x000000ce, 0x000000e4,
 	0x000000f7, 0x00000136, 0x00000151, 0x00000181,
-	0x000001ab, 0x000001bc, 0x000001d3, 0x000001e7,
-	0x00000227, 0x00000260, 0x000002d8, 0x000002ec,
-	0x00000312, 0x00000342, 0x00000365, 0x0000037a,
-	0x0000038d, 0x000003ef, 0x00000458, 0x00000482,
-	0x000004a5, 0x000004bc, 0x000004e4, 0x00000545,
+	0x000001a2, 0x000001b3, 0x000001ca, 0x000001de,
+	0x0000021e, 0x00000257, 0x000002cf, 0x000002e3,
+	0x00000305, 0x0000032b, 0x0000035b, 0x0000037e,
+	0x00000393, 0x000003a6, 0x00000408, 0x00000471,
+	0x0000049b, 0x000004be, 0x000004d5, 0x000004fd,
 	// Entry 20 - 3F
-	0x0000058a, 0x000005a3, 0x000005b3, 0x00000606,
-	0x0000061b, 0x0000063d, 0x0000064f, 0x00000664,
-	0x00000683, 0x000006bf, 0x000006d3, 0x0000075d,
-	0x00000773, 0x000007ce, 0x000007e3, 0x00000831,
-	0x00000849, 0x000008c4, 0x000008e6, 0x00000aa6,
-	0x00000aca, 0x00000b4b, 0x00000bb0, 0x00000d29,
-	0x00000d57, 0x00000df4, 0x00000dfc, 0x00000e0b,
-	0x00000e2e, 0x00000eb6, 0x00000f0b, 0x00000f77,
+	0x0000055e, 0x000005a3, 0x000005bc, 0x000005cc,
+	0x0000061f, 0x00000634, 0x00000656, 0x00000668,
+	0x0000067d, 0x0000069c, 0x000006d8, 0x000006ec,
+	0x00000776, 0x0000078c, 0x000007e7, 0x000007fc,
+	0x0000084a, 0x00000862, 0x000008dd, 0x000008ff,
+	0x00000abf, 0x00000ae3, 0x00000b64, 0x00000bc9,
+	0x00000d42, 0x00000d70, 0x00000e0d, 0x00000e15,
+	0x00000e24, 0x00000e47, 0x00000ea7, 0x00000edc,
 	// Entry 40 - 5F
-	0x00000f86, 0x00000fe6, 0x00000ffd, 0x0000105b,
-	0x00001071, 0x000010c0, 0x000010dd, 0x00001142,
-	0x0000114a, 0x00001177, 0x00001182, 0x00001189,
-	0x00001193, 0x000011a1, 0x000011d1, 0x000011d9,
-	0x00001218, 0x00001278, 0x0000127e, 0x0000128b,
-	0x00001297, 0x000012f3, 0x000012fd, 0x0000130b,
-	0x0000131a, 0x00001323, 0x00001357, 0x00001367,
-	0x0000138f, 0x000013b2, 0x000013b8, 0x000013be,
+	0x00000eeb, 0x00000f4b, 0x00000f62, 0x00000fc0,
+	0x00000fd6, 0x00001025, 0x00001042, 0x000010a7,
+	0x000010af, 0x000010dc, 0x000010e7, 0x000010ee,
+	0x000010f8, 0x00001106, 0x00001136, 0x0000113e,
+	0x0000119e, 0x000011a4, 0x000011b1, 0x000011bd,
+	0x00001219, 0x00001223, 0x00001231, 0x00001240,
+	0x00001249, 0x0000127d, 0x0000128d, 0x000012b5,
+	0x000012d8, 0x000012de, 0x000012e4, 0x000012f5,
 	// Entry 60 - 7F
-	0x000013cf, 0x000013d7, 0x000013dd, 0x000013e8,
-	0x000013ef, 0x000013fa, 0x00001402, 0x0000140c,
-	0x00001413, 0x0000141b, 0x00001425, 0x00001435,
-	0x00001441, 0x00001446, 0x00001457, 0x00001466,
-	0x00001471, 0x00001479, 0x00001482, 0x0000148f,
-	0x00001499, 0x000014a8, 0x000014b1, 0x000014bb,
-	0x000014c8, 0x000014df, 0x00001564, 0x00001575,
-	0x0000157f, 0x0000158c, 0x00001595, 0x000015ab,
+	0x000012fd, 0x00001303, 0x0000130e, 0x00001315,
+	0x00001320, 0x00001328, 0x00001332, 0x00001339,
+	0x00001341, 0x0000134b, 0x0000135b, 0x00001367,
+	0x0000136c, 0x0000137d, 0x0000138c, 0x00001397,
+	0x0000139f, 0x000013a8, 0x000013b5, 0x000013bf,
+	0x000013ce, 0x000013d7, 0x000013e1, 0x000013ee,
+	0x00001405, 0x0000148a, 0x0000149b, 0x000014a5,
+	0x000014b2, 0x000014bb, 0x000014d1, 0x000014df,
 	// Entry 80 - 9F
-	0x000015b9, 0x000015dc, 0x000015e7, 0x000015ec,
-	0x000015f3, 0x000015fe, 0x0000160c, 0x00001619,
-	0x0000161f, 0x0000162c, 0x0000164c, 0x00001670,
-	0x0000167d, 0x000016ae, 0x000016ba, 0x000016c3,
-	0x000016dd, 0x00001713, 0x0000176a, 0x000017c6,
-	0x0000181d, 0x00001860, 0x000018d2, 0x00001933,
-	0x0000193d, 0x00001989, 0x000019d5, 0x00001a3d,
-	0x00001a5b, 0x00001a66, 0x00001a6e, 0x00001aba,
+	0x00001502, 0x0000150d, 0x00001512, 0x00001519,
+	0x00001524, 0x00001532, 0x0000153f, 0x00001545,
+	0x00001552, 0x00001572, 0x00001596, 0x000015a3,
+	0x000015d4, 0x000015e0, 0x000015e9, 0x00001603,
+	0x00001639, 0x00001690, 0x000016ec, 0x00001743,
+	0x00001786, 0x000017f8, 0x00001859, 0x00001863,
+	0x000018af, 0x000018fb, 0x00001963, 0x00001981,
+	0x0000198c, 0x00001994, 0x000019e0, 0x000019eb,
 	// Entry A0 - BF
-	0x00001ac5, 0x00001b0c, 0x00001b4e, 0x00001b6f,
-	0x00001b7d, 0x00001b92, 0x00001b9d, 0x00001bb5,
-	0x00001be1, 0x00001c2a, 0x00001c9f, 0x00001cbb,
-	0x00001cc8, 0x00001cd3, 0x00001cf3, 0x00001d1c,
-	0x00001d22, 0x00001d38, 0x00001d46, 0x00001d5d,
-	0x00001d69, 0x00001d6d, 0x00001d7d, 0x00001d8a,
-	0x00001da0, 0x00001db3, 0x00001dcb, 0x00001dd5,
-	0x00001dda, 0x00001de0, 0x00001dee, 0x00001df8,
+	0x00001a32, 0x00001a74, 0x00001a95, 0x00001aa3,
+	0x00001ab8, 0x00001ac3, 0x00001adb, 0x00001b07,
+	0x00001b50, 0x00001bc5, 0x00001be1, 0x00001bee,
+	0x00001bf9, 0x00001c19, 0x00001c42, 0x00001c48,
+	0x00001c5e, 0x00001c6c, 0x00001c83, 0x00001c8f,
+	0x00001c93, 0x00001ca3, 0x00001cb0, 0x00001cc6,
+	0x00001cd9, 0x00001cf1, 0x00001cfb, 0x00001d00,
+	0x00001d06, 0x00001d14, 0x00001d1e, 0x00001d28,
 	// Entry C0 - DF
-	0x00001e02, 0x00001e0e, 0x00001e14, 0x00001e21,
-	0x00001e25, 0x00001e29, 0x00001e37, 0x00001e3f,
-	0x00001e48, 0x00001e59, 0x00001e6c, 0x00001e7b,
-	0x00001e96, 0x00001ead, 0x00001ebc, 0x00001ed9,
-	0x00001f0c, 0x00001f2b, 0x00001f43, 0x00001f82,
-	0x00001f9f, 0x00001fad, 0x00001fbb, 0x00001fc6,
-	0x00001fd5, 0x00001fe3, 0x00001ff1, 0x00001ffc,
-	0x00002015, 0x00002031, 0x0000204a, 0x00002065,
+	0x00001d34, 0x00001d3a, 0x00001d47, 0x00001d4b,
+	0x00001d4f, 0x00001d5d, 0x00001d65, 0x00001d6e,
+	0x00001d7f, 0x00001d92, 0x00001da1, 0x00001dbc,
+	0x00001dd3, 0x00001de2, 0x00001dff, 0x00001e32,
+	0x00001e54, 0x00001e68, 0x00001eb2, 0x00001ecf,
+	0x00001edd, 0x00001eeb, 0x00001ef6, 0x00001f05,
+	0x00001f13, 0x00001f21, 0x00001f2c, 0x00001f45,
+	0x00001f61, 0x00001f7a, 0x00001f95, 0x00001fa3,
 	// Entry E0 - FF
-	0x00002073, 0x00002082, 0x00002089, 0x000020c9,
-	0x000020fd, 0x00002103, 0x0000211f, 0x00002125,
-	0x0000212d, 0x00002179, 0x000021ca, 0x00002212,
-	0x0000221e, 0x00002225, 0x0000225f,
-} // Size: 980 bytes
+	0x00001fb2, 0x00001fb9, 0x00001ff9, 0x0000202d,
+	0x00002033, 0x0000204f, 0x00002055, 0x0000205d,
+	0x000020a9, 0x000020fb, 0x00002143, 0x0000214f,
+	0x00002156, 0x00002190,
+} // Size: 976 bytes
 
-const de_DEData string = "" + // Size: 8799 bytes
+const de_DEData string = "" + // Size: 8592 bytes
 	"\x02Das Tor konnte nicht geöffnet werden: ungültige fehlende Zeichen\x02" +
 	"Dieser Benutzername ist bereits vergeben\x02Ungültiger PGP-Schlüssel\x02" +
 	"Erfolgreich registriert\x02Ungültige Anmeldedaten\x02Ihr Konto ist gespe" +
 	"rrt\x02Ungültiger 2FA-Token\x02Passwort geändert\x02Sie können nicht auf" +
 	" Ihren aktuellen Schlüssel aktualisieren\x02PGP-Schlüssel ist gesetzt" +
-	"\x02PGP-Öffentlicher Schlüssel wurde aktualisiert\x02Händlerinformatione" +
-	"n wurden aktualisiert\x02Eintrag erstellt\x02Warenkorb aktualisiert\x02W" +
-	"arenkorb gelöscht\x02Sie können mit einem Verkäuferkonto keine Bestellun" +
-	"g aufgeben\x02Sie haben nicht genügend Guthaben für diese Bestellung\x02" +
-	"Bitte zahlen Sie die untenstehende Rechnung innerhalb von %[1]d Stunden," +
-	" damit Ihre Bestellung fortgesetzt werden kann.\x02Bestellung erstellt" +
-	"\x02Nicht genügend Guthaben zum Abheben.\x02Sie können nicht auf Ihr eig" +
-	"enes Konto abheben\x02Abhebung von %[1]s XMR eingeleitet\x02Bestellung s" +
-	"torniert\x02Bewertung erstellt\x02Sie können den AF-Timer nicht verlänge" +
-	"rn, bevor die Bestellung seit %[1]d Tagen versandt wurde.\x02Sie können " +
-	"den AF-Timer nicht erneut verlängern, bevor die Bestellung seit %[1]d Ta" +
-	"gen versandt wurde.\x02AF-Timer bereits auf Maximum verlängert.\x02AF-Ti" +
-	"mer um %[1]d Tage verlängert\x02Bestellung angefochten\x022FA muss für V" +
-	"erkäufer aktiviert sein\x02Händlerkonten können keine vorherigen Bestell" +
-	"ungen haben. Bitte erstellen Sie ein neues Konto.\x02Ein Nachweis über d" +
-	"en Bestand ist von neuen Händlern erforderlich.\x02Nicht genügend Guthab" +
-	"en\x02Antrag erhalten\x02Bestellung akzeptiert. Sie haben %[1]d Stunden," +
-	" um sie als versendet zu markieren.\x02Bestellung abgelehnt\x02Bestellun" +
-	"g als versendet markiert\x02Produkt gelöscht\x02Produkt aktualisiert\x02" +
-	"Ticket ist bereits geschlossen\x02Sie müssen angemeldet sein, um auf die" +
-	"se Seite zuzugreifen\x02Bestellung erhalten\x02Sie haben eine neue Beste" +
-	"llung erhalten!\x0aSie haben insgesamt %[1]d Stunden Zeit, um sie anzune" +
-	"hmen, bevor sie automatisch abgelehnt wird.\x02Bestellung akzeptiert\x02" +
-	"Ihre Bestellung wurde akzeptiert!\x0aSie können den Status auf der Beste" +
-	"llseite überwachen.\x02Bestellung versendet\x02Ihre Bestellung wurde ver" +
-	"sendet!\x0aBitte denken Sie daran, sie zu überprüfen.\x02Wie werde ich H" +
-	"ändler?\x02Erstellen Sie ein Konto mit aktivierter Zwei-Faktor-Authenti" +
-	"fizierung (2FA) und reichen Sie dann einen Händlerantrag ein.\x02Wie geb" +
-	"e ich eine Bestellung auf?\x02Fügen Sie die gewünschten Produkte Ihrem W" +
-	"arenkorb hinzu. Navigieren Sie zu /cart und wählen Sie „Zur Kasse“, wähl" +
-	"en Sie Ihre bevorzugte Liefermethode und geben Sie die erforderlichen In" +
-	"formationen an.\x0aWenn Sie über Guthaben verfügen, können Sie es an der" +
-	" Kasse verwenden. Andernfalls können Sie eine Rechnung anfordern. Rechnu" +
-	"ngen müssen innerhalb von %[1]d Stunden bezahlt werden, damit die Bestel" +
-	"lung weiter bearbeitet werden kann.\x02Wie kann ich Monero (XMR) erhalte" +
-	"n?\x02Es gibt mehrere Möglichkeiten, Monero zu erwerben. Bitte besuchen " +
-	"Sie getmonero.org für offizielle Anleitungen und Ressourcen.\x02Was soll" +
-	" ich tun, wenn meine Bestellung nicht angekommen ist oder nicht der Besc" +
-	"hreibung entspricht?\x02Bestellungen werden nach %[1]d Tagen automatisch" +
-	" abgeschlossen.\x0aSie können den Zeitraum für die automatische Abschlus" +
-	"s zweimal verlängern.\x0aWenn die Bestellung nach diesen Verlängerungen " +
-	"immer noch nicht angekommen ist, sollten Sie einen Streitfall eröffnen." +
-	"\x0aUnser Team wird den Fall überprüfen und eine Entscheidung auf Grundl" +
-	"age der verfügbaren Informationen treffen.\x02Was darf ich auf diesem Ma" +
-	"rktplatz verkaufen?\x02Nur legale Artikel sind erlaubt. Wenn Sie sich ni" +
-	"cht sicher sind, ob Ihr Produkt zulässig ist, kontaktieren Sie uns bitte" +
-	", bevor Sie ein Angebot erstellen.\x02Öffnen\x02Händlerantrag\x02Ihr Kon" +
-	"to hat keine 2FA aktiviert!\x02Die Anwendung ist kostenlos für Benutzer," +
-	" die bereits Verkäufer auf einem anderen Markt sind, der denselben PGP-S" +
-	"chlüssel verwendet.\x02Für andere Benutzer kostet die Anwendung %[1]s XM" +
-	"R und ist nicht erstattungsfähig.\x02Sie müssen einen Nachweis erbringen" +
-	", dass Sie tatsächlich Produkte haben, die Sie hier verkaufen können." +
-	"\x02Verkäuferlogo\x02Verwenden Sie ein PNG-Bild mit einem Verhältnis von" +
-	" nahezu 1:1 für eine optimale Darstellung.\x02Bestehender Verkäufer\x02W" +
-	"ählen Sie dies aus, wenn Sie bereits Verkäufer auf einem anderen Markt " +
-	"wie xmrBazaar sind.\x02Nachweis des Bestands\x02Klares Bild Ihres Bestan" +
-	"ds mit Ihrem Benutzernamen und sichtbarem Zeitstempel.\x02Märkte und Ihr" +
-	" Benutzername\x02Listen Sie die Märkte auf, auf denen Sie Verkäufer sind" +
-	", und fügen Sie Ihren Benutzernamen hinzu.\x02Captcha\x02Klicken Sie auf" +
-	" den Kreis mit einem Schnitt.\x02Einreichen\x02Gesamt\x02Zur Kasse\x02Li" +
-	"efermethode\x02Verwenden Sie die Brieftasche für die Zahlung.\x02Details" +
-	"\x02Verwenden Sie Ihre echte Adresse im gleichen Format wie unten.\x02Un" +
-	"verschlüsselte Details werden automatisch mit dem Schlüssel des Verkäufe" +
-	"rs verschlüsselt.\x02Titel\x02Beschreibung\x02Produktbild\x02Verwenden S" +
-	"ie ein Bild mit einem Verhältnis von nahezu 1:1 für eine optimale Darste" +
-	"llung.\x02Kategorie\x02Versendet von\x02Versendet nach\x02Inventar\x02Gr" +
-	"öße des aktuellen Bestands für dieses Produkt.\x02Preisgestaltung\x02Hi" +
-	"er können Sie Ihre Preise festlegen.\x02Wir nehmen 5 % von diesen Preise" +
-	"n.\x02Menge\x02Preis\x02Ticket erstellen\x02Betreff\x02Konto\x02Bestellu" +
-	"ng\x02Wallet\x02Verkäufer\x02Produkt\x02Vorschlag\x02Fehler\x02anderes" +
-	"\x02Nachricht\x02Mitarbeiter PGP\x02Wechselkurs\x02Zeit\x04\x00\x01 \x0c" +
-	"\x02Verkäufer:\x04\x00\x01 \x0a\x02Benutzer:\x02einreichen\x02Antwort" +
-	"\x02Produkte\x02Bestellungen\x02verkaufen\x02Unterstützung\x02Abmelden" +
-	"\x02einloggen\x02registrieren\x02Zugangsschutz zu %[1]s\x02Vergleichen S" +
-	"ie die von Ihnen verwendete URL mit der im Bild unten, um alle fehlenden" +
-	" Zeichen, die mit '*' markiert sind, zu finden.\x02Fehlende Zeichen\x02E" +
-	"inloggen\x02Benutzername\x02Passwort\x02Neues Konto erstellen\x02Alle lö" +
-	"schen\x02Sie haben keine Benachrichtigungen\x02Bestellung\x02Chat\x02Sta" +
-	"tus\x02Verkäufer\x02Liefermethode\x02Gesamtkosten\x02Datum\x02Versendet " +
-	"am\x02Bis zur automatischen Ablehnung\x02Bis zur automatischen Finalisie" +
-	"rung\x02Einzelheiten\x02Verkäufer bot eine Rückerstattung von %.2[1]f%" +
-	"\x02Akzeptieren\x02Ablehnen\x02PGP-Schlüssel des Kunden\x02Der Kunde kan" +
-	"n diese Bestellung weiterhin stornieren!\x02Sie müssen es innerhalb von " +
-	"2 Tagen akzeptieren, sonst wird es automatisch abgelehnt.\x02Nach der An" +
-	"nahme kann der Kunde nicht mehr stornieren, sodass Sie sicher versenden " +
-	"können.\x02Bitte überprüfen Sie die folgende Bestellung sorgfältig, bevo" +
-	"r Sie sie akzeptieren.\x02Lehnen Sie immer Bestellungen ab, die Sie nich" +
-	"t erfüllen können.\x02Sie müssen diese Bestellung innerhalb von 2 Tagen " +
-	"als versendet markieren, sonst wird sie automatisch abgelehnt.\x02Stelle" +
-	"n Sie sicher, dass Sie genügend Zeit haben, um den tatsächlichen Versand" +
-	" durchzuführen!\x02Versendet\x02Überweisen Sie den genauen Betrag von Mo" +
-	"nero an die untenstehende Adresse.\x02Nach 10 Bestätigungen wird Ihre Be" +
-	"stellung an den Anbieter weitergeleitet.\x02Sie haben insgesamt 3 Stunde" +
-	"n Zeit, um diese Rechnung zu bezahlen, oder Ihre Bestellung wird stornie" +
-	"rt.\x02Verbleibende Zeit zur Zahlung\x02Betrag XMR\x02Adresse\x02Bestell" +
-	"ungen können storniert werden, bis der Anbieter sie akzeptiert hat.\x02S" +
-	"tornieren\x04\x00\x01 B\x02Ihre Bestellung wird automatisch in folgender" +
-	" Zeit abgeschlossen:\x02Sie können die automatische Abschlusszeit um 7 T" +
-	"age verlängern.\x02Überprüfen Sie Ihre Bestellung\x02Überprüfung\x02AF-T" +
-	"imer verlängern\x02Streitfall\x02Rückerstattungsangebot\x02Der Kunde hat" +
-	" diese Bestellung angefochten.\x02Verwenden Sie den Chat unten, um über " +
-	"diesen Streitfall zu diskutieren.\x02Sie können ein Rückerstattungsangeb" +
-	"ot erstellen und diesen Streitfall ohne Eingreifen eines Administrators " +
-	"lösen.\x02Rückerstattungsprozentsatz\x02Bestelldatum\x02Bestell-ID\x02Na" +
-	"chweis des Schlüsselbesitzes\x02Entschlüsseln, um das Token zu erhalten" +
-	"\x02Token\x02Produkt aktualisieren\x02Aktualisieren\x02In den Warenkorb " +
-	"legen\x02Bewertungen\x02vor\x02NICHT VORRÄTIG\x02Registrieren\x02Passwor" +
-	"tüberprüfung\x02Bereits ein Konto?\x02Bestellung überprüfen\x02Bewertung" +
-	"\x02Gast\x02Kunde\x02Administrator\x02unbekannt\x02aktiviert\x02deaktivi" +
-	"ert\x02Konto\x02Benutzername\x02Typ\x022FA\x02Einstellungen\x02Sprache" +
-	"\x02Währung\x02Passwort ändern\x02Aktuelles Passwort\x02Neues Passwort" +
-	"\x02Neues Passwort bestätigen\x02PGP-Schlüssel ändern\x022FA aktivieren" +
-	"\x02PGP-Öffentlicher Schlüssel\x02Erforderlich für Verkäufer, empfohlen " +
-	"für alle.\x02Verkäuferprofil aktualisieren\x02Verkäuferinformationen\x02" +
-	"Lassen Sie das Feld leer, um keine Aktualisierung vorzunehmen.\x02Liefer" +
-	"methoden aktualisieren\x02Liefermethode\x02Meine Tickets\x020 Sekunden" +
-	"\x02%[1]d Sekunden\x02%[1]d Minuten\x02%[1]d Stunden\x02%[1]d Tage\x02Be" +
-	"wertung (Durchschnitt)\x02Abgeschlossene Bestellungen\x02Bestellungen in" +
-	" Treuhand\x02Ausstehende Streitigkeiten\x02Zuvor gesehen\x02PGP-Schlüsse" +
-	"l\x02Wallet\x02Dies ist Ihre XMR-Wallet, in die Sie Münzen einzahlen kön" +
-	"nen.\x02Der Saldo wird nach 10 Bestätigungen aktualisiert.\x02Siehe\x02f" +
-	"ür weitere Informationen.\x02Saldo\x02Abheben\x02Geben Sie eine Monero-" +
-	"Adresse ein, an die Sie Ihre Mittel abheben möchten.\x02Wir erheben eine" +
-	" Gebühr von 0,01 XMR für jede Abhebung, um Spam zu verhindern.\x02Ziehen" +
-	" Sie KEINE Mittel auf eine andere Wallet auf dieser Plattform ab!\x02Zie" +
-	"ladresse\x02Betrag\x02Geben Sie den Betrag im Dezimalformat ein (z. B. 1" +
-	".42069)"
+	"\x02PGP-Öffentlicher Schlüssel wurde aktualisiert\x02Nutzungsbedingungen" +
+	" aktualisiert\x02Eintrag erstellt\x02Warenkorb aktualisiert\x02Warenkorb" +
+	" gelöscht\x02Sie können mit einem Verkäuferkonto keine Bestellung aufgeb" +
+	"en\x02Sie haben nicht genügend Guthaben für diese Bestellung\x02Bitte za" +
+	"hlen Sie die untenstehende Rechnung innerhalb von %[1]d Stunden, damit I" +
+	"hre Bestellung fortgesetzt werden kann.\x02Bestellung erstellt\x02Der Ab" +
+	"hebungsbetrag ist zu gering\x02Nicht genügend Guthaben zum Abheben.\x02S" +
+	"ie können nicht auf Ihr eigenes Konto abheben\x02Abhebung von %[1]s XMR " +
+	"eingeleitet\x02Bestellung storniert\x02Bewertung erstellt\x02Sie können " +
+	"den AF-Timer nicht verlängern, bevor die Bestellung seit %[1]d Tagen ver" +
+	"sandt wurde.\x02Sie können den AF-Timer nicht erneut verlängern, bevor d" +
+	"ie Bestellung seit %[1]d Tagen versandt wurde.\x02AF-Timer bereits auf M" +
+	"aximum verlängert.\x02AF-Timer um %[1]d Tage verlängert\x02Bestellung an" +
+	"gefochten\x022FA muss für Verkäufer aktiviert sein\x02Händlerkonten könn" +
+	"en keine vorherigen Bestellungen haben. Bitte erstellen Sie ein neues Ko" +
+	"nto.\x02Ein Nachweis über den Bestand ist von neuen Händlern erforderlic" +
+	"h.\x02Nicht genügend Guthaben\x02Antrag erhalten\x02Bestellung akzeptier" +
+	"t. Sie haben %[1]d Stunden, um sie als versendet zu markieren.\x02Bestel" +
+	"lung abgelehnt\x02Bestellung als versendet markiert\x02Produkt gelöscht" +
+	"\x02Produkt aktualisiert\x02Ticket ist bereits geschlossen\x02Sie müssen" +
+	" angemeldet sein, um auf diese Seite zuzugreifen\x02Bestellung erhalten" +
+	"\x02Sie haben eine neue Bestellung erhalten!\x0aSie haben insgesamt %[1]" +
+	"d Stunden Zeit, um sie anzunehmen, bevor sie automatisch abgelehnt wird." +
+	"\x02Bestellung akzeptiert\x02Ihre Bestellung wurde akzeptiert!\x0aSie kö" +
+	"nnen den Status auf der Bestellseite überwachen.\x02Bestellung versendet" +
+	"\x02Ihre Bestellung wurde versendet!\x0aBitte denken Sie daran, sie zu ü" +
+	"berprüfen.\x02Wie werde ich Händler?\x02Erstellen Sie ein Konto mit akti" +
+	"vierter Zwei-Faktor-Authentifizierung (2FA) und reichen Sie dann einen H" +
+	"ändlerantrag ein.\x02Wie gebe ich eine Bestellung auf?\x02Fügen Sie die" +
+	" gewünschten Produkte Ihrem Warenkorb hinzu. Navigieren Sie zu /cart und" +
+	" wählen Sie „Zur Kasse“, wählen Sie Ihre bevorzugte Liefermethode und ge" +
+	"ben Sie die erforderlichen Informationen an.\x0aWenn Sie über Guthaben v" +
+	"erfügen, können Sie es an der Kasse verwenden. Andernfalls können Sie ei" +
+	"ne Rechnung anfordern. Rechnungen müssen innerhalb von %[1]d Stunden bez" +
+	"ahlt werden, damit die Bestellung weiter bearbeitet werden kann.\x02Wie " +
+	"kann ich Monero (XMR) erhalten?\x02Es gibt mehrere Möglichkeiten, Monero" +
+	" zu erwerben. Bitte besuchen Sie getmonero.org für offizielle Anleitunge" +
+	"n und Ressourcen.\x02Was soll ich tun, wenn meine Bestellung nicht angek" +
+	"ommen ist oder nicht der Beschreibung entspricht?\x02Bestellungen werden" +
+	" nach %[1]d Tagen automatisch abgeschlossen.\x0aSie können den Zeitraum " +
+	"für die automatische Abschluss zweimal verlängern.\x0aWenn die Bestellun" +
+	"g nach diesen Verlängerungen immer noch nicht angekommen ist, sollten Si" +
+	"e einen Streitfall eröffnen.\x0aUnser Team wird den Fall überprüfen und " +
+	"eine Entscheidung auf Grundlage der verfügbaren Informationen treffen." +
+	"\x02Was darf ich auf diesem Marktplatz verkaufen?\x02Nur legale Artikel " +
+	"sind erlaubt. Wenn Sie sich nicht sicher sind, ob Ihr Produkt zulässig i" +
+	"st, kontaktieren Sie uns bitte, bevor Sie ein Angebot erstellen.\x02Öffn" +
+	"en\x02Händlerantrag\x02Ihr Konto hat keine 2FA aktiviert!\x02Die Anwendu" +
+	"ng ist kostenlos für Benutzer, die bereits Verkäufer auf einem anderen M" +
+	"arkt sind.\x02Für andere Benutzer kostet die Anwendung %[1]s XMR.\x02Ver" +
+	"käuferlogo\x02Verwenden Sie ein PNG-Bild mit einem Verhältnis von nahezu" +
+	" 1:1 für eine optimale Darstellung.\x02Bestehender Verkäufer\x02Wählen S" +
+	"ie dies aus, wenn Sie bereits Verkäufer auf einem anderen Markt wie xmrB" +
+	"azaar sind.\x02Nachweis des Bestands\x02Klares Bild Ihres Bestands mit I" +
+	"hrem Benutzernamen und sichtbarem Zeitstempel.\x02Märkte und Ihr Benutze" +
+	"rname\x02Listen Sie die Märkte auf, auf denen Sie Verkäufer sind, und fü" +
+	"gen Sie Ihren Benutzernamen hinzu.\x02Captcha\x02Klicken Sie auf den Kre" +
+	"is mit einem Schnitt.\x02Einreichen\x02Gesamt\x02Zur Kasse\x02Liefermeth" +
+	"ode\x02Verwenden Sie die Brieftasche für die Zahlung.\x02Details\x02Unve" +
+	"rschlüsselte Details werden automatisch mit dem Schlüssel des Verkäufers" +
+	" verschlüsselt.\x02Titel\x02Beschreibung\x02Produktbild\x02Verwenden Sie" +
+	" ein Bild mit einem Verhältnis von nahezu 1:1 für eine optimale Darstell" +
+	"ung.\x02Kategorie\x02Versendet von\x02Versendet nach\x02Inventar\x02Größ" +
+	"e des aktuellen Bestands für dieses Produkt.\x02Preisgestaltung\x02Hier " +
+	"können Sie Ihre Preise festlegen.\x02Wir nehmen 5 % von diesen Preisen." +
+	"\x02Menge\x02Preis\x02Ticket erstellen\x02Betreff\x02Konto\x02Bestellung" +
+	"\x02Wallet\x02Verkäufer\x02Produkt\x02Vorschlag\x02Fehler\x02anderes\x02" +
+	"Nachricht\x02Mitarbeiter PGP\x02Wechselkurs\x02Zeit\x04\x00\x01 \x0c\x02" +
+	"Verkäufer:\x04\x00\x01 \x0a\x02Benutzer:\x02einreichen\x02Antwort\x02Pro" +
+	"dukte\x02Bestellungen\x02verkaufen\x02Unterstützung\x02Abmelden\x02einlo" +
+	"ggen\x02registrieren\x02Zugangsschutz zu %[1]s\x02Vergleichen Sie die vo" +
+	"n Ihnen verwendete URL mit der im Bild unten, um alle fehlenden Zeichen," +
+	" die mit '*' markiert sind, zu finden.\x02Fehlende Zeichen\x02Einloggen" +
+	"\x02Benutzername\x02Passwort\x02Neues Konto erstellen\x02Alle löschen" +
+	"\x02Sie haben keine Benachrichtigungen\x02Bestellung\x02Chat\x02Status" +
+	"\x02Verkäufer\x02Liefermethode\x02Gesamtkosten\x02Datum\x02Versendet am" +
+	"\x02Bis zur automatischen Ablehnung\x02Bis zur automatischen Finalisieru" +
+	"ng\x02Einzelheiten\x02Verkäufer bot eine Rückerstattung von %.2[1]f%\x02" +
+	"Akzeptieren\x02Ablehnen\x02PGP-Schlüssel des Kunden\x02Der Kunde kann di" +
+	"ese Bestellung weiterhin stornieren!\x02Sie müssen es innerhalb von 2 Ta" +
+	"gen akzeptieren, sonst wird es automatisch abgelehnt.\x02Nach der Annahm" +
+	"e kann der Kunde nicht mehr stornieren, sodass Sie sicher versenden könn" +
+	"en.\x02Bitte überprüfen Sie die folgende Bestellung sorgfältig, bevor Si" +
+	"e sie akzeptieren.\x02Lehnen Sie immer Bestellungen ab, die Sie nicht er" +
+	"füllen können.\x02Sie müssen diese Bestellung innerhalb von 2 Tagen als " +
+	"versendet markieren, sonst wird sie automatisch abgelehnt.\x02Stellen Si" +
+	"e sicher, dass Sie genügend Zeit haben, um den tatsächlichen Versand dur" +
+	"chzuführen!\x02Versendet\x02Überweisen Sie den genauen Betrag von Monero" +
+	" an die untenstehende Adresse.\x02Nach 10 Bestätigungen wird Ihre Bestel" +
+	"lung an den Anbieter weitergeleitet.\x02Sie haben insgesamt 3 Stunden Ze" +
+	"it, um diese Rechnung zu bezahlen, oder Ihre Bestellung wird storniert." +
+	"\x02Verbleibende Zeit zur Zahlung\x02Betrag XMR\x02Adresse\x02Bestellung" +
+	"en können storniert werden, bis der Anbieter sie akzeptiert hat.\x02Stor" +
+	"nieren\x04\x00\x01 B\x02Ihre Bestellung wird automatisch in folgender Ze" +
+	"it abgeschlossen:\x02Sie können die automatische Abschlusszeit um 7 Tage" +
+	" verlängern.\x02Überprüfen Sie Ihre Bestellung\x02Überprüfung\x02AF-Time" +
+	"r verlängern\x02Streitfall\x02Rückerstattungsangebot\x02Der Kunde hat di" +
+	"ese Bestellung angefochten.\x02Verwenden Sie den Chat unten, um über die" +
+	"sen Streitfall zu diskutieren.\x02Sie können ein Rückerstattungsangebot " +
+	"erstellen und diesen Streitfall ohne Eingreifen eines Administrators lös" +
+	"en.\x02Rückerstattungsprozentsatz\x02Bestelldatum\x02Bestell-ID\x02Nachw" +
+	"eis des Schlüsselbesitzes\x02Entschlüsseln, um das Token zu erhalten\x02" +
+	"Token\x02Produkt aktualisieren\x02Aktualisieren\x02In den Warenkorb lege" +
+	"n\x02Bewertungen\x02vor\x02NICHT VORRÄTIG\x02Registrieren\x02Passwortübe" +
+	"rprüfung\x02Bereits ein Konto?\x02Bestellung überprüfen\x02Bewertung\x02" +
+	"Gast\x02Kunde\x02Administrator\x02unbekannt\x02aktiviert\x02deaktiviert" +
+	"\x02Konto\x02Benutzername\x02Typ\x022FA\x02Einstellungen\x02Sprache\x02W" +
+	"ährung\x02Passwort ändern\x02Aktuelles Passwort\x02Neues Passwort\x02Ne" +
+	"ues Passwort bestätigen\x02PGP-Schlüssel ändern\x022FA aktivieren\x02PGP" +
+	"-Öffentlicher Schlüssel\x02Erforderlich für Verkäufer, empfohlen für all" +
+	"e.\x02Nutzungsbedingungen aktualisieren\x02Nutzungsbedingungen\x02Die Nu" +
+	"tzungsbedingungen werden zur Beilegung von Streitigkeiten verwendet\x02L" +
+	"iefermethoden aktualisieren\x02Liefermethode\x02Meine Tickets\x020 Sekun" +
+	"den\x02%[1]d Sekunden\x02%[1]d Minuten\x02%[1]d Stunden\x02%[1]d Tage" +
+	"\x02Bewertung (Durchschnitt)\x02Abgeschlossene Bestellungen\x02Bestellun" +
+	"gen in Treuhand\x02Ausstehende Streitigkeiten\x02Zuvor gesehen\x02PGP-Sc" +
+	"hlüssel\x02Wallet\x02Dies ist Ihre XMR-Wallet, in die Sie Münzen einzahl" +
+	"en können.\x02Der Saldo wird nach 10 Bestätigungen aktualisiert.\x02Sieh" +
+	"e\x02für weitere Informationen.\x02Saldo\x02Abheben\x02Geben Sie eine Mo" +
+	"nero-Adresse ein, an die Sie Ihre Mittel abheben möchten.\x02Wir erheben" +
+	" eine Gebühr von %[1]f XMR für jede Abhebung, um Spam zu verhindern.\x02" +
+	"Ziehen Sie KEINE Mittel auf eine andere Wallet auf dieser Plattform ab!" +
+	"\x02Zieladresse\x02Betrag\x02Geben Sie den Betrag im Dezimalformat ein (" +
+	"z. B. 1.42069)"
 
-var en_USIndex = []uint32{ // 239 elements
+var en_USIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000034, 0x00000054, 0x00000064,
 	0x0000007c, 0x00000090, 0x000000a7, 0x000000b9,
 	0x000000ca, 0x000000ef, 0x000000fe, 0x00000118,
-	0x0000012f, 0x0000013f, 0x0000014c, 0x00000159,
-	0x0000017f, 0x000001ac, 0x000001f3, 0x00000201,
-	0x00000221, 0x00000248, 0x0000026a, 0x0000027a,
-	0x00000289, 0x000002d4, 0x00000322, 0x00000348,
-	0x00000368, 0x00000377, 0x0000039b, 0x000003e4,
+	0x00000131, 0x00000141, 0x0000014e, 0x0000015b,
+	0x00000181, 0x000001ae, 0x000001f5, 0x00000203,
+	0x00000222, 0x00000242, 0x00000269, 0x0000028b,
+	0x0000029b, 0x000002aa, 0x000002f5, 0x00000343,
+	0x00000369, 0x00000389, 0x00000398, 0x000003bc,
 	// Entry 20 - 3F
-	0x00000414, 0x00000427, 0x0000043c, 0x00000478,
-	0x00000487, 0x000004a2, 0x000004b2, 0x000004c2,
-	0x000004db, 0x00000508, 0x00000517, 0x0000057c,
-	0x0000058b, 0x000005d5, 0x000005e6, 0x00000624,
-	0x0000063e, 0x000006a0, 0x000006b9, 0x0000080b,
-	0x0000082a, 0x00000894, 0x000008e4, 0x000009fa,
-	0x00000a29, 0x00000aa8, 0x00000aad, 0x00000ac0,
-	0x00000ae8, 0x00000b4f, 0x00000b93, 0x00000be2,
+	0x00000405, 0x00000435, 0x00000448, 0x0000045d,
+	0x00000499, 0x000004a8, 0x000004c3, 0x000004d3,
+	0x000004e3, 0x000004fc, 0x00000529, 0x00000538,
+	0x0000059d, 0x000005ac, 0x000005f6, 0x00000607,
+	0x00000645, 0x0000065f, 0x000006c1, 0x000006da,
+	0x0000082c, 0x0000084b, 0x000008b5, 0x00000905,
+	0x00000a1b, 0x00000a4a, 0x00000ac9, 0x00000ace,
+	0x00000ae1, 0x00000b09, 0x00000b55, 0x00000b83,
 	// Entry 40 - 5F
-	0x00000bee, 0x00000c25, 0x00000c35, 0x00000c82,
-	0x00000c95, 0x00000cdc, 0x00000cf6, 0x00000d38,
-	0x00000d40, 0x00000d58, 0x00000d5f, 0x00000d65,
-	0x00000d6e, 0x00000d7e, 0x00000d95, 0x00000d9d,
-	0x00000dd3, 0x00000e16, 0x00000e1c, 0x00000e28,
-	0x00000e36, 0x00000e70, 0x00000e79, 0x00000e84,
-	0x00000e8d, 0x00000e97, 0x00000ec7, 0x00000ecf,
-	0x00000eee, 0x00000f10, 0x00000f19, 0x00000f1f,
+	0x00000b8f, 0x00000bc6, 0x00000bd6, 0x00000c23,
+	0x00000c36, 0x00000c7d, 0x00000c97, 0x00000cd9,
+	0x00000ce1, 0x00000cf9, 0x00000d00, 0x00000d06,
+	0x00000d0f, 0x00000d1f, 0x00000d36, 0x00000d3e,
+	0x00000d81, 0x00000d87, 0x00000d93, 0x00000da1,
+	0x00000ddb, 0x00000de4, 0x00000def, 0x00000df8,
+	0x00000e02, 0x00000e32, 0x00000e3a, 0x00000e59,
+	0x00000e7b, 0x00000e84, 0x00000e8a, 0x00000e98,
 	// Entry 60 - 7F
-	0x00000f2d, 0x00000f35, 0x00000f3d, 0x00000f43,
-	0x00000f4a, 0x00000f51, 0x00000f59, 0x00000f64,
-	0x00000f68, 0x00000f6e, 0x00000f76, 0x00000f80,
-	0x00000f8e, 0x00000f93, 0x00000fa1, 0x00000fad,
-	0x00000fb4, 0x00000fbd, 0x00000fc6, 0x00000fcd,
-	0x00000fd2, 0x00000fda, 0x00000fe1, 0x00000fe8,
-	0x00000ff1, 0x00001006, 0x00001072, 0x00001085,
-	0x0000108c, 0x00001095, 0x0000109e, 0x000010b1,
+	0x00000ea0, 0x00000ea8, 0x00000eae, 0x00000eb5,
+	0x00000ebc, 0x00000ec4, 0x00000ecf, 0x00000ed3,
+	0x00000ed9, 0x00000ee1, 0x00000eeb, 0x00000ef9,
+	0x00000efe, 0x00000f0c, 0x00000f18, 0x00000f1f,
+	0x00000f28, 0x00000f31, 0x00000f38, 0x00000f3d,
+	0x00000f45, 0x00000f4c, 0x00000f53, 0x00000f5c,
+	0x00000f71, 0x00000fdd, 0x00000ff0, 0x00000ff7,
+	0x00001000, 0x00001009, 0x0000101c, 0x00001027,
 	// Entry 80 - 9F
-	0x000010bc, 0x000010d8, 0x000010de, 0x000010e3,
-	0x000010ea, 0x000010f1, 0x00001101, 0x0000110c,
-	0x00001111, 0x0000111f, 0x00001133, 0x00001148,
-	0x00001150, 0x00001172, 0x00001179, 0x00001181,
-	0x00001193, 0x000011b9, 0x000011fc, 0x00001247,
-	0x00001284, 0x000012b8, 0x0000130c, 0x0000134d,
-	0x00001358, 0x0000138e, 0x000013c9, 0x0000141b,
-	0x0000142c, 0x00001437, 0x0000143f, 0x00001475,
+	0x00001043, 0x00001049, 0x0000104e, 0x00001055,
+	0x0000105c, 0x0000106c, 0x00001077, 0x0000107c,
+	0x0000108a, 0x0000109e, 0x000010b3, 0x000010bb,
+	0x000010dd, 0x000010e4, 0x000010ec, 0x000010fe,
+	0x00001124, 0x00001167, 0x000011b2, 0x000011ef,
+	0x00001223, 0x00001277, 0x000012b8, 0x000012c3,
+	0x000012f9, 0x00001334, 0x00001386, 0x00001397,
+	0x000013a2, 0x000013aa, 0x000013e0, 0x000013e7,
 	// Entry A0 - BF
-	0x0000147c, 0x000014a2, 0x000014d3, 0x000014e5,
-	0x000014ec, 0x000014fc, 0x00001504, 0x00001511,
-	0x00001533, 0x00001565, 0x000015b9, 0x000015c8,
-	0x000015d3, 0x000015dc, 0x000015f0, 0x00001609,
-	0x0000160f, 0x0000161e, 0x00001625, 0x00001631,
-	0x00001639, 0x0000163d, 0x0000164a, 0x00001653,
-	0x00001662, 0x0000167b, 0x00001688, 0x0000168e,
-	0x00001694, 0x0000169d, 0x000016a3, 0x000016ab,
+	0x0000140d, 0x0000143e, 0x00001450, 0x00001457,
+	0x00001467, 0x0000146f, 0x0000147c, 0x0000149e,
+	0x000014d0, 0x00001524, 0x00001533, 0x0000153e,
+	0x00001547, 0x0000155b, 0x00001574, 0x0000157a,
+	0x00001589, 0x00001590, 0x0000159c, 0x000015a4,
+	0x000015a8, 0x000015b5, 0x000015be, 0x000015cd,
+	0x000015e6, 0x000015f3, 0x000015f9, 0x000015ff,
+	0x00001608, 0x0000160e, 0x00001616, 0x0000161e,
 	// Entry C0 - DF
-	0x000016b3, 0x000016bc, 0x000016c4, 0x000016cd,
-	0x000016d2, 0x000016d6, 0x000016e2, 0x000016eb,
-	0x000016f4, 0x00001704, 0x00001715, 0x00001722,
-	0x00001737, 0x00001746, 0x00001751, 0x00001760,
-	0x0000178e, 0x000017a4, 0x000017b0, 0x000017cb,
-	0x000017e3, 0x000017f3, 0x000017fe, 0x00001808,
-	0x00001816, 0x00001824, 0x00001830, 0x0000183b,
-	0x00001848, 0x00001859, 0x0000186a, 0x0000187b,
+	0x00001627, 0x0000162f, 0x00001638, 0x0000163d,
+	0x00001641, 0x0000164d, 0x00001656, 0x0000165f,
+	0x0000166f, 0x00001680, 0x0000168d, 0x000016a2,
+	0x000016b1, 0x000016bc, 0x000016cb, 0x000016f9,
+	0x00001711, 0x00001722, 0x0000174f, 0x00001767,
+	0x00001777, 0x00001782, 0x0000178c, 0x0000179a,
+	0x000017a8, 0x000017b4, 0x000017bf, 0x000017cc,
+	0x000017dd, 0x000017ee, 0x000017ff, 0x0000180f,
 	// Entry E0 - FF
-	0x0000188b, 0x00001893, 0x0000189a, 0x000018cf,
-	0x000018fa, 0x000018fe, 0x00001914, 0x0000191c,
-	0x00001925, 0x00001963, 0x000019a4, 0x000019de,
-	0x000019f2, 0x000019f9, 0x00001a28,
-} // Size: 980 bytes
+	0x00001817, 0x0000181e, 0x00001853, 0x0000187e,
+	0x00001882, 0x00001898, 0x000018a0, 0x000018a9,
+	0x000018e7, 0x00001929, 0x00001963, 0x00001977,
+	0x0000197e, 0x000019ad,
+} // Size: 976 bytes
 
-const en_USData string = "" + // Size: 6696 bytes
+const en_USData string = "" + // Size: 6573 bytes
 	"\x02Failed to open the gate: invalid missing characters\x02This username" +
 	" is already in use\x02Invalid PGP key\x02Registered successfully\x02Inva" +
 	"lid credentials\x02Your account is banned\x02Invalid 2FA token\x02Passwo" +
 	"rd changed\x02You can't update to your current key\x02PGP key is set\x02" +
-	"PGP Public key is updated\x02Vendor info is updated\x02Listing created" +
+	"PGP Public key is updated\x02Terms of service updated\x02Listing created" +
 	"\x02Cart updated\x02cart deleted\x02You can't order with a vendor accoun" +
 	"t\x02You don't have enough balance for this order\x02Please pay the invo" +
 	"ice below in %[1]d hours for your order to proceed.\x02Order created\x02" +
-	"Not enough balance to withdraw.\x02You can't withdraw to your own accoun" +
-	"t\x02Withdrawal of %[1]s XMR initiated\x02Order cancelled\x02Review crea" +
-	"ted\x02You can't extend AF timer before order has been dispatched for %[" +
-	"1]d days.\x02You can't re-extend AF timer before order has been dispatch" +
-	"ed for %[1]d days.\x02AF timer already extended to maximum.\x02AF timer " +
-	"extended by %[1]d days\x02Order disputed\x022FA needs to be enabled for " +
-	"vendors\x02Vendor accounts can't have previous orders. Please create a n" +
-	"ew account.\x02Proof of inventory is required from new vendors\x02Not en" +
-	"ough balance\x02Application received\x02Order accepted. You have %[1]d h" +
-	"ours to mark it dispatched.\x02Order declined\x02Order marked as dispatc" +
-	"hed\x02Product deleted\x02Product updated\x02Ticket is already closed" +
-	"\x02You need to be logged in to access that page\x02Order received\x02Yo" +
-	"u have received a new order!\x0aYou have a total of %[1]d hours to accep" +
-	"t, before it's auto-declined.\x02Order accepted\x02Your order has been a" +
-	"ccepted!\x0aYou can monitor its status from orders page\x02Order dispatc" +
-	"hed\x02Your order has been dispatched!\x0aPlease remember to review it." +
-	"\x02How do I become a vendor?\x02Create an account with two-factor authe" +
-	"ntication (2FA) enabled, then submit a vendor application.\x02How do I p" +
-	"lace an order?\x02Add the desired products to your cart. Navigate to /ca" +
-	"rt and select “Checkout,” choose your preferred delivery method, and pro" +
-	"vide the required information.\x0aIf you have available balance, you may" +
-	" use it at checkout. Otherwise, you may request an invoice. Invoices mus" +
-	"t be paid within %[1]d hours for the order to continue processing.\x02Ho" +
-	"w can I obtain Monero (XMR)?\x02There are several ways to acquire Monero" +
-	". Please visit getmonero.org for official guidance and resources.\x02Wha" +
-	"t should I do if my order has not arrived or does not match the descript" +
-	"ion?\x02Orders are automatically finalized after %[1]d days.\x0aYou may " +
-	"extend the auto-finalization period twice.\x0aIf the order still has not" +
-	" arrived after these extensions, you should open a dispute.\x0aOur team " +
-	"will review the case and make a resolution based on the available inform" +
-	"ation.\x02What am I allowed to sell on this marketplace?\x02Only legal i" +
-	"tems are permitted. If you are unsure whether your product qualifies, pl" +
-	"ease contact us before creating a listing.\x02Open\x02Vendor application" +
-	"\x02Your account does not have 2FA enabled!\x02The application is free f" +
-	"or users who are already vendors on some other market using the same PGP" +
-	" key.\x02For other users, application costs %[1]s XMR and is non-refunda" +
-	"ble.\x02You're required to provide proof that you actually have products" +
-	" to sell here.\x02Vendor Logo\x02Use png image with close to 1:1 ratio f" +
-	"or optimal look\x02Existing vendor\x02Select this if you'r already a ven" +
-	"dor on some other market such as xmrBazaar\x02Proof of inventory\x02Clea" +
-	"r image of your inventory with your username and timestamp visible\x02Ma" +
-	"rkets and Your Username\x02List the markets where you are a vendor and i" +
-	"nclude your username\x02Captcha\x02Click circle with a cut\x02Submit\x02" +
-	"Total\x02Checkout\x02delivery method\x02Use wallet for payment\x02detail" +
-	"s\x02Use your real address, with the same format as below.\x02Unencrypte" +
-	"d details are automatically encrypted using vendors key.\x02Title\x02Des" +
-	"cription\x02Product image\x02Use image with close to 1:1 aspect ratio fo" +
-	"r optimal look\x02Category\x02Ships from\x02Ships to\x02Inventory\x02Siz" +
-	"e of the current inventory for this product.\x02Pricing\x02Here you can " +
-	"set your pricing.\x02We take 5% cut from these prices.\x02Quantity\x02Pr" +
-	"ice\x02Create ticket\x02Subject\x02account\x02order\x02wallet\x02vendor" +
+	"Withdrawal amount is too small\x02Not enough balance to withdraw.\x02You" +
+	" can't withdraw to your own account\x02Withdrawal of %[1]s XMR initiated" +
+	"\x02Order cancelled\x02Review created\x02You can't extend AF timer befor" +
+	"e order has been dispatched for %[1]d days.\x02You can't re-extend AF ti" +
+	"mer before order has been dispatched for %[1]d days.\x02AF timer already" +
+	" extended to maximum.\x02AF timer extended by %[1]d days\x02Order disput" +
+	"ed\x022FA needs to be enabled for vendors\x02Vendor accounts can't have " +
+	"previous orders. Please create a new account.\x02Proof of inventory is r" +
+	"equired from new vendors\x02Not enough balance\x02Application received" +
+	"\x02Order accepted. You have %[1]d hours to mark it dispatched.\x02Order" +
+	" declined\x02Order marked as dispatched\x02Product deleted\x02Product up" +
+	"dated\x02Ticket is already closed\x02You need to be logged in to access " +
+	"that page\x02Order received\x02You have received a new order!\x0aYou hav" +
+	"e a total of %[1]d hours to accept, before it's auto-declined.\x02Order " +
+	"accepted\x02Your order has been accepted!\x0aYou can monitor its status " +
+	"from orders page\x02Order dispatched\x02Your order has been dispatched!" +
+	"\x0aPlease remember to review it.\x02How do I become a vendor?\x02Create" +
+	" an account with two-factor authentication (2FA) enabled, then submit a " +
+	"vendor application.\x02How do I place an order?\x02Add the desired produ" +
+	"cts to your cart. Navigate to /cart and select “Checkout,” choose your p" +
+	"referred delivery method, and provide the required information.\x0aIf yo" +
+	"u have available balance, you may use it at checkout. Otherwise, you may" +
+	" request an invoice. Invoices must be paid within %[1]d hours for the or" +
+	"der to continue processing.\x02How can I obtain Monero (XMR)?\x02There a" +
+	"re several ways to acquire Monero. Please visit getmonero.org for offici" +
+	"al guidance and resources.\x02What should I do if my order has not arriv" +
+	"ed or does not match the description?\x02Orders are automatically finali" +
+	"zed after %[1]d days.\x0aYou may extend the auto-finalization period twi" +
+	"ce.\x0aIf the order still has not arrived after these extensions, you sh" +
+	"ould open a dispute.\x0aOur team will review the case and make a resolut" +
+	"ion based on the available information.\x02What am I allowed to sell on " +
+	"this marketplace?\x02Only legal items are permitted. If you are unsure w" +
+	"hether your product qualifies, please contact us before creating a listi" +
+	"ng.\x02Open\x02Vendor application\x02Your account does not have 2FA enab" +
+	"led!\x02Application is free for users who are already vendors on some ot" +
+	"her market.\x02For other users, application costs %[1]s XMR.\x02Vendor L" +
+	"ogo\x02Use png image with close to 1:1 ratio for optimal look\x02Existin" +
+	"g vendor\x02Select this if you'r already a vendor on some other market s" +
+	"uch as xmrBazaar\x02Proof of inventory\x02Clear image of your inventory " +
+	"with your username and timestamp visible\x02Markets and Your Username" +
+	"\x02List the markets where you are a vendor and include your username" +
+	"\x02Captcha\x02Click circle with a cut\x02Submit\x02Total\x02Checkout" +
+	"\x02delivery method\x02Use wallet for payment\x02details\x02Unencrypted " +
+	"details are automatically encrypted using vendors key.\x02Title\x02Descr" +
+	"iption\x02Product image\x02Use image with close to 1:1 aspect ratio for " +
+	"optimal look\x02Category\x02Ships from\x02Ships to\x02Inventory\x02Size " +
+	"of the current inventory for this product.\x02Pricing\x02Here you can se" +
+	"t your pricing.\x02We take 5% cut from these prices.\x02Quantity\x02Pric" +
+	"e\x02Create ticket\x02Subject\x02account\x02order\x02wallet\x02vendor" +
 	"\x02product\x02suggestion\x02bug\x02other\x02Message\x02Staff PGP\x02Exc" +
 	"hange rate\x02Time\x04\x00\x01 \x09\x02Vendors:\x04\x00\x01 \x07\x02User" +
 	"s:\x02submit\x02Response\x02products\x02orders\x02sell\x02support\x02Log" +
@@ -844,1478 +836,1461 @@ const en_USData string = "" + // Size: 6696 bytes
 	"\x02Type\x022FA\x02Preferences\x02Language\x02Currency\x02Change passwor" +
 	"d\x02Current password\x02New password\x02Confirm new password\x02Change " +
 	"PGP key\x02Enable 2FA\x02PGP public key\x02Required for vendors, suggest" +
-	"ed for everyone.\x02Update vendor profile\x02Vendor info\x02Leave empty " +
-	"to not update.\x02Update delivery methods\x02Delivery Method\x02My ticke" +
-	"ts\x020 seconds\x02%[1]d seconds\x02%[1]d minutes\x02%[1]d hours\x02%[1]" +
-	"d days\x02Rating (AVG)\x02Orders completed\x02Orders in escrow\x02Pendin" +
-	"g disputes\x02Previously seen\x02PGP key\x02Wallet\x02This is your XMR w" +
-	"allet where you can deposit coins.\x02Balance is updated after 10 confir" +
-	"mations.\x02See\x02for more information.\x02Balance\x02Withdraw\x02Enter" +
-	" a monero address where you want to withdraw your funds.\x02We collect a" +
-	"n 0.01 XMR fee from each withdrawal to prevent spam.\x02DO NOT withdraw " +
-	"funds to another wallet on this platform!\x02Destination address\x02Amou" +
-	"nt\x02Enter amount in decimal format (e.g., 1.42069)"
+	"ed for everyone.\x02Update terms of service\x02Terms of service\x02Terms" +
+	" of service is used to resolve disputes\x02Update delivery methods\x02De" +
+	"livery Method\x02My tickets\x020 seconds\x02%[1]d seconds\x02%[1]d minut" +
+	"es\x02%[1]d hours\x02%[1]d days\x02Rating (AVG)\x02Orders completed\x02O" +
+	"rders in escrow\x02Pending disputes\x02Previously seen\x02PGP key\x02Wal" +
+	"let\x02This is your XMR wallet where you can deposit coins.\x02Balance i" +
+	"s updated after 10 confirmations.\x02See\x02for more information.\x02Bal" +
+	"ance\x02Withdraw\x02Enter a monero address where you want to withdraw yo" +
+	"ur funds.\x02We collect an %[1]f XMR fee from each withdrawal to prevent" +
+	" spam.\x02DO NOT withdraw funds to another wallet on this platform!\x02D" +
+	"estination address\x02Amount\x02Enter amount in decimal format (e.g., 1." +
+	"42069)"
 
-var es_ESIndex = []uint32{ // 239 elements
+var es_ESIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003c, 0x00000063, 0x00000077,
 	0x0000008d, 0x000000a5, 0x000000bf, 0x000000d3,
 	0x000000e8, 0x0000010f, 0x00000125, 0x00000144,
-	0x0000016a, 0x00000179, 0x0000018d, 0x0000019f,
-	0x000001d7, 0x00000203, 0x0000025b, 0x00000269,
-	0x0000028f, 0x000002b4, 0x000002d1, 0x000002e2,
-	0x000002f1, 0x00000355, 0x000003c2, 0x000003f4,
-	0x0000041e, 0x00000430, 0x0000045a, 0x000004b8,
+	0x00000167, 0x00000176, 0x0000018a, 0x0000019c,
+	0x000001d4, 0x00000200, 0x00000258, 0x00000266,
+	0x00000292, 0x000002b8, 0x000002dd, 0x000002fa,
+	0x0000030b, 0x0000031a, 0x0000037e, 0x000003eb,
+	0x0000041d, 0x00000447, 0x00000459, 0x00000483,
 	// Entry 20 - 3F
-	0x000004f3, 0x00000507, 0x0000051b, 0x0000055b,
-	0x0000056d, 0x0000058a, 0x0000059e, 0x000005b4,
-	0x000005d0, 0x00000606, 0x00000617, 0x00000690,
-	0x000006a1, 0x000006f8, 0x00000708, 0x00000744,
-	0x0000076b, 0x000007dc, 0x000007f7, 0x0000095b,
-	0x0000097f, 0x000009f5, 0x00000a45, 0x00000b7e,
-	0x00000ba3, 0x00000c20, 0x00000c28, 0x00000c3e,
-	0x00000c63, 0x00000cd5, 0x00000d20, 0x00000d79,
+	0x000004e1, 0x0000051c, 0x00000530, 0x00000544,
+	0x00000584, 0x00000596, 0x000005b3, 0x000005c7,
+	0x000005dd, 0x000005f9, 0x0000062f, 0x00000640,
+	0x000006b9, 0x000006ca, 0x00000721, 0x00000731,
+	0x0000076d, 0x00000794, 0x00000805, 0x00000820,
+	0x00000984, 0x000009a8, 0x00000a1e, 0x00000a6e,
+	0x00000ba7, 0x00000bcc, 0x00000c49, 0x00000c51,
+	0x00000c67, 0x00000c8c, 0x00000ce0, 0x00000d16,
 	// Entry 40 - 5F
-	0x00000d8b, 0x00000dde, 0x00000df1, 0x00000e37,
-	0x00000e4c, 0x00000ea0, 0x00000ec0, 0x00000f08,
-	0x00000f10, 0x00000f35, 0x00000f3c, 0x00000f42,
-	0x00000f48, 0x00000f5b, 0x00000f7d, 0x00000f86,
-	0x00000fcc, 0x00001022, 0x0000102a, 0x00001037,
-	0x0000104b, 0x000010a5, 0x000010b0, 0x000010be,
-	0x000010c8, 0x000010d3, 0x00001105, 0x0000110d,
-	0x00001132, 0x00001162, 0x0000116b, 0x00001172,
+	0x00000d28, 0x00000d7b, 0x00000d8e, 0x00000dd4,
+	0x00000de9, 0x00000e3d, 0x00000e5d, 0x00000ea5,
+	0x00000ead, 0x00000ed2, 0x00000ed9, 0x00000edf,
+	0x00000ee5, 0x00000ef8, 0x00000f1a, 0x00000f23,
+	0x00000f79, 0x00000f81, 0x00000f8e, 0x00000fa2,
+	0x00000ffc, 0x00001007, 0x00001015, 0x0000101f,
+	0x0000102a, 0x0000105c, 0x00001064, 0x00001089,
+	0x000010b9, 0x000010c2, 0x000010c9, 0x000010d6,
 	// Entry 60 - 7F
-	0x0000117f, 0x00001186, 0x0000118d, 0x00001194,
-	0x0000119e, 0x000011a7, 0x000011b0, 0x000011bb,
-	0x000011c1, 0x000011c6, 0x000011ce, 0x000011df,
-	0x000011ee, 0x000011f5, 0x00001206, 0x00001215,
-	0x0000121c, 0x00001226, 0x00001230, 0x00001238,
-	0x0000123f, 0x00001247, 0x00001256, 0x00001266,
-	0x00001272, 0x0000128d, 0x0000130e, 0x00001323,
-	0x00001333, 0x00001345, 0x00001351, 0x00001364,
+	0x000010dd, 0x000010e4, 0x000010eb, 0x000010f5,
+	0x000010fe, 0x00001107, 0x00001112, 0x00001118,
+	0x0000111d, 0x00001125, 0x00001136, 0x00001145,
+	0x0000114c, 0x0000115d, 0x0000116c, 0x00001173,
+	0x0000117d, 0x00001187, 0x0000118f, 0x00001196,
+	0x0000119e, 0x000011ad, 0x000011bd, 0x000011c9,
+	0x000011e4, 0x00001265, 0x0000127a, 0x0000128a,
+	0x0000129c, 0x000012a8, 0x000012bb, 0x000012c9,
 	// Entry 80 - 9F
-	0x00001372, 0x0000138b, 0x00001392, 0x00001397,
-	0x0000139e, 0x000013a7, 0x000013ba, 0x000013c6,
-	0x000013cc, 0x000013dd, 0x00001403, 0x0000142a,
-	0x00001433, 0x00001462, 0x0000146a, 0x00001473,
-	0x00001489, 0x000014b7, 0x000014f4, 0x00001555,
-	0x000015a4, 0x000015d7, 0x0000162d, 0x00001673,
-	0x0000167e, 0x000016c7, 0x00001708, 0x00001759,
-	0x00001774, 0x00001781, 0x0000178c, 0x000017d7,
+	0x000012e2, 0x000012e9, 0x000012ee, 0x000012f5,
+	0x000012fe, 0x00001311, 0x0000131d, 0x00001323,
+	0x00001334, 0x0000135a, 0x00001381, 0x0000138a,
+	0x000013b9, 0x000013c1, 0x000013ca, 0x000013e0,
+	0x0000140e, 0x0000144b, 0x000014ac, 0x000014fb,
+	0x0000152e, 0x00001584, 0x000015ca, 0x000015d5,
+	0x0000161e, 0x0000165f, 0x000016b0, 0x000016cb,
+	0x000016d8, 0x000016e3, 0x0000172e, 0x00001737,
 	// Entry A0 - BF
-	0x000017e0, 0x00001812, 0x0000184f, 0x00001860,
-	0x00001868, 0x00001887, 0x0000188f, 0x000018a3,
-	0x000018c8, 0x0000190a, 0x0000196c, 0x00001984,
-	0x00001995, 0x000019a3, 0x000019c3, 0x000019e5,
-	0x000019eb, 0x000019ff, 0x00001a0a, 0x00001a1d,
-	0x00001a26, 0x00001a2b, 0x00001a33, 0x00001a3f,
-	0x00001a5c, 0x00001a74, 0x00001a83, 0x00001a91,
-	0x00001a9a, 0x00001aa2, 0x00001ab0, 0x00001abc,
+	0x00001769, 0x000017a6, 0x000017b7, 0x000017bf,
+	0x000017de, 0x000017e6, 0x000017fa, 0x0000181f,
+	0x00001861, 0x000018c3, 0x000018db, 0x000018ec,
+	0x000018fa, 0x0000191a, 0x0000193c, 0x00001942,
+	0x00001956, 0x00001961, 0x00001974, 0x0000197d,
+	0x00001982, 0x0000198a, 0x00001996, 0x000019b3,
+	0x000019cb, 0x000019da, 0x000019e8, 0x000019f1,
+	0x000019f9, 0x00001a07, 0x00001a13, 0x00001a1e,
 	// Entry C0 - DF
-	0x00001ac7, 0x00001ad5, 0x00001adc, 0x00001aee,
-	0x00001af3, 0x00001af7, 0x00001b04, 0x00001b0b,
-	0x00001b12, 0x00001b26, 0x00001b39, 0x00001b4b,
-	0x00001b67, 0x00001b79, 0x00001b87, 0x00001b9a,
-	0x00001bca, 0x00001be9, 0x00001c03, 0x00001c23,
-	0x00001c42, 0x00001c55, 0x00001c61, 0x00001c6c,
-	0x00001c7b, 0x00001c89, 0x00001c95, 0x00001ca1,
-	0x00001cb6, 0x00001ccb, 0x00001ce1, 0x00001cf5,
+	0x00001a2c, 0x00001a33, 0x00001a45, 0x00001a4a,
+	0x00001a4e, 0x00001a5b, 0x00001a62, 0x00001a69,
+	0x00001a7d, 0x00001a90, 0x00001aa2, 0x00001abe,
+	0x00001ad0, 0x00001ade, 0x00001af1, 0x00001b21,
+	0x00001b42, 0x00001b58, 0x00001b95, 0x00001bb4,
+	0x00001bc7, 0x00001bd3, 0x00001bde, 0x00001bed,
+	0x00001bfb, 0x00001c07, 0x00001c13, 0x00001c28,
+	0x00001c3d, 0x00001c53, 0x00001c67, 0x00001c7b,
 	// Entry E0 - FF
-	0x00001d09, 0x00001d13, 0x00001d1d, 0x00001d56,
-	0x00001d8b, 0x00001d8f, 0x00001da7, 0x00001dad,
-	0x00001db5, 0x00001df9, 0x00001e3d, 0x00001e76,
-	0x00001e8c, 0x00001e95, 0x00001ed0,
-} // Size: 980 bytes
+	0x00001c85, 0x00001c8f, 0x00001cc8, 0x00001cfd,
+	0x00001d01, 0x00001d19, 0x00001d1f, 0x00001d27,
+	0x00001d6b, 0x00001db0, 0x00001de9, 0x00001dff,
+	0x00001e08, 0x00001e43,
+} // Size: 976 bytes
 
-const es_ESData string = "" + // Size: 7888 bytes
+const es_ESData string = "" + // Size: 7747 bytes
 	"\x02No se pudo abrir la puerta: caracteres faltantes inválidos\x02Este n" +
 	"ombre de usuario ya está en uso\x02Clave PGP inválida\x02Registrado con " +
 	"éxito\x02Credenciales inválidas\x02Tu cuenta está prohibida\x02Token 2F" +
 	"A inválido\x02Contraseña cambiada\x02No puedes actualizar a tu clave act" +
-	"ual\x02Clave PGP configurada\x02Clave pública PGP actualizada\x02Informa" +
-	"ción del vendedor actualizada\x02Listado creado\x02Carrito actualizado" +
-	"\x02carrito eliminado\x02No puedes realizar un pedido con una cuenta de " +
-	"vendedor\x02No tienes suficiente saldo para este pedido\x02Por favor, pa" +
-	"ga la factura a continuación en %[1]d horas para que tu pedido continúe." +
-	"\x02Pedido creado\x02No hay suficiente saldo para retirar.\x02No puedes " +
-	"retirar a tu propia cuenta\x02Retiro de %[1]s XMR iniciado\x02Pedido can" +
-	"celado\x02Reseña creada\x02No puedes extender el temporizador AF antes d" +
-	"e que el pedido haya sido enviado durante %[1]d días.\x02No puedes volve" +
-	"r a extender el temporizador AF antes de que el pedido haya sido enviado" +
-	" durante %[1]d días.\x02El temporizador AF ya se ha extendido al máximo." +
-	"\x02Temporizador AF extendido por %[1]d días\x02Pedido en disputa\x02Se " +
-	"debe habilitar 2FA para los vendedores\x02Las cuentas de vendedor no pue" +
-	"den tener pedidos anteriores. Por favor, crea una nueva cuenta.\x02Se re" +
-	"quiere prueba de inventario de los nuevos vendedores.\x02Saldo insuficie" +
-	"nte.\x02Solicitud recibida.\x02Pedido aceptado. Tienes %[1]d horas para " +
-	"marcarlo como enviado.\x02Pedido rechazado.\x02Pedido marcado como envia" +
-	"do.\x02Producto eliminado.\x02Producto actualizado.\x02El ticket ya está" +
-	" cerrado.\x02Necesitas iniciar sesión para acceder a esa página.\x02Pedi" +
-	"do recibido.\x02¡Has recibido un nuevo pedido!\x0aTienes un total de %[1" +
-	"]d horas para aceptarlo, antes de que se rechace automáticamente.\x02Ped" +
-	"ido aceptado.\x02¡Tu pedido ha sido aceptado!\x0aPuedes monitorear su es" +
-	"tado desde la página de pedidos.\x02Pedido enviado.\x02¡Tu pedido ha sid" +
-	"o enviado!\x0aPor favor, recuerda revisarlo.\x02¿Cómo puedo convertirme " +
-	"en vendedor?\x02Crea una cuenta con la autenticación de dos factores (2F" +
-	"A) habilitada y luego envía una solicitud de vendedor.\x02¿Cómo realizo " +
-	"un pedido?\x02Agrega los productos deseados a tu carrito. Navega a /cart" +
-	" y selecciona “Pagar”, elige tu método de entrega preferido y proporcion" +
-	"a la información requerida.\x0aSi tienes saldo disponible, puedes usarlo" +
-	" al pagar. De lo contrario, puedes solicitar una factura. Las facturas d" +
-	"eben pagarse dentro de %[1]d horas para que el pedido continúe procesánd" +
-	"ose.\x02¿Cómo puedo obtener Monero (XMR)?\x02Hay varias formas de adquir" +
-	"ir Monero. Por favor, visita getmonero.org para obtener orientación y re" +
-	"cursos oficiales.\x02¿Qué debo hacer si mi pedido no ha llegado o no coi" +
-	"ncide con la descripción?\x02Los pedidos se finalizan automáticamente de" +
-	"spués de %[1]d días.\x0aPuedes extender el período de auto-finalización " +
-	"dos veces.\x0aSi el pedido aún no ha llegado después de estas extensione" +
-	"s, debes abrir una disputa.\x0aNuestro equipo revisará el caso y tomará " +
-	"una resolución basada en la información disponible.\x02¿Qué puedo vender" +
-	" en este mercado?\x02Solo se permiten artículos legales. Si no estás seg" +
-	"uro de si tu producto califica, contáctanos antes de crear un anuncio." +
-	"\x02Abierto\x02Solicitud de vendedor\x02¡Tu cuenta no tiene 2FA habilita" +
-	"do!\x02La aplicación es gratuita para los usuarios que ya son vendedores" +
-	" en otro mercado utilizando la misma clave PGP.\x02Para otros usuarios, " +
-	"la aplicación cuesta %[1]s XMR y no es reembolsable.\x02Se requiere que " +
-	"proporciones prueba de que realmente tienes productos para vender aquí." +
-	"\x02Logo del vendedor\x02Utiliza una imagen png con una relación cercana" +
-	" a 1:1 para una apariencia óptima\x02Vendedor existente\x02Selecciona es" +
-	"to si ya eres un vendedor en otro mercado como xmrBazaar\x02Prueba de in" +
-	"ventario\x02Imagen clara de tu inventario con tu nombre de usuario y la " +
-	"marca de tiempo visible\x02Mercados y tu nombre de usuario\x02Enumera lo" +
-	"s mercados donde eres vendedor e incluye tu nombre de usuario\x02Captcha" +
-	"\x02Haz clic en el círculo con un corte\x02Enviar\x02Total\x02Pagar\x02m" +
-	"étodo de entrega\x02Utiliza la billetera para el pago\x02detalles\x02Ut" +
-	"iliza tu dirección real, con el mismo formato que a continuación.\x02Los" +
-	" detalles no cifrados se cifran automáticamente utilizando la clave del " +
-	"vendedor.\x02Título\x02Descripción\x02Imagen del producto\x02Utiliza una" +
-	" imagen con una relación de aspecto cercana a 1:1 para una apariencia óp" +
-	"tima\x02Categoría\x02Envíos desde\x02Envíos a\x02Inventario\x02Tamaño de" +
-	"l inventario actual para este producto.\x02Precios\x02Aquí puedes establ" +
-	"ecer tus precios.\x02Tomamos un 5% de comisión sobre estos precios.\x02C" +
-	"antidad\x02Precio\x02Crear ticket\x02Asunto\x02cuenta\x02pedido\x02bille" +
-	"tera\x02vendedor\x02producto\x02sugerencia\x02error\x02otro\x02Mensaje" +
-	"\x02PGP del personal\x02Tasa de cambio\x02Tiempo\x04\x00\x01 \x0c\x02Ven" +
-	"dedores:\x04\x00\x01 \x0a\x02Usuarios:\x02enviar\x02Respuesta\x02product" +
-	"os\x02pedidos\x02vender\x02soporte\x02Cerrar sesión\x02iniciar sesión" +
-	"\x02registrarse\x02Guardia de entrada a %[1]s\x02Compara la URL que está" +
-	"s utilizando con la de la imagen de abajo para encontrar todos los carac" +
-	"teres faltantes marcados con '*'\x02Caracteres faltantes\x02Iniciar sesi" +
-	"ón\x02nombre de usuario\x02contraseña\x02Crear nueva cuenta\x02Eliminar" +
-	" todo\x02No tienes notificaciones\x02Pedido\x02Chat\x02Estado\x02Vendedo" +
-	"r\x02Método de entrega\x02Costo total\x02Fecha\x02Despachado a las\x02Ha" +
-	"sta que se decline automáticamente\x02Hasta que se finalice automáticame" +
-	"nte\x02Detalles\x02El vendedor ofreció un reembolso del %.2[1]f%\x02Acep" +
-	"tar\x02Rechazar\x02Clave PGP del cliente\x02¡El cliente aún puede cancel" +
-	"ar este pedido!\x02Debes aceptarlo en 2 días o se rechazará automáticame" +
-	"nte.\x02Después de aceptar, el cliente ya no puede cancelar, por lo que " +
-	"puedes despachar con seguridad.\x02Por favor, revisa cuidadosamente el p" +
-	"edido a continuación antes de aceptarlo.\x02Siempre rechaza los pedidos " +
-	"que no puedes cumplir.\x02Debes marcar este pedido como despachado en 2 " +
-	"días o se rechazará automáticamente.\x02Asegúrate de tener suficiente ti" +
-	"empo para realizar el despacho real.\x02Despachado\x02Transfiere la cant" +
-	"idad exacta de Monero a la dirección a continuación.\x02Después de 10 co" +
-	"nfirmaciones, tu pedido procederá al vendedor.\x02Tienes un total de 3 h" +
-	"oras para pagar esta factura, o tu pedido será cancelado.\x02Tiempo rest" +
-	"ante para pagar\x02Cantidad XMR\x02Dirección\x02Los pedidos pueden ser c" +
-	"ancelados hasta que el vendedor los haya aceptado.\x02Cancelar\x04\x00" +
-	"\x01 -\x02Tu pedido se finalizará automáticamente en\x02Puedes extender " +
-	"el tiempo de auto-finalización por 7 días.\x02revisa tu pedido\x02Revisa" +
-	"r\x02Extender el temporizador de AF\x02Disputa\x02Oferta de reembolso" +
-	"\x02El cliente ha disputado este pedido.\x02Utiliza el chat a continuaci" +
-	"ón para discutir sobre esta disputa.\x02Puedes crear una oferta de reem" +
-	"bolso y resolver esta disputa sin intervención del administrador.\x02Por" +
-	"centaje de reembolso\x02Fecha del pedido\x02ID del pedido\x02Prueba de p" +
-	"ropiedad de la clave\x02Desencripta para obtener el token\x02Token\x02Ac" +
-	"tualizar producto\x02Actualizar\x02Añadir al carrito\x02Reseñas\x02hace" +
-	"\x02AGOTADO\x02Registrarse\x02verificación de contraseña\x02¿Ya tienes u" +
-	"na cuenta?\x02Revisar pedido\x02Calificación\x02invitado\x02cliente\x02a" +
-	"dministrador\x02desconocido\x02habilitado\x02deshabilitado\x02Cuenta\x02" +
-	"Nombre de usuario\x02Tipo\x022FA\x02Preferencias\x02Idioma\x02Moneda\x02" +
-	"Cambiar contraseña\x02Contraseña actual\x02Nueva contraseña\x02Confirmar" +
-	" nueva contraseña\x02Cambiar clave PGP\x02Habilitar 2FA\x02Clave pública" +
-	" PGP\x02Requerido para vendedores, sugerido para todos.\x02Actualizar pe" +
-	"rfil del vendedor\x02Información del vendedor\x02Deja vacío para no actu" +
-	"alizar.\x02Actualizar métodos de entrega\x02Método de entrega\x02Mis tic" +
-	"kets\x020 segundos\x02%[1]d segundos\x02%[1]d minutos\x02%[1]d horas\x02" +
-	"%[1]d días\x02Calificación (PROM)\x02Órdenes completadas\x02Órdenes en d" +
-	"epósito\x02Disputas pendientes\x02Visto anteriormente\x02Clave PGP\x02Bi" +
-	"lletera\x02Esta es tu billetera XMR donde puedes depositar monedas.\x02E" +
-	"l saldo se actualiza después de 10 confirmaciones.\x02Ver\x02para más in" +
-	"formación.\x02Saldo\x02Retirar\x02Introduce una dirección de Monero dond" +
-	"e deseas retirar tus fondos.\x02Cobramos una tarifa de 0.01 XMR por cada" +
-	" retiro para prevenir spam.\x02¡NO retires fondos a otra billetera en es" +
-	"ta plataforma!\x02Dirección de destino\x02Cantidad\x02Introduce la canti" +
-	"dad en formato decimal (p. ej., 1.42069)"
+	"ual\x02Clave PGP configurada\x02Clave pública PGP actualizada\x02Término" +
+	"s de servicio actualizados\x02Listado creado\x02Carrito actualizado\x02c" +
+	"arrito eliminado\x02No puedes realizar un pedido con una cuenta de vende" +
+	"dor\x02No tienes suficiente saldo para este pedido\x02Por favor, paga la" +
+	" factura a continuación en %[1]d horas para que tu pedido continúe.\x02P" +
+	"edido creado\x02La cantidad de retiro es demasiado pequeña\x02No hay suf" +
+	"iciente saldo para retirar.\x02No puedes retirar a tu propia cuenta\x02R" +
+	"etiro de %[1]s XMR iniciado\x02Pedido cancelado\x02Reseña creada\x02No p" +
+	"uedes extender el temporizador AF antes de que el pedido haya sido envia" +
+	"do durante %[1]d días.\x02No puedes volver a extender el temporizador AF" +
+	" antes de que el pedido haya sido enviado durante %[1]d días.\x02El temp" +
+	"orizador AF ya se ha extendido al máximo.\x02Temporizador AF extendido p" +
+	"or %[1]d días\x02Pedido en disputa\x02Se debe habilitar 2FA para los ven" +
+	"dedores\x02Las cuentas de vendedor no pueden tener pedidos anteriores. P" +
+	"or favor, crea una nueva cuenta.\x02Se requiere prueba de inventario de " +
+	"los nuevos vendedores.\x02Saldo insuficiente.\x02Solicitud recibida.\x02" +
+	"Pedido aceptado. Tienes %[1]d horas para marcarlo como enviado.\x02Pedid" +
+	"o rechazado.\x02Pedido marcado como enviado.\x02Producto eliminado.\x02P" +
+	"roducto actualizado.\x02El ticket ya está cerrado.\x02Necesitas iniciar " +
+	"sesión para acceder a esa página.\x02Pedido recibido.\x02¡Has recibido u" +
+	"n nuevo pedido!\x0aTienes un total de %[1]d horas para aceptarlo, antes " +
+	"de que se rechace automáticamente.\x02Pedido aceptado.\x02¡Tu pedido ha " +
+	"sido aceptado!\x0aPuedes monitorear su estado desde la página de pedidos" +
+	".\x02Pedido enviado.\x02¡Tu pedido ha sido enviado!\x0aPor favor, recuer" +
+	"da revisarlo.\x02¿Cómo puedo convertirme en vendedor?\x02Crea una cuenta" +
+	" con la autenticación de dos factores (2FA) habilitada y luego envía una" +
+	" solicitud de vendedor.\x02¿Cómo realizo un pedido?\x02Agrega los produc" +
+	"tos deseados a tu carrito. Navega a /cart y selecciona “Pagar”, elige tu" +
+	" método de entrega preferido y proporciona la información requerida.\x0a" +
+	"Si tienes saldo disponible, puedes usarlo al pagar. De lo contrario, pue" +
+	"des solicitar una factura. Las facturas deben pagarse dentro de %[1]d ho" +
+	"ras para que el pedido continúe procesándose.\x02¿Cómo puedo obtener Mon" +
+	"ero (XMR)?\x02Hay varias formas de adquirir Monero. Por favor, visita ge" +
+	"tmonero.org para obtener orientación y recursos oficiales.\x02¿Qué debo " +
+	"hacer si mi pedido no ha llegado o no coincide con la descripción?\x02Lo" +
+	"s pedidos se finalizan automáticamente después de %[1]d días.\x0aPuedes " +
+	"extender el período de auto-finalización dos veces.\x0aSi el pedido aún " +
+	"no ha llegado después de estas extensiones, debes abrir una disputa.\x0a" +
+	"Nuestro equipo revisará el caso y tomará una resolución basada en la inf" +
+	"ormación disponible.\x02¿Qué puedo vender en este mercado?\x02Solo se pe" +
+	"rmiten artículos legales. Si no estás seguro de si tu producto califica," +
+	" contáctanos antes de crear un anuncio.\x02Abierto\x02Solicitud de vende" +
+	"dor\x02¡Tu cuenta no tiene 2FA habilitado!\x02La aplicación es gratuita " +
+	"para los usuarios que ya son vendedores en otro mercado.\x02Para otros u" +
+	"suarios, la aplicación cuesta %[1]s XMR.\x02Logo del vendedor\x02Utiliza" +
+	" una imagen png con una relación cercana a 1:1 para una apariencia óptim" +
+	"a\x02Vendedor existente\x02Selecciona esto si ya eres un vendedor en otr" +
+	"o mercado como xmrBazaar\x02Prueba de inventario\x02Imagen clara de tu i" +
+	"nventario con tu nombre de usuario y la marca de tiempo visible\x02Merca" +
+	"dos y tu nombre de usuario\x02Enumera los mercados donde eres vendedor e" +
+	" incluye tu nombre de usuario\x02Captcha\x02Haz clic en el círculo con u" +
+	"n corte\x02Enviar\x02Total\x02Pagar\x02método de entrega\x02Utiliza la b" +
+	"illetera para el pago\x02detalles\x02Los detalles no cifrados se cifran " +
+	"automáticamente utilizando la clave del vendedor.\x02Título\x02Descripci" +
+	"ón\x02Imagen del producto\x02Utiliza una imagen con una relación de asp" +
+	"ecto cercana a 1:1 para una apariencia óptima\x02Categoría\x02Envíos des" +
+	"de\x02Envíos a\x02Inventario\x02Tamaño del inventario actual para este p" +
+	"roducto.\x02Precios\x02Aquí puedes establecer tus precios.\x02Tomamos un" +
+	" 5% de comisión sobre estos precios.\x02Cantidad\x02Precio\x02Crear tick" +
+	"et\x02Asunto\x02cuenta\x02pedido\x02billetera\x02vendedor\x02producto" +
+	"\x02sugerencia\x02error\x02otro\x02Mensaje\x02PGP del personal\x02Tasa d" +
+	"e cambio\x02Tiempo\x04\x00\x01 \x0c\x02Vendedores:\x04\x00\x01 \x0a\x02U" +
+	"suarios:\x02enviar\x02Respuesta\x02productos\x02pedidos\x02vender\x02sop" +
+	"orte\x02Cerrar sesión\x02iniciar sesión\x02registrarse\x02Guardia de ent" +
+	"rada a %[1]s\x02Compara la URL que estás utilizando con la de la imagen " +
+	"de abajo para encontrar todos los caracteres faltantes marcados con '*'" +
+	"\x02Caracteres faltantes\x02Iniciar sesión\x02nombre de usuario\x02contr" +
+	"aseña\x02Crear nueva cuenta\x02Eliminar todo\x02No tienes notificaciones" +
+	"\x02Pedido\x02Chat\x02Estado\x02Vendedor\x02Método de entrega\x02Costo t" +
+	"otal\x02Fecha\x02Despachado a las\x02Hasta que se decline automáticament" +
+	"e\x02Hasta que se finalice automáticamente\x02Detalles\x02El vendedor of" +
+	"reció un reembolso del %.2[1]f%\x02Aceptar\x02Rechazar\x02Clave PGP del " +
+	"cliente\x02¡El cliente aún puede cancelar este pedido!\x02Debes aceptarl" +
+	"o en 2 días o se rechazará automáticamente.\x02Después de aceptar, el cl" +
+	"iente ya no puede cancelar, por lo que puedes despachar con seguridad." +
+	"\x02Por favor, revisa cuidadosamente el pedido a continuación antes de a" +
+	"ceptarlo.\x02Siempre rechaza los pedidos que no puedes cumplir.\x02Debes" +
+	" marcar este pedido como despachado en 2 días o se rechazará automáticam" +
+	"ente.\x02Asegúrate de tener suficiente tiempo para realizar el despacho " +
+	"real.\x02Despachado\x02Transfiere la cantidad exacta de Monero a la dire" +
+	"cción a continuación.\x02Después de 10 confirmaciones, tu pedido procede" +
+	"rá al vendedor.\x02Tienes un total de 3 horas para pagar esta factura, o" +
+	" tu pedido será cancelado.\x02Tiempo restante para pagar\x02Cantidad XMR" +
+	"\x02Dirección\x02Los pedidos pueden ser cancelados hasta que el vendedor" +
+	" los haya aceptado.\x02Cancelar\x04\x00\x01 -\x02Tu pedido se finalizará" +
+	" automáticamente en\x02Puedes extender el tiempo de auto-finalización po" +
+	"r 7 días.\x02revisa tu pedido\x02Revisar\x02Extender el temporizador de " +
+	"AF\x02Disputa\x02Oferta de reembolso\x02El cliente ha disputado este ped" +
+	"ido.\x02Utiliza el chat a continuación para discutir sobre esta disputa." +
+	"\x02Puedes crear una oferta de reembolso y resolver esta disputa sin int" +
+	"ervención del administrador.\x02Porcentaje de reembolso\x02Fecha del ped" +
+	"ido\x02ID del pedido\x02Prueba de propiedad de la clave\x02Desencripta p" +
+	"ara obtener el token\x02Token\x02Actualizar producto\x02Actualizar\x02Añ" +
+	"adir al carrito\x02Reseñas\x02hace\x02AGOTADO\x02Registrarse\x02verifica" +
+	"ción de contraseña\x02¿Ya tienes una cuenta?\x02Revisar pedido\x02Califi" +
+	"cación\x02invitado\x02cliente\x02administrador\x02desconocido\x02habilit" +
+	"ado\x02deshabilitado\x02Cuenta\x02Nombre de usuario\x02Tipo\x022FA\x02Pr" +
+	"eferencias\x02Idioma\x02Moneda\x02Cambiar contraseña\x02Contraseña actua" +
+	"l\x02Nueva contraseña\x02Confirmar nueva contraseña\x02Cambiar clave PGP" +
+	"\x02Habilitar 2FA\x02Clave pública PGP\x02Requerido para vendedores, sug" +
+	"erido para todos.\x02Actualizar términos de servicio\x02Términos de serv" +
+	"icio\x02Los términos de servicio se utilizan para resolver disputas\x02A" +
+	"ctualizar métodos de entrega\x02Método de entrega\x02Mis tickets\x020 se" +
+	"gundos\x02%[1]d segundos\x02%[1]d minutos\x02%[1]d horas\x02%[1]d días" +
+	"\x02Calificación (PROM)\x02Órdenes completadas\x02Órdenes en depósito" +
+	"\x02Disputas pendientes\x02Visto anteriormente\x02Clave PGP\x02Billetera" +
+	"\x02Esta es tu billetera XMR donde puedes depositar monedas.\x02El saldo" +
+	" se actualiza después de 10 confirmaciones.\x02Ver\x02para más informaci" +
+	"ón.\x02Saldo\x02Retirar\x02Introduce una dirección de Monero donde dese" +
+	"as retirar tus fondos.\x02Cobranos una tarifa de %[1]f XMR por cada reti" +
+	"ro para prevenir spam.\x02¡NO retires fondos a otra billetera en esta pl" +
+	"ataforma!\x02Dirección de destino\x02Cantidad\x02Introduce la cantidad e" +
+	"n formato decimal (p. ej., 1.42069)"
 
-var et_EEIndex = []uint32{ // 239 elements
+var et_EEIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003d, 0x00000060, 0x00000072,
 	0x0000008c, 0x0000009f, 0x000000b6, 0x000000c8,
 	0x000000db, 0x00000102, 0x0000011b, 0x00000139,
-	0x00000154, 0x00000164, 0x0000017a, 0x00000191,
-	0x000001b3, 0x000001e2, 0x00000232, 0x00000245,
-	0x0000026e, 0x00000297, 0x000002ba, 0x000002d2,
-	0x000002e5, 0x0000033a, 0x00000396, 0x000003c0,
-	0x000003e7, 0x00000400, 0x0000041d, 0x00000467,
+	0x00000159, 0x00000169, 0x0000017f, 0x00000196,
+	0x000001b8, 0x000001e7, 0x00000237, 0x0000024a,
+	0x0000026c, 0x00000295, 0x000002be, 0x000002e1,
+	0x000002f9, 0x0000030c, 0x00000361, 0x000003bd,
+	0x000003e7, 0x0000040e, 0x00000427, 0x00000444,
 	// Entry 20 - 3F
-	0x000004a4, 0x000004b5, 0x000004c7, 0x00000513,
-	0x0000052f, 0x0000054f, 0x00000563, 0x00000576,
-	0x0000058c, 0x000005c3, 0x000005d6, 0x00000650,
-	0x0000066b, 0x000006bc, 0x000006d1, 0x00000717,
-	0x00000731, 0x00000796, 0x000007b8, 0x00000906,
-	0x0000092c, 0x00000998, 0x000009ec, 0x00000b0e,
-	0x00000b31, 0x00000bba, 0x00000bbe, 0x00000bce,
-	0x00000bee, 0x00000c54, 0x00000c9e, 0x00000cdb,
+	0x0000048e, 0x000004cb, 0x000004dc, 0x000004ee,
+	0x0000053a, 0x00000556, 0x00000576, 0x0000058a,
+	0x0000059d, 0x000005b3, 0x000005ea, 0x000005fd,
+	0x00000677, 0x00000692, 0x000006e3, 0x000006f8,
+	0x0000073e, 0x00000758, 0x000007bd, 0x000007df,
+	0x0000092d, 0x00000953, 0x000009bf, 0x00000a13,
+	0x00000b35, 0x00000b58, 0x00000be1, 0x00000be5,
+	0x00000bf5, 0x00000c15, 0x00000c60, 0x00000c93,
 	// Entry 40 - 5F
-	0x00000ce8, 0x00000d36, 0x00000d49, 0x00000d95,
-	0x00000da7, 0x00000dfb, 0x00000e16, 0x00000e55,
-	0x00000e5d, 0x00000e76, 0x00000e7c, 0x00000e82,
-	0x00000e8e, 0x00000e98, 0x00000eb6, 0x00000ebf,
-	0x00000efe, 0x00000f46, 0x00000f4f, 0x00000f59,
-	0x00000f64, 0x00000fb2, 0x00000fbd, 0x00000fc8,
-	0x00000fd3, 0x00000fdb, 0x00001001, 0x0000100f,
-	0x00001030, 0x00001058, 0x0000105e, 0x00001063,
+	0x00000ca0, 0x00000cee, 0x00000d01, 0x00000d4d,
+	0x00000d5f, 0x00000db3, 0x00000dce, 0x00000e0d,
+	0x00000e15, 0x00000e2e, 0x00000e34, 0x00000e3a,
+	0x00000e46, 0x00000e50, 0x00000e6e, 0x00000e77,
+	0x00000ebf, 0x00000ec8, 0x00000ed2, 0x00000edd,
+	0x00000f2b, 0x00000f36, 0x00000f41, 0x00000f4c,
+	0x00000f54, 0x00000f7a, 0x00000f88, 0x00000fa9,
+	0x00000fd1, 0x00000fd7, 0x00000fdc, 0x00000fe6,
 	// Entry 60 - 7F
-	0x0000106d, 0x00001073, 0x00001079, 0x00001082,
-	0x0000108b, 0x00001093, 0x00001099, 0x000010a3,
-	0x000010a8, 0x000010ac, 0x000010b3, 0x000010c3,
-	0x000010d0, 0x000010d4, 0x000010e3, 0x000010f3,
-	0x000010f9, 0x00001100, 0x00001107, 0x00001112,
-	0x00001118, 0x0000111d, 0x00001129, 0x00001134,
-	0x00001140, 0x00001158, 0x000011c3, 0x000011dc,
-	0x000011e7, 0x000011f4, 0x000011fb, 0x00001209,
+	0x00000fec, 0x00000ff2, 0x00000ffb, 0x00001004,
+	0x0000100c, 0x00001012, 0x0000101c, 0x00001021,
+	0x00001025, 0x0000102c, 0x0000103c, 0x00001049,
+	0x0000104d, 0x0000105c, 0x0000106c, 0x00001072,
+	0x00001079, 0x00001080, 0x0000108b, 0x00001091,
+	0x00001096, 0x000010a2, 0x000010ad, 0x000010b9,
+	0x000010d1, 0x0000113c, 0x00001155, 0x00001160,
+	0x0000116d, 0x00001174, 0x00001182, 0x00001190,
 	// Entry 80 - 9F
-	0x00001217, 0x00001234, 0x0000123d, 0x00001245,
-	0x0000124a, 0x00001252, 0x0000126b, 0x00001274,
-	0x0000127d, 0x00001286, 0x000012a8, 0x000012c5,
-	0x000012d1, 0x000012f3, 0x000012ff, 0x00001305,
-	0x00001317, 0x0000134f, 0x000013b0, 0x0000141b,
-	0x00001463, 0x00001492, 0x00001502, 0x00001544,
-	0x0000154d, 0x00001592, 0x000015cc, 0x00001625,
-	0x0000163d, 0x00001647, 0x0000164f, 0x00001693,
+	0x000011ad, 0x000011b6, 0x000011be, 0x000011c3,
+	0x000011cb, 0x000011e4, 0x000011ed, 0x000011f6,
+	0x000011ff, 0x00001221, 0x0000123e, 0x0000124a,
+	0x0000126c, 0x00001278, 0x0000127e, 0x00001290,
+	0x000012c8, 0x00001329, 0x00001394, 0x000013dc,
+	0x0000140b, 0x0000147b, 0x000014bd, 0x000014c6,
+	0x0000150b, 0x00001545, 0x0000159e, 0x000015b6,
+	0x000015c0, 0x000015c8, 0x0000160c, 0x00001615,
 	// Entry A0 - BF
-	0x0000169c, 0x000016c9, 0x00001706, 0x00001720,
-	0x0000172a, 0x0000173e, 0x00001746, 0x0000175c,
-	0x00001783, 0x000017ba, 0x00001819, 0x0000182e,
-	0x00001841, 0x0000184e, 0x00001870, 0x0000188f,
-	0x00001895, 0x000018a3, 0x000018aa, 0x000018b9,
-	0x000018c4, 0x000018cb, 0x000018d6, 0x000018e2,
-	0x000018f3, 0x0000190a, 0x0000191c, 0x00001922,
-	0x0000192c, 0x00001933, 0x00001942, 0x0000194b,
+	0x00001642, 0x0000167f, 0x00001699, 0x000016a3,
+	0x000016b7, 0x000016bf, 0x000016d5, 0x000016fc,
+	0x00001733, 0x00001792, 0x000017a7, 0x000017ba,
+	0x000017c7, 0x000017e9, 0x00001808, 0x0000180e,
+	0x0000181c, 0x00001823, 0x00001832, 0x0000183d,
+	0x00001844, 0x0000184f, 0x0000185b, 0x0000186c,
+	0x00001883, 0x00001895, 0x0000189b, 0x000018a5,
+	0x000018ac, 0x000018bb, 0x000018c4, 0x000018cc,
 	// Entry C0 - DF
-	0x00001953, 0x0000195c, 0x00001962, 0x0000196f,
-	0x00001976, 0x0000197a, 0x00001985, 0x0000198a,
-	0x00001992, 0x000019a0, 0x000019b0, 0x000019bb,
-	0x000019ce, 0x000019df, 0x000019e8, 0x000019f9,
-	0x00001a23, 0x00001a3b, 0x00001a48, 0x00001a69,
-	0x00001a8c, 0x00001aa5, 0x00001ab2, 0x00001abd,
-	0x00001acc, 0x00001ada, 0x00001ae6, 0x00001af3,
-	0x00001b06, 0x00001b1c, 0x00001b32, 0x00001b42,
+	0x000018d5, 0x000018db, 0x000018e8, 0x000018ef,
+	0x000018f3, 0x000018fe, 0x00001903, 0x0000190b,
+	0x00001919, 0x00001929, 0x00001934, 0x00001947,
+	0x00001958, 0x00001961, 0x00001972, 0x0000199c,
+	0x000019b5, 0x000019c8, 0x000019fe, 0x00001a21,
+	0x00001a3a, 0x00001a47, 0x00001a52, 0x00001a61,
+	0x00001a6f, 0x00001a7b, 0x00001a88, 0x00001a9b,
+	0x00001ab1, 0x00001ac7, 0x00001ad7, 0x00001ae5,
 	// Entry E0 - FF
-	0x00001b50, 0x00001b5a, 0x00001b63, 0x00001b9c,
-	0x00001bc4, 0x00001bca, 0x00001bde, 0x00001be4,
-	0x00001bf1, 0x00001c35, 0x00001c79, 0x00001cba,
-	0x00001cc6, 0x00001ccc, 0x00001cfb,
-} // Size: 980 bytes
+	0x00001aef, 0x00001af8, 0x00001b31, 0x00001b59,
+	0x00001b5f, 0x00001b73, 0x00001b79, 0x00001b86,
+	0x00001bca, 0x00001c0f, 0x00001c50, 0x00001c5c,
+	0x00001c62, 0x00001c91,
+} // Size: 976 bytes
 
-const et_EEData string = "" + // Size: 7419 bytes
+const et_EEData string = "" + // Size: 7313 bytes
 	"\x02Värava avamine ebaõnnestus: kehtetud puuduvad tähemärgid\x02See kasu" +
 	"tajanimi on juba kasutusel\x02Kehtetu PGP võti\x02Registreerimine õnnest" +
 	"us\x02Kehtetud mandaadid\x02Teie konto on keelatud\x02Kehtetu 2FA token" +
 	"\x02Parool on muudetud\x02Te ei saa oma praegust võtit uuendada\x02PGP v" +
-	"õti on seadistatud\x02PGP avalik võti on uuendatud\x02Müüja teave on uu" +
-	"endatud\x02Loend on loodud\x02Ostukorv on uuendatud\x02ostukorv on kustu" +
-	"tatud\x02Te ei saa tellida müüja kontoga\x02Teie saldo ei ole piisav sel" +
-	"le tellimuse jaoks\x02Palun tasuge allolev arve %[1]d tunni jooksul, et " +
-	"teie tellimus saaks jätkuda.\x02Tellimus on loodud\x02Väljavõtmiseks ei " +
-	"ole piisavalt saldo.\x02Te ei saa oma kontole raha välja võtta\x02Väljam" +
-	"akse %[1]s XMR on algatatud\x02Tellimus on tühistatud\x02Arvustus on loo" +
-	"dud\x02Te ei saa AF taimerit pikendada enne, kui tellimus on saadetud %[" +
-	"1]d päeva jooksul.\x02Te ei saa AF taimerit uuesti pikendada enne, kui t" +
-	"ellimus on saadetud %[1]d päeva jooksul.\x02AF taimer on juba pikendatud" +
-	" maksimumini.\x02AF taimer on pikendatud %[1]d päevaks\x02Tellimus on va" +
-	"idlustatud\x02Müüjatele tuleb lubada 2FA\x02Müüja kontodel ei saa olla v" +
-	"arasemaid tellimusi. Palun looge uus konto.\x02Uutelt müüjatelt on vajal" +
-	"ik tõend varude olemasolu kohta.\x02Ei piisa saldost\x02Taotlus on saadu" +
-	"d\x02Tellimus on aktsepteeritud. Teil on %[1]d tundi, et see saadetuks m" +
-	"ärkida.\x02Tellimus on tagasi lükatud\x02Tellimus on märgitud saadetuks" +
-	"\x02Toode on kustutatud\x02Toode on uuendatud\x02Pilet on juba suletud" +
-	"\x02Sellele lehele pääsemiseks peate olema sisse logitud\x02Tellimus on " +
-	"saadud\x02Olete saanud uue tellimuse!\x0aTeil on kokku %[1]d tundi, et s" +
-	"ee aktsepteerida, enne kui see automaatselt tagasi lükatakse.\x02Tellimu" +
-	"s on aktsepteeritud\x02Teie tellimus on aktsepteeritud!\x0aSaate selle s" +
-	"taatust jälgida tellimuste lehelt\x02Tellimus on saadetud\x02Teie tellim" +
-	"us on saadetud!\x0aPalun pidage meeles, et seda üle vaadata.\x02Kuidas m" +
-	"a saan müüjaks?\x02Looge konto, millel on lubatud kahefaktoriline autent" +
-	"imine (2FA), seejärel esitage müüja taotlus.\x02Kuidas ma saan tellimuse" +
-	" esitada?\x02Lisage soovitud tooted oma ostukorvi. Liikuge aadressile /c" +
-	"art ja valige „Kassa”, valige oma eelistatud kohaletoimetamise meetod ja" +
-	" esitage vajalik teave.\x0aKui teil on piisavalt saldo, saate seda kassa" +
-	"s kasutada. Vastasel juhul võite küsida arvet. Arved tuleb tasuda %[1]d " +
-	"tunni jooksul, et tellimus saaks jätkata töötlemist.\x02Kuidas ma saan M" +
-	"onero (XMR) omandada?\x02Monero omandamiseks on mitmeid viise. Palun kül" +
-	"astage getmonero.org ametlike juhiste ja ressursside jaoks.\x02Mida ma p" +
-	"eaksin tegema, kui mu tellimus ei ole saabunud või ei vasta kirjeldusele" +
-	"?\x02Tellimused lõpetatakse automaatselt pärast %[1]d päeva.\x0aTe võite" +
-	" automaatse lõpetamise perioodi pikendada kaks korda.\x0aKui tellimus ei" +
-	" ole pärast neid pikendusi ikka veel saabunud, peaksite avama vaidluse." +
-	"\x0aMeie meeskond vaatab juhtumi üle ja teeb otsuse saadaval oleva teabe" +
-	" põhjal.\x02Mida ma tohin sellel turul müüa?\x02Lubatud on ainult seadus" +
-	"likud esemed. Kui te pole kindel, kas teie toode kvalifitseerub, võtke m" +
-	"eiega ühendust enne kuulutuse loomist.\x02Ava\x02Müüja taotlus\x02Teie k" +
-	"ontol ei ole 2FA lubatud!\x02Rakendus on tasuta kasutajatele, kes on jub" +
-	"a müüjad mõnes teises turul, kasutades sama PGP-võtit.\x02Teistele kasut" +
-	"ajatele maksab rakendus %[1]s XMR ja seda ei saa tagastada.\x02Te peate " +
-	"esitama tõendi, et teil on siin müügiks tooteid.\x02Müüja logo\x02Kasuta" +
-	"ge png pilti, mille suhe on lähedane 1:1, et saavutada parim välimus." +
-	"\x02Olemasolev müüja\x02Valige see, kui olete juba müüja mõnes teises tu" +
-	"rul, näiteks xmrBazaar.\x02Tõend laoseisust\x02Selge pilt teie laoseisus" +
-	"t, kus on nähtav teie kasutajanimi ja ajatempli kuupäev.\x02Turud ja tei" +
-	"e kasutajanimi\x02Loetlege turud, kus olete müüja, ja lisage oma kasutaj" +
-	"animi.\x02Captcha\x02Klõpsake lõikega ringi\x02Esita\x02Kokku\x02Väljama" +
-	"kse\x02tarneviis\x02Kasutage maksmiseks rahakotti\x02detailid\x02Kasutag" +
-	"e oma tegelikku aadressi, samas formaadis nagu allpool.\x02Krüpteerimata" +
-	" andmed krüpteeritakse automaatselt müüja võtme abil.\x02Pealkiri\x02Kir" +
-	"jeldus\x02Toote pilt\x02Kasutage pilti, mille kuvasuhe on lähedane 1:1, " +
-	"et saavutada parim välimus.\x02Kategooria\x02Saadetakse\x02Saadetakse" +
-	"\x02Laoseis\x02Selle toote praeguse laoseisu suurus.\x02Hinnakujundus" +
-	"\x02Siin saate määrata oma hinnad.\x02Me võtame nende hindade pealt 5% t" +
-	"asu.\x02Kogus\x02Hind\x02Loo pilet\x02Teema\x02konto\x02tellimus\x02raha" +
-	"kott\x02müüja\x02toode\x02ettepanek\x02viga\x02muu\x02Sõnum\x02Töötajate" +
-	" PGP\x02Vahetuskurss\x02Aeg\x04\x00\x01 \x0a\x02Müüjad:\x04\x00\x01 \x0b" +
-	"\x02Kasutajad:\x02esita\x02Vastus\x02tooted\x02tellimused\x02müü\x02tugi" +
-	"\x02Logi välja\x02logi sisse\x02registreeri\x02Sisenemise valvur %[1]s" +
-	"\x02Võrdle kasutatavat URL-i alloleva pildiga, et leida kõik puuduolevad" +
-	" tähemärgid, mis on märgitud '*'.\x02Puuduolevad tähemärgid\x02Logi siss" +
-	"e\x02kasutajanimi\x02parool\x02Loo uus konto\x02Kustuta kõik\x02Sul ei o" +
-	"le ühtegi teavitust\x02Tellimus\x02Vestlus\x02Olek\x02Müüja\x02Kohaletoi" +
-	"metamise meetod\x02Kogukulu\x02Kuupäev\x02Saadetud\x02Kuni automaatselt " +
-	"tagasi lükatud\x02Kuni automaatselt lõpetatud\x02Üksikasjad\x02Müüja pak" +
-	"kus %.2[1]f% hüvitist\x02Aktsepteeri\x02Keela\x02Kliendi PGP võti\x02Kli" +
-	"endil on endiselt võimalik see tellimus tühistada!\x02Sa pead selle 2 pä" +
-	"eva jooksul aktsepteerima, vastasel juhul lükatakse see automaatselt tag" +
-	"asi.\x02Pärast aktsepteerimist ei saa klient enam tellimust tühistada, s" +
-	"eega saad sa selle ohutult välja saata.\x02Palun vaata allolev tellimus " +
-	"hoolikalt üle enne selle aktsepteerimist.\x02Keela alati tellimused, mid" +
-	"a sa ei saa täita.\x02Sa pead selle tellimuse 2 päeva jooksul saadetuks " +
-	"märkima, vastasel juhul lükatakse see automaatselt tagasi.\x02Veenduge, " +
-	"et teil on piisavalt aega tegeliku saatmise tegemiseks!\x02Saadetud\x02Ü" +
-	"lekandke täpselt määratud summa Monero't allolevale aadressile.\x02Päras" +
-	"t 10 kinnitust läheb teie tellimus edasimüüjale.\x02Teil on kokku 3 tund" +
-	"i, et selle arve tasuda, vastasel juhul tühistatakse teie tellimus.\x02J" +
-	"äänud aeg maksmiseks\x02Summa XMR\x02Aadress\x02Tellimusi saab tühistad" +
-	"a kuni edasimüüja on selle vastu võtnud.\x02Tühista\x04\x00\x01 (\x02Tei" +
-	"e tellimus lõpetatakse automaatselt\x02Saate automaatse lõpetamise aega " +
-	"pikendada 7 päeva võrra.\x02kontrollige oma tellimust\x02Tõlgenda\x02Pik" +
-	"enda AF-taimerit\x02Vaidlus\x02Tagasimakse pakkumine\x02Kliendil on see " +
-	"tellimus vaidlustatud.\x02Kasutage allolevat vestlust, et arutada seda v" +
-	"aidlust.\x02Saate luua tagasimakse pakkumise ja lahendada selle vaidluse" +
-	" ilma administraatori sekkumiseta.\x02Tagasimakse protsent\x02Tellimuse " +
-	"kuupäev\x02Tellimuse ID\x02Tõend võtme omandiõiguse kohta\x02Dekrüpteeri" +
-	"ge, et saada token\x02Token\x02Uuenda toodet\x02Uuenda\x02Lisa ostukorvi" +
-	"\x02Arvustused\x02tagasi\x02LADU TÜHI\x02Registreeri\x02parooli kontroll" +
-	"\x02Kas sul on juba konto?\x02Tõenda tellimust\x02Hinne\x02külaline\x02k" +
-	"lient\x02administraator\x02tundmatu\x02lubatud\x02keelatud\x02Konto\x02K" +
-	"asutajanimi\x02Tüüp\x022FA\x02Eelistused\x02Keel\x02Valuuta\x02Muuda par" +
-	"ooli\x02Praegune parool\x02Uus parool\x02Kinnita uus parool\x02Muuda PGP" +
-	" võtit\x02Luba 2FA\x02PGP avalik võti\x02Nõutav müüjatele, soovitatav kõ" +
-	"igile.\x02Uuenda müüja profiili\x02Müüja info\x02Jätke tühi, et mitte uu" +
-	"endada.\x02Uuenda kohaletoimetamise meetodeid\x02Kohaletoimetamise meeto" +
-	"d\x02Minu piletid\x020 sekundit\x02%[1]d sekundit\x02%[1]d minutit\x02%[" +
-	"1]d tundi\x02%[1]d päeva\x02Hinnang (KESKMINE)\x02Tellimused lõpetatud" +
-	"\x02Tellimused deposiidis\x02Ootel vaidlused\x02Varem nähtud\x02PGP võti" +
-	"\x02Rahakott\x02See on teie XMR rahakott, kuhu saate münte deponeerida." +
-	"\x02Saldo uuendatakse pärast 10 kinnitust.\x02Vaata\x02lisainformatsioon" +
-	"i.\x02Saldo\x02Võta välja\x02Sisestage Monero aadress, kuhu soovite oma " +
-	"vahendeid välja võtta.\x02Kogume iga väljamakse eest 0,01 XMR tasu, et v" +
-	"ältida rämpsposti.\x02ÄRGE võtke vahendeid välja teise rahakotti sellel" +
-	" platvormil!\x02Sihtaadress\x02Summa\x02Sisestage summa kümnendvormingus" +
-	" (nt 1.42069)"
+	"õti on seadistatud\x02PGP avalik võti on uuendatud\x02Teenuse tingimuse" +
+	"d on uuendatud\x02Loend on loodud\x02Ostukorv on uuendatud\x02ostukorv o" +
+	"n kustutatud\x02Te ei saa tellida müüja kontoga\x02Teie saldo ei ole pii" +
+	"sav selle tellimuse jaoks\x02Palun tasuge allolev arve %[1]d tunni jooks" +
+	"ul, et teie tellimus saaks jätkuda.\x02Tellimus on loodud\x02Väljamakse " +
+	"summa on liiga väike\x02Väljavõtmiseks ei ole piisavalt saldo.\x02Te ei " +
+	"saa oma kontole raha välja võtta\x02Väljamakse %[1]s XMR on algatatud" +
+	"\x02Tellimus on tühistatud\x02Arvustus on loodud\x02Te ei saa AF taimeri" +
+	"t pikendada enne, kui tellimus on saadetud %[1]d päeva jooksul.\x02Te ei" +
+	" saa AF taimerit uuesti pikendada enne, kui tellimus on saadetud %[1]d p" +
+	"äeva jooksul.\x02AF taimer on juba pikendatud maksimumini.\x02AF taimer" +
+	" on pikendatud %[1]d päevaks\x02Tellimus on vaidlustatud\x02Müüjatele tu" +
+	"leb lubada 2FA\x02Müüja kontodel ei saa olla varasemaid tellimusi. Palun" +
+	" looge uus konto.\x02Uutelt müüjatelt on vajalik tõend varude olemasolu " +
+	"kohta.\x02Ei piisa saldost\x02Taotlus on saadud\x02Tellimus on aktseptee" +
+	"ritud. Teil on %[1]d tundi, et see saadetuks märkida.\x02Tellimus on tag" +
+	"asi lükatud\x02Tellimus on märgitud saadetuks\x02Toode on kustutatud\x02" +
+	"Toode on uuendatud\x02Pilet on juba suletud\x02Sellele lehele pääsemisek" +
+	"s peate olema sisse logitud\x02Tellimus on saadud\x02Olete saanud uue te" +
+	"llimuse!\x0aTeil on kokku %[1]d tundi, et see aktsepteerida, enne kui se" +
+	"e automaatselt tagasi lükatakse.\x02Tellimus on aktsepteeritud\x02Teie t" +
+	"ellimus on aktsepteeritud!\x0aSaate selle staatust jälgida tellimuste le" +
+	"helt\x02Tellimus on saadetud\x02Teie tellimus on saadetud!\x0aPalun pida" +
+	"ge meeles, et seda üle vaadata.\x02Kuidas ma saan müüjaks?\x02Looge kont" +
+	"o, millel on lubatud kahefaktoriline autentimine (2FA), seejärel esitage" +
+	" müüja taotlus.\x02Kuidas ma saan tellimuse esitada?\x02Lisage soovitud " +
+	"tooted oma ostukorvi. Liikuge aadressile /cart ja valige „Kassa”, valige" +
+	" oma eelistatud kohaletoimetamise meetod ja esitage vajalik teave.\x0aKu" +
+	"i teil on piisavalt saldo, saate seda kassas kasutada. Vastasel juhul võ" +
+	"ite küsida arvet. Arved tuleb tasuda %[1]d tunni jooksul, et tellimus sa" +
+	"aks jätkata töötlemist.\x02Kuidas ma saan Monero (XMR) omandada?\x02Mone" +
+	"ro omandamiseks on mitmeid viise. Palun külastage getmonero.org ametlike" +
+	" juhiste ja ressursside jaoks.\x02Mida ma peaksin tegema, kui mu tellimu" +
+	"s ei ole saabunud või ei vasta kirjeldusele?\x02Tellimused lõpetatakse a" +
+	"utomaatselt pärast %[1]d päeva.\x0aTe võite automaatse lõpetamise perioo" +
+	"di pikendada kaks korda.\x0aKui tellimus ei ole pärast neid pikendusi ik" +
+	"ka veel saabunud, peaksite avama vaidluse.\x0aMeie meeskond vaatab juhtu" +
+	"mi üle ja teeb otsuse saadaval oleva teabe põhjal.\x02Mida ma tohin sell" +
+	"el turul müüa?\x02Lubatud on ainult seaduslikud esemed. Kui te pole kind" +
+	"el, kas teie toode kvalifitseerub, võtke meiega ühendust enne kuulutuse " +
+	"loomist.\x02Ava\x02Müüja taotlus\x02Teie kontol ei ole 2FA lubatud!\x02R" +
+	"akendus on tasuta kasutajatele, kes on juba müüjad mõnes teises turul." +
+	"\x02Teiste kasutajate jaoks maksab rakendus %[1]s XMR.\x02Müüja logo\x02" +
+	"Kasutage png pilti, mille suhe on lähedane 1:1, et saavutada parim välim" +
+	"us.\x02Olemasolev müüja\x02Valige see, kui olete juba müüja mõnes teises" +
+	" turul, näiteks xmrBazaar.\x02Tõend laoseisust\x02Selge pilt teie laosei" +
+	"sust, kus on nähtav teie kasutajanimi ja ajatempli kuupäev.\x02Turud ja " +
+	"teie kasutajanimi\x02Loetlege turud, kus olete müüja, ja lisage oma kasu" +
+	"tajanimi.\x02Captcha\x02Klõpsake lõikega ringi\x02Esita\x02Kokku\x02Välj" +
+	"amakse\x02tarneviis\x02Kasutage maksmiseks rahakotti\x02detailid\x02Krüp" +
+	"teerimata andmed krüpteeritakse automaatselt müüja võtme abil.\x02Pealki" +
+	"ri\x02Kirjeldus\x02Toote pilt\x02Kasutage pilti, mille kuvasuhe on lähed" +
+	"ane 1:1, et saavutada parim välimus.\x02Kategooria\x02Saadetakse\x02Saad" +
+	"etakse\x02Laoseis\x02Selle toote praeguse laoseisu suurus.\x02Hinnakujun" +
+	"dus\x02Siin saate määrata oma hinnad.\x02Me võtame nende hindade pealt 5" +
+	"% tasu.\x02Kogus\x02Hind\x02Loo pilet\x02Teema\x02konto\x02tellimus\x02r" +
+	"ahakott\x02müüja\x02toode\x02ettepanek\x02viga\x02muu\x02Sõnum\x02Töötaj" +
+	"ate PGP\x02Vahetuskurss\x02Aeg\x04\x00\x01 \x0a\x02Müüjad:\x04\x00\x01 " +
+	"\x0b\x02Kasutajad:\x02esita\x02Vastus\x02tooted\x02tellimused\x02müü\x02" +
+	"tugi\x02Logi välja\x02logi sisse\x02registreeri\x02Sisenemise valvur %[1" +
+	"]s\x02Võrdle kasutatavat URL-i alloleva pildiga, et leida kõik puuduolev" +
+	"ad tähemärgid, mis on märgitud '*'.\x02Puuduolevad tähemärgid\x02Logi si" +
+	"sse\x02kasutajanimi\x02parool\x02Loo uus konto\x02Kustuta kõik\x02Sul ei" +
+	" ole ühtegi teavitust\x02Tellimus\x02Vestlus\x02Olek\x02Müüja\x02Kohalet" +
+	"oimetamise meetod\x02Kogukulu\x02Kuupäev\x02Saadetud\x02Kuni automaatsel" +
+	"t tagasi lükatud\x02Kuni automaatselt lõpetatud\x02Üksikasjad\x02Müüja p" +
+	"akkus %.2[1]f% hüvitist\x02Aktsepteeri\x02Keela\x02Kliendi PGP võti\x02K" +
+	"liendil on endiselt võimalik see tellimus tühistada!\x02Sa pead selle 2 " +
+	"päeva jooksul aktsepteerima, vastasel juhul lükatakse see automaatselt t" +
+	"agasi.\x02Pärast aktsepteerimist ei saa klient enam tellimust tühistada," +
+	" seega saad sa selle ohutult välja saata.\x02Palun vaata allolev tellimu" +
+	"s hoolikalt üle enne selle aktsepteerimist.\x02Keela alati tellimused, m" +
+	"ida sa ei saa täita.\x02Sa pead selle tellimuse 2 päeva jooksul saadetuk" +
+	"s märkima, vastasel juhul lükatakse see automaatselt tagasi.\x02Veenduge" +
+	", et teil on piisavalt aega tegeliku saatmise tegemiseks!\x02Saadetud" +
+	"\x02Ülekandke täpselt määratud summa Monero't allolevale aadressile.\x02" +
+	"Pärast 10 kinnitust läheb teie tellimus edasimüüjale.\x02Teil on kokku 3" +
+	" tundi, et selle arve tasuda, vastasel juhul tühistatakse teie tellimus." +
+	"\x02Jäänud aeg maksmiseks\x02Summa XMR\x02Aadress\x02Tellimusi saab tühi" +
+	"stada kuni edasimüüja on selle vastu võtnud.\x02Tühista\x04\x00\x01 (" +
+	"\x02Teie tellimus lõpetatakse automaatselt\x02Saate automaatse lõpetamis" +
+	"e aega pikendada 7 päeva võrra.\x02kontrollige oma tellimust\x02Tõlgenda" +
+	"\x02Pikenda AF-taimerit\x02Vaidlus\x02Tagasimakse pakkumine\x02Kliendil " +
+	"on see tellimus vaidlustatud.\x02Kasutage allolevat vestlust, et arutada" +
+	" seda vaidlust.\x02Saate luua tagasimakse pakkumise ja lahendada selle v" +
+	"aidluse ilma administraatori sekkumiseta.\x02Tagasimakse protsent\x02Tel" +
+	"limuse kuupäev\x02Tellimuse ID\x02Tõend võtme omandiõiguse kohta\x02Dekr" +
+	"üpteerige, et saada token\x02Token\x02Uuenda toodet\x02Uuenda\x02Lisa o" +
+	"stukorvi\x02Arvustused\x02tagasi\x02LADU TÜHI\x02Registreeri\x02parooli " +
+	"kontroll\x02Kas sul on juba konto?\x02Tõenda tellimust\x02Hinne\x02külal" +
+	"ine\x02klient\x02administraator\x02tundmatu\x02lubatud\x02keelatud\x02Ko" +
+	"nto\x02Kasutajanimi\x02Tüüp\x022FA\x02Eelistused\x02Keel\x02Valuuta\x02M" +
+	"uuda parooli\x02Praegune parool\x02Uus parool\x02Kinnita uus parool\x02M" +
+	"uuda PGP võtit\x02Luba 2FA\x02PGP avalik võti\x02Nõutav müüjatele, soovi" +
+	"tatav kõigile.\x02Uuenda teenuse tingimusi\x02Teenuse tingimused\x02Teen" +
+	"use tingimusi kasutatakse vaidluste lahendamiseks\x02Uuenda kohaletoimet" +
+	"amise meetodeid\x02Kohaletoimetamise meetod\x02Minu piletid\x020 sekundi" +
+	"t\x02%[1]d sekundit\x02%[1]d minutit\x02%[1]d tundi\x02%[1]d päeva\x02Hi" +
+	"nnang (KESKMINE)\x02Tellimused lõpetatud\x02Tellimused deposiidis\x02Oot" +
+	"el vaidlused\x02Varem nähtud\x02PGP võti\x02Rahakott\x02See on teie XMR " +
+	"rahakott, kuhu saate münte deponeerida.\x02Saldo uuendatakse pärast 10 k" +
+	"innitust.\x02Vaata\x02lisainformatsiooni.\x02Saldo\x02Võta välja\x02Sise" +
+	"stage Monero aadress, kuhu soovite oma vahendeid välja võtta.\x02Kogume " +
+	"iga väljamakse eest %[1]f XMR tasu, et vältida rämpsposti.\x02ÄRGE võtke" +
+	" vahendeid välja teise rahakotti sellel platvormil!\x02Sihtaadress\x02Su" +
+	"mma\x02Sisestage summa kümnendvormingus (nt 1.42069)"
 
-var fi_FIIndex = []uint32{ // 239 elements
+var fi_FIIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003a, 0x00000063, 0x0000007a,
 	0x00000092, 0x000000ae, 0x000000c0, 0x000000d8,
 	0x000000eb, 0x00000115, 0x0000012b, 0x0000014d,
-	0x0000016b, 0x0000017a, 0x00000190, 0x000001a4,
-	0x000001c1, 0x000001f8, 0x00000250, 0x0000025d,
-	0x00000280, 0x0000029f, 0x000002b9, 0x000002c8,
-	0x000002d8, 0x0000032a, 0x00000386, 0x000003af,
-	0x000003dc, 0x000003f2, 0x00000417, 0x00000461,
+	0x00000167, 0x00000176, 0x0000018c, 0x000001a0,
+	0x000001bd, 0x000001f4, 0x0000024c, 0x00000259,
+	0x00000276, 0x00000299, 0x000002b8, 0x000002d2,
+	0x000002e1, 0x000002f1, 0x00000343, 0x0000039f,
+	0x000003c8, 0x000003f5, 0x0000040b, 0x00000430,
 	// Entry 20 - 3F
-	0x00000491, 0x000004aa, 0x000004c1, 0x0000050e,
-	0x00000522, 0x00000548, 0x00000559, 0x0000056c,
-	0x00000582, 0x000005c1, 0x000005d8, 0x00000651,
-	0x00000669, 0x000006aa, 0x000006be, 0x000006ec,
-	0x00000708, 0x00000768, 0x0000077e, 0x000008da,
-	0x000008fc, 0x0000096e, 0x000009c5, 0x00000aed,
-	0x00000b19, 0x00000b99, 0x00000b9f, 0x00000bad,
-	0x00000bdd, 0x00000c5c, 0x00000caf, 0x00000d11,
+	0x0000047a, 0x000004aa, 0x000004c3, 0x000004da,
+	0x00000527, 0x0000053b, 0x00000561, 0x00000572,
+	0x00000585, 0x0000059b, 0x000005da, 0x000005f1,
+	0x0000066a, 0x00000682, 0x000006c3, 0x000006d7,
+	0x00000705, 0x00000721, 0x00000781, 0x00000797,
+	0x000008f3, 0x00000915, 0x00000987, 0x000009de,
+	0x00000b06, 0x00000b32, 0x00000bb2, 0x00000bb8,
+	0x00000bc6, 0x00000bf6, 0x00000c52, 0x00000c87,
 	// Entry 40 - 5F
-	0x00000d1e, 0x00000d77, 0x00000d8d, 0x00000de3,
-	0x00000df7, 0x00000e42, 0x00000e61, 0x00000ead,
-	0x00000eb5, 0x00000edc, 0x00000ee5, 0x00000eef,
-	0x00000efa, 0x00000f07, 0x00000f25, 0x00000f34,
-	0x00000f6f, 0x00000fb5, 0x00000fbd, 0x00000fc4,
-	0x00000fce, 0x00001027, 0x00001031, 0x0000103f,
-	0x0000104b, 0x00001053, 0x0000107c, 0x00001088,
-	0x000010b4, 0x000010dd, 0x000010e6, 0x000010ec,
+	0x00000c94, 0x00000ced, 0x00000d03, 0x00000d59,
+	0x00000d6d, 0x00000db8, 0x00000dd7, 0x00000e23,
+	0x00000e2b, 0x00000e52, 0x00000e5b, 0x00000e65,
+	0x00000e70, 0x00000e7d, 0x00000e9b, 0x00000eaa,
+	0x00000ef0, 0x00000ef8, 0x00000eff, 0x00000f09,
+	0x00000f62, 0x00000f6c, 0x00000f7a, 0x00000f86,
+	0x00000f8e, 0x00000fb7, 0x00000fc3, 0x00000fef,
+	0x00001018, 0x00001021, 0x00001027, 0x00001031,
 	// Entry 60 - 7F
-	0x000010f6, 0x000010fb, 0x00001100, 0x00001107,
-	0x00001110, 0x00001117, 0x0000111d, 0x00001125,
-	0x0000112a, 0x0000112e, 0x00001135, 0x00001147,
-	0x00001154, 0x00001159, 0x00001167, 0x0000117a,
-	0x00001183, 0x0000118b, 0x00001194, 0x0000119e,
-	0x000011a2, 0x000011a7, 0x000011b5, 0x000011c7,
-	0x000011d5, 0x000011f4, 0x00001280, 0x00001291,
-	0x000012a3, 0x000012b3, 0x000012bc, 0x000012ca,
+	0x00001036, 0x0000103b, 0x00001042, 0x0000104b,
+	0x00001052, 0x00001058, 0x00001060, 0x00001065,
+	0x00001069, 0x00001070, 0x00001082, 0x0000108f,
+	0x00001094, 0x000010a2, 0x000010b5, 0x000010be,
+	0x000010c6, 0x000010cf, 0x000010d9, 0x000010dd,
+	0x000010e2, 0x000010f0, 0x00001102, 0x00001110,
+	0x0000112f, 0x000011bb, 0x000011cc, 0x000011de,
+	0x000011ee, 0x000011f7, 0x00001205, 0x00001213,
 	// Entry 80 - 9F
-	0x000012d8, 0x000012f3, 0x000012f9, 0x00001304,
-	0x00001309, 0x00001310, 0x0000131d, 0x0000132f,
-	0x0000133f, 0x0000134a, 0x0000136a, 0x0000138d,
-	0x0000139c, 0x000013bf, 0x000013c8, 0x000013d1,
-	0x000013e5, 0x00001417, 0x00001471, 0x000014cf,
-	0x0000151f, 0x00001551, 0x000015c0, 0x00001607,
-	0x00001612, 0x0000164d, 0x00001684, 0x000016d9,
-	0x000016f5, 0x00001702, 0x00001709, 0x00001748,
+	0x0000122e, 0x00001234, 0x0000123f, 0x00001244,
+	0x0000124b, 0x00001258, 0x0000126a, 0x0000127a,
+	0x00001285, 0x000012a5, 0x000012c8, 0x000012d7,
+	0x000012fa, 0x00001303, 0x0000130c, 0x00001320,
+	0x00001352, 0x000013ac, 0x0000140a, 0x0000145a,
+	0x0000148c, 0x000014fb, 0x00001542, 0x0000154d,
+	0x00001588, 0x000015bf, 0x00001614, 0x00001630,
+	0x0000163d, 0x00001644, 0x00001683, 0x0000168b,
 	// Entry A0 - BF
-	0x00001750, 0x00001781, 0x000017bf, 0x000017d3,
-	0x000017dc, 0x000017f4, 0x000017fa, 0x00001809,
-	0x00001834, 0x00001873, 0x000018cf, 0x000018e0,
-	0x000018f6, 0x00001900, 0x0000191e, 0x00001938,
-	0x0000193e, 0x0000194e, 0x00001958, 0x0000196c,
-	0x00001977, 0x0000197e, 0x0000198f, 0x0000199d,
-	0x000019b1, 0x000019c7, 0x000019d7, 0x000019e0,
-	0x000019e7, 0x000019ef, 0x000019fd, 0x00001a08,
+	0x000016bc, 0x000016fa, 0x0000170e, 0x00001717,
+	0x0000172f, 0x00001735, 0x00001744, 0x0000176f,
+	0x000017ae, 0x0000180a, 0x0000181b, 0x00001831,
+	0x0000183b, 0x00001859, 0x00001873, 0x00001879,
+	0x00001889, 0x00001893, 0x000018a7, 0x000018b2,
+	0x000018b9, 0x000018ca, 0x000018d8, 0x000018ec,
+	0x00001902, 0x00001912, 0x0000191b, 0x00001922,
+	0x0000192a, 0x00001938, 0x00001943, 0x0000194f,
 	// Entry C0 - DF
-	0x00001a14, 0x00001a25, 0x00001a2a, 0x00001a3a,
-	0x00001a41, 0x00001a45, 0x00001a4f, 0x00001a55,
-	0x00001a5e, 0x00001a6e, 0x00001a80, 0x00001a8e,
-	0x00001aa5, 0x00001ab6, 0x00001aca, 0x00001add,
-	0x00001b09, 0x00001b22, 0x00001b2d, 0x00001b53,
-	0x00001b6b, 0x00001b78, 0x00001b83, 0x00001b8e,
-	0x00001b9d, 0x00001bad, 0x00001bba, 0x00001bca,
-	0x00001be3, 0x00001bf8, 0x00001c10, 0x00001c23,
+	0x00001960, 0x00001965, 0x00001975, 0x0000197c,
+	0x00001980, 0x0000198a, 0x00001990, 0x00001999,
+	0x000019a9, 0x000019bb, 0x000019c9, 0x000019e0,
+	0x000019f1, 0x00001a05, 0x00001a18, 0x00001a44,
+	0x00001a5c, 0x00001a6a, 0x00001a9e, 0x00001ab6,
+	0x00001ac3, 0x00001ace, 0x00001ad9, 0x00001ae8,
+	0x00001af8, 0x00001b05, 0x00001b15, 0x00001b2e,
+	0x00001b43, 0x00001b5b, 0x00001b6e, 0x00001b7d,
 	// Entry E0 - FF
-	0x00001c32, 0x00001c3c, 0x00001c45, 0x00001c85,
-	0x00001cb0, 0x00001cb5, 0x00001cca, 0x00001cd0,
-	0x00001cd6, 0x00001d09, 0x00001d52, 0x00001d8b,
-	0x00001d97, 0x00001da0, 0x00001dd3,
-} // Size: 980 bytes
+	0x00001b87, 0x00001b90, 0x00001bd0, 0x00001bfb,
+	0x00001c00, 0x00001c15, 0x00001c1b, 0x00001c21,
+	0x00001c54, 0x00001c9e, 0x00001cd7, 0x00001ce3,
+	0x00001cec, 0x00001d1f,
+} // Size: 976 bytes
 
-const fi_FIData string = "" + // Size: 7635 bytes
+const fi_FIData string = "" + // Size: 7455 bytes
 	"\x02Porttia ei voitu avata: virheellisiä puuttuvia merkkejä\x02Tämä käyt" +
 	"täjänimi on jo käytössä\x02Virheellinen PGP-avain\x02Rekisteröinti onnis" +
 	"tui\x02Virheelliset tunnistetiedot\x02Tilisi on estetty\x02Virheellinen " +
 	"2FA-tunnus\x02Salasana vaihdettu\x02Et voi päivittää nykyiseen avaimesee" +
-	"si\x02PGP-avain on asetettu\x02PGP-julkinen avain on päivitetty\x02Myyjä" +
-	"n tiedot on päivitetty\x02Ilmoitus luotu\x02Ostoskori päivitetty\x02osto" +
-	"skori poistettu\x02Et voi tilata myyjätililtä\x02Sinulla ei ole tarpeeks" +
-	"i saldoa tätä tilausta varten\x02Ole hyvä ja maksa alla oleva lasku %[1]" +
-	"d tunnin kuluessa, jotta tilauksesi voi edetä.\x02Tilaus luotu\x02Ei tar" +
-	"peeksi saldoa nostettavaksi.\x02Et voi nostaa omalle tilillesi\x02Nosto " +
-	"%[1]s XMR aloitettu\x02Tilaus peruttu\x02Arvostelu luotu\x02Et voi piden" +
-	"tää AF-ajastinta ennen kuin tilausta on lähetetty %[1]d päivää.\x02Et vo" +
-	"i uudelleen pidentää AF-ajastinta ennen kuin tilausta on lähetetty %[1]d" +
-	" päivää.\x02AF-ajastinta on jo pidennetty maksimiin.\x02AF-ajastinta on " +
-	"pidennetty %[1]d päivällä\x02Tilausta kiistetään\x022FA on otettava käyt" +
-	"töön myyjille\x02Myyjätilillä ei voi olla aiempia tilauksia. Ole hyvä ja" +
-	" luo uusi tili.\x02Uusilta myyjiltä vaaditaan todiste varastosta.\x02Ei " +
-	"riittävästi saldoa.\x02Hakemus vastaanotettu.\x02Tilauksesi on hyväksytt" +
-	"y. Sinulla on %[1]d tuntia merkitä se lähetetyksi.\x02Tilauksen hylkäys." +
-	"\x02Tilauksen tila merkitty lähetetyksi.\x02Tuote poistettu.\x02Tuote pä" +
-	"ivitetty.\x02Lippu on jo suljettu.\x02Sinun on kirjauduttava sisään pääs" +
-	"täksesi tälle sivulle.\x02Tilauksen vastaanotto.\x02Olet saanut uuden ti" +
-	"lauksen!\x0aSinulla on yhteensä %[1]d tuntia hyväksyä se, ennen kuin se " +
-	"hylätään automaattisesti.\x02Tilauksen hyväksyntä.\x02Tilauksesi on hyvä" +
-	"ksytty!\x0aVoit seurata sen tilaa tilaussivulta.\x02Tilauksen lähetys." +
-	"\x02Tilauksesi on lähetetty!\x0aMuista arvioida se.\x02Miten voin tulla " +
-	"myyjäksi?\x02Luo tili, jossa on kaksivaiheinen todennus (2FA) käytössä, " +
-	"ja lähetä sitten myyjähakemus.\x02Miten teen tilauksen?\x02Lisää haluama" +
-	"si tuotteet ostoskoriisi. Siirry osoitteeseen /cart ja valitse \x22Kassa" +
-	"\x22, valitse haluamasi toimitustapa ja anna tarvittavat tiedot.\x0aJos " +
-	"sinulla on käytettävissä olevaa saldoa, voit käyttää sitä kassalla. Muus" +
-	"sa tapauksessa voit pyytää laskua. Laskut on maksettava %[1]d tunnin kul" +
-	"uessa, jotta tilaus voi jatkaa käsittelyä.\x02Miten voin hankkia Moneroa" +
-	" (XMR)?\x02Moneron hankkimiseen on useita tapoja. Vieraile getmonero.org" +
-	"-sivustolla virallisia ohjeita ja resursseja varten.\x02Mitä minun pitäi" +
-	"si tehdä, jos tilaukseni ei ole saapunut tai se ei vastaa kuvausta?\x02T" +
-	"ilaukset viimeistellään automaattisesti %[1]d päivän jälkeen.\x0aVoit pi" +
-	"dentää automaattista viimeistelyaikaa kahdesti.\x0aJos tilaus ei ole saa" +
-	"punut näiden pidennysten jälkeen, sinun tulee avata riita.\x0aTiimimme t" +
-	"arkistaa tapauksen ja tekee päätöksen saatavilla olevan tiedon perusteel" +
-	"la.\x02Mitä saan myydä tässä markkinapaikassa?\x02Vain lailliset tuottee" +
-	"t ovat sallittuja. Jos et ole varma, kelpaako tuotteesi, ota meihin yhte" +
-	"yttä ennen ilmoituksen luomista.\x02Avoin\x02Myyjähakemus\x02Tililläsi e" +
-	"i ole 2FA-ominaisuutta käytössä!\x02Sovellus on ilmainen käyttäjille, jo" +
-	"tka ovat jo myyjiä jollakin muulla markkinapaikalla, joka käyttää samaa " +
-	"PGP-avainta.\x02Muille käyttäjille sovelluksen hinta on %[1]s XMR, eikä " +
-	"se ole palautettavissa.\x02Sinun on esitettävä todiste siitä, että sinul" +
-	"la on oikeasti tuotteita myytävänä täällä.\x02Myyjän logo\x02Käytä png-k" +
-	"uvaa, jonka suhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi." +
-	"\x02Olemassa oleva myyjä\x02Valitse tämä, jos olet jo myyjä jollakin muu" +
-	"lla markkinapaikalla, kuten xmrBazaar.\x02Todistus varastosta\x02Selkeä " +
-	"kuva varastostasi, jossa näkyvät käyttäjänimesi ja aikaleima.\x02Markkin" +
-	"at ja käyttäjänimesi\x02Luettele markkinat, joissa olet myyjä, ja liitä " +
-	"mukaan käyttäjänimesi.\x02Captcha\x02Napsauta ympyrää, jossa on leikkaus" +
-	".\x02Lähetä\x02Yhteensä\x02Maksaminen\x02toimitustapa\x02Käytä lompakkoa" +
-	" maksamiseen\x02yksityiskohdat\x02Käytä oikeaa osoitettasi, samalla form" +
-	"aatilla kuin alla.\x02Salaamattomat tiedot salataan automaattisesti käyt" +
-	"täjän avaimella.\x02Otsikko\x02Kuvaus\x02Tuotekuva\x02Käytä kuvaa, jonka" +
-	" kuvasuhde on lähellä 1:1 optimaalisen ulkonäön saavuttamiseksi.\x02Kate" +
-	"goria\x02Lähetetään\x02Toimitetaan\x02Varasto\x02Tämän tuotteen nykyisen" +
-	" varaston koko.\x02Hinnoittelu\x02Täällä voit määrittää hinnoittelusi." +
-	"\x02Otamme 5 % komission näistä hinnoista.\x02Määrä\x02Hinta\x02Luo lipp" +
-	"u\x02Aihe\x02tili\x02tilaus\x02lompakko\x02myyjä\x02tuote\x02ehdotus\x02" +
-	"vika\x02muu\x02Viesti\x02Henkilöstön PGP\x02Vaihtokurssi\x02Aika\x04\x00" +
-	"\x01 \x09\x02Myyjät:\x04\x00\x01 \x0e\x02Käyttäjät:\x02lähetä\x02Vastaus" +
-	"\x02tuotteet\x02tilaukset\x02myy\x02tuki\x02Kirjaudu ulos\x02kirjaudu si" +
-	"sään\x02rekisteröidy\x02Sisäänkäynnin vartija %[1]s\x02Vertaile käyttämä" +
-	"äsi URL-osoitetta alla olevan kuvan URL-osoitteen kanssa löytääksesi ka" +
-	"ikki puuttuvat merkit, jotka on merkitty '*'\x02Puuttuvat merkit\x02Kirj" +
-	"audu sisään\x02käyttäjänimi\x02salasana\x02Luo uusi tili\x02Poista kaikk" +
-	"i\x02Sinulla ei ole ilmoituksia\x02Tilaa\x02Keskustelu\x02Tila\x02Myyjä" +
-	"\x02Toimitustapa\x02Kokonaiskustannus\x02Päivämäärä\x02Lähetetty\x02Kunn" +
-	"es automaattisesti hylätty\x02Kunnes automaattisesti vahvistettu\x02Yksi" +
-	"tyiskohdat\x02Myyjä tarjosi hyvityksen %.2[1]f%\x02Hyväksy\x02Hylkää\x02" +
-	"Asiakkaan PGP-avain\x02Asiakas voi edelleen peruuttaa tämän tilauksen!" +
-	"\x02Sinun on hyväksyttävä se kahden päivän kuluessa, tai se hylätään aut" +
-	"omaattisesti.\x02Hyväksymisen jälkeen asiakas ei voi enää peruuttaa, jot" +
-	"en voit turvallisesti lähettää.\x02Ole hyvä ja tarkista alla oleva tilau" +
-	"s huolellisesti ennen sen hyväksymistä.\x02Hylkää aina tilaukset, joita " +
-	"et voi täyttää.\x02Sinun on merkittävä tämä tilaus lähetetyksi kahden pä" +
-	"ivän kuluessa, tai se hylätään automaattisesti.\x02Varmista, että sinull" +
-	"a on tarpeeksi aikaa tehdä todellinen lähetys!\x02Lähetetty\x02Siirrä ta" +
-	"rkka määrä Moneroa alla olevaan osoitteeseen.\x0210 vahvistuksen jälkeen" +
-	" tilauksesi siirtyy myyjälle.\x02Sinulla on yhteensä 3 tuntia aikaa maks" +
-	"aa tämä lasku, tai tilauksesi peruutetaan.\x02Aika jäljellä maksamiseen" +
-	"\x02Määrä XMR\x02Osoite\x02Tilaukset voidaan peruuttaa, kunnes myyjä on " +
-	"hyväksynyt sen.\x02Peruuta\x04\x00\x01 ,\x02Tilauksesi viimeistellään au" +
-	"tomaattisesti\x02Voit pidentää automaattista viimeistelyaikaa 7 päivällä" +
-	".\x02tarkista tilauksesi\x02Tarkista\x02Pidentää AF-ajastinta\x02Riita" +
-	"\x02Hyvitystarjous\x02Asiakas on riitauttanut tämän tilauksen.\x02Käytä " +
-	"alla olevaa chattia keskustellaksesi tästä riidasta.\x02Voit luoda hyvit" +
-	"ystarjouksen ja ratkaista tämän riidan ilman ylläpitäjän väliintuloa." +
-	"\x02Hyvitysprosentti\x02Tilauspäivämäärä\x02Tilaus ID\x02Todistus avaime" +
-	"n omistuksesta\x02Purkaa saadaksesi tokenin\x02Token\x02Päivitä tuote" +
-	"\x02Päivitä\x02Lisää ostoskoriin\x02Arvostelut\x02sitten\x02Loppu varast" +
-	"osta\x02Rekisteröidy\x02salasanan tarkistus\x02Onko sinulla jo tili?\x02" +
-	"Tarkista tilaus\x02Arvosana\x02vieras\x02asiakas\x02ylläpitäjä\x02tuntem" +
-	"aton\x02käytössä\x02pois käytöstä\x02Tili\x02Käyttäjänimi\x02Tyyppi\x022" +
-	"FA\x02Asetukset\x02Kieli\x02Valuutta\x02Vaihda salasana\x02Nykyinen sala" +
-	"sana\x02Uusi salasana\x02Vahvista uusi salasana\x02Vaihda PGP-avain\x02O" +
-	"ta 2FA käyttöön\x02PGP-julkinen avain\x02Vaaditaan myyjiltä, suositellaa" +
-	"n kaikille.\x02Päivitä myyjäprofiili\x02Myyjäinfo\x02Jätä tyhjäksi, jott" +
-	"a et päivitä.\x02Päivitä toimitustavat\x02Toimitustapa\x02Omat liput\x02" +
-	"0 sekuntia\x02%[1]d sekuntia\x02%[1]d minuuttia\x02%[1]d tuntia\x02%[1]d" +
-	" päivää\x02Arvosana (Keskimäärin)\x02Tilaukset suoritettu\x02Tilaukset t" +
-	"alletuksessa\x02Odotettavat riidat\x02Aiemmin nähty\x02PGP-avain\x02Lomp" +
-	"akko\x02Tämä on sinun XMR-lompakkosi, johon voit tallettaa kolikoita." +
-	"\x02Saldo päivittyy 10 vahvistuksen jälkeen.\x02Näe\x02lisätietoja varte" +
-	"n.\x02Saldo\x02Nosta\x02Syötä Monero-osoite, johon haluat nostaa varasi." +
-	"\x02Keräämme 0.01 XMR maksun jokaisesta nostosta roskapostin estämiseksi" +
-	".\x02ÄLÄ nosta varoja toiseen lompakkoon tällä alustalla!\x02Kohdeosoite" +
-	"\x02Määrä\x02Syötä määrä desimaalimuodossa (esim. 1.42069)"
+	"si\x02PGP-avain on asetettu\x02PGP-julkinen avain on päivitetty\x02Käytt" +
+	"öehdot päivitetty\x02Ilmoitus luotu\x02Ostoskori päivitetty\x02ostoskor" +
+	"i poistettu\x02Et voi tilata myyjätililtä\x02Sinulla ei ole tarpeeksi sa" +
+	"ldoa tätä tilausta varten\x02Ole hyvä ja maksa alla oleva lasku %[1]d tu" +
+	"nnin kuluessa, jotta tilauksesi voi edetä.\x02Tilaus luotu\x02Nostomäärä" +
+	" on liian pieni\x02Ei tarpeeksi saldoa nostettavaksi.\x02Et voi nostaa o" +
+	"malle tilillesi\x02Nosto %[1]s XMR aloitettu\x02Tilaus peruttu\x02Arvost" +
+	"elu luotu\x02Et voi pidentää AF-ajastinta ennen kuin tilausta on lähetet" +
+	"ty %[1]d päivää.\x02Et voi uudelleen pidentää AF-ajastinta ennen kuin ti" +
+	"lausta on lähetetty %[1]d päivää.\x02AF-ajastinta on jo pidennetty maksi" +
+	"miin.\x02AF-ajastinta on pidennetty %[1]d päivällä\x02Tilausta kiistetää" +
+	"n\x022FA on otettava käyttöön myyjille\x02Myyjätilillä ei voi olla aiemp" +
+	"ia tilauksia. Ole hyvä ja luo uusi tili.\x02Uusilta myyjiltä vaaditaan t" +
+	"odiste varastosta.\x02Ei riittävästi saldoa.\x02Hakemus vastaanotettu." +
+	"\x02Tilauksesi on hyväksytty. Sinulla on %[1]d tuntia merkitä se lähetet" +
+	"yksi.\x02Tilauksen hylkäys.\x02Tilauksen tila merkitty lähetetyksi.\x02T" +
+	"uote poistettu.\x02Tuote päivitetty.\x02Lippu on jo suljettu.\x02Sinun o" +
+	"n kirjauduttava sisään päästäksesi tälle sivulle.\x02Tilauksen vastaanot" +
+	"to.\x02Olet saanut uuden tilauksen!\x0aSinulla on yhteensä %[1]d tuntia " +
+	"hyväksyä se, ennen kuin se hylätään automaattisesti.\x02Tilauksen hyväks" +
+	"yntä.\x02Tilauksesi on hyväksytty!\x0aVoit seurata sen tilaa tilaussivul" +
+	"ta.\x02Tilauksen lähetys.\x02Tilauksesi on lähetetty!\x0aMuista arvioida" +
+	" se.\x02Miten voin tulla myyjäksi?\x02Luo tili, jossa on kaksivaiheinen " +
+	"todennus (2FA) käytössä, ja lähetä sitten myyjähakemus.\x02Miten teen ti" +
+	"lauksen?\x02Lisää haluamasi tuotteet ostoskoriisi. Siirry osoitteeseen /" +
+	"cart ja valitse \x22Kassa\x22, valitse haluamasi toimitustapa ja anna ta" +
+	"rvittavat tiedot.\x0aJos sinulla on käytettävissä olevaa saldoa, voit kä" +
+	"yttää sitä kassalla. Muussa tapauksessa voit pyytää laskua. Laskut on ma" +
+	"ksettava %[1]d tunnin kuluessa, jotta tilaus voi jatkaa käsittelyä.\x02M" +
+	"iten voin hankkia Moneroa (XMR)?\x02Moneron hankkimiseen on useita tapoj" +
+	"a. Vieraile getmonero.org-sivustolla virallisia ohjeita ja resursseja va" +
+	"rten.\x02Mitä minun pitäisi tehdä, jos tilaukseni ei ole saapunut tai se" +
+	" ei vastaa kuvausta?\x02Tilaukset viimeistellään automaattisesti %[1]d p" +
+	"äivän jälkeen.\x0aVoit pidentää automaattista viimeistelyaikaa kahdesti" +
+	".\x0aJos tilaus ei ole saapunut näiden pidennysten jälkeen, sinun tulee " +
+	"avata riita.\x0aTiimimme tarkistaa tapauksen ja tekee päätöksen saatavil" +
+	"la olevan tiedon perusteella.\x02Mitä saan myydä tässä markkinapaikassa?" +
+	"\x02Vain lailliset tuotteet ovat sallittuja. Jos et ole varma, kelpaako " +
+	"tuotteesi, ota meihin yhteyttä ennen ilmoituksen luomista.\x02Avoin\x02M" +
+	"yyjähakemus\x02Tililläsi ei ole 2FA-ominaisuutta käytössä!\x02Sovellus o" +
+	"n ilmainen käyttäjille, jotka ovat jo myyjiä jollakin muulla markkinapai" +
+	"kalla.\x02Muille käyttäjille sovelluksen hinta on %[1]s XMR.\x02Myyjän l" +
+	"ogo\x02Käytä png-kuvaa, jonka suhde on lähellä 1:1 optimaalisen ulkonäön" +
+	" saavuttamiseksi.\x02Olemassa oleva myyjä\x02Valitse tämä, jos olet jo m" +
+	"yyjä jollakin muulla markkinapaikalla, kuten xmrBazaar.\x02Todistus vara" +
+	"stosta\x02Selkeä kuva varastostasi, jossa näkyvät käyttäjänimesi ja aika" +
+	"leima.\x02Markkinat ja käyttäjänimesi\x02Luettele markkinat, joissa olet" +
+	" myyjä, ja liitä mukaan käyttäjänimesi.\x02Captcha\x02Napsauta ympyrää, " +
+	"jossa on leikkaus.\x02Lähetä\x02Yhteensä\x02Maksaminen\x02toimitustapa" +
+	"\x02Käytä lompakkoa maksamiseen\x02yksityiskohdat\x02Salaamattomat tiedo" +
+	"t salataan automaattisesti käyttäjän avaimella.\x02Otsikko\x02Kuvaus\x02" +
+	"Tuotekuva\x02Käytä kuvaa, jonka kuvasuhde on lähellä 1:1 optimaalisen ul" +
+	"konäön saavuttamiseksi.\x02Kategoria\x02Lähetetään\x02Toimitetaan\x02Var" +
+	"asto\x02Tämän tuotteen nykyisen varaston koko.\x02Hinnoittelu\x02Täällä " +
+	"voit määrittää hinnoittelusi.\x02Otamme 5 % komission näistä hinnoista." +
+	"\x02Määrä\x02Hinta\x02Luo lippu\x02Aihe\x02tili\x02tilaus\x02lompakko" +
+	"\x02myyjä\x02tuote\x02ehdotus\x02vika\x02muu\x02Viesti\x02Henkilöstön PG" +
+	"P\x02Vaihtokurssi\x02Aika\x04\x00\x01 \x09\x02Myyjät:\x04\x00\x01 \x0e" +
+	"\x02Käyttäjät:\x02lähetä\x02Vastaus\x02tuotteet\x02tilaukset\x02myy\x02t" +
+	"uki\x02Kirjaudu ulos\x02kirjaudu sisään\x02rekisteröidy\x02Sisäänkäynnin" +
+	" vartija %[1]s\x02Vertaile käyttämääsi URL-osoitetta alla olevan kuvan U" +
+	"RL-osoitteen kanssa löytääksesi kaikki puuttuvat merkit, jotka on merkit" +
+	"ty '*'\x02Puuttuvat merkit\x02Kirjaudu sisään\x02käyttäjänimi\x02salasan" +
+	"a\x02Luo uusi tili\x02Poista kaikki\x02Sinulla ei ole ilmoituksia\x02Til" +
+	"aa\x02Keskustelu\x02Tila\x02Myyjä\x02Toimitustapa\x02Kokonaiskustannus" +
+	"\x02Päivämäärä\x02Lähetetty\x02Kunnes automaattisesti hylätty\x02Kunnes " +
+	"automaattisesti vahvistettu\x02Yksityiskohdat\x02Myyjä tarjosi hyvitykse" +
+	"n %.2[1]f%\x02Hyväksy\x02Hylkää\x02Asiakkaan PGP-avain\x02Asiakas voi ed" +
+	"elleen peruuttaa tämän tilauksen!\x02Sinun on hyväksyttävä se kahden päi" +
+	"vän kuluessa, tai se hylätään automaattisesti.\x02Hyväksymisen jälkeen a" +
+	"siakas ei voi enää peruuttaa, joten voit turvallisesti lähettää.\x02Ole " +
+	"hyvä ja tarkista alla oleva tilaus huolellisesti ennen sen hyväksymistä." +
+	"\x02Hylkää aina tilaukset, joita et voi täyttää.\x02Sinun on merkittävä " +
+	"tämä tilaus lähetetyksi kahden päivän kuluessa, tai se hylätään automaat" +
+	"tisesti.\x02Varmista, että sinulla on tarpeeksi aikaa tehdä todellinen l" +
+	"ähetys!\x02Lähetetty\x02Siirrä tarkka määrä Moneroa alla olevaan osoitt" +
+	"eeseen.\x0210 vahvistuksen jälkeen tilauksesi siirtyy myyjälle.\x02Sinul" +
+	"la on yhteensä 3 tuntia aikaa maksaa tämä lasku, tai tilauksesi peruutet" +
+	"aan.\x02Aika jäljellä maksamiseen\x02Määrä XMR\x02Osoite\x02Tilaukset vo" +
+	"idaan peruuttaa, kunnes myyjä on hyväksynyt sen.\x02Peruuta\x04\x00\x01 " +
+	",\x02Tilauksesi viimeistellään automaattisesti\x02Voit pidentää automaat" +
+	"tista viimeistelyaikaa 7 päivällä.\x02tarkista tilauksesi\x02Tarkista" +
+	"\x02Pidentää AF-ajastinta\x02Riita\x02Hyvitystarjous\x02Asiakas on riita" +
+	"uttanut tämän tilauksen.\x02Käytä alla olevaa chattia keskustellaksesi t" +
+	"ästä riidasta.\x02Voit luoda hyvitystarjouksen ja ratkaista tämän riida" +
+	"n ilman ylläpitäjän väliintuloa.\x02Hyvitysprosentti\x02Tilauspäivämäärä" +
+	"\x02Tilaus ID\x02Todistus avaimen omistuksesta\x02Purkaa saadaksesi toke" +
+	"nin\x02Token\x02Päivitä tuote\x02Päivitä\x02Lisää ostoskoriin\x02Arvoste" +
+	"lut\x02sitten\x02Loppu varastosta\x02Rekisteröidy\x02salasanan tarkistus" +
+	"\x02Onko sinulla jo tili?\x02Tarkista tilaus\x02Arvosana\x02vieras\x02as" +
+	"iakas\x02ylläpitäjä\x02tuntematon\x02käytössä\x02pois käytöstä\x02Tili" +
+	"\x02Käyttäjänimi\x02Tyyppi\x022FA\x02Asetukset\x02Kieli\x02Valuutta\x02V" +
+	"aihda salasana\x02Nykyinen salasana\x02Uusi salasana\x02Vahvista uusi sa" +
+	"lasana\x02Vaihda PGP-avain\x02Ota 2FA käyttöön\x02PGP-julkinen avain\x02" +
+	"Vaaditaan myyjiltä, suositellaan kaikille.\x02Päivitä käyttöehdot\x02Käy" +
+	"ttöehdot\x02Käyttöehtoja käytetään riitojen ratkaisemiseen\x02Päivitä to" +
+	"imitustavat\x02Toimitustapa\x02Omat liput\x020 sekuntia\x02%[1]d sekunti" +
+	"a\x02%[1]d minuuttia\x02%[1]d tuntia\x02%[1]d päivää\x02Arvosana (Keskim" +
+	"äärin)\x02Tilaukset suoritettu\x02Tilaukset talletuksessa\x02Odotettava" +
+	"t riidat\x02Aiemmin nähty\x02PGP-avain\x02Lompakko\x02Tämä on sinun XMR-" +
+	"lompakkosi, johon voit tallettaa kolikoita.\x02Saldo päivittyy 10 vahvis" +
+	"tuksen jälkeen.\x02Näe\x02lisätietoja varten.\x02Saldo\x02Nosta\x02Syötä" +
+	" Monero-osoite, johon haluat nostaa varasi.\x02Keräämme %[1]f XMR maksun" +
+	" jokaisesta nostosta roskapostin estämiseksi.\x02ÄLÄ nosta varoja toisee" +
+	"n lompakkoon tällä alustalla!\x02Kohdeosoite\x02Määrä\x02Syötä määrä des" +
+	"imaalimuodossa (esim. 1.42069)"
 
-var fr_FRIndex = []uint32{ // 239 elements
+var fr_FRIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000044, 0x0000006d, 0x0000007f,
 	0x00000094, 0x000000ab, 0x000000c2, 0x000000d5,
 	0x000000ea, 0x00000125, 0x00000137, 0x00000156,
-	0x00000180, 0x00000190, 0x000001a3, 0x000001b4,
-	0x000001e8, 0x0000021b, 0x00000279, 0x0000028a,
-	0x000002aa, 0x000002de, 0x000002fb, 0x0000030d,
-	0x00000321, 0x0000038d, 0x000003f9, 0x0000042d,
-	0x0000045d, 0x00000471, 0x0000049e, 0x00000507,
+	0x0000017d, 0x0000018d, 0x000001a0, 0x000001b1,
+	0x000001e5, 0x00000218, 0x00000276, 0x00000287,
+	0x000002ad, 0x000002cd, 0x00000301, 0x0000031e,
+	0x00000330, 0x00000344, 0x000003b0, 0x0000041c,
+	0x00000450, 0x00000480, 0x00000494, 0x000004c1,
 	// Entry 20 - 3F
-	0x00000547, 0x0000055a, 0x0000056a, 0x000005b7,
-	0x000005ca, 0x000005ee, 0x00000601, 0x00000616,
-	0x00000633, 0x0000066b, 0x0000067c, 0x00000708,
-	0x0000071c, 0x0000077b, 0x00000790, 0x000007d8,
-	0x000007f2, 0x00000863, 0x00000881, 0x00000a27,
-	0x00000a4e, 0x00000ace, 0x00000b2b, 0x00000c7a,
-	0x00000cb5, 0x00000d51, 0x00000d58, 0x00000d6b,
-	0x00000d8e, 0x00000e0e, 0x00000e66, 0x00000eba,
+	0x0000052a, 0x0000056a, 0x0000057d, 0x0000058d,
+	0x000005da, 0x000005ed, 0x00000611, 0x00000624,
+	0x00000639, 0x00000656, 0x0000068e, 0x0000069f,
+	0x0000072b, 0x0000073f, 0x0000079e, 0x000007b3,
+	0x000007fb, 0x00000815, 0x00000886, 0x000008a4,
+	0x00000a4a, 0x00000a71, 0x00000af1, 0x00000b4e,
+	0x00000c9d, 0x00000cd8, 0x00000d74, 0x00000d7b,
+	0x00000d8e, 0x00000db1, 0x00000e11, 0x00000e4f,
 	// Entry 40 - 5F
-	0x00000eca, 0x00000f14, 0x00000f25, 0x00000f80,
-	0x00000f94, 0x00000fed, 0x00001011, 0x00001060,
-	0x00001068, 0x00001090, 0x0000109a, 0x000010a0,
-	0x000010b4, 0x000010ca, 0x000010f5, 0x000010fe,
-	0x00001143, 0x0000119e, 0x000011a4, 0x000011b0,
-	0x000011c1, 0x00001210, 0x0000121b, 0x0000122c,
-	0x0000123b, 0x00001246, 0x00001275, 0x00001282,
-	0x000012a6, 0x000012d7, 0x000012e1, 0x000012e6,
+	0x00000e5f, 0x00000ea9, 0x00000eba, 0x00000f15,
+	0x00000f29, 0x00000f82, 0x00000fa6, 0x00000ff5,
+	0x00000ffd, 0x00001025, 0x0000102f, 0x00001035,
+	0x00001049, 0x0000105f, 0x0000108a, 0x00001093,
+	0x000010ee, 0x000010f4, 0x00001100, 0x00001111,
+	0x00001160, 0x0000116b, 0x0000117c, 0x0000118b,
+	0x00001196, 0x000011c5, 0x000011d2, 0x000011f6,
+	0x00001227, 0x00001231, 0x00001236, 0x00001247,
 	// Entry 60 - 7F
-	0x000012f7, 0x000012fd, 0x00001304, 0x0000130d,
-	0x0000131a, 0x00001322, 0x0000132a, 0x00001335,
-	0x00001339, 0x0000133f, 0x00001347, 0x00001358,
-	0x00001367, 0x0000136d, 0x0000137d, 0x00001391,
-	0x0000139b, 0x000013a4, 0x000013ad, 0x000013b7,
-	0x000013be, 0x000013c6, 0x000013d3, 0x000013e0,
-	0x000013eb, 0x0000140a, 0x00001489, 0x0000149f,
-	0x000014ac, 0x000014be, 0x000014cb, 0x000014e4,
+	0x0000124d, 0x00001254, 0x0000125d, 0x0000126a,
+	0x00001272, 0x0000127a, 0x00001285, 0x00001289,
+	0x0000128f, 0x00001297, 0x000012a8, 0x000012b7,
+	0x000012bd, 0x000012cd, 0x000012e1, 0x000012eb,
+	0x000012f4, 0x000012fd, 0x00001307, 0x0000130e,
+	0x00001316, 0x00001323, 0x00001330, 0x0000133b,
+	0x0000135a, 0x000013d9, 0x000013ef, 0x000013fc,
+	0x0000140e, 0x0000141b, 0x00001434, 0x00001443,
 	// Entry 80 - 9F
-	0x000014f3, 0x00001513, 0x0000151c, 0x00001521,
-	0x00001528, 0x00001530, 0x00001546, 0x00001552,
-	0x00001557, 0x00001564, 0x0000157f, 0x000015a1,
-	0x000015aa, 0x000015dd, 0x000015e6, 0x000015ee,
-	0x00001603, 0x00001632, 0x00001679, 0x000016dd,
-	0x00001729, 0x0000176a, 0x000017d1, 0x00001823,
-	0x0000182d, 0x0000186d, 0x000018af, 0x0000190c,
-	0x00001925, 0x00001931, 0x00001939, 0x0000198e,
+	0x00001463, 0x0000146c, 0x00001471, 0x00001478,
+	0x00001480, 0x00001496, 0x000014a2, 0x000014a7,
+	0x000014b4, 0x000014cf, 0x000014f1, 0x000014fa,
+	0x0000152d, 0x00001536, 0x0000153e, 0x00001553,
+	0x00001582, 0x000015c9, 0x0000162d, 0x00001679,
+	0x000016ba, 0x00001721, 0x00001773, 0x0000177d,
+	0x000017bd, 0x000017ff, 0x0000185c, 0x00001875,
+	0x00001881, 0x00001889, 0x000018de, 0x000018e6,
 	// Entry A0 - BF
-	0x00001996, 0x000019cf, 0x00001a17, 0x00001a30,
-	0x00001a3a, 0x00001a53, 0x00001a5d, 0x00001a74,
-	0x00001a9a, 0x00001ad2, 0x00001b3e, 0x00001b5b,
-	0x00001b6c, 0x00001b7b, 0x00001b9c, 0x00001bbd,
-	0x00001bc3, 0x00001bdd, 0x00001bec, 0x00001bfe,
-	0x00001c03, 0x00001c0a, 0x00001c15, 0x00001c20,
-	0x00001c3e, 0x00001c5b, 0x00001c71, 0x00001c76,
-	0x00001c7e, 0x00001c85, 0x00001c94, 0x00001c9c,
+	0x0000191f, 0x00001967, 0x00001980, 0x0000198a,
+	0x000019a3, 0x000019ad, 0x000019c4, 0x000019ea,
+	0x00001a22, 0x00001a8e, 0x00001aab, 0x00001abc,
+	0x00001acb, 0x00001aec, 0x00001b0d, 0x00001b13,
+	0x00001b2d, 0x00001b3c, 0x00001b4e, 0x00001b53,
+	0x00001b5a, 0x00001b65, 0x00001b70, 0x00001b8e,
+	0x00001bab, 0x00001bc1, 0x00001bc6, 0x00001bce,
+	0x00001bd5, 0x00001be4, 0x00001bec, 0x00001bf4,
 	// Entry C0 - DF
-	0x00001ca4, 0x00001cb0, 0x00001cb7, 0x00001cc9,
-	0x00001cce, 0x00001cd2, 0x00001ce0, 0x00001ce7,
-	0x00001cee, 0x00001d06, 0x00001d1a, 0x00001d2f,
-	0x00001d51, 0x00001d65, 0x00001d71, 0x00001d83,
-	0x00001dbb, 0x00001ddf, 0x00001dfb, 0x00001e24,
-	0x00001e4e, 0x00001e64, 0x00001e70, 0x00001e7b,
-	0x00001e8a, 0x00001e98, 0x00001ea5, 0x00001eb1,
-	0x00001ec4, 0x00001ed9, 0x00001ef1, 0x00001f04,
+	0x00001c00, 0x00001c07, 0x00001c19, 0x00001c1e,
+	0x00001c22, 0x00001c30, 0x00001c37, 0x00001c3e,
+	0x00001c56, 0x00001c6a, 0x00001c7f, 0x00001ca1,
+	0x00001cb5, 0x00001cc1, 0x00001cd3, 0x00001d0b,
+	0x00001d37, 0x00001d50, 0x00001d98, 0x00001dc2,
+	0x00001dd8, 0x00001de4, 0x00001def, 0x00001dfe,
+	0x00001e0c, 0x00001e19, 0x00001e25, 0x00001e38,
+	0x00001e4d, 0x00001e65, 0x00001e78, 0x00001e8a,
 	// Entry E0 - FF
-	0x00001f16, 0x00001f1f, 0x00001f2c, 0x00001f72,
-	0x00001fa4, 0x00001fa9, 0x00001fc3, 0x00001fc9,
-	0x00001fd1, 0x00002011, 0x00002066, 0x000020b0,
-	0x000020c7, 0x000020cf, 0x0000210b,
-} // Size: 980 bytes
+	0x00001e93, 0x00001ea0, 0x00001ee6, 0x00001f18,
+	0x00001f1d, 0x00001f37, 0x00001f3d, 0x00001f45,
+	0x00001f85, 0x00001fdb, 0x00002025, 0x0000203c,
+	0x00002044, 0x00002080,
+} // Size: 976 bytes
 
-const fr_FRData string = "" + // Size: 8459 bytes
+const fr_FRData string = "" + // Size: 8320 bytes
 	"\x02Échec de l'ouverture de la porte : caractères manquants invalides" +
 	"\x02Ce nom d'utilisateur est déjà utilisé\x02Clé PGP invalide\x02Inscrip" +
 	"tion réussie\x02Identifiants invalides\x02Votre compte est banni\x02Jeto" +
 	"n 2FA invalide\x02Mot de passe changé\x02Vous ne pouvez pas mettre à jou" +
 	"r vers votre clé actuelle\x02Clé PGP définie\x02Clé publique PGP mise à " +
-	"jour\x02Informations sur le vendeur mises à jour\x02Annonce créée\x02Pan" +
-	"ier mis à jour\x02panier supprimé\x02Vous ne pouvez pas commander avec u" +
-	"n compte vendeur\x02Vous n'avez pas assez de solde pour cette commande" +
-	"\x02Veuillez payer la facture ci-dessous dans %[1]d heures pour que votr" +
-	"e commande soit traitée.\x02Commande créée\x02Solde insuffisant pour ret" +
-	"irer.\x02Vous ne pouvez pas retirer vers votre propre compte\x02Retrait " +
-	"de %[1]s XMR initié\x02Commande annulée\x02Évaluation créée\x02Vous ne p" +
-	"ouvez pas prolonger le minuteur AF avant que la commande ait été expédié" +
-	"e pendant %[1]d jours.\x02Vous ne pouvez pas rétablir le minuteur AF ava" +
-	"nt que la commande ait été expédiée pendant %[1]d jours.\x02Le minuteur " +
-	"AF a déjà été prolongé au maximum.\x02Le minuteur AF a été prolongé de %" +
-	"[1]d jours\x02Commande contestée\x02La 2FA doit être activée pour les ve" +
-	"ndeurs\x02Les comptes vendeurs ne peuvent pas avoir de commandes précéde" +
-	"ntes. Veuillez créer un nouveau compte.\x02Une preuve d'inventaire est r" +
-	"equise pour les nouveaux vendeurs.\x02Solde insuffisant.\x02Demande reçu" +
-	"e.\x02Commande acceptée. Vous avez %[1]d heures pour la marquer comme ex" +
-	"pédiée.\x02Commande refusée.\x02Commande marquée comme expédiée.\x02Prod" +
-	"uit supprimé.\x02Produit mis à jour.\x02Le ticket est déjà fermé.\x02Vou" +
-	"s devez être connecté pour accéder à cette page.\x02Commande reçue.\x02V" +
-	"ous avez reçu une nouvelle commande !\x0aVous avez un total de %[1]d heu" +
-	"res pour l'accepter, avant qu'elle ne soit automatiquement refusée.\x02C" +
-	"ommande acceptée.\x02Votre commande a été acceptée !\x0aVous pouvez suiv" +
-	"re son statut depuis la page des commandes.\x02Commande expédiée.\x02Vot" +
-	"re commande a été expédiée !\x0aVeuillez vous souvenir de la noter.\x02C" +
-	"omment devenir vendeur ?\x02Créez un compte avec l'authentification à de" +
-	"ux facteurs (2FA) activée, puis soumettez une demande de vendeur.\x02Com" +
-	"ment passer une commande ?\x02Ajoutez les produits souhaités à votre pan" +
-	"ier. Accédez à /cart et sélectionnez « Paiement », choisissez votre méth" +
-	"ode de livraison préférée et fournissez les informations requises.\x0aSi" +
-	" vous avez un solde disponible, vous pouvez l'utiliser lors du paiement." +
-	" Sinon, vous pouvez demander une facture. Les factures doivent être payé" +
-	"es dans un délai de %[1]d heures pour que la commande continue d'être tr" +
-	"aitée.\x02Comment puis-je obtenir Monero (XMR) ?\x02Il existe plusieurs " +
-	"façons d'acquérir Monero. Veuillez visiter getmonero.org pour des consei" +
-	"ls et des ressources officielles.\x02Que dois-je faire si ma commande n'" +
-	"est pas arrivée ou ne correspond pas à la description ?\x02Les commandes" +
-	" sont automatiquement finalisées après %[1]d jours.\x0aVous pouvez prolo" +
-	"nger la période de finalisation automatique deux fois.\x0aSi la commande" +
-	" n'est toujours pas arrivée après ces prolongations, vous devez ouvrir u" +
-	"n litige.\x0aNotre équipe examinera le cas et prendra une décision basée" +
-	" sur les informations disponibles.\x02Qu'est-ce que je suis autorisé à v" +
-	"endre sur ce marché ?\x02Seuls les articles légaux sont autorisés. Si vo" +
-	"us n'êtes pas sûr que votre produit soit éligible, veuillez nous contact" +
-	"er avant de créer une annonce.\x02Ouvert\x02Demande de vendeur\x02Votre " +
-	"compte n'a pas 2FA activé !\x02L'application est gratuite pour les utili" +
-	"sateurs qui sont déjà des vendeurs sur un autre marché utilisant la même" +
-	" clé PGP.\x02Pour les autres utilisateurs, l'application coûte %[1]s XMR" +
-	" et n'est pas remboursable.\x02Vous devez fournir une preuve que vous av" +
-	"ez réellement des produits à vendre ici.\x02Logo du vendeur\x02Utilisez " +
-	"une image png avec un ratio proche de 1:1 pour un rendu optimal.\x02Vend" +
-	"eur existant\x02Sélectionnez ceci si vous êtes déjà un vendeur sur un au" +
-	"tre marché tel que xmrBazaar.\x02Preuve d'inventaire\x02Image claire de " +
-	"votre inventaire avec votre nom d'utilisateur et un horodatage visibles." +
-	"\x02Marchés et votre nom d'utilisateur\x02Listez les marchés où vous ête" +
-	"s vendeur et incluez votre nom d'utilisateur.\x02Captcha\x02Cliquez sur " +
-	"le cercle avec une coupure.\x02Soumettre\x02Total\x02Passer à la caisse" +
-	"\x02méthode de livraison\x02Utilisez un portefeuille pour le paiement." +
-	"\x02détails\x02Utilisez votre adresse réelle, avec le même format que ci" +
-	"-dessous.\x02Les détails non chiffrés sont automatiquement chiffrés à l'" +
-	"aide de la clé du vendeur.\x02Titre\x02Description\x02Image du produit" +
-	"\x02Utilisez une image avec un ratio d'aspect proche de 1:1 pour un rend" +
-	"u optimal.\x02Catégorie\x02Expédié depuis\x02Expédié vers\x02Inventaire" +
-	"\x02Taille de l'inventaire actuel pour ce produit.\x02Tarification\x02Ic" +
-	"i, vous pouvez définir vos prix.\x02Nous prenons une commission de 5 % s" +
-	"ur ces prix.\x02Quantité\x02Prix\x02Créer un ticket\x02Sujet\x02compte" +
-	"\x02commande\x02portefeuille\x02vendeur\x02produit\x02suggestion\x02bug" +
-	"\x02autre\x02Message\x02PGP du personnel\x02Taux de change\x02Temps\x04" +
-	"\x00\x01 \x0b\x02Vendeurs :\x04\x00\x01 \x0f\x02Utilisateurs :\x02soumet" +
-	"tre\x02Réponse\x02produits\x02commandes\x02vendre\x02support\x02Déconnex" +
-	"ion\x02se connecter\x02s'inscrire\x02Contrôle d'entrée pour %[1]s\x02Com" +
-	"parez l'URL que vous utilisez avec celle de l'image ci-dessous pour trou" +
-	"ver tous les caractères manquants marqués par '*'\x02Caractères manquant" +
-	"s\x02Se connecter\x02nom d'utilisateur\x02mot de passe\x02Créer un nouve" +
-	"au compte\x02Tout supprimer\x02Vous n'avez aucune notification\x02Comman" +
-	"de\x02Chat\x02Statut\x02Vendeur\x02Méthode de livraison\x02Coût total" +
-	"\x02Date\x02Expédié à\x02Jusqu'à refus automatique\x02Jusqu'à finalisati" +
-	"on automatique\x02Détails\x02Le vendeur a proposé un remboursement de %." +
-	"2[1]f%\x02Accepter\x02Refuser\x02Clé PGP des clients\x02Le client peut e" +
-	"ncore annuler cette commande !\x02Vous devez l'accepter dans 2 jours ou " +
-	"il sera automatiquement refusé.\x02Après acceptation, le client ne peut " +
-	"plus annuler, vous pouvez donc expédier en toute sécurité.\x02Veuillez e" +
-	"xaminer attentivement la commande ci-dessous avant de l'accepter.\x02Ref" +
-	"usez toujours les commandes que vous ne pouvez pas exécuter.\x02Vous dev" +
-	"ez marquer cette commande comme expédiée dans 2 jours ou elle sera autom" +
-	"atiquement refusée.\x02Assurez-vous d'avoir suffisamment de temps pour e" +
-	"ffectuer l'expédition réelle !\x02Expédié\x02Transférez le montant exact" +
-	" de Monero à l'adresse ci-dessous.\x02Après 10 confirmations, votre comm" +
-	"ande sera envoyée au vendeur.\x02Vous avez un total de 3 heures pour pay" +
-	"er cette facture, sinon votre commande sera annulée.\x02Temps restant po" +
-	"ur payer\x02Montant XMR\x02Adresse\x02Les commandes peuvent être annulée" +
-	"s jusqu'à ce que le vendeur les ait acceptées.\x02Annuler\x04\x00\x01 4" +
-	"\x02Votre commande sera automatiquement finalisée dans\x02Vous pouvez pr" +
-	"olonger le délai de finalisation automatique de 7 jours.\x02vérifiez vot" +
-	"re commande\x02Vérifier\x02Prolonger le minuteur AF\x02Contester\x02Offr" +
-	"e de remboursement\x02Le client a contesté cette commande.\x02Utilisez l" +
-	"e chat ci-dessous pour discuter de ce litige.\x02Vous pouvez créer une o" +
-	"ffre de remboursement et résoudre ce litige sans intervention de l'admin" +
-	"istrateur.\x02Pourcentage de remboursement\x02Date de commande\x02ID de " +
-	"commande\x02Preuve de propriété de la clé\x02Décryptez pour obtenir le j" +
-	"eton\x02Jeton\x02Mettre à jour le produit\x02Mettre à jour\x02Ajouter au" +
-	" panier\x02Avis\x02il y a\x02HORS STOCK\x02S'inscrire\x02vérification du" +
-	" mot de passe\x02Vous avez déjà un compte ?\x02Vérifier la commande\x02N" +
-	"ote\x02invité\x02client\x02administrateur\x02inconnu\x02activé\x02désact" +
-	"ivé\x02Compte\x02Nom d'utilisateur\x02Type\x022FA\x02Préférences\x02Lang" +
-	"ue\x02Devise\x02Changer le mot de passe\x02Mot de passe actuel\x02Nouvea" +
-	"u mot de passe\x02Confirmer le nouveau mot de passe\x02Changer la clé PG" +
-	"P\x02Activer 2FA\x02Clé publique PGP\x02Requis pour les vendeurs, suggér" +
-	"é pour tout le monde.\x02Mettre à jour le profil du vendeur\x02Informat" +
-	"ions sur le vendeur\x02Laissez vide pour ne pas mettre à jour.\x02Mettre" +
-	" à jour les méthodes de livraison\x02Méthode de livraison\x02Mes tickets" +
-	"\x020 secondes\x02%[1]d secondes\x02%[1]d minutes\x02%[1]d heures\x02%[1" +
-	"]d jours\x02Évaluation (Moy.)\x02Commandes complètes\x02Commandes en séq" +
-	"uestre\x02Litiges en attente\x02Vu précédemment\x02Clé PGP\x02Portefeuil" +
-	"le\x02Ceci est votre portefeuille XMR où vous pouvez déposer des pièces." +
-	"\x02Le solde est mis à jour après 10 confirmations.\x02Voir\x02pour plus" +
-	" d'informations.\x02Solde\x02Retirer\x02Entrez une adresse Monero où vou" +
-	"s souhaitez retirer vos fonds.\x02Nous prélevons des frais de 0,01 XMR p" +
-	"our chaque retrait afin de prévenir le spam.\x02NE RETIREZ PAS de fonds " +
-	"vers un autre portefeuille sur cette plateforme !\x02Adresse de destinat" +
-	"ion\x02Montant\x02Entrez le montant au format décimal (par exemple, 1.42" +
-	"069)"
+	"jour\x02Conditions d'utilisation mises à jour\x02Annonce créée\x02Panier" +
+	" mis à jour\x02panier supprimé\x02Vous ne pouvez pas commander avec un c" +
+	"ompte vendeur\x02Vous n'avez pas assez de solde pour cette commande\x02V" +
+	"euillez payer la facture ci-dessous dans %[1]d heures pour que votre com" +
+	"mande soit traitée.\x02Commande créée\x02Le montant du retrait est trop " +
+	"faible\x02Solde insuffisant pour retirer.\x02Vous ne pouvez pas retirer " +
+	"vers votre propre compte\x02Retrait de %[1]s XMR initié\x02Commande annu" +
+	"lée\x02Évaluation créée\x02Vous ne pouvez pas prolonger le minuteur AF a" +
+	"vant que la commande ait été expédiée pendant %[1]d jours.\x02Vous ne po" +
+	"uvez pas rétablir le minuteur AF avant que la commande ait été expédiée " +
+	"pendant %[1]d jours.\x02Le minuteur AF a déjà été prolongé au maximum." +
+	"\x02Le minuteur AF a été prolongé de %[1]d jours\x02Commande contestée" +
+	"\x02La 2FA doit être activée pour les vendeurs\x02Les comptes vendeurs n" +
+	"e peuvent pas avoir de commandes précédentes. Veuillez créer un nouveau " +
+	"compte.\x02Une preuve d'inventaire est requise pour les nouveaux vendeur" +
+	"s.\x02Solde insuffisant.\x02Demande reçue.\x02Commande acceptée. Vous av" +
+	"ez %[1]d heures pour la marquer comme expédiée.\x02Commande refusée.\x02" +
+	"Commande marquée comme expédiée.\x02Produit supprimé.\x02Produit mis à j" +
+	"our.\x02Le ticket est déjà fermé.\x02Vous devez être connecté pour accéd" +
+	"er à cette page.\x02Commande reçue.\x02Vous avez reçu une nouvelle comma" +
+	"nde !\x0aVous avez un total de %[1]d heures pour l'accepter, avant qu'el" +
+	"le ne soit automatiquement refusée.\x02Commande acceptée.\x02Votre comma" +
+	"nde a été acceptée !\x0aVous pouvez suivre son statut depuis la page des" +
+	" commandes.\x02Commande expédiée.\x02Votre commande a été expédiée !\x0a" +
+	"Veuillez vous souvenir de la noter.\x02Comment devenir vendeur ?\x02Crée" +
+	"z un compte avec l'authentification à deux facteurs (2FA) activée, puis " +
+	"soumettez une demande de vendeur.\x02Comment passer une commande ?\x02Aj" +
+	"outez les produits souhaités à votre panier. Accédez à /cart et sélectio" +
+	"nnez « Paiement », choisissez votre méthode de livraison préférée et fou" +
+	"rnissez les informations requises.\x0aSi vous avez un solde disponible, " +
+	"vous pouvez l'utiliser lors du paiement. Sinon, vous pouvez demander une" +
+	" facture. Les factures doivent être payées dans un délai de %[1]d heures" +
+	" pour que la commande continue d'être traitée.\x02Comment puis-je obteni" +
+	"r Monero (XMR) ?\x02Il existe plusieurs façons d'acquérir Monero. Veuill" +
+	"ez visiter getmonero.org pour des conseils et des ressources officielles" +
+	".\x02Que dois-je faire si ma commande n'est pas arrivée ou ne correspond" +
+	" pas à la description ?\x02Les commandes sont automatiquement finalisées" +
+	" après %[1]d jours.\x0aVous pouvez prolonger la période de finalisation " +
+	"automatique deux fois.\x0aSi la commande n'est toujours pas arrivée aprè" +
+	"s ces prolongations, vous devez ouvrir un litige.\x0aNotre équipe examin" +
+	"era le cas et prendra une décision basée sur les informations disponible" +
+	"s.\x02Qu'est-ce que je suis autorisé à vendre sur ce marché ?\x02Seuls l" +
+	"es articles légaux sont autorisés. Si vous n'êtes pas sûr que votre prod" +
+	"uit soit éligible, veuillez nous contacter avant de créer une annonce." +
+	"\x02Ouvert\x02Demande de vendeur\x02Votre compte n'a pas 2FA activé !" +
+	"\x02L'application est gratuite pour les utilisateurs qui sont déjà vende" +
+	"urs sur un autre marché.\x02Pour les autres utilisateurs, l'application " +
+	"coûte %[1]s XMR.\x02Logo du vendeur\x02Utilisez une image png avec un ra" +
+	"tio proche de 1:1 pour un rendu optimal.\x02Vendeur existant\x02Sélectio" +
+	"nnez ceci si vous êtes déjà un vendeur sur un autre marché tel que xmrBa" +
+	"zaar.\x02Preuve d'inventaire\x02Image claire de votre inventaire avec vo" +
+	"tre nom d'utilisateur et un horodatage visibles.\x02Marchés et votre nom" +
+	" d'utilisateur\x02Listez les marchés où vous êtes vendeur et incluez vot" +
+	"re nom d'utilisateur.\x02Captcha\x02Cliquez sur le cercle avec une coupu" +
+	"re.\x02Soumettre\x02Total\x02Passer à la caisse\x02méthode de livraison" +
+	"\x02Utilisez un portefeuille pour le paiement.\x02détails\x02Les détails" +
+	" non chiffrés sont automatiquement chiffrés à l'aide de la clé du vendeu" +
+	"r.\x02Titre\x02Description\x02Image du produit\x02Utilisez une image ave" +
+	"c un ratio d'aspect proche de 1:1 pour un rendu optimal.\x02Catégorie" +
+	"\x02Expédié depuis\x02Expédié vers\x02Inventaire\x02Taille de l'inventai" +
+	"re actuel pour ce produit.\x02Tarification\x02Ici, vous pouvez définir v" +
+	"os prix.\x02Nous prenons une commission de 5 % sur ces prix.\x02Quantité" +
+	"\x02Prix\x02Créer un ticket\x02Sujet\x02compte\x02commande\x02portefeuil" +
+	"le\x02vendeur\x02produit\x02suggestion\x02bug\x02autre\x02Message\x02PGP" +
+	" du personnel\x02Taux de change\x02Temps\x04\x00\x01 \x0b\x02Vendeurs :" +
+	"\x04\x00\x01 \x0f\x02Utilisateurs :\x02soumettre\x02Réponse\x02produits" +
+	"\x02commandes\x02vendre\x02support\x02Déconnexion\x02se connecter\x02s'i" +
+	"nscrire\x02Contrôle d'entrée pour %[1]s\x02Comparez l'URL que vous utili" +
+	"sez avec celle de l'image ci-dessous pour trouver tous les caractères ma" +
+	"nquants marqués par '*'\x02Caractères manquants\x02Se connecter\x02nom d" +
+	"'utilisateur\x02mot de passe\x02Créer un nouveau compte\x02Tout supprime" +
+	"r\x02Vous n'avez aucune notification\x02Commande\x02Chat\x02Statut\x02Ve" +
+	"ndeur\x02Méthode de livraison\x02Coût total\x02Date\x02Expédié à\x02Jusq" +
+	"u'à refus automatique\x02Jusqu'à finalisation automatique\x02Détails\x02" +
+	"Le vendeur a proposé un remboursement de %.2[1]f%\x02Accepter\x02Refuser" +
+	"\x02Clé PGP des clients\x02Le client peut encore annuler cette commande " +
+	"!\x02Vous devez l'accepter dans 2 jours ou il sera automatiquement refus" +
+	"é.\x02Après acceptation, le client ne peut plus annuler, vous pouvez do" +
+	"nc expédier en toute sécurité.\x02Veuillez examiner attentivement la com" +
+	"mande ci-dessous avant de l'accepter.\x02Refusez toujours les commandes " +
+	"que vous ne pouvez pas exécuter.\x02Vous devez marquer cette commande co" +
+	"mme expédiée dans 2 jours ou elle sera automatiquement refusée.\x02Assur" +
+	"ez-vous d'avoir suffisamment de temps pour effectuer l'expédition réelle" +
+	" !\x02Expédié\x02Transférez le montant exact de Monero à l'adresse ci-de" +
+	"ssous.\x02Après 10 confirmations, votre commande sera envoyée au vendeur" +
+	".\x02Vous avez un total de 3 heures pour payer cette facture, sinon votr" +
+	"e commande sera annulée.\x02Temps restant pour payer\x02Montant XMR\x02A" +
+	"dresse\x02Les commandes peuvent être annulées jusqu'à ce que le vendeur " +
+	"les ait acceptées.\x02Annuler\x04\x00\x01 4\x02Votre commande sera autom" +
+	"atiquement finalisée dans\x02Vous pouvez prolonger le délai de finalisat" +
+	"ion automatique de 7 jours.\x02vérifiez votre commande\x02Vérifier\x02Pr" +
+	"olonger le minuteur AF\x02Contester\x02Offre de remboursement\x02Le clie" +
+	"nt a contesté cette commande.\x02Utilisez le chat ci-dessous pour discut" +
+	"er de ce litige.\x02Vous pouvez créer une offre de remboursement et réso" +
+	"udre ce litige sans intervention de l'administrateur.\x02Pourcentage de " +
+	"remboursement\x02Date de commande\x02ID de commande\x02Preuve de proprié" +
+	"té de la clé\x02Décryptez pour obtenir le jeton\x02Jeton\x02Mettre à jou" +
+	"r le produit\x02Mettre à jour\x02Ajouter au panier\x02Avis\x02il y a\x02" +
+	"HORS STOCK\x02S'inscrire\x02vérification du mot de passe\x02Vous avez dé" +
+	"jà un compte ?\x02Vérifier la commande\x02Note\x02invité\x02client\x02ad" +
+	"ministrateur\x02inconnu\x02activé\x02désactivé\x02Compte\x02Nom d'utilis" +
+	"ateur\x02Type\x022FA\x02Préférences\x02Langue\x02Devise\x02Changer le mo" +
+	"t de passe\x02Mot de passe actuel\x02Nouveau mot de passe\x02Confirmer l" +
+	"e nouveau mot de passe\x02Changer la clé PGP\x02Activer 2FA\x02Clé publi" +
+	"que PGP\x02Requis pour les vendeurs, suggéré pour tout le monde.\x02Mett" +
+	"re à jour les conditions d'utilisation\x02Conditions d'utilisation\x02Le" +
+	"s conditions d'utilisation sont utilisées pour résoudre les litiges\x02M" +
+	"ettre à jour les méthodes de livraison\x02Méthode de livraison\x02Mes ti" +
+	"ckets\x020 secondes\x02%[1]d secondes\x02%[1]d minutes\x02%[1]d heures" +
+	"\x02%[1]d jours\x02Évaluation (Moy.)\x02Commandes complètes\x02Commandes" +
+	" en séquestre\x02Litiges en attente\x02Vu précédemment\x02Clé PGP\x02Por" +
+	"tefeuille\x02Ceci est votre portefeuille XMR où vous pouvez déposer des " +
+	"pièces.\x02Le solde est mis à jour après 10 confirmations.\x02Voir\x02po" +
+	"ur plus d'informations.\x02Solde\x02Retirer\x02Entrez une adresse Monero" +
+	" où vous souhaitez retirer vos fonds.\x02Nous prélevons des frais de %[1" +
+	"]f XMR pour chaque retrait afin de prévenir le spam.\x02NE RETIREZ PAS d" +
+	"e fonds vers un autre portefeuille sur cette plateforme !\x02Adresse de " +
+	"destination\x02Montant\x02Entrez le montant au format décimal (par exemp" +
+	"le, 1.42069)"
 
-var it_ITIndex = []uint32{ // 239 elements
+var it_ITIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003e, 0x00000060, 0x00000076,
 	0x0000009a, 0x000000b1, 0x000000d1, 0x000000e6,
 	0x000000f8, 0x00000124, 0x00000139, 0x00000158,
-	0x0000017e, 0x0000018e, 0x000001a2, 0x000001b5,
-	0x000001e0, 0x0000020b, 0x00000264, 0x00000272,
-	0x00000295, 0x000002bf, 0x000002dd, 0x000002ee,
-	0x00000300, 0x00000356, 0x000003af, 0x000003dc,
-	0x000003fc, 0x0000040e, 0x0000043b, 0x0000049b,
+	0x00000177, 0x00000187, 0x0000019b, 0x000001ae,
+	0x000001d9, 0x00000204, 0x0000025d, 0x0000026b,
+	0x00000294, 0x000002b7, 0x000002e1, 0x000002ff,
+	0x00000310, 0x00000322, 0x00000378, 0x000003d1,
+	0x000003fe, 0x0000041e, 0x00000430, 0x0000045d,
 	// Entry 20 - 3F
-	0x000004d3, 0x000004e7, 0x000004f8, 0x0000053a,
-	0x0000054b, 0x0000056e, 0x00000581, 0x00000595,
-	0x000005ae, 0x000005e0, 0x000005f0, 0x00000664,
-	0x00000675, 0x000006cb, 0x000006da, 0x00000711,
-	0x00000734, 0x0000079f, 0x000007c0, 0x00000940,
-	0x00000962, 0x000009d5, 0x00000a29, 0x00000b67,
-	0x00000b91, 0x00000c13, 0x00000c1a, 0x00000c2f,
-	0x00000c54, 0x00000ccc, 0x00000d19, 0x00000d68,
+	0x000004bd, 0x000004f5, 0x00000509, 0x0000051a,
+	0x0000055c, 0x0000056d, 0x00000590, 0x000005a3,
+	0x000005b7, 0x000005d0, 0x00000602, 0x00000612,
+	0x00000686, 0x00000697, 0x000006ed, 0x000006fc,
+	0x00000733, 0x00000756, 0x000007c1, 0x000007e2,
+	0x00000962, 0x00000984, 0x000009f7, 0x00000a4b,
+	0x00000b89, 0x00000bb3, 0x00000c35, 0x00000c3c,
+	0x00000c51, 0x00000c76, 0x00000ccd, 0x00000d03,
 	// Entry 40 - 5F
-	0x00000d7b, 0x00000dca, 0x00000dde, 0x00000e2c,
-	0x00000e40, 0x00000e93, 0x00000eb0, 0x00000ef7,
-	0x00000eff, 0x00000f21, 0x00000f27, 0x00000f2e,
-	0x00000f43, 0x00000f56, 0x00000f7b, 0x00000f84,
-	0x00000fc7, 0x0000102f, 0x00001036, 0x00001042,
-	0x00001058, 0x000010ae, 0x000010b8, 0x000010c3,
-	0x000010cd, 0x000010d8, 0x00001110, 0x00001117,
-	0x00001139, 0x0000116c, 0x00001176, 0x0000117d,
+	0x00000d16, 0x00000d65, 0x00000d79, 0x00000dc7,
+	0x00000ddb, 0x00000e2e, 0x00000e4b, 0x00000e92,
+	0x00000e9a, 0x00000ebc, 0x00000ec2, 0x00000ec9,
+	0x00000ede, 0x00000ef1, 0x00000f16, 0x00000f1f,
+	0x00000f87, 0x00000f8e, 0x00000f9a, 0x00000fb0,
+	0x00001006, 0x00001010, 0x0000101b, 0x00001025,
+	0x00001030, 0x00001068, 0x0000106f, 0x00001091,
+	0x000010c4, 0x000010ce, 0x000010d5, 0x000010e1,
 	// Entry 60 - 7F
-	0x00001189, 0x00001191, 0x00001199, 0x000011a0,
-	0x000011a7, 0x000011b1, 0x000011ba, 0x000011c7,
-	0x000011cb, 0x000011d1, 0x000011db, 0x000011eb,
-	0x000011fb, 0x00001201, 0x00001211, 0x0000121e,
-	0x00001224, 0x0000122d, 0x00001236, 0x0000123d,
-	0x00001245, 0x0000124e, 0x0000125a, 0x00001261,
-	0x0000126c, 0x00001289, 0x0000130f, 0x00001322,
-	0x00001329, 0x00001335, 0x0000133e, 0x00001354,
+	0x000010e9, 0x000010f1, 0x000010f8, 0x000010ff,
+	0x00001109, 0x00001112, 0x0000111f, 0x00001123,
+	0x00001129, 0x00001133, 0x00001143, 0x00001153,
+	0x00001159, 0x00001169, 0x00001176, 0x0000117c,
+	0x00001185, 0x0000118e, 0x00001195, 0x0000119d,
+	0x000011a6, 0x000011b2, 0x000011b9, 0x000011c4,
+	0x000011e1, 0x00001267, 0x0000127a, 0x00001281,
+	0x0000128d, 0x00001296, 0x000012ac, 0x000012ba,
 	// Entry 80 - 9F
-	0x00001362, 0x00001374, 0x0000137b, 0x00001380,
-	0x00001386, 0x00001390, 0x000013a3, 0x000013b0,
-	0x000013b5, 0x000013c0, 0x000013da, 0x000013fb,
-	0x00001404, 0x00001435, 0x0000143d, 0x00001445,
-	0x0000145c, 0x0000148c, 0x000014cf, 0x0000152a,
-	0x00001575, 0x000015b0, 0x00001612, 0x0000165f,
-	0x00001667, 0x000016a9, 0x000016e2, 0x0000173e,
-	0x00001757, 0x00001763, 0x0000176d, 0x000017c1,
+	0x000012cc, 0x000012d3, 0x000012d8, 0x000012de,
+	0x000012e8, 0x000012fb, 0x00001308, 0x0000130d,
+	0x00001318, 0x00001332, 0x00001353, 0x0000135c,
+	0x0000138d, 0x00001395, 0x0000139d, 0x000013b4,
+	0x000013e4, 0x00001427, 0x00001482, 0x000014cd,
+	0x00001508, 0x0000156a, 0x000015b7, 0x000015bf,
+	0x00001601, 0x0000163a, 0x00001696, 0x000016af,
+	0x000016bb, 0x000016c5, 0x00001719, 0x00001721,
 	// Entry A0 - BF
-	0x000017c9, 0x000017ff, 0x0000183b, 0x00001853,
-	0x0000185d, 0x00001871, 0x0000187e, 0x00001892,
-	0x000018ba, 0x000018f6, 0x00001961, 0x00001979,
-	0x0000198a, 0x00001994, 0x000019b3, 0x000019d2,
-	0x000019d8, 0x000019ea, 0x000019f3, 0x00001a08,
-	0x00001a13, 0x00001a16, 0x00001a1f, 0x00001a2a,
-	0x00001a3c, 0x00001a51, 0x00001a5f, 0x00001a6b,
-	0x00001a72, 0x00001a7a, 0x00001a89, 0x00001a95,
+	0x00001757, 0x00001793, 0x000017ab, 0x000017b5,
+	0x000017c9, 0x000017d6, 0x000017ea, 0x00001812,
+	0x0000184e, 0x000018b9, 0x000018d1, 0x000018e2,
+	0x000018ec, 0x0000190b, 0x0000192a, 0x00001930,
+	0x00001942, 0x0000194b, 0x00001960, 0x0000196b,
+	0x0000196e, 0x00001977, 0x00001982, 0x00001994,
+	0x000019a9, 0x000019b7, 0x000019c3, 0x000019ca,
+	0x000019d2, 0x000019e1, 0x000019ed, 0x000019f7,
 	// Entry C0 - DF
-	0x00001a9f, 0x00001aac, 0x00001ab4, 0x00001ac0,
-	0x00001ac5, 0x00001ac9, 0x00001ad4, 0x00001adb,
-	0x00001ae2, 0x00001af2, 0x00001b03, 0x00001b12,
-	0x00001b2a, 0x00001b3c, 0x00001b48, 0x00001b5c,
-	0x00001b8e, 0x00001ba9, 0x00001bc0, 0x00001be1,
-	0x00001bff, 0x00001c12, 0x00001c23, 0x00001c2d,
-	0x00001c3b, 0x00001c48, 0x00001c52, 0x00001c5f,
-	0x00001c73, 0x00001c85, 0x00001c96, 0x00001ca9,
+	0x00001a04, 0x00001a0c, 0x00001a18, 0x00001a1d,
+	0x00001a21, 0x00001a2c, 0x00001a33, 0x00001a3a,
+	0x00001a4a, 0x00001a5b, 0x00001a6a, 0x00001a82,
+	0x00001a94, 0x00001aa0, 0x00001ab4, 0x00001ae6,
+	0x00001b05, 0x00001b19, 0x00001b60, 0x00001b7e,
+	0x00001b91, 0x00001ba2, 0x00001bac, 0x00001bba,
+	0x00001bc7, 0x00001bd1, 0x00001bde, 0x00001bf2,
+	0x00001c04, 0x00001c15, 0x00001c28, 0x00001c3c,
 	// Entry E0 - FF
-	0x00001cbd, 0x00001cc8, 0x00001cd4, 0x00001d12,
-	0x00001d3e, 0x00001d43, 0x00001d5f, 0x00001d65,
-	0x00001d6d, 0x00001db1, 0x00001e02, 0x00001e45,
-	0x00001e5f, 0x00001e67, 0x00001ea1,
-} // Size: 980 bytes
+	0x00001c47, 0x00001c53, 0x00001c91, 0x00001cbd,
+	0x00001cc2, 0x00001cde, 0x00001ce4, 0x00001cec,
+	0x00001d30, 0x00001d82, 0x00001dc5, 0x00001ddf,
+	0x00001de7, 0x00001e21,
+} // Size: 976 bytes
 
-const it_ITData string = "" + // Size: 7841 bytes
+const it_ITData string = "" + // Size: 7713 bytes
 	"\x02Impossibile aprire il cancello: caratteri mancanti non validi\x02Que" +
 	"sto nome utente è già in uso\x02Chiave PGP non valida\x02Registrazione a" +
 	"vvenuta con successo\x02Credenziali non valide\x02Il tuo account è stato" +
 	" bannato\x02Token 2FA non valido\x02Password cambiata\x02Non puoi aggior" +
 	"nare alla tua chiave attuale\x02Chiave PGP impostata\x02Chiave pubblica " +
-	"PGP aggiornata\x02Informazioni sul venditore aggiornate\x02Annuncio crea" +
-	"to\x02Carrello aggiornato\x02carrello eliminato\x02Non puoi ordinare con" +
-	" un account venditore\x02Non hai abbastanza saldo per questo ordine\x02S" +
-	"i prega di pagare la fattura qui sotto entro %[1]d ore affinché il tuo o" +
-	"rdine proceda.\x02Ordine creato\x02Saldo insufficiente per prelevare." +
-	"\x02Non puoi prelevare sul tuo stesso account\x02Prelievo di %[1]s XMR a" +
-	"vviato\x02Ordine annullato\x02Recensione creata\x02Non puoi estendere il" +
-	" timer AF prima che l'ordine sia stato spedito per %[1]d giorni.\x02Non " +
-	"puoi ri-estendere il timer AF prima che l'ordine sia stato spedito per %" +
-	"[1]d giorni.\x02Il timer AF è già stato esteso al massimo.\x02Timer AF e" +
-	"steso di %[1]d giorni\x02Ordine contestato\x02La 2FA deve essere abilita" +
-	"ta per i venditori\x02Gli account venditore non possono avere ordini pre" +
-	"cedenti. Si prega di creare un nuovo account.\x02È richiesta la prova di" +
-	" inventario dai nuovi venditori\x02Saldo insufficiente\x02Domanda ricevu" +
-	"ta\x02Ordine accettato. Hai %[1]d ore per contrassegnarlo come spedito." +
-	"\x02Ordine rifiutato\x02Ordine contrassegnato come spedito\x02Prodotto e" +
-	"liminato\x02Prodotto aggiornato\x02Il ticket è già chiuso\x02Devi essere" +
-	" connesso per accedere a quella pagina\x02Ordine ricevuto\x02Hai ricevut" +
-	"o un nuovo ordine!\x0aHai un totale di %[1]d ore per accettarlo, prima c" +
-	"he venga rifiutato automaticamente.\x02Ordine accettato\x02Il tuo ordine" +
-	" è stato accettato!\x0aPuoi monitorarne lo stato dalla pagina degli ordi" +
-	"ni\x02Ordine spedito\x02Il tuo ordine è stato spedito!\x0aRicorda di rec" +
-	"ensirlo.\x02Come posso diventare un venditore?\x02Crea un account con l'" +
-	"autenticazione a due fattori (2FA) abilitata, quindi invia una domanda d" +
-	"a venditore.\x02Come posso effettuare un ordine?\x02Aggiungi i prodotti " +
-	"desiderati al tuo carrello. Naviga su /cart e seleziona “Checkout”, sceg" +
-	"li il tuo metodo di consegna preferito e fornisci le informazioni richie" +
-	"ste.\x0aSe hai un saldo disponibile, puoi usarlo al momento del pagament" +
-	"o. In caso contrario, puoi richiedere una fattura. Le fatture devono ess" +
-	"ere pagate entro %[1]d ore affinché l'ordine continui a essere elaborato" +
-	".\x02Come posso ottenere Monero (XMR)?\x02Ci sono diversi modi per acqui" +
-	"sire Monero. Si prega di visitare getmonero.org per indicazioni e risors" +
-	"e ufficiali.\x02Cosa devo fare se il mio ordine non è arrivato o non cor" +
-	"risponde alla descrizione?\x02Gli ordini vengono automaticamente finaliz" +
-	"zati dopo %[1]d giorni.\x0aPuoi estendere il periodo di auto-finalizzazi" +
-	"one due volte.\x0aSe l'ordine non è ancora arrivato dopo queste estensio" +
-	"ni, dovresti aprire una controversia.\x0aIl nostro team esaminerà il cas" +
-	"o e prenderà una decisione basata sulle informazioni disponibili.\x02Cos" +
-	"a posso vendere su questo marketplace?\x02Sono consentiti solo articoli " +
-	"legali. Se non sei sicuro che il tuo prodotto sia idoneo, contattaci pri" +
-	"ma di creare un'inserzione.\x02Aperto\x02Domanda da venditore\x02Il tuo " +
-	"account non ha 2FA abilitato!\x02L'applicazione è gratuita per gli utent" +
-	"i che sono già venditori su un altro mercato utilizzando la stessa chiav" +
-	"e PGP.\x02Per gli altri utenti, l'applicazione costa %[1]s XMR ed è non " +
-	"rimborsabile.\x02È necessario fornire la prova che hai effettivamente pr" +
-	"odotti da vendere qui.\x02Logo del Venditore\x02Utilizza un'immagine png" +
-	" con un rapporto vicino a 1:1 per un aspetto ottimale.\x02Venditore Esis" +
-	"tente\x02Seleziona questo se sei già un venditore su un altro mercato co" +
-	"me xmrBazaar.\x02Prova di Inventario\x02Immagine chiara del tuo inventar" +
-	"io con il tuo nome utente e il timestamp visibili.\x02Mercati e Il Tuo N" +
-	"ome Utente\x02Elenca i mercati in cui sei un venditore e includi il tuo " +
-	"nome utente.\x02Captcha\x02Clicca sul cerchio con un taglio.\x02Invia" +
-	"\x02Totale\x02Procedi al Pagamento\x02metodo di consegna\x02Utilizza il " +
-	"wallet per il pagamento.\x02dettagli\x02Utilizza il tuo indirizzo reale," +
-	" con lo stesso formato di seguito.\x02I dettagli non crittografati vengo" +
-	"no automaticamente crittografati utilizzando la chiave del venditore." +
-	"\x02Titolo\x02Descrizione\x02Immagine del Prodotto\x02Utilizza un'immagi" +
-	"ne con un rapporto di aspetto vicino a 1:1 per un aspetto ottimale.\x02C" +
-	"ategoria\x02Spedito da\x02Spedito a\x02Inventario\x02Dimensione dell'inv" +
-	"entario attuale per questo prodotto.\x02Prezzi\x02Qui puoi impostare i t" +
-	"uoi prezzi.\x02Prendiamo una commissione del 5% su questi prezzi.\x02Qua" +
-	"ntità\x02Prezzo\x02Crea ticket\x02Oggetto\x02account\x02ordine\x02wallet" +
-	"\x02fornitore\x02prodotto\x02suggerimento\x02bug\x02altro\x02Messaggio" +
-	"\x02PGP dello staff\x02Tasso di cambio\x02Tempo\x04\x00\x01 \x0b\x02Forn" +
-	"itori:\x04\x00\x01 \x08\x02Utenti:\x02invia\x02Risposta\x02prodotti\x02o" +
-	"rdini\x02vendere\x02supporto\x02Disconnetti\x02accedi\x02registrati\x02G" +
-	"uardia d'ingresso per %[1]s\x02Confronta l'URL che stai utilizzando con " +
-	"quello nell'immagine qui sotto per trovare tutti i caratteri mancanti co" +
-	"ntrassegnati con '*'\x02Caratteri mancanti\x02Accedi\x02nome utente\x02p" +
-	"assword\x02Crea un nuovo account\x02Elimina tutto\x02Non hai notifiche" +
-	"\x02Ordine\x02Chat\x02Stato\x02Venditore\x02Metodo di consegna\x02Costo " +
-	"totale\x02Data\x02Spedito il\x02Fino a rifiuto automatico\x02Fino a fina" +
-	"lizzazione automatica\x02Dettagli\x02Il venditore ha offerto un rimborso" +
-	" del %.2[1]f%\x02Accetta\x02Rifiuta\x02Chiave PGP dei clienti\x02Il clie" +
-	"nte può ancora annullare questo ordine!\x02Devi accettarlo entro 2 giorn" +
-	"i o verrà rifiutato automaticamente.\x02Dopo aver accettato, il cliente " +
-	"non può più annullare, quindi puoi spedire in sicurezza.\x02Si prega di " +
-	"esaminare attentamente l'ordine qui sotto prima di accettarlo.\x02Rifiut" +
-	"a sempre gli ordini che non sei in grado di evadere.\x02Devi contrassegn" +
-	"are questo ordine come spedito entro 2 giorni o verrà rifiutato automati" +
-	"camente.\x02Assicurati di avere abbastanza tempo per effettuare la spedi" +
-	"zione effettiva!\x02Spedito\x02Trasferisci l'importo esatto di Monero al" +
-	"l'indirizzo sottostante.\x02Dopo 10 conferme, il tuo ordine procederà al" +
-	" venditore.\x02Hai un totale di 3 ore per pagare questa fattura, altrime" +
-	"nti il tuo ordine sarà annullato.\x02Tempo rimasto per pagare\x02Importo" +
-	" XMR\x02Indirizzo\x02Gli ordini possono essere annullati fino a quando i" +
-	"l venditore non li ha accettati.\x02Annulla\x04\x00\x01 1\x02Il tuo ordi" +
-	"ne si finalizzerà automaticamente in\x02Puoi estendere il tempo di auto-" +
-	"finalizzazione di 7 giorni.\x02controlla il tuo ordine\x02Controlla\x02E" +
-	"stendi il timer AF\x02Controversia\x02Offerta di rimborso\x02Il cliente " +
-	"ha contestato questo ordine.\x02Usa la chat qui sotto per discutere di q" +
-	"uesta controversia.\x02Puoi creare un'offerta di rimborso e risolvere qu" +
-	"esta controversia senza l'intervento dell'amministratore.\x02Percentuale" +
-	" di rimborso\x02Data dell'ordine\x02ID ordine\x02Prova di possesso della" +
-	" chiave\x02Decripta per ottenere il token\x02Token\x02Aggiorna prodotto" +
-	"\x02Aggiorna\x02Aggiungi al carrello\x02Recensioni\x02fa\x02ESaurito\x02" +
-	"Registrati\x02verifica password\x02Hai già un account?\x02Rivedi ordine" +
-	"\x02Valutazione\x02ospite\x02cliente\x02amministratore\x02sconosciuto" +
-	"\x02abilitato\x02disabilitato\x02Account\x02Nome utente\x02Tipo\x022FA" +
-	"\x02Preferenze\x02Lingua\x02Valuta\x02Cambia password\x02Password attual" +
-	"e\x02Nuova password\x02Conferma nuova password\x02Cambia chiave PGP\x02A" +
-	"bilita 2FA\x02Chiave pubblica PGP\x02Richiesto per i venditori, consigli" +
-	"ato per tutti.\x02Aggiorna profilo venditore\x02Informazioni venditore" +
-	"\x02Lascia vuoto per non aggiornare.\x02Aggiorna i metodi di consegna" +
-	"\x02Metodo di consegna\x02I miei biglietti\x020 secondi\x02%[1]d secondi" +
-	"\x02%[1]d minuti\x02%[1]d ore\x02%[1]d giorni\x02Valutazione (MEDIA)\x02" +
-	"Ordini completati\x02Ordini in escrow\x02Dispute in sospeso\x02Visti in " +
-	"precedenza\x02Chiave PGP\x02Portafoglio\x02Questo è il tuo portafoglio X" +
-	"MR dove puoi depositare monete.\x02Il saldo viene aggiornato dopo 10 con" +
-	"ferme.\x02Vedi\x02per ulteriori informazioni.\x02Saldo\x02Preleva\x02Ins" +
-	"erisci un indirizzo Monero dove desideri prelevare i tuoi fondi.\x02Adde" +
-	"bitiamo una commissione di 0,01 XMR per ogni prelievo per prevenire lo s" +
-	"pam.\x02NON prelevare fondi su un altro portafoglio su questa piattaform" +
-	"a!\x02Indirizzo di destinazione\x02Importo\x02Inserisci l'importo in for" +
-	"mato decimale (ad es., 1.42069)"
+	"PGP aggiornata\x02Termini di servizio aggiornati\x02Annuncio creato\x02C" +
+	"arrello aggiornato\x02carrello eliminato\x02Non puoi ordinare con un acc" +
+	"ount venditore\x02Non hai abbastanza saldo per questo ordine\x02Si prega" +
+	" di pagare la fattura qui sotto entro %[1]d ore affinché il tuo ordine p" +
+	"roceda.\x02Ordine creato\x02L'importo del prelievo è troppo piccolo\x02S" +
+	"aldo insufficiente per prelevare.\x02Non puoi prelevare sul tuo stesso a" +
+	"ccount\x02Prelievo di %[1]s XMR avviato\x02Ordine annullato\x02Recension" +
+	"e creata\x02Non puoi estendere il timer AF prima che l'ordine sia stato " +
+	"spedito per %[1]d giorni.\x02Non puoi ri-estendere il timer AF prima che" +
+	" l'ordine sia stato spedito per %[1]d giorni.\x02Il timer AF è già stato" +
+	" esteso al massimo.\x02Timer AF esteso di %[1]d giorni\x02Ordine contest" +
+	"ato\x02La 2FA deve essere abilitata per i venditori\x02Gli account vendi" +
+	"tore non possono avere ordini precedenti. Si prega di creare un nuovo ac" +
+	"count.\x02È richiesta la prova di inventario dai nuovi venditori\x02Sald" +
+	"o insufficiente\x02Domanda ricevuta\x02Ordine accettato. Hai %[1]d ore p" +
+	"er contrassegnarlo come spedito.\x02Ordine rifiutato\x02Ordine contrasse" +
+	"gnato come spedito\x02Prodotto eliminato\x02Prodotto aggiornato\x02Il ti" +
+	"cket è già chiuso\x02Devi essere connesso per accedere a quella pagina" +
+	"\x02Ordine ricevuto\x02Hai ricevuto un nuovo ordine!\x0aHai un totale di" +
+	" %[1]d ore per accettarlo, prima che venga rifiutato automaticamente." +
+	"\x02Ordine accettato\x02Il tuo ordine è stato accettato!\x0aPuoi monitor" +
+	"arne lo stato dalla pagina degli ordini\x02Ordine spedito\x02Il tuo ordi" +
+	"ne è stato spedito!\x0aRicorda di recensirlo.\x02Come posso diventare un" +
+	" venditore?\x02Crea un account con l'autenticazione a due fattori (2FA) " +
+	"abilitata, quindi invia una domanda da venditore.\x02Come posso effettua" +
+	"re un ordine?\x02Aggiungi i prodotti desiderati al tuo carrello. Naviga " +
+	"su /cart e seleziona “Checkout”, scegli il tuo metodo di consegna prefer" +
+	"ito e fornisci le informazioni richieste.\x0aSe hai un saldo disponibile" +
+	", puoi usarlo al momento del pagamento. In caso contrario, puoi richiede" +
+	"re una fattura. Le fatture devono essere pagate entro %[1]d ore affinché" +
+	" l'ordine continui a essere elaborato.\x02Come posso ottenere Monero (XM" +
+	"R)?\x02Ci sono diversi modi per acquisire Monero. Si prega di visitare g" +
+	"etmonero.org per indicazioni e risorse ufficiali.\x02Cosa devo fare se i" +
+	"l mio ordine non è arrivato o non corrisponde alla descrizione?\x02Gli o" +
+	"rdini vengono automaticamente finalizzati dopo %[1]d giorni.\x0aPuoi est" +
+	"endere il periodo di auto-finalizzazione due volte.\x0aSe l'ordine non è" +
+	" ancora arrivato dopo queste estensioni, dovresti aprire una controversi" +
+	"a.\x0aIl nostro team esaminerà il caso e prenderà una decisione basata s" +
+	"ulle informazioni disponibili.\x02Cosa posso vendere su questo marketpla" +
+	"ce?\x02Sono consentiti solo articoli legali. Se non sei sicuro che il tu" +
+	"o prodotto sia idoneo, contattaci prima di creare un'inserzione.\x02Aper" +
+	"to\x02Domanda da venditore\x02Il tuo account non ha 2FA abilitato!\x02L'" +
+	"applicazione è gratuita per gli utenti che sono già venditori su un altr" +
+	"o mercato.\x02Per gli altri utenti, l'applicazione costa %[1]s XMR.\x02L" +
+	"ogo del Venditore\x02Utilizza un'immagine png con un rapporto vicino a 1" +
+	":1 per un aspetto ottimale.\x02Venditore Esistente\x02Seleziona questo s" +
+	"e sei già un venditore su un altro mercato come xmrBazaar.\x02Prova di I" +
+	"nventario\x02Immagine chiara del tuo inventario con il tuo nome utente e" +
+	" il timestamp visibili.\x02Mercati e Il Tuo Nome Utente\x02Elenca i merc" +
+	"ati in cui sei un venditore e includi il tuo nome utente.\x02Captcha\x02" +
+	"Clicca sul cerchio con un taglio.\x02Invia\x02Totale\x02Procedi al Pagam" +
+	"ento\x02metodo di consegna\x02Utilizza il wallet per il pagamento.\x02de" +
+	"ttagli\x02I dettagli non crittografati vengono automaticamente crittogra" +
+	"fati utilizzando la chiave del venditore.\x02Titolo\x02Descrizione\x02Im" +
+	"magine del Prodotto\x02Utilizza un'immagine con un rapporto di aspetto v" +
+	"icino a 1:1 per un aspetto ottimale.\x02Categoria\x02Spedito da\x02Spedi" +
+	"to a\x02Inventario\x02Dimensione dell'inventario attuale per questo prod" +
+	"otto.\x02Prezzi\x02Qui puoi impostare i tuoi prezzi.\x02Prendiamo una co" +
+	"mmissione del 5% su questi prezzi.\x02Quantità\x02Prezzo\x02Crea ticket" +
+	"\x02Oggetto\x02account\x02ordine\x02wallet\x02fornitore\x02prodotto\x02s" +
+	"uggerimento\x02bug\x02altro\x02Messaggio\x02PGP dello staff\x02Tasso di " +
+	"cambio\x02Tempo\x04\x00\x01 \x0b\x02Fornitori:\x04\x00\x01 \x08\x02Utent" +
+	"i:\x02invia\x02Risposta\x02prodotti\x02ordini\x02vendere\x02supporto\x02" +
+	"Disconnetti\x02accedi\x02registrati\x02Guardia d'ingresso per %[1]s\x02C" +
+	"onfronta l'URL che stai utilizzando con quello nell'immagine qui sotto p" +
+	"er trovare tutti i caratteri mancanti contrassegnati con '*'\x02Caratter" +
+	"i mancanti\x02Accedi\x02nome utente\x02password\x02Crea un nuovo account" +
+	"\x02Elimina tutto\x02Non hai notifiche\x02Ordine\x02Chat\x02Stato\x02Ven" +
+	"ditore\x02Metodo di consegna\x02Costo totale\x02Data\x02Spedito il\x02Fi" +
+	"no a rifiuto automatico\x02Fino a finalizzazione automatica\x02Dettagli" +
+	"\x02Il venditore ha offerto un rimborso del %.2[1]f%\x02Accetta\x02Rifiu" +
+	"ta\x02Chiave PGP dei clienti\x02Il cliente può ancora annullare questo o" +
+	"rdine!\x02Devi accettarlo entro 2 giorni o verrà rifiutato automaticamen" +
+	"te.\x02Dopo aver accettato, il cliente non può più annullare, quindi puo" +
+	"i spedire in sicurezza.\x02Si prega di esaminare attentamente l'ordine q" +
+	"ui sotto prima di accettarlo.\x02Rifiuta sempre gli ordini che non sei i" +
+	"n grado di evadere.\x02Devi contrassegnare questo ordine come spedito en" +
+	"tro 2 giorni o verrà rifiutato automaticamente.\x02Assicurati di avere a" +
+	"bbastanza tempo per effettuare la spedizione effettiva!\x02Spedito\x02Tr" +
+	"asferisci l'importo esatto di Monero all'indirizzo sottostante.\x02Dopo " +
+	"10 conferme, il tuo ordine procederà al venditore.\x02Hai un totale di 3" +
+	" ore per pagare questa fattura, altrimenti il tuo ordine sarà annullato." +
+	"\x02Tempo rimasto per pagare\x02Importo XMR\x02Indirizzo\x02Gli ordini p" +
+	"ossono essere annullati fino a quando il venditore non li ha accettati." +
+	"\x02Annulla\x04\x00\x01 1\x02Il tuo ordine si finalizzerà automaticament" +
+	"e in\x02Puoi estendere il tempo di auto-finalizzazione di 7 giorni.\x02c" +
+	"ontrolla il tuo ordine\x02Controlla\x02Estendi il timer AF\x02Controvers" +
+	"ia\x02Offerta di rimborso\x02Il cliente ha contestato questo ordine.\x02" +
+	"Usa la chat qui sotto per discutere di questa controversia.\x02Puoi crea" +
+	"re un'offerta di rimborso e risolvere questa controversia senza l'interv" +
+	"ento dell'amministratore.\x02Percentuale di rimborso\x02Data dell'ordine" +
+	"\x02ID ordine\x02Prova di possesso della chiave\x02Decripta per ottenere" +
+	" il token\x02Token\x02Aggiorna prodotto\x02Aggiorna\x02Aggiungi al carre" +
+	"llo\x02Recensioni\x02fa\x02ESaurito\x02Registrati\x02verifica password" +
+	"\x02Hai già un account?\x02Rivedi ordine\x02Valutazione\x02ospite\x02cli" +
+	"ente\x02amministratore\x02sconosciuto\x02abilitato\x02disabilitato\x02Ac" +
+	"count\x02Nome utente\x02Tipo\x022FA\x02Preferenze\x02Lingua\x02Valuta" +
+	"\x02Cambia password\x02Password attuale\x02Nuova password\x02Conferma nu" +
+	"ova password\x02Cambia chiave PGP\x02Abilita 2FA\x02Chiave pubblica PGP" +
+	"\x02Richiesto per i venditori, consigliato per tutti.\x02Aggiorna i term" +
+	"ini di servizio\x02Termini di servizio\x02I termini di servizio vengono " +
+	"utilizzati per risolvere le controversie\x02Aggiorna i metodi di consegn" +
+	"a\x02Metodo di consegna\x02I miei biglietti\x020 secondi\x02%[1]d second" +
+	"i\x02%[1]d minuti\x02%[1]d ore\x02%[1]d giorni\x02Valutazione (MEDIA)" +
+	"\x02Ordini completati\x02Ordini in escrow\x02Dispute in sospeso\x02Visti" +
+	" in precedenza\x02Chiave PGP\x02Portafoglio\x02Questo è il tuo portafogl" +
+	"io XMR dove puoi depositare monete.\x02Il saldo viene aggiornato dopo 10" +
+	" conferme.\x02Vedi\x02per ulteriori informazioni.\x02Saldo\x02Preleva" +
+	"\x02Inserisci un indirizzo Monero dove desideri prelevare i tuoi fondi." +
+	"\x02Addebitiamo una commissione di %[1]f XMR per ogni prelievo per preve" +
+	"nire lo spam.\x02NON prelevare fondi su un altro portafoglio su questa p" +
+	"iattaforma!\x02Indirizzo di destinazione\x02Importo\x02Inserisci l'impor" +
+	"to in formato decimale (ad es., 1.42069)"
 
-var lt_LTIndex = []uint32{ // 239 elements
+var lt_LTIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003b, 0x00000060, 0x00000077,
 	0x00000093, 0x000000b4, 0x000000d3, 0x000000ec,
 	0x00000103, 0x00000131, 0x00000147, 0x00000168,
-	0x0000018a, 0x0000019d, 0x000001b4, 0x000001ca,
-	0x000001f3, 0x00000220, 0x0000028b, 0x0000029f,
-	0x000002bc, 0x000002e0, 0x00000301, 0x00000317,
-	0x0000032d, 0x0000037f, 0x000003d6, 0x00000401,
-	0x00000428, 0x0000043f, 0x00000464, 0x000004c2,
+	0x0000018f, 0x000001a2, 0x000001b9, 0x000001cf,
+	0x000001f8, 0x00000225, 0x00000290, 0x000002a4,
+	0x000002bd, 0x000002da, 0x000002fe, 0x0000031f,
+	0x00000335, 0x0000034b, 0x0000039d, 0x000003f4,
+	0x0000041f, 0x00000446, 0x0000045d, 0x00000482,
 	// Entry 20 - 3F
-	0x000004fc, 0x00000513, 0x00000525, 0x00000580,
-	0x00000595, 0x000005be, 0x000005d4, 0x000005eb,
-	0x00000604, 0x00000641, 0x00000654, 0x000006c7,
-	0x000006dc, 0x0000072f, 0x00000747, 0x0000078f,
-	0x000007a6, 0x00000813, 0x0000082d, 0x000009cb,
-	0x000009ea, 0x00000a5c, 0x00000aab, 0x00000bcd,
-	0x00000bf0, 0x00000c85, 0x00000c8f, 0x00000ca4,
-	0x00000cc9, 0x00000d3c, 0x00000d86, 0x00000de6,
+	0x000004e0, 0x0000051a, 0x00000531, 0x00000543,
+	0x0000059e, 0x000005b3, 0x000005dc, 0x000005f2,
+	0x00000609, 0x00000622, 0x0000065f, 0x00000672,
+	0x000006e5, 0x000006fa, 0x0000074d, 0x00000765,
+	0x000007ad, 0x000007c4, 0x00000831, 0x0000084b,
+	0x000009e9, 0x00000a08, 0x00000a7a, 0x00000ac9,
+	0x00000beb, 0x00000c0e, 0x00000ca3, 0x00000cad,
+	0x00000cc2, 0x00000ce7, 0x00000d34, 0x00000d69,
 	// Entry 40 - 5F
-	0x00000dfb, 0x00000e48, 0x00000e5b, 0x00000eae,
-	0x00000ec5, 0x00000f13, 0x00000f35, 0x00000f8b,
-	0x00000f93, 0x00000fb1, 0x00000fba, 0x00000fc3,
-	0x00000fd1, 0x00000fe3, 0x00001003, 0x0000100c,
-	0x00001051, 0x0000109d, 0x000010a9, 0x000010b4,
-	0x000010c5, 0x0000110e, 0x00001119, 0x0000112b,
-	0x0000113c, 0x00001148, 0x00001175, 0x0000117c,
-	0x0000119f, 0x000011be, 0x000011c5, 0x000011cb,
+	0x00000d7e, 0x00000dcb, 0x00000dde, 0x00000e31,
+	0x00000e48, 0x00000e96, 0x00000eb8, 0x00000f0e,
+	0x00000f16, 0x00000f34, 0x00000f3d, 0x00000f46,
+	0x00000f54, 0x00000f66, 0x00000f86, 0x00000f8f,
+	0x00000fdb, 0x00000fe7, 0x00000ff2, 0x00001003,
+	0x0000104c, 0x00001057, 0x00001069, 0x0000107a,
+	0x00001086, 0x000010b3, 0x000010ba, 0x000010dd,
+	0x000010fc, 0x00001103, 0x00001109, 0x0000111a,
 	// Entry 60 - 7F
-	0x000011dc, 0x000011e1, 0x000011e9, 0x000011f4,
-	0x000011fe, 0x0000120a, 0x00001214, 0x00001220,
-	0x00001227, 0x0000122d, 0x00001236, 0x00001246,
-	0x00001255, 0x0000125c, 0x0000126e, 0x0000127f,
-	0x00001288, 0x00001292, 0x0000129c, 0x000012a7,
-	0x000012b0, 0x000012b8, 0x000012c3, 0x000012cf,
-	0x000012e0, 0x000012f9, 0x0000136c, 0x00001381,
-	0x0000138d, 0x0000139e, 0x000013ab, 0x000013c3,
+	0x0000111f, 0x00001127, 0x00001132, 0x0000113c,
+	0x00001148, 0x00001152, 0x0000115e, 0x00001165,
+	0x0000116b, 0x00001174, 0x00001184, 0x00001193,
+	0x0000119a, 0x000011ac, 0x000011bd, 0x000011c6,
+	0x000011d0, 0x000011da, 0x000011e5, 0x000011ee,
+	0x000011f6, 0x00001201, 0x0000120d, 0x0000121e,
+	0x00001237, 0x000012aa, 0x000012bf, 0x000012cb,
+	0x000012dc, 0x000012e9, 0x00001301, 0x00001312,
 	// Entry 80 - 9F
-	0x000013d4, 0x000013f2, 0x000013fd, 0x00001406,
-	0x0000140e, 0x0000141a, 0x0000142d, 0x0000143a,
-	0x0000143f, 0x0000144a, 0x00001463, 0x0000147e,
-	0x00001492, 0x000014be, 0x000014c6, 0x000014ce,
-	0x000014e2, 0x00001513, 0x00001556, 0x0000159f,
-	0x000015f1, 0x00001627, 0x0000168f, 0x000016d6,
-	0x000016e1, 0x00001720, 0x0000175f, 0x000017c0,
-	0x000017d5, 0x000017de, 0x000017e6, 0x00001825,
+	0x00001330, 0x0000133b, 0x00001344, 0x0000134c,
+	0x00001358, 0x0000136b, 0x00001378, 0x0000137d,
+	0x00001388, 0x000013a1, 0x000013bc, 0x000013d0,
+	0x000013fc, 0x00001404, 0x0000140c, 0x00001420,
+	0x00001451, 0x00001494, 0x000014dd, 0x0000152f,
+	0x00001565, 0x000015cd, 0x00001614, 0x0000161f,
+	0x0000165e, 0x0000169d, 0x000016fe, 0x00001713,
+	0x0000171c, 0x00001724, 0x00001763, 0x0000176d,
 	// Entry A0 - BF
-	0x0000182f, 0x00001867, 0x000018a2, 0x000018c0,
-	0x000018ce, 0x000018e5, 0x000018ed, 0x00001905,
-	0x00001928, 0x0000196b, 0x000019d0, 0x000019e6,
-	0x000019f5, 0x00001a02, 0x00001a23, 0x00001a4a,
-	0x00001a52, 0x00001a67, 0x00001a72, 0x00001a89,
-	0x00001a96, 0x00001a9d, 0x00001aae, 0x00001abb,
-	0x00001ad2, 0x00001ae7, 0x00001b00, 0x00001b0d,
-	0x00001b16, 0x00001b1f, 0x00001b30, 0x00001b3b,
+	0x000017a5, 0x000017e0, 0x000017fe, 0x0000180c,
+	0x00001823, 0x0000182b, 0x00001843, 0x00001866,
+	0x000018a9, 0x0000190e, 0x00001924, 0x00001933,
+	0x00001940, 0x00001961, 0x00001988, 0x00001990,
+	0x000019a5, 0x000019b0, 0x000019c7, 0x000019d4,
+	0x000019db, 0x000019ec, 0x000019f9, 0x00001a10,
+	0x00001a25, 0x00001a3e, 0x00001a4b, 0x00001a54,
+	0x00001a5d, 0x00001a6e, 0x00001a79, 0x00001a82,
 	// Entry C0 - DF
-	0x00001b44, 0x00001b4e, 0x00001b56, 0x00001b67,
-	0x00001b6d, 0x00001b71, 0x00001b7c, 0x00001b82,
-	0x00001b8a, 0x00001b9e, 0x00001bb6, 0x00001bca,
-	0x00001bec, 0x00001bfe, 0x00001c0b, 0x00001c20,
-	0x00001c51, 0x00001c70, 0x00001c87, 0x00001cb4,
-	0x00001cd2, 0x00001ce5, 0x00001cf3, 0x00001d01,
-	0x00001d13, 0x00001d23, 0x00001d32, 0x00001d3f,
-	0x00001d53, 0x00001d68, 0x00001d7c, 0x00001d8f,
+	0x00001a8c, 0x00001a94, 0x00001aa5, 0x00001aab,
+	0x00001aaf, 0x00001aba, 0x00001ac0, 0x00001ac8,
+	0x00001adc, 0x00001af4, 0x00001b08, 0x00001b2a,
+	0x00001b3c, 0x00001b49, 0x00001b5e, 0x00001b8f,
+	0x00001bb5, 0x00001bd0, 0x00001c08, 0x00001c26,
+	0x00001c39, 0x00001c47, 0x00001c55, 0x00001c67,
+	0x00001c77, 0x00001c86, 0x00001c93, 0x00001ca7,
+	0x00001cbc, 0x00001cd0, 0x00001ce3, 0x00001cf4,
 	// Entry E0 - FF
-	0x00001da0, 0x00001dab, 0x00001db5, 0x00001df1,
-	0x00001e1c, 0x00001e27, 0x00001e3d, 0x00001e46,
-	0x00001e4e, 0x00001e8e, 0x00001ee0, 0x00001f1b,
-	0x00001f2e, 0x00001f33, 0x00001f68,
-} // Size: 980 bytes
+	0x00001cff, 0x00001d09, 0x00001d45, 0x00001d70,
+	0x00001d7b, 0x00001d91, 0x00001d9a, 0x00001da2,
+	0x00001de2, 0x00001e2f, 0x00001e6a, 0x00001e7d,
+	0x00001e82, 0x00001eb7,
+} // Size: 976 bytes
 
-const lt_LTData string = "" + // Size: 8040 bytes
+const lt_LTData string = "" + // Size: 7863 bytes
 	"\x02Nepavyko atidaryti vartų: neteisingi trūkstami simboliai\x02Šis vart" +
 	"otojo vardas jau naudojamas\x02Neteisingas PGP raktas\x02Sėkmingai užsir" +
 	"egistruota\x02Neteisingi prisijungimo duomenys\x02Jūsų paskyra yra užblo" +
 	"kuota\x02Neteisingas 2FA žetonas\x02Slaptažodis pakeistas\x02Negalite at" +
 	"naujinti į savo dabartinį raktą\x02PGP raktas nustatytas\x02PGP viešasis" +
-	" raktas atnaujintas\x02Pardavėjo informacija atnaujinta\x02Skelbimas suk" +
-	"urtas\x02Krepšelis atnaujintas\x02krepšelis ištrintas\x02Negalite užsaky" +
-	"ti su pardavėjo paskyra\x02Neturite pakankamai lėšų šiam užsakymui\x02Pr" +
-	"ašome sumokėti žemiau pateiktą sąskaitą per %[1]d valandų, kad jūsų užsa" +
-	"kymas būtų vykdomas.\x02Užsakymas sukurtas\x02Nepakanka lėšų išsiimti." +
-	"\x02Negalite išsiimti į savo paskyrą\x02Išėmimas %[1]s XMR inicijuotas" +
-	"\x02Užsakymas atšauktas\x02Atsiliepimas sukurtas\x02Negalite pratęsti AF" +
-	" laikmačio, kol užsakymas nebuvo išsiųstas %[1]d dienas.\x02Negalite vėl" +
-	" pratęsti AF laikmačio, kol užsakymas nebuvo išsiųstas %[1]d dienas.\x02" +
-	"AF laikmatis jau pratęstas iki maksimumo.\x02AF laikmatis pratęstas %[1]" +
-	"d dienomis\x02Užsakymas ginčijamas\x022FA turi būti įjungta pardavėjams" +
-	"\x02Pardavėjų paskyros negali turėti ankstesnių užsakymų. Prašome sukurt" +
-	"i naują paskyrą.\x02Naujiems pardavėjams reikalingas inventoriaus įrodym" +
-	"as.\x02Nepakankamas balansas.\x02Prašymas gautas.\x02Užsakymas priimtas." +
-	" Jūs turite %[1]d valandų, kad pažymėtumėte jį kaip išsiųstą.\x02Užsakym" +
-	"as atmestas.\x02Užsakymas pažymėtas kaip išsiųstas.\x02Produktas ištrint" +
-	"as.\x02Produktas atnaujintas.\x02Bilietas jau uždarytas.\x02Norėdami pas" +
-	"iekti šią puslapį, turite būti prisijungę.\x02Užsakymas gautas.\x02Gavot" +
-	"e naują užsakymą!\x0aTurite %[1]d valandų, kad priimtumėte, prieš tai, k" +
-	"ai jis bus automatiškai atmestas.\x02Užsakymas priimtas.\x02Jūsų užsakym" +
-	"as buvo priimtas!\x0aGalite stebėti jo būseną užsakymų puslapyje.\x02Užs" +
-	"akymas išsiųstas.\x02Jūsų užsakymas buvo išsiųstas!\x0aPrašome nepamiršt" +
-	"i jo įvertinti.\x02Kaip tapti pardavėju?\x02Sukurkite paskyrą su įjungta" +
-	" dviejų faktorių autentifikacija (2FA), tada pateikite pardavėjo prašymą" +
-	".\x02Kaip pateikti užsakymą?\x02Pridėkite norimus produktus į savo krepš" +
-	"elį. Eikite į /cart ir pasirinkite „Apmokėjimas“, pasirinkite pageidauja" +
-	"mą pristatymo metodą ir pateikite reikiamą informaciją.\x0aJei turite pa" +
-	"kankamai balanso, galite jį naudoti apmokėjimo metu. Priešingu atveju, g" +
-	"alite paprašyti sąskaitos faktūros. Sąskaitos faktūros turi būti apmokėt" +
-	"os per %[1]d valandų, kad užsakymas būtų toliau apdorojamas.\x02Kaip gal" +
-	"iu gauti Monero (XMR)?\x02Yra keletas būdų, kaip įsigyti Monero. Prašome" +
-	" apsilankyti getmonero.org oficialioms gairėms ir ištekliams.\x02Ką turė" +
-	"čiau daryti, jei mano užsakymas neatvyko arba neatitinka aprašymo?\x02U" +
-	"žsakymai automatiškai užbaigiami po %[1]d dienų.\x0aGalite pratęsti aut" +
-	"omatinio užbaigimo laikotarpį du kartus.\x0aJei užsakymas vis dar neatvy" +
-	"ko po šių pratęsimų, turėtumėte atidaryti ginčą.\x0aMūsų komanda peržiūr" +
-	"ės atvejį ir priims sprendimą remdamasi turima informacija.\x02Ką galiu" +
-	" parduoti šioje rinkoje?\x02Leidžiami tik teisėti daiktai. Jei nesate ti" +
-	"kri, ar jūsų produktas atitinka reikalavimus, prašome susisiekti su mumi" +
-	"s prieš kuriant skelbimą.\x02Atidaryti\x02Pardavėjo prašymas\x02Jūsų pas" +
-	"kyroje nėra įjungta 2FA!\x02Programėlė yra nemokama vartotojams, kurie j" +
-	"au yra pardavėjai kitose rinkose, naudodami tą pačią PGP raktą.\x02Kitie" +
-	"ms vartotojams programėlė kainuoja %[1]s XMR ir nėra grąžinama.\x02Priva" +
-	"lote pateikti įrodymą, kad iš tikrųjų turite produktų, kuriuos galite či" +
-	"a parduoti.\x02Pardavėjo logotipas\x02Naudokite png vaizdą, kurio santyk" +
-	"is artimas 1:1, kad atrodytų optimaliai.\x02Esamas pardavėjas\x02Pasirin" +
-	"kite tai, jei jau esate pardavėjas kitose rinkose, tokiose kaip xmrBazaa" +
-	"r.\x02Inventoriaus įrodymas\x02Aiškus jūsų inventoriaus vaizdas su jūsų " +
-	"vartotojo vardu ir laiko žyma.\x02Rinkos ir jūsų vartotojo vardas\x02Išv" +
-	"ardinkite rinkas, kuriose esate pardavėjas, ir įtraukite savo vartotojo " +
-	"vardą.\x02Captcha\x02Paspauskite ratą su išpjova\x02Pateikti\x02Iš viso" +
-	"\x02Atsiskaitymas\x02pristatymo būdas\x02Naudokite piniginę mokėjimams" +
-	"\x02detalės\x02Naudokite savo tikrą adresą, su tokiu pačiu formatu kaip " +
-	"žemiau.\x02Nešifruoti duomenys automatiškai šifruojami naudojant pardav" +
-	"ėjo raktą.\x02Pavadinimas\x02Aprašymas\x02Produkto vaizdas\x02Naudokite" +
-	" vaizdą, kurio santykis artimas 1:1, kad atrodytų optimaliai.\x02Kategor" +
-	"ija\x02Išsiunčiama iš\x02Išsiunčiama į\x02Inventorius\x02Šio produkto da" +
-	"bartinio inventoriaus dydis.\x02Kainos\x02Čia galite nustatyti savo kain" +
-	"as.\x02Mes imame 5% nuo šių kainų.\x02Kiekis\x02Kaina\x02Sukurti bilietą" +
-	"\x02Tema\x02paskyra\x02užsakymas\x02piniginė\x02pardavėjas\x02produktas" +
-	"\x02pasiūlymas\x02klaida\x02kitas\x02Žinutė\x02Darbuotojų PGP\x02Keitimo" +
-	" kursas\x02Laikas\x04\x00\x01 \x0d\x02Pardavėjai:\x04\x00\x01 \x0c\x02Va" +
-	"rtotojai:\x02pateikti\x02Atsakymas\x02produktai\x02užsakymai\x02parduoti" +
-	"\x02pagalba\x02Atsijungti\x02prisijungti\x02užsiregistruoti\x02Įėjimo sa" +
-	"rgas į %[1]s\x02Palyginkite URL, kurį naudojate, su žemiau esančiu, kad " +
-	"rastumėte visus trūkstamus simbolius, pažymėtus '*'\x02Trūkstami simboli" +
-	"ai\x02Prisijungti\x02vartotojo vardas\x02slaptažodis\x02Sukurti naują pa" +
-	"skyrą\x02Ištrinti viską\x02Jūs turite nulis pranešimų\x02Užsakymas\x02Po" +
-	"kalbis\x02Būsena\x02Pardavėjas\x02Pristatymo metodas\x02Bendra kaina\x02" +
-	"Data\x02Išsiųsta\x02Iki automatinio atmetimo\x02Iki automatinio užbaigim" +
-	"o\x02Išsami informacija\x02Pardavėjas pasiūlė %.2[1]f% grąžinimą\x02Prii" +
-	"mti\x02Atmesti\x02Klientų PGP raktas\x02Klientas vis dar gali atšaukti š" +
-	"į užsakymą!\x02Turite tai priimti per 2 dienas, kitaip bus automatiškai" +
-	" atmesta.\x02Priėmus, klientas nebegali atšaukti, todėl galite saugiai i" +
-	"šsiųsti.\x02Prašome atidžiai peržiūrėti žemiau esantį užsakymą prieš jį" +
-	" priimdami.\x02Visada atmesti užsakymus, kurių negalite įvykdyti.\x02Tur" +
-	"ite pažymėti šį užsakymą kaip išsiųstą per 2 dienas, kitaip jis bus auto" +
-	"matiškai atmestas.\x02Įsitikinkite, kad turite pakankamai laiko atlikti " +
-	"faktinį siuntimą!\x02Išsiųsta\x02Perkelkite tikslią Monero sumą į žemiau" +
-	" pateiktą adresą.\x02Po 10 patvirtinimų jūsų užsakymas bus perduotas tie" +
-	"kėjui.\x02Turite 3 valandas, kad sumokėtumėte šią sąskaitą, kitaip jūsų " +
-	"užsakymas bus atšauktas.\x02Liko laiko sumokėti\x02Suma XMR\x02Adresas" +
-	"\x02Užsakymai gali būti atšaukti, kol tiekėjas jų nepriėmė.\x02Atšaukti" +
-	"\x04\x00\x01 3\x02Jūsų užsakymas automatiškai bus užbaigtas per\x02Galit" +
-	"e pratęsti automatinio užbaigimo laiką 7 dienomis.\x02peržiūrėti savo už" +
-	"sakymą\x02Peržiūrėti\x02Pratęsti AF laikmatį\x02Ginčas\x02Grąžinimo pasi" +
-	"ūlymas\x02Klientas ginčijo šį užsakymą.\x02Naudokite žemiau esantį poka" +
-	"lbį, kad aptartumėte šį ginčą.\x02Galite sukurti grąžinimo pasiūlymą ir " +
-	"išspręsti šį ginčą be administratoriaus įsikišimo.\x02Grąžinimo procenta" +
-	"s\x02Užsakymo data\x02Užsakymo ID\x02Įrodymas apie raktų nuosavybę\x02Iš" +
-	"šifruokite, kad gautumėte tokeną\x02Tokenas\x02Atnaujinti produktą\x02A" +
-	"tnaujinti\x02Pridėti į krepšelį\x02Atsiliepimai\x02prieš\x02Nėra sandėly" +
-	"je\x02Registruotis\x02slaptažodžio patikra\x02Jau turite paskyrą?\x02Per" +
-	"žiūrėti užsakymą\x02Įvertinimas\x02svečias\x02klientas\x02administrator" +
-	"ius\x02nežinomas\x02įjungta\x02išjungta\x02Paskyra\x02Vartotojo vardas" +
-	"\x02Tipas\x022FA\x02Nustatymai\x02Kalba\x02Valiuta\x02Keisti slaptažodį" +
-	"\x02Dabartinis slaptažodis\x02Naujas slaptažodis\x02Patvirtinkite naują " +
-	"slaptažodį\x02Keisti PGP raktą\x02Įjungti 2FA\x02PGP viešasis raktas\x02" +
-	"Reikalinga pardavėjams, rekomenduojama visiems.\x02Atnaujinti pardavėjo " +
-	"profilį\x02Pardavėjo informacija\x02Palikite tuščią, jei nenorite atnauj" +
-	"inti.\x02Atnaujinti pristatymo metodus\x02Pristatymo metodas\x02Mano bil" +
-	"ietai\x020 sekundžių\x02%[1]d sekundžių\x02%[1]d minučių\x02%[1]d valand" +
-	"ų\x02%[1]d dienų\x02Įvertinimas (VID.)\x02Užsakymai įvykdyti\x02Užsakym" +
-	"ai depozite\x02Laukiantys ginčai\x02Anksčiau matyti\x02PGP raktas\x02Pin" +
-	"iginė\x02Tai jūsų XMR piniginė, kurioje galite deponuoti monetas.\x02Bal" +
-	"ansas atnaujinamas po 10 patvirtinimų.\x02Žiūrėti\x02daugiau informacijo" +
-	"s.\x02Balansas\x02Išimti\x02Įveskite monero adresą, į kurį norite išimti" +
-	" savo lėšas.\x02Mes imame 0.01 XMR mokestį už kiekvieną išėmimą, kad išv" +
-	"engtume šlamšto.\x02NEIŠIMKITE lėšų į kitą piniginę šioje platformoje!" +
-	"\x02Paskirties adresas\x02Suma\x02Įveskite sumą dešimtainiu formatu (pvz" +
-	"., 1.42069)"
+	" raktas atnaujintas\x02Paslaugų teikimo sąlygos atnaujintos\x02Skelbimas" +
+	" sukurtas\x02Krepšelis atnaujintas\x02krepšelis ištrintas\x02Negalite už" +
+	"sakyti su pardavėjo paskyra\x02Neturite pakankamai lėšų šiam užsakymui" +
+	"\x02Prašome sumokėti žemiau pateiktą sąskaitą per %[1]d valandų, kad jūs" +
+	"ų užsakymas būtų vykdomas.\x02Užsakymas sukurtas\x02Išėmimo suma per ma" +
+	"ža\x02Nepakanka lėšų išsiimti.\x02Negalite išsiimti į savo paskyrą\x02I" +
+	"šėmimas %[1]s XMR inicijuotas\x02Užsakymas atšauktas\x02Atsiliepimas su" +
+	"kurtas\x02Negalite pratęsti AF laikmačio, kol užsakymas nebuvo išsiųstas" +
+	" %[1]d dienas.\x02Negalite vėl pratęsti AF laikmačio, kol užsakymas nebu" +
+	"vo išsiųstas %[1]d dienas.\x02AF laikmatis jau pratęstas iki maksimumo." +
+	"\x02AF laikmatis pratęstas %[1]d dienomis\x02Užsakymas ginčijamas\x022FA" +
+	" turi būti įjungta pardavėjams\x02Pardavėjų paskyros negali turėti ankst" +
+	"esnių užsakymų. Prašome sukurti naują paskyrą.\x02Naujiems pardavėjams r" +
+	"eikalingas inventoriaus įrodymas.\x02Nepakankamas balansas.\x02Prašymas " +
+	"gautas.\x02Užsakymas priimtas. Jūs turite %[1]d valandų, kad pažymėtumėt" +
+	"e jį kaip išsiųstą.\x02Užsakymas atmestas.\x02Užsakymas pažymėtas kaip i" +
+	"šsiųstas.\x02Produktas ištrintas.\x02Produktas atnaujintas.\x02Bilietas" +
+	" jau uždarytas.\x02Norėdami pasiekti šią puslapį, turite būti prisijungę" +
+	".\x02Užsakymas gautas.\x02Gavote naują užsakymą!\x0aTurite %[1]d valandų" +
+	", kad priimtumėte, prieš tai, kai jis bus automatiškai atmestas.\x02Užsa" +
+	"kymas priimtas.\x02Jūsų užsakymas buvo priimtas!\x0aGalite stebėti jo bū" +
+	"seną užsakymų puslapyje.\x02Užsakymas išsiųstas.\x02Jūsų užsakymas buvo " +
+	"išsiųstas!\x0aPrašome nepamiršti jo įvertinti.\x02Kaip tapti pardavėju?" +
+	"\x02Sukurkite paskyrą su įjungta dviejų faktorių autentifikacija (2FA), " +
+	"tada pateikite pardavėjo prašymą.\x02Kaip pateikti užsakymą?\x02Pridėkit" +
+	"e norimus produktus į savo krepšelį. Eikite į /cart ir pasirinkite „Apmo" +
+	"kėjimas“, pasirinkite pageidaujamą pristatymo metodą ir pateikite reikia" +
+	"mą informaciją.\x0aJei turite pakankamai balanso, galite jį naudoti apmo" +
+	"kėjimo metu. Priešingu atveju, galite paprašyti sąskaitos faktūros. Sąsk" +
+	"aitos faktūros turi būti apmokėtos per %[1]d valandų, kad užsakymas būtų" +
+	" toliau apdorojamas.\x02Kaip galiu gauti Monero (XMR)?\x02Yra keletas bū" +
+	"dų, kaip įsigyti Monero. Prašome apsilankyti getmonero.org oficialioms g" +
+	"airėms ir ištekliams.\x02Ką turėčiau daryti, jei mano užsakymas neatvyko" +
+	" arba neatitinka aprašymo?\x02Užsakymai automatiškai užbaigiami po %[1]d" +
+	" dienų.\x0aGalite pratęsti automatinio užbaigimo laikotarpį du kartus." +
+	"\x0aJei užsakymas vis dar neatvyko po šių pratęsimų, turėtumėte atidaryt" +
+	"i ginčą.\x0aMūsų komanda peržiūrės atvejį ir priims sprendimą remdamasi " +
+	"turima informacija.\x02Ką galiu parduoti šioje rinkoje?\x02Leidžiami tik" +
+	" teisėti daiktai. Jei nesate tikri, ar jūsų produktas atitinka reikalavi" +
+	"mus, prašome susisiekti su mumis prieš kuriant skelbimą.\x02Atidaryti" +
+	"\x02Pardavėjo prašymas\x02Jūsų paskyroje nėra įjungta 2FA!\x02Programėlė" +
+	" nemokama vartotojams, kurie jau yra pardavėjai kitose rinkose.\x02Kitie" +
+	"ms vartotojams programėlė kainuoja %[1]s XMR.\x02Pardavėjo logotipas\x02" +
+	"Naudokite png vaizdą, kurio santykis artimas 1:1, kad atrodytų optimalia" +
+	"i.\x02Esamas pardavėjas\x02Pasirinkite tai, jei jau esate pardavėjas kit" +
+	"ose rinkose, tokiose kaip xmrBazaar.\x02Inventoriaus įrodymas\x02Aiškus " +
+	"jūsų inventoriaus vaizdas su jūsų vartotojo vardu ir laiko žyma.\x02Rink" +
+	"os ir jūsų vartotojo vardas\x02Išvardinkite rinkas, kuriose esate pardav" +
+	"ėjas, ir įtraukite savo vartotojo vardą.\x02Captcha\x02Paspauskite ratą" +
+	" su išpjova\x02Pateikti\x02Iš viso\x02Atsiskaitymas\x02pristatymo būdas" +
+	"\x02Naudokite piniginę mokėjimams\x02detalės\x02Nešifruoti duomenys auto" +
+	"matiškai šifruojami naudojant pardavėjo raktą.\x02Pavadinimas\x02Aprašym" +
+	"as\x02Produkto vaizdas\x02Naudokite vaizdą, kurio santykis artimas 1:1, " +
+	"kad atrodytų optimaliai.\x02Kategorija\x02Išsiunčiama iš\x02Išsiunčiama " +
+	"į\x02Inventorius\x02Šio produkto dabartinio inventoriaus dydis.\x02Kain" +
+	"os\x02Čia galite nustatyti savo kainas.\x02Mes imame 5% nuo šių kainų." +
+	"\x02Kiekis\x02Kaina\x02Sukurti bilietą\x02Tema\x02paskyra\x02užsakymas" +
+	"\x02piniginė\x02pardavėjas\x02produktas\x02pasiūlymas\x02klaida\x02kitas" +
+	"\x02Žinutė\x02Darbuotojų PGP\x02Keitimo kursas\x02Laikas\x04\x00\x01 " +
+	"\x0d\x02Pardavėjai:\x04\x00\x01 \x0c\x02Vartotojai:\x02pateikti\x02Atsak" +
+	"ymas\x02produktai\x02užsakymai\x02parduoti\x02pagalba\x02Atsijungti\x02p" +
+	"risijungti\x02užsiregistruoti\x02Įėjimo sargas į %[1]s\x02Palyginkite UR" +
+	"L, kurį naudojate, su žemiau esančiu, kad rastumėte visus trūkstamus sim" +
+	"bolius, pažymėtus '*'\x02Trūkstami simboliai\x02Prisijungti\x02vartotojo" +
+	" vardas\x02slaptažodis\x02Sukurti naują paskyrą\x02Ištrinti viską\x02Jūs" +
+	" turite nulis pranešimų\x02Užsakymas\x02Pokalbis\x02Būsena\x02Pardavėjas" +
+	"\x02Pristatymo metodas\x02Bendra kaina\x02Data\x02Išsiųsta\x02Iki automa" +
+	"tinio atmetimo\x02Iki automatinio užbaigimo\x02Išsami informacija\x02Par" +
+	"davėjas pasiūlė %.2[1]f% grąžinimą\x02Priimti\x02Atmesti\x02Klientų PGP " +
+	"raktas\x02Klientas vis dar gali atšaukti šį užsakymą!\x02Turite tai prii" +
+	"mti per 2 dienas, kitaip bus automatiškai atmesta.\x02Priėmus, klientas " +
+	"nebegali atšaukti, todėl galite saugiai išsiųsti.\x02Prašome atidžiai pe" +
+	"ržiūrėti žemiau esantį užsakymą prieš jį priimdami.\x02Visada atmesti už" +
+	"sakymus, kurių negalite įvykdyti.\x02Turite pažymėti šį užsakymą kaip iš" +
+	"siųstą per 2 dienas, kitaip jis bus automatiškai atmestas.\x02Įsitikinki" +
+	"te, kad turite pakankamai laiko atlikti faktinį siuntimą!\x02Išsiųsta" +
+	"\x02Perkelkite tikslią Monero sumą į žemiau pateiktą adresą.\x02Po 10 pa" +
+	"tvirtinimų jūsų užsakymas bus perduotas tiekėjui.\x02Turite 3 valandas, " +
+	"kad sumokėtumėte šią sąskaitą, kitaip jūsų užsakymas bus atšauktas.\x02L" +
+	"iko laiko sumokėti\x02Suma XMR\x02Adresas\x02Užsakymai gali būti atšaukt" +
+	"i, kol tiekėjas jų nepriėmė.\x02Atšaukti\x04\x00\x01 3\x02Jūsų užsakymas" +
+	" automatiškai bus užbaigtas per\x02Galite pratęsti automatinio užbaigimo" +
+	" laiką 7 dienomis.\x02peržiūrėti savo užsakymą\x02Peržiūrėti\x02Pratęsti" +
+	" AF laikmatį\x02Ginčas\x02Grąžinimo pasiūlymas\x02Klientas ginčijo šį už" +
+	"sakymą.\x02Naudokite žemiau esantį pokalbį, kad aptartumėte šį ginčą." +
+	"\x02Galite sukurti grąžinimo pasiūlymą ir išspręsti šį ginčą be administ" +
+	"ratoriaus įsikišimo.\x02Grąžinimo procentas\x02Užsakymo data\x02Užsakymo" +
+	" ID\x02Įrodymas apie raktų nuosavybę\x02Iššifruokite, kad gautumėte toke" +
+	"ną\x02Tokenas\x02Atnaujinti produktą\x02Atnaujinti\x02Pridėti į krepšelį" +
+	"\x02Atsiliepimai\x02prieš\x02Nėra sandėlyje\x02Registruotis\x02slaptažod" +
+	"žio patikra\x02Jau turite paskyrą?\x02Peržiūrėti užsakymą\x02Įvertinima" +
+	"s\x02svečias\x02klientas\x02administratorius\x02nežinomas\x02įjungta\x02" +
+	"išjungta\x02Paskyra\x02Vartotojo vardas\x02Tipas\x022FA\x02Nustatymai" +
+	"\x02Kalba\x02Valiuta\x02Keisti slaptažodį\x02Dabartinis slaptažodis\x02N" +
+	"aujas slaptažodis\x02Patvirtinkite naują slaptažodį\x02Keisti PGP raktą" +
+	"\x02Įjungti 2FA\x02PGP viešasis raktas\x02Reikalinga pardavėjams, rekome" +
+	"nduojama visiems.\x02Atnaujinti paslaugų teikimo sąlygas\x02Paslaugų tei" +
+	"kimo sąlygos\x02Paslaugų teikimo sąlygos naudojamos ginčams spręsti\x02A" +
+	"tnaujinti pristatymo metodus\x02Pristatymo metodas\x02Mano bilietai\x020" +
+	" sekundžių\x02%[1]d sekundžių\x02%[1]d minučių\x02%[1]d valandų\x02%[1]d" +
+	" dienų\x02Įvertinimas (VID.)\x02Užsakymai įvykdyti\x02Užsakymai depozite" +
+	"\x02Laukiantys ginčai\x02Anksčiau matyti\x02PGP raktas\x02Piniginė\x02Ta" +
+	"i jūsų XMR piniginė, kurioje galite deponuoti monetas.\x02Balansas atnau" +
+	"jinamas po 10 patvirtinimų.\x02Žiūrėti\x02daugiau informacijos.\x02Balan" +
+	"sas\x02Išimti\x02Įveskite monero adresą, į kurį norite išimti savo lėšas" +
+	".\x02Iš kiekvieno išėmimo imame %[1]f XMR mokestį, kad išvengtume šlamšt" +
+	"o.\x02NEIŠIMKITE lėšų į kitą piniginę šioje platformoje!\x02Paskirties a" +
+	"dresas\x02Suma\x02Įveskite sumą dešimtainiu formatu (pvz., 1.42069)"
 
-var lv_LVIndex = []uint32{ // 239 elements
+var lv_LVIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003a, 0x00000062, 0x00000079,
 	0x00000091, 0x000000af, 0x000000c8, 0x000000dd,
 	0x000000ed, 0x00000124, 0x0000013f, 0x00000166,
-	0x0000018f, 0x000001a6, 0x000001bd, 0x000001cf,
-	0x000001fb, 0x00000233, 0x000002a1, 0x000002b8,
-	0x000002e6, 0x00000309, 0x00000328, 0x0000033d,
-	0x00000351, 0x000003ab, 0x00000410, 0x00000441,
-	0x0000046b, 0x00000485, 0x000004a6, 0x00000502,
+	0x00000189, 0x000001a0, 0x000001b7, 0x000001c9,
+	0x000001f5, 0x0000022d, 0x0000029b, 0x000002b2,
+	0x000002d5, 0x00000303, 0x00000326, 0x00000345,
+	0x0000035a, 0x0000036e, 0x000003c8, 0x0000042d,
+	0x0000045e, 0x00000488, 0x000004a2, 0x000004c3,
 	// Entry 20 - 3F
-	0x0000054b, 0x00000561, 0x00000575, 0x000005c6,
-	0x000005de, 0x00000605, 0x00000618, 0x0000062e,
-	0x00000645, 0x0000067b, 0x00000691, 0x0000070d,
-	0x00000724, 0x0000077d, 0x00000795, 0x000007dc,
-	0x00000800, 0x00000872, 0x00000892, 0x00000a12,
-	0x00000a33, 0x00000aa3, 0x00000aed, 0x00000c27,
-	0x00000c4d, 0x00000cf2, 0x00000cfb, 0x00000d12,
-	0x00000d33, 0x00000da0, 0x00000de3, 0x00000e36,
+	0x0000051f, 0x00000568, 0x0000057e, 0x00000592,
+	0x000005e3, 0x000005fb, 0x00000622, 0x00000635,
+	0x0000064b, 0x00000662, 0x00000698, 0x000006ae,
+	0x0000072a, 0x00000741, 0x0000079a, 0x000007b2,
+	0x000007f9, 0x0000081d, 0x0000088f, 0x000008af,
+	0x00000a2f, 0x00000a50, 0x00000ac0, 0x00000b0a,
+	0x00000c44, 0x00000c6a, 0x00000d0f, 0x00000d18,
+	0x00000d2f, 0x00000d50, 0x00000d9a, 0x00000dc9,
 	// Entry 40 - 5F
-	0x00000e47, 0x00000e91, 0x00000ea6, 0x00000ef4,
-	0x00000f0b, 0x00000f66, 0x00000f85, 0x00000fd2,
-	0x00000fda, 0x00000fff, 0x00001008, 0x0000100e,
-	0x00001018, 0x00001029, 0x00001047, 0x00001050,
-	0x00001093, 0x000010e3, 0x000010ed, 0x000010f6,
-	0x00001107, 0x0000114d, 0x00001158, 0x00001166,
-	0x00001174, 0x0000117d, 0x000011aa, 0x000011bb,
-	0x000011e1, 0x0000120a, 0x00001213, 0x00001218,
+	0x00000dda, 0x00000e24, 0x00000e39, 0x00000e87,
+	0x00000e9e, 0x00000ef9, 0x00000f18, 0x00000f65,
+	0x00000f6d, 0x00000f92, 0x00000f9b, 0x00000fa1,
+	0x00000fab, 0x00000fbc, 0x00000fda, 0x00000fe3,
+	0x00001033, 0x0000103d, 0x00001046, 0x00001057,
+	0x0000109d, 0x000010a8, 0x000010b6, 0x000010c4,
+	0x000010cd, 0x000010fa, 0x0000110b, 0x00001131,
+	0x0000115a, 0x00001163, 0x00001168, 0x00001179,
 	// Entry 60 - 7F
-	0x00001229, 0x00001230, 0x00001236, 0x00001243,
-	0x00001248, 0x00001254, 0x0000125d, 0x00001267,
-	0x0000126f, 0x00001274, 0x0000127a, 0x00001289,
-	0x00001298, 0x0000129e, 0x000012b0, 0x000012c1,
-	0x000012ca, 0x000012d2, 0x000012db, 0x000012e8,
-	0x000012f0, 0x000012f9, 0x000012ff, 0x0000130e,
-	0x0000131d, 0x00001333, 0x000013af, 0x000013c4,
-	0x000013d0, 0x000013e0, 0x000013e7, 0x000013fc,
+	0x00001180, 0x00001186, 0x00001193, 0x00001198,
+	0x000011a4, 0x000011ad, 0x000011b7, 0x000011bf,
+	0x000011c4, 0x000011ca, 0x000011d9, 0x000011e8,
+	0x000011ee, 0x00001200, 0x00001211, 0x0000121a,
+	0x00001222, 0x0000122b, 0x00001238, 0x00001240,
+	0x00001249, 0x0000124f, 0x0000125e, 0x0000126d,
+	0x00001283, 0x000012ff, 0x00001314, 0x00001320,
+	0x00001330, 0x00001337, 0x0000134c, 0x00001358,
 	// Entry 80 - 9F
-	0x00001408, 0x0000141d, 0x0000142a, 0x00001430,
-	0x00001438, 0x00001444, 0x00001455, 0x00001468,
-	0x0000146f, 0x0000147a, 0x0000149d, 0x000014be,
-	0x000014c7, 0x000014f0, 0x000014f9, 0x00001503,
-	0x00001518, 0x00001547, 0x00001591, 0x000015e0,
-	0x00001631, 0x0000166c, 0x000016d4, 0x0000172c,
-	0x00001737, 0x00001777, 0x000017c2, 0x00001830,
-	0x00001858, 0x00001862, 0x00001869, 0x000018b9,
+	0x0000136d, 0x0000137a, 0x00001380, 0x00001388,
+	0x00001394, 0x000013a5, 0x000013b8, 0x000013bf,
+	0x000013ca, 0x000013ed, 0x0000140e, 0x00001417,
+	0x00001440, 0x00001449, 0x00001453, 0x00001468,
+	0x00001497, 0x000014e1, 0x00001530, 0x00001581,
+	0x000015bc, 0x00001624, 0x0000167c, 0x00001687,
+	0x000016c7, 0x00001712, 0x00001780, 0x000017a8,
+	0x000017b2, 0x000017b9, 0x00001809, 0x00001810,
 	// Entry A0 - BF
-	0x000018c0, 0x000018f8, 0x0000193f, 0x0000195d,
-	0x00001967, 0x0000197d, 0x00001985, 0x0000199b,
-	0x000019c6, 0x00001a0a, 0x00001a71, 0x00001a83,
-	0x00001a97, 0x00001aa7, 0x00001ad0, 0x00001af2,
-	0x00001af8, 0x00001b0d, 0x00001b19, 0x00001b2a,
-	0x00001b35, 0x00001b3b, 0x00001b48, 0x00001b57,
-	0x00001b69, 0x00001b77, 0x00001b90, 0x00001b9c,
-	0x00001ba3, 0x00001bab, 0x00001bba, 0x00001bc4,
+	0x00001848, 0x0000188f, 0x000018ad, 0x000018b7,
+	0x000018cd, 0x000018d5, 0x000018eb, 0x00001916,
+	0x0000195a, 0x000019c1, 0x000019d3, 0x000019e7,
+	0x000019f7, 0x00001a20, 0x00001a42, 0x00001a48,
+	0x00001a5d, 0x00001a69, 0x00001a7a, 0x00001a85,
+	0x00001a8b, 0x00001a98, 0x00001aa7, 0x00001ab9,
+	0x00001ac7, 0x00001ae0, 0x00001aec, 0x00001af3,
+	0x00001afb, 0x00001b0a, 0x00001b14, 0x00001b1e,
 	// Entry C0 - DF
-	0x00001bce, 0x00001bd8, 0x00001bde, 0x00001bee,
-	0x00001bf3, 0x00001bf7, 0x00001c04, 0x00001c0b,
-	0x00001c13, 0x00001c22, 0x00001c37, 0x00001c45,
-	0x00001c5f, 0x00001c74, 0x00001c81, 0x00001c98,
-	0x00001cc7, 0x00001ce7, 0x00001d00, 0x00001d27,
-	0x00001d45, 0x00001d56, 0x00001d64, 0x00001d6f,
-	0x00001d7e, 0x00001d8d, 0x00001d9b, 0x00001da8,
-	0x00001dba, 0x00001dd0, 0x00001deb, 0x00001dfd,
+	0x00001b28, 0x00001b2e, 0x00001b3e, 0x00001b43,
+	0x00001b47, 0x00001b54, 0x00001b5b, 0x00001b63,
+	0x00001b72, 0x00001b87, 0x00001b95, 0x00001baf,
+	0x00001bc4, 0x00001bd1, 0x00001be8, 0x00001c17,
+	0x00001c3a, 0x00001c50, 0x00001c8b, 0x00001ca9,
+	0x00001cba, 0x00001cc8, 0x00001cd3, 0x00001ce2,
+	0x00001cf1, 0x00001cff, 0x00001d0c, 0x00001d1e,
+	0x00001d34, 0x00001d4f, 0x00001d61, 0x00001d74,
 	// Entry E0 - FF
-	0x00001e10, 0x00001e1d, 0x00001e22, 0x00001e5a,
-	0x00001e85, 0x00001e8d, 0x00001ea4, 0x00001eaa,
-	0x00001eb2, 0x00001ef7, 0x00001f4a, 0x00001f82,
-	0x00001f95, 0x00001f9b, 0x00001fd8,
-} // Size: 980 bytes
+	0x00001d81, 0x00001d86, 0x00001dbe, 0x00001de9,
+	0x00001df1, 0x00001e08, 0x00001e0e, 0x00001e16,
+	0x00001e5b, 0x00001eaf, 0x00001ee7, 0x00001efa,
+	0x00001f00, 0x00001f3d,
+} // Size: 976 bytes
 
-const lv_LVData string = "" + // Size: 8152 bytes
+const lv_LVData string = "" + // Size: 7997 bytes
 	"\x02Neizdevās atvērt vārtus: nederīgi trūkstoši simboli\x02Šis lietotājv" +
 	"ārds jau tiek izmantots\x02Nederīgs PGP atslēga\x02Veiksmīgi reģistrēts" +
 	"\x02Nederīgi akreditācijas dati\x02Jūsu konts ir bloķēts\x02Nederīgs 2FA" +
 	" tokens\x02Parole mainīta\x02Jūs nevarat atjaunināt uz savu pašreizējo a" +
 	"tslēgu\x02PGP atslēga ir iestatīta\x02PGP publiskā atslēga ir atjaunināt" +
-	"a\x02Pārdevēja informācija ir atjaunināta\x02Sludinājums izveidots\x02Gr" +
-	"oziņš atjaunināts\x02groziņš dzēsts\x02Jūs nevarat pasūtīt ar pārdevēja " +
-	"kontu\x02Jums nav pietiekami daudz līdzekļu šim pasūtījumam\x02Lūdzu, ap" +
-	"maksājiet zemāk esošo rēķinu %[1]d stundu laikā, lai jūsu pasūtījums var" +
-	"ētu turpināties.\x02Pasūtījums izveidots\x02Nav pietiekami daudz līdzek" +
-	"ļu izņemšanai.\x02Jūs nevarat izņemt uz savu kontu\x02Izņemšana %[1]s X" +
-	"MR uzsākta\x02Pasūtījums atcelts\x02Atsauksme izveidota\x02Jūs nevarat p" +
-	"agarināt AF taimeri, pirms pasūtījums ir nosūtīts vismaz %[1]d dienas." +
-	"\x02Jūs nevarat atkārtoti pagarināt AF taimeri, pirms pasūtījums ir nosū" +
-	"tīts vismaz %[1]d dienas.\x02AF taimeris jau ir pagarināts līdz maksimum" +
-	"am.\x02AF taimeris pagarināts par %[1]d dienām\x02Pasūtījums apstrīdēts" +
-	"\x022FA ir jāieslēdz pārdevējiem\x02Pārdevēju kontiem nevar būt iepriekš" +
-	"ēju pasūtījumu. Lūdzu, izveidojiet jaunu kontu.\x02Jauniem pārdevējiem " +
-	"ir nepieciešams uzrādīt krājumu pierādījumu.\x02Nepietiekams atlikums" +
-	"\x02Pieteikums saņemts\x02Pasūtījums pieņemts. Jums ir %[1]d stundas, la" +
-	"i to atzīmētu kā nosūtītu.\x02Pasūtījums noraidīts\x02Pasūtījums atzīmēt" +
-	"s kā nosūtīts\x02Produkts izdzēsts\x02Produkts atjaunināts\x02Biļete jau" +
-	" ir slēgta\x02Lai piekļūtu šai lapai, jums jābūt pierakstītam\x02Pasūtīj" +
-	"ums saņemts\x02Jums ir saņemts jauns pasūtījums!\x0aJums ir kopā %[1]d s" +
-	"tundas, lai to pieņemtu, pirms tas tiks automātiski noraidīts.\x02Pasūtī" +
-	"jums pieņemts\x02Jūsu pasūtījums ir pieņemts!\x0aJūs varat uzraudzīt tā " +
-	"statusu no pasūtījumu lapas\x02Pasūtījums nosūtīts\x02Jūsu pasūtījums ir" +
-	" nosūtīts!\x0aLūdzu, neaizmirstiet to novērtēt.\x02Kā es varu kļūt par p" +
-	"ārdevēju?\x02Izveidojiet kontu ar iespējotu divu faktoru autentifikācij" +
-	"u (2FA), pēc tam iesniedziet pārdevēja pieteikumu.\x02Kā es varu veikt p" +
-	"asūtījumu?\x02Pievienojiet vēlamās preces savam grozam. Dodieties uz /ca" +
-	"rt un izvēlieties “Apmaksāt”, izvēlieties vēlamo piegādes metodi un snie" +
-	"dziet nepieciešamo informāciju.\x0aJa jums ir pieejams atlikums, jūs var" +
-	"at to izmantot apmaksā. Pretējā gadījumā jūs varat pieprasīt rēķinu. Rēķ" +
-	"iniem jābūt apmaksātiem iekš %[1]d stundām, lai pasūtījums turpinātu aps" +
-	"trādi.\x02Kā es varu iegūt Monero (XMR)?\x02Ir vairāki veidi, kā iegūt M" +
-	"onero. Lūdzu, apmeklējiet getmonero.org oficiālai informācijai un resurs" +
-	"iem.\x02Ko man darīt, ja mans pasūtījums nav ieradies vai neatbilst apra" +
-	"kstam?\x02Pasūtījumi automātiski tiek pabeigti pēc %[1]d dienām.\x0aJūs " +
-	"varat divas reizes pagarināt automātiskās pabeigšanas periodu.\x0aJa pas" +
-	"ūtījums joprojām nav ieradies pēc šiem pagarinājumiem, jums jāatver str" +
-	"īds.\x0aMūsu komanda pārskatīs lietu un pieņems lēmumu, pamatojoties uz" +
-	" pieejamo informāciju.\x02Ko es drīkstu pārdot šajā tirgū?\x02Atļauti ti" +
-	"kai likumīgi priekšmeti. Ja neesat pārliecināts, vai jūsu produkts atbil" +
-	"st prasībām, lūdzu, sazinieties ar mums pirms sludinājuma izveidošanas." +
-	"\x02Atvērts\x02Pārdevēja pieteikums\x02Jūsu kontā nav iespējota 2FA!\x02" +
-	"Lietotājiem, kuri jau ir pārdevēji citos tirgos, izmantojot to pašu PGP " +
-	"atslēgu, lietotne ir bezmaksas.\x02Citiem lietotājiem lietotne maksā %[1" +
-	"]s XMR un nav atmaksājama.\x02Jums ir jāsniedz pierādījums, ka jums pati" +
-	"ešām ir produkti, ko pārdot šeit.\x02Pārdevēja logo\x02Izmantojiet png a" +
-	"ttēlu ar tuvu 1:1 attiecību optimālai izskatīšanai.\x02Esošais pārdevējs" +
-	"\x02Izvēlieties šo, ja jau esat pārdevējs citā tirgū, piemēram, xmrBazaa" +
-	"r.\x02Krājumu pierādījums\x02Skaidrs attēls ar jūsu krājumiem, kurā redz" +
-	"ams jūsu lietotājvārds un laika zīmogs.\x02Tirgi un jūsu lietotājvārds" +
-	"\x02Norādiet tirgus, kur esat pārdevējs, un iekļaujiet savu lietotājvārd" +
-	"u.\x02Captcha\x02Noklikšķiniet uz apļa ar griezumu\x02Iesniegt\x02Kopā" +
-	"\x02Apmaksāt\x02piegādes metode\x02Izmantojiet maku maksāšanai\x02detaļa" +
-	"s\x02Izmantojiet savu īsto adresi, ar tādu pašu formātu kā zemāk.\x02Neš" +
-	"ifrētie dati automātiski tiek šifrēti, izmantojot pārdevēja atslēgu.\x02" +
-	"Nosaukums\x02Apraksts\x02Produkta attēls\x02Izmantojiet attēlu ar tuvu 1" +
-	":1 attiecību optimālai izskatīšanai.\x02Kategorija\x02Nosūtīts no\x02Nos" +
-	"ūtīts uz\x02Krājumi\x02Šī produkta pašreizējo krājumu lielums.\x02Cenu " +
-	"noteikšana\x02Šeit jūs varat noteikt savas cenas.\x02Mēs ņemam 5% komisi" +
-	"ju no šīm cenām.\x02Daudzums\x02Cena\x02Izveidot biļeti\x02Temats\x02kon" +
-	"ts\x02pasūtījums\x02maku\x02pārdevējs\x02produkts\x02ieteikums\x02kļūda" +
-	"\x02cits\x02Ziņa\x02Darbinieku PGP\x02Valūtas kurss\x02Laiks\x04\x00\x01" +
-	" \x0d\x02Pārdevēji:\x04\x00\x01 \x0c\x02Lietotāji:\x02iesniegt\x02Atbild" +
-	"e\x02produkti\x02pasūtījumi\x02pārdot\x02atbalsts\x02Iziet\x02pierakstīt" +
-	"ies\x02reģistrēties\x02Ieejas sargs uz %[1]s\x02Salīdziniet URL, ko izma" +
-	"ntojat, ar attēlā zemāk redzamo, lai atrastu visus trūkstošos simbolus, " +
-	"kas atzīmēti ar '*'\x02Trūkstošie simboli\x02Pieteikties\x02lietotājvārd" +
-	"s\x02parole\x02Izveidot jaunu kontu\x02Dzēst visu\x02Jums nav paziņojumu" +
-	"\x02Pasūtījums\x02Čats\x02Statuss\x02Pārdevējs\x02Piegādes metode\x02Kop" +
-	"ējās izmaksas\x02Datums\x02Nosūtīts\x02Līdz automātiskai noraidīšanai" +
-	"\x02Līdz automātiskai pabeigšanai\x02Detaļas\x02Pārdevējs piedāvāja %.2[" +
-	"1]f% atmaksu\x02Pieņemt\x02Noraidīt\x02Klienta PGP atslēga\x02Klients jo" +
-	"projām var atcelt šo pasūtījumu!\x02Jums jāpieņem tas 2 dienu laikā, vai" +
-	" tas tiks automātiski noraidīts.\x02Pēc pieņemšanas klients vairs nevar " +
-	"atcelt, tāpēc varat droši nosūtīt.\x02Lūdzu, rūpīgi pārskatiet zemāk eso" +
-	"šo pasūtījumu pirms tā pieņemšanas.\x02Vienmēr noraidiet pasūtījumus, k" +
-	"urus nevarat izpildīt.\x02Jums jāatzīmē šis pasūtījums kā nosūtīts 2 die" +
-	"nu laikā, vai tas tiks automātiski noraidīts.\x02Pārliecinieties, ka jum" +
-	"s ir pietiekami daudz laika, lai veiktu faktisko nosūtīšanu!\x02Nosūtīts" +
-	"\x02Pārskaitiet precīzu Monero summu uz zemāk norādīto adresi.\x02Pēc 10" +
-	" apstiprinājumiem jūsu pasūtījums tiks nosūtīts pārdevējam.\x02Jums ir k" +
-	"opumā 3 stundas, lai samaksātu šo rēķinu, pretējā gadījumā jūsu pasūtīju" +
-	"ms tiks atcelts.\x02Atlikušais laiks maksājuma veikšanai\x02Summa XMR" +
-	"\x02Adrese\x02Pasūtījumi var tikt atcelti līdz brīdim, kad tos ir pieņēm" +
-	"is pārdevējs.\x02Atcelt\x04\x00\x01 3\x02Jūsu pasūtījums automātiski tik" +
-	"s pabeigts pēc\x02Jūs varat pagarināt automātiskās pabeigšanas laiku par" +
-	" 7 dienām.\x02pārskatiet savu pasūtījumu\x02Pārskats\x02Pagarināt AF tai" +
-	"meri\x02Strīds\x02Hyvitys piedāvājums\x02Klients ir apstrīdējis šo pasūt" +
-	"ījumu.\x02Izmantojiet zemāk esošo tērzēšanu, lai apspriestu šo strīdu." +
-	"\x02Jūs varat izveidot atmaksas piedāvājumu un atrisināt šo strīdu bez a" +
-	"dministratora iejaukšanās.\x02Atmaksas procents\x02Pasūtījuma datums\x02" +
-	"Pasūtījuma ID\x02Atslēgas īpašumtiesību pierādījums\x02Atšifrējiet, lai " +
-	"iegūtu tokenu\x02Token\x02Atjaunināt produktu\x02Atjaunināt\x02Pievienot" +
-	" grozam\x02Atsauksmes\x02pirms\x02NAV PIEEJAMS\x02Reģistrēties\x02parole" +
-	"s pārbaude\x02Jau ir konts?\x02Pārskatīt pasūtījumu\x02Vērtējums\x02vies" +
-	"is\x02klients\x02administrators\x02nezināms\x02ieslēgts\x02izslēgts\x02K" +
-	"onta\x02Lietotājvārds\x02Tips\x022FA\x02Iestatījumi\x02Valoda\x02Valūta" +
-	"\x02Mainīt paroli\x02Pašreizējā parole\x02Jaunā parole\x02Apstiprināt ja" +
-	"uno paroli\x02Mainīt PGP atslēgu\x02Ieslēgt 2FA\x02PGP publiskā atslēga" +
-	"\x02Nepieciešams pārdevējiem, ieteicams visiem.\x02Atjaunināt pārdevēja " +
-	"profilu\x02Pārdevēja informācija\x02Atstājiet tukšu, lai neaktualizētu." +
-	"\x02Atjaunināt piegādes metodes\x02Piegādes metode\x02Mani biļetes\x020 " +
-	"sekundes\x02%[1]d sekundes\x02%[1]d minūtes\x02%[1]d stundas\x02%[1]d di" +
-	"enas\x02Vērtējums (AVG)\x02Pasūtījumi pabeigti\x02Pasūtījumi uzturēšanā" +
-	"\x02Gaidāmie strīdi\x02Iepriekš redzēts\x02PGP atslēga\x02Maka\x02Šis ir" +
-	" jūsu XMR maks, kurā varat noguldīt monētas.\x02Saldo atjaunina pēc 10 a" +
-	"pstiprinājumiem.\x02Skatīt\x02vairāk informācijas.\x02Saldo\x02Izņemt" +
-	"\x02Ievadiet Monero adresi, uz kuru vēlaties izņemt savus līdzekļus.\x02" +
-	"Mēs iekasējam 0.01 XMR maksu par katru izņemšanu, lai novērstu surogātpa" +
-	"stu.\x02NEIZŅEMIET līdzekļus uz citu maku šajā platformā!\x02Galamērķa a" +
-	"drese\x02Summa\x02Ievadiet summu decimāldaļas formātā (piemēram, 1.42069" +
-	")"
+	"a\x02Lietošanas noteikumi atjaunināti\x02Sludinājums izveidots\x02Groziņ" +
+	"š atjaunināts\x02groziņš dzēsts\x02Jūs nevarat pasūtīt ar pārdevēja kon" +
+	"tu\x02Jums nav pietiekami daudz līdzekļu šim pasūtījumam\x02Lūdzu, apmak" +
+	"sājiet zemāk esošo rēķinu %[1]d stundu laikā, lai jūsu pasūtījums varētu" +
+	" turpināties.\x02Pasūtījums izveidots\x02Izņemšanas summa ir pārāk maza" +
+	"\x02Nav pietiekami daudz līdzekļu izņemšanai.\x02Jūs nevarat izņemt uz s" +
+	"avu kontu\x02Izņemšana %[1]s XMR uzsākta\x02Pasūtījums atcelts\x02Atsauk" +
+	"sme izveidota\x02Jūs nevarat pagarināt AF taimeri, pirms pasūtījums ir n" +
+	"osūtīts vismaz %[1]d dienas.\x02Jūs nevarat atkārtoti pagarināt AF taime" +
+	"ri, pirms pasūtījums ir nosūtīts vismaz %[1]d dienas.\x02AF taimeris jau" +
+	" ir pagarināts līdz maksimumam.\x02AF taimeris pagarināts par %[1]d dien" +
+	"ām\x02Pasūtījums apstrīdēts\x022FA ir jāieslēdz pārdevējiem\x02Pārdevēj" +
+	"u kontiem nevar būt iepriekšēju pasūtījumu. Lūdzu, izveidojiet jaunu kon" +
+	"tu.\x02Jauniem pārdevējiem ir nepieciešams uzrādīt krājumu pierādījumu." +
+	"\x02Nepietiekams atlikums\x02Pieteikums saņemts\x02Pasūtījums pieņemts. " +
+	"Jums ir %[1]d stundas, lai to atzīmētu kā nosūtītu.\x02Pasūtījums noraid" +
+	"īts\x02Pasūtījums atzīmēts kā nosūtīts\x02Produkts izdzēsts\x02Produkts" +
+	" atjaunināts\x02Biļete jau ir slēgta\x02Lai piekļūtu šai lapai, jums jāb" +
+	"ūt pierakstītam\x02Pasūtījums saņemts\x02Jums ir saņemts jauns pasūtīju" +
+	"ms!\x0aJums ir kopā %[1]d stundas, lai to pieņemtu, pirms tas tiks autom" +
+	"ātiski noraidīts.\x02Pasūtījums pieņemts\x02Jūsu pasūtījums ir pieņemts" +
+	"!\x0aJūs varat uzraudzīt tā statusu no pasūtījumu lapas\x02Pasūtījums no" +
+	"sūtīts\x02Jūsu pasūtījums ir nosūtīts!\x0aLūdzu, neaizmirstiet to novērt" +
+	"ēt.\x02Kā es varu kļūt par pārdevēju?\x02Izveidojiet kontu ar iespējotu" +
+	" divu faktoru autentifikāciju (2FA), pēc tam iesniedziet pārdevēja piete" +
+	"ikumu.\x02Kā es varu veikt pasūtījumu?\x02Pievienojiet vēlamās preces sa" +
+	"vam grozam. Dodieties uz /cart un izvēlieties “Apmaksāt”, izvēlieties vē" +
+	"lamo piegādes metodi un sniedziet nepieciešamo informāciju.\x0aJa jums i" +
+	"r pieejams atlikums, jūs varat to izmantot apmaksā. Pretējā gadījumā jūs" +
+	" varat pieprasīt rēķinu. Rēķiniem jābūt apmaksātiem iekš %[1]d stundām, " +
+	"lai pasūtījums turpinātu apstrādi.\x02Kā es varu iegūt Monero (XMR)?\x02" +
+	"Ir vairāki veidi, kā iegūt Monero. Lūdzu, apmeklējiet getmonero.org ofic" +
+	"iālai informācijai un resursiem.\x02Ko man darīt, ja mans pasūtījums nav" +
+	" ieradies vai neatbilst aprakstam?\x02Pasūtījumi automātiski tiek pabeig" +
+	"ti pēc %[1]d dienām.\x0aJūs varat divas reizes pagarināt automātiskās pa" +
+	"beigšanas periodu.\x0aJa pasūtījums joprojām nav ieradies pēc šiem pagar" +
+	"inājumiem, jums jāatver strīds.\x0aMūsu komanda pārskatīs lietu un pieņe" +
+	"ms lēmumu, pamatojoties uz pieejamo informāciju.\x02Ko es drīkstu pārdot" +
+	" šajā tirgū?\x02Atļauti tikai likumīgi priekšmeti. Ja neesat pārliecināt" +
+	"s, vai jūsu produkts atbilst prasībām, lūdzu, sazinieties ar mums pirms " +
+	"sludinājuma izveidošanas.\x02Atvērts\x02Pārdevēja pieteikums\x02Jūsu kon" +
+	"tā nav iespējota 2FA!\x02Lietotne ir bezmaksas lietotājiem, kuri jau ir " +
+	"pārdevēji citā tirgū.\x02Citiem lietotājiem lietotne maksā %[1]s XMR." +
+	"\x02Pārdevēja logo\x02Izmantojiet png attēlu ar tuvu 1:1 attiecību optim" +
+	"ālai izskatīšanai.\x02Esošais pārdevējs\x02Izvēlieties šo, ja jau esat " +
+	"pārdevējs citā tirgū, piemēram, xmrBazaar.\x02Krājumu pierādījums\x02Ska" +
+	"idrs attēls ar jūsu krājumiem, kurā redzams jūsu lietotājvārds un laika " +
+	"zīmogs.\x02Tirgi un jūsu lietotājvārds\x02Norādiet tirgus, kur esat pārd" +
+	"evējs, un iekļaujiet savu lietotājvārdu.\x02Captcha\x02Noklikšķiniet uz " +
+	"apļa ar griezumu\x02Iesniegt\x02Kopā\x02Apmaksāt\x02piegādes metode\x02I" +
+	"zmantojiet maku maksāšanai\x02detaļas\x02Nešifrētie dati automātiski tie" +
+	"k šifrēti, izmantojot pārdevēja atslēgu.\x02Nosaukums\x02Apraksts\x02Pro" +
+	"dukta attēls\x02Izmantojiet attēlu ar tuvu 1:1 attiecību optimālai izska" +
+	"tīšanai.\x02Kategorija\x02Nosūtīts no\x02Nosūtīts uz\x02Krājumi\x02Šī pr" +
+	"odukta pašreizējo krājumu lielums.\x02Cenu noteikšana\x02Šeit jūs varat " +
+	"noteikt savas cenas.\x02Mēs ņemam 5% komisiju no šīm cenām.\x02Daudzums" +
+	"\x02Cena\x02Izveidot biļeti\x02Temats\x02konts\x02pasūtījums\x02maku\x02" +
+	"pārdevējs\x02produkts\x02ieteikums\x02kļūda\x02cits\x02Ziņa\x02Darbiniek" +
+	"u PGP\x02Valūtas kurss\x02Laiks\x04\x00\x01 \x0d\x02Pārdevēji:\x04\x00" +
+	"\x01 \x0c\x02Lietotāji:\x02iesniegt\x02Atbilde\x02produkti\x02pasūtījumi" +
+	"\x02pārdot\x02atbalsts\x02Iziet\x02pierakstīties\x02reģistrēties\x02Ieej" +
+	"as sargs uz %[1]s\x02Salīdziniet URL, ko izmantojat, ar attēlā zemāk red" +
+	"zamo, lai atrastu visus trūkstošos simbolus, kas atzīmēti ar '*'\x02Trūk" +
+	"stošie simboli\x02Pieteikties\x02lietotājvārds\x02parole\x02Izveidot jau" +
+	"nu kontu\x02Dzēst visu\x02Jums nav paziņojumu\x02Pasūtījums\x02Čats\x02S" +
+	"tatuss\x02Pārdevējs\x02Piegādes metode\x02Kopējās izmaksas\x02Datums\x02" +
+	"Nosūtīts\x02Līdz automātiskai noraidīšanai\x02Līdz automātiskai pabeigša" +
+	"nai\x02Detaļas\x02Pārdevējs piedāvāja %.2[1]f% atmaksu\x02Pieņemt\x02Nor" +
+	"aidīt\x02Klienta PGP atslēga\x02Klients joprojām var atcelt šo pasūtījum" +
+	"u!\x02Jums jāpieņem tas 2 dienu laikā, vai tas tiks automātiski noraidīt" +
+	"s.\x02Pēc pieņemšanas klients vairs nevar atcelt, tāpēc varat droši nosū" +
+	"tīt.\x02Lūdzu, rūpīgi pārskatiet zemāk esošo pasūtījumu pirms tā pieņemš" +
+	"anas.\x02Vienmēr noraidiet pasūtījumus, kurus nevarat izpildīt.\x02Jums " +
+	"jāatzīmē šis pasūtījums kā nosūtīts 2 dienu laikā, vai tas tiks automāti" +
+	"ski noraidīts.\x02Pārliecinieties, ka jums ir pietiekami daudz laika, la" +
+	"i veiktu faktisko nosūtīšanu!\x02Nosūtīts\x02Pārskaitiet precīzu Monero " +
+	"summu uz zemāk norādīto adresi.\x02Pēc 10 apstiprinājumiem jūsu pasūtīju" +
+	"ms tiks nosūtīts pārdevējam.\x02Jums ir kopumā 3 stundas, lai samaksātu " +
+	"šo rēķinu, pretējā gadījumā jūsu pasūtījums tiks atcelts.\x02Atlikušais" +
+	" laiks maksājuma veikšanai\x02Summa XMR\x02Adrese\x02Pasūtījumi var tikt" +
+	" atcelti līdz brīdim, kad tos ir pieņēmis pārdevējs.\x02Atcelt\x04\x00" +
+	"\x01 3\x02Jūsu pasūtījums automātiski tiks pabeigts pēc\x02Jūs varat pag" +
+	"arināt automātiskās pabeigšanas laiku par 7 dienām.\x02pārskatiet savu p" +
+	"asūtījumu\x02Pārskats\x02Pagarināt AF taimeri\x02Strīds\x02Hyvitys piedā" +
+	"vājums\x02Klients ir apstrīdējis šo pasūtījumu.\x02Izmantojiet zemāk eso" +
+	"šo tērzēšanu, lai apspriestu šo strīdu.\x02Jūs varat izveidot atmaksas " +
+	"piedāvājumu un atrisināt šo strīdu bez administratora iejaukšanās.\x02At" +
+	"maksas procents\x02Pasūtījuma datums\x02Pasūtījuma ID\x02Atslēgas īpašum" +
+	"tiesību pierādījums\x02Atšifrējiet, lai iegūtu tokenu\x02Token\x02Atjaun" +
+	"ināt produktu\x02Atjaunināt\x02Pievienot grozam\x02Atsauksmes\x02pirms" +
+	"\x02NAV PIEEJAMS\x02Reģistrēties\x02paroles pārbaude\x02Jau ir konts?" +
+	"\x02Pārskatīt pasūtījumu\x02Vērtējums\x02viesis\x02klients\x02administra" +
+	"tors\x02nezināms\x02ieslēgts\x02izslēgts\x02Konta\x02Lietotājvārds\x02Ti" +
+	"ps\x022FA\x02Iestatījumi\x02Valoda\x02Valūta\x02Mainīt paroli\x02Pašreiz" +
+	"ējā parole\x02Jaunā parole\x02Apstiprināt jauno paroli\x02Mainīt PGP at" +
+	"slēgu\x02Ieslēgt 2FA\x02PGP publiskā atslēga\x02Nepieciešams pārdevējiem" +
+	", ieteicams visiem.\x02Atjaunināt lietošanas noteikumus\x02Lietošanas no" +
+	"teikumi\x02Lietošanas noteikumi tiek izmantoti strīdu risināšanai\x02Atj" +
+	"aunināt piegādes metodes\x02Piegādes metode\x02Mani biļetes\x020 sekunde" +
+	"s\x02%[1]d sekundes\x02%[1]d minūtes\x02%[1]d stundas\x02%[1]d dienas" +
+	"\x02Vērtējums (AVG)\x02Pasūtījumi pabeigti\x02Pasūtījumi uzturēšanā\x02G" +
+	"aidāmie strīdi\x02Iepriekš redzēts\x02PGP atslēga\x02Maka\x02Šis ir jūsu" +
+	" XMR maks, kurā varat noguldīt monētas.\x02Saldo atjaunina pēc 10 apstip" +
+	"rinājumiem.\x02Skatīt\x02vairāk informācijas.\x02Saldo\x02Izņemt\x02Ieva" +
+	"diet Monero adresi, uz kuru vēlaties izņemt savus līdzekļus.\x02Mēs ieka" +
+	"sējam %[1]f XMR maksu par katru izņemšanu, lai novērstu surogātpastu." +
+	"\x02NEIZŅEMIET līdzekļus uz citu maku šajā platformā!\x02Galamērķa adres" +
+	"e\x02Summa\x02Ievadiet summu decimāldaļas formātā (piemēram, 1.42069)"
 
-var no_NOIndex = []uint32{ // 239 elements
+var no_NOIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000031, 0x00000057, 0x0000006b,
 	0x00000082, 0x0000009a, 0x000000b1, 0x000000c3,
 	0x000000d7, 0x00000109, 0x0000011d, 0x00000140,
-	0x00000164, 0x00000179, 0x0000018e, 0x000001a1,
-	0x000001ce, 0x000001fb, 0x00000259, 0x0000026e,
-	0x0000028b, 0x000002b0, 0x000002cc, 0x000002e2,
-	0x000002f6, 0x00000345, 0x0000039d, 0x000003c7,
-	0x000003ea, 0x000003fe, 0x00000422, 0x00000473,
+	0x00000160, 0x00000175, 0x0000018a, 0x0000019d,
+	0x000001ca, 0x000001f7, 0x00000255, 0x0000026a,
+	0x00000285, 0x000002a2, 0x000002c7, 0x000002e3,
+	0x000002f9, 0x0000030d, 0x0000035c, 0x000003b4,
+	0x000003de, 0x00000401, 0x00000415, 0x00000439,
 	// Entry 20 - 3F
-	0x0000049f, 0x000004ae, 0x000004be, 0x00000503,
-	0x00000517, 0x00000533, 0x00000543, 0x00000555,
-	0x00000572, 0x000005aa, 0x000005bd, 0x00000627,
-	0x0000063c, 0x0000068f, 0x000006a0, 0x000006df,
-	0x000006f8, 0x0000075d, 0x00000783, 0x000008dd,
-	0x00000902, 0x00000976, 0x000009d9, 0x00000b0c,
-	0x00000b3d, 0x00000bc9, 0x00000bcf, 0x00000bde,
-	0x00000c01, 0x00000c75, 0x00000cbe, 0x00000cfc,
+	0x0000048a, 0x000004b6, 0x000004c5, 0x000004d5,
+	0x0000051a, 0x0000052e, 0x0000054a, 0x0000055a,
+	0x0000056c, 0x00000589, 0x000005c1, 0x000005d4,
+	0x0000063e, 0x00000653, 0x000006a6, 0x000006b7,
+	0x000006f6, 0x0000070f, 0x00000774, 0x0000079a,
+	0x000008f4, 0x00000919, 0x0000098d, 0x000009f0,
+	0x00000b23, 0x00000b54, 0x00000be0, 0x00000be6,
+	0x00000bf5, 0x00000c18, 0x00000c69, 0x00000c9b,
 	// Entry 40 - 5F
-	0x00000d07, 0x00000d40, 0x00000d54, 0x00000d9c,
-	0x00000dac, 0x00000df3, 0x00000e0f, 0x00000e51,
-	0x00000e59, 0x00000e78, 0x00000e81, 0x00000e87,
-	0x00000e8d, 0x00000e9d, 0x00000eb8, 0x00000ec1,
-	0x00000ef7, 0x00000f46, 0x00000f4d, 0x00000f59,
-	0x00000f66, 0x00000fa0, 0x00000fa9, 0x00000fb4,
-	0x00000fbf, 0x00000fc5, 0x00001001, 0x00001008,
-	0x00001027, 0x00001043, 0x0000104a, 0x0000104f,
+	0x00000ca6, 0x00000cdf, 0x00000cf3, 0x00000d3b,
+	0x00000d4b, 0x00000d92, 0x00000dae, 0x00000df0,
+	0x00000df8, 0x00000e17, 0x00000e20, 0x00000e26,
+	0x00000e2c, 0x00000e3c, 0x00000e57, 0x00000e60,
+	0x00000eaf, 0x00000eb6, 0x00000ec2, 0x00000ecf,
+	0x00000f09, 0x00000f12, 0x00000f1d, 0x00000f28,
+	0x00000f2e, 0x00000f6a, 0x00000f71, 0x00000f90,
+	0x00000fac, 0x00000fb3, 0x00000fb8, 0x00000fc8,
 	// Entry 60 - 7F
-	0x0000105f, 0x00001064, 0x0000106a, 0x00001075,
-	0x0000107e, 0x00001085, 0x0000108d, 0x00001095,
-	0x0000109a, 0x000010a0, 0x000010a8, 0x000010b5,
-	0x000010c0, 0x000010c4, 0x000010d2, 0x000010e0,
-	0x000010e9, 0x000010ee, 0x000010f8, 0x00001105,
-	0x0000110b, 0x00001113, 0x0000111b, 0x00001124,
-	0x0000112e, 0x0000114c, 0x000011b2, 0x000011c1,
-	0x000011ca, 0x000011d5, 0x000011dd, 0x000011ee,
+	0x00000fcd, 0x00000fd3, 0x00000fde, 0x00000fe7,
+	0x00000fee, 0x00000ff6, 0x00000ffe, 0x00001003,
+	0x00001009, 0x00001011, 0x0000101e, 0x00001029,
+	0x0000102d, 0x0000103b, 0x00001049, 0x00001052,
+	0x00001057, 0x00001061, 0x0000106e, 0x00001074,
+	0x0000107c, 0x00001084, 0x0000108d, 0x00001097,
+	0x000010b5, 0x0000111b, 0x0000112a, 0x00001133,
+	0x0000113e, 0x00001146, 0x00001157, 0x00001161,
 	// Entry 80 - 9F
-	0x000011f8, 0x0000120c, 0x00001217, 0x0000121c,
-	0x00001223, 0x0000122a, 0x0000123a, 0x00001248,
-	0x0000124d, 0x00001256, 0x0000126f, 0x0000128b,
-	0x00001294, 0x000012b9, 0x000012bf, 0x000012c6,
-	0x000012da, 0x0000130d, 0x00001355, 0x000013a7,
-	0x000013ec, 0x00001421, 0x00001482, 0x000014c7,
-	0x000014cd, 0x00001508, 0x00001550, 0x000015b1,
-	0x000015c8, 0x000015d3, 0x000015db, 0x00001620,
+	0x00001175, 0x00001180, 0x00001185, 0x0000118c,
+	0x00001193, 0x000011a3, 0x000011b1, 0x000011b6,
+	0x000011bf, 0x000011d8, 0x000011f4, 0x000011fd,
+	0x00001222, 0x00001228, 0x0000122f, 0x00001243,
+	0x00001276, 0x000012be, 0x00001310, 0x00001355,
+	0x0000138a, 0x000013eb, 0x00001430, 0x00001436,
+	0x00001471, 0x000014b9, 0x0000151a, 0x00001531,
+	0x0000153c, 0x00001544, 0x00001589, 0x00001593,
 	// Entry A0 - BF
-	0x0000162a, 0x0000165d, 0x00001692, 0x000016ae,
-	0x000016b9, 0x000016ca, 0x000016d0, 0x000016e0,
-	0x00001708, 0x0000173e, 0x00001796, 0x000017a7,
-	0x000017b7, 0x000017c6, 0x000017e1, 0x000017fe,
-	0x00001804, 0x00001815, 0x0000181e, 0x00001830,
-	0x0000183c, 0x00001842, 0x0000184a, 0x00001854,
-	0x00001864, 0x0000187e, 0x00001895, 0x0000189e,
-	0x000018a4, 0x000018aa, 0x000018b8, 0x000018bf,
+	0x000015c6, 0x000015fb, 0x00001617, 0x00001622,
+	0x00001633, 0x00001639, 0x00001649, 0x00001671,
+	0x000016a7, 0x000016ff, 0x00001710, 0x00001720,
+	0x0000172f, 0x0000174a, 0x00001767, 0x0000176d,
+	0x0000177e, 0x00001787, 0x00001799, 0x000017a5,
+	0x000017ab, 0x000017b3, 0x000017bd, 0x000017cd,
+	0x000017e7, 0x000017fe, 0x00001807, 0x0000180d,
+	0x00001813, 0x00001821, 0x00001828, 0x00001831,
 	// Entry C0 - DF
-	0x000018c8, 0x000018d3, 0x000018d9, 0x000018e4,
-	0x000018e9, 0x000018ed, 0x000018fb, 0x00001902,
-	0x00001909, 0x00001917, 0x0000192b, 0x00001938,
-	0x0000194d, 0x0000195f, 0x0000196b, 0x00001981,
-	0x000019a9, 0x000019bf, 0x000019d1, 0x000019f4,
-	0x00001a0e, 0x00001a1e, 0x00001a2d, 0x00001a38,
-	0x00001a47, 0x00001a56, 0x00001a62, 0x00001a6e,
-	0x00001a83, 0x00001a9b, 0x00001ab1, 0x00001ac2,
+	0x0000183c, 0x00001842, 0x0000184d, 0x00001852,
+	0x00001856, 0x00001864, 0x0000186b, 0x00001872,
+	0x00001880, 0x00001894, 0x000018a1, 0x000018b6,
+	0x000018c8, 0x000018d4, 0x000018ea, 0x00001912,
+	0x00001931, 0x00001947, 0x00001979, 0x00001993,
+	0x000019a3, 0x000019b2, 0x000019bd, 0x000019cc,
+	0x000019db, 0x000019e7, 0x000019f3, 0x00001a08,
+	0x00001a20, 0x00001a36, 0x00001a47, 0x00001a56,
 	// Entry E0 - FF
-	0x00001ad1, 0x00001add, 0x00001ae6, 0x00001b1e,
-	0x00001b48, 0x00001b4b, 0x00001b60, 0x00001b66,
-	0x00001b6c, 0x00001ba8, 0x00001beb, 0x00001c2a,
-	0x00001c3e, 0x00001c45, 0x00001c79,
-} // Size: 980 bytes
+	0x00001a62, 0x00001a6b, 0x00001aa3, 0x00001acd,
+	0x00001ad0, 0x00001ae5, 0x00001aeb, 0x00001af1,
+	0x00001b2d, 0x00001b72, 0x00001bb1, 0x00001bc5,
+	0x00001bcc, 0x00001c00,
+} // Size: 976 bytes
 
-const no_NOData string = "" + // Size: 7289 bytes
+const no_NOData string = "" + // Size: 7168 bytes
 	"\x02Kunne ikke åpne porten: ugyldige manglende tegn\x02Dette brukernavne" +
 	"t er allerede i bruk\x02Ugyldig PGP-nøkkel\x02Registrert med suksess\x02" +
 	"Ugyldige legitimasjoner\x02Din konto er utestengt\x02Ugyldig 2FA-token" +
 	"\x02Passordet er endret\x02Du kan ikke oppdatere til din nåværende nøkke" +
-	"l\x02PGP-nøkkel er satt\x02PGP offentlig nøkkel er oppdatert\x02Leverand" +
-	"ørinformasjon er oppdatert\x02Oppføring opprettet\x02Handlekurv oppdate" +
-	"rt\x02handlekurv slettet\x02Du kan ikke bestille med en leverandørkonto" +
+	"l\x02PGP-nøkkel er satt\x02PGP offentlig nøkkel er oppdatert\x02Vilkår f" +
+	"or tjenesten oppdatert\x02Oppføring opprettet\x02Handlekurv oppdatert" +
+	"\x02handlekurv slettet\x02Du kan ikke bestille med en leverandørkonto" +
 	"\x02Du har ikke nok saldo for denne bestillingen\x02Vennligst betal fakt" +
 	"uraen nedenfor innen %[1]d timer for at bestillingen din skal gå videre." +
-	"\x02Bestilling opprettet\x02Ikke nok saldo til å ta ut.\x02Du kan ikke t" +
-	"a ut til din egen konto\x02Uttak av %[1]s XMR initiert\x02Bestilling kan" +
-	"sellert\x02Vurdering opprettet\x02Du kan ikke forlenge AF-timer før best" +
-	"illingen har blitt sendt i %[1]d dager.\x02Du kan ikke forlenge AF-timer" +
-	" på nytt før bestillingen har blitt sendt i %[1]d dager.\x02AF-timer all" +
-	"erede forlenget til maksimum.\x02AF-timer forlenget med %[1]d dager\x02B" +
-	"estilling omstridt\x022FA må aktiveres for leverandører\x02Selgerkontoer" +
-	" kan ikke ha tidligere bestillinger. Vennligst opprett en ny konto.\x02B" +
-	"evis på lager er påkrevd fra nye selgere\x02Ikke nok saldo\x02Søknad mot" +
-	"tatt\x02Bestilling akseptert. Du har %[1]d timer på å merke den som send" +
-	"t.\x02Bestilling avslått\x02Bestilling merket som sendt\x02Produkt slett" +
-	"et\x02Produkt oppdatert\x02Billetter er allerede lukket\x02Du må være in" +
-	"nlogget for å få tilgang til den siden\x02Bestilling mottatt\x02Du har m" +
-	"ottatt en ny bestilling!\x0aDu har totalt %[1]d timer på å akseptere, fø" +
-	"r den automatisk avslås.\x02Bestilling akseptert\x02Din bestilling har b" +
-	"litt akseptert!\x0aDu kan overvåke statusen fra bestillingssiden\x02Best" +
-	"illing sendt\x02Din bestilling har blitt sendt!\x0aVennligst husk å vurd" +
-	"ere den.\x02Hvordan blir jeg selger?\x02Opprett en konto med to-faktor a" +
-	"utentisering (2FA) aktivert, og send deretter inn en selger søknad.\x02H" +
-	"vordan legger jeg inn en bestilling?\x02Legg de ønskede produktene i han" +
-	"dlekurven. Naviger til /cart og velg “Kasse,” velg din foretrukne leveri" +
-	"ngsmetode, og oppgi den nødvendige informasjonen.\x0aHvis du har tilgjen" +
-	"gelig saldo, kan du bruke den ved kassen. Ellers kan du be om en faktura" +
-	". Fakturaer må betales innen %[1]d timer for at bestillingen skal fortse" +
-	"tte å bli behandlet.\x02Hvordan kan jeg skaffe Monero (XMR)?\x02Det finn" +
-	"es flere måter å skaffe Monero på. Vennligst besøk getmonero.org for off" +
-	"isiell veiledning og ressurser.\x02Hva skal jeg gjøre hvis bestillingen " +
-	"min ikke har ankommet eller ikke samsvarer med beskrivelsen?\x02Bestilli" +
-	"nger blir automatisk avsluttet etter %[1]d dager.\x0aDu kan forlenge den" +
-	" automatiske avslutningsperioden to ganger.\x0aHvis bestillingen fortsat" +
-	"t ikke har ankommet etter disse forlengelsene, bør du åpne en tvist.\x0a" +
-	"Vårt team vil gjennomgå saken og ta en avgjørelse basert på tilgjengelig" +
-	" informasjon.\x02Hva har jeg lov til å selge på dette markedet?\x02Kun l" +
-	"ovlige varer er tillatt. Hvis du er usikker på om produktet ditt kvalifi" +
-	"serer, vennligst kontakt oss før du oppretter en oppføring.\x02Åpen\x02S" +
-	"elger søknad\x02Kontoen din har ikke 2FA aktivert!\x02Applikasjonen er g" +
-	"ratis for brukere som allerede er selgere på et annet marked som bruker " +
-	"den samme PGP-nøkkelen.\x02For andre brukere koster applikasjonen %[1]s " +
-	"XMR og er ikke-refunderbar.\x02Du må gi bevis på at du faktisk har produ" +
-	"kter å selge her.\x02Selgerlogo\x02Bruk png-bilde med nær 1:1-forhold fo" +
-	"r optimal utseende\x02Eksisterende selger\x02Velg dette hvis du allerede" +
-	" er selger på et annet marked som xmrBazaar\x02Bevis på lager\x02Tydelig" +
-	" bilde av lageret ditt med brukernavnet og tidsstempelet synlig\x02Marke" +
-	"der og ditt brukernavn\x02List opp markedene der du er selger og inklude" +
-	"r brukernavnet ditt\x02Captcha\x02Klikk på sirkelen med et kutt\x02Send " +
-	"inn\x02Total\x02Kasse\x02leveringsmetode\x02Bruk lommebok for betaling" +
-	"\x02detaljer\x02Bruk din ekte adresse, med samme format som nedenfor." +
+	"\x02Bestilling opprettet\x02Uttaksbeløpet er for lite\x02Ikke nok saldo " +
+	"til å ta ut.\x02Du kan ikke ta ut til din egen konto\x02Uttak av %[1]s X" +
+	"MR initiert\x02Bestilling kansellert\x02Vurdering opprettet\x02Du kan ik" +
+	"ke forlenge AF-timer før bestillingen har blitt sendt i %[1]d dager.\x02" +
+	"Du kan ikke forlenge AF-timer på nytt før bestillingen har blitt sendt i" +
+	" %[1]d dager.\x02AF-timer allerede forlenget til maksimum.\x02AF-timer f" +
+	"orlenget med %[1]d dager\x02Bestilling omstridt\x022FA må aktiveres for " +
+	"leverandører\x02Selgerkontoer kan ikke ha tidligere bestillinger. Vennli" +
+	"gst opprett en ny konto.\x02Bevis på lager er påkrevd fra nye selgere" +
+	"\x02Ikke nok saldo\x02Søknad mottatt\x02Bestilling akseptert. Du har %[1" +
+	"]d timer på å merke den som sendt.\x02Bestilling avslått\x02Bestilling m" +
+	"erket som sendt\x02Produkt slettet\x02Produkt oppdatert\x02Billetter er " +
+	"allerede lukket\x02Du må være innlogget for å få tilgang til den siden" +
+	"\x02Bestilling mottatt\x02Du har mottatt en ny bestilling!\x0aDu har tot" +
+	"alt %[1]d timer på å akseptere, før den automatisk avslås.\x02Bestilling" +
+	" akseptert\x02Din bestilling har blitt akseptert!\x0aDu kan overvåke sta" +
+	"tusen fra bestillingssiden\x02Bestilling sendt\x02Din bestilling har bli" +
+	"tt sendt!\x0aVennligst husk å vurdere den.\x02Hvordan blir jeg selger?" +
+	"\x02Opprett en konto med to-faktor autentisering (2FA) aktivert, og send" +
+	" deretter inn en selger søknad.\x02Hvordan legger jeg inn en bestilling?" +
+	"\x02Legg de ønskede produktene i handlekurven. Naviger til /cart og velg" +
+	" “Kasse,” velg din foretrukne leveringsmetode, og oppgi den nødvendige i" +
+	"nformasjonen.\x0aHvis du har tilgjengelig saldo, kan du bruke den ved ka" +
+	"ssen. Ellers kan du be om en faktura. Fakturaer må betales innen %[1]d t" +
+	"imer for at bestillingen skal fortsette å bli behandlet.\x02Hvordan kan " +
+	"jeg skaffe Monero (XMR)?\x02Det finnes flere måter å skaffe Monero på. V" +
+	"ennligst besøk getmonero.org for offisiell veiledning og ressurser.\x02H" +
+	"va skal jeg gjøre hvis bestillingen min ikke har ankommet eller ikke sam" +
+	"svarer med beskrivelsen?\x02Bestillinger blir automatisk avsluttet etter" +
+	" %[1]d dager.\x0aDu kan forlenge den automatiske avslutningsperioden to " +
+	"ganger.\x0aHvis bestillingen fortsatt ikke har ankommet etter disse forl" +
+	"engelsene, bør du åpne en tvist.\x0aVårt team vil gjennomgå saken og ta " +
+	"en avgjørelse basert på tilgjengelig informasjon.\x02Hva har jeg lov til" +
+	" å selge på dette markedet?\x02Kun lovlige varer er tillatt. Hvis du er " +
+	"usikker på om produktet ditt kvalifiserer, vennligst kontakt oss før du " +
+	"oppretter en oppføring.\x02Åpen\x02Selger søknad\x02Kontoen din har ikke" +
+	" 2FA aktivert!\x02Applikasjonen er gratis for brukere som allerede er se" +
+	"lgere på et annet marked.\x02For andre brukere koster applikasjonen %[1]" +
+	"s XMR.\x02Selgerlogo\x02Bruk png-bilde med nær 1:1-forhold for optimal u" +
+	"tseende\x02Eksisterende selger\x02Velg dette hvis du allerede er selger " +
+	"på et annet marked som xmrBazaar\x02Bevis på lager\x02Tydelig bilde av l" +
+	"ageret ditt med brukernavnet og tidsstempelet synlig\x02Markeder og ditt" +
+	" brukernavn\x02List opp markedene der du er selger og inkluder brukernav" +
+	"net ditt\x02Captcha\x02Klikk på sirkelen med et kutt\x02Send inn\x02Tota" +
+	"l\x02Kasse\x02leveringsmetode\x02Bruk lommebok for betaling\x02detaljer" +
 	"\x02Uenkrypterte detaljer blir automatisk kryptert ved hjelp av selgeren" +
 	"s nøkkel.\x02Tittel\x02Beskrivelse\x02Produktbilde\x02Bruk bilde med nær" +
 	" 1:1 bildeforhold for optimal utseende\x02Kategori\x02Sender fra\x02Send" +
@@ -2359,584 +2334,578 @@ const no_NOData string = "" + // Size: 7289 bytes
 	"navn\x02Type\x022FA\x02Innstillinger\x02Språk\x02Valuta\x02Endre passord" +
 	"\x02Nåværende passord\x02Nytt passord\x02Bekreft nytt passord\x02Endre P" +
 	"GP-nøkkel\x02Aktiver 2FA\x02PGP offentlig nøkkel\x02Kreves for selgere, " +
-	"anbefales for alle.\x02Oppdater selgerprofil\x02Selgerinformasjon\x02La " +
-	"stå tom for å ikke oppdatere.\x02Oppdater leveringsmetoder\x02Leveringsm" +
-	"etode\x02Mine billetter\x020 sekunder\x02%[1]d sekunder\x02%[1]d minutte" +
-	"r\x02%[1]d timer\x02%[1]d dager\x02Vurdering (GJ.snitt)\x02Fullførte bes" +
-	"tillinger\x02Bestillinger i escrow\x02Ventende tvister\x02Tidligere sett" +
-	"\x02PGP-nøkkel\x02Lommebok\x02Dette er din XMR-lommebok hvor du kan sett" +
-	"e inn mynter.\x02Saldoen oppdateres etter 10 bekreftelser.\x02Se\x02for " +
-	"mer informasjon.\x02Saldo\x02Ta ut\x02Skriv inn en Monero-adresse hvor d" +
-	"u vil ta ut midlene dine.\x02Vi tar et gebyr på 0,01 XMR fra hver uttak " +
-	"for å forhindre spam.\x02IKKE ta ut midler til en annen lommebok på denn" +
-	"e plattformen!\x02Destinasjonsadresse\x02Beløp\x02Skriv inn beløpet i de" +
-	"simalformat (f.eks. 1.42069)"
+	"anbefales for alle.\x02Oppdater vilkår for tjenesten\x02Vilkår for tjene" +
+	"sten\x02Vilkår for tjenesten brukes til å løse tvister\x02Oppdater lever" +
+	"ingsmetoder\x02Leveringsmetode\x02Mine billetter\x020 sekunder\x02%[1]d " +
+	"sekunder\x02%[1]d minutter\x02%[1]d timer\x02%[1]d dager\x02Vurdering (G" +
+	"J.snitt)\x02Fullførte bestillinger\x02Bestillinger i escrow\x02Ventende " +
+	"tvister\x02Tidligere sett\x02PGP-nøkkel\x02Lommebok\x02Dette er din XMR-" +
+	"lommebok hvor du kan sette inn mynter.\x02Saldoen oppdateres etter 10 be" +
+	"kreftelser.\x02Se\x02for mer informasjon.\x02Saldo\x02Ta ut\x02Skriv inn" +
+	" en Monero-adresse hvor du vil ta ut midlene dine.\x02Vi tar et gebyr på" +
+	" %[1]f XMR fra hvert uttak for å forhindre spam.\x02IKKE ta ut midler ti" +
+	"l en annen lommebok på denne plattformen!\x02Destinasjonsadresse\x02Belø" +
+	"p\x02Skriv inn beløpet i desimalformat (f.eks. 1.42069)"
 
-var pl_PLIndex = []uint32{ // 239 elements
+var pl_PLIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000041, 0x00000069, 0x00000082,
 	0x000000a3, 0x000000c1, 0x000000dc, 0x000000f5,
 	0x00000106, 0x0000013e, 0x0000015a, 0x00000185,
-	0x000001b5, 0x000001cb, 0x000001e1, 0x000001f2,
-	0x00000226, 0x00000258, 0x000002be, 0x000002d4,
-	0x000002f9, 0x00000327, 0x00000350, 0x00000366,
-	0x00000379, 0x000003cb, 0x00000426, 0x00000457,
-	0x0000047a, 0x0000048d, 0x000004b7, 0x00000514,
+	0x000001ad, 0x000001c3, 0x000001d9, 0x000001ea,
+	0x0000021e, 0x00000250, 0x000002b6, 0x000002cc,
+	0x000002eb, 0x00000310, 0x0000033e, 0x00000367,
+	0x0000037d, 0x00000390, 0x000003e2, 0x0000043d,
+	0x0000046e, 0x00000491, 0x000004a4, 0x000004ce,
 	// Entry 20 - 3F
-	0x00000553, 0x0000056c, 0x0000057e, 0x000005cb,
-	0x000005e1, 0x00000605, 0x00000617, 0x0000062e,
-	0x0000064f, 0x0000068a, 0x000006a0, 0x00000713,
-	0x0000072d, 0x0000078f, 0x000007a4, 0x000007eb,
-	0x0000080a, 0x00000878, 0x00000899, 0x000009fb,
-	0x00000a1b, 0x00000a9d, 0x00000af7, 0x00000c2f,
-	0x00000c52, 0x00000cef, 0x00000cf7, 0x00000d0a,
-	0x00000d48, 0x00000dc5, 0x00000e0f, 0x00000e5f,
+	0x0000052b, 0x0000056a, 0x00000583, 0x00000595,
+	0x000005e2, 0x000005f8, 0x0000061c, 0x0000062e,
+	0x00000645, 0x00000666, 0x000006a1, 0x000006b7,
+	0x0000072a, 0x00000744, 0x000007a6, 0x000007bb,
+	0x00000802, 0x00000821, 0x0000088f, 0x000008b0,
+	0x00000a12, 0x00000a32, 0x00000ab4, 0x00000b0e,
+	0x00000c46, 0x00000c69, 0x00000d06, 0x00000d0e,
+	0x00000d21, 0x00000d5f, 0x00000db8, 0x00000df0,
 	// Entry 40 - 5F
-	0x00000e6f, 0x00000eb4, 0x00000ecb, 0x00000f1b,
-	0x00000f34, 0x00000f89, 0x00000faa, 0x00000ffd,
-	0x00001005, 0x00001021, 0x00001029, 0x0000102f,
-	0x0000103b, 0x0000104a, 0x00001068, 0x00001074,
-	0x000010b8, 0x00001111, 0x00001118, 0x0000111d,
-	0x0000112c, 0x0000116d, 0x00001177, 0x00001182,
-	0x0000118e, 0x0000119e, 0x000011d7, 0x000011de,
-	0x00001201, 0x00001224, 0x0000122c, 0x00001231,
+	0x00000e00, 0x00000e45, 0x00000e5c, 0x00000eac,
+	0x00000ec5, 0x00000f1a, 0x00000f3b, 0x00000f8e,
+	0x00000f96, 0x00000fb2, 0x00000fba, 0x00000fc0,
+	0x00000fcc, 0x00000fdb, 0x00000ff9, 0x00001005,
+	0x0000105e, 0x00001065, 0x0000106a, 0x00001079,
+	0x000010ba, 0x000010c4, 0x000010cf, 0x000010db,
+	0x000010eb, 0x00001124, 0x0000112b, 0x0000114e,
+	0x00001171, 0x00001179, 0x0000117e, 0x00001192,
 	// Entry 60 - 7F
-	0x00001245, 0x0000124b, 0x00001251, 0x0000125d,
-	0x00001265, 0x00001270, 0x00001278, 0x00001281,
-	0x00001288, 0x0000128d, 0x00001299, 0x000012a7,
-	0x000012b4, 0x000012b9, 0x000012ca, 0x000012dd,
-	0x000012e5, 0x000012f0, 0x000012f9, 0x00001305,
-	0x0000130e, 0x00001317, 0x00001324, 0x00001331,
-	0x00001342, 0x00001358, 0x000013c3, 0x000013d4,
-	0x000013e1, 0x000013f4, 0x000013fb, 0x0000140e,
+	0x00001198, 0x0000119e, 0x000011aa, 0x000011b2,
+	0x000011bd, 0x000011c5, 0x000011ce, 0x000011d5,
+	0x000011da, 0x000011e6, 0x000011f4, 0x00001201,
+	0x00001206, 0x00001217, 0x0000122a, 0x00001232,
+	0x0000123d, 0x00001246, 0x00001252, 0x0000125b,
+	0x00001264, 0x00001271, 0x0000127e, 0x0000128f,
+	0x000012a5, 0x00001310, 0x00001321, 0x0000132e,
+	0x00001341, 0x00001348, 0x0000135b, 0x0000136a,
 	// Entry 80 - 9F
-	0x0000141d, 0x0000143c, 0x00001448, 0x0000144d,
-	0x00001454, 0x0000145f, 0x0000146e, 0x0000147f,
-	0x00001484, 0x0000148f, 0x000014ac, 0x000014cd,
-	0x000014d9, 0x0000150c, 0x00001515, 0x0000151d,
-	0x00001531, 0x0000155e, 0x000015bb, 0x00001612,
-	0x00001661, 0x000016a1, 0x00001714, 0x00001761,
-	0x0000176a, 0x000017a1, 0x000017ec, 0x00001859,
-	0x00001878, 0x00001882, 0x00001888, 0x000018ce,
+	0x00001389, 0x00001395, 0x0000139a, 0x000013a1,
+	0x000013ac, 0x000013bb, 0x000013cc, 0x000013d1,
+	0x000013dc, 0x000013f9, 0x0000141a, 0x00001426,
+	0x00001459, 0x00001462, 0x0000146a, 0x0000147e,
+	0x000014ab, 0x00001508, 0x0000155f, 0x000015ae,
+	0x000015ee, 0x00001661, 0x000016ae, 0x000016b7,
+	0x000016ee, 0x00001739, 0x000017a6, 0x000017c5,
+	0x000017cf, 0x000017d5, 0x0000181b, 0x00001822,
 	// Entry A0 - BF
-	0x000018d5, 0x00001914, 0x00001953, 0x0000196e,
-	0x00001978, 0x00001989, 0x0000198f, 0x0000199d,
-	0x000019c4, 0x000019f2, 0x00001a4b, 0x00001a5a,
-	0x00001a6b, 0x00001a7a, 0x00001a93, 0x00001ab1,
-	0x00001ab7, 0x00001aca, 0x00001ad5, 0x00001ae6,
-	0x00001aed, 0x00001af2, 0x00001aff, 0x00001b10,
-	0x00001b23, 0x00001b34, 0x00001b49, 0x00001b4f,
-	0x00001b56, 0x00001b5d, 0x00001b6b, 0x00001b74,
+	0x00001861, 0x000018a0, 0x000018bb, 0x000018c5,
+	0x000018d6, 0x000018dc, 0x000018ea, 0x00001911,
+	0x0000193f, 0x00001998, 0x000019a7, 0x000019b8,
+	0x000019c7, 0x000019e0, 0x000019fe, 0x00001a04,
+	0x00001a17, 0x00001a22, 0x00001a33, 0x00001a3a,
+	0x00001a3f, 0x00001a4c, 0x00001a5d, 0x00001a70,
+	0x00001a81, 0x00001a96, 0x00001a9c, 0x00001aa3,
+	0x00001aaa, 0x00001ab8, 0x00001ac1, 0x00001acc,
 	// Entry C0 - DF
-	0x00001b7f, 0x00001b8b, 0x00001b91, 0x00001ba4,
-	0x00001ba8, 0x00001bac, 0x00001bb8, 0x00001bbf,
-	0x00001bc6, 0x00001bd4, 0x00001be4, 0x00001bf0,
-	0x00001c07, 0x00001c18, 0x00001c24, 0x00001c38,
-	0x00001c6c, 0x00001c8a, 0x00001ca2, 0x00001cc9,
-	0x00001ce4, 0x00001cf3, 0x00001cff, 0x00001d08,
-	0x00001d15, 0x00001d21, 0x00001d2e, 0x00001d38,
-	0x00001d49, 0x00001d61, 0x00001d76, 0x00001d88,
+	0x00001ad8, 0x00001ade, 0x00001af1, 0x00001af5,
+	0x00001af9, 0x00001b05, 0x00001b0c, 0x00001b13,
+	0x00001b21, 0x00001b31, 0x00001b3d, 0x00001b54,
+	0x00001b65, 0x00001b71, 0x00001b85, 0x00001bb9,
+	0x00001bd5, 0x00001be5, 0x00001c1c, 0x00001c37,
+	0x00001c46, 0x00001c52, 0x00001c5b, 0x00001c68,
+	0x00001c74, 0x00001c81, 0x00001c8b, 0x00001c9c,
+	0x00001cb4, 0x00001cc9, 0x00001cdb, 0x00001cef,
 	// Entry E0 - FF
-	0x00001d9c, 0x00001da6, 0x00001dae, 0x00001ded,
-	0x00001e1d, 0x00001e24, 0x00001e38, 0x00001e3e,
-	0x00001e47, 0x00001e8a, 0x00001edf, 0x00001f1a,
-	0x00001f29, 0x00001f2f, 0x00001f66,
-} // Size: 980 bytes
+	0x00001cf9, 0x00001d01, 0x00001d40, 0x00001d70,
+	0x00001d77, 0x00001d8b, 0x00001d91, 0x00001d9a,
+	0x00001ddd, 0x00001e32, 0x00001e6d, 0x00001e7c,
+	0x00001e82, 0x00001eb9,
+} // Size: 976 bytes
 
-const pl_PLData string = "" + // Size: 8038 bytes
+const pl_PLData string = "" + // Size: 7865 bytes
 	"\x02Nie udało się otworzyć bramy: nieprawidłowe brakujące znaki\x02Ta na" +
 	"zwa użytkownika jest już zajęta\x02Nieprawidłowy klucz PGP\x02Rejestracj" +
 	"a zakończona sukcesem\x02Nieprawidłowe dane logowania\x02Twoje konto jes" +
 	"t zbanowane\x02Nieprawidłowy token 2FA\x02Hasło zmienione\x02Nie możesz " +
 	"zaktualizować do swojego aktualnego klucza\x02Klucz PGP został ustawiony" +
-	"\x02Klucz publiczny PGP został zaktualizowany\x02Informacje o sprzedawcy" +
-	" zostały zaktualizowane\x02Ogłoszenie utworzone\x02Koszyk zaktualizowany" +
-	"\x02koszyk usunięty\x02Nie możesz składać zamówień z konta sprzedawcy" +
-	"\x02Nie masz wystarczającego salda na to zamówienie\x02Proszę opłacić po" +
-	"niższą fakturę w ciągu %[1]d godzin, aby zamówienie mogło być realizowan" +
-	"e.\x02Zamówienie utworzone\x02Niewystarczające saldo do wypłaty.\x02Nie " +
-	"możesz wypłacić na swoje własne konto\x02Wypłata %[1]s XMR została zaini" +
-	"cjowana\x02Zamówienie anulowane\x02Recenzja utworzona\x02Nie możesz prze" +
-	"dłużyć timera AF przed wysłaniem zamówienia przez %[1]d dni.\x02Nie może" +
-	"sz ponownie przedłużyć timera AF przed wysłaniem zamówienia przez %[1]d " +
-	"dni.\x02Timer AF został już przedłużony do maksimum.\x02Timer AF przedłu" +
-	"żony o %[1]d dni\x02Zamówienie sporne\x022FA musi być włączone dla sprz" +
-	"edawców\x02Konta sprzedawców nie mogą mieć wcześniejszych zamówień. Pros" +
-	"zę utworzyć nowe konto.\x02Dowód posiadania towaru jest wymagany od nowy" +
-	"ch sprzedawców.\x02Niewystarczający balans\x02Wniosek otrzymany\x02Zamów" +
-	"ienie zaakceptowane. Masz %[1]d godzin na oznaczenie go jako wysłane." +
-	"\x02Zamówienie odrzucone\x02Zamówienie oznaczone jako wysłane\x02Produkt" +
-	" usunięty\x02Produkt zaktualizowany\x02Zgłoszenie jest już zamknięte\x02" +
-	"Musisz być zalogowany, aby uzyskać dostęp do tej strony\x02Zamówienie ot" +
-	"rzymane\x02Otrzymałeś nowe zamówienie!\x0aMasz łącznie %[1]d godzin na a" +
-	"kceptację, zanim zostanie automatycznie odrzucone.\x02Zamówienie zaakcep" +
-	"towane\x02Twoje zamówienie zostało zaakceptowane!\x0aMożesz monitorować " +
-	"jego status na stronie zamówień.\x02Zamówienie wysłane\x02Twoje zamówien" +
-	"ie zostało wysłane!\x0aProszę pamiętać o jego ocenie.\x02Jak mogę zostać" +
-	" sprzedawcą?\x02Utwórz konto z włączoną dwuetapową weryfikacją (2FA), a " +
-	"następnie złóż wniosek o status sprzedawcy.\x02Jak mogę złożyć zamówieni" +
-	"e?\x02Dodaj pożądane produkty do koszyka. Przejdź do /cart i wybierz „Za" +
-	"mówienie”, wybierz preferowany sposób dostawy i podaj wymagane informacj" +
-	"e.\x0aJeśli masz dostępny balans, możesz go użyć przy kasie. W przeciwny" +
-	"m razie możesz poprosić o fakturę. Faktury muszą być opłacone w ciągu %[" +
-	"1]d godzin, aby zamówienie mogło być przetwarzane.\x02Jak mogę zdobyć Mo" +
-	"nero (XMR)?\x02Istnieje kilka sposobów na zdobycie Monero. Proszę odwied" +
-	"zić getmonero.org w celu uzyskania oficjalnych wskazówek i zasobów.\x02C" +
-	"o powinienem zrobić, jeśli moje zamówienie nie dotarło lub nie zgadza si" +
-	"ę z opisem?\x02Zamówienia są automatycznie finalizowane po %[1]d dniach" +
-	".\x0aMożesz dwukrotnie przedłużyć okres automatycznej finalizacji.\x0aJe" +
-	"śli zamówienie nadal nie dotarło po tych przedłużeniach, powinieneś otw" +
-	"orzyć spór.\x0aNasz zespół przeanalizuje sprawę i podejmie decyzję na po" +
-	"dstawie dostępnych informacji.\x02Co mogę sprzedawać na tym rynku?\x02Do" +
-	"zwolone są tylko legalne przedmioty. Jeśli nie jesteś pewien, czy twój p" +
-	"rodukt kwalifikuje się, skontaktuj się z nami przed utworzeniem ogłoszen" +
-	"ia.\x02Otwórz\x02Wniosek sprzedawcy\x02Twoje konto nie ma włączonej dwue" +
-	"tapowej weryfikacji (2FA)!\x02Aplikacja jest darmowa dla użytkowników, k" +
-	"tórzy są już sprzedawcami na innym rynku używającym tego samego klucza P" +
-	"GP.\x02Dla innych użytkowników aplikacja kosztuje %[1]s XMR i jest bezzw" +
-	"rotna.\x02Musisz dostarczyć dowód, że rzeczywiście masz produkty do sprz" +
-	"edaży tutaj.\x02Logo sprzedawcy\x02Użyj obrazu png o proporcjach bliskic" +
-	"h 1:1 dla optymalnego wyglądu\x02Istniejący sprzedawca\x02Wybierz to, je" +
-	"śli jesteś już sprzedawcą na innym rynku, takim jak xmrBazaar\x02Dowód " +
-	"posiadania towaru\x02Wyraźne zdjęcie twojego towaru z widoczną nazwą uży" +
-	"tkownika i znacznikiem czasu\x02Rynki i Twoja nazwa użytkownika\x02Wymie" +
-	"ń rynki, na których jesteś sprzedawcą, i podaj swoją nazwę użytkownika" +
-	"\x02Captcha\x02Kliknij okrąg z wycięciem\x02Wyślij\x02Razem\x02Zamówieni" +
-	"e\x02metoda dostawy\x02Użyj portfela do płatności\x02szczegóły\x02Użyj s" +
-	"wojego prawdziwego adresu, w tym samym formacie co poniżej.\x02Niezaszyf" +
-	"rowane szczegóły są automatycznie szyfrowane przy użyciu klucza sprzedaw" +
-	"cy.\x02Tytuł\x02Opis\x02Obraz produktu\x02Użyj obrazu o proporcjach blis" +
-	"kich 1:1 dla optymalnego wyglądu\x02Kategoria\x02Wysyłka z\x02Wysyłka do" +
-	"\x02Stan magazynowy\x02Rozmiar aktualnego stanu magazynowego dla tego pr" +
-	"oduktu.\x02Cennik\x02Tutaj możesz ustawić swoje ceny.\x02Pobieramy 5% pr" +
-	"owizji od tych cen.\x02Ilość\x02Cena\x02Utwórz zgłoszenie\x02Temat\x02ko" +
-	"nto\x02zamówienie\x02portfel\x02sprzedawca\x02produkt\x02sugestia\x02błą" +
-	"d\x02inny\x02Wiadomość\x02PGP personelu\x02Kurs wymiany\x02Czas\x04\x00" +
-	"\x01 \x0c\x02Sprzedawcy:\x04\x00\x01 \x0e\x02Użytkownicy:\x02wyślij\x02O" +
-	"dpowiedź\x02produkty\x02zamówienia\x02sprzedaj\x02wsparcie\x02Wyloguj si" +
-	"ę\x02zaloguj się\x02zarejestruj się\x02Wprowadzenie do %[1]s\x02Porówna" +
-	"j używany URL z tym na poniższym obrazku, aby znaleźć wszystkie brakując" +
-	"e znaki oznaczone '*'\x02Brakujące znaki\x02Zaloguj się\x02nazwa użytkow" +
-	"nika\x02hasło\x02Utwórz nowe konto\x02Usuń wszystko\x02Nie masz żadnych " +
-	"powiadomień\x02Zamówienie\x02Czat\x02Status\x02Sprzedawca\x02Metoda dost" +
-	"awy\x02Całkowity koszt\x02Data\x02Wysłano o\x02Do automatycznego odrzuce" +
-	"nia\x02Do automatycznego sfinalizowania\x02Szczegóły\x02Sprzedawca zaofe" +
-	"rował zwrot w wysokości %.2[1]f%\x02Akceptuj\x02Odrzuć\x02Klucz PGP klie" +
-	"ntów\x02Klient może nadal anulować to zamówienie!\x02Musisz to zaakcepto" +
-	"wać w ciągu 2 dni, w przeciwnym razie zostanie automatycznie odrzucone." +
-	"\x02Po zaakceptowaniu klient nie może już anulować, więc możesz bezpiecz" +
-	"nie wysłać.\x02Proszę dokładnie sprawdzić zamówienie poniżej przed jego " +
-	"zaakceptowaniem.\x02Zawsze odrzucaj zamówienia, których nie możesz zreal" +
-	"izować.\x02Musisz oznaczyć to zamówienie jako wysłane w ciągu 2 dni, w p" +
-	"rzeciwnym razie zostanie automatycznie odrzucone.\x02Upewnij się, że mas" +
-	"z wystarczająco dużo czasu na rzeczywiste wysyłanie!\x02Wysłano\x02Prześ" +
-	"lij dokładną kwotę Monero na poniższy adres.\x02Po 10 potwierdzeniach Tw" +
-	"oje zamówienie zostanie przekazane do sprzedawcy.\x02Masz łącznie 3 godz" +
-	"iny na opłacenie tej faktury, w przeciwnym razie Twoje zamówienie zostan" +
-	"ie anulowane.\x02Czas pozostały na płatność\x02Kwota XMR\x02Adres\x02Zam" +
-	"ówienia można anulować, dopóki sprzedawca ich nie zaakceptuje.\x02Anulu" +
-	"j\x04\x00\x01 :\x02Twoje zamówienie zostanie automatycznie sfinalizowane" +
-	" za\x02Możesz wydłużyć czas automatycznego finalizowania o 7 dni.\x02spr" +
-	"awdź swoje zamówienie\x02Przegląd\x02Wydłuż czas AF\x02Spór\x02Oferta zw" +
-	"rotu\x02Klient zakwestionował to zamówienie.\x02Użyj czatu poniżej, aby " +
-	"omówić ten spór.\x02Możesz stworzyć ofertę zwrotu i rozwiązać ten spór b" +
-	"ez interwencji administratora.\x02Procent zwrotu\x02Data zamówienia\x02I" +
-	"D zamówienia\x02Dowód posiadania klucza\x02Odszyfruj, aby uzyskać token" +
-	"\x02Token\x02Aktualizuj produkt\x02Aktualizuj\x02Dodaj do koszyka\x02Opi" +
-	"nie\x02temu\x02NIEDOSTĘPNE\x02Zarejestruj się\x02sprawdzenie hasła\x02Ma" +
-	"sz już konto?\x02Sprawdź zamówienie\x02Ocena\x02gość\x02klient\x02admini" +
-	"strator\x02nieznany\x02włączony\x02wyłączony\x02Konto\x02Nazwa użytkowni" +
-	"ka\x02Typ\x022FA\x02Preferencje\x02Język\x02Waluta\x02Zmień hasło\x02Akt" +
-	"ualne hasło\x02Nowe hasło\x02Potwierdź nowe hasło\x02Zmień klucz PGP\x02" +
-	"Włącz 2FA\x02Publiczny klucz PGP\x02Wymagane dla sprzedawców, zalecane d" +
-	"la wszystkich.\x02Zaktualizuj profil sprzedawcy\x02Informacje o sprzedaw" +
-	"cy\x02Pozostaw puste, aby nie aktualizować.\x02Zaktualizuj metody dostaw" +
-	"y\x02Metoda dostawy\x02Moje bilety\x020 sekund\x02%[1]d sekund\x02%[1]d " +
-	"minut\x02%[1]d godzin\x02%[1]d dni\x02Ocena (ŚREDNIA)\x02Zamówienia zako" +
-	"ńczone\x02Zamówienia w escrow\x02Oczekujące spory\x02Wcześniej widziane" +
-	"\x02Klucz PGP\x02Portfel\x02To jest twój portfel XMR, w którym możesz wp" +
-	"łacać monety.\x02Saldo jest aktualizowane po 10 potwierdzeniach.\x02Zob" +
-	"acz\x02więcej informacji.\x02Saldo\x02Wypłać\x02Wprowadź adres Monero, n" +
-	"a który chcesz wypłacić swoje środki.\x02Pobieramy opłatę w wysokości 0," +
-	"01 XMR za każdą wypłatę, aby zapobiec spamowi.\x02NIE wypłacaj środków n" +
-	"a inny portfel na tej platformie!\x02Adres docelowy\x02Kwota\x02Wprowadź" +
-	" kwotę w formacie dziesiętnym (np. 1.42069)"
+	"\x02Klucz publiczny PGP został zaktualizowany\x02Warunki usługi zostały " +
+	"zaktualizowane\x02Ogłoszenie utworzone\x02Koszyk zaktualizowany\x02koszy" +
+	"k usunięty\x02Nie możesz składać zamówień z konta sprzedawcy\x02Nie masz" +
+	" wystarczającego salda na to zamówienie\x02Proszę opłacić poniższą faktu" +
+	"rę w ciągu %[1]d godzin, aby zamówienie mogło być realizowane.\x02Zamówi" +
+	"enie utworzone\x02Kwota wypłaty jest zbyt mała\x02Niewystarczające saldo" +
+	" do wypłaty.\x02Nie możesz wypłacić na swoje własne konto\x02Wypłata %[1" +
+	"]s XMR została zainicjowana\x02Zamówienie anulowane\x02Recenzja utworzon" +
+	"a\x02Nie możesz przedłużyć timera AF przed wysłaniem zamówienia przez %[" +
+	"1]d dni.\x02Nie możesz ponownie przedłużyć timera AF przed wysłaniem zam" +
+	"ówienia przez %[1]d dni.\x02Timer AF został już przedłużony do maksimum" +
+	".\x02Timer AF przedłużony o %[1]d dni\x02Zamówienie sporne\x022FA musi b" +
+	"yć włączone dla sprzedawców\x02Konta sprzedawców nie mogą mieć wcześniej" +
+	"szych zamówień. Proszę utworzyć nowe konto.\x02Dowód posiadania towaru j" +
+	"est wymagany od nowych sprzedawców.\x02Niewystarczający balans\x02Wniose" +
+	"k otrzymany\x02Zamówienie zaakceptowane. Masz %[1]d godzin na oznaczenie" +
+	" go jako wysłane.\x02Zamówienie odrzucone\x02Zamówienie oznaczone jako w" +
+	"ysłane\x02Produkt usunięty\x02Produkt zaktualizowany\x02Zgłoszenie jest " +
+	"już zamknięte\x02Musisz być zalogowany, aby uzyskać dostęp do tej strony" +
+	"\x02Zamówienie otrzymane\x02Otrzymałeś nowe zamówienie!\x0aMasz łącznie " +
+	"%[1]d godzin na akceptację, zanim zostanie automatycznie odrzucone.\x02Z" +
+	"amówienie zaakceptowane\x02Twoje zamówienie zostało zaakceptowane!\x0aMo" +
+	"żesz monitorować jego status na stronie zamówień.\x02Zamówienie wysłane" +
+	"\x02Twoje zamówienie zostało wysłane!\x0aProszę pamiętać o jego ocenie." +
+	"\x02Jak mogę zostać sprzedawcą?\x02Utwórz konto z włączoną dwuetapową we" +
+	"ryfikacją (2FA), a następnie złóż wniosek o status sprzedawcy.\x02Jak mo" +
+	"gę złożyć zamówienie?\x02Dodaj pożądane produkty do koszyka. Przejdź do " +
+	"/cart i wybierz „Zamówienie”, wybierz preferowany sposób dostawy i podaj" +
+	" wymagane informacje.\x0aJeśli masz dostępny balans, możesz go użyć przy" +
+	" kasie. W przeciwnym razie możesz poprosić o fakturę. Faktury muszą być " +
+	"opłacone w ciągu %[1]d godzin, aby zamówienie mogło być przetwarzane." +
+	"\x02Jak mogę zdobyć Monero (XMR)?\x02Istnieje kilka sposobów na zdobycie" +
+	" Monero. Proszę odwiedzić getmonero.org w celu uzyskania oficjalnych wsk" +
+	"azówek i zasobów.\x02Co powinienem zrobić, jeśli moje zamówienie nie dot" +
+	"arło lub nie zgadza się z opisem?\x02Zamówienia są automatycznie finaliz" +
+	"owane po %[1]d dniach.\x0aMożesz dwukrotnie przedłużyć okres automatyczn" +
+	"ej finalizacji.\x0aJeśli zamówienie nadal nie dotarło po tych przedłużen" +
+	"iach, powinieneś otworzyć spór.\x0aNasz zespół przeanalizuje sprawę i po" +
+	"dejmie decyzję na podstawie dostępnych informacji.\x02Co mogę sprzedawać" +
+	" na tym rynku?\x02Dozwolone są tylko legalne przedmioty. Jeśli nie jeste" +
+	"ś pewien, czy twój produkt kwalifikuje się, skontaktuj się z nami przed" +
+	" utworzeniem ogłoszenia.\x02Otwórz\x02Wniosek sprzedawcy\x02Twoje konto " +
+	"nie ma włączonej dwuetapowej weryfikacji (2FA)!\x02Aplikacja jest darmow" +
+	"a dla użytkowników, którzy są już sprzedawcami na innym rynku.\x02Dla in" +
+	"nych użytkowników aplikacja kosztuje %[1]s XMR.\x02Logo sprzedawcy\x02Uż" +
+	"yj obrazu png o proporcjach bliskich 1:1 dla optymalnego wyglądu\x02Istn" +
+	"iejący sprzedawca\x02Wybierz to, jeśli jesteś już sprzedawcą na innym ry" +
+	"nku, takim jak xmrBazaar\x02Dowód posiadania towaru\x02Wyraźne zdjęcie t" +
+	"wojego towaru z widoczną nazwą użytkownika i znacznikiem czasu\x02Rynki " +
+	"i Twoja nazwa użytkownika\x02Wymień rynki, na których jesteś sprzedawcą," +
+	" i podaj swoją nazwę użytkownika\x02Captcha\x02Kliknij okrąg z wycięciem" +
+	"\x02Wyślij\x02Razem\x02Zamówienie\x02metoda dostawy\x02Użyj portfela do " +
+	"płatności\x02szczegóły\x02Niezaszyfrowane szczegóły są automatycznie szy" +
+	"frowane przy użyciu klucza sprzedawcy.\x02Tytuł\x02Opis\x02Obraz produkt" +
+	"u\x02Użyj obrazu o proporcjach bliskich 1:1 dla optymalnego wyglądu\x02K" +
+	"ategoria\x02Wysyłka z\x02Wysyłka do\x02Stan magazynowy\x02Rozmiar aktual" +
+	"nego stanu magazynowego dla tego produktu.\x02Cennik\x02Tutaj możesz ust" +
+	"awić swoje ceny.\x02Pobieramy 5% prowizji od tych cen.\x02Ilość\x02Cena" +
+	"\x02Utwórz zgłoszenie\x02Temat\x02konto\x02zamówienie\x02portfel\x02sprz" +
+	"edawca\x02produkt\x02sugestia\x02błąd\x02inny\x02Wiadomość\x02PGP person" +
+	"elu\x02Kurs wymiany\x02Czas\x04\x00\x01 \x0c\x02Sprzedawcy:\x04\x00\x01 " +
+	"\x0e\x02Użytkownicy:\x02wyślij\x02Odpowiedź\x02produkty\x02zamówienia" +
+	"\x02sprzedaj\x02wsparcie\x02Wyloguj się\x02zaloguj się\x02zarejestruj si" +
+	"ę\x02Wprowadzenie do %[1]s\x02Porównaj używany URL z tym na poniższym o" +
+	"brazku, aby znaleźć wszystkie brakujące znaki oznaczone '*'\x02Brakujące" +
+	" znaki\x02Zaloguj się\x02nazwa użytkownika\x02hasło\x02Utwórz nowe konto" +
+	"\x02Usuń wszystko\x02Nie masz żadnych powiadomień\x02Zamówienie\x02Czat" +
+	"\x02Status\x02Sprzedawca\x02Metoda dostawy\x02Całkowity koszt\x02Data" +
+	"\x02Wysłano o\x02Do automatycznego odrzucenia\x02Do automatycznego sfina" +
+	"lizowania\x02Szczegóły\x02Sprzedawca zaoferował zwrot w wysokości %.2[1]" +
+	"f%\x02Akceptuj\x02Odrzuć\x02Klucz PGP klientów\x02Klient może nadal anul" +
+	"ować to zamówienie!\x02Musisz to zaakceptować w ciągu 2 dni, w przeciwny" +
+	"m razie zostanie automatycznie odrzucone.\x02Po zaakceptowaniu klient ni" +
+	"e może już anulować, więc możesz bezpiecznie wysłać.\x02Proszę dokładnie" +
+	" sprawdzić zamówienie poniżej przed jego zaakceptowaniem.\x02Zawsze odrz" +
+	"ucaj zamówienia, których nie możesz zrealizować.\x02Musisz oznaczyć to z" +
+	"amówienie jako wysłane w ciągu 2 dni, w przeciwnym razie zostanie automa" +
+	"tycznie odrzucone.\x02Upewnij się, że masz wystarczająco dużo czasu na r" +
+	"zeczywiste wysyłanie!\x02Wysłano\x02Prześlij dokładną kwotę Monero na po" +
+	"niższy adres.\x02Po 10 potwierdzeniach Twoje zamówienie zostanie przekaz" +
+	"ane do sprzedawcy.\x02Masz łącznie 3 godziny na opłacenie tej faktury, w" +
+	" przeciwnym razie Twoje zamówienie zostanie anulowane.\x02Czas pozostały" +
+	" na płatność\x02Kwota XMR\x02Adres\x02Zamówienia można anulować, dopóki " +
+	"sprzedawca ich nie zaakceptuje.\x02Anuluj\x04\x00\x01 :\x02Twoje zamówie" +
+	"nie zostanie automatycznie sfinalizowane za\x02Możesz wydłużyć czas auto" +
+	"matycznego finalizowania o 7 dni.\x02sprawdź swoje zamówienie\x02Przeglą" +
+	"d\x02Wydłuż czas AF\x02Spór\x02Oferta zwrotu\x02Klient zakwestionował to" +
+	" zamówienie.\x02Użyj czatu poniżej, aby omówić ten spór.\x02Możesz stwor" +
+	"zyć ofertę zwrotu i rozwiązać ten spór bez interwencji administratora." +
+	"\x02Procent zwrotu\x02Data zamówienia\x02ID zamówienia\x02Dowód posiadan" +
+	"ia klucza\x02Odszyfruj, aby uzyskać token\x02Token\x02Aktualizuj produkt" +
+	"\x02Aktualizuj\x02Dodaj do koszyka\x02Opinie\x02temu\x02NIEDOSTĘPNE\x02Z" +
+	"arejestruj się\x02sprawdzenie hasła\x02Masz już konto?\x02Sprawdź zamówi" +
+	"enie\x02Ocena\x02gość\x02klient\x02administrator\x02nieznany\x02włączony" +
+	"\x02wyłączony\x02Konto\x02Nazwa użytkownika\x02Typ\x022FA\x02Preferencje" +
+	"\x02Język\x02Waluta\x02Zmień hasło\x02Aktualne hasło\x02Nowe hasło\x02Po" +
+	"twierdź nowe hasło\x02Zmień klucz PGP\x02Włącz 2FA\x02Publiczny klucz PG" +
+	"P\x02Wymagane dla sprzedawców, zalecane dla wszystkich.\x02Zaktualizuj w" +
+	"arunki usługi\x02Warunki usługi\x02Warunki usługi są używane do rozwiązy" +
+	"wania sporów\x02Zaktualizuj metody dostawy\x02Metoda dostawy\x02Moje bil" +
+	"ety\x020 sekund\x02%[1]d sekund\x02%[1]d minut\x02%[1]d godzin\x02%[1]d " +
+	"dni\x02Ocena (ŚREDNIA)\x02Zamówienia zakończone\x02Zamówienia w escrow" +
+	"\x02Oczekujące spory\x02Wcześniej widziane\x02Klucz PGP\x02Portfel\x02To" +
+	" jest twój portfel XMR, w którym możesz wpłacać monety.\x02Saldo jest ak" +
+	"tualizowane po 10 potwierdzeniach.\x02Zobacz\x02więcej informacji.\x02Sa" +
+	"ldo\x02Wypłać\x02Wprowadź adres Monero, na który chcesz wypłacić swoje ś" +
+	"rodki.\x02Pobieramy opłatę w wysokości %[1]f XMR od każdej wypłaty, aby " +
+	"zapobiec spamowi.\x02NIE wypłacaj środków na inny portfel na tej platfor" +
+	"mie!\x02Adres docelowy\x02Kwota\x02Wprowadź kwotę w formacie dziesiętnym" +
+	" (np. 1.42069)"
 
-var pt_PTIndex = []uint32{ // 239 elements
+var pt_PTIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000039, 0x00000062, 0x00000076,
 	0x0000008c, 0x000000a3, 0x000000bc, 0x000000d0,
 	0x000000df, 0x0000010a, 0x0000011d, 0x0000013b,
-	0x00000161, 0x00000171, 0x00000185, 0x00000198,
-	0x000001ca, 0x000001f5, 0x00000245, 0x00000253,
-	0x00000275, 0x000002a2, 0x000002c5, 0x000002d6,
-	0x000002e9, 0x00000344, 0x000003a1, 0x000003cb,
-	0x000003f4, 0x00000406, 0x0000042e, 0x00000484,
+	0x0000015a, 0x0000016a, 0x0000017e, 0x00000191,
+	0x000001c3, 0x000001ee, 0x0000023e, 0x0000024c,
+	0x00000271, 0x00000293, 0x000002c0, 0x000002e3,
+	0x000002f4, 0x00000307, 0x00000362, 0x000003bf,
+	0x000003e9, 0x00000412, 0x00000424, 0x0000044c,
 	// Entry 20 - 3F
-	0x000004bd, 0x000004d1, 0x000004e7, 0x0000052c,
-	0x0000053d, 0x0000055d, 0x00000570, 0x00000584,
-	0x000005a1, 0x000005d7, 0x000005e8, 0x0000065f,
-	0x0000066e, 0x000006bc, 0x000006cf, 0x0000070e,
-	0x00000730, 0x000007a2, 0x000007b8, 0x00000950,
-	0x0000096f, 0x000009e4, 0x00000a33, 0x00000b65,
-	0x00000b87, 0x00000c1a, 0x00000c21, 0x00000c39,
-	0x00000c59, 0x00000ccc, 0x00000d1d, 0x00000d6b,
+	0x000004a2, 0x000004db, 0x000004ef, 0x00000505,
+	0x0000054a, 0x0000055b, 0x0000057b, 0x0000058e,
+	0x000005a2, 0x000005bf, 0x000005f5, 0x00000606,
+	0x0000067d, 0x0000068c, 0x000006da, 0x000006ed,
+	0x0000072c, 0x0000074e, 0x000007c0, 0x000007d6,
+	0x0000096e, 0x0000098d, 0x00000a02, 0x00000a51,
+	0x00000b83, 0x00000ba5, 0x00000c38, 0x00000c3f,
+	0x00000c57, 0x00000c77, 0x00000ccd, 0x00000d06,
 	// Entry 40 - 5F
-	0x00000d80, 0x00000dd6, 0x00000de9, 0x00000e32,
-	0x00000e47, 0x00000ea6, 0x00000eca, 0x00000f10,
-	0x00000f18, 0x00000f39, 0x00000f40, 0x00000f46,
-	0x00000f57, 0x00000f6a, 0x00000f8d, 0x00000f96,
-	0x00000fd4, 0x00001034, 0x0000103c, 0x00001048,
-	0x0000105a, 0x000010b7, 0x000010c1, 0x000010cc,
-	0x000010d9, 0x000010e5, 0x00001115, 0x0000111d,
-	0x00001140, 0x00001177, 0x00001182, 0x00001189,
+	0x00000d1b, 0x00000d71, 0x00000d84, 0x00000dcd,
+	0x00000de2, 0x00000e41, 0x00000e65, 0x00000eab,
+	0x00000eb3, 0x00000ed4, 0x00000edb, 0x00000ee1,
+	0x00000ef2, 0x00000f05, 0x00000f28, 0x00000f31,
+	0x00000f91, 0x00000f99, 0x00000fa5, 0x00000fb7,
+	0x00001014, 0x0000101e, 0x00001029, 0x00001036,
+	0x00001042, 0x00001072, 0x0000107a, 0x0000109d,
+	0x000010d4, 0x000010df, 0x000010e6, 0x000010f4,
 	// Entry 60 - 7F
-	0x00001197, 0x0000119f, 0x000011a5, 0x000011ac,
-	0x000011b5, 0x000011c0, 0x000011c8, 0x000011d2,
-	0x000011d7, 0x000011dd, 0x000011e6, 0x000011f4,
-	0x00001204, 0x00001209, 0x0000121c, 0x0000122f,
-	0x00001238, 0x00001241, 0x0000124a, 0x00001252,
-	0x00001259, 0x00001261, 0x00001266, 0x00001276,
-	0x0000127f, 0x0000129c, 0x00001319, 0x0000132d,
-	0x0000133d, 0x00001350, 0x0000135e, 0x0000136f,
+	0x000010fc, 0x00001102, 0x00001109, 0x00001112,
+	0x0000111d, 0x00001125, 0x0000112f, 0x00001134,
+	0x0000113a, 0x00001143, 0x00001151, 0x00001161,
+	0x00001166, 0x00001179, 0x0000118c, 0x00001195,
+	0x0000119e, 0x000011a7, 0x000011af, 0x000011b6,
+	0x000011be, 0x000011c3, 0x000011d3, 0x000011dc,
+	0x000011f9, 0x00001276, 0x0000128a, 0x0000129a,
+	0x000012ad, 0x000012bb, 0x000012cc, 0x000012da,
 	// Entry 80 - 9F
-	0x0000137d, 0x0000139b, 0x000013a2, 0x000013a7,
-	0x000013ae, 0x000013b7, 0x000013ca, 0x000013d6,
-	0x000013db, 0x000013e9, 0x0000140b, 0x0000142f,
-	0x00001438, 0x00001465, 0x0000146d, 0x00001475,
-	0x0000148c, 0x000014b7, 0x000014fa, 0x0000155b,
-	0x000015a1, 0x000015d5, 0x00001630, 0x0000167c,
-	0x00001685, 0x000016c3, 0x00001704, 0x00001755,
-	0x0000176f, 0x0000177c, 0x00001786, 0x000017c5,
+	0x000012f8, 0x000012ff, 0x00001304, 0x0000130b,
+	0x00001314, 0x00001327, 0x00001333, 0x00001338,
+	0x00001346, 0x00001368, 0x0000138c, 0x00001395,
+	0x000013c2, 0x000013ca, 0x000013d2, 0x000013e9,
+	0x00001414, 0x00001457, 0x000014b8, 0x000014fe,
+	0x00001532, 0x0000158d, 0x000015d9, 0x000015e2,
+	0x00001620, 0x00001661, 0x000016b2, 0x000016cc,
+	0x000016d9, 0x000016e3, 0x00001722, 0x0000172b,
 	// Entry A0 - BF
-	0x000017ce, 0x00001804, 0x00001843, 0x0000185a,
-	0x00001860, 0x0000187e, 0x00001886, 0x0000189a,
-	0x000018bb, 0x000018ef, 0x00001951, 0x0000196a,
-	0x00001979, 0x00001986, 0x000019a4, 0x000019c4,
-	0x000019ca, 0x000019dc, 0x000019e6, 0x000019fc,
-	0x00001a09, 0x00001a0d, 0x00001a16, 0x00001a1f,
-	0x00001a36, 0x00001a49, 0x00001a56, 0x00001a66,
-	0x00001a70, 0x00001a78, 0x00001a86, 0x00001a93,
+	0x00001761, 0x000017a0, 0x000017b7, 0x000017bd,
+	0x000017db, 0x000017e3, 0x000017f7, 0x00001818,
+	0x0000184c, 0x000018ae, 0x000018c7, 0x000018d6,
+	0x000018e3, 0x00001901, 0x00001921, 0x00001927,
+	0x00001939, 0x00001943, 0x00001959, 0x00001966,
+	0x0000196a, 0x00001973, 0x0000197c, 0x00001993,
+	0x000019a6, 0x000019b3, 0x000019c3, 0x000019cd,
+	0x000019d5, 0x000019e3, 0x000019f0, 0x000019f8,
 	// Entry C0 - DF
-	0x00001a9b, 0x00001aa6, 0x00001aac, 0x00001abf,
-	0x00001ac4, 0x00001ac8, 0x00001ad6, 0x00001ade,
-	0x00001ae4, 0x00001af2, 0x00001afe, 0x00001b09,
-	0x00001b1e, 0x00001b30, 0x00001b3b, 0x00001b4e,
-	0x00001b7e, 0x00001b9b, 0x00001bb5, 0x00001bda,
-	0x00001bf8, 0x00001c0b, 0x00001c19, 0x00001c24,
-	0x00001c33, 0x00001c41, 0x00001c4d, 0x00001c58,
-	0x00001c71, 0x00001c85, 0x00001c9a, 0x00001cad,
+	0x00001a03, 0x00001a09, 0x00001a1c, 0x00001a21,
+	0x00001a25, 0x00001a33, 0x00001a3b, 0x00001a41,
+	0x00001a4f, 0x00001a5b, 0x00001a66, 0x00001a7b,
+	0x00001a8d, 0x00001a98, 0x00001aab, 0x00001adb,
+	0x00001af8, 0x00001b0b, 0x00001b48, 0x00001b66,
+	0x00001b79, 0x00001b87, 0x00001b92, 0x00001ba1,
+	0x00001baf, 0x00001bbb, 0x00001bc6, 0x00001bdf,
+	0x00001bf3, 0x00001c08, 0x00001c1b, 0x00001c30,
 	// Entry E0 - FF
-	0x00001cc2, 0x00001ccc, 0x00001cd5, 0x00001d0c,
-	0x00001d3b, 0x00001d3f, 0x00001d58, 0x00001d5e,
-	0x00001d66, 0x00001da2, 0x00001de5, 0x00001e1e,
-	0x00001e33, 0x00001e3e, 0x00001e74,
-} // Size: 980 bytes
+	0x00001c3a, 0x00001c43, 0x00001c7a, 0x00001ca9,
+	0x00001cad, 0x00001cc6, 0x00001ccc, 0x00001cd4,
+	0x00001d10, 0x00001d54, 0x00001d8d, 0x00001da2,
+	0x00001dad, 0x00001de3,
+} // Size: 976 bytes
 
-const pt_PTData string = "" + // Size: 7796 bytes
+const pt_PTData string = "" + // Size: 7651 bytes
 	"\x02Falha ao abrir o portão: caracteres inválidos em falta\x02Este nome " +
 	"de utilizador já está em uso\x02Chave PGP inválida\x02Registado com suce" +
 	"sso\x02Credenciais inválidas\x02A sua conta está banida\x02Token 2FA inv" +
 	"álido\x02Senha alterada\x02Não pode atualizar para a sua chave atual" +
-	"\x02Chave PGP definida\x02Chave pública PGP atualizada\x02Informações do" +
-	" vendedor atualizadas\x02Anúncio criado\x02Carrinho atualizado\x02carrin" +
-	"ho eliminado\x02Não pode fazer pedidos com uma conta de vendedor\x02Não " +
-	"tem saldo suficiente para este pedido\x02Por favor, pague a fatura abaix" +
-	"o em %[1]d horas para que o seu pedido prossiga.\x02Pedido criado\x02Sal" +
-	"do insuficiente para levantar.\x02Não pode levantar para a sua própria c" +
-	"onta\x02Levantamento de %[1]s XMR iniciado\x02Pedido cancelado\x02Avalia" +
-	"ção criada\x02Não pode estender o temporizador AF antes que o pedido te" +
-	"nha sido enviado por %[1]d dias.\x02Não pode reestender o temporizador A" +
-	"F antes que o pedido tenha sido enviado por %[1]d dias.\x02Temporizador " +
-	"AF já estendido ao máximo.\x02Temporizador AF estendido por %[1]d dias" +
-	"\x02Pedido em disputa\x022FA precisa ser ativado para vendedores\x02Cont" +
-	"as de vendedor não podem ter pedidos anteriores. Por favor, crie uma nov" +
-	"a conta.\x02É necessário prova de inventário de novos vendedores.\x02Sal" +
-	"do insuficiente.\x02Candidatura recebida.\x02Pedido aceito. Você tem %[1" +
-	"]d horas para marcá-lo como despachado.\x02Pedido recusado.\x02Pedido ma" +
-	"rcado como despachado.\x02Produto eliminado.\x02Produto atualizado.\x02O" +
-	" bilhete já está fechado.\x02Você precisa estar logado para acessar essa" +
-	" página.\x02Pedido recebido.\x02Você recebeu um novo pedido!\x0aVocê tem" +
-	" um total de %[1]d horas para aceitar, antes que seja recusado automatic" +
-	"amente.\x02Pedido aceito.\x02Seu pedido foi aceito!\x0aVocê pode monitor" +
-	"ar seu status na página de pedidos.\x02Pedido despachado.\x02Seu pedido " +
-	"foi despachado!\x0aPor favor, lembre-se de avaliá-lo.\x02Como posso me t" +
-	"ornar um vendedor?\x02Crie uma conta com autenticação de dois fatores (2" +
-	"FA) ativada e, em seguida, envie uma candidatura de vendedor.\x02Como fa" +
-	"ço um pedido?\x02Adicione os produtos desejados ao seu carrinho. Navegu" +
-	"e até /cart e selecione “Finalizar compra”, escolha seu método de entreg" +
-	"a preferido e forneça as informações necessárias.\x0aSe você tiver saldo" +
-	" disponível, poderá usá-lo na finalização da compra. Caso contrário, voc" +
-	"ê pode solicitar uma fatura. As faturas devem ser pagas dentro de %[1]d" +
-	" horas para que o pedido continue a ser processado.\x02Como posso obter " +
-	"Monero (XMR)?\x02Existem várias maneiras de adquirir Monero. Por favor, " +
-	"visite getmonero.org para orientações e recursos oficiais.\x02O que devo" +
-	" fazer se meu pedido não chegou ou não corresponde à descrição?\x02Os pe" +
-	"didos são automaticamente finalizados após %[1]d dias.\x0aVocê pode este" +
-	"nder o período de auto-finalização duas vezes.\x0aSe o pedido ainda não " +
-	"chegou após essas extensões, você deve abrir uma disputa.\x0aNossa equip" +
-	"e analisará o caso e tomará uma decisão com base nas informações disponí" +
-	"veis.\x02O que posso vender neste mercado?\x02Apenas itens legais são pe" +
-	"rmitidos. Se você não tiver certeza se seu produto se qualifica, entre e" +
-	"m contato conosco antes de criar um anúncio.\x02Aberto\x02Candidatura de" +
-	" vendedor\x02Sua conta não tem 2FA ativado!\x02A aplicação é gratuita pa" +
-	"ra utilizadores que já são vendedores em outro mercado utilizando a mesm" +
-	"a chave PGP.\x02Para outros utilizadores, a aplicação custa %[1]s XMR e " +
-	"não é reembolsável.\x02É necessário fornecer prova de que realmente tem " +
-	"produtos para vender aqui.\x02Logotipo do Vendedor\x02Utilize uma imagem" +
-	" png com uma proporção próxima de 1:1 para uma aparência ideal.\x02Vende" +
-	"dor Existente\x02Selecione isto se já for um vendedor em outro mercado c" +
-	"omo o xmrBazaar.\x02Prova de Inventário\x02Imagem clara do seu inventári" +
-	"o com o seu nome de utilizador e carimbo de data/hora visíveis.\x02Merca" +
-	"dos e o Seu Nome de Utilizador\x02Liste os mercados onde é vendedor e in" +
-	"clua o seu nome de utilizador.\x02Captcha\x02Clique no círculo com um co" +
-	"rte.\x02Enviar\x02Total\x02Finalizar Compra\x02método de entrega\x02Util" +
-	"ize a carteira para pagamento.\x02detalhes\x02Utilize o seu endereço rea" +
-	"l, com o mesmo formato que abaixo.\x02Os detalhes não criptografados são" +
-	" automaticamente criptografados usando a chave do vendedor.\x02Título" +
-	"\x02Descrição\x02Imagem do Produto\x02Utilize uma imagem com uma proporç" +
-	"ão de aspecto próxima de 1:1 para uma aparência ideal.\x02Categoria\x02" +
-	"Enviado de\x02Enviado para\x02Inventário\x02Tamanho do inventário atual " +
-	"para este produto.\x02Preços\x02Aqui pode definir os seus preços.\x02Nós" +
-	" cobramos uma comissão de 5% sobre estes preços.\x02Quantidade\x02Preço" +
-	"\x02Criar bilhete\x02Assunto\x02conta\x02pedido\x02carteira\x02fornecedo" +
-	"r\x02produto\x02sugestão\x02erro\x02outro\x02Mensagem\x02PGP da Equipa" +
-	"\x02Taxa de câmbio\x02Hora\x04\x00\x01 \x0e\x02Fornecedores:\x04\x00\x01" +
-	" \x0e\x02Utilizadores:\x02submeter\x02Resposta\x02produtos\x02pedidos" +
-	"\x02vender\x02suporte\x02Sair\x02iniciar sessão\x02registar\x02Guarda de" +
-	" entrada para %[1]s\x02Compare a URL que está a usar com a que está na i" +
-	"magem abaixo para encontrar todos os caracteres em falta marcados com '*" +
-	"'\x02Caracteres em falta\x02Iniciar sessão\x02nome de utilizador\x02pala" +
-	"vra-passe\x02Criar nova conta\x02Eliminar tudo\x02Você não tem notificaç" +
-	"ões\x02Pedido\x02Chat\x02Estado\x02Vendedor\x02Método de entrega\x02Cus" +
-	"to total\x02Data\x02Despachado em\x02Até ser automaticamente recusado" +
-	"\x02Até ser automaticamente finalizado\x02Detalhes\x02O vendedor oferece" +
-	"u um reembolso de %.2[1]f%\x02Aceitar\x02Recusar\x02Chave PGP dos client" +
-	"es\x02O cliente ainda pode cancelar este pedido!\x02Você deve aceitá-lo " +
-	"em 2 dias ou será automaticamente recusado.\x02Após a aceitação, o clien" +
-	"te não pode mais cancelar, portanto, pode despachar com segurança.\x02Po" +
-	"r favor, revise cuidadosamente o pedido abaixo antes de aceitá-lo.\x02Re" +
-	"cuse sempre os pedidos que não consegue cumprir.\x02Você deve marcar est" +
-	"e pedido como despachado em 2 dias ou será automaticamente recusado.\x02" +
-	"Certifique-se de que tem tempo suficiente para realizar a expedição real" +
-	"!\x02Expedido\x02Transfira o montante exato de Monero para o endereço ab" +
-	"aixo.\x02Após 10 confirmações, o seu pedido será enviado ao vendedor." +
-	"\x02Tem um total de 3 horas para pagar esta fatura, ou o seu pedido será" +
-	" cancelado.\x02Tempo restante para pagar\x02Montante XMR\x02Endereço\x02" +
-	"Os pedidos podem ser cancelados até que o vendedor os aceite.\x02Cancela" +
-	"r\x04\x00\x01 1\x02O seu pedido será finalizado automaticamente em\x02Po" +
-	"de estender o tempo de finalização automática por 7 dias.\x02verifique o" +
-	" seu pedido\x02Rever\x02Estender o temporizador de AF\x02Disputa\x02Ofer" +
-	"ta de reembolso\x02O cliente contestou este pedido.\x02Use o chat abaixo" +
-	" para discutir sobre esta disputa.\x02Pode criar uma oferta de reembolso" +
-	" e resolver esta disputa sem intervenção de um administrador.\x02Percent" +
-	"agem de reembolso\x02Data do pedido\x02ID do pedido\x02Prova de propried" +
-	"ade da chave\x02Desencriptar para obter o token\x02Token\x02Atualizar pr" +
-	"oduto\x02Atualizar\x02Adicionar ao carrinho\x02Avaliações\x02há\x02ESGOT" +
-	"ADO\x02Registar\x02verificação de senha\x02Já tem uma conta?\x02Rever pe" +
-	"dido\x02Classificação\x02convidado\x02cliente\x02administrador\x02descon" +
-	"hecido\x02ativado\x02desativado\x02Conta\x02Nome de utilizador\x02Tipo" +
-	"\x022FA\x02Preferências\x02Língua\x02Moeda\x02Alterar senha\x02Senha atu" +
-	"al\x02Nova senha\x02Confirmar nova senha\x02Alterar chave PGP\x02Ativar " +
-	"2FA\x02Chave pública PGP\x02Requerido para vendedores, sugerido para tod" +
-	"os.\x02Atualizar perfil do vendedor\x02Informações do vendedor\x02Deixe " +
-	"em branco para não atualizar.\x02Atualizar métodos de entrega\x02Método " +
-	"de Entrega\x02Meus bilhetes\x020 segundos\x02%[1]d segundos\x02%[1]d min" +
-	"utos\x02%[1]d horas\x02%[1]d dias\x02Classificação (MÉDIA)\x02Pedidos co" +
-	"ncluídos\x02Pedidos em custódia\x02Disputas pendentes\x02Vistos anterior" +
-	"mente\x02Chave PGP\x02Carteira\x02Esta é a sua carteira XMR onde pode de" +
-	"positar moedas.\x02O saldo é atualizado após 10 confirmações.\x02Ver\x02" +
-	"para mais informações.\x02Saldo\x02Retirar\x02Insira um endereço Monero " +
-	"onde deseja retirar seus fundos.\x02Cobranos uma taxa de 0,01 XMR de cad" +
-	"a retirada para prevenir spam.\x02NÃO retire fundos para outra carteira " +
-	"nesta plataforma!\x02Endereço de destino\x02Quantidade\x02Insira a quant" +
-	"idade em formato decimal (ex.: 1.42069)"
+	"\x02Chave PGP definida\x02Chave pública PGP atualizada\x02Termos de serv" +
+	"iço atualizados\x02Anúncio criado\x02Carrinho atualizado\x02carrinho eli" +
+	"minado\x02Não pode fazer pedidos com uma conta de vendedor\x02Não tem sa" +
+	"ldo suficiente para este pedido\x02Por favor, pague a fatura abaixo em %" +
+	"[1]d horas para que o seu pedido prossiga.\x02Pedido criado\x02O valor d" +
+	"e retirada é muito pequeno\x02Saldo insuficiente para levantar.\x02Não p" +
+	"ode levantar para a sua própria conta\x02Levantamento de %[1]s XMR inici" +
+	"ado\x02Pedido cancelado\x02Avaliação criada\x02Não pode estender o tempo" +
+	"rizador AF antes que o pedido tenha sido enviado por %[1]d dias.\x02Não " +
+	"pode reestender o temporizador AF antes que o pedido tenha sido enviado " +
+	"por %[1]d dias.\x02Temporizador AF já estendido ao máximo.\x02Temporizad" +
+	"or AF estendido por %[1]d dias\x02Pedido em disputa\x022FA precisa ser a" +
+	"tivado para vendedores\x02Contas de vendedor não podem ter pedidos anter" +
+	"iores. Por favor, crie uma nova conta.\x02É necessário prova de inventár" +
+	"io de novos vendedores.\x02Saldo insuficiente.\x02Candidatura recebida." +
+	"\x02Pedido aceito. Você tem %[1]d horas para marcá-lo como despachado." +
+	"\x02Pedido recusado.\x02Pedido marcado como despachado.\x02Produto elimi" +
+	"nado.\x02Produto atualizado.\x02O bilhete já está fechado.\x02Você preci" +
+	"sa estar logado para acessar essa página.\x02Pedido recebido.\x02Você re" +
+	"cebeu um novo pedido!\x0aVocê tem um total de %[1]d horas para aceitar, " +
+	"antes que seja recusado automaticamente.\x02Pedido aceito.\x02Seu pedido" +
+	" foi aceito!\x0aVocê pode monitorar seu status na página de pedidos.\x02" +
+	"Pedido despachado.\x02Seu pedido foi despachado!\x0aPor favor, lembre-se" +
+	" de avaliá-lo.\x02Como posso me tornar um vendedor?\x02Crie uma conta co" +
+	"m autenticação de dois fatores (2FA) ativada e, em seguida, envie uma ca" +
+	"ndidatura de vendedor.\x02Como faço um pedido?\x02Adicione os produtos d" +
+	"esejados ao seu carrinho. Navegue até /cart e selecione “Finalizar compr" +
+	"a”, escolha seu método de entrega preferido e forneça as informações nec" +
+	"essárias.\x0aSe você tiver saldo disponível, poderá usá-lo na finalizaçã" +
+	"o da compra. Caso contrário, você pode solicitar uma fatura. As faturas " +
+	"devem ser pagas dentro de %[1]d horas para que o pedido continue a ser p" +
+	"rocessado.\x02Como posso obter Monero (XMR)?\x02Existem várias maneiras " +
+	"de adquirir Monero. Por favor, visite getmonero.org para orientações e r" +
+	"ecursos oficiais.\x02O que devo fazer se meu pedido não chegou ou não co" +
+	"rresponde à descrição?\x02Os pedidos são automaticamente finalizados apó" +
+	"s %[1]d dias.\x0aVocê pode estender o período de auto-finalização duas v" +
+	"ezes.\x0aSe o pedido ainda não chegou após essas extensões, você deve ab" +
+	"rir uma disputa.\x0aNossa equipe analisará o caso e tomará uma decisão c" +
+	"om base nas informações disponíveis.\x02O que posso vender neste mercado" +
+	"?\x02Apenas itens legais são permitidos. Se você não tiver certeza se se" +
+	"u produto se qualifica, entre em contato conosco antes de criar um anúnc" +
+	"io.\x02Aberto\x02Candidatura de vendedor\x02Sua conta não tem 2FA ativad" +
+	"o!\x02A aplicação é gratuita para utilizadores que já são vendedores em " +
+	"outro mercado.\x02Para outros utilizadores, a aplicação custa %[1]s XMR." +
+	"\x02Logotipo do Vendedor\x02Utilize uma imagem png com uma proporção pró" +
+	"xima de 1:1 para uma aparência ideal.\x02Vendedor Existente\x02Selecione" +
+	" isto se já for um vendedor em outro mercado como o xmrBazaar.\x02Prova " +
+	"de Inventário\x02Imagem clara do seu inventário com o seu nome de utiliz" +
+	"ador e carimbo de data/hora visíveis.\x02Mercados e o Seu Nome de Utiliz" +
+	"ador\x02Liste os mercados onde é vendedor e inclua o seu nome de utiliza" +
+	"dor.\x02Captcha\x02Clique no círculo com um corte.\x02Enviar\x02Total" +
+	"\x02Finalizar Compra\x02método de entrega\x02Utilize a carteira para pag" +
+	"amento.\x02detalhes\x02Os detalhes não criptografados são automaticament" +
+	"e criptografados usando a chave do vendedor.\x02Título\x02Descrição\x02I" +
+	"magem do Produto\x02Utilize uma imagem com uma proporção de aspecto próx" +
+	"ima de 1:1 para uma aparência ideal.\x02Categoria\x02Enviado de\x02Envia" +
+	"do para\x02Inventário\x02Tamanho do inventário atual para este produto." +
+	"\x02Preços\x02Aqui pode definir os seus preços.\x02Nós cobramos uma comi" +
+	"ssão de 5% sobre estes preços.\x02Quantidade\x02Preço\x02Criar bilhete" +
+	"\x02Assunto\x02conta\x02pedido\x02carteira\x02fornecedor\x02produto\x02s" +
+	"ugestão\x02erro\x02outro\x02Mensagem\x02PGP da Equipa\x02Taxa de câmbio" +
+	"\x02Hora\x04\x00\x01 \x0e\x02Fornecedores:\x04\x00\x01 \x0e\x02Utilizado" +
+	"res:\x02submeter\x02Resposta\x02produtos\x02pedidos\x02vender\x02suporte" +
+	"\x02Sair\x02iniciar sessão\x02registar\x02Guarda de entrada para %[1]s" +
+	"\x02Compare a URL que está a usar com a que está na imagem abaixo para e" +
+	"ncontrar todos os caracteres em falta marcados com '*'\x02Caracteres em " +
+	"falta\x02Iniciar sessão\x02nome de utilizador\x02palavra-passe\x02Criar " +
+	"nova conta\x02Eliminar tudo\x02Você não tem notificações\x02Pedido\x02Ch" +
+	"at\x02Estado\x02Vendedor\x02Método de entrega\x02Custo total\x02Data\x02" +
+	"Despachado em\x02Até ser automaticamente recusado\x02Até ser automaticam" +
+	"ente finalizado\x02Detalhes\x02O vendedor ofereceu um reembolso de %.2[1" +
+	"]f%\x02Aceitar\x02Recusar\x02Chave PGP dos clientes\x02O cliente ainda p" +
+	"ode cancelar este pedido!\x02Você deve aceitá-lo em 2 dias ou será autom" +
+	"aticamente recusado.\x02Após a aceitação, o cliente não pode mais cancel" +
+	"ar, portanto, pode despachar com segurança.\x02Por favor, revise cuidado" +
+	"samente o pedido abaixo antes de aceitá-lo.\x02Recuse sempre os pedidos " +
+	"que não consegue cumprir.\x02Você deve marcar este pedido como despachad" +
+	"o em 2 dias ou será automaticamente recusado.\x02Certifique-se de que te" +
+	"m tempo suficiente para realizar a expedição real!\x02Expedido\x02Transf" +
+	"ira o montante exato de Monero para o endereço abaixo.\x02Após 10 confir" +
+	"mações, o seu pedido será enviado ao vendedor.\x02Tem um total de 3 hora" +
+	"s para pagar esta fatura, ou o seu pedido será cancelado.\x02Tempo resta" +
+	"nte para pagar\x02Montante XMR\x02Endereço\x02Os pedidos podem ser cance" +
+	"lados até que o vendedor os aceite.\x02Cancelar\x04\x00\x01 1\x02O seu p" +
+	"edido será finalizado automaticamente em\x02Pode estender o tempo de fin" +
+	"alização automática por 7 dias.\x02verifique o seu pedido\x02Rever\x02Es" +
+	"tender o temporizador de AF\x02Disputa\x02Oferta de reembolso\x02O clien" +
+	"te contestou este pedido.\x02Use o chat abaixo para discutir sobre esta " +
+	"disputa.\x02Pode criar uma oferta de reembolso e resolver esta disputa s" +
+	"em intervenção de um administrador.\x02Percentagem de reembolso\x02Data " +
+	"do pedido\x02ID do pedido\x02Prova de propriedade da chave\x02Desencript" +
+	"ar para obter o token\x02Token\x02Atualizar produto\x02Atualizar\x02Adic" +
+	"ionar ao carrinho\x02Avaliações\x02há\x02ESGOTADO\x02Registar\x02verific" +
+	"ação de senha\x02Já tem uma conta?\x02Rever pedido\x02Classificação\x02c" +
+	"onvidado\x02cliente\x02administrador\x02desconhecido\x02ativado\x02desat" +
+	"ivado\x02Conta\x02Nome de utilizador\x02Tipo\x022FA\x02Preferências\x02L" +
+	"íngua\x02Moeda\x02Alterar senha\x02Senha atual\x02Nova senha\x02Confirm" +
+	"ar nova senha\x02Alterar chave PGP\x02Ativar 2FA\x02Chave pública PGP" +
+	"\x02Requerido para vendedores, sugerido para todos.\x02Atualizar termos " +
+	"de serviço\x02Termos de serviço\x02Os termos de serviço são utilizados p" +
+	"ara resolver disputas\x02Atualizar métodos de entrega\x02Método de Entre" +
+	"ga\x02Meus bilhetes\x020 segundos\x02%[1]d segundos\x02%[1]d minutos\x02" +
+	"%[1]d horas\x02%[1]d dias\x02Classificação (MÉDIA)\x02Pedidos concluídos" +
+	"\x02Pedidos em custódia\x02Disputas pendentes\x02Vistos anteriormente" +
+	"\x02Chave PGP\x02Carteira\x02Esta é a sua carteira XMR onde pode deposit" +
+	"ar moedas.\x02O saldo é atualizado após 10 confirmações.\x02Ver\x02para " +
+	"mais informações.\x02Saldo\x02Retirar\x02Insira um endereço Monero onde " +
+	"deseja retirar seus fundos.\x02Cobranos uma taxa de %[1]f XMR de cada re" +
+	"tirada para prevenir spam.\x02NÃO retire fundos para outra carteira nest" +
+	"a plataforma!\x02Endereço de destino\x02Quantidade\x02Insira a quantidad" +
+	"e em formato decimal (ex.: 1.42069)"
 
-var sv_SEIndex = []uint32{ // 239 elements
+var sv_SEIndex = []uint32{ // 238 elements
 	// Entry 0 - 1F
 	0x00000000, 0x0000003c, 0x0000005f, 0x00000072,
 	0x0000008d, 0x000000a1, 0x000000ba, 0x000000cc,
 	0x000000e5, 0x00000115, 0x0000012e, 0x00000153,
-	0x0000017b, 0x00000189, 0x0000019d, 0x000001ae,
-	0x000001de, 0x0000021a, 0x0000027c, 0x00000290,
-	0x000002bd, 0x000002e4, 0x00000301, 0x00000317,
-	0x00000328, 0x0000037a, 0x000003d1, 0x000003fb,
-	0x00000420, 0x00000437, 0x0000045f, 0x000004b7,
+	0x00000170, 0x0000017e, 0x00000192, 0x000001a3,
+	0x000001d3, 0x0000020f, 0x00000271, 0x00000285,
+	0x000002a3, 0x000002d0, 0x000002f7, 0x00000314,
+	0x0000032a, 0x0000033b, 0x0000038d, 0x000003e4,
+	0x0000040e, 0x00000433, 0x0000044a, 0x00000472,
 	// Entry 20 - 3F
-	0x000004e6, 0x00000503, 0x00000515, 0x00000567,
-	0x0000057c, 0x0000059e, 0x000005ae, 0x000005c1,
-	0x000005dd, 0x0000061a, 0x00000630, 0x000006a5,
-	0x000006bd, 0x00000715, 0x0000072a, 0x00000770,
-	0x0000078a, 0x000007f5, 0x00000813, 0x0000097a,
-	0x00000998, 0x00000a09, 0x00000a70, 0x00000bb1,
-	0x00000bde, 0x00000c67, 0x00000c6e, 0x00000c83,
-	0x00000ca6, 0x00000d1f, 0x00000d75, 0x00000dc8,
+	0x000004ca, 0x000004f9, 0x00000516, 0x00000528,
+	0x0000057a, 0x0000058f, 0x000005b1, 0x000005c1,
+	0x000005d4, 0x000005f0, 0x0000062d, 0x00000643,
+	0x000006b8, 0x000006d0, 0x00000728, 0x0000073d,
+	0x00000783, 0x0000079d, 0x00000808, 0x00000826,
+	0x0000098d, 0x000009ab, 0x00000a1c, 0x00000a83,
+	0x00000bc4, 0x00000bf1, 0x00000c7a, 0x00000c81,
+	0x00000c96, 0x00000cb9, 0x00000d13, 0x00000d49,
 	// Entry 40 - 5F
-	0x00000ddb, 0x00000e10, 0x00000e23, 0x00000e6f,
-	0x00000e7f, 0x00000ec8, 0x00000ee9, 0x00000f32,
-	0x00000f3a, 0x00000f5b, 0x00000f62, 0x00000f69,
-	0x00000f6f, 0x00000f7d, 0x00000f9d, 0x00000fa6,
-	0x00000fdf, 0x00001021, 0x00001027, 0x00001033,
-	0x0000103f, 0x00001082, 0x0000108b, 0x00001099,
-	0x000010a6, 0x000010ac, 0x000010e0, 0x000010ee,
-	0x00001118, 0x00001133, 0x00001139, 0x0000113e,
+	0x00000d5c, 0x00000d91, 0x00000da4, 0x00000df0,
+	0x00000e00, 0x00000e49, 0x00000e6a, 0x00000eb3,
+	0x00000ebb, 0x00000edc, 0x00000ee3, 0x00000eea,
+	0x00000ef0, 0x00000efe, 0x00000f1e, 0x00000f27,
+	0x00000f69, 0x00000f6f, 0x00000f7b, 0x00000f87,
+	0x00000fca, 0x00000fd3, 0x00000fe1, 0x00000fee,
+	0x00000ff4, 0x00001028, 0x00001036, 0x00001060,
+	0x0000107b, 0x00001081, 0x00001086, 0x00001094,
 	// Entry 60 - 7F
-	0x0000114c, 0x00001152, 0x00001158, 0x00001165,
-	0x0000116e, 0x0000117a, 0x00001182, 0x0000118b,
-	0x0000118f, 0x00001195, 0x000011a0, 0x000011ad,
-	0x000011b8, 0x000011bc, 0x000011d0, 0x000011e1,
-	0x000011e8, 0x000011ed, 0x000011f7, 0x00001206,
-	0x0000120d, 0x00001215, 0x0000121e, 0x00001227,
-	0x00001232, 0x0000124a, 0x000012b3, 0x000012c2,
-	0x000012cb, 0x000012d9, 0x000012e3, 0x000012f4,
+	0x0000109a, 0x000010a0, 0x000010ad, 0x000010b6,
+	0x000010c2, 0x000010ca, 0x000010d3, 0x000010d7,
+	0x000010dd, 0x000010e8, 0x000010f5, 0x00001100,
+	0x00001104, 0x00001118, 0x00001129, 0x00001130,
+	0x00001135, 0x0000113f, 0x0000114e, 0x00001155,
+	0x0000115d, 0x00001166, 0x0000116f, 0x0000117a,
+	0x00001192, 0x000011fb, 0x0000120a, 0x00001213,
+	0x00001221, 0x0000122b, 0x0000123c, 0x00001249,
 	// Entry 80 - 9F
-	0x00001301, 0x00001319, 0x00001326, 0x0000132c,
-	0x00001333, 0x0000133f, 0x0000134d, 0x0000135a,
-	0x00001360, 0x0000136c, 0x00001388, 0x000013a4,
-	0x000013ad, 0x000013e0, 0x000013ea, 0x000013f1,
-	0x00001404, 0x00001437, 0x0000148b, 0x000014de,
-	0x00001527, 0x0000155e, 0x000015cb, 0x00001621,
-	0x00001629, 0x0000165f, 0x000016b1, 0x00001717,
-	0x0000172b, 0x00001736, 0x0000173d, 0x00001781,
+	0x00001261, 0x0000126e, 0x00001274, 0x0000127b,
+	0x00001287, 0x00001295, 0x000012a2, 0x000012a8,
+	0x000012b4, 0x000012d0, 0x000012ec, 0x000012f5,
+	0x00001328, 0x00001332, 0x00001339, 0x0000134c,
+	0x0000137f, 0x000013d3, 0x00001426, 0x0000146f,
+	0x000014a6, 0x00001513, 0x00001569, 0x00001571,
+	0x000015a7, 0x000015f9, 0x0000165f, 0x00001673,
+	0x0000167e, 0x00001685, 0x000016c9, 0x000016d0,
 	// Entry A0 - BF
-	0x00001788, 0x000017c3, 0x000017f5, 0x0000180e,
-	0x00001816, 0x00001829, 0x0000182f, 0x00001849,
-	0x00001874, 0x000018aa, 0x0000190c, 0x00001923,
-	0x00001936, 0x00001947, 0x0000195f, 0x0000197d,
-	0x00001983, 0x00001995, 0x0000199f, 0x000019b0,
-	0x000019bc, 0x000019c2, 0x000019cf, 0x000019da,
-	0x000019ed, 0x00001a05, 0x00001a1a, 0x00001a20,
-	0x00001a26, 0x00001a2b, 0x00001a31, 0x00001a38,
+	0x0000170b, 0x0000173d, 0x00001756, 0x0000175e,
+	0x00001771, 0x00001777, 0x00001791, 0x000017bc,
+	0x000017f2, 0x00001854, 0x0000186b, 0x0000187e,
+	0x0000188f, 0x000018a7, 0x000018c5, 0x000018cb,
+	0x000018dd, 0x000018e7, 0x000018f8, 0x00001904,
+	0x0000190a, 0x00001917, 0x00001922, 0x00001935,
+	0x0000194d, 0x00001962, 0x00001968, 0x0000196e,
+	0x00001973, 0x00001979, 0x00001980, 0x0000198a,
 	// Entry C0 - DF
-	0x00001a42, 0x00001a4e, 0x00001a54, 0x00001a62,
-	0x00001a66, 0x00001a6a, 0x00001a79, 0x00001a80,
-	0x00001a87, 0x00001a98, 0x00001aac, 0x00001abb,
-	0x00001ad4, 0x00001ae6, 0x00001af3, 0x00001b08,
-	0x00001b37, 0x00001b4d, 0x00001b60, 0x00001b85,
-	0x00001b9f, 0x00001bad, 0x00001bbc, 0x00001bc7,
-	0x00001bd6, 0x00001be4, 0x00001bf1, 0x00001bfd,
-	0x00001c10, 0x00001c29, 0x00001c41, 0x00001c55,
+	0x00001996, 0x0000199c, 0x000019aa, 0x000019ae,
+	0x000019b2, 0x000019c1, 0x000019c8, 0x000019cf,
+	0x000019e0, 0x000019f4, 0x00001a03, 0x00001a1c,
+	0x00001a2e, 0x00001a3b, 0x00001a50, 0x00001a7f,
+	0x00001a9a, 0x00001aab, 0x00001adc, 0x00001af6,
+	0x00001b04, 0x00001b13, 0x00001b1e, 0x00001b2d,
+	0x00001b3b, 0x00001b48, 0x00001b54, 0x00001b67,
+	0x00001b80, 0x00001b98, 0x00001bac, 0x00001bbb,
 	// Entry E0 - FF
-	0x00001c64, 0x00001c6f, 0x00001c78, 0x00001caf,
-	0x00001cd8, 0x00001cdb, 0x00001cf1, 0x00001cf7,
-	0x00001cfd, 0x00001d31, 0x00001d83, 0x00001dc1,
-	0x00001dcc, 0x00001dd3, 0x00001dff,
-} // Size: 980 bytes
+	0x00001bc6, 0x00001bcf, 0x00001c06, 0x00001c2f,
+	0x00001c32, 0x00001c48, 0x00001c4e, 0x00001c54,
+	0x00001c88, 0x00001cdb, 0x00001d19, 0x00001d24,
+	0x00001d2b, 0x00001d57,
+} // Size: 976 bytes
 
-const sv_SEData string = "" + // Size: 7679 bytes
+const sv_SEData string = "" + // Size: 7511 bytes
 	"\x02Misslyckades med att öppna porten: ogiltiga saknade tecken\x02Detta " +
 	"användarnamn används redan\x02Ogiltig PGP-nyckel\x02Registrerad framgång" +
 	"srikt\x02Ogiltiga referenser\x02Ditt konto är avstängt\x02Ogiltig 2FA-to" +
 	"ken\x02Lösenordet har ändrats\x02Du kan inte uppdatera till din nuvarand" +
 	"e nyckel\x02PGP-nyckel är inställd\x02PGP offentlig nyckel har uppdatera" +
-	"ts\x02Leverantörsinformation har uppdaterats\x02Annons skapad\x02Varukor" +
-	"g uppdaterad\x02varukorg raderad\x02Du kan inte beställa med ett leveran" +
-	"törskonto\x02Du har inte tillräckligt med saldo för denna beställning" +
-	"\x02Vänligen betala fakturan nedan inom %[1]d timmar för att din beställ" +
-	"ning ska kunna fortsätta.\x02Beställning skapad\x02Inte tillräckligt med" +
-	" saldo för att ta ut.\x02Du kan inte ta ut till ditt eget konto\x02Uttag" +
-	" av %[1]s XMR initierat\x02Beställning avbruten\x02Recension skapad\x02D" +
-	"u kan inte förlänga AF-timern innan beställningen har skickats i %[1]d d" +
-	"agar.\x02Du kan inte förlänga AF-timern igen innan beställningen har ski" +
-	"ckats i %[1]d dagar.\x02AF-timern har redan förlängts till max.\x02AF-ti" +
-	"mern förlängd med %[1]d dagar\x02Beställning omtvistad\x022FA måste akti" +
-	"veras för leverantörer\x02Leverantörskonton kan inte ha tidigare beställ" +
-	"ningar. Vänligen skapa ett nytt konto.\x02Bevis på lager krävs från nya " +
-	"leverantörer\x02Inte tillräckligt med saldo\x02Ansökan mottagen\x02Bestä" +
-	"llning accepterad. Du har %[1]d timmar på dig att markera den som skicka" +
-	"d.\x02Beställning avvisad\x02Beställning markerad som skickad\x02Produkt" +
-	" raderad\x02Produkt uppdaterad\x02Biljetten är redan stängd\x02Du måste " +
-	"vara inloggad för att få åtkomst till den sidan\x02Beställning mottagen" +
-	"\x02Du har mottagit en ny beställning!\x0aDu har totalt %[1]d timmar på " +
-	"dig att acceptera, innan den automatiskt avvisas.\x02Beställning accepte" +
-	"rad\x02Din beställning har accepterats!\x0aDu kan övervaka dess status f" +
-	"rån beställningssidan\x02Beställning skickad\x02Din beställning har skic" +
-	"kats!\x0aVänligen kom ihåg att recensera den.\x02Hur blir jag leverantör" +
-	"?\x02Skapa ett konto med tvåfaktorsautentisering (2FA) aktiverad, och sk" +
-	"icka sedan in en leverantörsansökan.\x02Hur gör jag en beställning?\x02L" +
-	"ägg till de önskade produkterna i din kundvagn. Navigera till /cart och" +
-	" välj “Kassa”, välj din föredragna leveransmetod och ange den nödvändiga" +
-	" informationen.\x0aOm du har tillgängligt saldo kan du använda det vid k" +
-	"assan. Annars kan du begära en faktura. Fakturor måste betalas inom %[1]" +
-	"d timmar för att beställningen ska fortsätta behandlas.\x02Hur kan jag f" +
-	"å Monero (XMR)?\x02Det finns flera sätt att skaffa Monero. Vänligen bes" +
-	"ök getmonero.org för officiell vägledning och resurser.\x02Vad ska jag " +
-	"göra om min beställning inte har anlänt eller inte stämmer överens med b" +
-	"eskrivningen?\x02Beställningar avslutas automatiskt efter %[1]d dagar." +
-	"\x0aDu kan förlänga den automatiska avslutningsperioden två gånger.\x0aO" +
-	"m beställningen fortfarande inte har anlänt efter dessa förlängningar bö" +
-	"r du öppna en tvist.\x0aVårt team kommer att granska ärendet och fatta e" +
-	"tt beslut baserat på tillgänglig information.\x02Vad får jag sälja på de" +
-	"nna marknadsplats?\x02Endast lagliga varor är tillåtna. Om du är osäker " +
-	"på om din produkt kvalificerar, vänligen kontakta oss innan du skapar en" +
-	" annons.\x02Öppen\x02Leverantörsansökan\x02Ditt konto har inte 2FA aktiv" +
-	"erat!\x02Applikationen är gratis för användare som redan är säljare på n" +
-	"ågon annan marknad som använder samma PGP-nyckel.\x02För andra användar" +
-	"e kostar applikationen %[1]s XMR och är icke återbetalningsbar.\x02Du må" +
-	"ste tillhandahålla bevis på att du faktiskt har produkter att sälja här." +
-	"\x02Säljarens logotyp\x02Använd png-bild med nära 1:1 för optimal utseen" +
-	"de\x02Befintlig säljare\x02Välj detta om du redan är säljare på någon an" +
-	"nan marknad som xmrBazaar\x02Bevis på lager\x02Tydlig bild av ditt lager" +
-	" med ditt användarnamn och tidsstämpel synlig\x02Marknader och ditt anvä" +
-	"ndarnamn\x02Lista de marknader där du är säljare och inkludera ditt anvä" +
-	"ndarnamn\x02Captcha\x02Klicka på cirkeln med ett snitt\x02Skicka\x02Tota" +
-	"lt\x02Kassa\x02leveransmetod\x02Använd plånbok för betalning\x02detaljer" +
-	"\x02Använd din verkliga adress, med samma format som nedan.\x02Okryptera" +
-	"de detaljer krypteras automatiskt med säljarens nyckel.\x02Titel\x02Besk" +
-	"rivning\x02Produktbild\x02Använd bild med nära 1:1 bildförhållande för o" +
-	"ptimal utseende\x02Kategori\x02Skickas från\x02Skickas till\x02Lager\x02" +
-	"Storlek på det aktuella lagret för denna produkt.\x02Prissättning\x02Här" +
-	" kan du ställa in din prissättning.\x02Vi tar 5% av dessa priser.\x02Ant" +
-	"al\x02Pris\x02Skapa biljett\x02Ämne\x02konto\x02beställning\x02plånbok" +
-	"\x02leverantör\x02produkt\x02förslag\x02fel\x02annat\x02Meddelande\x02Pe" +
-	"rsonal PGP\x02Växelkurs\x02Tid\x04\x00\x01 \x0f\x02Leverantörer:\x04\x00" +
-	"\x01 \x0c\x02Användare:\x02skicka\x02Svar\x02produkter\x02beställningar" +
-	"\x02sälja\x02support\x02Logga ut\x02logga in\x02registrera\x02Ingångsvak" +
-	"t till %[1]s\x02Jämför URL:en du använder med den i bilden nedan för att" +
-	" hitta alla saknade tecken markerade med '*'\x02Saknade tecken\x02Logga " +
-	"in\x02användarnamn\x02lösenord\x02Skapa nytt konto\x02Ta bort allt\x02Du" +
-	" har inga meddelanden\x02Beställning\x02Chatt\x02Status\x02Leverantör" +
-	"\x02Leveransmetod\x02Totalkostnad\x02Datum\x02Skickad vid\x02Tills autom" +
-	"atisk avböjning\x02Tills automatisk avslutning\x02Detaljer\x02Leverantör" +
-	" erbjöd en återbetalning på %.2[1]f%\x02Acceptera\x02Avböj\x02Kundens PG" +
-	"P-nyckel\x02Kunden kan fortfarande avbryta denna beställning!\x02Du måst" +
-	"e acceptera det inom 2 dagar eller så kommer det att avböjas automatiskt" +
-	".\x02Efter att ha accepterat kan kunden inte längre avbryta, så du kan t" +
-	"ryggt skicka.\x02Vänligen granska beställningen nedan noggrant innan du " +
-	"accepterar den.\x02Avböj alltid beställningar som du inte kan uppfylla." +
-	"\x02Du måste markera denna beställning som skickad inom 2 dagar eller så" +
-	" kommer den att avböjas automatiskt.\x02Se till att du har tillräckligt " +
-	"med tid för att genomföra den faktiska leveransen!\x02Skickad\x02Överför" +
-	" exakt belopp av Monero till adressen nedan.\x02Efter 10 bekräftelser ko" +
-	"mmer din beställning att gå vidare till leverantören.\x02Du har totalt 3" +
-	" timmar på dig att betala denna faktura, annars kommer din beställning a" +
-	"tt avbrytas.\x02Tid kvar att betala\x02Belopp XMR\x02Adress\x02Beställni" +
-	"ngar kan avbrytas tills leverantören har accepterat den.\x02Avbryt\x04" +
-	"\x00\x01 6\x02Din beställning kommer att automatiskt slutföras om\x02Du " +
-	"kan förlänga auto-slutförandet med 7 dagar.\x02granska din beställning" +
-	"\x02Granska\x02Förläng AF-timer\x02Tvist\x02Återbetalningserbjudande\x02" +
-	"Kunden har ifrågasatt denna beställning.\x02Använd chatten nedan för att" +
-	" diskutera denna tvist.\x02Du kan skapa ett återbetalningserbjudande och" +
-	" lösa denna tvist utan administrativ intervention.\x02Återbetalningsproc" +
-	"ent\x02Beställningsdatum\x02Beställnings-ID\x02Bevis på nyckelinnehav" +
-	"\x02Dekryptera för att få token\x02Token\x02Uppdatera produkt\x02Uppdate" +
-	"ra\x02Lägg i varukorg\x02Recensioner\x02sedan\x02SLUT I LAGER\x02Registr" +
-	"era\x02lösenordskontroll\x02Har du redan ett konto?\x02Granska beställni" +
-	"ng\x02Betyg\x02gäst\x02kund\x02admin\x02okänd\x02aktiverad\x02inaktivera" +
-	"d\x02Konto\x02Användarnamn\x02Typ\x022FA\x02Inställningar\x02Språk\x02Va" +
-	"luta\x02Ändra lösenord\x02Nuvarande lösenord\x02Nytt lösenord\x02Bekräft" +
-	"a nytt lösenord\x02Ändra PGP-nyckel\x02Aktivera 2FA\x02PGP offentlig nyc" +
-	"kel\x02Krävs för säljare, rekommenderas för alla.\x02Uppdatera säljprofi" +
-	"l\x02Säljarinformation\x02Lämna tomt för att inte uppdatera.\x02Uppdater" +
-	"a leveransmetoder\x02Leveransmetod\x02Mina biljetter\x020 sekunder\x02%[" +
-	"1]d sekunder\x02%[1]d minuter\x02%[1]d timmar\x02%[1]d dagar\x02Betyg (G" +
-	"ENOMSNITT)\x02Avslutade beställningar\x02Beställningar i escrow\x02Utest" +
-	"ående tvister\x02Tidigare sedda\x02PGP-nyckel\x02Plånbok\x02Detta är di" +
-	"n XMR-plånbok där du kan sätta in mynt.\x02Saldo uppdateras efter 10 bek" +
-	"räftelser.\x02Se\x02för mer information.\x02Saldo\x02Ta ut\x02Ange en Mo" +
-	"nero-adress dit du vill ta ut dina medel.\x02Vi tar ut en avgift på 0,01" +
-	" XMR för varje uttag för att förhindra skräppost.\x02DRA INTE UT medel t" +
-	"ill en annan plånbok på denna plattform!\x02Måladress\x02Belopp\x02Ange " +
-	"belopp i decimalformat (t.ex. 1.42069)"
+	"ts\x02Användarvillkor uppdaterade\x02Annons skapad\x02Varukorg uppdatera" +
+	"d\x02varukorg raderad\x02Du kan inte beställa med ett leverantörskonto" +
+	"\x02Du har inte tillräckligt med saldo för denna beställning\x02Vänligen" +
+	" betala fakturan nedan inom %[1]d timmar för att din beställning ska kun" +
+	"na fortsätta.\x02Beställning skapad\x02Uttagsbeloppet är för litet\x02In" +
+	"te tillräckligt med saldo för att ta ut.\x02Du kan inte ta ut till ditt " +
+	"eget konto\x02Uttag av %[1]s XMR initierat\x02Beställning avbruten\x02Re" +
+	"cension skapad\x02Du kan inte förlänga AF-timern innan beställningen har" +
+	" skickats i %[1]d dagar.\x02Du kan inte förlänga AF-timern igen innan be" +
+	"ställningen har skickats i %[1]d dagar.\x02AF-timern har redan förlängts" +
+	" till max.\x02AF-timern förlängd med %[1]d dagar\x02Beställning omtvista" +
+	"d\x022FA måste aktiveras för leverantörer\x02Leverantörskonton kan inte " +
+	"ha tidigare beställningar. Vänligen skapa ett nytt konto.\x02Bevis på la" +
+	"ger krävs från nya leverantörer\x02Inte tillräckligt med saldo\x02Ansöka" +
+	"n mottagen\x02Beställning accepterad. Du har %[1]d timmar på dig att mar" +
+	"kera den som skickad.\x02Beställning avvisad\x02Beställning markerad som" +
+	" skickad\x02Produkt raderad\x02Produkt uppdaterad\x02Biljetten är redan " +
+	"stängd\x02Du måste vara inloggad för att få åtkomst till den sidan\x02Be" +
+	"ställning mottagen\x02Du har mottagit en ny beställning!\x0aDu har total" +
+	"t %[1]d timmar på dig att acceptera, innan den automatiskt avvisas.\x02B" +
+	"eställning accepterad\x02Din beställning har accepterats!\x0aDu kan över" +
+	"vaka dess status från beställningssidan\x02Beställning skickad\x02Din be" +
+	"ställning har skickats!\x0aVänligen kom ihåg att recensera den.\x02Hur b" +
+	"lir jag leverantör?\x02Skapa ett konto med tvåfaktorsautentisering (2FA)" +
+	" aktiverad, och skicka sedan in en leverantörsansökan.\x02Hur gör jag en" +
+	" beställning?\x02Lägg till de önskade produkterna i din kundvagn. Navige" +
+	"ra till /cart och välj “Kassa”, välj din föredragna leveransmetod och an" +
+	"ge den nödvändiga informationen.\x0aOm du har tillgängligt saldo kan du " +
+	"använda det vid kassan. Annars kan du begära en faktura. Fakturor måste " +
+	"betalas inom %[1]d timmar för att beställningen ska fortsätta behandlas." +
+	"\x02Hur kan jag få Monero (XMR)?\x02Det finns flera sätt att skaffa Mone" +
+	"ro. Vänligen besök getmonero.org för officiell vägledning och resurser." +
+	"\x02Vad ska jag göra om min beställning inte har anlänt eller inte stämm" +
+	"er överens med beskrivningen?\x02Beställningar avslutas automatiskt efte" +
+	"r %[1]d dagar.\x0aDu kan förlänga den automatiska avslutningsperioden tv" +
+	"å gånger.\x0aOm beställningen fortfarande inte har anlänt efter dessa f" +
+	"örlängningar bör du öppna en tvist.\x0aVårt team kommer att granska äre" +
+	"ndet och fatta ett beslut baserat på tillgänglig information.\x02Vad får" +
+	" jag sälja på denna marknadsplats?\x02Endast lagliga varor är tillåtna. " +
+	"Om du är osäker på om din produkt kvalificerar, vänligen kontakta oss in" +
+	"nan du skapar en annons.\x02Öppen\x02Leverantörsansökan\x02Ditt konto ha" +
+	"r inte 2FA aktiverat!\x02Applikationen är gratis för användare som redan" +
+	" är säljare på någon annan marknad.\x02För andra användare kostar applik" +
+	"ationen %[1]s XMR.\x02Säljarens logotyp\x02Använd png-bild med nära 1:1 " +
+	"för optimal utseende\x02Befintlig säljare\x02Välj detta om du redan är s" +
+	"äljare på någon annan marknad som xmrBazaar\x02Bevis på lager\x02Tydlig" +
+	" bild av ditt lager med ditt användarnamn och tidsstämpel synlig\x02Mark" +
+	"nader och ditt användarnamn\x02Lista de marknader där du är säljare och " +
+	"inkludera ditt användarnamn\x02Captcha\x02Klicka på cirkeln med ett snit" +
+	"t\x02Skicka\x02Totalt\x02Kassa\x02leveransmetod\x02Använd plånbok för be" +
+	"talning\x02detaljer\x02Okrypterade detaljer krypteras automatiskt med sä" +
+	"ljarens nyckel.\x02Titel\x02Beskrivning\x02Produktbild\x02Använd bild me" +
+	"d nära 1:1 bildförhållande för optimal utseende\x02Kategori\x02Skickas f" +
+	"rån\x02Skickas till\x02Lager\x02Storlek på det aktuella lagret för denna" +
+	" produkt.\x02Prissättning\x02Här kan du ställa in din prissättning.\x02V" +
+	"i tar 5% av dessa priser.\x02Antal\x02Pris\x02Skapa biljett\x02Ämne\x02k" +
+	"onto\x02beställning\x02plånbok\x02leverantör\x02produkt\x02förslag\x02fe" +
+	"l\x02annat\x02Meddelande\x02Personal PGP\x02Växelkurs\x02Tid\x04\x00\x01" +
+	" \x0f\x02Leverantörer:\x04\x00\x01 \x0c\x02Användare:\x02skicka\x02Svar" +
+	"\x02produkter\x02beställningar\x02sälja\x02support\x02Logga ut\x02logga " +
+	"in\x02registrera\x02Ingångsvakt till %[1]s\x02Jämför URL:en du använder " +
+	"med den i bilden nedan för att hitta alla saknade tecken markerade med '" +
+	"*'\x02Saknade tecken\x02Logga in\x02användarnamn\x02lösenord\x02Skapa ny" +
+	"tt konto\x02Ta bort allt\x02Du har inga meddelanden\x02Beställning\x02Ch" +
+	"att\x02Status\x02Leverantör\x02Leveransmetod\x02Totalkostnad\x02Datum" +
+	"\x02Skickad vid\x02Tills automatisk avböjning\x02Tills automatisk avslut" +
+	"ning\x02Detaljer\x02Leverantör erbjöd en återbetalning på %.2[1]f%\x02Ac" +
+	"ceptera\x02Avböj\x02Kundens PGP-nyckel\x02Kunden kan fortfarande avbryta" +
+	" denna beställning!\x02Du måste acceptera det inom 2 dagar eller så komm" +
+	"er det att avböjas automatiskt.\x02Efter att ha accepterat kan kunden in" +
+	"te längre avbryta, så du kan tryggt skicka.\x02Vänligen granska beställn" +
+	"ingen nedan noggrant innan du accepterar den.\x02Avböj alltid beställnin" +
+	"gar som du inte kan uppfylla.\x02Du måste markera denna beställning som " +
+	"skickad inom 2 dagar eller så kommer den att avböjas automatiskt.\x02Se " +
+	"till att du har tillräckligt med tid för att genomföra den faktiska leve" +
+	"ransen!\x02Skickad\x02Överför exakt belopp av Monero till adressen nedan" +
+	".\x02Efter 10 bekräftelser kommer din beställning att gå vidare till lev" +
+	"erantören.\x02Du har totalt 3 timmar på dig att betala denna faktura, an" +
+	"nars kommer din beställning att avbrytas.\x02Tid kvar att betala\x02Belo" +
+	"pp XMR\x02Adress\x02Beställningar kan avbrytas tills leverantören har ac" +
+	"cepterat den.\x02Avbryt\x04\x00\x01 6\x02Din beställning kommer att auto" +
+	"matiskt slutföras om\x02Du kan förlänga auto-slutförandet med 7 dagar." +
+	"\x02granska din beställning\x02Granska\x02Förläng AF-timer\x02Tvist\x02Å" +
+	"terbetalningserbjudande\x02Kunden har ifrågasatt denna beställning.\x02A" +
+	"nvänd chatten nedan för att diskutera denna tvist.\x02Du kan skapa ett å" +
+	"terbetalningserbjudande och lösa denna tvist utan administrativ interven" +
+	"tion.\x02Återbetalningsprocent\x02Beställningsdatum\x02Beställnings-ID" +
+	"\x02Bevis på nyckelinnehav\x02Dekryptera för att få token\x02Token\x02Up" +
+	"pdatera produkt\x02Uppdatera\x02Lägg i varukorg\x02Recensioner\x02sedan" +
+	"\x02SLUT I LAGER\x02Registrera\x02lösenordskontroll\x02Har du redan ett " +
+	"konto?\x02Granska beställning\x02Betyg\x02gäst\x02kund\x02admin\x02okänd" +
+	"\x02aktiverad\x02inaktiverad\x02Konto\x02Användarnamn\x02Typ\x022FA\x02I" +
+	"nställningar\x02Språk\x02Valuta\x02Ändra lösenord\x02Nuvarande lösenord" +
+	"\x02Nytt lösenord\x02Bekräfta nytt lösenord\x02Ändra PGP-nyckel\x02Aktiv" +
+	"era 2FA\x02PGP offentlig nyckel\x02Krävs för säljare, rekommenderas för " +
+	"alla.\x02Uppdatera användarvillkor\x02Användarvillkor\x02Användarvillkor" +
+	" används för att lösa tvister\x02Uppdatera leveransmetoder\x02Leveransme" +
+	"tod\x02Mina biljetter\x020 sekunder\x02%[1]d sekunder\x02%[1]d minuter" +
+	"\x02%[1]d timmar\x02%[1]d dagar\x02Betyg (GENOMSNITT)\x02Avslutade bestä" +
+	"llningar\x02Beställningar i escrow\x02Utestående tvister\x02Tidigare sed" +
+	"da\x02PGP-nyckel\x02Plånbok\x02Detta är din XMR-plånbok där du kan sätta" +
+	" in mynt.\x02Saldo uppdateras efter 10 bekräftelser.\x02Se\x02för mer in" +
+	"formation.\x02Saldo\x02Ta ut\x02Ange en Monero-adress dit du vill ta ut " +
+	"dina medel.\x02Vi tar ut en avgift på %[1]f XMR för varje uttag för att " +
+	"förhindra skräppost.\x02DRA INTE UT medel till en annan plånbok på denna" +
+	" plattform!\x02Måladress\x02Belopp\x02Ange belopp i decimalformat (t.ex." +
+	" 1.42069)"
 
-	// Total table size 122717 bytes (119KiB); checksum: A4CC875B
+	// Total table size 120557 bytes (117KiB); checksum: C0114E3F

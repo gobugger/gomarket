@@ -2,9 +2,9 @@ package form
 
 import (
 	"github.com/go-playground/validator/v10"
+	"github.com/gobugger/globalize"
 	currency_service "github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/product"
-	"github.com/gobugger/gomarket/internal/translations"
 )
 
 func location(fl validator.FieldLevel) bool {
@@ -19,7 +19,7 @@ func xmrAddress(f1 validator.FieldLevel) bool {
 
 func locale(f1 validator.FieldLevel) bool {
 	locale := f1.Field().String()
-	return translations.ValidLocale(locale)
+	return globalize.ValidLocale(locale)
 }
 
 func currency(f1 validator.FieldLevel) bool {

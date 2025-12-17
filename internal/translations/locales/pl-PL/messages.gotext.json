@@ -4,87 +4,104 @@
       {
         "id": "Failed to open the gate: invalid missing characters",
         "message": "Failed to open the gate: invalid missing characters",
-        "translation": "Nie udało się otworzyć bramy: nieprawidłowe brakujące znaki"
+        "translation": "Nie udało się otworzyć bramy: nieprawidłowe brakujące znaki",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:102:41"
       },
       {
         "id": "This username is already in use",
         "message": "This username is already in use",
-        "translation": "Ta nazwa użytkownika jest już zajęta"
+        "translation": "Ta nazwa użytkownika jest już zajęta",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:162:41"
       },
       {
         "id": "Invalid PGP key",
         "message": "Invalid PGP key",
-        "translation": "Nieprawidłowy klucz PGP"
+        "translation": "Nieprawidłowy klucz PGP",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:421:42"
       },
       {
         "id": "Registered successfully",
         "message": "Registered successfully",
-        "translation": "Rejestracja zakończona sukcesem"
+        "translation": "Rejestracja zakończona sukcesem",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:175:40"
       },
       {
         "id": "Invalid credentials",
         "message": "Invalid credentials",
-        "translation": "Nieprawidłowe dane logowania"
+        "translation": "Nieprawidłowe dane logowania",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:327:41"
       },
       {
         "id": "Your account is banned",
         "message": "Your account is banned",
-        "translation": "Twoje konto jest zbanowane"
+        "translation": "Twoje konto jest zbanowane",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:219:41"
       },
       {
         "id": "Invalid 2FA token",
         "message": "Invalid 2FA token",
-        "translation": "Nieprawidłowy token 2FA"
+        "translation": "Nieprawidłowy token 2FA",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:437:48"
       },
       {
         "id": "Password changed",
         "message": "Password changed",
-        "translation": "Hasło zmienione"
+        "translation": "Hasło zmienione",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:335:40"
       },
       {
         "id": "You can't update to your current key",
         "message": "You can't update to your current key",
-        "translation": "Nie możesz zaktualizować do swojego aktualnego klucza"
+        "translation": "Nie możesz zaktualizować do swojego aktualnego klucza",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:407:49"
       },
       {
         "id": "PGP key is set",
         "message": "PGP key is set",
-        "translation": "Klucz PGP został ustawiony"
+        "translation": "Klucz PGP został ustawiony",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:430:42"
       },
       {
         "id": "PGP Public key is updated",
         "message": "PGP Public key is updated",
-        "translation": "Klucz publiczny PGP został zaktualizowany"
+        "translation": "Klucz publiczny PGP został zaktualizowany",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:432:42"
       },
       {
-        "id": "Vendor info is updated",
-        "message": "Vendor info is updated",
-        "translation": "Informacje o sprzedawcy zostały zaktualizowane"
+        "id": "Terms of service updated",
+        "message": "Terms of service updated",
+        "translation": "Warunki usługi zostały zaktualizowane",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:473:41"
       },
       {
         "id": "Listing created",
         "message": "Listing created",
-        "translation": "Ogłoszenie utworzone"
+        "translation": "Ogłoszenie utworzone",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:541:40"
       },
       {
         "id": "Cart updated",
         "message": "Cart updated",
-        "translation": "Koszyk zaktualizowany"
+        "translation": "Koszyk zaktualizowany",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:710:40"
       },
       {
         "id": "cart deleted",
         "message": "cart deleted",
-        "translation": "koszyk usunięty"
+        "translation": "koszyk usunięty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:743:40"
       },
       {
         "id": "You can't order with a vendor account",
         "message": "You can't order with a vendor account",
-        "translation": "Nie możesz składać zamówień z konta sprzedawcy"
+        "translation": "Nie możesz składać zamówień z konta sprzedawcy",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:808:48"
       },
       {
         "id": "You don't have enough balance for this order",
         "message": "You don't have enough balance for this order",
-        "translation": "Nie masz wystarczającego salda na to zamówienie"
+        "translation": "Nie masz wystarczającego salda na to zamówienie",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:835:49"
       },
       {
         "id": "Please pay the invoice below in {Duration} hours for your order to proceed.",
@@ -99,22 +116,32 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:848:49"
       },
       {
         "id": "Order created",
         "message": "Order created",
-        "translation": "Zamówienie utworzone"
+        "translation": "Zamówienie utworzone",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:850:49"
+      },
+      {
+        "id": "Withdrawal amount is too small",
+        "message": "Withdrawal amount is too small",
+        "translation": "Kwota wypłaty jest zbyt mała",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1009:40"
       },
       {
         "id": "Not enough balance to withdraw.",
         "message": "Not enough balance to withdraw.",
-        "translation": "Niewystarczające saldo do wypłaty."
+        "translation": "Niewystarczające saldo do wypłaty.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1013:40"
       },
       {
         "id": "You can't withdraw to your own account",
         "message": "You can't withdraw to your own account",
-        "translation": "Nie możesz wypłacić na swoje własne konto"
+        "translation": "Nie możesz wypłacić na swoje własne konto",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1017:40"
       },
       {
         "id": "Withdrawal of {XMR2Decimalamount} XMR initiated",
@@ -129,17 +156,20 @@
             "argNum": 1,
             "expr": "currency.XMR2Decimal(amount)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1025:40"
       },
       {
         "id": "Order cancelled",
         "message": "Order cancelled",
-        "translation": "Zamówienie anulowane"
+        "translation": "Zamówienie anulowane",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1066:40"
       },
       {
         "id": "Review created",
         "message": "Review created",
-        "translation": "Recenzja utworzona"
+        "translation": "Recenzja utworzona",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1148:48"
       },
       {
         "id": "You can't extend AF timer before order has been dispatched for {Duration} days.",
@@ -154,7 +184,8 @@
             "argNum": 1,
             "expr": "5"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1179:48"
       },
       {
         "id": "You can't re-extend AF timer before order has been dispatched for {Duration} days.",
@@ -169,12 +200,14 @@
             "argNum": 1,
             "expr": "12"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1181:48"
       },
       {
         "id": "AF timer already extended to maximum.",
         "message": "AF timer already extended to maximum.",
-        "translation": "Timer AF został już przedłużony do maksimum."
+        "translation": "Timer AF został już przedłużony do maksimum.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1183:48"
       },
       {
         "id": "AF timer extended by {Duration} days",
@@ -189,37 +222,44 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1189:48"
       },
       {
         "id": "Order disputed",
         "message": "Order disputed",
-        "translation": "Zamówienie sporne"
+        "translation": "Zamówienie sporne",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1226:40"
       },
       {
         "id": "2FA needs to be enabled for vendors",
         "message": "2FA needs to be enabled for vendors",
-        "translation": "2FA musi być włączone dla sprzedawców"
+        "translation": "2FA musi być włączone dla sprzedawców",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1356:40"
       },
       {
         "id": "Vendor accounts can't have previous orders. Please create a new account.",
         "message": "Vendor accounts can't have previous orders. Please create a new account.",
-        "translation": "Konta sprzedawców nie mogą mieć wcześniejszych zamówień. Proszę utworzyć nowe konto."
+        "translation": "Konta sprzedawców nie mogą mieć wcześniejszych zamówień. Proszę utworzyć nowe konto.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1370:40"
       },
       {
         "id": "Proof of inventory is required from new vendors",
         "message": "Proof of inventory is required from new vendors",
-        "translation": "Dowód posiadania towaru jest wymagany od nowych sprzedawców."
+        "translation": "Dowód posiadania towaru jest wymagany od nowych sprzedawców.",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1377:41"
       },
       {
         "id": "Not enough balance",
         "message": "Not enough balance",
-        "translation": "Niewystarczający balans"
+        "translation": "Niewystarczający balans",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1402:40"
       },
       {
         "id": "Application received",
         "message": "Application received",
-        "translation": "Wniosek otrzymany"
+        "translation": "Wniosek otrzymany",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1410:48"
       },
       {
         "id": "Order accepted. You have {Duration} hours to mark it dispatched.",
@@ -234,42 +274,50 @@
             "argNum": 1,
             "expr": "72"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1455:41"
       },
       {
         "id": "Order declined",
         "message": "Order declined",
-        "translation": "Zamówienie odrzucone"
+        "translation": "Zamówienie odrzucone",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1458:41"
       },
       {
         "id": "Order marked as dispatched",
         "message": "Order marked as dispatched",
-        "translation": "Zamówienie oznaczone jako wysłane"
+        "translation": "Zamówienie oznaczone jako wysłane",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1502:40"
       },
       {
         "id": "Product deleted",
         "message": "Product deleted",
-        "translation": "Produkt usunięty"
+        "translation": "Produkt usunięty",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1546:41"
       },
       {
         "id": "Product updated",
         "message": "Product updated",
-        "translation": "Produkt zaktualizowany"
+        "translation": "Produkt zaktualizowany",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1558:41"
       },
       {
         "id": "Ticket is already closed",
         "message": "Ticket is already closed",
-        "translation": "Zgłoszenie jest już zamknięte"
+        "translation": "Zgłoszenie jest już zamknięte",
+        "position": "github.com/gobugger/gomarket/internal/app/handlers.go:1684:48"
       },
       {
         "id": "You need to be logged in to access that page",
         "message": "You need to be logged in to access that page",
-        "translation": "Musisz być zalogowany, aby uzyskać dostęp do tej strony"
+        "translation": "Musisz być zalogowany, aby uzyskać dostęp do tej strony",
+        "position": "github.com/gobugger/gomarket/internal/app/middleware.go:59:49"
       },
       {
         "id": "Order received",
         "message": "Order received",
-        "translation": "Zamówienie otrzymane"
+        "translation": "Zamówienie otrzymane",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:24:22"
       },
       {
         "id": "You have received a new order!\nYou have a total of {Duration} hours to accept, before it's auto-declined.",
@@ -284,42 +332,50 @@
             "argNum": 1,
             "expr": "48"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:25:24"
       },
       {
         "id": "Order accepted",
         "message": "Order accepted",
-        "translation": "Zamówienie zaakceptowane"
+        "translation": "Zamówienie zaakceptowane",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:45:24"
       },
       {
         "id": "Your order has been accepted!\nYou can monitor its status from orders page",
         "message": "Your order has been accepted!\nYou can monitor its status from orders page",
-        "translation": "Twoje zamówienie zostało zaakceptowane!\nMożesz monitorować jego status na stronie zamówień."
+        "translation": "Twoje zamówienie zostało zaakceptowane!\nMożesz monitorować jego status na stronie zamówień.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:46:24"
       },
       {
         "id": "Order dispatched",
         "message": "Order dispatched",
-        "translation": "Zamówienie wysłane"
+        "translation": "Zamówienie wysłane",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:65:24"
       },
       {
         "id": "Your order has been dispatched!\nPlease remember to review it.",
         "message": "Your order has been dispatched!\nPlease remember to review it.",
-        "translation": "Twoje zamówienie zostało wysłane!\nProszę pamiętać o jego ocenie."
+        "translation": "Twoje zamówienie zostało wysłane!\nProszę pamiętać o jego ocenie.",
+        "position": "github.com/gobugger/gomarket/internal/service/notification/notification.go:66:24"
       },
       {
         "id": "How do I become a vendor?",
         "message": "How do I become a vendor?",
-        "translation": "Jak mogę zostać sprzedawcą?"
+        "translation": "Jak mogę zostać sprzedawcą?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:17:25"
       },
       {
         "id": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
         "message": "Create an account with two-factor authentication (2FA) enabled, then submit a vendor application.",
-        "translation": "Utwórz konto z włączoną dwuetapową weryfikacją (2FA), a następnie złóż wniosek o status sprzedawcy."
+        "translation": "Utwórz konto z włączoną dwuetapową weryfikacją (2FA), a następnie złóż wniosek o status sprzedawcy.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:18:25"
       },
       {
         "id": "How do I place an order?",
         "message": "How do I place an order?",
-        "translation": "Jak mogę złożyć zamówienie?"
+        "translation": "Jak mogę złożyć zamówienie?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:21:25"
       },
       {
         "id": "Add the desired products to your cart. Navigate to /cart and select “Checkout,” choose your preferred delivery method, and provide the required information.\nIf you have available balance, you may use it at checkout. Otherwise, you may request an invoice. Invoices must be paid within {Duration} hours for the order to continue processing.",
@@ -334,22 +390,26 @@
             "argNum": 1,
             "expr": "6"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:22:23"
       },
       {
         "id": "How can I obtain Monero (XMR)?",
         "message": "How can I obtain Monero (XMR)?",
-        "translation": "Jak mogę zdobyć Monero (XMR)?"
+        "translation": "Jak mogę zdobyć Monero (XMR)?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:26:25"
       },
       {
         "id": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
         "message": "There are several ways to acquire Monero. Please visit getmonero.org for official guidance and resources.",
-        "translation": "Istnieje kilka sposobów na zdobycie Monero. Proszę odwiedzić getmonero.org w celu uzyskania oficjalnych wskazówek i zasobów."
+        "translation": "Istnieje kilka sposobów na zdobycie Monero. Proszę odwiedzić getmonero.org w celu uzyskania oficjalnych wskazówek i zasobów.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:27:25"
       },
       {
         "id": "What should I do if my order has not arrived or does not match the description?",
         "message": "What should I do if my order has not arrived or does not match the description?",
-        "translation": "Co powinienem zrobić, jeśli moje zamówienie nie dotarło lub nie zgadza się z opisem?"
+        "translation": "Co powinienem zrobić, jeśli moje zamówienie nie dotarło lub nie zgadza się z opisem?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:30:25"
       },
       {
         "id": "Orders are automatically finalized after {Duration} days.\nYou may extend the auto-finalization period twice.\nIf the order still has not arrived after these extensions, you should open a dispute.\nOur team will review the case and make a resolution based on the available information.",
@@ -364,42 +424,49 @@
             "argNum": 1,
             "expr": "7"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:31:23"
       },
       {
         "id": "What am I allowed to sell on this marketplace?",
         "message": "What am I allowed to sell on this marketplace?",
-        "translation": "Co mogę sprzedawać na tym rynku?"
+        "translation": "Co mogę sprzedawać na tym rynku?",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:37:25"
       },
       {
         "id": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
         "message": "Only legal items are permitted. If you are unsure whether your product qualifies, please contact us before creating a listing.",
-        "translation": "Dozwolone są tylko legalne przedmioty. Jeśli nie jesteś pewien, czy twój produkt kwalifikuje się, skontaktuj się z nami przed utworzeniem ogłoszenia."
+        "translation": "Dozwolone są tylko legalne przedmioty. Jeśli nie jesteś pewien, czy twój produkt kwalifikuje się, skontaktuj się z nami przed utworzeniem ogłoszenia.",
+        "position": "github.com/gobugger/gomarket/internal/support/faq.go:38:25"
       },
       {
         "id": "Open",
         "message": "Open",
-        "translation": "Otwórz"
+        "translation": "Otwórz",
+        "position": "github.com/gobugger/gomarket/ui/templ/adminpanel_templ.go:292:81"
       },
       {
         "id": "Vendor application",
         "message": "Vendor application",
-        "translation": "Wniosek sprzedawcy"
+        "translation": "Wniosek sprzedawcy",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:110:79"
       },
       {
         "id": "Your account does not have 2FA enabled!",
         "message": "Your account does not have 2FA enabled!",
-        "translation": "Twoje konto nie ma włączonej dwuetapowej weryfikacji (2FA)!"
+        "translation": "Twoje konto nie ma włączonej dwuetapowej weryfikacji (2FA)!",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:71:80"
       },
       {
-        "id": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "message": "The application is free for users who are already vendors on some other market using the same PGP key.",
-        "translation": "Aplikacja jest darmowa dla użytkowników, którzy są już sprzedawcami na innym rynku używającym tego samego klucza PGP."
+        "id": "Application is free for users who are already vendors on some other market.",
+        "message": "Application is free for users who are already vendors on some other market.",
+        "translation": "Aplikacja jest darmowa dla użytkowników, którzy są już sprzedawcami na innym rynku.",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:85:79"
       },
       {
-        "id": "For other users, application costs {Price} XMR and is non-refundable.",
-        "message": "For other users, application costs {Price} XMR and is non-refundable.",
-        "translation": "Dla innych użytkowników aplikacja kosztuje {Price} XMR i jest bezzwrotna.",
+        "id": "For other users, application costs {Price} XMR.",
+        "message": "For other users, application costs {Price} XMR.",
+        "translation": "Dla innych użytkowników aplikacja kosztuje {Price} XMR.",
         "placeholders": [
           {
             "id": "Price",
@@ -409,297 +476,344 @@
             "argNum": 1,
             "expr": "price"
           }
-        ]
-      },
-      {
-        "id": "You're required to provide proof that you actually have products to sell here.",
-        "message": "You're required to provide proof that you actually have products to sell here.",
-        "translation": "Musisz dostarczyć dowód, że rzeczywiście masz produkty do sprzedaży tutaj."
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:98:79"
       },
       {
         "id": "Vendor Logo",
         "message": "Vendor Logo",
-        "translation": "Logo sprzedawcy"
+        "translation": "Logo sprzedawcy",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:111:79"
       },
       {
         "id": "Use png image with close to 1:1 ratio for optimal look",
         "message": "Use png image with close to 1:1 ratio for optimal look",
-        "translation": "Użyj obrazu png o proporcjach bliskich 1:1 dla optymalnego wyglądu"
+        "translation": "Użyj obrazu png o proporcjach bliskich 1:1 dla optymalnego wyglądu",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:124:79"
       },
       {
         "id": "Existing vendor",
         "message": "Existing vendor",
-        "translation": "Istniejący sprzedawca"
+        "translation": "Istniejący sprzedawca",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:137:79"
       },
       {
         "id": "Select this if you'r already a vendor on some other market such as xmrBazaar",
         "message": "Select this if you'r already a vendor on some other market such as xmrBazaar",
-        "translation": "Wybierz to, jeśli jesteś już sprzedawcą na innym rynku, takim jak xmrBazaar"
+        "translation": "Wybierz to, jeśli jesteś już sprzedawcą na innym rynku, takim jak xmrBazaar",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:150:80"
       },
       {
         "id": "Proof of inventory",
         "message": "Proof of inventory",
-        "translation": "Dowód posiadania towaru"
+        "translation": "Dowód posiadania towaru",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:171:80"
       },
       {
         "id": "Clear image of your inventory with your username and timestamp visible",
         "message": "Clear image of your inventory with your username and timestamp visible",
-        "translation": "Wyraźne zdjęcie twojego towaru z widoczną nazwą użytkownika i znacznikiem czasu"
+        "translation": "Wyraźne zdjęcie twojego towaru z widoczną nazwą użytkownika i znacznikiem czasu",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:184:80"
       },
       {
         "id": "Markets and Your Username",
         "message": "Markets and Your Username",
-        "translation": "Rynki i Twoja nazwa użytkownika"
+        "translation": "Rynki i Twoja nazwa użytkownika",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:197:80"
       },
       {
         "id": "List the markets where you are a vendor and include your username",
         "message": "List the markets where you are a vendor and include your username",
-        "translation": "Wymień rynki, na których jesteś sprzedawcą, i podaj swoją nazwę użytkownika"
+        "translation": "Wymień rynki, na których jesteś sprzedawcą, i podaj swoją nazwę użytkownika",
+        "position": "github.com/gobugger/gomarket/ui/templ/application_templ.go:210:80"
       },
       {
         "id": "Captcha",
         "message": "Captcha",
-        "translation": "Captcha"
+        "translation": "Captcha",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:40:79"
       },
       {
         "id": "Click circle with a cut",
         "message": "Click circle with a cut",
-        "translation": "Kliknij okrąg z wycięciem"
+        "translation": "Kliknij okrąg z wycięciem",
+        "position": "github.com/gobugger/gomarket/ui/templ/captcha_templ.go:66:79"
       },
       {
         "id": "Submit",
         "message": "Submit",
-        "translation": "Wyślij"
+        "translation": "Wyślij",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:111:79"
       },
       {
         "id": "Total",
         "message": "Total",
-        "translation": "Razem"
+        "translation": "Razem",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:277:81"
       },
       {
         "id": "Checkout",
         "message": "Checkout",
-        "translation": "Zamówienie"
+        "translation": "Zamówienie",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:59:79"
       },
       {
         "id": "delivery method",
         "message": "delivery method",
-        "translation": "metoda dostawy"
+        "translation": "metoda dostawy",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:72:79"
       },
       {
         "id": "Use wallet for payment",
         "message": "Use wallet for payment",
-        "translation": "Użyj portfela do płatności"
+        "translation": "Użyj portfela do płatności",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:134:79"
       },
       {
         "id": "details",
         "message": "details",
-        "translation": "szczegóły"
-      },
-      {
-        "id": "Use your real address, with the same format as below.",
-        "message": "Use your real address, with the same format as below.",
-        "translation": "Użyj swojego prawdziwego adresu, w tym samym formacie co poniżej."
+        "translation": "szczegóły",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:156:79"
       },
       {
         "id": "Unencrypted details are automatically encrypted using vendors key.",
         "message": "Unencrypted details are automatically encrypted using vendors key.",
-        "translation": "Niezaszyfrowane szczegóły są automatycznie szyfrowane przy użyciu klucza sprzedawcy."
+        "translation": "Niezaszyfrowane szczegóły są automatycznie szyfrowane przy użyciu klucza sprzedawcy.",
+        "position": "github.com/gobugger/gomarket/ui/templ/checkout_templ.go:169:80"
       },
       {
         "id": "Title",
         "message": "Title",
-        "translation": "Tytuł"
+        "translation": "Tytuł",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:62:79"
       },
       {
         "id": "Description",
         "message": "Description",
-        "translation": "Opis"
+        "translation": "Opis",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:75:79"
       },
       {
         "id": "Product image",
         "message": "Product image",
-        "translation": "Obraz produktu"
+        "translation": "Obraz produktu",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:88:79"
       },
       {
         "id": "Use image with close to 1:1 aspect ratio for optimal look",
         "message": "Use image with close to 1:1 aspect ratio for optimal look",
-        "translation": "Użyj obrazu o proporcjach bliskich 1:1 dla optymalnego wyglądu"
+        "translation": "Użyj obrazu o proporcjach bliskich 1:1 dla optymalnego wyglądu",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:101:79"
       },
       {
         "id": "Category",
         "message": "Category",
-        "translation": "Kategoria"
+        "translation": "Kategoria",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:114:79"
       },
       {
         "id": "Ships from",
         "message": "Ships from",
-        "translation": "Wysyłka z"
+        "translation": "Wysyłka z",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:163:80"
       },
       {
         "id": "Ships to",
         "message": "Ships to",
-        "translation": "Wysyłka do"
+        "translation": "Wysyłka do",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:212:80"
       },
       {
         "id": "Inventory",
         "message": "Inventory",
-        "translation": "Stan magazynowy"
+        "translation": "Stan magazynowy",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:93:80"
       },
       {
         "id": "Size of the current inventory for this product.",
         "message": "Size of the current inventory for this product.",
-        "translation": "Rozmiar aktualnego stanu magazynowego dla tego produktu."
+        "translation": "Rozmiar aktualnego stanu magazynowego dla tego produktu.",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:106:80"
       },
       {
         "id": "Pricing",
         "message": "Pricing",
-        "translation": "Cennik"
+        "translation": "Cennik",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:287:80"
       },
       {
         "id": "Here you can set your pricing.",
         "message": "Here you can set your pricing.",
-        "translation": "Tutaj możesz ustawić swoje ceny."
+        "translation": "Tutaj możesz ustawić swoje ceny.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:300:80"
       },
       {
         "id": "We take 5% cut from these prices.",
         "message": "We take 5% cut from these prices.",
-        "translation": "Pobieramy 5% prowizji od tych cen."
+        "translation": "Pobieramy 5% prowizji od tych cen.",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-listing_templ.go:313:80"
       },
       {
         "id": "Quantity",
         "message": "Quantity",
-        "translation": "Ilość"
+        "translation": "Ilość",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:254:80"
       },
       {
         "id": "Price",
         "message": "Price",
-        "translation": "Cena"
+        "translation": "Cena",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:582:81"
       },
       {
         "id": "Create ticket",
         "message": "Create ticket",
-        "translation": "Utwórz zgłoszenie"
+        "translation": "Utwórz zgłoszenie",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:67:80"
       },
       {
         "id": "Subject",
         "message": "Subject",
-        "translation": "Temat"
+        "translation": "Temat",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:61:79"
       },
       {
         "id": "account",
         "message": "account",
-        "translation": "konto"
+        "translation": "konto",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:83:79"
       },
       {
         "id": "order",
         "message": "order",
-        "translation": "zamówienie"
+        "translation": "zamówienie",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:96:79"
       },
       {
         "id": "wallet",
         "message": "wallet",
-        "translation": "portfel"
+        "translation": "portfel",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:109:79"
       },
       {
         "id": "vendor",
         "message": "vendor",
-        "translation": "sprzedawca"
+        "translation": "sprzedawca",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:25:22"
       },
       {
         "id": "product",
         "message": "product",
-        "translation": "produkt"
+        "translation": "produkt",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:135:79"
       },
       {
         "id": "suggestion",
         "message": "suggestion",
-        "translation": "sugestia"
+        "translation": "sugestia",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:148:80"
       },
       {
         "id": "bug",
         "message": "bug",
-        "translation": "błąd"
+        "translation": "błąd",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:161:80"
       },
       {
         "id": "other",
         "message": "other",
-        "translation": "inny"
+        "translation": "inny",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:174:80"
       },
       {
         "id": "Message",
         "message": "Message",
-        "translation": "Wiadomość"
+        "translation": "Wiadomość",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:98:79"
       },
       {
         "id": "Staff PGP",
         "message": "Staff PGP",
-        "translation": "PGP personelu"
+        "translation": "PGP personelu",
+        "position": "github.com/gobugger/gomarket/ui/templ/create-ticket_templ.go:200:80"
       },
       {
         "id": "Exchange rate",
         "message": "Exchange rate",
-        "translation": "Kurs wymiany"
+        "translation": "Kurs wymiany",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:52:78"
       },
       {
         "id": "Time",
         "message": "Time",
-        "translation": "Czas"
+        "translation": "Czas",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:78:78"
       },
       {
         "id": "Vendors:",
         "message": "Vendors:",
-        "translation": "Sprzedawcy:"
+        "translation": "Sprzedawcy:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:104:78"
       },
       {
         "id": "Users:",
         "message": "Users:",
-        "translation": "Użytkownicy:"
+        "translation": "Użytkownicy:",
+        "position": "github.com/gobugger/gomarket/ui/templ/footer_templ.go:126:78"
       },
       {
         "id": "submit",
         "message": "submit",
-        "translation": "wyślij"
+        "translation": "wyślij",
+        "position": "github.com/gobugger/gomarket/ui/templ/handle-application_templ.go:206:80"
       },
       {
         "id": "Response",
         "message": "Response",
-        "translation": "Odpowiedź"
+        "translation": "Odpowiedź",
+        "position": "github.com/gobugger/gomarket/ui/templ/ticket_templ.go:193:81"
       },
       {
         "id": "products",
         "message": "products",
-        "translation": "produkty"
+        "translation": "produkty",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:37:78"
       },
       {
         "id": "orders",
         "message": "orders",
-        "translation": "zamówienia"
+        "translation": "zamówienia",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:55:79"
       },
       {
         "id": "sell",
         "message": "sell",
-        "translation": "sprzedaj"
+        "translation": "sprzedaj",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:74:79"
       },
       {
         "id": "support",
         "message": "support",
-        "translation": "wsparcie"
+        "translation": "wsparcie",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:107:79"
       },
       {
         "id": "Logout",
         "message": "Logout",
-        "translation": "Wyloguj się"
+        "translation": "Wyloguj się",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:185:79"
       },
       {
         "id": "log in",
         "message": "log in",
-        "translation": "zaloguj się"
+        "translation": "zaloguj się",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:203:79"
       },
       {
         "id": "register",
         "message": "register",
-        "translation": "zarejestruj się"
+        "translation": "zarejestruj się",
+        "position": "github.com/gobugger/gomarket/ui/templ/header_templ.go:216:80"
       },
       {
         "id": "Entry guard to {Name}",
@@ -714,102 +828,122 @@
             "argNum": 1,
             "expr": "tc.Config.Name"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:57:79"
       },
       {
         "id": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
         "message": "Compare the URL you're using with the one in the image below to find all missing characters marked with '*'",
-        "translation": "Porównaj używany URL z tym na poniższym obrazku, aby znaleźć wszystkie brakujące znaki oznaczone '*'"
+        "translation": "Porównaj używany URL z tym na poniższym obrazku, aby znaleźć wszystkie brakujące znaki oznaczone '*'",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:70:79"
       },
       {
         "id": "Missing characters",
         "message": "Missing characters",
-        "translation": "Brakujące znaki"
+        "translation": "Brakujące znaki",
+        "position": "github.com/gobugger/gomarket/ui/templ/jail_templ.go:96:79"
       },
       {
         "id": "Log in",
         "message": "Log in",
-        "translation": "Zaloguj się"
+        "translation": "Zaloguj się",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:57:79"
       },
       {
         "id": "username",
         "message": "username",
-        "translation": "nazwa użytkownika"
+        "translation": "nazwa użytkownika",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:70:79"
       },
       {
         "id": "password",
         "message": "password",
-        "translation": "hasło"
+        "translation": "hasło",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:104:79"
       },
       {
         "id": "Create new account",
         "message": "Create new account",
-        "translation": "Utwórz nowe konto"
+        "translation": "Utwórz nowe konto",
+        "position": "github.com/gobugger/gomarket/ui/templ/login_templ.go:138:79"
       },
       {
         "id": "Delete all",
         "message": "Delete all",
-        "translation": "Usuń wszystko"
+        "translation": "Usuń wszystko",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:109:80"
       },
       {
         "id": "You have zero notifications",
         "message": "You have zero notifications",
-        "translation": "Nie masz żadnych powiadomień"
+        "translation": "Nie masz żadnych powiadomień",
+        "position": "github.com/gobugger/gomarket/ui/templ/notifications_templ.go:127:80"
       },
       {
         "id": "Order",
         "message": "Order",
-        "translation": "Zamówienie"
+        "translation": "Zamówienie",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:241:80"
       },
       {
         "id": "Chat",
         "message": "Chat",
-        "translation": "Czat"
+        "translation": "Czat",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:187:79"
       },
       {
         "id": "Status",
         "message": "Status",
-        "translation": "Status"
+        "translation": "Status",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:243:79"
       },
       {
         "id": "Vendor",
         "message": "Vendor",
-        "translation": "Sprzedawca"
+        "translation": "Sprzedawca",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:269:79"
       },
       {
         "id": "Delivery method",
         "message": "Delivery method",
-        "translation": "Metoda dostawy"
+        "translation": "Metoda dostawy",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:308:79"
       },
       {
         "id": "Total cost",
         "message": "Total cost",
-        "translation": "Całkowity koszt"
+        "translation": "Całkowity koszt",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:334:79"
       },
       {
         "id": "Date",
         "message": "Date",
-        "translation": "Data"
+        "translation": "Data",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:360:79"
       },
       {
         "id": "Dispatched at",
         "message": "Dispatched at",
-        "translation": "Wysłano o"
+        "translation": "Wysłano o",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:391:80"
       },
       {
         "id": "Until auto-declined",
         "message": "Until auto-declined",
-        "translation": "Do automatycznego odrzucenia"
+        "translation": "Do automatycznego odrzucenia",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:424:80"
       },
       {
         "id": "Until auto-finalized",
         "message": "Until auto-finalized",
-        "translation": "Do automatycznego sfinalizowania"
+        "translation": "Do automatycznego sfinalizowania",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:455:80"
       },
       {
         "id": "Details",
         "message": "Details",
-        "translation": "Szczegóły"
+        "translation": "Szczegóły",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:486:79"
       },
       {
         "id": "Vendor offered refund of {RefundFactor}%",
@@ -824,377 +958,452 @@
             "argNum": 1,
             "expr": "100 * item.Offer.RefundFactor"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:794:81"
       },
       {
         "id": "Accept",
         "message": "Accept",
-        "translation": "Akceptuj"
+        "translation": "Akceptuj",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1064:79"
       },
       {
         "id": "Decline",
         "message": "Decline",
-        "translation": "Odrzuć"
+        "translation": "Odrzuć",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1077:79"
       },
       {
         "id": "Customers PGP key",
         "message": "Customers PGP key",
-        "translation": "Klucz PGP klientów"
+        "translation": "Klucz PGP klientów",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:901:80"
       },
       {
         "id": "Customer can still cancel this order!",
         "message": "Customer can still cancel this order!",
-        "translation": "Klient może nadal anulować to zamówienie!"
+        "translation": "Klient może nadal anulować to zamówienie!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:999:79"
       },
       {
         "id": "You must accept it in 2 days or it will be automatically declined.",
         "message": "You must accept it in 2 days or it will be automatically declined.",
-        "translation": "Musisz to zaakceptować w ciągu 2 dni, w przeciwnym razie zostanie automatycznie odrzucone."
+        "translation": "Musisz to zaakceptować w ciągu 2 dni, w przeciwnym razie zostanie automatycznie odrzucone.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1012:79"
       },
       {
         "id": "After accepting, customer can no longer cancel so you can safely dispatch.",
         "message": "After accepting, customer can no longer cancel so you can safely dispatch.",
-        "translation": "Po zaakceptowaniu klient nie może już anulować, więc możesz bezpiecznie wysłać."
+        "translation": "Po zaakceptowaniu klient nie może już anulować, więc możesz bezpiecznie wysłać.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1025:79"
       },
       {
         "id": "Please carefully review the order below before accepting it.",
         "message": "Please carefully review the order below before accepting it.",
-        "translation": "Proszę dokładnie sprawdzić zamówienie poniżej przed jego zaakceptowaniem."
+        "translation": "Proszę dokładnie sprawdzić zamówienie poniżej przed jego zaakceptowaniem.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1038:79"
       },
       {
         "id": "Always decline orders that you'r unable to fulfill.",
         "message": "Always decline orders that you'r unable to fulfill.",
-        "translation": "Zawsze odrzucaj zamówienia, których nie możesz zrealizować."
+        "translation": "Zawsze odrzucaj zamówienia, których nie możesz zrealizować.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1051:79"
       },
       {
         "id": "You must mark this order dispatched in 2 days or it will be automatically declined.",
         "message": "You must mark this order dispatched in 2 days or it will be automatically declined.",
-        "translation": "Musisz oznaczyć to zamówienie jako wysłane w ciągu 2 dni, w przeciwnym razie zostanie automatycznie odrzucone."
+        "translation": "Musisz oznaczyć to zamówienie jako wysłane w ciągu 2 dni, w przeciwnym razie zostanie automatycznie odrzucone.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1140:79"
       },
       {
         "id": "Make sure that you have enough time to do the actual dispaching!",
         "message": "Make sure that you have enough time to do the actual dispaching!",
-        "translation": "Upewnij się, że masz wystarczająco dużo czasu na rzeczywiste wysyłanie!"
+        "translation": "Upewnij się, że masz wystarczająco dużo czasu na rzeczywiste wysyłanie!",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1153:79"
       },
       {
         "id": "Dispatched",
         "message": "Dispatched",
-        "translation": "Wysłano"
+        "translation": "Wysłano",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1166:79"
       },
       {
         "id": "Transfer exact amount of Monero to the address below.",
         "message": "Transfer exact amount of Monero to the address below.",
-        "translation": "Prześlij dokładną kwotę Monero na poniższy adres."
+        "translation": "Prześlij dokładną kwotę Monero na poniższy adres.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1208:79"
       },
       {
         "id": "After 10 confirmations, your order will proceed to vendor.",
         "message": "After 10 confirmations, your order will proceed to vendor.",
-        "translation": "Po 10 potwierdzeniach Twoje zamówienie zostanie przekazane do sprzedawcy."
+        "translation": "Po 10 potwierdzeniach Twoje zamówienie zostanie przekazane do sprzedawcy.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1221:79"
       },
       {
         "id": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
         "message": "You have a total of 3 hours to pay this invoice, or your order will be cancelled.",
-        "translation": "Masz łącznie 3 godziny na opłacenie tej faktury, w przeciwnym razie Twoje zamówienie zostanie anulowane."
+        "translation": "Masz łącznie 3 godziny na opłacenie tej faktury, w przeciwnym razie Twoje zamówienie zostanie anulowane.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1234:79"
       },
       {
         "id": "Time left to pay",
         "message": "Time left to pay",
-        "translation": "Czas pozostały na płatność"
+        "translation": "Czas pozostały na płatność",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1247:79"
       },
       {
         "id": "Amount XMR",
         "message": "Amount XMR",
-        "translation": "Kwota XMR"
+        "translation": "Kwota XMR",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1278:79"
       },
       {
         "id": "Address",
         "message": "Address",
-        "translation": "Adres"
+        "translation": "Adres",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:172:80"
       },
       {
         "id": "Orders can be cancelled until vendor has accepted it.",
         "message": "Orders can be cancelled until vendor has accepted it.",
-        "translation": "Zamówienia można anulować, dopóki sprzedawca ich nie zaakceptuje."
+        "translation": "Zamówienia można anulować, dopóki sprzedawca ich nie zaakceptuje.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1393:79"
       },
       {
         "id": "Cancel",
         "message": "Cancel",
-        "translation": "Anuluj"
+        "translation": "Anuluj",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1406:79"
       },
       {
         "id": "Your order will auto-finalize in",
         "message": "Your order will auto-finalize in",
-        "translation": "Twoje zamówienie zostanie automatycznie sfinalizowane za"
+        "translation": "Twoje zamówienie zostanie automatycznie sfinalizowane za",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1448:79"
       },
       {
         "id": "You can extend the auto-finalize-time by 7-days.",
         "message": "You can extend the auto-finalize-time by 7-days.",
-        "translation": "Możesz wydłużyć czas automatycznego finalizowania o 7 dni."
+        "translation": "Możesz wydłużyć czas automatycznego finalizowania o 7 dni.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1461:79"
       },
       {
         "id": "review your order",
         "message": "review your order",
-        "translation": "sprawdź swoje zamówienie"
+        "translation": "sprawdź swoje zamówienie",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1487:79"
       },
       {
         "id": "Review",
         "message": "Review",
-        "translation": "Przegląd"
+        "translation": "Przegląd",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1500:79"
       },
       {
         "id": "Extend AF-timer",
         "message": "Extend AF-timer",
-        "translation": "Wydłuż czas AF"
+        "translation": "Wydłuż czas AF",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1539:80"
       },
       {
         "id": "Dispute",
         "message": "Dispute",
-        "translation": "Spór"
+        "translation": "Spór",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1578:79"
       },
       {
         "id": "Refund offer",
         "message": "Refund offer",
-        "translation": "Oferta zwrotu"
+        "translation": "Oferta zwrotu",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1628:79"
       },
       {
         "id": "Customer has disputed this order.",
         "message": "Customer has disputed this order.",
-        "translation": "Klient zakwestionował to zamówienie."
+        "translation": "Klient zakwestionował to zamówienie.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1654:79"
       },
       {
         "id": "Use the chat below to discuss about this dispute.",
         "message": "Use the chat below to discuss about this dispute.",
-        "translation": "Użyj czatu poniżej, aby omówić ten spór."
+        "translation": "Użyj czatu poniżej, aby omówić ten spór.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1667:79"
       },
       {
         "id": "You can create an refund offer and resolve this dispute without admin intervention.",
         "message": "You can create an refund offer and resolve this dispute without admin intervention.",
-        "translation": "Możesz stworzyć ofertę zwrotu i rozwiązać ten spór bez interwencji administratora."
+        "translation": "Możesz stworzyć ofertę zwrotu i rozwiązać ten spór bez interwencji administratora.",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1680:79"
       },
       {
         "id": "Refund percent",
         "message": "Refund percent",
-        "translation": "Procent zwrotu"
+        "translation": "Procent zwrotu",
+        "position": "github.com/gobugger/gomarket/ui/templ/order_templ.go:1693:79"
       },
       {
         "id": "Order date",
         "message": "Order date",
-        "translation": "Data zamówienia"
+        "translation": "Data zamówienia",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:72:80"
       },
       {
         "id": "Order ID",
         "message": "Order ID",
-        "translation": "ID zamówienia"
+        "translation": "ID zamówienia",
+        "position": "github.com/gobugger/gomarket/ui/templ/orders_templ.go:98:80"
       },
       {
         "id": "Proof key ownership",
         "message": "Proof key ownership",
-        "translation": "Dowód posiadania klucza"
+        "translation": "Dowód posiadania klucza",
+        "position": "github.com/gobugger/gomarket/ui/templ/pgp_check_templ.go:57:79"
       },
       {
         "id": "Decrypt to get the token",
         "message": "Decrypt to get the token",
-        "translation": "Odszyfruj, aby uzyskać token"
+        "translation": "Odszyfruj, aby uzyskać token",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:70:79"
       },
       {
         "id": "Token",
         "message": "Token",
-        "translation": "Token"
+        "translation": "Token",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:96:79"
       },
       {
         "id": "Update product",
         "message": "Update product",
-        "translation": "Aktualizuj produkt"
+        "translation": "Aktualizuj produkt",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:67:80"
       },
       {
         "id": "Update",
         "message": "Update",
-        "translation": "Aktualizuj"
+        "translation": "Aktualizuj",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:127:80"
       },
       {
         "id": "Add to cart",
         "message": "Add to cart",
-        "translation": "Dodaj do koszyka"
+        "translation": "Dodaj do koszyka",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:315:80"
       },
       {
         "id": "Reviews",
         "message": "Reviews",
-        "translation": "Opinie"
+        "translation": "Opinie",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:171:79"
       },
       {
         "id": "ago",
         "message": "ago",
-        "translation": "temu"
+        "translation": "temu",
+        "position": "github.com/gobugger/gomarket/ui/templ/product_templ.go:404:81"
       },
       {
         "id": "OUT OF STOCK",
         "message": "OUT OF STOCK",
-        "translation": "NIEDOSTĘPNE"
+        "translation": "NIEDOSTĘPNE",
+        "position": "github.com/gobugger/gomarket/ui/templ/products_templ.go:66:81"
       },
       {
         "id": "Register",
         "message": "Register",
-        "translation": "Zarejestruj się"
+        "translation": "Zarejestruj się",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:57:79"
       },
       {
         "id": "password check",
         "message": "password check",
-        "translation": "sprawdzenie hasła"
+        "translation": "sprawdzenie hasła",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:138:79"
       },
       {
         "id": "Already have an account?",
         "message": "Already have an account?",
-        "translation": "Masz już konto?"
+        "translation": "Masz już konto?",
+        "position": "github.com/gobugger/gomarket/ui/templ/register_templ.go:172:80"
       },
       {
         "id": "Review order",
         "message": "Review order",
-        "translation": "Sprawdź zamówienie"
+        "translation": "Sprawdź zamówienie",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:59:79"
       },
       {
         "id": "Grade",
         "message": "Grade",
-        "translation": "Ocena"
+        "translation": "Ocena",
+        "position": "github.com/gobugger/gomarket/ui/templ/review_templ.go:85:79"
       },
       {
         "id": "guest",
         "message": "guest",
-        "translation": "gość"
+        "translation": "gość",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:21:22"
       },
       {
         "id": "customer",
         "message": "customer",
-        "translation": "klient"
+        "translation": "klient",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:23:22"
       },
       {
         "id": "admin",
         "message": "admin",
-        "translation": "administrator"
+        "translation": "administrator",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:27:22"
       },
       {
         "id": "unknown",
         "message": "unknown",
-        "translation": "nieznany"
+        "translation": "nieznany",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:29:22"
       },
       {
         "id": "enabled",
         "message": "enabled",
-        "translation": "włączony"
+        "translation": "włączony",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:35:22"
       },
       {
         "id": "disabled",
         "message": "disabled",
-        "translation": "wyłączony"
+        "translation": "wyłączony",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:37:22"
       },
       {
         "id": "Account",
         "message": "Account",
-        "translation": "Konto"
+        "translation": "Konto",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:81:79"
       },
       {
         "id": "Username",
         "message": "Username",
-        "translation": "Nazwa użytkownika"
+        "translation": "Nazwa użytkownika",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:94:79"
       },
       {
         "id": "Type",
         "message": "Type",
-        "translation": "Typ"
+        "translation": "Typ",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:120:79"
       },
       {
         "id": "2FA",
         "message": "2FA",
-        "translation": "2FA"
+        "translation": "2FA",
+        "position": "github.com/gobugger/gomarket/ui/templ/twofa_templ.go:57:79"
       },
       {
         "id": "Preferences",
         "message": "Preferences",
-        "translation": "Preferencje"
+        "translation": "Preferencje",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:180:80"
       },
       {
         "id": "Language",
         "message": "Language",
-        "translation": "Język"
+        "translation": "Język",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:193:80"
       },
       {
         "id": "Currency",
         "message": "Currency",
-        "translation": "Waluta"
+        "translation": "Waluta",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:252:80"
       },
       {
         "id": "Change password",
         "message": "Change password",
-        "translation": "Zmień hasło"
+        "translation": "Zmień hasło",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:345:80"
       },
       {
         "id": "Current password",
         "message": "Current password",
-        "translation": "Aktualne hasło"
+        "translation": "Aktualne hasło",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:358:80"
       },
       {
         "id": "New password",
         "message": "New password",
-        "translation": "Nowe hasło"
+        "translation": "Nowe hasło",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:371:80"
       },
       {
         "id": "Confirm new password",
         "message": "Confirm new password",
-        "translation": "Potwierdź nowe hasło"
+        "translation": "Potwierdź nowe hasło",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:384:80"
       },
       {
         "id": "Change PGP key",
         "message": "Change PGP key",
-        "translation": "Zmień klucz PGP"
+        "translation": "Zmień klucz PGP",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:418:81"
       },
       {
         "id": "Enable 2FA",
         "message": "Enable 2FA",
-        "translation": "Włącz 2FA"
+        "translation": "Włącz 2FA",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:436:81"
       },
       {
         "id": "PGP public key",
         "message": "PGP public key",
-        "translation": "Publiczny klucz PGP"
+        "translation": "Publiczny klucz PGP",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:454:80"
       },
       {
         "id": "Required for vendors, suggested for everyone.",
         "message": "Required for vendors, suggested for everyone.",
-        "translation": "Wymagane dla sprzedawców, zalecane dla wszystkich."
+        "translation": "Wymagane dla sprzedawców, zalecane dla wszystkich.",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:467:80"
       },
       {
-        "id": "Update vendor profile",
-        "message": "Update vendor profile",
-        "translation": "Zaktualizuj profil sprzedawcy"
+        "id": "Update terms of service",
+        "message": "Update terms of service",
+        "translation": "Zaktualizuj warunki usługi",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:501:81"
       },
       {
-        "id": "Vendor info",
-        "message": "Vendor info",
-        "translation": "Informacje o sprzedawcy"
+        "id": "Terms of service",
+        "message": "Terms of service",
+        "translation": "Warunki usługi",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:353:80"
       },
       {
-        "id": "Leave empty to not update.",
-        "message": "Leave empty to not update.",
-        "translation": "Pozostaw puste, aby nie aktualizować."
+        "id": "Terms of service is used to resolve disputes",
+        "message": "Terms of service is used to resolve disputes",
+        "translation": "Warunki usługi są używane do rozwiązywania sporów",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:527:81"
       },
       {
         "id": "Update delivery methods",
         "message": "Update delivery methods",
-        "translation": "Zaktualizuj metody dostawy"
+        "translation": "Zaktualizuj metody dostawy",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:556:81"
       },
       {
         "id": "Delivery Method",
         "message": "Delivery Method",
-        "translation": "Metoda dostawy"
+        "translation": "Metoda dostawy",
+        "position": "github.com/gobugger/gomarket/ui/templ/settings_templ.go:569:81"
       },
       {
         "id": "My tickets",
         "message": "My tickets",
-        "translation": "Moje bilety"
+        "translation": "Moje bilety",
+        "position": "github.com/gobugger/gomarket/ui/templ/support_templ.go:54:80"
       },
       {
         "id": "0 seconds",
         "message": "0 seconds",
-        "translation": "0 sekund"
+        "translation": "0 sekund",
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:95:21"
       },
       {
         "id": "{Second} seconds",
@@ -1209,7 +1418,8 @@
             "argNum": 1,
             "expr": "since / time.Second"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:97:21"
       },
       {
         "id": "{Minute} minutes",
@@ -1224,7 +1434,8 @@
             "argNum": 1,
             "expr": "since / time.Minute"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:99:21"
       },
       {
         "id": "{Hour} hours",
@@ -1239,7 +1450,8 @@
             "argNum": 1,
             "expr": "since / time.Hour"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:101:21"
       },
       {
         "id": "{Hour} days",
@@ -1254,102 +1466,132 @@
             "argNum": 1,
             "expr": "since / (24 * time.Hour)"
           }
-        ]
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/util.go:103:21"
       },
       {
         "id": "Rating (AVG)",
         "message": "Rating (AVG)",
-        "translation": "Ocena (ŚREDNIA)"
+        "translation": "Ocena (ŚREDNIA)",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:197:80"
       },
       {
         "id": "Orders completed",
         "message": "Orders completed",
-        "translation": "Zamówienia zakończone"
+        "translation": "Zamówienia zakończone",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:223:80"
       },
       {
         "id": "Orders in escrow",
         "message": "Orders in escrow",
-        "translation": "Zamówienia w escrow"
+        "translation": "Zamówienia w escrow",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:249:80"
       },
       {
         "id": "Pending disputes",
         "message": "Pending disputes",
-        "translation": "Oczekujące spory"
+        "translation": "Oczekujące spory",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:275:80"
       },
       {
         "id": "Previously seen",
         "message": "Previously seen",
-        "translation": "Wcześniej widziane"
+        "translation": "Wcześniej widziane",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:301:80"
       },
       {
         "id": "PGP key",
         "message": "PGP key",
-        "translation": "Klucz PGP"
+        "translation": "Klucz PGP",
+        "position": "github.com/gobugger/gomarket/ui/templ/vendor_templ.go:327:80"
       },
       {
         "id": "Wallet",
         "message": "Wallet",
-        "translation": "Portfel"
+        "translation": "Portfel",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:55:79"
       },
       {
         "id": "This is your XMR wallet where you can deposit coins.",
         "message": "This is your XMR wallet where you can deposit coins.",
-        "translation": "To jest twój portfel XMR, w którym możesz wpłacać monety."
+        "translation": "To jest twój portfel XMR, w którym możesz wpłacać monety.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:68:79"
       },
       {
         "id": "Balance is updated after 10 confirmations.",
         "message": "Balance is updated after 10 confirmations.",
-        "translation": "Saldo jest aktualizowane po 10 potwierdzeniach."
+        "translation": "Saldo jest aktualizowane po 10 potwierdzeniach.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:81:79"
       },
       {
         "id": "See",
         "message": "See",
-        "translation": "Zobacz"
+        "translation": "Zobacz",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:94:79"
       },
       {
         "id": "for more information.",
         "message": "for more information.",
-        "translation": "więcej informacji."
+        "translation": "więcej informacji.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:120:79"
       },
       {
         "id": "Balance",
         "message": "Balance",
-        "translation": "Saldo"
+        "translation": "Saldo",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:133:79"
       },
       {
         "id": "Withdraw",
         "message": "Withdraw",
-        "translation": "Wypłać"
+        "translation": "Wypłać",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:219:80"
       },
       {
         "id": "Enter a monero address where you want to withdraw your funds.",
         "message": "Enter a monero address where you want to withdraw your funds.",
-        "translation": "Wprowadź adres Monero, na który chcesz wypłacić swoje środki."
+        "translation": "Wprowadź adres Monero, na który chcesz wypłacić swoje środki.",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:232:80"
       },
       {
-        "id": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "message": "We collect an 0.01 XMR fee from each withdrawal to prevent spam.",
-        "translation": "Pobieramy opłatę w wysokości 0,01 XMR za każdą wypłatę, aby zapobiec spamowi."
+        "id": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "message": "We collect an {WithdrawalFee} XMR fee from each withdrawal to prevent spam.",
+        "translation": "Pobieramy opłatę w wysokości {WithdrawalFee} XMR od każdej wypłaty, aby zapobiec spamowi.",
+        "placeholders": [
+          {
+            "id": "WithdrawalFee",
+            "string": "%[1]f",
+            "type": "float64",
+            "underlyingType": "float64",
+            "argNum": 1,
+            "expr": "payment.WithdrawalFee"
+          }
+        ],
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:245:80"
       },
       {
         "id": "DO NOT withdraw funds to another wallet on this platform!",
         "message": "DO NOT withdraw funds to another wallet on this platform!",
-        "translation": "NIE wypłacaj środków na inny portfel na tej platformie!"
+        "translation": "NIE wypłacaj środków na inny portfel na tej platformie!",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:258:80"
       },
       {
         "id": "Destination address",
         "message": "Destination address",
-        "translation": "Adres docelowy"
+        "translation": "Adres docelowy",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:271:80"
       },
       {
         "id": "Amount",
         "message": "Amount",
-        "translation": "Kwota"
+        "translation": "Kwota",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:284:80"
       },
       {
         "id": "Enter amount in decimal format (e.g., 1.42069)",
         "message": "Enter amount in decimal format (e.g., 1.42069)",
-        "translation": "Wprowadź kwotę w formacie dziesiętnym (np. 1.42069)"
+        "translation": "Wprowadź kwotę w formacie dziesiętnym (np. 1.42069)",
+        "position": "github.com/gobugger/gomarket/ui/templ/wallet_templ.go:297:80"
       }
     ]
   }

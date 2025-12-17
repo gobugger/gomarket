@@ -1,8 +1,8 @@
 package support
 
 import (
+	"github.com/gobugger/globalize"
 	"github.com/gobugger/gomarket/internal/config"
-	"github.com/gobugger/gomarket/internal/localizer"
 	"time"
 )
 
@@ -11,7 +11,7 @@ type Faq struct {
 	Answer   string
 }
 
-func GetFaqs(l *localizer.Localizer) []Faq {
+func GetFaqs(l *globalize.Localizer) []Faq {
 	faqs := []Faq{
 		{
 			Question: l.Translate("How do I become a vendor?"),
