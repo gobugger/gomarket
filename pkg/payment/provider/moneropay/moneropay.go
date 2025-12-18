@@ -1,9 +1,10 @@
-package processor
+package moneropay
 
 import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"gitlab.com/moneropay/go-monero/walletrpc"
 	moneropay "gitlab.com/moneropay/moneropay/v2/pkg/model"
 	"net/http"
@@ -57,7 +58,7 @@ func (mp *MoneropayClient) Invoice(amount int64, callbackUrl string) (string, er
 	return invoice.Address, nil
 }
 
-func (mp *MoneropayClient) InvoiceStatus(address string) (*InvoiceStatus, error) {
+func (mp *MoneropayClient) InvoiceStatus(address string) (*provider.InvoiceStatus, error) {
 	url := mp.url + "/receive/" + address
 
 	resp, err := mp.client.Get(url) //nolint
@@ -76,7 +77,7 @@ func (mp *MoneropayClient) InvoiceStatus(address string) (*InvoiceStatus, error)
 	}
 
 	//nolint
-	return &InvoiceStatus{
+	return &provider.InvoiceStatus{
 		AmountUnlocked: int64(data.Amount.Covered.Unlocked),
 		AmountTotal:    int64(data.Amount.Covered.Total),
 	}, nil
@@ -104,7 +105,7 @@ func (mp *MoneropayClient) DeleteInvoice(address string) error {
 	return nil
 }
 
-func (mp *MoneropayClient) Transfer(destinations []Destination) (*TransferResponse, error) {
+func (mp *MoneropayClient) Transfer(destinations []provider.Destination) (*provider.TransferResponse, error) {
 	req := moneropay.TransferPostRequest{}
 	for _, dest := range destinations {
 		if dest.Amount < 0 {
@@ -138,12 +139,12 @@ func (mp *MoneropayClient) Transfer(destinations []Destination) (*TransferRespon
 		return nil, err
 	}
 
-	return &TransferResponse{
+	return &provider.TransferResponse{
 		TxHashList: data.TxHashList,
 	}, nil
 }
 
-func (mp *MoneropayClient) TransferStatus(txHash string) (*TransferStatus, error) {
+func (mp *MoneropayClient) TransferStatus(txHash string) (*provider.TransferStatus, error) {
 	url := mp.url + "/transfer/" + txHash
 
 	resp, err := mp.client.Get(url) //nolint
@@ -161,7 +162,7 @@ func (mp *MoneropayClient) TransferStatus(txHash string) (*TransferStatus, error
 		return nil, err
 	}
 
-	return &TransferStatus{
+	return &provider.TransferStatus{
 		Confirmations: data.Confirmations,
 		Failed:        data.State == "failed",
 	}, nil

@@ -1,0 +1,65 @@
+services:
+  nano_node:
+    image: "nanocurrency/nano-beta"
+    restart: "unless-stopped"
+    ports:
+      - "54000:54000" #tcp network traffic
+      - "127.0.0.1:55000:55000" #rpc to localhost only
+      - "127.0.0.1:57000:57000" #websocket to localhost only
+    volumes:
+      - "./data/nano:/root" #path to host directory
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=${DB_USER} 
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: pg_isready -U ${DB_USER}
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  migrate:
+    image: migrate/migrate
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./migrations:/migrations
+    command: ["-path", "/migrations", "-database",  "postgresql://${DB_USER}:${DB_PASS}@db:5432/${DB_NAME}?sslmode=disable", "up"]
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_AK_ID:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SA_KEY:-minioadmin}
+    volumes:
+      - ./data/minio:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped

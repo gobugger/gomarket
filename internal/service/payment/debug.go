@@ -5,7 +5,7 @@ import (
 	cryptorand "crypto/rand"
 	"encoding/json"
 	"fmt"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/rand"
 	"log/slog"
 	"net/http"
@@ -17,14 +17,14 @@ import (
 )
 
 type FakeClient struct {
-	invoices map[string]*processor.InvoiceStatus
-	txes     map[string]*processor.TransferStatus
+	invoices map[string]*provider.InvoiceStatus
+	txes     map[string]*provider.TransferStatus
 	mtx      sync.Mutex
 }
 
 func NewFakeClient() *FakeClient {
 	return &FakeClient{
-		invoices: map[string]*processor.InvoiceStatus{},
+		invoices: map[string]*provider.InvoiceStatus{},
 	}
 }
 
@@ -35,7 +35,7 @@ func (fc *FakeClient) Invoice(amount int64, callbackUrl string) (string, error) 
 		time.Sleep(time.Minute)
 
 		fc.mtx.Lock()
-		fc.invoices[addr] = &processor.InvoiceStatus{
+		fc.invoices[addr] = &provider.InvoiceStatus{
 			AmountTotal:    amount,
 			AmountUnlocked: 0,
 		}
@@ -48,7 +48,7 @@ func (fc *FakeClient) Invoice(amount int64, callbackUrl string) (string, error) 
 		time.Sleep(time.Minute)
 
 		fc.mtx.Lock()
-		fc.invoices[addr] = &processor.InvoiceStatus{
+		fc.invoices[addr] = &provider.InvoiceStatus{
 			AmountTotal:    amount,
 			AmountUnlocked: amount,
 		}
@@ -62,7 +62,7 @@ func (fc *FakeClient) Invoice(amount int64, callbackUrl string) (string, error) 
 	return addr, nil
 }
 
-func (fc *FakeClient) InvoiceStatus(addr string) (*processor.InvoiceStatus, error) {
+func (fc *FakeClient) InvoiceStatus(addr string) (*provider.InvoiceStatus, error) {
 	fc.mtx.Lock()
 	status, ok := fc.invoices[addr]
 	fc.mtx.Unlock()
@@ -78,11 +78,11 @@ func (fc *FakeClient) DeleteInvoice(addr string) error {
 	return nil
 }
 
-func (fc *FakeClient) Transfer(destinations []processor.Destination) (*processor.TransferResponse, error) {
+func (fc *FakeClient) Transfer(destinations []provider.Destination) (*provider.TransferResponse, error) {
 	txHash := cryptorand.Text()
 
 	fc.mtx.Lock()
-	fc.txes[txHash] = &processor.TransferStatus{}
+	fc.txes[txHash] = &provider.TransferStatus{}
 	fc.mtx.Unlock()
 
 	go func() {
@@ -94,13 +94,13 @@ func (fc *FakeClient) Transfer(destinations []processor.Destination) (*processor
 		}
 	}()
 
-	resp := &processor.TransferResponse{
+	resp := &provider.TransferResponse{
 		TxHashList: []string{txHash},
 	}
 	return resp, nil
 }
 
-func (fc *FakeClient) TransferStatus(txHash string) (*processor.TransferStatus, error) {
+func (fc *FakeClient) TransferStatus(txHash string) (*provider.TransferStatus, error) {
 	fc.mtx.Lock()
 	status, ok := fc.txes[txHash]
 	fc.mtx.Unlock()

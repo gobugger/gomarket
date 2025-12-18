@@ -1,4 +1,4 @@
-package processor
+package provider
 
 type InvoiceStatus struct {
 	AmountUnlocked int64
@@ -20,7 +20,7 @@ type TransferStatus struct {
 	Failed        bool
 }
 
-type Processor interface {
+type PaymentProvider interface {
 	Invoice(amount int64, callbackUrl string) (string, error)
 	InvoiceStatus(address string) (*InvoiceStatus, error)
 	DeleteInvoice(address string) error

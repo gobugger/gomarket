@@ -8,7 +8,7 @@ import (
 	"github.com/gobugger/gomarket/internal/service/payment"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
 	"github.com/gobugger/gomarket/internal/testutil"
-	"github.com/gobugger/gomarket/pkg/payment/processor/processortest"
+	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"testing"
 )
 

@@ -9,8 +9,8 @@ import (
 	"github.com/gobugger/gomarket/internal/service/settings"
 	license "github.com/gobugger/gomarket/internal/service/vendor"
 	"github.com/gobugger/gomarket/internal/testutil"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
-	"github.com/gobugger/gomarket/pkg/payment/processor/processortest"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"testing"
@@ -143,7 +143,7 @@ func CreateInvoice(t *testing.T, q *repo.Queries, amount int64) repo.Invoice {
 }
 
 func PayInvoice(pp *processortest.Processor, invoice *repo.Invoice) {
-	pp.InvoiceStatuses[invoice.Address] = &processor.InvoiceStatus{
+	pp.InvoiceStatuses[invoice.Address] = &provider.InvoiceStatus{
 		AmountUnlocked: invoice.AmountPico,
 		AmountTotal:    invoice.AmountPico,
 	}

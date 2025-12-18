@@ -64,8 +64,7 @@ func RouteMarket(app *application.Application) http.Handler {
 		))
 
 		r.Get("/uploads/*", http.StripPrefix("/uploads/", http.HandlerFunc(app.ServeUpload)).ServeHTTP)
-		r.Get("/pgp.txt", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(config.PgpKey)) })    // nolint
-		r.Get("/canary.txt", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(config.Canary)) }) // nolint
+		r.Get("/pgp.txt", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(config.PgpKey)) }) // nolint
 		r.Get("/support", app.ServeTemplate(ui.Support))
 		r.Get("/support/faq", app.Faq)
 		r.Get("/products", app.Products)

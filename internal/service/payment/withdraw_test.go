@@ -5,8 +5,8 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/testutil"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
-	"github.com/gobugger/gomarket/pkg/payment/processor/processortest"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
@@ -15,7 +15,7 @@ import (
 // Test basic withdrawal flow
 func TestHandleWithdraw(t *testing.T) {
 	infra := testutil.NewInfra(t.Context())
-	pp := processortest.NewProcessor()
+	pp := processortest.NewPaymentProvider()
 	ctx := t.Context()
 	qtx := repo.New(infra.Db)
 
@@ -27,7 +27,7 @@ func TestHandleWithdraw(t *testing.T) {
 
 	addr, err := pp.Invoice(0, "http://testhost:6969")
 	require.NoError(t, err)
-	pp.InvoiceStatuses[addr] = &processor.InvoiceStatus{}
+	pp.InvoiceStatuses[addr] = &provider.InvoiceStatus{}
 
 	wallet, err := qtx.CreateWallet(ctx, u.ID)
 	require.NoError(t, err)
@@ -70,14 +70,14 @@ func TestHandleWithdraw(t *testing.T) {
 	ws, _ = qtx.GetWithdrawalsWithStatus(ctx, repo.WithdrawalStatusProcessing)
 	require.Equal(t, 0, len(ws))
 
-	pp.TransferStatuses[txs[0].Hash] = &processor.TransferStatus{}
+	pp.TransferStatuses[txs[0].Hash] = &provider.TransferStatus{}
 
 	err = handleTransactions(ctx, qtx, pp, time.Now())
 	txs, err = qtx.GetTransactions(ctx)
 	require.NoError(t, err)
 	require.Equal(t, 1, len(txs))
 
-	pp.TransferStatuses[txs[0].Hash] = &processor.TransferStatus{
+	pp.TransferStatuses[txs[0].Hash] = &provider.TransferStatus{
 		Confirmations: 10,
 	}
 
@@ -90,7 +90,7 @@ func TestHandleWithdraw(t *testing.T) {
 // Test withdrawal flow when transfer fails
 func TestHandleWithdrawFailedToTransfer(t *testing.T) {
 	infra := testutil.NewInfra(t.Context())
-	pp := processortest.NewProcessor()
+	pp := processortest.NewPaymentProvider()
 	ctx := t.Context()
 	qtx := repo.New(infra.Db)
 
@@ -102,7 +102,7 @@ func TestHandleWithdrawFailedToTransfer(t *testing.T) {
 
 	addr, err := pp.Invoice(0, "http://testhost:6969")
 	require.NoError(t, err)
-	pp.InvoiceStatuses[addr] = &processor.InvoiceStatus{}
+	pp.InvoiceStatuses[addr] = &provider.InvoiceStatus{}
 
 	wallet, err := qtx.CreateWallet(ctx, u.ID)
 	require.NoError(t, err)

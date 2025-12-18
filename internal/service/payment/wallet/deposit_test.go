@@ -4,8 +4,8 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/payment"
 	"github.com/gobugger/gomarket/internal/testutil"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
-	"github.com/gobugger/gomarket/pkg/payment/processor/processortest"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"testing"
@@ -20,7 +20,7 @@ func requireBalance(t *testing.T, qtx *repo.Queries, balance int64, walletID uui
 
 func TestHandleDeposits(t *testing.T) {
 	infra := testutil.NewInfra(t.Context())
-	pp := processortest.NewProcessor()
+	pp := processortest.NewPaymentProvider()
 
 	ctx := t.Context()
 	qtx := repo.New(infra.Db)
@@ -49,7 +49,7 @@ func TestHandleDeposits(t *testing.T) {
 
 	for _, d := range deposits {
 		total += d
-		pp.InvoiceStatuses[deposit.Invoice.Address] = &processor.InvoiceStatus{
+		pp.InvoiceStatuses[deposit.Invoice.Address] = &provider.InvoiceStatus{
 			AmountUnlocked: total,
 		}
 

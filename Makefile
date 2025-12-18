@@ -19,7 +19,7 @@ run_worker:
 
 run_market:
 	$(MAKE) setup
-	go run ./cmd/market --addr=0.0.0.0:4000 --dsn=postgresql://$(DB_USER):$(DB_PASS)@localhost:5432/$(DB_NAME)?sslmode=disable --minio-endpoint=localhost:9000 --dev=true --entry-guard=false
+	go run ./cmd/market --addr=0.0.0.0:4000 --dsn=postgresql://$(DB_USER):$(DB_PASS)@localhost:5432/$(DB_NAME)?sslmode=disable --minio-endpoint=localhost:9000 --dev=true --entry-guard=false --captcha=false
 
 run_admin:
 	$(MAKE) setup

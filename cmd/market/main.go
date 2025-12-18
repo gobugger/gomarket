@@ -17,7 +17,8 @@ import (
 	"github.com/gobugger/gomarket/internal/util/uow"
 	"github.com/gobugger/gomarket/internal/worker"
 	"github.com/gobugger/gomarket/pkg/jail"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/moneropay"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 	"github.com/riverqueue/river"
@@ -53,18 +54,16 @@ func run(ctx context.Context, app *app.Application) {
 	}
 
 	// Run server
-	wg.Add(1)
-	go func() {
+	wg.Go(func() {
 		slog.Info("starting server", "onionAddr", config.OnionAddr, "addr", config.Addr)
 		if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			slog.Error("Server failed", slog.Any("error", err))
 			cancel()
 		}
 		wg.Done()
-	}()
+	})
 
-	wg.Add(1)
-	go func() {
+	wg.Go(func() {
 		<-ctx.Done()
 
 		slog.Debug("Shutting down servers")
@@ -73,7 +72,7 @@ func run(ctx context.Context, app *app.Application) {
 		}
 
 		wg.Done()
-	}()
+	})
 
 	wg.Wait()
 }
@@ -119,11 +118,11 @@ func main() {
 		}
 	}
 
-	var paymentProcessor processor.Processor
+	var paymentProcessor provider.PaymentProvider
 	if config.DevMode() {
 		paymentProcessor = payment.NewFakeClient()
 	} else {
-		paymentProcessor = processor.NewMoneropayClient(config.MoneropayURL)
+		paymentProcessor = moneropay.NewMoneropayClient(config.MoneropayURL)
 	}
 
 	if err := util.RiverMigrate(ctx, db); err != nil {

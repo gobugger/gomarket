@@ -2,12 +2,12 @@ package worker
 
 import (
 	"context"
+	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/gobugger/gomarket/internal/service/payment"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/riverqueue/river"
-	"github.com/gobugger/gomarket/internal/repo"
-	"github.com/gobugger/gomarket/internal/service/payment"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
 )
 
 type PrepareInvoiceArgs struct {
@@ -18,7 +18,7 @@ func (PrepareInvoiceArgs) Kind() string { return "prepare_invoice" }
 
 type PrepareInvoiceWorker struct {
 	Db *pgxpool.Pool
-	Pp processor.Processor
+	Pp provider.PaymentProvider
 	river.WorkerDefaults[PrepareInvoiceArgs]
 }
 

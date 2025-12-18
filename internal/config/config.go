@@ -36,7 +36,6 @@ var (
 	UploadsBucket        string
 	CsrfAuthKey          string
 	PgpKey               string
-	Canary               string
 	OnionAddr            string
 	SiteName             string
 	Socks5Hostname       string
@@ -102,10 +101,4 @@ func Load() {
 		slog.Error("failed to read pgp.txt", slog.Any("error", err))
 	}
 	PgpKey = string(content)
-
-	content, err = util.ReadFile(RootDir, filepath.Join(CryptoDir, "canary.txt"))
-	if err != nil {
-		slog.Error("failed to read canary.txt", slog.Any("error", err))
-	}
-	Canary = string(content)
 }

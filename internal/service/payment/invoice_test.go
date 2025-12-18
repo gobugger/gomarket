@@ -5,8 +5,8 @@ import (
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
 	"github.com/gobugger/gomarket/internal/testutil"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
-	"github.com/gobugger/gomarket/pkg/payment/processor/processortest"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"testing"
 	"time"
 
@@ -22,7 +22,7 @@ func requireInvoiceStatus(t *testing.T, qtx *repo.Queries, status repo.InvoiceSt
 
 func TestInvoicing(t *testing.T) {
 	infra := testutil.NewInfra(t.Context())
-	pp := processortest.NewProcessor()
+	pp := processortest.NewPaymentProvider()
 
 	ctx := t.Context()
 	qtx := repo.New(infra.Db)
@@ -47,7 +47,7 @@ func TestInvoicing(t *testing.T) {
 	require.NoError(t, err)
 	require.Equal(t, repo.InvoiceStatusPending, invoice.Status)
 
-	pp.InvoiceStatuses[invoice.Address] = &processor.InvoiceStatus{
+	pp.InvoiceStatuses[invoice.Address] = &provider.InvoiceStatus{
 		AmountUnlocked: amount,
 		AmountTotal:    amount,
 	}

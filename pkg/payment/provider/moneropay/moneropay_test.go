@@ -1,8 +1,9 @@
-package processor
+package moneropay
 
 import (
 	"encoding/json"
 	"github.com/gobugger/gomarket/internal/testutil"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	moneropay "gitlab.com/moneropay/moneropay/v2/pkg/model"
 	"net/http"
 	"net/http/httptest"
@@ -69,7 +70,7 @@ func TestMoneropayClient(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	_, err = mp.Transfer([]Destination{})
+	_, err = mp.Transfer([]provider.Destination{})
 	if err != nil {
 		t.Fatal(err)
 	}

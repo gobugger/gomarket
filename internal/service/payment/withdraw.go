@@ -6,7 +6,7 @@ import (
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
 	"time"
 )
@@ -55,7 +55,7 @@ func WithdrawFunds(ctx context.Context, qtx *repo.Queries, userID uuid.UUID, des
 	return withdrawAmount, nil
 }
 
-func HandleWithdrawals(ctx context.Context, qtx *repo.Queries, pp processor.Processor) error {
+func HandleWithdrawals(ctx context.Context, qtx *repo.Queries, pp provider.PaymentProvider) error {
 	if err := transferWithdrawals(ctx, qtx, pp); err != nil {
 		return err
 	}
@@ -68,7 +68,7 @@ func HandleWithdrawals(ctx context.Context, qtx *repo.Queries, pp processor.Proc
 	return nil
 }
 
-func transferWithdrawals(ctx context.Context, qtx *repo.Queries, pp processor.Processor) error {
+func transferWithdrawals(ctx context.Context, qtx *repo.Queries, pp provider.PaymentProvider) error {
 	ws, err := qtx.GetWithdrawalsWithStatus(ctx, repo.WithdrawalStatusPending)
 	if err != nil {
 		return err
@@ -91,9 +91,9 @@ func transferWithdrawals(ctx context.Context, qtx *repo.Queries, pp processor.Pr
 		}
 	}
 
-	dsts := []processor.Destination{}
+	dsts := []provider.Destination{}
 	for _, w := range ws {
-		dsts = append(dsts, processor.Destination{
+		dsts = append(dsts, provider.Destination{
 			Amount:  w.AmountPico,
 			Address: w.DestinationAddress,
 		})
@@ -131,7 +131,7 @@ func transferWithdrawals(ctx context.Context, qtx *repo.Queries, pp processor.Pr
 }
 
 // handleTransactions deletes confirmed and logs failed transactions
-func handleTransactions(ctx context.Context, qtx *repo.Queries, pp processor.Processor, threshold time.Time) error {
+func handleTransactions(ctx context.Context, qtx *repo.Queries, pp provider.PaymentProvider, threshold time.Time) error {
 	txs, err := qtx.GetTransactionsBefore(ctx, threshold)
 	if err != nil {
 		return err

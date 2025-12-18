@@ -10,7 +10,8 @@ import (
 	"github.com/gobugger/gomarket/internal/service/payment/wallet"
 	"github.com/gobugger/gomarket/internal/util/db"
 	"github.com/gobugger/gomarket/internal/util/uow"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/gobugger/gomarket/pkg/payment/provider/moneropay"
 	"github.com/jackc/pgx/v5/pgxpool"
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"golang.org/x/net/proxy"
@@ -55,11 +56,11 @@ func main() {
 	}
 	defer db.Close()
 
-	var pp processor.Processor
+	var pp provider.PaymentProvider
 	if config.DevMode() {
 		pp = payment.NewFakeClient()
 	} else {
-		pp = processor.NewMoneropayClient(config.MoneropayURL)
+		pp = moneropay.NewMoneropayClient(config.MoneropayURL)
 	}
 
 	client, err := makeClient()
@@ -130,7 +131,7 @@ var orderJobs = []struct {
 	},
 }
 
-func registerJobs(ctx context.Context, s gocron.Scheduler, db *pgxpool.Pool, pp processor.Processor, client *http.Client) error {
+func registerJobs(ctx context.Context, s gocron.Scheduler, db *pgxpool.Pool, pp provider.PaymentProvider, client *http.Client) error {
 	uow := uow.New(db)
 
 	_, err := s.NewJob(gocron.DurationJob(15*time.Minute),

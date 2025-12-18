@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
-	"github.com/gobugger/gomarket/pkg/payment/processor"
+	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
 	"time"
 )
@@ -20,7 +20,7 @@ func CreateInvoice(ctx context.Context, qtx *repo.Queries, amount int64) (repo.I
 }
 
 // Assignes address to all pending invoices that don't have an address yet
-func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp processor.Processor, id uuid.UUID) error {
+func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp provider.PaymentProvider, id uuid.UUID) error {
 	invoice, err := qtx.GetInvoice(ctx, id)
 	if err != nil {
 		return err
@@ -43,7 +43,7 @@ func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp processor.Process
 	return err
 }
 
-func ProcessInvoices(ctx context.Context, qtx *repo.Queries, pp processor.Processor, paymentWindow time.Duration) error {
+func ProcessInvoices(ctx context.Context, qtx *repo.Queries, pp provider.PaymentProvider, paymentWindow time.Duration) error {
 	invoices, err := qtx.GetPendingInvoices(ctx)
 	if err != nil {
 		return fmt.Errorf("failed to get pending invoices: %w", err)

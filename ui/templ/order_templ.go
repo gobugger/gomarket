@@ -179,7 +179,7 @@ func Order(tc *TemplateContext, order *view.Order, isAdmin bool) templ.Component
 					}
 				}
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</div><div class=\"form--basic mw-l\"><div class=\"header\"><h2>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</div><div class=\"form--basic mw-l fit-h\"><div class=\"header\"><h2>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
