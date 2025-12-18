@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createWithdrawal = `-- name: CreateWithdrawal :one
@@ -20,7 +21,7 @@ INSERT INTO withdrawals (
 `
 
 type CreateWithdrawalParams struct {
-	AmountPico         int64
+	AmountPico         pgtype.Numeric
 	DestinationAddress string
 	Status             WithdrawalStatus
 }

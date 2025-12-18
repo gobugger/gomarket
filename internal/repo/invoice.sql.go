@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createInvoice = `-- name: CreateInvoice :one
@@ -20,7 +21,7 @@ INSERT INTO invoices (
 `
 
 type CreateInvoiceParams struct {
-	AmountPico int64
+	AmountPico pgtype.Numeric
 	Permanent  bool
 }
 
@@ -252,7 +253,7 @@ RETURNING id, address, amount_pico, status, amount_unlocked_pico, permanent, cre
 
 type UpdateInvoiceAmountUnlockedParams struct {
 	ID                 uuid.UUID
-	AmountUnlockedPico int64
+	AmountUnlockedPico pgtype.Numeric
 }
 
 func (q *Queries) UpdateInvoiceAmountUnlocked(ctx context.Context, arg UpdateInvoiceAmountUnlockedParams) (Invoice, error) {

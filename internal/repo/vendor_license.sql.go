@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createTermsOfService = `-- name: CreateTermsOfService :one
@@ -45,7 +46,7 @@ INSERT INTO vendor_licenses (
 `
 
 type CreateVendorLicenseParams struct {
-	PricePaidPico int64
+	PricePaidPico pgtype.Numeric
 	UserID        uuid.UUID
 }
 

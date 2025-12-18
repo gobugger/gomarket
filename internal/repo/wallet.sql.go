@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const addWalletBalance = `-- name: AddWalletBalance :one
@@ -20,7 +21,7 @@ RETURNING id, balance_pico, user_id
 
 type AddWalletBalanceParams struct {
 	ID     uuid.UUID
-	Amount int64
+	Amount pgtype.Numeric
 }
 
 func (q *Queries) AddWalletBalance(ctx context.Context, arg AddWalletBalanceParams) (Wallet, error) {
@@ -97,14 +98,14 @@ func (q *Queries) GetWallets(ctx context.Context) ([]Wallet, error) {
 
 const reduceWalletBalance = `-- name: ReduceWalletBalance :one
 UPDATE wallets
-SET balance_pico = balance_pico - $2::bigint
-WHERE id = $1 AND balance_pico >= $2::bigint AND $2::bigint >= 0
+SET balance_pico = balance_pico - $2::numeric
+WHERE id = $1 AND balance_pico >= $2::numeric AND $2::numeric >= 0
 RETURNING id, balance_pico, user_id
 `
 
 type ReduceWalletBalanceParams struct {
 	ID     uuid.UUID
-	Amount int64
+	Amount pgtype.Numeric
 }
 
 func (q *Queries) ReduceWalletBalance(ctx context.Context, arg ReduceWalletBalanceParams) (Wallet, error) {

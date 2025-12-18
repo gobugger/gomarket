@@ -9,6 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createVendorApplication = `-- name: CreateVendorApplication :one
@@ -22,7 +23,7 @@ INSERT INTO vendor_applications (
 type CreateVendorApplicationParams struct {
 	ExistingVendor bool
 	Letter         string
-	PricePaidPico  int64
+	PricePaidPico  pgtype.Numeric
 	UserID         uuid.UUID
 }
 

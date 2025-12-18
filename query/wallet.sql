@@ -26,6 +26,6 @@ RETURNING *;
 
 -- name: ReduceWalletBalance :one
 UPDATE wallets
-SET balance_pico = balance_pico - sqlc.arg(amount)::bigint
-WHERE id = $1 AND balance_pico >= sqlc.arg(amount)::bigint AND sqlc.arg(amount)::bigint >= 0
+SET balance_pico = balance_pico - sqlc.arg(amount)::numeric
+WHERE id = $1 AND balance_pico >= sqlc.arg(amount)::numeric AND sqlc.arg(amount)::numeric >= 0
 RETURNING *;

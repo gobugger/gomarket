@@ -224,7 +224,7 @@ type Deposit struct {
 	ID                  uuid.UUID
 	WalletID            uuid.UUID
 	InvoiceID           uuid.UUID
-	AmountDepositedPico int64
+	AmountDepositedPico pgtype.Numeric
 }
 
 type DisputeOffer struct {
@@ -238,9 +238,9 @@ type DisputeOffer struct {
 type Invoice struct {
 	ID                 uuid.UUID
 	Address            string
-	AmountPico         int64
+	AmountPico         pgtype.Numeric
 	Status             InvoiceStatus
-	AmountUnlockedPico int64
+	AmountUnlockedPico pgtype.Numeric
 	Permanent          bool
 	CreatedAt          time.Time
 }
@@ -258,7 +258,7 @@ type Order struct {
 	ID               uuid.UUID
 	Status           OrderStatus
 	Details          string
-	TotalPricePico   int64
+	TotalPricePico   pgtype.Numeric
 	DeliveryMethodID uuid.UUID
 	VendorID         uuid.UUID
 	TermsOfServiceID uuid.UUID
@@ -387,27 +387,27 @@ type VendorApplication struct {
 	ID             uuid.UUID
 	ExistingVendor bool
 	Letter         string
-	PricePaidPico  int64
+	PricePaidPico  pgtype.Numeric
 	UserID         uuid.UUID
 	CreatedAt      time.Time
 }
 
 type VendorLicense struct {
 	ID            uuid.UUID
-	PricePaidPico int64
+	PricePaidPico pgtype.Numeric
 	UserID        uuid.UUID
 	CreatedAt     time.Time
 }
 
 type Wallet struct {
 	ID          uuid.UUID
-	BalancePico int64
+	BalancePico pgtype.Numeric
 	UserID      uuid.UUID
 }
 
 type Withdrawal struct {
 	ID                 uuid.UUID
-	AmountPico         int64
+	AmountPico         pgtype.Numeric
 	DestinationAddress string
 	Status             WithdrawalStatus
 	CreatedAt          time.Time

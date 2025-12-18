@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
+	"github.com/jackc/pgx/v5/pgtype"
 )
 
 const createDeposit = `-- name: CreateDeposit :one
@@ -111,12 +112,12 @@ type GetOutdatedDepositsRow struct {
 	ID                  uuid.UUID
 	WalletID            uuid.UUID
 	InvoiceID           uuid.UUID
-	AmountDepositedPico int64
+	AmountDepositedPico pgtype.Numeric
 	ID_2                uuid.UUID
 	Address             string
-	AmountPico          int64
+	AmountPico          pgtype.Numeric
 	Status              InvoiceStatus
-	AmountUnlockedPico  int64
+	AmountUnlockedPico  pgtype.Numeric
 	Permanent           bool
 	CreatedAt           time.Time
 }
@@ -162,7 +163,7 @@ RETURNING id, wallet_id, invoice_id, amount_deposited_pico
 
 type UpdateAmountDepositedParams struct {
 	ID                  uuid.UUID
-	AmountDepositedPico int64
+	AmountDepositedPico pgtype.Numeric
 }
 
 func (q *Queries) UpdateAmountDeposited(ctx context.Context, arg UpdateAmountDepositedParams) (Deposit, error) {
