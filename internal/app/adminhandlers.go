@@ -322,7 +322,7 @@ func (app *Application) AdminHandleSettings(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
-	if fd.Data.VendorApplicationPrice < 0 {
+	if fd.Data.VendorApplicationPrice.Sign() < 0 {
 		app.clientError(w, http.StatusBadRequest)
 		return
 	}

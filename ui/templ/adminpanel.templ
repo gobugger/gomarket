@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
+	"math/big"
 	"time"
 )
 
-templ AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) {
+templ AdminPanel(tc *TemplateContext, vendorApplicationPrice *big.Int, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) {
 	@Layout(tc) {
 		<div class="centered gap">
 			<form class="form--basic minw-l" action="/delete" method="post">
@@ -34,9 +35,9 @@ templ AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications
 				@templ.Raw(tc.CsrfField)
 				<h2>Settings</h2>
 				<div class="form__field">
-					<label>{ fmt.Sprintf("Current Vendor Application price is %s XMR", currency.XMR2Decimal(vendorApplicationPrice)) }</label>
+					<label>{ fmt.Sprintf("Current Vendor Application price is %s XMR", currency.Raw2Decimal(vendorApplicationPrice)) }</label>
 					<label>Vendor Application Price (piconeros)</label>
-					<input class="form__input number" type="number" name="vendor_application_price" value={ vendorApplicationPrice } step="1"/>
+					<input class="form__input number" type="number" name="vendor_application_price" value={ vendorApplicationPrice.String() } step="1"/>
 				</div>
 				<div class="form__field--right">
 					<button type="submit" class="btn">submit</button>
@@ -94,7 +95,7 @@ templ AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications
 						for _, order := range disputedOrders {
 							<tr>
 								<td><a href={ "/dispute?id=" + order.ID.String() }>{ order.ID.String() }</a></td>
-								<td>{ tc.XMR2Fiat(order.TotalPricePico) }</td>
+								<td>{ tc.XMR2Fiat(repo.Num2Big(order.TotalPricePico)) }</td>
 								<td>{ FmtDuration(time.Since(order.DisputedAt)) }</td>
 							</tr>
 						}

@@ -4,6 +4,7 @@ import (
 	"crypto/rand"
 	"github.com/gobugger/gomarket/internal/testutil"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"math/big"
 )
 
 type PaymentProvider struct {
@@ -21,7 +22,7 @@ func NewPaymentProvider() *PaymentProvider {
 	}
 }
 
-func (p *PaymentProvider) Invoice(amount int64, callbackUrl string) (string, error) {
+func (p *PaymentProvider) Invoice(amount *big.Int, callbackUrl string) (string, error) {
 	if p.InvoiceError != nil {
 		return "", p.InvoiceError
 	}

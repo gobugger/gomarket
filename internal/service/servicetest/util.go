@@ -13,15 +13,16 @@ import (
 	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
+	"math/big"
 	"testing"
 )
 
 // Creates vendor with random name and zero balance
-func SetupVendor(t *testing.T, infra *testutil.Infra, balance int64) *repo.User {
+func SetupVendor(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.User {
 	ctx := t.Context()
 	q := repo.New(infra.Db)
 
-	err := settings.Set(ctx, q, settings.Settings{VendorApplicationPrice: 1000000000000})
+	err := settings.Set(ctx, q, settings.Settings{VendorApplicationPrice: big.NewInt(1000000000000)})
 	require.NoError(t, err)
 	settings, err := settings.Get(ctx, q)
 	require.NoError(t, err)
@@ -32,7 +33,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance int64) *repo.User 
 	vw, err := wallet.CreateWallet(ctx, q, vendor.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vw.ID, Amount: settings.VendorApplicationPrice + balance})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vw.ID, Amount: repo.Big2Num(new(big.Int).Add(settings.VendorApplicationPrice, balance))})
 	require.NoError(t, err)
 
 	va, err := license.CreateApplication(ctx, q, infra.Mc.Client, license.CreateApplicationParams{
@@ -46,7 +47,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance int64) *repo.User 
 
 	vw, err = q.GetWallet(ctx, vw.ID)
 	require.NoError(t, err)
-	require.Equal(t, int64(balance), vw.BalancePico)
+	require.Equal(t, balance, repo.Num2Big(vw.BalancePico))
 
 	l, err := license.AcceptApplication(ctx, q, va.ID)
 	require.NoError(t, err)
@@ -63,7 +64,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance int64) *repo.User 
 }
 
 // Creates basic account with balance
-func SetupCustomer(t *testing.T, infra *testutil.Infra, balance int64) *repo.User {
+func SetupCustomer(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.User {
 	ctx := t.Context()
 
 	q := repo.New(infra.Db)
@@ -78,7 +79,7 @@ func SetupCustomer(t *testing.T, infra *testutil.Infra, balance int64) *repo.Use
 	cw, err := wallet.CreateWallet(ctx, q, customer.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: cw.ID, Amount: balance})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: cw.ID, Amount: repo.Big2Num(balance)})
 	require.NoError(t, err)
 
 	return &customer
@@ -127,10 +128,10 @@ func SetupProduct(t *testing.T, infra *testutil.Infra, vendorID uuid.UUID) *Test
 	return &TestProduct{&p, prices}
 }
 
-func CreateInvoice(t *testing.T, q *repo.Queries, amount int64) repo.Invoice {
+func CreateInvoice(t *testing.T, q *repo.Queries, amount *big.Int) repo.Invoice {
 	ctx := t.Context()
 	invoice, err := q.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: amount,
+		AmountPico: repo.Big2Num(amount),
 	})
 	require.NoError(t, err)
 	_, err = q.SetInvoiceAddress(ctx, repo.SetInvoiceAddressParams{
@@ -142,10 +143,10 @@ func CreateInvoice(t *testing.T, q *repo.Queries, amount int64) repo.Invoice {
 	return invoice
 }
 
-func PayInvoice(pp *processortest.Processor, invoice *repo.Invoice) {
+func PayInvoice(pp *processortest.PaymentProvider, invoice *repo.Invoice) {
 	pp.InvoiceStatuses[invoice.Address] = &provider.InvoiceStatus{
-		AmountUnlocked: invoice.AmountPico,
-		AmountTotal:    invoice.AmountPico,
+		AmountUnlocked: repo.Num2Big(invoice.AmountPico),
+		AmountTotal:    repo.Num2Big(invoice.AmountPico),
 	}
 }
 
@@ -155,7 +156,7 @@ func RequireOrderStatus(t *testing.T, q *repo.Queries, orderID uuid.UUID, status
 	require.Equal(t, status, o.Status)
 }
 
-func RequireBalanceForUser(t *testing.T, q *repo.Queries, userID uuid.UUID, balance int64) {
+func RequireBalanceForUser(t *testing.T, q *repo.Queries, userID uuid.UUID, balance *big.Int) {
 	cw, err := q.GetWalletForUser(t.Context(), userID)
 	require.NoError(t, err)
 	require.Equal(t, balance, cw.BalancePico)

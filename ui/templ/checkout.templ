@@ -19,7 +19,7 @@ templ Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) {
 			</div>
 			<div class="form__field">
 				<label for="use_wallet">{ tc.Translate("Use wallet for payment") }</label>
-				{{ useWallet := tc.BalancePico > 0 }}
+				{{ useWallet := tc.BalancePico.Sign() > 0 }}
 				@Switch("use_wallet", "use_wallet", useWallet)
 			</div>
 			<div class="form__field h100">

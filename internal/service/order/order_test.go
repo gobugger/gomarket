@@ -6,6 +6,7 @@ import (
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
 	"github.com/gobugger/gomarket/internal/testutil"
+	"math/big"
 	"testing"
 
 	"github.com/stretchr/testify/require"
@@ -26,8 +27,8 @@ func TestFinalize(t *testing.T) {
 	qtx := repo.New(infra.Db)
 	currency.DebugStart(ctx, qtx)
 
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	dms, err := qtx.GetDeliveryMethodsForVendor(ctx, vendor.ID)
@@ -68,7 +69,7 @@ func TestFinalize(t *testing.T) {
 
 	err = Finalize(ctx, qtx, order.ID)
 	require.NoError(t, err)
-	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, order.TotalPricePico)
+	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, repo.Num2Big(order.TotalPricePico))
 }
 
 func TestCancel(t *testing.T) {
@@ -76,8 +77,8 @@ func TestCancel(t *testing.T) {
 	qtx := repo.New(infra.Db)
 	currency.DebugStart(ctx, qtx)
 
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	dms, err := qtx.GetDeliveryMethodsForVendor(ctx, vendor.ID)
@@ -103,7 +104,7 @@ func TestCancel(t *testing.T) {
 	require.NoError(t, err)
 
 	servicetest.RequireOrderStatus(t, qtx, order.ID, repo.OrderStatusCancelled)
-	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, 0)
+	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, big.NewInt(0))
 }
 
 func TestDecline(t *testing.T) {
@@ -111,8 +112,8 @@ func TestDecline(t *testing.T) {
 	qtx := repo.New(infra.Db)
 	currency.DebugStart(ctx, qtx)
 
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	dms, err := qtx.GetDeliveryMethodsForVendor(ctx, vendor.ID)
@@ -143,6 +144,6 @@ func TestDecline(t *testing.T) {
 	require.NoError(t, err)
 	servicetest.RequireOrderStatus(t, qtx, order.ID, repo.OrderStatusDeclined)
 
-	servicetest.RequireBalanceForUser(t, qtx, customer.ID, currency.AddFee(order.TotalPricePico))
-	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, 0)
+	servicetest.RequireBalanceForUser(t, qtx, customer.ID, currency.AddFee(repo.Num2Big(order.TotalPricePico)))
+	servicetest.RequireBalanceForUser(t, qtx, vendor.ID, big.NewInt(0))
 }

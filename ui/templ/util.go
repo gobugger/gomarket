@@ -7,6 +7,7 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"log/slog"
+	"math/big"
 	"strings"
 	"time"
 )
@@ -31,13 +32,13 @@ func (tc *TemplateContext) Translate(data any, args ...any) string {
 	return l.Translate(message, args...)
 }
 
-func (tc *TemplateContext) XMR2Fiat(pico int64) string {
-	return fmt.Sprintf("%.2f", float64(currency.XMR2Fiat(currency.Currency(tc.Settings.Currency), pico))/100.0)
+func (tc *TemplateContext) XMR2Fiat(raw *big.Int) string {
+	return fmt.Sprintf("%.2f", float64(currency.Crypto2Fiat(currency.Currency(tc.Settings.Currency), raw))/100.0)
 }
 
-func (tc *TemplateContext) XMR2Fiat2(pico int64) string {
+func (tc *TemplateContext) XMR2Fiat2(raw *big.Int) string {
 	c := currency.Currency(tc.Settings.Currency)
-	return fmt.Sprintf("%s%.2f", c.Symbol(), float64(currency.XMR2Fiat(c, pico))/100.0)
+	return fmt.Sprintf("%s%.2f", c.Symbol(), float64(currency.Crypto2Fiat(c, raw))/100.0)
 }
 
 func (tc *TemplateContext) Fiat(cents int64) string {

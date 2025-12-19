@@ -1,6 +1,10 @@
 package ui
 
-import "time"
+import (
+	"github.com/gobugger/gomarket/internal/config"
+	"github.com/gobugger/gomarket/internal/service/currency"
+	"time"
+)
 
 templ footer(tc *TemplateContext) {
 	<footer class="footer">
@@ -17,7 +21,7 @@ templ footer(tc *TemplateContext) {
 		</div>
 		<div id="stats" class="centered">
 			<div class="col gap--xs">
-				<p class="text--small">{ tc.Translate("Exchange rate") }: 1 XMR = { tc.XMR2Fiat2(1e12) }</p>
+				<p class="text--small">{ tc.Translate("Exchange rate") }: 1 { config.Cryptocurrency } = { tc.XMR2Fiat2(currency.RAW()) }</p>
 				<p class="text--small">{ tc.Translate("Time") }: { FmtTime(time.Now()) }</p>
 				<p class="text--small">{ tc.Translate("Vendors: ") }{ tc.Stats.NumVendors }</p>
 				<p class="text--small">{ tc.Translate("Users: ") }{ tc.Stats.NumUsers }</p>

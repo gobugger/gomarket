@@ -5,6 +5,7 @@ import (
 	"github.com/gobugger/gomarket/internal/testutil"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	moneropay "gitlab.com/moneropay/moneropay/v2/pkg/model"
+	"math/big"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -53,7 +54,7 @@ func TestMoneropayClient(t *testing.T) {
 		client: server.Client(),
 	}
 
-	_, err := mp.Invoice(100, "localhost:4420/invoice?id=69")
+	_, err := mp.Invoice(big.NewInt(100), "localhost:4420/invoice?id=69")
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -143,7 +143,7 @@ func Checkout(tc *TemplateContext, deliveryMethods []repo.DeliveryMethod) templ.
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			useWallet := tc.BalancePico > 0
+			useWallet := tc.BalancePico.Sign() > 0
 			templ_7745c5c3_Err = Switch("use_wallet", "use_wallet", useWallet).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err

@@ -36,7 +36,7 @@ func TestInvoicing(t *testing.T) {
 	_, err = qtx.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
-	amount := currency.XMR
+	amount := currency.XMR()
 
 	invoice := servicetest.CreateInvoice(t, qtx, amount)
 	require.Equal(t, repo.InvoiceStatusPending, invoice.Status)

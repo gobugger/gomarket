@@ -28,6 +28,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"io"
+	"math/big"
 	"net/http"
 	"path"
 	"slices"
@@ -999,9 +1000,9 @@ func (app *Application) HandleWithdrawal(w http.ResponseWriter, r *http.Request)
 	l := app.getLocalizer(ctx)
 	user := app.loggedInUser(r.Context())
 
-	var amount int64
+	var amount *big.Int
 	err = app.Do(ctx, func(ctx context.Context, qtx *repo.Queries) error {
-		amount, err = payment.WithdrawFunds(ctx, qtx, user.ID, fd.Data.Address, currency.XMR2Int(fd.Data.AmountXMR))
+		amount, err = payment.WithdrawFunds(ctx, qtx, user.ID, fd.Data.Address, currency.Whole2Raw(fd.Data.AmountWhole))
 		return err
 	})
 
@@ -1022,7 +1023,7 @@ func (app *Application) HandleWithdrawal(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	app.notifyUser(ctx, false, l.Translate("Withdrawal of %s XMR initiated", currency.XMR2Decimal(amount)))
+	app.notifyUser(ctx, false, l.Translate("Withdrawal of %s %s initiated", currency.Raw2Decimal(amount), config.Cryptocurrency))
 	http.Redirect(w, r, "/wallet", http.StatusSeeOther)
 }
 
@@ -1322,7 +1323,7 @@ func (app *Application) VendorApplication(w http.ResponseWriter, r *http.Request
 		return
 	}
 
-	price := currency.XMR2Decimal(settings.VendorApplicationPrice)
+	price := currency.Raw2Decimal(settings.VendorApplicationPrice)
 
 	tc, err := app.newTemplateContext(r)
 	if err != nil {

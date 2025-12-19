@@ -31,7 +31,7 @@ func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp provider.PaymentP
 		return fmt.Errorf("invoice %s already has an address %s", id, invoice.Address)
 	}
 
-	address, err := pp.Invoice(repo.Num2Big(invoice.AmountPico), MoneropayInvoiceCallbackURL(invoice.ID))
+	address, err := pp.Invoice(repo.Num2Big(invoice.AmountPico), "")
 	if err != nil {
 		return fmt.Errorf("failed to generate invoice address: %w", err)
 	}

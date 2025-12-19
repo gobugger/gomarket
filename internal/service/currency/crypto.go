@@ -27,6 +27,10 @@ func NANO() *big.Int {
 	return new(big.Int).Set(nano)
 }
 
+func RAW() *big.Int {
+	return whole()
+}
+
 var ps = map[Currency]float64{}
 var mtx sync.RWMutex
 

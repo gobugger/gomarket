@@ -27,7 +27,7 @@ templ Wallet(tc *TemplateContext, depositAddress string) {
 					<div class="form__field">
 						<label for="balance">{ tc.Translate("Balance") }</label>
 						<div class="row gap">
-							<p id="balance" class="field">{ currency.XMR2Decimal(tc.BalancePico) } XMR</p>
+							<p id="balance" class="field">{ currency.Raw2Decimal(tc.BalancePico) } XMR</p>
 							<p id="balance" class="field">{ tc.XMR2Fiat2(tc.BalancePico) } </p>
 						</div>
 					</div>
@@ -64,7 +64,7 @@ templ Wallet(tc *TemplateContext, depositAddress string) {
 						<label class="m0">{ tc.Translate("Amount") } XMR</label>
 						<p class="text--small mb-s">{ tc.Translate("Enter amount in decimal format (e.g., 1.42069)") }</p>
 					</div>
-					<input class="form__input number" type="number" step="0.000000000001" name="amount_xmr"/>
+					<input class="form__input number" type="number" step="0.000000000001" name="amount"/>
 				</div>
 				<div class="form__field--right">
 					@Captcha(tc)

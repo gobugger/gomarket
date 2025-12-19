@@ -7,6 +7,7 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
+	"math/big"
 )
 
 func Dispute(ctx context.Context, qtx *repo.Queries, orderID uuid.UUID) error {
@@ -79,27 +80,27 @@ func resolveDispute(ctx context.Context, qtx *repo.Queries, orderID uuid.UUID, r
 		return err
 	}
 
-	totalRefund := order.TotalPricePico
-	customerRefund := int64(refundFactor * float64(totalRefund))
-	vendorRefund := totalRefund - customerRefund
+	totalRefund := repo.Num2Big(order.TotalPricePico)
+	customerRefund, _ := new(big.Float).Mul(new(big.Float).SetInt(totalRefund), big.NewFloat(refundFactor)).Int(nil)
+	vendorRefund := new(big.Int).Sub(totalRefund, customerRefund)
 
-	if customerRefund > 0 {
+	if customerRefund.Sign() > 0 {
 		customerWallet, err := qtx.GetWalletForUser(ctx, order.CustomerID)
 		if err != nil {
 			return err
 		}
 
-		if _, err := qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: customerWallet.ID, Amount: customerRefund}); err != nil {
+		if _, err := qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: customerWallet.ID, Amount: repo.Big2Num(customerRefund)}); err != nil {
 			return err
 		}
 	}
-	if vendorRefund > 0 {
+	if vendorRefund.Sign() > 0 {
 		vendorWallet, err := qtx.GetWalletForUser(ctx, vendor.ID)
 		if err != nil {
 			return err
 		}
 
-		if _, err := qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vendorWallet.ID, Amount: vendorRefund}); err != nil {
+		if _, err := qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vendorWallet.ID, Amount: repo.Big2Num(vendorRefund)}); err != nil {
 			return err
 		}
 	}

@@ -344,9 +344,9 @@ func orderInfo(tc *TemplateContext, order *view.Order) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var18 string
-		templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(currency.XMR2Decimal(order.Order.TotalPricePico) + " XMR")
+		templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(currency.Raw2Decimal(repo.Num2Big(order.Order.TotalPricePico)) + " XMR")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/order.templ`, Line: 77, Col: 79}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/order.templ`, Line: 77, Col: 93}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var18))
 		if templ_7745c5c3_Err != nil {
@@ -1269,7 +1269,7 @@ func orderInvoice(tc *TemplateContext, order *view.Order) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		amountXMR := currency.XMR2Decimal(order.Invoice.AmountPico)
+		amountXMR := currency.Raw2Decimal(repo.Num2Big(order.Invoice.AmountPico))
 		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 100, "<div class=\"form__field\"><label for=\"amount\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err

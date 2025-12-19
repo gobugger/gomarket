@@ -4,10 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/gobugger/gomarket/internal/repo"
+	"math/big"
 )
 
 type Settings struct {
-	VendorApplicationPrice int64 `json:"vendor_application_price"`
+	VendorApplicationPrice *big.Int `json:"vendor_application_price"`
 }
 
 func Get(ctx context.Context, q *repo.Queries) (Settings, error) {

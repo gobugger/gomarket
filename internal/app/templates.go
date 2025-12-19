@@ -31,7 +31,7 @@ func (app *Application) newTemplateContext(req *http.Request) (*ui.TemplateConte
 		if err != nil {
 			return nil, err
 		}
-		tc.BalancePico = wallet.BalancePico
+		tc.BalancePico = repo.Num2Big(wallet.BalancePico)
 
 		if vendor.HasLicense(ctx, q, user.ID) {
 			tc.AuthLevel = ui.AuthLevelVendor

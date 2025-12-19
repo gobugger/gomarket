@@ -4,6 +4,7 @@ import (
 	"encoding/gob"
 	"github.com/gobugger/gomarket/internal/form"
 	"github.com/google/uuid"
+	"math/big"
 )
 
 type Form struct {
@@ -48,7 +49,7 @@ type TemplateContext struct {
 	Username               string
 	PgpKey                 string
 	AuthLevel              AuthLevel
-	BalancePico            int64
+	BalancePico            *big.Int
 	Settings               UserSettings
 	Notes                  []Note
 	NumUnseenNotifications int

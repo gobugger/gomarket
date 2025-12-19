@@ -65,7 +65,7 @@ func Create(ctx context.Context, qtx *repo.Queries, p CreateParams) (repo.Order,
 		total += pt.PriceCent * pt.Count
 	}
 
-	totalXMR := currency.Fiat2XMR(currency.DefaultCurrency, total)
+	totalRaw := currency.Fiat2Crypto(currency.DefaultCurrency, total)
 
 	tos, err := qtx.GetTermsOfServiceForVendor(ctx, dm.VendorID)
 	if err != nil {
@@ -77,7 +77,7 @@ func Create(ctx context.Context, qtx *repo.Queries, p CreateParams) (repo.Order,
 		repo.CreateOrderParams{
 			DeliveryMethodID: p.DeliveryMethodID,
 			CustomerID:       p.CustomerID,
-			TotalPricePico:   totalXMR,
+			TotalPricePico:   repo.Big2Num(totalRaw),
 			Details:          p.Details,
 			TermsOfServiceID: tos.ID,
 		})
@@ -146,11 +146,13 @@ func Decline(ctx context.Context, qtx *repo.Queries, orderID uuid.UUID) error {
 		return err
 	}
 
+	refund := currency.AddFee(repo.Num2Big(order.TotalPricePico))
+
 	if _, err := qtx.AddWalletBalance(
 		ctx,
 		repo.AddWalletBalanceParams{
 			ID:     customerWallet.ID,
-			Amount: currency.AddFee(order.TotalPricePico), // Return the whole paid amount
+			Amount: repo.Big2Num(refund), // Return the whole paid amount
 		}); err != nil {
 		return err
 	}

@@ -9,6 +9,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
+	"math/big"
 )
 
 func TestCreateApplicationAndAccept(t *testing.T) {
@@ -29,7 +30,7 @@ func TestCreateApplicationAndAccept(t *testing.T) {
 	w, err := q.GetWalletForUser(ctx, user.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(settings.VendorApplicationPrice)})
 	require.NoError(t, err)
 
 	application, err := CreateApplication(ctx, q, infra.Mc.Client, CreateApplicationParams{
@@ -73,7 +74,7 @@ func TestCreateApplicationExistingAndDecline(t *testing.T) {
 	w, err := q.GetWalletForUser(ctx, user.ID)
 	require.NoError(t, err)
 
-	w, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice / 2})
+	w, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})
 	require.NoError(t, err)
 	initialBalance := w.BalancePico
 
@@ -117,7 +118,7 @@ func TestCreateApplicationNoBalance(t *testing.T) {
 	w, err := q.GetWalletForUser(ctx, user.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice - 1})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})
 	require.NoError(t, err)
 
 	_, err = CreateApplication(ctx, q, infra.Mc.Client, CreateApplicationParams{

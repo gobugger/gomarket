@@ -12,10 +12,11 @@ import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
+	"math/big"
 	"time"
 )
 
-func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) templ.Component {
+func AdminPanel(tc *TemplateContext, vendorApplicationPrice *big.Int, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -69,9 +70,9 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var3 string
-			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("Current Vendor Application price is %s XMR", currency.XMR2Decimal(vendorApplicationPrice)))
+			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(fmt.Sprintf("Current Vendor Application price is %s XMR", currency.Raw2Decimal(vendorApplicationPrice)))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 37, Col: 117}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 38, Col: 117}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
@@ -82,9 +83,9 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var4 string
-			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(vendorApplicationPrice)
+			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(vendorApplicationPrice.String())
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 39, Col: 115}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 40, Col: 124}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 			if templ_7745c5c3_Err != nil {
@@ -113,7 +114,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs("Parent")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 57, Col: 35}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 58, Col: 35}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -131,7 +132,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var6 string
 				templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(category.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 60, Col: 43}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 61, Col: 43}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 				if templ_7745c5c3_Err != nil {
@@ -144,7 +145,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var7 string
 				templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(category.Name)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 60, Col: 61}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 61, Col: 61}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 				if templ_7745c5c3_Err != nil {
@@ -167,7 +168,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var8 templ.SafeURL
 				templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinURLErrs("/application?id=" + application.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 78, Col: 66}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 79, Col: 66}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 				if templ_7745c5c3_Err != nil {
@@ -180,7 +181,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var9 string
 				templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(application.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 78, Col: 94}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 79, Col: 94}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 				if templ_7745c5c3_Err != nil {
@@ -193,7 +194,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var10 string
 				templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(FmtTime(application.CreatedAt))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 79, Col: 44}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 80, Col: 44}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 				if templ_7745c5c3_Err != nil {
@@ -216,7 +217,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var11 templ.SafeURL
 				templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinURLErrs("/dispute?id=" + order.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 96, Col: 56}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 97, Col: 56}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
 				if templ_7745c5c3_Err != nil {
@@ -229,7 +230,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var12 string
 				templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(order.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 96, Col: 78}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 97, Col: 78}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 				if templ_7745c5c3_Err != nil {
@@ -240,9 +241,9 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var13 string
-				templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(tc.XMR2Fiat(order.TotalPricePico))
+				templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(tc.XMR2Fiat(repo.Num2Big(order.TotalPricePico)))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 97, Col: 47}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 98, Col: 61}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 				if templ_7745c5c3_Err != nil {
@@ -255,7 +256,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var14 string
 				templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(FmtDuration(time.Since(order.DisputedAt)))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 98, Col: 55}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 99, Col: 55}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 				if templ_7745c5c3_Err != nil {
@@ -278,7 +279,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var15 templ.SafeURL
 				templ_7745c5c3_Var15, templ_7745c5c3_Err = templ.JoinURLErrs("/ticket?id=" + ticket.ID.String())
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 116, Col: 56}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 117, Col: 56}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var15))
 				if templ_7745c5c3_Err != nil {
@@ -291,7 +292,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var16 string
 				templ_7745c5c3_Var16, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("Open"))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 116, Col: 81}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 117, Col: 81}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var16))
 				if templ_7745c5c3_Err != nil {
@@ -304,7 +305,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var17 string
 				templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs(ticket.Subject)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 117, Col: 28}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 118, Col: 28}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var17))
 				if templ_7745c5c3_Err != nil {
@@ -317,7 +318,7 @@ func AdminPanel(tc *TemplateContext, vendorApplicationPrice int64, applications 
 				var templ_7745c5c3_Var18 string
 				templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(FmtTime(ticket.CreatedAt))
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 118, Col: 39}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/adminpanel.templ`, Line: 119, Col: 39}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var18))
 				if templ_7745c5c3_Err != nil {

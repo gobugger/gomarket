@@ -3,6 +3,7 @@ package form
 import (
 	"encoding/gob"
 	"github.com/google/uuid"
+	"math/big"
 )
 
 type AdminDisputeForm struct {
@@ -28,7 +29,7 @@ type AdminDeleteForm struct {
 }
 
 type AdminSettingsForm struct {
-	VendorApplicationPrice int64 `schema:"vendor_application_price,required"`
+	VendorApplicationPrice *big.Int `schema:"vendor_application_price,required"`
 }
 
 type AdminAddCategoryForm struct {

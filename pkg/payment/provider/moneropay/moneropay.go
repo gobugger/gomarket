@@ -79,8 +79,8 @@ func (mp *MoneropayClient) InvoiceStatus(address string) (*provider.InvoiceStatu
 
 	//nolint
 	return &provider.InvoiceStatus{
-		AmountUnlocked: int64(data.Amount.Covered.Unlocked),
-		AmountTotal:    int64(data.Amount.Covered.Total),
+		AmountUnlocked: new(big.Int).SetUint64(data.Amount.Covered.Unlocked),
+		AmountTotal:    new(big.Int).SetUint64(data.Amount.Covered.Total),
 	}, nil
 
 }
@@ -109,12 +109,12 @@ func (mp *MoneropayClient) DeleteInvoice(address string) error {
 func (mp *MoneropayClient) Transfer(destinations []provider.Destination) (*provider.TransferResponse, error) {
 	req := moneropay.TransferPostRequest{}
 	for _, dest := range destinations {
-		if dest.Amount < 0 {
+		if dest.Amount.Sign() < 0 {
 			return nil, fmt.Errorf("can't transfer negative amount")
 		}
 		req.Destinations = append(req.Destinations,
 			walletrpc.Destination{
-				Amount:  uint64(dest.Amount),
+				Amount:  dest.Amount.Uint64(),
 				Address: dest.Address,
 			})
 	}

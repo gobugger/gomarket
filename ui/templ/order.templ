@@ -74,7 +74,7 @@ templ orderInfo(tc *TemplateContext, order *view.Order) {
 		</div>
 		<div class="info_field">
 			<label>{ tc.Translate("Total cost") }</label>
-			<p class="field">{ currency.XMR2Decimal(order.Order.TotalPricePico) + " XMR" }</p>
+			<p class="field">{ currency.Raw2Decimal(repo.Num2Big(order.Order.TotalPricePico)) + " XMR" }</p>
 		</div>
 		<div class="info_field">
 			<label>{ tc.Translate("Date") }</label>
@@ -280,7 +280,7 @@ templ orderInvoice(tc *TemplateContext, order *view.Order) {
 		<label for="timeleft">{ tc.Translate("Time left to pay") }</label>
 		<p class="field">{ FmtDuration(order.Invoice.TimeLeft) }</p>
 	</div>
-	{{ amountXMR := currency.XMR2Decimal(order.Invoice.AmountPico) }}
+	{{ amountXMR := currency.Raw2Decimal(repo.Num2Big(order.Invoice.AmountPico)) }}
 	<div class="form__field">
 		<label for="amount">{ tc.Translate("Amount XMR") }</label>
 		<div class="row gap">

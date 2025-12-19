@@ -10,6 +10,7 @@ import (
 	"github.com/jackc/pgerrcode"
 	"github.com/minio/minio-go/v7"
 	"io"
+	"math/big"
 )
 
 type CreateApplicationParams struct {
@@ -29,18 +30,18 @@ func CreateApplication(ctx context.Context, qtx *repo.Queries, mc *minio.Client,
 	applicationPrice := settings.VendorApplicationPrice
 
 	if p.ExistingVendor {
-		applicationPrice = 0
+		applicationPrice = big.NewInt(0)
 	} else {
 		wallet, err := qtx.GetWalletForUser(ctx, p.UserID)
 		if err != nil {
 			return repo.VendorApplication{}, err
 		}
 
-		if wallet.BalancePico < applicationPrice {
+		if repo.Num2Big(wallet.BalancePico).Cmp(applicationPrice) < 0 {
 			return repo.VendorApplication{}, ErrNotEnoughBalance
 		}
 
-		_, err = qtx.ReduceWalletBalance(ctx, repo.ReduceWalletBalanceParams{ID: wallet.ID, Amount: applicationPrice})
+		_, err = qtx.ReduceWalletBalance(ctx, repo.ReduceWalletBalanceParams{ID: wallet.ID, Amount: repo.Big2Num(applicationPrice)})
 		if err != nil {
 			return repo.VendorApplication{}, err
 		}
@@ -51,7 +52,7 @@ func CreateApplication(ctx context.Context, qtx *repo.Queries, mc *minio.Client,
 		repo.CreateVendorApplicationParams{
 			ExistingVendor: p.ExistingVendor,
 			Letter:         p.Letter,
-			PricePaidPico:  applicationPrice,
+			PricePaidPico:  repo.Big2Num(applicationPrice),
 			UserID:         p.UserID})
 	if err != nil {
 		if db.ErrCode(err) == pgerrcode.UniqueViolation {

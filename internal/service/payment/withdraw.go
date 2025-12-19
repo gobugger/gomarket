@@ -6,7 +6,6 @@ import (
 	"github.com/gobugger/gomarket/internal/config"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
-	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
 	"math/big"
@@ -107,7 +106,7 @@ func transferWithdrawals(ctx context.Context, qtx *repo.Queries, pp provider.Pay
 	dsts := []provider.Destination{}
 	for _, w := range ws {
 		dsts = append(dsts, provider.Destination{
-			Amount:  w.AmountPico,
+			Amount:  repo.Num2Big(w.AmountPico),
 			Address: w.DestinationAddress,
 		})
 	}

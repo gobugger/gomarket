@@ -5,6 +5,7 @@ import (
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
 	"github.com/stretchr/testify/require"
+	"math/big"
 	"testing"
 )
 
@@ -13,8 +14,8 @@ func TestIsXXX(t *testing.T) {
 	qtx := repo.New(infra.Db)
 	currency.DebugStart(ctx, qtx)
 
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	price := product.Pricing[0]
