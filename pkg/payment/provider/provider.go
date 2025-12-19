@@ -1,12 +1,16 @@
 package provider
 
+import (
+	"math/big"
+)
+
 type InvoiceStatus struct {
-	AmountUnlocked int64
-	AmountTotal    int64
+	AmountUnlocked *big.Int
+	AmountTotal    *big.Int
 }
 
 type Destination struct {
-	Amount  int64
+	Amount  *big.Int
 	Address string
 }
 
@@ -21,7 +25,7 @@ type TransferStatus struct {
 }
 
 type PaymentProvider interface {
-	Invoice(amount int64, callbackUrl string) (string, error)
+	Invoice(amount *big.Int, callbackUrl string) (string, error)
 	InvoiceStatus(address string) (*InvoiceStatus, error)
 	DeleteInvoice(address string) error
 	Transfer(destinations []Destination) (*TransferResponse, error)

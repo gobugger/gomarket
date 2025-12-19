@@ -3,11 +3,13 @@ package payment
 import (
 	"context"
 	"errors"
+	"github.com/gobugger/gomarket/internal/config"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
+	"math/big"
 	"time"
 )
 
@@ -17,39 +19,50 @@ var (
 	ErrWithdrawalAmountTooSmall   = errors.New("withdrawal amount is too small")
 )
 
-const WithdrawalFee float64 = 0.001
+var WithdrawalFee *big.Int
+
+func init() {
+	if config.Cryptocurrency == "NANO" {
+		var ok bool
+		WithdrawalFee, ok = new(big.Int).SetString("10000000000000000000000000000", 10)
+		if !ok {
+			panic("failed to initialize withdrawal fee for NANO")
+		}
+	} else {
+		WithdrawalFee = new(big.Int).SetInt64(100000000)
+	}
+}
 
 // Withdraws amount to destination address from users wallet
 // Retuns amount actually transferred after withdrawal fee or error
-func WithdrawFunds(ctx context.Context, qtx *repo.Queries, userID uuid.UUID, destinationAddress string, amount int64) (int64, error) {
-	fee := currency.XMR2Int(WithdrawalFee)
-	if amount <= fee {
-		return 0, ErrWithdrawalAmountTooSmall
+func WithdrawFunds(ctx context.Context, qtx *repo.Queries, userID uuid.UUID, destinationAddress string, amount *big.Int) (*big.Int, error) {
+	if amount.Cmp(WithdrawalFee) <= 0 {
+		return nil, ErrWithdrawalAmountTooSmall
 	}
 
 	wallet, err := qtx.GetWalletForUser(ctx, userID)
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
-	if wallet.BalancePico < amount {
-		return 0, ErrNotEnoughBalanceToWithdraw
+	if balance := repo.Num2Big(wallet.BalancePico); balance == nil || balance.Cmp(amount) < 0 {
+		return nil, ErrNotEnoughBalanceToWithdraw
 	}
 
-	_, err = qtx.ReduceWalletBalance(ctx, repo.ReduceWalletBalanceParams{ID: wallet.ID, Amount: amount})
+	_, err = qtx.ReduceWalletBalance(ctx, repo.ReduceWalletBalanceParams{ID: wallet.ID, Amount: repo.Big2Num(amount)})
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
-	withdrawAmount := amount - fee
+	withdrawAmount := amount.Sub(amount, WithdrawalFee)
 	_, err = qtx.CreateWithdrawal(
 		ctx,
 		repo.CreateWithdrawalParams{
 			DestinationAddress: destinationAddress,
-			AmountPico:         withdrawAmount,
+			AmountPico:         repo.Big2Num(withdrawAmount),
 			Status:             repo.WithdrawalStatusPending})
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
 	return withdrawAmount, nil

@@ -43,6 +43,7 @@ var (
 	captchaEnabled       bool
 	entryGuardEnabled    bool
 	Minio                MinioConfig
+	Cryptocurrency       string
 )
 
 // Check it this way so DevMode won't be accidentally set to true
@@ -73,6 +74,7 @@ func DefineGlobal() {
 	flag.StringVar(&CsrfAuthKey, "csrf-auth-key", os.Getenv("CSRF_AUTH_KEY"), "32 byte csrf auth key")
 	flag.StringVar(&OnionAddr, "onion-address", os.Getenv("ONION_ADDRESS"), "onion address")
 	flag.StringVar(&SiteName, "name", "GoMarket", "name for this site")
+	flag.StringVar(&Cryptocurrency, "cryptocurrency", "XMR", "Cryptocurrency to use [XMR, NANO]")
 	flag.BoolVar(&devMode, "dev", false, "set true to enable development mode")
 	flag.BoolVar(&captchaEnabled, "captcha", true, "enable captcha")
 	flag.BoolVar(&entryGuardEnabled, "entry-guard", true, "enable entry guard")

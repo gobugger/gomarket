@@ -3,13 +3,27 @@ package wallet
 import (
 	"context"
 	"fmt"
+	"github.com/gobugger/gomarket/internal/config"
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/google/uuid"
 	"math"
+	"math/big"
 )
 
-const depositInvoiceAmount int64 = math.MaxInt64 >> 1
+var depositInvoiceAmount *big.Int
+
+func init() {
+	if config.Cryptocurrency == "NANO" {
+		var ok bool
+		depositInvoiceAmount, ok = new(big.Int).SetString("100000000000000000000000000000000000000", 10)
+		if !ok {
+			panic("failed to initialize depositInvoiceAmount for NANO")
+		}
+	} else {
+		depositInvoiceAmount = big.NewInt(math.MaxInt64 >> 1)
+	}
+}
 
 // CreateWallet creates wallet for user and an associated permanent invoices for deposits
 func CreateWallet(ctx context.Context, qtx *repo.Queries, userID uuid.UUID) (repo.Wallet, error) {
@@ -19,7 +33,7 @@ func CreateWallet(ctx context.Context, qtx *repo.Queries, userID uuid.UUID) (rep
 	}
 
 	invoice, err := qtx.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: depositInvoiceAmount,
+		AmountPico: repo.Big2Num(depositInvoiceAmount),
 		Permanent:  true,
 	})
 	if err != nil {
@@ -46,16 +60,17 @@ func HandleDeposits(ctx context.Context, qtx *repo.Queries) error {
 	logger := log.Get(ctx)
 
 	for _, deposit := range deposits {
-		amount := deposit.AmountUnlockedPico - deposit.AmountDepositedPico
-		if amount > 0 {
-			_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: deposit.WalletID, Amount: amount})
+		unlocked, deposited := repo.Num2Big(deposit.AmountUnlockedPico), repo.Num2Big(deposit.AmountDepositedPico)
+		amount := unlocked.Sub(unlocked, deposited)
+		if amount.Sign() > 0 {
+			_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: deposit.WalletID, Amount: repo.Big2Num(amount)})
 			if err != nil {
 				return err
 			}
 
 			_, err = qtx.UpdateAmountDeposited(ctx, repo.UpdateAmountDepositedParams{
 				ID:                  deposit.ID,
-				AmountDepositedPico: deposit.AmountDepositedPico + amount,
+				AmountDepositedPico: repo.Big2Num(unlocked),
 			})
 			if err != nil {
 				return err

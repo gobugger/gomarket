@@ -7,14 +7,15 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
+	"math/big"
 	"time"
 )
 
 // CreateInvoice creates a penging, expiring invoice
-func CreateInvoice(ctx context.Context, qtx *repo.Queries, amount int64) (repo.Invoice, error) {
-	// TODO: Trigger event to prepare invoices
+func CreateInvoice(ctx context.Context, qtx *repo.Queries, amount *big.Int) (repo.Invoice, error) {
+	// TODO: Trigger event to prepare invoice
 	return qtx.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: amount,
+		AmountPico: repo.Big2Num(amount),
 		Permanent:  false,
 	})
 }
@@ -30,7 +31,7 @@ func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp provider.PaymentP
 		return fmt.Errorf("invoice %s already has an address %s", id, invoice.Address)
 	}
 
-	address, err := pp.Invoice(invoice.AmountPico, MoneropayInvoiceCallbackURL(invoice.ID))
+	address, err := pp.Invoice(repo.Num2Big(invoice.AmountPico), MoneropayInvoiceCallbackURL(invoice.ID))
 	if err != nil {
 		return fmt.Errorf("failed to generate invoice address: %w", err)
 	}
@@ -57,17 +58,19 @@ func ProcessInvoices(ctx context.Context, qtx *repo.Queries, pp provider.Payment
 			return err
 		}
 
-		if status.AmountUnlocked > invoice.AmountUnlockedPico {
+		amountUnlocked, amount := repo.Num2Big(invoice.AmountUnlockedPico), repo.Num2Big(invoice.AmountPico)
+
+		if status.AmountUnlocked.Cmp(amountUnlocked) > 0 {
 			_, err := qtx.UpdateInvoiceAmountUnlocked(ctx, repo.UpdateInvoiceAmountUnlockedParams{
 				ID:                 invoice.ID,
-				AmountUnlockedPico: status.AmountUnlocked,
+				AmountUnlockedPico: repo.Big2Num(status.AmountUnlocked),
 			})
 			if err != nil {
 				return fmt.Errorf("failed to update invoice amount unlocked: %w", err)
 			}
 		}
 
-		if status.AmountUnlocked >= invoice.AmountPico {
+		if status.AmountUnlocked.Cmp(amount) >= 0 {
 			_, err := qtx.UpdateInvoiceStatus(ctx, repo.UpdateInvoiceStatusParams{
 				ID:     invoice.ID,
 				Status: repo.InvoiceStatusConfirmed,

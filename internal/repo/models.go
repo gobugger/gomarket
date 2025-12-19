@@ -235,6 +235,12 @@ type DisputeOffer struct {
 	CreatedAt    time.Time
 }
 
+type ExchangeRate struct {
+	ID        int32
+	Data      []byte
+	UpdatedAt time.Time
+}
+
 type Invoice struct {
 	ID                 uuid.UUID
 	Address            string
@@ -411,10 +417,4 @@ type Withdrawal struct {
 	DestinationAddress string
 	Status             WithdrawalStatus
 	CreatedAt          time.Time
-}
-
-type XmrPrice struct {
-	ID        int32
-	Data      []byte
-	UpdatedAt time.Time
 }

@@ -5,19 +5,33 @@ import (
 	"encoding/json"
 	"github.com/gobugger/gomarket/internal/repo"
 	"log/slog"
+	"math/big"
 	"sync"
 	"time"
 )
 
 const (
-	XMR int64 = 1e12
+	prec uint = 128
 )
+
+var (
+	xmr  = big.NewInt(1e12)
+	nano = new(big.Int).Exp(big.NewInt(10), big.NewInt(30), nil)
+)
+
+func XMR() *big.Int {
+	return new(big.Int).Set(xmr)
+}
+
+func NANO() *big.Int {
+	return new(big.Int).Set(nano)
+}
 
 var ps = map[Currency]float64{}
 var mtx sync.RWMutex
 
-// Value of one XMR in cents of currency c
-func xmrPrice(c Currency) int64 {
+// Value of one Crypto in cents of currency c
+func cryptoPrice(c Currency) int64 {
 	if !c.IsSupported() {
 		slog.Error("XMRPrice called with unsupported currency", "currency", c)
 		c = DefaultCurrency
@@ -65,17 +79,17 @@ func Set(ctx context.Context, q *repo.Queries, prices map[Currency]float64) erro
 		return err
 	}
 
-	return q.UpdateXMRPrices(ctx, data)
+	return q.UpdateExchangeRates(ctx, data)
 }
 
 func update(ctx context.Context, q *repo.Queries) error {
-	xmrPrices, err := q.GetXMRPrices(ctx)
+	rates, err := q.GetExchangeRates(ctx)
 	if err != nil {
 		return err
 	}
 
 	prices := map[Currency]float64{}
-	err = json.Unmarshal(xmrPrices.Data, &prices)
+	err = json.Unmarshal(rates.Data, &prices)
 
 	mtx.Lock()
 	ps = prices

@@ -7,6 +7,7 @@ import (
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"gitlab.com/moneropay/go-monero/walletrpc"
 	moneropay "gitlab.com/moneropay/moneropay/v2/pkg/model"
+	"math/big"
 	"net/http"
 )
 
@@ -22,13 +23,13 @@ func NewMoneropayClient(url string) *MoneropayClient {
 	}
 }
 
-func (mp *MoneropayClient) Invoice(amount int64, callbackUrl string) (string, error) {
-	if amount < 0 {
+func (mp *MoneropayClient) Invoice(amount *big.Int, callbackUrl string) (string, error) {
+	if amount.Sign() < 0 {
 		return "", fmt.Errorf("can't create invoice with negative amount")
 	}
 
 	req := moneropay.ReceivePostRequest{
-		Amount:      uint64(amount),
+		Amount:      amount.Uint64(),
 		Description: "invoice",
 		CallbackUrl: callbackUrl,
 	}

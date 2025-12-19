@@ -2,19 +2,29 @@ package currency
 
 import (
 	"fmt"
+	"github.com/gobugger/gomarket/internal/config"
 	"log/slog"
 	"math"
-	"strings"
+	"math/big"
 )
 
-// Fiat's in cents (1/100) and XMR's in piconeros (1/1e12)
-
-func Fiat2XMR(c Currency, amount int64) int64 {
-	return int64(1e12 * amount / xmrPrice(c))
+func whole() *big.Int {
+	if config.Cryptocurrency == "NANO" {
+		return nano
+	} else {
+		return xmr
+	}
 }
 
-func XMR2Fiat(c Currency, amount int64) int64 {
-	return int64(float64(xmrPrice(c)) * XMR2Float(amount))
+func Fiat2Crypto(c Currency, amount int64) *big.Int {
+	y := new(big.Int).Mul(whole(), big.NewInt(amount))
+	return y.Div(y, big.NewInt(cryptoPrice(c)))
+}
+
+func Crypto2Fiat(c Currency, amount *big.Int) int64 {
+	p := new(big.Float).SetInt64(cryptoPrice(c))
+	result, _ := p.Mul(p, Raw2Whole(amount)).Int(nil)
+	return result.Int64()
 }
 
 func Fiat2Fiat(from Currency, to Currency, amount int64) int64 {
@@ -40,27 +50,20 @@ func DisplayFiat(amount int64) string {
 }
 
 // Convert form XMR to atomic unit AKA piconeros
-func XMR2Int(xmr float64) int64 {
-	return int64(xmr * 1e12)
+func Whole2Raw(amount *big.Float) *big.Int {
+	result, _ := new(big.Float).Mul(amount, new(big.Float).SetInt(whole())).Int(nil)
+	return result
 }
 
 // Convert from piconeros to decimal XMR
-func XMR2Float(xmr int64) float64 {
-	return float64(xmr) / 1e12
+func Raw2Whole(raw *big.Int) *big.Float {
+	return new(big.Float).
+		SetPrec(prec).
+		SetRat(new(big.Rat).SetFrac(raw, whole()))
 }
 
-// Convert from piconeros to decimal string
-// Copied from moneropay/walletrpc
-func XMR2Decimal(xmr int64) string {
-	if xmr == 0 {
-		return "0"
-	}
-	str0 := fmt.Sprintf("%013d", xmr)
-	l := len(str0)
-	decimal := str0[:l-12]
-	float := strings.TrimRight(str0[l-12:], "0")
-	if len(float) == 0 {
-		return decimal
-	}
-	return decimal + "." + float
+func Raw2Decimal(raw *big.Int) string {
+	r := new(big.Rat).SetFrac(raw, whole())
+	p, _ := r.FloatPrec()
+	return r.FloatString(p)
 }
