@@ -27,7 +27,7 @@ func TestCreateApplicationAndAccept(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	w, err := q.GetWalletForUser(ctx, user.ID)
+	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
 	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(settings.VendorApplicationPrice)})
@@ -71,7 +71,7 @@ func TestCreateApplicationExistingAndDecline(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	w, err := q.GetWalletForUser(ctx, user.ID)
+	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
 	w, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})
@@ -115,7 +115,7 @@ func TestCreateApplicationNoBalance(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	w, err := q.GetWalletForUser(ctx, user.ID)
+	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
 	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})

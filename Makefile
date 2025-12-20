@@ -1,4 +1,4 @@
-.PHONY: translate setup run_worker run_market run_admin
+.PHONY: translate setup run_worker run_market run_admin test
 
 translate:
 	go generate ./internal/translations
@@ -29,3 +29,5 @@ run_seed:
 	$(MAKE) setup
 	go run ./cmd/seed --addr=0.0.0.0:4000 --dsn=postgresql://$(DB_USER):$(DB_PASS)@localhost:5432/$(DB_NAME)?sslmode=disable --minio-endpoint=localhost:9000 --dev=true --entry-guard=false
 
+test:
+	go test ./...

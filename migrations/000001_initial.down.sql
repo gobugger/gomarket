@@ -9,7 +9,7 @@ DROP FUNCTION IF EXISTS check_order_item();
 -- Drop tables in reverse order of dependencies
 DROP TABLE IF EXISTS settings;
 DROP TABLE IF EXISTS notifications;
-DROP TABLE IF EXISTS xmr_prices;
+DROP TABLE IF EXISTS exchange_rates;
 DROP TABLE IF EXISTS bans;
 DROP TABLE IF EXISTS ticket_responses;
 DROP TABLE IF EXISTS tickets;

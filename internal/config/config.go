@@ -40,7 +40,7 @@ var (
 	SiteName             string
 	Socks5Hostname       string
 	devMode              bool
-	captchaEnabled       bool
+	captchaEnabled       bool = true
 	entryGuardEnabled    bool
 	Minio                MinioConfig
 	Cryptocurrency       string

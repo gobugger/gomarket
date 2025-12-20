@@ -5,6 +5,7 @@ import (
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
 	"github.com/stretchr/testify/require"
+	"math/big"
 	"testing"
 	"time"
 )
@@ -60,8 +61,8 @@ func TestShouldDecline(t *testing.T) {
 }
 
 func TestProcessPaidAndAutoFinalize(t *testing.T) {
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	ctx := t.Context()
@@ -91,7 +92,7 @@ func TestProcessPaidAndAutoFinalize(t *testing.T) {
 	require.NoError(t, err)
 	servicetest.RequireOrderStatus(t, qtx, order.ID, repo.OrderStatusPending)
 
-	invoice := servicetest.CreateInvoice(t, qtx, currency.AddFee(order.TotalPricePico))
+	invoice := servicetest.CreateInvoice(t, qtx, currency.AddFee(repo.Num2Big(order.TotalPricePico)))
 	_, err = qtx.CreateOrderInvoice(ctx, repo.CreateOrderInvoiceParams{
 		OrderID:   order.ID,
 		InvoiceID: invoice.ID,
@@ -130,8 +131,8 @@ func TestProcessPaidAndAutoFinalize(t *testing.T) {
 }
 
 func TestCancelExpired(t *testing.T) {
-	vendor := servicetest.SetupVendor(t, infra, 0)
-	customer := servicetest.SetupCustomer(t, infra, 0)
+	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
+	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	ctx := t.Context()
@@ -157,7 +158,7 @@ func TestCancelExpired(t *testing.T) {
 	require.NoError(t, err)
 	require.Equal(t, repo.OrderStatusPending, order.Status)
 
-	invoice := servicetest.CreateInvoice(t, qtx, currency.AddFee(order.TotalPricePico))
+	invoice := servicetest.CreateInvoice(t, qtx, currency.AddFee(repo.Num2Big(order.TotalPricePico)))
 	_, err = qtx.CreateOrderInvoice(ctx, repo.CreateOrderInvoiceParams{
 		OrderID:   order.ID,
 		InvoiceID: invoice.ID,

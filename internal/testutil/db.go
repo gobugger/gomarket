@@ -2,13 +2,13 @@ package testutil
 
 import (
 	"context"
+	utildb "github.com/gobugger/gomarket/internal/util/db"
 	"github.com/golang-migrate/migrate/v4"
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/testcontainers/testcontainers-go"
 	"github.com/testcontainers/testcontainers-go/modules/postgres"
-	utildb "github.com/gobugger/gomarket/internal/util/db"
 	"path/filepath"
 )
 
@@ -40,7 +40,7 @@ func SetupDB() (db *pgxpool.Pool, cleanup func(), dsn string) {
 	}
 
 	// Migrate
-	m, err := migrate.New("file://"+filepath.Join(root, "db/migrations"), dsn)
+	m, err := migrate.New("file://"+filepath.Join(root, "migrations"), dsn)
 	if err != nil {
 		panic(err)
 	}
@@ -72,7 +72,7 @@ func CleanDB(dsn string) error {
 	}
 
 	// Migrate
-	m, err := migrate.New("file://"+filepath.Join(root, "db/migrations"), dsn)
+	m, err := migrate.New("file://"+filepath.Join(root, "migrations"), dsn)
 	if err != nil {
 		panic(err)
 	}

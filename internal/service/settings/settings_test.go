@@ -1,9 +1,10 @@
 package settings
 
 import (
-	"github.com/stretchr/testify/require"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/testutil"
+	"github.com/stretchr/testify/require"
+	"math/big"
 	"testing"
 )
 
@@ -14,18 +15,18 @@ func TestSettings(t *testing.T) {
 	q := repo.New(db)
 	settings, err := Get(t.Context(), q)
 	require.NoError(t, err)
-	require.Equal(t, int64(1000000000000), settings.VendorApplicationPrice)
+	require.Equal(t, big.NewInt(1000000000000), settings.VendorApplicationPrice)
 
-	err = Set(t.Context(), q, Settings{VendorApplicationPrice: 420})
+	err = Set(t.Context(), q, Settings{VendorApplicationPrice: big.NewInt(420)})
 	require.NoError(t, err)
 
 	settings, err = Get(t.Context(), q)
 	require.NoError(t, err)
-	require.Equal(t, int64(420), settings.VendorApplicationPrice)
+	require.Equal(t, big.NewInt(420), settings.VendorApplicationPrice)
 
 	testutil.CleanDB(dsn)
 
 	settings, err = Get(t.Context(), q)
 	require.NoError(t, err)
-	require.Equal(t, int64(1000000000000), settings.VendorApplicationPrice)
+	require.Equal(t, big.NewInt(1000000000000), settings.VendorApplicationPrice)
 }

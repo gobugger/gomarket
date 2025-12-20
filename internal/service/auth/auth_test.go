@@ -60,9 +60,6 @@ func TestAuth(t *testing.T) {
 			continue
 		}
 
-		_, err = q.GetWalletForUser(ctx, u.ID)
-		require.NoError(t, err)
-
 		_, err = Register(ctx, q, RegisterParams{
 			Username: cred.username,
 			Password: "SomePrettyGoodPassword123!!??",

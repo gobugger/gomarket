@@ -4,23 +4,12 @@ import (
 	"image"
 	"image/color"
 	"testing"
-
-	"github.com/alexedwards/scs/v2"
 )
 
 func BenchmarkRefresh(b *testing.B) {
 	cache := make([]item, cacheSize)
 	for b.Loop() {
 		refreshCache(cache)
-	}
-}
-
-func BenchmarkTemplateField(b *testing.B) {
-	ctx := b.Context()
-	s := scs.New()
-	ctx, _ = s.Load(ctx, "testsession")
-	for b.Loop() {
-		TemplateField(ctx, s)
 	}
 }
 

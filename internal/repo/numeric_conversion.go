@@ -10,12 +10,16 @@ func Num2Big(num pgtype.Numeric) *big.Int {
 		return nil
 	}
 
+	if num.Exp > 0 {
+	} else if num.Exp < 0 {
+	}
+
 	return new(big.Int).Set(num.Int)
 }
 
 func Big2Num(num *big.Int) pgtype.Numeric {
 	return pgtype.Numeric{
-		Int:   num,
+		Int:   new(big.Int).Set(num),
 		Exp:   0,
 		Valid: num != nil,
 	}

@@ -2,9 +2,9 @@ package form
 
 import (
 	"bytes"
+	"github.com/gobugger/gomarket/internal/captcha"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
-	"github.com/gobugger/gomarket/internal/captcha"
 	"image"
 	"image/color"
 	"image/png"
@@ -70,7 +70,7 @@ func TestRegisterForm(t *testing.T) {
 			x:        6,
 			y:        9,
 			ferrors: FieldErrors{
-				"PasswordCheck": "password check must match password",
+				"password_check": "password check must match password",
 			},
 		},
 		{
@@ -80,7 +80,7 @@ func TestRegisterForm(t *testing.T) {
 			x:        200,
 			y:        9,
 			ferrors: FieldErrors{
-				"CaptchaAnswer": "invalid answer",
+				"captcha_answer": "invalid answer",
 			},
 		},
 		{
@@ -90,7 +90,7 @@ func TestRegisterForm(t *testing.T) {
 			x:        6,
 			y:        9,
 			ferrors: FieldErrors{
-				"Password": "password is too short",
+				"password": "password is too short",
 			},
 		},
 	}
