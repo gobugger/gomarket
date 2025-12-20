@@ -19,6 +19,7 @@ require (
 	github.com/gorilla/csrf v1.7.3
 	github.com/gorilla/schema v1.4.1
 	github.com/jackc/pgerrcode v0.0.0-20250907135507-afb5586c32a6
+	github.com/jackc/pgx-shopspring-decimal v0.0.0-20220624020537-1d36b5a1853e
 	github.com/jackc/pgx/v5 v5.7.6
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/justinas/alice v1.2.0
@@ -125,6 +126,7 @@ require (
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	github.com/rs/xid v1.6.0 // indirect
 	github.com/shirou/gopsutil/v4 v4.25.1 // indirect
+	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/spf13/cobra v1.9.1 // indirect
 	github.com/spf13/pflag v1.0.7 // indirect

@@ -9,7 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 const createTermsOfService = `-- name: CreateTermsOfService :one
@@ -46,7 +46,7 @@ INSERT INTO vendor_licenses (
 `
 
 type CreateVendorLicenseParams struct {
-	PricePaidPico pgtype.Numeric
+	PricePaidPico decimal.Decimal
 	UserID        uuid.UUID
 }
 

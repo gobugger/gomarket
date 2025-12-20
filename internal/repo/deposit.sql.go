@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 const createDeposit = `-- name: CreateDeposit :one
@@ -112,12 +112,12 @@ type GetOutdatedDepositsRow struct {
 	ID                  uuid.UUID
 	WalletID            uuid.UUID
 	InvoiceID           uuid.UUID
-	AmountDepositedPico pgtype.Numeric
+	AmountDepositedPico decimal.Decimal
 	ID_2                uuid.UUID
 	Address             string
-	AmountPico          pgtype.Numeric
+	AmountPico          decimal.Decimal
 	Status              InvoiceStatus
-	AmountUnlockedPico  pgtype.Numeric
+	AmountUnlockedPico  decimal.Decimal
 	Permanent           bool
 	CreatedAt           time.Time
 }
@@ -163,7 +163,7 @@ RETURNING id, wallet_id, invoice_id, amount_deposited_pico
 
 type UpdateAmountDepositedParams struct {
 	ID                  uuid.UUID
-	AmountDepositedPico pgtype.Numeric
+	AmountDepositedPico decimal.Decimal
 }
 
 func (q *Queries) UpdateAmountDeposited(ctx context.Context, arg UpdateAmountDepositedParams) (Deposit, error) {

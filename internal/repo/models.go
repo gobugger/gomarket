@@ -11,6 +11,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 type DisputeOfferStatus string
@@ -224,7 +225,7 @@ type Deposit struct {
 	ID                  uuid.UUID
 	WalletID            uuid.UUID
 	InvoiceID           uuid.UUID
-	AmountDepositedPico pgtype.Numeric
+	AmountDepositedPico decimal.Decimal
 }
 
 type DisputeOffer struct {
@@ -244,9 +245,9 @@ type ExchangeRate struct {
 type Invoice struct {
 	ID                 uuid.UUID
 	Address            string
-	AmountPico         pgtype.Numeric
+	AmountPico         decimal.Decimal
 	Status             InvoiceStatus
-	AmountUnlockedPico pgtype.Numeric
+	AmountUnlockedPico decimal.Decimal
 	Permanent          bool
 	CreatedAt          time.Time
 }
@@ -264,7 +265,7 @@ type Order struct {
 	ID               uuid.UUID
 	Status           OrderStatus
 	Details          string
-	TotalPricePico   pgtype.Numeric
+	TotalPricePico   decimal.Decimal
 	DeliveryMethodID uuid.UUID
 	VendorID         uuid.UUID
 	TermsOfServiceID uuid.UUID
@@ -393,27 +394,27 @@ type VendorApplication struct {
 	ID             uuid.UUID
 	ExistingVendor bool
 	Letter         string
-	PricePaidPico  pgtype.Numeric
+	PricePaidPico  decimal.Decimal
 	UserID         uuid.UUID
 	CreatedAt      time.Time
 }
 
 type VendorLicense struct {
 	ID            uuid.UUID
-	PricePaidPico pgtype.Numeric
+	PricePaidPico decimal.Decimal
 	UserID        uuid.UUID
 	CreatedAt     time.Time
 }
 
 type Wallet struct {
 	ID          uuid.UUID
-	BalancePico pgtype.Numeric
+	BalancePico decimal.Decimal
 	UserID      uuid.UUID
 }
 
 type Withdrawal struct {
 	ID                 uuid.UUID
-	AmountPico         pgtype.Numeric
+	AmountPico         decimal.Decimal
 	DestinationAddress string
 	Status             WithdrawalStatus
 	CreatedAt          time.Time

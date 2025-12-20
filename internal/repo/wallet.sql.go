@@ -9,7 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 const addWalletBalance = `-- name: AddWalletBalance :one
@@ -21,7 +21,7 @@ RETURNING id, balance_pico, user_id
 
 type AddWalletBalanceParams struct {
 	ID     uuid.UUID
-	Amount pgtype.Numeric
+	Amount decimal.Decimal
 }
 
 func (q *Queries) AddWalletBalance(ctx context.Context, arg AddWalletBalanceParams) (Wallet, error) {
@@ -105,7 +105,7 @@ RETURNING id, balance_pico, user_id
 
 type ReduceWalletBalanceParams struct {
 	ID     uuid.UUID
-	Amount pgtype.Numeric
+	Amount decimal.Decimal
 }
 
 func (q *Queries) ReduceWalletBalance(ctx context.Context, arg ReduceWalletBalanceParams) (Wallet, error) {

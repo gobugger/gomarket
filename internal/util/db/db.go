@@ -3,6 +3,7 @@ package db
 import (
 	"context"
 	"fmt"
+	pgxdecimal "github.com/jackc/pgx-shopspring-decimal"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -29,6 +30,9 @@ func Open(ctx context.Context, connString string) (*pgxpool.Pool, error) {
 		for _, t := range customTypes {
 			conn.TypeMap().RegisterType(t)
 		}
+
+		pgxdecimal.Register(conn.TypeMap())
+
 		return nil
 	}
 

@@ -9,7 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 const createOrder = `-- name: CreateOrder :one
@@ -25,7 +25,7 @@ RETURNING id, status, details, total_price_pico, delivery_method_id, vendor_id, 
 
 type CreateOrderParams struct {
 	Details          string
-	TotalPricePico   pgtype.Numeric
+	TotalPricePico   decimal.Decimal
 	CustomerID       uuid.UUID
 	DeliveryMethodID uuid.UUID
 	TermsOfServiceID uuid.UUID

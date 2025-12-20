@@ -9,7 +9,7 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgx/v5/pgtype"
+	"github.com/shopspring/decimal"
 )
 
 const createWithdrawal = `-- name: CreateWithdrawal :one
@@ -21,7 +21,7 @@ INSERT INTO withdrawals (
 `
 
 type CreateWithdrawalParams struct {
-	AmountPico         pgtype.Numeric
+	AmountPico         decimal.Decimal
 	DestinationAddress string
 	Status             WithdrawalStatus
 }
