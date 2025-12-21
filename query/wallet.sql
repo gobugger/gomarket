@@ -21,7 +21,7 @@ WHERE users.id = $1;
 -- name: AddWalletBalance :one
 UPDATE wallets
 SET balance_pico = balance_pico + sqlc.arg(amount)
-WHERE id = $1 AND sqlc.arg(amount)::bigint >= 0
+WHERE id = $1 AND sqlc.arg(amount)::numeric >= 0
 RETURNING *;
 
 -- name: ReduceWalletBalance :one

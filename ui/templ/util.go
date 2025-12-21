@@ -7,7 +7,7 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"log/slog"
-	"math/big"
+	"github.com/shopspring/decimal"
 	"strings"
 	"time"
 )
@@ -32,11 +32,11 @@ func (tc *TemplateContext) Translate(data any, args ...any) string {
 	return l.Translate(message, args...)
 }
 
-func (tc *TemplateContext) XMR2Fiat(raw *big.Int) string {
+func (tc *TemplateContext) XMR2Fiat(raw decimal.Decimal) string {
 	return fmt.Sprintf("%.2f", float64(currency.Crypto2Fiat(currency.Currency(tc.Settings.Currency), raw))/100.0)
 }
 
-func (tc *TemplateContext) XMR2Fiat2(raw *big.Int) string {
+func (tc *TemplateContext) XMR2Fiat2(raw decimal.Decimal) string {
 	c := currency.Currency(tc.Settings.Currency)
 	return fmt.Sprintf("%s%.2f", c.Symbol(), float64(currency.Crypto2Fiat(c, raw))/100.0)
 }

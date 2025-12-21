@@ -7,15 +7,15 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/google/uuid"
-	"math/big"
+	"github.com/shopspring/decimal"
 	"time"
 )
 
 // CreateInvoice creates a penging, expiring invoice
-func CreateInvoice(ctx context.Context, qtx *repo.Queries, amount *big.Int) (repo.Invoice, error) {
+func CreateInvoice(ctx context.Context, qtx *repo.Queries, amount decimal.Decimal) (repo.Invoice, error) {
 	// TODO: Trigger event to prepare invoice
 	return qtx.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: repo.Big2Num(amount),
+		AmountPico: amount,
 		Permanent:  false,
 	})
 }
@@ -31,7 +31,7 @@ func PrepareInvoice(ctx context.Context, qtx *repo.Queries, pp provider.PaymentP
 		return fmt.Errorf("invoice %s already has an address %s", id, invoice.Address)
 	}
 
-	address, err := pp.Invoice(repo.Num2Big(invoice.AmountPico), "")
+	address, err := pp.Invoice(invoice.AmountPico, "")
 	if err != nil {
 		return fmt.Errorf("failed to generate invoice address: %w", err)
 	}
@@ -58,12 +58,12 @@ func ProcessInvoices(ctx context.Context, qtx *repo.Queries, pp provider.Payment
 			return err
 		}
 
-		amountUnlocked, amount := repo.Num2Big(invoice.AmountUnlockedPico), repo.Num2Big(invoice.AmountPico)
+		amountUnlocked, amount := invoice.AmountUnlockedPico, invoice.AmountPico
 
 		if status.AmountUnlocked.Cmp(amountUnlocked) > 0 {
 			_, err := qtx.UpdateInvoiceAmountUnlocked(ctx, repo.UpdateInvoiceAmountUnlockedParams{
 				ID:                 invoice.ID,
-				AmountUnlockedPico: repo.Big2Num(status.AmountUnlocked),
+				AmountUnlockedPico: status.AmountUnlocked,
 			})
 			if err != nil {
 				return fmt.Errorf("failed to update invoice amount unlocked: %w", err)

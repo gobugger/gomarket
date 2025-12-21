@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
-	"math/big"
+	"github.com/shopspring/decimal"
 	"time"
 )
 
-templ AdminPanel(tc *TemplateContext, vendorApplicationPrice *big.Int, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) {
+templ AdminPanel(tc *TemplateContext, vendorApplicationPrice decimal.Decimal, applications []repo.VendorApplication, tickets []repo.Ticket, disputedOrders []repo.Order, categories []repo.Category) {
 	@Layout(tc) {
 		<div class="centered gap">
 			<form class="form--basic minw-l" action="/delete" method="post">
@@ -95,7 +95,7 @@ templ AdminPanel(tc *TemplateContext, vendorApplicationPrice *big.Int, applicati
 						for _, order := range disputedOrders {
 							<tr>
 								<td><a href={ "/dispute?id=" + order.ID.String() }>{ order.ID.String() }</a></td>
-								<td>{ tc.XMR2Fiat(repo.Num2Big(order.TotalPricePico)) }</td>
+								<td>{ tc.XMR2Fiat(order.TotalPricePico) }</td>
 								<td>{ FmtDuration(time.Since(order.DisputedAt)) }</td>
 							</tr>
 						}

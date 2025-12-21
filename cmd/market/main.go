@@ -3,6 +3,14 @@ package main
 import (
 	"context"
 	"errors"
+	"log/slog"
+	"net/http"
+	"os"
+	"os/signal"
+	"sync"
+	"syscall"
+	"time"
+
 	"github.com/alexedwards/scs/pgxstore"
 	"github.com/alexedwards/scs/v2"
 	"github.com/gobugger/gomarket/internal/app"
@@ -19,17 +27,11 @@ import (
 	"github.com/gobugger/gomarket/pkg/jail"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/payment/provider/moneropay"
+	"github.com/gobugger/gomarket/pkg/payment/provider/nano"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 	"github.com/riverqueue/river"
 	"github.com/riverqueue/river/riverdriver/riverpgxv5"
-	"log/slog"
-	"net/http"
-	"os"
-	"os/signal"
-	"sync"
-	"syscall"
-	"time"
 )
 
 func run(ctx context.Context, app *app.Application) {
@@ -121,6 +123,8 @@ func main() {
 	var paymentProcessor provider.PaymentProvider
 	if config.DevMode() {
 		paymentProcessor = payment.NewFakeClient()
+	} else if config.Cryptocurrency == "NANO" {
+		paymentProcessor = nano.NewNanoClient(config.Nano.NodeURL, config.Nano.Wallet, config.Nano.Account)
 	} else {
 		paymentProcessor = moneropay.NewMoneropayClient(config.MoneropayURL)
 	}

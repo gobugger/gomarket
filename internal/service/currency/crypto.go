@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/gobugger/gomarket/internal/repo"
+	"github.com/shopspring/decimal"
 	"log/slog"
-	"math/big"
 	"sync"
 	"time"
 )
@@ -15,19 +15,19 @@ const (
 )
 
 var (
-	xmr  = big.NewInt(1e12)
-	nano = new(big.Int).Exp(big.NewInt(10), big.NewInt(30), nil)
+	xmr  = decimal.NewFromInt(1e12)
+	nano = decimal.NewFromInt(10).Pow(decimal.NewFromInt(30))
 )
 
-func XMR() *big.Int {
-	return new(big.Int).Set(xmr)
+func XMR() decimal.Decimal {
+	return xmr.Copy()
 }
 
-func NANO() *big.Int {
-	return new(big.Int).Set(nano)
+func NANO() decimal.Decimal {
+	return nano.Copy()
 }
 
-func RAW() *big.Int {
+func RAW() decimal.Decimal {
 	return whole()
 }
 

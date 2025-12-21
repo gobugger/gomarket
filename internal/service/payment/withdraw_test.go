@@ -7,8 +7,8 @@ import (
 	"github.com/gobugger/gomarket/internal/testutil"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 	"testing"
 	"time"
 )
@@ -26,24 +26,24 @@ func TestHandleWithdraw(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	addr, err := pp.Invoice(big.NewInt(0), "http://testhost:6969")
+	addr, err := pp.Invoice(decimal.NewFromInt(0), "http://testhost:6969")
 	require.NoError(t, err)
 	pp.InvoiceStatuses[addr] = &provider.InvoiceStatus{}
 
 	wallet, err := qtx.CreateWallet(ctx, u.ID)
 	require.NoError(t, err)
 
-	requireBalance := func(balance *big.Int) {
+	requireBalance := func(balance decimal.Decimal) {
 		w, err := qtx.GetWallet(ctx, wallet.ID)
 		require.NoError(t, err)
 		require.Equal(t, balance, w.BalancePico)
 	}
 
-	requireBalance(big.NewInt(0))
+	requireBalance(decimal.NewFromInt(0))
 
 	_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{
 		ID:     wallet.ID,
-		Amount: repo.Big2Num(currency.XMR()),
+		Amount: currency.XMR(),
 	})
 	require.NoError(t, err)
 	requireBalance(currency.XMR())
@@ -51,8 +51,8 @@ func TestHandleWithdraw(t *testing.T) {
 	destAddress := testutil.XMRAddress()
 	amount, err := WithdrawFunds(ctx, qtx, u.ID, destAddress, currency.XMR())
 	require.NoError(t, err)
-	require.Equal(t, currency.XMR().Sub(currency.XMR(), WithdrawalFee), amount)
-	requireBalance(big.NewInt(0))
+	require.Equal(t, currency.XMR().Sub(WithdrawalFee), amount)
+	requireBalance(decimal.NewFromInt(0))
 
 	ws, err := qtx.GetWithdrawalsWithStatus(ctx, repo.WithdrawalStatusPending)
 	require.NoError(t, err)
@@ -101,36 +101,36 @@ func TestHandleWithdrawFailedToTransfer(t *testing.T) {
 	})
 	require.NoError(t, err)
 
-	addr, err := pp.Invoice(big.NewInt(0), "http://testhost:6969")
+	addr, err := pp.Invoice(decimal.NewFromInt(0), "http://testhost:6969")
 	require.NoError(t, err)
 	pp.InvoiceStatuses[addr] = &provider.InvoiceStatus{}
 
 	wallet, err := qtx.CreateWallet(ctx, u.ID)
 	require.NoError(t, err)
 
-	requireBalance := func(balance *big.Int) {
+	requireBalance := func(balance decimal.Decimal) {
 		w, err := qtx.GetWallet(ctx, wallet.ID)
 		require.NoError(t, err)
 		require.Equal(t, balance, w.BalancePico)
 	}
 
-	requireBalance(big.NewInt(0))
+	requireBalance(decimal.NewFromInt(0))
 
 	_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{
 		ID:     wallet.ID,
-		Amount: repo.Big2Num(currency.XMR()),
+		Amount: currency.XMR(),
 	})
 	require.NoError(t, err)
 
 	requireBalance(currency.XMR())
 
-	withdrawAmount := currency.XMR().Rsh(currency.XMR(), 1)
+	withdrawAmount := currency.XMR().Div(decimal.NewFromInt(2)).Truncate(0)
 
 	destAddress := testutil.XMRAddress()
 	amount, err := WithdrawFunds(ctx, qtx, u.ID, destAddress, withdrawAmount)
 	require.NoError(t, err)
-	require.Equal(t, withdrawAmount.Sub(withdrawAmount, WithdrawalFee), amount)
-	requireBalance(currency.XMR().Sub(currency.XMR(), withdrawAmount))
+	require.Equal(t, withdrawAmount.Sub(WithdrawalFee), amount)
+	requireBalance(currency.XMR().Sub(withdrawAmount))
 
 	ws, err := qtx.GetWithdrawalsWithStatus(ctx, repo.WithdrawalStatusPending)
 	require.NoError(t, err)

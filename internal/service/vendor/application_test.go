@@ -8,8 +8,8 @@ import (
 	"github.com/gobugger/gomarket/internal/testutil"
 	"testing"
 
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 )
 
 func TestCreateApplicationAndAccept(t *testing.T) {
@@ -30,7 +30,7 @@ func TestCreateApplicationAndAccept(t *testing.T) {
 	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(settings.VendorApplicationPrice)})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice})
 	require.NoError(t, err)
 
 	application, err := CreateApplication(ctx, q, infra.Mc.Client, CreateApplicationParams{
@@ -44,15 +44,15 @@ func TestCreateApplicationAndAccept(t *testing.T) {
 
 	w, err = q.GetWalletForUser(ctx, user.ID)
 	require.NoError(t, err)
-	require.Equal(t, int64(0), w.BalancePico)
-	require.Equal(t, settings.VendorApplicationPrice, application.PricePaidPico)
+	require.Equal(t, decimal.NewFromInt(0), w.BalancePico)
+	testutil.EqualDecimal(t, settings.VendorApplicationPrice, application.PricePaidPico)
 
 	_, err = q.GetVendorLicenseForUser(ctx, user.ID)
 	require.Error(t, err)
 
 	license, err := AcceptApplication(ctx, q, application.ID)
 	require.NoError(t, err)
-	require.Equal(t, settings.VendorApplicationPrice, license.PricePaidPico)
+	testutil.EqualDecimal(t, settings.VendorApplicationPrice, license.PricePaidPico)
 	require.True(t, HasLicense(ctx, q, user.ID))
 }
 
@@ -74,7 +74,7 @@ func TestCreateApplicationExistingAndDecline(t *testing.T) {
 	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
-	w, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})
+	w, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice.Mul(decimal.NewFromInt(2))})
 	require.NoError(t, err)
 	initialBalance := w.BalancePico
 
@@ -89,8 +89,8 @@ func TestCreateApplicationExistingAndDecline(t *testing.T) {
 
 	w, err = q.GetWalletForUser(ctx, user.ID)
 	require.NoError(t, err)
-	require.Equal(t, initialBalance, w.BalancePico)
-	require.Equal(t, int64(0), application.PricePaidPico)
+	testutil.EqualDecimal(t, initialBalance, w.BalancePico)
+	require.Equal(t, decimal.NewFromInt(0), application.PricePaidPico)
 
 	err = DeclineApplication(ctx, q, application.ID)
 	require.NoError(t, err)
@@ -105,6 +105,10 @@ func TestCreateApplicationNoBalance(t *testing.T) {
 	ctx := t.Context()
 	q := repo.New(infra.Db)
 
+	settings.Set(ctx, q, settings.Settings{
+		VendorApplicationPrice: decimal.NewFromInt(12018493284843), // Just random number
+	})
+
 	settings, err := settings.Get(ctx, q)
 	require.NoError(t, err)
 
@@ -118,7 +122,7 @@ func TestCreateApplicationNoBalance(t *testing.T) {
 	w, err := q.CreateWallet(ctx, user.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: repo.Big2Num(new(big.Int).Lsh(settings.VendorApplicationPrice, 1))})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: w.ID, Amount: settings.VendorApplicationPrice.Div(decimal.NewFromInt(2).Truncate(0))})
 	require.NoError(t, err)
 
 	_, err = CreateApplication(ctx, q, infra.Mc.Client, CreateApplicationParams{

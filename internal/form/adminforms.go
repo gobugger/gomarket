@@ -3,7 +3,7 @@ package form
 import (
 	"encoding/gob"
 	"github.com/google/uuid"
-	"math/big"
+	"github.com/shopspring/decimal"
 )
 
 type AdminDisputeForm struct {
@@ -29,7 +29,7 @@ type AdminDeleteForm struct {
 }
 
 type AdminSettingsForm struct {
-	VendorApplicationPrice *big.Int `schema:"vendor_application_price,required"`
+	VendorApplicationPrice decimal.Decimal `schema:"vendor_application_price,required"`
 }
 
 type AdminAddCategoryForm struct {

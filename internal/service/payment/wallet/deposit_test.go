@@ -7,13 +7,13 @@ import (
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/google/uuid"
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 	"testing"
 	"time"
 )
 
-func requireBalance(t *testing.T, qtx *repo.Queries, balance *big.Int, walletID uuid.UUID) {
+func requireBalance(t *testing.T, qtx *repo.Queries, balance decimal.Decimal, walletID uuid.UUID) {
 	wallet, err := qtx.GetWallet(t.Context(), walletID)
 	require.NoError(t, err)
 	require.Equal(t, balance, wallet.BalancePico)
@@ -49,10 +49,10 @@ func TestHandleDeposits(t *testing.T) {
 	require.NoError(t, err)
 
 	deposits := []int64{1, 123456789, 1e12 / 2, 1e12, 10 * 1e12, 100 * 1e12, 1000 * 1e12}
-	total := repo.Num2Big(initialBalance)
+	total := initialBalance
 
 	for _, d := range deposits {
-		total.Add(total, big.NewInt(d))
+		total = total.Add(decimal.NewFromInt(d))
 		pp.InvoiceStatuses[deposit.Invoice.Address] = &provider.InvoiceStatus{
 			AmountUnlocked: total,
 		}

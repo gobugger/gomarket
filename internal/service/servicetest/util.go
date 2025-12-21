@@ -12,17 +12,17 @@ import (
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/payment/provider/processortest"
 	"github.com/google/uuid"
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 	"testing"
 )
 
 // Creates vendor with random name and zero balance
-func SetupVendor(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.User {
+func SetupVendor(t *testing.T, infra *testutil.Infra, balance decimal.Decimal) *repo.User {
 	ctx := t.Context()
 	q := repo.New(infra.Db)
 
-	err := settings.Set(ctx, q, settings.Settings{VendorApplicationPrice: big.NewInt(1000000000000)})
+	err := settings.Set(ctx, q, settings.Settings{VendorApplicationPrice: decimal.NewFromInt(1000000000000)})
 	require.NoError(t, err)
 	settings, err := settings.Get(ctx, q)
 	require.NoError(t, err)
@@ -33,7 +33,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.Us
 	vw, err := wallet.CreateWallet(ctx, q, vendor.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vw.ID, Amount: repo.Big2Num(new(big.Int).Add(settings.VendorApplicationPrice, balance))})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: vw.ID, Amount: settings.VendorApplicationPrice.Add(balance)})
 	require.NoError(t, err)
 
 	va, err := license.CreateApplication(ctx, q, infra.Mc.Client, license.CreateApplicationParams{
@@ -47,7 +47,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.Us
 
 	vw, err = q.GetWallet(ctx, vw.ID)
 	require.NoError(t, err)
-	require.Equal(t, balance, repo.Num2Big(vw.BalancePico))
+	require.Equal(t, balance, vw.BalancePico)
 
 	l, err := license.AcceptApplication(ctx, q, va.ID)
 	require.NoError(t, err)
@@ -64,7 +64,7 @@ func SetupVendor(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.Us
 }
 
 // Creates basic account with balance
-func SetupCustomer(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.User {
+func SetupCustomer(t *testing.T, infra *testutil.Infra, balance decimal.Decimal) *repo.User {
 	ctx := t.Context()
 
 	q := repo.New(infra.Db)
@@ -79,7 +79,7 @@ func SetupCustomer(t *testing.T, infra *testutil.Infra, balance *big.Int) *repo.
 	cw, err := wallet.CreateWallet(ctx, q, customer.ID)
 	require.NoError(t, err)
 
-	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: cw.ID, Amount: repo.Big2Num(balance)})
+	_, err = q.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: cw.ID, Amount: balance})
 	require.NoError(t, err)
 
 	return &customer
@@ -128,10 +128,10 @@ func SetupProduct(t *testing.T, infra *testutil.Infra, vendorID uuid.UUID) *Test
 	return &TestProduct{&p, prices}
 }
 
-func CreateInvoice(t *testing.T, q *repo.Queries, amount *big.Int) repo.Invoice {
+func CreateInvoice(t *testing.T, q *repo.Queries, amount decimal.Decimal) repo.Invoice {
 	ctx := t.Context()
 	invoice, err := q.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: repo.Big2Num(amount),
+		AmountPico: amount,
 	})
 	require.NoError(t, err)
 	_, err = q.SetInvoiceAddress(ctx, repo.SetInvoiceAddressParams{
@@ -145,8 +145,8 @@ func CreateInvoice(t *testing.T, q *repo.Queries, amount *big.Int) repo.Invoice 
 
 func PayInvoice(pp *processortest.PaymentProvider, invoice *repo.Invoice) {
 	pp.InvoiceStatuses[invoice.Address] = &provider.InvoiceStatus{
-		AmountUnlocked: repo.Num2Big(invoice.AmountPico),
-		AmountTotal:    repo.Num2Big(invoice.AmountPico),
+		AmountUnlocked: invoice.AmountPico,
+		AmountTotal:    invoice.AmountPico,
 	}
 }
 
@@ -156,8 +156,8 @@ func RequireOrderStatus(t *testing.T, q *repo.Queries, orderID uuid.UUID, status
 	require.Equal(t, status, o.Status)
 }
 
-func RequireBalanceForUser(t *testing.T, q *repo.Queries, userID uuid.UUID, balance *big.Int) {
+func RequireBalanceForUser(t *testing.T, q *repo.Queries, userID uuid.UUID, balance decimal.Decimal) {
 	cw, err := q.GetWalletForUser(t.Context(), userID)
 	require.NoError(t, err)
-	require.Equal(t, balance, cw.BalancePico)
+	testutil.EqualDecimal(t, balance, cw.BalancePico)
 }

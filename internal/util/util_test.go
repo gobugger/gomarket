@@ -2,9 +2,9 @@ package util
 
 import (
 	"bytes"
+	"github.com/gobugger/gomarket/internal/testutil"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
-	"github.com/gobugger/gomarket/internal/testutil"
 	"image"
 	"image/color"
 	"slices"
@@ -49,10 +49,10 @@ func TestSaveAndLoadImage(t *testing.T) {
 
 	img = TransformImage(img, 400, 400)
 
-	err = SaveImage(ctx, mc.Client, "bucket", name, img)
+	err = SaveImage(ctx, mc.Client, "product", name, img)
 	require.NoError(t, err)
 
-	imgOut, err := LoadImage(ctx, mc.Client, "bucket", name)
+	imgOut, err := LoadImage(ctx, mc.Client, "product", name)
 	require.NoError(t, err)
 	require.Equal(t, 400, imgOut.Bounds().Max.X)
 	require.Equal(t, 400, imgOut.Bounds().Max.Y)
@@ -127,8 +127,8 @@ func TestTransformImage(t *testing.T) {
 
 		img = TransformImage(img, test.outW, test.outH)
 
-		outW := img.Bounds().Max.X - img.Bounds().Min.X
-		outH := img.Bounds().Max.Y - img.Bounds().Min.Y
+		outW := img.Bounds().Dx()
+		outH := img.Bounds().Dy()
 
 		if test.outW != 0 {
 			require.Equal(t, test.outW, outW)

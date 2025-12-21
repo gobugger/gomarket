@@ -3,12 +3,12 @@ package currency
 import (
 	"fmt"
 	"github.com/gobugger/gomarket/internal/config"
+	"github.com/shopspring/decimal"
 	"log/slog"
 	"math"
-	"math/big"
 )
 
-func whole() *big.Int {
+func whole() decimal.Decimal {
 	if config.Cryptocurrency == "NANO" {
 		return nano
 	} else {
@@ -16,15 +16,15 @@ func whole() *big.Int {
 	}
 }
 
-func Fiat2Crypto(c Currency, amount int64) *big.Int {
-	y := new(big.Int).Mul(whole(), big.NewInt(amount))
-	return y.Div(y, big.NewInt(cryptoPrice(c)))
+func Fiat2Crypto(c Currency, amount int64) decimal.Decimal {
+	y := whole().Mul(decimal.NewFromInt(amount))
+	return y.Div(decimal.NewFromInt(cryptoPrice(c))).Truncate(0)
 }
 
-func Crypto2Fiat(c Currency, amount *big.Int) int64 {
-	p := new(big.Float).SetInt64(cryptoPrice(c))
-	result, _ := p.Mul(p, Raw2Whole(amount)).Int(nil)
-	return result.Int64()
+func Crypto2Fiat(c Currency, amount decimal.Decimal) int64 {
+	p := decimal.NewFromInt(cryptoPrice(c))
+	result := p.Mul(Raw2Whole(amount))
+	return result.BigInt().Int64()
 }
 
 func Fiat2Fiat(from Currency, to Currency, amount int64) int64 {
@@ -50,20 +50,15 @@ func DisplayFiat(amount int64) string {
 }
 
 // Convert form XMR to atomic unit AKA piconeros
-func Whole2Raw(amount *big.Float) *big.Int {
-	result, _ := new(big.Float).Mul(amount, new(big.Float).SetInt(whole())).Int(nil)
-	return result
+func Whole2Raw(amount decimal.Decimal) decimal.Decimal {
+	return amount.Mul(whole())
 }
 
 // Convert from piconeros to decimal XMR
-func Raw2Whole(raw *big.Int) *big.Float {
-	return new(big.Float).
-		SetPrec(prec).
-		SetRat(new(big.Rat).SetFrac(raw, whole()))
+func Raw2Whole(raw decimal.Decimal) decimal.Decimal {
+	return raw.Div(whole())
 }
 
-func Raw2Decimal(raw *big.Int) string {
-	r := new(big.Rat).SetFrac(raw, whole())
-	p, _ := r.FloatPrec()
-	return r.FloatString(p)
+func Raw2Decimal(raw decimal.Decimal) string {
+	return Raw2Whole(raw).String()
 }

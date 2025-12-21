@@ -15,7 +15,7 @@ import (
 const addWalletBalance = `-- name: AddWalletBalance :one
 UPDATE wallets
 SET balance_pico = balance_pico + $2
-WHERE id = $1 AND $2::bigint >= 0
+WHERE id = $1 AND $2::numeric >= 0
 RETURNING id, balance_pico, user_id
 `
 

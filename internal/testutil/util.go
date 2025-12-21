@@ -3,9 +3,16 @@ package testutil
 import (
 	"crypto/rand"
 	"fmt"
+	"github.com/shopspring/decimal"
+	"github.com/stretchr/testify/require"
 	"os"
 	"path/filepath"
+	"testing"
 )
+
+func EqualDecimal(t *testing.T, a, b decimal.Decimal) {
+	require.True(t, a.Equal(b), fmt.Sprintf("decimal %v does not equal %v", a, b))
+}
 
 func XMRAddress() string {
 	addr := rand.Text()

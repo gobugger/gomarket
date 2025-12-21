@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
+	"github.com/shopspring/decimal"
 	"gitlab.com/moneropay/go-monero/walletrpc"
 	moneropay "gitlab.com/moneropay/moneropay/v2/pkg/model"
-	"math/big"
 	"net/http"
 )
 
@@ -23,13 +23,13 @@ func NewMoneropayClient(url string) *MoneropayClient {
 	}
 }
 
-func (mp *MoneropayClient) Invoice(amount *big.Int, callbackUrl string) (string, error) {
+func (mp *MoneropayClient) Invoice(amount decimal.Decimal, callbackUrl string) (string, error) {
 	if amount.Sign() < 0 {
 		return "", fmt.Errorf("can't create invoice with negative amount")
 	}
 
 	req := moneropay.ReceivePostRequest{
-		Amount:      amount.Uint64(),
+		Amount:      amount.BigInt().Uint64(),
 		Description: "invoice",
 		CallbackUrl: callbackUrl,
 	}
@@ -79,8 +79,8 @@ func (mp *MoneropayClient) InvoiceStatus(address string) (*provider.InvoiceStatu
 
 	//nolint
 	return &provider.InvoiceStatus{
-		AmountUnlocked: new(big.Int).SetUint64(data.Amount.Covered.Unlocked),
-		AmountTotal:    new(big.Int).SetUint64(data.Amount.Covered.Total),
+		AmountUnlocked: decimal.NewFromUint64(data.Amount.Covered.Unlocked),
+		AmountTotal:    decimal.NewFromUint64(data.Amount.Covered.Total),
 	}, nil
 
 }
@@ -114,7 +114,7 @@ func (mp *MoneropayClient) Transfer(destinations []provider.Destination) (*provi
 		}
 		req.Destinations = append(req.Destinations,
 			walletrpc.Destination{
-				Amount:  dest.Amount.Uint64(),
+				Amount:  dest.Amount.BigInt().Uint64(),
 				Address: dest.Address,
 			})
 	}

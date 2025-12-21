@@ -4,7 +4,7 @@ import (
 	"encoding/gob"
 	"github.com/gobugger/gomarket/internal/form"
 	"github.com/google/uuid"
-	"math/big"
+	"github.com/shopspring/decimal"
 )
 
 type Form struct {
@@ -49,7 +49,7 @@ type TemplateContext struct {
 	Username               string
 	PgpKey                 string
 	AuthLevel              AuthLevel
-	BalancePico            *big.Int
+	BalancePico            decimal.Decimal
 	Settings               UserSettings
 	Notes                  []Note
 	NumUnseenNotifications int

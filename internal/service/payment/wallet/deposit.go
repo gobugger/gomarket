@@ -7,21 +7,21 @@ import (
 	"github.com/gobugger/gomarket/internal/log"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/google/uuid"
+	"github.com/shopspring/decimal"
 	"math"
-	"math/big"
 )
 
-var depositInvoiceAmount *big.Int
+var depositInvoiceAmount decimal.Decimal
 
 func init() {
 	if config.Cryptocurrency == "NANO" {
-		var ok bool
-		depositInvoiceAmount, ok = new(big.Int).SetString("100000000000000000000000000000000000000", 10)
-		if !ok {
-			panic("failed to initialize depositInvoiceAmount for NANO")
+		var err error
+		depositInvoiceAmount, err = decimal.NewFromString("100000000000000000000000000000000000000")
+		if err != nil {
+			panic(err)
 		}
 	} else {
-		depositInvoiceAmount = big.NewInt(math.MaxInt64 >> 1)
+		depositInvoiceAmount = decimal.NewFromInt(math.MaxInt64 >> 1)
 	}
 }
 
@@ -33,7 +33,7 @@ func CreateWallet(ctx context.Context, qtx *repo.Queries, userID uuid.UUID) (rep
 	}
 
 	invoice, err := qtx.CreateInvoice(ctx, repo.CreateInvoiceParams{
-		AmountPico: repo.Big2Num(depositInvoiceAmount),
+		AmountPico: depositInvoiceAmount,
 		Permanent:  true,
 	})
 	if err != nil {
@@ -60,17 +60,17 @@ func HandleDeposits(ctx context.Context, qtx *repo.Queries) error {
 	logger := log.Get(ctx)
 
 	for _, deposit := range deposits {
-		unlocked, deposited := repo.Num2Big(deposit.AmountUnlockedPico), repo.Num2Big(deposit.AmountDepositedPico)
-		amount := unlocked.Sub(unlocked, deposited)
+		unlocked, deposited := deposit.AmountUnlockedPico, deposit.AmountDepositedPico
+		amount := unlocked.Sub(deposited)
 		if amount.Sign() > 0 {
-			_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: deposit.WalletID, Amount: repo.Big2Num(amount)})
+			_, err = qtx.AddWalletBalance(ctx, repo.AddWalletBalanceParams{ID: deposit.WalletID, Amount: amount})
 			if err != nil {
 				return err
 			}
 
 			_, err = qtx.UpdateAmountDeposited(ctx, repo.UpdateAmountDepositedParams{
 				ID:                  deposit.ID,
-				AmountDepositedPico: repo.Big2Num(unlocked),
+				AmountDepositedPico: unlocked,
 			})
 			if err != nil {
 				return err

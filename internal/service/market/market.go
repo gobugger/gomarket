@@ -34,7 +34,7 @@ func CreateOrder(ctx context.Context, tx pgx.Tx, rc *river.Client[pgx.Tx], p Cre
 		return order, err
 	}
 
-	totalBill := currency.AddFee(repo.Num2Big(order.TotalPricePico))
+	totalBill := currency.AddFee(order.TotalPricePico)
 
 	if p.UseWallet {
 		wallet, err := qtx.GetWalletForUser(ctx, p.CustomerID)
@@ -42,13 +42,13 @@ func CreateOrder(ctx context.Context, tx pgx.Tx, rc *river.Client[pgx.Tx], p Cre
 			return order, err
 		}
 
-		if repo.Num2Big(wallet.BalancePico).Cmp(totalBill) < 0 {
+		if wallet.BalancePico.Cmp(totalBill) < 0 {
 			return order, order_service.ErrNotEnoughBalance
 		}
 
 		_, err = qtx.ReduceWalletBalance(ctx, repo.ReduceWalletBalanceParams{
 			ID:     wallet.ID,
-			Amount: repo.Big2Num(totalBill),
+			Amount: totalBill,
 		})
 		if err != nil {
 			return order, err

@@ -27,8 +27,8 @@ import (
 	"github.com/gobugger/gomarket/ui/templ"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
+	"github.com/shopspring/decimal"
 	"io"
-	"math/big"
 	"net/http"
 	"path"
 	"slices"
@@ -1000,7 +1000,7 @@ func (app *Application) HandleWithdrawal(w http.ResponseWriter, r *http.Request)
 	l := app.getLocalizer(ctx)
 	user := app.loggedInUser(r.Context())
 
-	var amount *big.Int
+	var amount decimal.Decimal
 	err = app.Do(ctx, func(ctx context.Context, qtx *repo.Queries) error {
 		amount, err = payment.WithdrawFunds(ctx, qtx, user.ID, fd.Data.Address, currency.Whole2Raw(fd.Data.AmountWhole))
 		return err

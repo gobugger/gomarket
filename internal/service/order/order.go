@@ -77,7 +77,7 @@ func Create(ctx context.Context, qtx *repo.Queries, p CreateParams) (repo.Order,
 		repo.CreateOrderParams{
 			DeliveryMethodID: p.DeliveryMethodID,
 			CustomerID:       p.CustomerID,
-			TotalPricePico:   repo.Big2Num(totalRaw),
+			TotalPricePico:   totalRaw,
 			Details:          p.Details,
 			TermsOfServiceID: tos.ID,
 		})
@@ -146,13 +146,13 @@ func Decline(ctx context.Context, qtx *repo.Queries, orderID uuid.UUID) error {
 		return err
 	}
 
-	refund := currency.AddFee(repo.Num2Big(order.TotalPricePico))
+	refund := currency.AddFee(order.TotalPricePico)
 
 	if _, err := qtx.AddWalletBalance(
 		ctx,
 		repo.AddWalletBalanceParams{
 			ID:     customerWallet.ID,
-			Amount: repo.Big2Num(refund), // Return the whole paid amount
+			Amount: refund, // Return the whole paid amount
 		}); err != nil {
 		return err
 	}

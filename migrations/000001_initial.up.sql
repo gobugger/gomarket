@@ -24,7 +24,7 @@ CREATE TABLE users (
 
 CREATE TABLE wallets (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	balance_pico NUMERIC NOT NULL DEFAULT 0 CHECK (balance_pico >= 0),
+	balance_pico NUMERIC(39, 0) NOT NULL DEFAULT 0 CHECK (balance_pico >= 0 AND balance_pico % 1 = 0),
 	user_id UUID REFERENCES users(id) NOT NULL,
 	UNIQUE(user_id)
 );
@@ -34,9 +34,9 @@ CREATE TYPE invoice_status AS ENUM ('pending', 'confirmed', 'expired');
 CREATE TABLE invoices (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	address VARCHAR(95) NOT NULL DEFAULT '' CHECK((address = '' AND status != 'confirmed'::invoice_status) OR LENGTH(address) = 95),
-	amount_pico NUMERIC NOT NULL CHECK (amount_pico > 0),
+	amount_pico NUMERIC(39, 0) NOT NULL CHECK (amount_pico > 0 AND amount_pico % 1 = 0),
 	status invoice_status NOT NULL DEFAULT 'pending'::invoice_status,
-	amount_unlocked_pico NUMERIC NOT NULL DEFAULT 0 CHECK (amount_unlocked_pico >= 0),
+	amount_unlocked_pico NUMERIC(39, 0) NOT NULL DEFAULT 0 CHECK (amount_unlocked_pico >= 0 AND amount_unlocked_pico % 1 = 0),
 	permanent BOOLEAN NOT NULL DEFAULT FALSE,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -109,7 +109,7 @@ CREATE TABLE orders (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	status order_status NOT NULL DEFAULT 'pending'::order_status,
 	details TEXT NOT NULL,
-	total_price_pico NUMERIC NOT NULL CHECK (total_price_pico > 0), -- Total price of order in piconero
+	total_price_pico NUMERIC(39, 0) NOT NULL CHECK (total_price_pico > 0 AND total_price_pico % 1 = 0), -- Total price of order in piconero
 	delivery_method_id UUID REFERENCES delivery_methods(id) NOT NULL,
 	vendor_id UUID REFERENCES users(id) NOT NULL,
 	terms_of_service_id UUID REFERENCES terms_of_services(id) NOT NULL,
@@ -182,7 +182,7 @@ CREATE TABLE deposits (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	wallet_id UUID REFERENCES wallets(id) NOT NULL,
 	invoice_id UUID REFERENCES invoices(id) ON DELETE CASCADE NOT NULL,
-	amount_deposited_pico NUMERIC NOT NULL DEFAULT 0 CHECK(amount_deposited_pico >= 0),
+	amount_deposited_pico NUMERIC(39, 0) NOT NULL DEFAULT 0 CHECK(amount_deposited_pico >= 0 AND amount_deposited_pico % 1 = 0),
 	UNIQUE(wallet_id, invoice_id)
 );
 
@@ -190,7 +190,7 @@ CREATE TYPE withdrawal_status AS ENUM ('pending', 'processing');
 
 CREATE TABLE withdrawals (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	amount_pico NUMERIC NOT NULL CHECK (amount_pico > 0),
+	amount_pico NUMERIC(39, 0) NOT NULL CHECK (amount_pico > 0 AND amount_pico % 1 = 0),
 	destination_address TEXT NOT NULL CHECK (LENGTH(destination_address) = 95),
 	status withdrawal_status NOT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
@@ -206,7 +206,7 @@ CREATE TABLE vendor_applications (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	existing_vendor BOOLEAN NOT NULL DEFAULT FALSE,
 	letter VARCHAR(4096) NOT NULL,
-	price_paid_pico NUMERIC NOT NULL CHECK(price_paid_pico >= 0),
+	price_paid_pico NUMERIC(39, 0) NOT NULL CHECK(price_paid_pico >= 0 AND price_paid_pico % 1 = 0),
 	user_id UUID REFERENCES users(id) NOT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 	UNIQUE(user_id)
@@ -214,7 +214,7 @@ CREATE TABLE vendor_applications (
 
 CREATE TABLE vendor_licenses (
 	id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-	price_paid_pico NUMERIC NOT NULL CHECK(price_paid_pico >= 0),
+	price_paid_pico NUMERIC(39, 0) NOT NULL CHECK(price_paid_pico >= 0 AND price_paid_pico % 1 = 0),
 	user_id UUID REFERENCES users(id) NOT NULL,
 	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 	UNIQUE(user_id)

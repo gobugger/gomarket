@@ -1,8 +1,9 @@
 package currency
 
 import (
+	"github.com/gobugger/gomarket/internal/testutil"
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 	"math/rand"
 	"testing"
 )
@@ -16,15 +17,14 @@ func TestConversions(t *testing.T) {
 	require.Equal(t, int64(30766), cryptoPrice("USD"))
 	require.Equal(t, int64(26450), cryptoPrice("EUR"))
 
-	require.Equal(t, XMR(), Fiat2Crypto("USD", 30766))
-	require.Equal(t, XMR(), Fiat2Crypto("EUR", 26450))
+	testutil.EqualDecimal(t, XMR(), Fiat2Crypto("USD", 30766))
+	testutil.EqualDecimal(t, XMR(), Fiat2Crypto("EUR", 26450))
 
 	require.Equal(t, int64(30766), Crypto2Fiat("USD", XMR()))
-
 	require.Equal(t, int64(30766), Fiat2Fiat("EUR", "USD", 26450))
 
-	require.Equal(t, XMR(), Fiat2Crypto("USD", Crypto2Fiat("USD", XMR())))
-	require.Equal(t, XMR(), Fiat2Crypto("EUR", Crypto2Fiat("EUR", XMR())))
+	testutil.EqualDecimal(t, XMR(), Fiat2Crypto("USD", Crypto2Fiat("USD", XMR())))
+	testutil.EqualDecimal(t, XMR(), Fiat2Crypto("EUR", Crypto2Fiat("EUR", XMR())))
 
 	eur := int64(2000000)
 	usd := Fiat2Fiat("EUR", "USD", eur)
@@ -61,12 +61,12 @@ func TestDisplayFiat(t *testing.T) {
 }
 
 func TestRaw2Whole2Raw(t *testing.T) {
-	require.Equal(t, big.NewFloat(1.0).SetPrec(prec), Raw2Whole(XMR()))
-	require.Equal(t, XMR(), Whole2Raw(big.NewFloat(1)))
+	testutil.EqualDecimal(t, decimal.NewFromFloat(1), Raw2Whole(XMR()))
+	testutil.EqualDecimal(t, XMR(), Whole2Raw(decimal.NewFromFloat(1)))
 }
 
 func TestRaw2Decimal(t *testing.T) {
 	require.Equal(t, "1", Raw2Decimal(XMR()))
-	require.Equal(t, "0.123", Raw2Decimal(big.NewInt(123000000000)))
-	require.Equal(t, "0.123006", Raw2Decimal(big.NewInt(123006000000)))
+	require.Equal(t, "0.123", Raw2Decimal(decimal.NewFromInt(123000000000)))
+	require.Equal(t, "0.123006", Raw2Decimal(decimal.NewFromInt(123006000000)))
 }

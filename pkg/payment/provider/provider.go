@@ -1,16 +1,16 @@
 package provider
 
 import (
-	"math/big"
+	"github.com/shopspring/decimal"
 )
 
 type InvoiceStatus struct {
-	AmountUnlocked *big.Int
-	AmountTotal    *big.Int
+	AmountUnlocked decimal.Decimal
+	AmountTotal    decimal.Decimal
 }
 
 type Destination struct {
-	Amount  *big.Int
+	Amount  decimal.Decimal
 	Address string
 }
 
@@ -25,7 +25,7 @@ type TransferStatus struct {
 }
 
 type PaymentProvider interface {
-	Invoice(amount *big.Int, callbackUrl string) (string, error)
+	Invoice(amount decimal.Decimal, callbackUrl string) (string, error)
 	InvoiceStatus(address string) (*InvoiceStatus, error)
 	DeleteInvoice(address string) error
 	Transfer(destinations []Destination) (*TransferResponse, error)

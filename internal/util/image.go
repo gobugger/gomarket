@@ -36,7 +36,7 @@ func DecodeImage(src io.ReadSeeker) (image.Image, error) {
 func TransformImage(img image.Image, width, height int) image.Image {
 	if width > 0 && height > 0 {
 		return imaging.Thumbnail(img, width, height, imaging.Lanczos)
-	} else if width != 0 && height != 0 {
+	} else if width > 0 || height > 0 {
 		return imaging.Resize(img, width, height, imaging.Lanczos)
 	} else {
 		return img

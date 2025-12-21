@@ -3,7 +3,7 @@ package form
 import (
 	"encoding/gob"
 	"github.com/google/uuid"
-	"math/big"
+	"github.com/shopspring/decimal"
 )
 
 type RegisterForm struct {
@@ -107,8 +107,8 @@ type DisputeOfferResponseForm struct {
 }
 
 type WithdrawForm struct {
-	Address     string     `schema:"address" validate:"required,xmr_address"`
-	AmountWhole *big.Float `schema:"amount" validate:"required,gt=0"`
+	Address     string          `schema:"address" validate:"required,xmr_address"`
+	AmountWhole decimal.Decimal `schema:"amount" validate:"required,gt=0"`
 	Captcha
 }
 

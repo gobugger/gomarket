@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/gobugger/gomarket/internal/config"
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -19,7 +20,7 @@ func cryptocompareURL() string {
 		tsyms += string(c) + ","
 	}
 	tsyms, _ = strings.CutSuffix(tsyms, ",")
-	return "https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=" + tsyms
+	return fmt.Sprintf("https://min-api.cryptocompare.com/data/price?fsym=%s&tsyms=%s", config.Cryptocurrency, tsyms)
 }
 
 func updateXMRPrice(ctx context.Context, db *pgxpool.Pool, c *http.Client, url string) error {

@@ -4,8 +4,9 @@ import (
 	"github.com/gobugger/gomarket/internal/repo"
 	"github.com/gobugger/gomarket/internal/service/currency"
 	"github.com/gobugger/gomarket/internal/service/servicetest"
+	"github.com/gobugger/gomarket/internal/testutil"
+	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/require"
-	"math/big"
 	"testing"
 )
 
@@ -14,8 +15,8 @@ func TestDeclineThenAccept(t *testing.T) {
 	qtx := repo.New(infra.Db)
 	currency.DebugStart(ctx, qtx)
 
-	vendor := servicetest.SetupVendor(t, infra, big.NewInt(0))
-	customer := servicetest.SetupCustomer(t, infra, big.NewInt(0))
+	vendor := servicetest.SetupVendor(t, infra, decimal.NewFromInt(0))
+	customer := servicetest.SetupCustomer(t, infra, decimal.NewFromInt(0))
 	product := servicetest.SetupProduct(t, infra, vendor.ID)
 
 	price := product.Pricing[0]
@@ -32,11 +33,11 @@ func TestDeclineThenAccept(t *testing.T) {
 	for _, rf := range rfs {
 		wallet, err := qtx.GetWalletForUser(ctx, customer.ID)
 		require.NoError(t, err)
-		initialBalance := repo.Num2Big(wallet.BalancePico)
+		initialBalance := wallet.BalancePico
 
 		vendorWallet, err := qtx.GetWalletForUser(ctx, vendor.ID)
 		require.NoError(t, err)
-		initialVendorBalance := repo.Num2Big(vendorWallet.BalancePico)
+		initialVendorBalance := vendorWallet.BalancePico
 
 		err = qtx.ClearCart(ctx, customer.ID)
 		require.NoError(t, err)
@@ -92,9 +93,9 @@ func TestDeclineThenAccept(t *testing.T) {
 		require.NoError(t, err)
 		servicetest.RequireOrderStatus(t, qtx, order.ID, repo.OrderStatusSettled)
 
-		refund := repo.Num2Big(order.TotalPricePico)
-		customerRefund, _ := new(big.Float).Mul(new(big.Float).SetInt(refund), big.NewFloat(rf)).Int(nil)
-		vendorRefund := new(big.Int).Sub(refund, customerRefund)
+		refund := order.TotalPricePico
+		customerRefund := refund.Mul(decimal.NewFromFloat(rf))
+		vendorRefund := refund.Sub(customerRefund)
 
 		wallet, err = qtx.GetWallet(ctx, wallet.ID)
 		require.NoError(t, err)
@@ -102,7 +103,7 @@ func TestDeclineThenAccept(t *testing.T) {
 		vendorWallet, err = qtx.GetWalletForUser(ctx, vendor.ID)
 		require.NoError(t, err)
 
-		require.Equal(t, new(big.Int).Add(initialBalance, customerRefund), repo.Num2Big(wallet.BalancePico))
-		require.Equal(t, new(big.Int).Add(initialVendorBalance, vendorRefund), repo.Num2Big(vendorWallet.BalancePico))
+		testutil.EqualDecimal(t, initialBalance.Add(customerRefund), wallet.BalancePico)
+		testutil.EqualDecimal(t, initialVendorBalance.Add(vendorRefund), vendorWallet.BalancePico)
 	}
 }

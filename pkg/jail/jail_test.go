@@ -7,7 +7,7 @@ import (
 
 func TestMakeIndexes(t *testing.T) {
 	text := "a9bpojrj2ro2cllkeej2x00ts2an1dxjesoveemudpdygaaddxiiuuzd.onion"
-	indexes := makeIndexes(text, 4)
+	indexes := makeIndexesEasy(text)
 
 	fmt.Println(indexes)
 

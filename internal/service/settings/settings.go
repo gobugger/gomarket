@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/gobugger/gomarket/internal/repo"
-	"math/big"
+	"github.com/shopspring/decimal"
 )
 
 type Settings struct {
-	VendorApplicationPrice *big.Int `json:"vendor_application_price"`
+	VendorApplicationPrice decimal.Decimal `json:"vendor_application_price"`
 }
 
 func Get(ctx context.Context, q *repo.Queries) (Settings, error) {

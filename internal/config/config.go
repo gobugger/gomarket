@@ -24,26 +24,32 @@ type MinioConfig struct {
 	SecretAccessKey string
 }
 
+type NanoConfig struct {
+	NodeURL string
+	Wallet  string
+	Account string
+}
+
 var (
-	Addr                 string
-	DSN                  string
-	MoneropayURL         string
-	MoneropayCallbackURL string
-	RootDir              string
-	CssDir               string
-	StaticDir            string
-	CryptoDir            string
-	UploadsBucket        string
-	CsrfAuthKey          string
-	PgpKey               string
-	OnionAddr            string
-	SiteName             string
-	Socks5Hostname       string
-	devMode              bool
-	captchaEnabled       bool = true
-	entryGuardEnabled    bool
-	Minio                MinioConfig
-	Cryptocurrency       string
+	Addr              string
+	DSN               string
+	MoneropayURL      string
+	RootDir           string
+	CssDir            string
+	StaticDir         string
+	CryptoDir         string
+	UploadsBucket     string
+	CsrfAuthKey       string
+	PgpKey            string
+	OnionAddr         string
+	SiteName          string
+	Socks5Hostname    string
+	devMode           bool
+	captchaEnabled    bool = true
+	entryGuardEnabled bool
+	Minio             MinioConfig
+	Nano              NanoConfig
+	Cryptocurrency    string
 )
 
 // Check it this way so DevMode won't be accidentally set to true
@@ -69,7 +75,6 @@ func DefineGlobal() {
 	flag.StringVar(&Addr, "addr", "localhost:4000", "http address for server to listen")
 	flag.StringVar(&DSN, "dsn", os.Getenv("DSN"), "postgres data source name")
 	flag.StringVar(&MoneropayURL, "moneropay-url", os.Getenv("MONEROPAY_URL"), "moneropay url")
-	flag.StringVar(&MoneropayCallbackURL, "moneropay-cb-url", "localhost:4001", "address for moneropay callbacks")
 	flag.StringVar(&RootDir, "root-dir", "./", "root directory for all application data")
 	flag.StringVar(&CsrfAuthKey, "csrf-auth-key", os.Getenv("CSRF_AUTH_KEY"), "32 byte csrf auth key")
 	flag.StringVar(&OnionAddr, "onion-address", os.Getenv("ONION_ADDRESS"), "onion address")
@@ -82,6 +87,9 @@ func DefineGlobal() {
 	flag.StringVar(&Minio.Endpoint, "minio-endpoint", os.Getenv("MINIO_ENDPOINT"), "minio endpoint")
 	flag.StringVar(&Minio.AccessKeyID, "minio-ak-id", os.Getenv("MINIO_AK_ID"), "minio access key ID")
 	flag.StringVar(&Minio.SecretAccessKey, "minio-sa-key", os.Getenv("MINIO_SA_KEY"), "minio secret access key")
+	flag.StringVar(&Nano.NodeURL, "nano-node-url", os.Getenv("NANO_NODE_URL"), "nano node url")
+	flag.StringVar(&Nano.Wallet, "nano-wallet", os.Getenv("NANO_WALLET"), "nano node url")
+	flag.StringVar(&Nano.Account, "nano-account", os.Getenv("NANO_ACCOUNT"), "nano account")
 }
 
 func Parse() {

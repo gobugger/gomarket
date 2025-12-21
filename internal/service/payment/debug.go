@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"github.com/gobugger/gomarket/pkg/payment/provider"
 	"github.com/gobugger/gomarket/pkg/rand"
+	"github.com/shopspring/decimal"
 	"log/slog"
-	"math/big"
 	"net/http"
 	"sync"
 	"time"
@@ -29,7 +29,7 @@ func NewFakeClient() *FakeClient {
 	}
 }
 
-func (fc *FakeClient) Invoice(amount *big.Int, callbackUrl string) (string, error) {
+func (fc *FakeClient) Invoice(amount decimal.Decimal, callbackUrl string) (string, error) {
 	addr := fakeMoneroAddress()
 
 	go func() {
@@ -38,7 +38,7 @@ func (fc *FakeClient) Invoice(amount *big.Int, callbackUrl string) (string, erro
 		fc.mtx.Lock()
 		fc.invoices[addr] = &provider.InvoiceStatus{
 			AmountTotal:    amount,
-			AmountUnlocked: big.NewInt(0),
+			AmountUnlocked: decimal.NewFromInt(0),
 		}
 		fc.mtx.Unlock()
 
@@ -137,11 +137,11 @@ func fakeMoneroAddress() string {
 	return string(runes)
 }
 
-func sendCallback(amount *big.Int, url string, complete bool) (*http.Response, error) {
+func sendCallback(amount decimal.Decimal, url string, complete bool) (*http.Response, error) {
 
 	payload := moneropay.CallbackResponse{Complete: complete}
-	payload.Amount.Expected = amount.Uint64()      //nolint
-	payload.Amount.Covered.Total = amount.Uint64() //nolint
+	payload.Amount.Expected = amount.BigInt().Uint64()      //nolint
+	payload.Amount.Covered.Total = amount.BigInt().Uint64() //nolint
 	if complete {
 		payload.Amount.Covered.Unlocked = payload.Amount.Covered.Total
 	} else {
