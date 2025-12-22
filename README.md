@@ -1,28 +1,32 @@
 # GoMarket
 
-A privacy-first multi-vendor marketplace platform built with Go and PostgreSQL.
+A multi-vendor marketplace built with Go and PostgreSQL.
 
 <p align="center">
-  <img src="static/gomarket.png" title="home screen">
+    <img src="static/screenshots/gomarket.png" width="200" title="products">
+    <img src="static/screenshots/cart.png" width="200" title="cart">
+    <img src="static/screenshots/order.png" width="200" title="order">
+    <img src="static/screenshots/dispute.png" width="200" title="dispute">
 </p>
 
 **🔗 Demo:** [go-market.dev](https://go-market.dev) (connected to Monero stagenet)
 
 ## Project Overview
 
-GoMarket is a privacy-first multi-vendor marketplace platform built with Go and PostgreSQL.
+GoMarket is a multi-vendor marketplace built with Go and PostgreSQL.
 
 ⚠️ **Under construction**
 This software is in pre-alpha stage, so features are incomplete and bugs are expected.
 
 **Key Highlights:**
-- **Monero-native payments** - Privacy-focused transactions via Moneropay integration
 - **Multi-vendor support** - Complete marketplace infrastructure with vendor applications
 - **Wallets and invoices** - Both wallets and "walletless" payments supported
-- **Zero JavaScript architecture** - Enhanced security, works with JS disabled
+- **Nano-support** - Sub-second & zero-fee transactions via Nano integration
+- **Monero-support** - Private transactions via Moneropay integration
 - **Localized** - Supports multiple languages and currencies
 - **Mobile friendly UI**
 - **Built with Go** - Leveraging Go's performance, safety, and simplicity
+- **Optional enhanced privacy features** - PGP-based 2FA, zero javascript, custom capcha, phishing protection/entry guard
 
 ## Key Features
 
@@ -32,7 +36,7 @@ This software is in pre-alpha stage, so features are incomplete and bugs are exp
 - Shopping carts
 
 **Payment & Escrow:**
-- Monero payments via Moneropay integration
+- Nano or Monero payments
 - Both wallet and walletless payments.
 - Built-in escrow system with order flow: pending → paid → accepted → dispatched → finalized/disputed → settled
 
@@ -40,19 +44,15 @@ This software is in pre-alpha stage, so features are incomplete and bugs are exp
 - Zero JavaScript
 - Optional PGP-based 2FA
 - Optional CAPTCHA protection
-- Optional Phishing guard
+- Optional Phishing protection/entry guard
 
 **Communication & Dispute Resolution:**
 - Order chat system for buyer-vendor communication
 - Dispute resolution without admin intervention with refund offers
 
-**Infrastructure:**
-- S3-compatible storage for horizontal scalability
-- Automated translation system based on gotext
-
 ## Architecture
 
-Architecture has evolved from the book "Let's Go" by Alex Edwards.
+This software is built from scratch and was inspired by the book "Let's Go" by Alex Edwards.
 
 **Layered Structure:**
 ```
@@ -65,7 +65,7 @@ Repository Layer (sqlc) -> Service Layer -> Application Layer <- Views Layer
 - **Templating:** templ for compile-time HTML generation to Go code
 - **Migrations:** go-migrate for database version control
 - **Storage:** S3-compatible object storage
-- **Payments:** Moneropay payment processor
+- **Payments:** Nano or Monero
 
 ## Prerequisites
 
@@ -123,33 +123,3 @@ The developers do not condone, support, or take responsibility for any misuse of
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome!
-
-**Ways to contribute**
-- Test and provide feedback
-- Report bugs and security issues (responsibly)
-- Write documentation
-- Submit pull requests
-
-**Support development**
-- XMR: `82gQdEdeftLC4hDUPfMkFs4XyY3Qax5NCMbSy5UjnSpgHLfaxqBT6voBvhTaBhksvtVQj5zpzxh5X4p3W2VrsTgM9EkRJ96`
-<div>
-    <img src="static/donation.png" alt="Monero Donation QR-Code" width="200"/>
-</div>
-
-## Contact & Links
-
-**Contacts:**
-- Session: `059572d20e3da1c8c6f19655c93cf515a50cf6d62e324c6bff089a3d0f8bdc5a27`
-- Email: gobugger (at) proton.me
-
-**Resources:**
-- 🌐 **Demo:** [go-market.dev](https://go-market.dev) (stagenet)
-
-**Related Projects:**
-- [Moneropay](https://gitlab.com/moneropay/moneropay) - Payment processor
-
-**Built with ❤️ for the Monero community**
