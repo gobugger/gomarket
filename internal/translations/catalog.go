@@ -800,7 +800,7 @@ const en_USData string = "" + // Size: 6573 bytes
 	"iption\x02Product image\x02Use image with close to 1:1 aspect ratio for " +
 	"optimal look\x02Category\x02Ships from\x02Ships to\x02Inventory\x02Size " +
 	"of the current inventory for this product.\x02Pricing\x02Here you can se" +
-	"t your pricing.\x02We take 5% cut from these prices.\x02Quantity\x02Pric" +
+	"t your pricing.\x02We take 5%% cut from these prices\x02Quantity\x02Pric" +
 	"e\x02Create ticket\x02Subject\x02account\x02order\x02wallet\x02vendor" +
 	"\x02product\x02suggestion\x02bug\x02other\x02Message\x02Staff PGP\x02Exc" +
 	"hange rate\x02Time\x04\x00\x01 \x09\x02Vendors:\x04\x00\x01 \x07\x02User" +
@@ -811,7 +811,7 @@ const en_USData string = "" + // Size: 6573 bytes
 	"\x02Create new account\x02Delete all\x02You have zero notifications\x02O" +
 	"rder\x02Chat\x02Status\x02Vendor\x02Delivery method\x02Total cost\x02Dat" +
 	"e\x02Dispatched at\x02Until auto-declined\x02Until auto-finalized\x02Det" +
-	"ails\x02Vendor offered refund of %.2[1]f%\x02Accept\x02Decline\x02Custom" +
+	"ails\x02Vendor offered refund of %.[1]f%%\x02Accept\x02Decline\x02Custom" +
 	"ers PGP key\x02Customer can still cancel this order!\x02You must accept " +
 	"it in 2 days or it will be automatically declined.\x02After accepting, c" +
 	"ustomer can no longer cancel so you can safely dispatch.\x02Please caref" +

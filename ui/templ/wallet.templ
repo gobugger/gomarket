@@ -49,7 +49,7 @@ templ Wallet(tc *TemplateContext, depositAddress string) {
 					<p class="highlight--important">
 						{ tc.Translate("Enter a monero address where you want to withdraw your funds.") }
 						<br/>
-						{ tc.Translate("We collect an %f XMR fee from each withdrawal to prevent spam.", payment.WithdrawalFee) }
+						{ tc.Translate("We collect an %s XMR fee from each withdrawal to prevent spam.", currency.Raw2Decimal(payment.WithdrawalFee)) }
 						<br/>
 						{ tc.Translate("DO NOT withdraw funds to another wallet on this platform!") }
 						<br/>

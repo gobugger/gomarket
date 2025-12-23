@@ -242,9 +242,9 @@ func Wallet(tc *TemplateContext, depositAddress string) templ.Component {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var17 string
-			templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("We collect an %f XMR fee from each withdrawal to prevent spam.", payment.WithdrawalFee))
+			templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs(tc.Translate("We collect an %s XMR fee from each withdrawal to prevent spam.", currency.Raw2Decimal(payment.WithdrawalFee)))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/wallet.templ`, Line: 52, Col: 109}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `ui/templ/wallet.templ`, Line: 52, Col: 131}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var17))
 			if templ_7745c5c3_Err != nil {

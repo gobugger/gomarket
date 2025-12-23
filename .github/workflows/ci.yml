@@ -1,0 +1,37 @@
+name: GoMarket CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v5
+
+    - name: Set up Go
+      uses: actions/setup-go@v6
+      with:
+        go-version: '1.25.4'
+        cache: true
+
+    - name: Install dependencies
+      run: go mod download
+
+    # 1. Linting Step
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v9
+      with:
+        version: v2.6
+
+    # 2. Build Step (Ensures the app actually compiles)
+    - name: Build Binaries
+      run: go build -v ./cmd/worker && go build -v ./cmd/market && go build -v ./cmd/admin
+
+    # 3. Test Step (Testcontainers uses the runner's Docker socket)
+    - name: Run Tests
+      run: go test -v ./...
